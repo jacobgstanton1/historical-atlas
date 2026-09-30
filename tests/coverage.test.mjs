@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {buildCoverage,reportMarkdown} from '../scripts/coverage-model.mjs';
+import {buildCoverage} from '../scripts/coverage-model.mjs';
+import {combinedReport} from '../scripts/classification.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
 const manifest=read('development/coverage/manifest.json');
 const plan=read('development/coverage/research-plan.json');
@@ -66,7 +67,7 @@ test('an explicit accepted tier requires reviewed source-backed intervals',()=>{
 test('report and manifest are deterministic development artifacts',()=>{
  const lock=read('development/coverage/inputs.lock.json');
  const report=fs.readFileSync(new URL('../development/coverage/REPORT.md',import.meta.url),'utf8').replace(/\r\n/g,'\n');
- assert.equal(report,reportMarkdown(manifest,lock));
+ assert.equal(report,combinedReport(manifest,lock));
  assert.ok(manifest.inputs.snapshots.every(s=>/^[a-f0-9]{64}$/.test(s.sha256)));
  const app=fs.readFileSync(new URL('../app.js',import.meta.url),'utf8');
  assert.ok(!app.includes('development/coverage'));assert.match(app,/v=0\.6\.1/);
