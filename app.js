@@ -2,6 +2,7 @@ import * as maplibregl from 'https://unpkg.com/maplibre-gl@6.11.2/dist/maplibre-
 import { geoCentroid } from 'https://cdn.jsdelivr.net/npm/d3-geo@3.1.1/+esm';
 import {
   prepareCollection,
+  buildLabelCollection,
   buildPresenceIndex,
   presenceSummary,
   clean,
@@ -133,6 +134,14 @@ function installMapLayers() {
     promoteId: '_featureId',
   });
 
+  // Labels live in a separate, polity-level source. The historical source can
+  // contain many polygons for one polity; this source deliberately contains
+  // exactly one point per polity so names never repeat across disconnected land.
+  map.addSource('historical-labels', {
+    type: 'geojson',
+    data: emptyCollection(),
+  });
+
   map.addLayer({
     id: 'territories-fill',
     type: 'fill',
@@ -177,30 +186,47 @@ function installMapLayers() {
     },
   });
 
-  // MapLibre performs collision detection for these labels. Larger territories
-  // get the lower sort key, so their names are placed before smaller neighbours.
+  // v0.4 political hierarchy: one label per polity, collision-aware, with
+  // progressively smaller entities revealed as the user zooms in.
   map.addLayer({
     id: 'territory-labels',
     type: 'symbol',
-    source: 'historical',
+    source: 'historical-labels',
+    filter: ['<=', ['get', '_labelMinZoom'], map.getZoom()],
     layout: {
-      'text-field': ['get', '_label'],
+      'text-field': [
+        'case',
+        ['any',
+          ['==', ['get', '_labelClass'], 'major'],
+          ['==', ['get', '_labelClass'], 'regional'],
+        ],
+        ['get', '_labelFull'],
+        ['get', '_labelShort'],
+      ],
       'text-size': [
         'interpolate', ['linear'], ['zoom'],
-        1, ['*', 10.5, ['get', '_labelScale']],
-        3, ['*', 12.2, ['get', '_labelScale']],
-        6, ['*', 15.5, ['get', '_labelScale']],
-        10, ['*', 19, ['get', '_labelScale']],
-        14, ['*', 23, ['get', '_labelScale']],
-        18, ['*', 25, ['get', '_labelScale']],
+        1, ['*', 11.2, ['get', '_labelScale']],
+        3, ['*', 12.4, ['get', '_labelScale']],
+        6, ['*', 14.8, ['get', '_labelScale']],
+        10, ['*', 18.2, ['get', '_labelScale']],
+        14, ['*', 21.5, ['get', '_labelScale']],
+        18, ['*', 24, ['get', '_labelScale']],
       ],
       'text-font': ['Open Sans Regular'],
-      'text-letter-spacing': ['interpolate', ['linear'], ['zoom'], 1, 0.02, 6, 0.06, 14, 0.09, 18, 0.1],
-      'text-max-width': 16,
+      'text-letter-spacing': ['get', '_letterSpacing'],
+      'text-rotate': ['get', '_labelAngle'],
+      'text-rotation-alignment': 'map',
+      'text-pitch-alignment': 'map',
+      'text-max-width': 18,
       'text-line-height': 1,
       'text-anchor': 'center',
       'text-justify': 'center',
-      'text-padding': 4,
+      'text-padding': [
+        'interpolate', ['linear'], ['zoom'],
+        1, 8,
+        4, 6,
+        8, 4,
+      ],
       'text-allow-overlap': false,
       'text-ignore-placement': false,
       'text-optional': true,
@@ -208,10 +234,17 @@ function installMapLayers() {
       'symbol-z-order': 'source',
     },
     paint: {
-      'text-color': '#101315',
-      'text-opacity': 0.97,
+      'text-color': '#111416',
+      'text-opacity': [
+        'interpolate', ['linear'], ['zoom'],
+        1, 0.88,
+        3, 0.94,
+        6, 0.98,
+      ],
     },
   });
+
+  updateLabelZoomFilter();
 }
 
 async function loadLandMask() {
@@ -305,6 +338,28 @@ function wireMapInteractions() {
   });
 }
 
+function updateLabelZoomFilter() {
+  if (!map.getLayer('territory-labels')) return;
+  const zoom = Math.max(1, map.getZoom());
+  map.setFilter('territory-labels', ['<=', ['get', '_labelMinZoom'], zoom]);
+
+  // At close zoom levels there is enough room to expand acronyms back to full
+  // historical names. At world scale, only major/regional entities use full names.
+  map.setLayoutProperty('territory-labels', 'text-field', zoom >= 5
+    ? ['get', '_labelFull']
+    : [
+        'case',
+        ['any',
+          ['==', ['get', '_labelClass'], 'major'],
+          ['==', ['get', '_labelClass'], 'regional'],
+        ],
+        ['get', '_labelFull'],
+        ['get', '_labelShort'],
+      ]);
+}
+
+map.on('zoomend', updateLabelZoomFilter);
+
 function chooseMostSpecificFeature(features) {
   return [...features]
     .filter(feature => feature?.properties?._stableId)
@@ -334,6 +389,8 @@ async function setSnapshot(index, { resetSelection = true, requested = null } = 
 
     currentFeatures = prepared.features;
     map.getSource('historical').setData(prepared);
+    map.getSource('historical-labels').setData(buildLabelCollection(prepared));
+    updateLabelZoomFilter();
 
     if (resetSelection) clearSelection();
     else if (selectedStableId) renderInspector(selectedStableId);
