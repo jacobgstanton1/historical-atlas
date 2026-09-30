@@ -202,9 +202,9 @@ export function canonicalEntityName(name) {
 
 export function boundaryConfidence(value) {
   switch (Number(value)) {
-    case 3: return 'High — legally defined / well documented';
-    case 2: return 'Moderate — reconstructed with reasonable precision';
-    case 1: return 'Approximate — frontier should be treated as uncertain';
+    case 3: return 'High — source precision class 3';
+    case 2: return 'Moderate — source precision class 2';
+    case 1: return 'Approximate — source precision class 1; frontier uncertain';
     default: return 'Unspecified in source data';
   }
 }

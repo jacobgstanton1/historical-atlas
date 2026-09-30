@@ -6,7 +6,10 @@ import {
   buildPresenceIndex,
   presenceSummary,
   clean,
-} from './data-pipeline.js?v=0.5';
+} from './data-pipeline.js?v=0.6';
+import { loadMetadata } from './historical-metadata.js?v=0.6';
+import { renderDossier } from './dossier.js?v=0.6';
+import { createBoundaryHistory } from './boundary-history.js?v=0.6';
 
 const SNAPSHOTS = [
   { year: 1800, file: 'world_1800.geojson' },
@@ -40,14 +43,6 @@ const els = {
   loadingText: document.querySelector('#loading-text'),
   inspector: document.querySelector('#inspector'),
   closeInspector: document.querySelector('#close-inspector'),
-  territoryName: document.querySelector('#territory-name'),
-  territorySubtitle: document.querySelector('#territory-subtitle'),
-  territoryAuthority: document.querySelector('#territory-authority'),
-  territoryPartOf: document.querySelector('#territory-partof'),
-  territoryConfidence: document.querySelector('#territory-confidence'),
-  territoryContinuity: document.querySelector('#territory-continuity'),
-  territoryId: document.querySelector('#territory-id'),
-  territoryNote: document.querySelector('#territory-note'),
   previous: document.querySelector('#previous-year'),
   next: document.querySelector('#next-year'),
   play: document.querySelector('#play'),
@@ -74,6 +69,22 @@ let presenceReady = false;
 let lastLabelZoom = null;
 let worldViewActive = true;
 const snapshotCache = new Map();
+let metadata = null;
+let metadataError = false;
+let selectedName = '';
+let renderedDossierId = null;
+let displayedIndex = currentIndex;
+let boundaryLoadFailed = false;
+const findBoundaries = createBoundaryHistory(SNAPSHOTS, snapshot => loadSnapshotData(snapshot));
+loadMetadata().then(value => {
+  metadata = value;
+  if (selectedStableId) renderInspector(selectedStableId);
+  updateSearchResults();
+}).catch(error => {
+  metadataError = true;
+  console.warn('Historical metadata unavailable', error);
+  if (selectedStableId) renderInspector(selectedStableId);
+});
 
 configureTimeline();
 setControlsDisabled(true);
@@ -120,7 +131,7 @@ map.on('load', async () => {
   const initialTasks = [
     loadLandMask(),
     loadPresenceRegistry(),
-    setSnapshot(currentIndex, { resetSelection: true, requested: INITIAL_YEAR }),
+    setSnapshot(currentIndex, { resetSelection: false, requested: INITIAL_YEAR }),
   ];
   await Promise.allSettled(initialTasks);
   hideLoading();
@@ -263,6 +274,7 @@ async function loadPresenceRegistry() {
     const response = await fetch(INDEX_URL);
     if (!response.ok) throw new Error(`Index HTTP ${response.status}`);
     const indexJson = await response.json();
+    indexJson.years = (indexJson.years || []).filter(item => SNAPSHOTS.some(s => s.year === Number(item.year)));
     presenceRegistry = buildPresenceIndex(indexJson, TEST_MIN_YEAR, TEST_MAX_YEAR);
     presenceReady = true;
     if (selectedStableId) renderInspector(selectedStableId);
@@ -365,7 +377,7 @@ function chooseMostSpecificFeature(features) {
     .sort((a, b) => Number(a.properties?._area || Infinity) - Number(b.properties?._area || Infinity))[0] || null;
 }
 
-async function setSnapshot(index, { resetSelection = true, requested = null } = {}) {
+async function setSnapshot(index, { resetSelection = false, requested = null } = {}) {
   index = clamp(index, 0, SNAPSHOTS.length - 1);
   const snapshot = SNAPSHOTS[index];
   if (!snapshot) return;
@@ -389,6 +401,8 @@ async function setSnapshot(index, { resetSelection = true, requested = null } = 
     if (serial !== loadSerial) return;
 
     currentFeatures = prepared.features;
+    displayedIndex = index;
+    boundaryLoadFailed = false;
     map.getSource('historical').setData(prepared);
     map.getSource('historical-labels').setData(buildLabelCollection(prepared));
     lastLabelZoom = null;
@@ -407,7 +421,9 @@ async function setSnapshot(index, { resetSelection = true, requested = null } = 
     console.error(error);
     els.status.textContent = `Could not load ${snapshot.year}`;
     els.snapshotNote.textContent = 'Boundary file unavailable';
+    boundaryLoadFailed = true;
     hideLoading();
+    if (selectedStableId) renderInspector(selectedStableId);
   }
 }
 
@@ -452,7 +468,10 @@ function selectFeature(stableId, { zoomTo = false } = {}) {
   const matches = currentFeatures.filter(item => item.properties?._stableId === stableId);
   if (!matches.length) return;
 
+  const newlyOpened = !selectedStableId;
   selectedStableId = stableId;
+  selectedName = clean(matches[0].properties?._name);
+  if (newlyOpened) requestAnimationFrame(() => els.closeInspector.focus({ preventScroll: true }));
   map.setFilter('selected-outline', ['==', ['get', '_stableId'], stableId]);
   renderInspector(stableId);
 
@@ -465,46 +484,35 @@ function selectFeature(stableId, { zoomTo = false } = {}) {
 
 function renderInspector(stableId) {
   const matches = currentFeatures.filter(item => item.properties?._stableId === stableId);
-  if (!matches.length) {
-    clearSelection();
-    return;
-  }
-
-  const feature = matches[0];
-  const p = feature.properties || {};
-  const name = clean(p._name) || 'Unnamed territory';
-  const authority = clean(p._authority);
-  const partOf = clean(p._partOf);
-
-  els.territoryName.textContent = name;
-  els.territorySubtitle.textContent = `${SNAPSHOTS[currentIndex].year} boundary snapshot · historical reconstruction`;
-  els.territoryAuthority.textContent = authority && authority !== name ? authority : 'Independent / same as territory name';
-  els.territoryPartOf.textContent = partOf || '—';
-  els.territoryConfidence.textContent = clean(p._confidenceLabel) || 'Unspecified';
-  els.territoryContinuity.textContent = presenceReady
-    ? presenceSummary(presenceRegistry, stableId, SNAPSHOTS.length)
-    : 'Continuity index loading…';
-  els.territoryId.textContent = stableId;
-
-  if (Number(p._borderPrecision) === 1) {
-    els.territoryNote.hidden = false;
-    els.territoryNote.textContent = 'This source marks the frontier as approximate. Treat the line as a visual reconstruction rather than a surveyed boundary.';
-  } else {
-    els.territoryNote.hidden = true;
-    els.territoryNote.textContent = '';
-  }
-
+  if (matches.length) selectedName = clean(matches[0].properties._name);
+  const body = document.querySelector('#dossier-content');
+  const scroll = renderedDossierId === stableId ? els.inspector.scrollTop : 0;
+  renderedDossierId = stableId;
+  renderDossier(body, {
+    stableId, savedName: selectedName, features: matches, allFeatures: currentFeatures,
+    year: requestedYear, snapshotYear: SNAPSHOTS[displayedIndex].year,
+    metadata, metadataError, boundaryLoadFailed, minYear: TEST_MIN_YEAR, maxYear: TEST_MAX_YEAR,
+    presence: presenceReady ? presenceSummary(presenceRegistry, stableId, SNAPSHOTS.length) : 'Presence index loading…',
+    currentMapIds: new Set(currentFeatures.map(f => f.properties._stableId)),
+    selectRelated: id => selectFeature(id, { zoomTo: true }),
+    goYear: goToRequestedYear, findBoundaries, boundaryIndex: displayedIndex,
+  });
   els.inspector.classList.add('is-open');
   els.inspector.setAttribute('aria-hidden', 'false');
+  els.inspector.inert = false;
+  els.inspector.scrollTop = scroll;
 }
 
 function clearSelection() {
   selectedStableId = null;
+  renderedDossierId = null;
   if (map.getLayer('selected-outline')) {
     map.setFilter('selected-outline', ['==', ['get', '_stableId'], '__none__']);
   }
   els.inspector.classList.remove('is-open');
   els.inspector.setAttribute('aria-hidden', 'true');
+  els.inspector.inert = true;
+  if (els.inspector.contains(document.activeElement)) map.getCanvas().focus({ preventScroll: true });
 }
 
 function featuresBounds(features) {
@@ -545,7 +553,7 @@ function updateSearchResults() {
       const p = feature.properties || {};
       const stableId = clean(p._stableId);
       if (!stableId || seen.has(stableId)) return false;
-      const haystack = [p._name, p._authority, p._partOf]
+      const haystack = [p._name, p._authority, p._partOf, ...(metadata?.searchTerms(stableId, requestedYear) || [])]
         .map(clean)
         .join(' ')
         .toLowerCase();
@@ -603,7 +611,7 @@ function configureTimeline() {
       const index = Number(mark.dataset.index);
       if (!Number.isInteger(index) || !SNAPSHOTS[index]) return;
       stopPlay();
-      setSnapshot(index, { resetSelection: true, requested: SNAPSHOTS[index].year });
+      setSnapshot(index, { resetSelection: false, requested: SNAPSHOTS[index].year });
     });
   }
   updateSnapshotMarks();
@@ -646,13 +654,15 @@ function goToRequestedYear(year) {
   if (!Number.isFinite(clampedYear)) return;
   stopPlay();
   const index = nearestSnapshotIndex(clampedYear);
-  if (index === currentIndex && snapshotCache.has(SNAPSHOTS[index].year)) {
+  if (index === currentIndex && displayedIndex === index && snapshotCache.has(SNAPSHOTS[index].year)) {
     requestedYear = clampedYear;
     updateTimelineUi(SNAPSHOTS[index], requestedYear);
     if (els.loading.hidden) updateMapStatus();
+    if (selectedStableId) renderInspector(selectedStableId);
+    updateSearchResults();
     return;
   }
-  setSnapshot(index, { resetSelection: true, requested: clampedYear });
+  setSnapshot(index, { resetSelection: false, requested: clampedYear });
 }
 
 function worldPadding() {
@@ -683,7 +693,7 @@ function updateMapStatus() {
 
 function step(delta) {
   const index = clamp(currentIndex + delta, 0, SNAPSHOTS.length - 1);
-  setSnapshot(index, { resetSelection: true, requested: SNAPSHOTS[index].year });
+  setSnapshot(index, { resetSelection: false, requested: SNAPSHOTS[index].year });
 }
 
 function togglePlay() {
@@ -692,7 +702,7 @@ function togglePlay() {
     return;
   }
   if (currentIndex >= SNAPSHOTS.length - 1) {
-    setSnapshot(0, { resetSelection: true, requested: SNAPSHOTS[0].year });
+    setSnapshot(0, { resetSelection: false, requested: SNAPSHOTS[0].year });
   }
   els.play.textContent = '❚❚';
   els.play.setAttribute('aria-label', 'Pause timeline');
@@ -702,7 +712,7 @@ function togglePlay() {
       return;
     }
     const nextIndex = currentIndex + 1;
-    setSnapshot(nextIndex, { resetSelection: true, requested: SNAPSHOTS[nextIndex].year });
+    setSnapshot(nextIndex, { resetSelection: false, requested: SNAPSHOTS[nextIndex].year });
   }, 1700);
 }
 
@@ -723,8 +733,8 @@ function setControlsDisabled(disabled) {
 }
 function responsiveFitPadding() {
   return window.innerWidth <= 760
-    ? { top: 80, bottom: 190, left: 30, right: 30 }
-    : { top: 90, bottom: 145, left: 70, right: 380 };
+    ? { top: 80, bottom: Math.min(window.innerHeight * .56 + 166, window.innerHeight * .7), left: 30, right: 30 }
+    : { top: 90, bottom: 145, left: 70, right: Math.min(480, window.innerWidth * .45) };
 }
 function emptyCollection() { return { type: 'FeatureCollection', features: [] }; }
 function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
@@ -773,14 +783,15 @@ document.addEventListener('pointerdown', event => {
 
 document.addEventListener('keydown', event => {
   if (isEditableTarget(event.target)) return;
+  if (event.key !== 'Escape' && event.target.closest?.('button, a, #inspector')) return;
   if (event.key === 'ArrowLeft') {
     event.preventDefault(); stopPlay(); step(-1);
   } else if (event.key === 'ArrowRight') {
     event.preventDefault(); stopPlay(); step(1);
   } else if (event.key === 'Home') {
-    event.preventDefault(); stopPlay(); setSnapshot(0, { resetSelection: true, requested: SNAPSHOTS[0].year });
+    event.preventDefault(); stopPlay(); setSnapshot(0, { resetSelection: false, requested: SNAPSHOTS[0].year });
   } else if (event.key === 'End') {
-    event.preventDefault(); stopPlay(); const i = SNAPSHOTS.length - 1; setSnapshot(i, { resetSelection: true, requested: SNAPSHOTS[i].year });
+    event.preventDefault(); stopPlay(); const i = SNAPSHOTS.length - 1; setSnapshot(i, { resetSelection: false, requested: SNAPSHOTS[i].year });
   } else if (event.key === ' ' && !event.repeat) {
     event.preventDefault(); togglePlay();
   } else if (event.key === 'Escape') {

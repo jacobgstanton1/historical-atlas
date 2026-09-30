@@ -134,10 +134,11 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
   z-index: 15;
   top: 82px;
   right: 14px;
-  width: min(350px, calc(100% - 28px));
+  width: min(450px, calc(100% - 28px));
   max-height: calc(100% - 210px);
   overflow: auto;
-  padding: 16px 42px 16px 16px;
+  padding: 22px;
+  overscroll-behavior: contain;
   border: 1px solid var(--border);
   border-radius: 11px;
   background: var(--panel);
@@ -154,36 +155,17 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
   text-transform: uppercase;
 }
 .inspector h1 { margin: 7px 0 4px; font-size: 23px; line-height: 1.07; }
-.territory-subtitle { color: #4e585f; font-size: 12px; line-height: 1.45; }
-.territory-grid { margin: 14px 0 0; padding: 0; }
-.territory-row {
-  display: grid;
-  grid-template-columns: 108px minmax(0, 1fr);
-  gap: 10px;
-  padding: 9px 0;
-  border-top: 1px solid rgba(17,22,27,0.09);
-}
-.territory-row dt { color: var(--muted); font-size: 11px; }
-.territory-row dd { margin: 0; color: #30383d; font-size: 12px; line-height: 1.4; overflow-wrap: anywhere; }
-.territory-row-id dd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10px; }
-.territory-note {
-  margin-top: 10px;
-  padding: 10px 11px;
-  border-radius: 8px;
-  background: rgba(17,22,27,0.05);
-  color: #515b61;
-  font-size: 11px;
-  line-height: 1.45;
-}
 .inspector-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+  position: sticky;
+  float: right;
+  top: 0;
+  margin: -14px -14px 0 0;
+  z-index: 1;
   width: 32px;
   height: 32px;
   border: 0;
   border-radius: 7px;
-  background: transparent;
+  background: var(--panel);
   color: var(--muted);
   font-size: 24px;
   line-height: 1;
@@ -353,3 +335,43 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
   .inspector { transition: none; }
   .loading-spinner { animation: none; }
 }
+
+/* Dossier: one scrolling document, separate from the fixed map and timeline. */
+.inspector h1 { margin-right: 24px; line-height: 1.15; overflow-wrap: anywhere; }
+.dossier-year { margin: 8px 0; font-weight: 600; }
+.dossier-alternate { margin: 4px 0; color: #49535c; }
+.dossier-section { border-top: 1px solid #d8dfe3; margin-top: 18px; padding-top: 13px; }
+.dossier-section h2 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 10px; }
+.dossier-section p { font-size: 13px; line-height: 1.6; }
+.dossier-section dl { margin: 0; }
+.dossier-row { display: grid; grid-template-columns: 112px minmax(0,1fr); gap: 12px; padding: 7px 0; font-size: 13px; }
+.dossier-row dt { color: #55616a; }
+.dossier-row dd { margin: 0; overflow-wrap: anywhere; }
+.fact-context { display: block; font-size: 11px; line-height: 1.5; color: #58636b; margin-top: 4px; }
+.fact-source { font-size: 10px; vertical-align: super; }
+.dossier-muted { font-size: 12px; line-height: 1.5; color: #58636b; }
+.dossier-notice { padding: 10px 0; border-block: 1px solid #9aabb5; font-size: 13px; line-height: 1.5; }
+.dossier-flag { margin: 12px 0; }
+.dossier-flag img { display: block; width: 110px; height: 60px; object-fit: contain; object-position: left; }
+.dossier-flag figcaption { font-size: 11px; line-height: 1.5; margin-top: 5px; color: #58636b; }
+.dossier-link { border: 0; background: none; color: #245672; text-decoration: underline; text-underline-offset: 3px; padding: 3px 0; cursor: pointer; font: inherit; text-align: left; }
+.inspector a { color: #245672; text-decoration: underline; text-underline-offset: 2px; }
+.inspector :is(a,button):focus-visible { outline: 2px solid #245672; outline-offset: 3px; }
+.dossier-events { padding-left: 19px; margin: 0; }
+.dossier-events li { padding: 6px 0; font-size: 13px; line-height: 1.5; }
+.dossier-events time { display: block; color: #58636b; font-size: 11px; }
+.dossier-events .is-selected-year { border-left: 3px solid #245672; padding-left: 9px; }
+.dossier-events strong { font-weight: 600; }
+.dossier-events button { display: block; font-size: 12px; }
+.dossier-sources { padding-left: 20px; font-size: 12px; line-height: 1.5; }
+.dossier-sources li { margin: 10px 0; scroll-margin-top: 15px; }
+.boundary-navigation { display: grid; gap: 6px; font-size: 13px; }
+@media (max-width: 760px) {
+  .inspector { left: 12px; right: 12px; top: auto; bottom: 166px; width: auto; max-height: 44vh;
+    transform: translateY(calc(100vh + 20px)); padding: 16px; }
+  .inspector.is-open { transform: translateY(0); }
+  .inspector h1 { font-size: 20px; }
+  .dossier-row { grid-template-columns: 100px minmax(0,1fr); gap: 10px; }
+}
+
+@media (max-width: 760px) { .inspector-close { margin: -8px -8px 0 0; } }
