@@ -1,4 +1,4 @@
-import { geoArea, geoCentroid } from 'https://cdn.jsdelivr.net/npm/d3-geo@3.1.1/+esm';
+import { geoArea, geoCentroid, geoContains } from 'https://cdn.jsdelivr.net/npm/d3-geo@3.1.1/+esm';
 
 const NAME_ALIASES = new Map([
   ['united states of america', 'united states'],
@@ -18,16 +18,18 @@ const LABEL_OVERRIDES = new Map([
   ['holy roman empire', { full: 'HOLY ROMAN EMPIRE', short: 'HRE' }],
 ]);
 
-// These are presentation overrides only. They do not alter borders or historical data.
-// They ensure globally important polities remain legible at the world view even when
-// the source geometry is split into several pieces.
-const WORLD_LABEL_NAMES = new Set([
-  'russian empire', 'qing empire', 'ottoman empire', 'austrian empire',
-  'united states', 'soviet union', 'united kingdom', 'french empire',
-  'france', 'spanish empire', 'spain', 'portuguese empire', 'portugal',
-  'viceroyalty of new spain', 'viceroyalty of brazil', 'empire of brazil',
-  'brazil', 'persia', 'japan', 'german empire', 'germany', 'italy',
-  'austria-hungary', 'austro-hungarian empire', 'prussia',
+// Display aliases only: never change source names, IDs or relationships.
+const PRESENTATION_ALIASES = new Map([
+  ['russian empire', 'RUSSIA'],
+  ['qing empire', 'QING'],
+  ['ottoman empire', 'OTTOMAN'],
+  ['austrian empire', 'AUSTRIA'],
+  ['german empire', 'GERMANY'],
+  ['empire of brazil', 'BRAZIL'],
+  ['viceroyalty of brazil', 'BRAZIL'],
+  ['dutch east indies', 'EAST INDIES'],
+  ['empire of japan', 'JAPAN'],
+  ['republic of china', 'CHINA'],
 ]);
 
 const JUNK_LABEL_PATTERNS = [
@@ -64,6 +66,7 @@ export function prepareCollection(collection, snapshotYear) {
     const stableId = clean(raw.stable_id) || stableEntityId(name);
     const featureId = `${stableId}--${snapshotYear}--${instance++}`;
     const colorKey = partOf || authority || name;
+    const parent = sourceParent(name, partOf, authority);
 
     features.push({
       type: 'Feature',
@@ -76,6 +79,8 @@ export function prepareCollection(collection, snapshotYear) {
         _name: name,
         _authority: authority,
         _partOf: partOf,
+        _presentationRole: parent ? 'dependent' : 'primary',
+        _presentationParent: parent,
         _borderPrecision: precision,
         _confidenceLabel: boundaryConfidence(precision),
         _year: snapshotYear,
@@ -91,7 +96,8 @@ export function prepareCollection(collection, snapshotYear) {
   const groups = groupByStableId(features);
   for (const group of groups.values()) {
     const entityArea = group.features.reduce((sum, feature) => sum + Number(feature.properties?._area || 0), 0);
-    const label = labelData(group.name, entityArea);
+    const dependent = group.features.every(feature => feature.properties._presentationRole === 'dependent');
+    const label = labelData(group.name, entityArea, dependent);
     const priority = Math.max(1, Math.round(entityArea * 1_000_000));
 
     for (const feature of group.features) {
@@ -124,16 +130,25 @@ export function buildLabelCollection(collection) {
     const entityArea = group.features.reduce((sum, feature) => sum + Number(feature.properties?._area || 0), 0);
     if (!(entityArea > 0)) continue;
 
-    const label = labelData(name, entityArea);
+    const dependent = group.features.every(feature => feature.properties._presentationRole === 'dependent');
+    const label = labelData(name, entityArea, dependent);
     const anchorFeature = largestLabelPiece(group.features);
     if (!anchorFeature) continue;
 
-    const anchor = interiorPoint(anchorFeature);
+    const placement = labelPlacement(anchorFeature);
+    const anchor = placement?.anchor;
     if (!anchor || !Number.isFinite(anchor[0]) || !Number.isFinite(anchor[1])) continue;
 
-    const angle = labelAngle(anchorFeature);
     const stableId = clean(group.stableId);
     const priority = Math.max(1, Math.round(entityArea * 1_000_000));
+    const fit = {
+      _labelScale: label.scale,
+      _letterSpacing: label.letterSpacing,
+      _labelRoomWidth: placement.width,
+      _labelRoomHeight: placement.height,
+    };
+    const minZoom = Math.max(label.minZoom, fitZoom(fit, label.short));
+    const fullZoom = Math.max(minZoom, fitZoom(fit, label.full));
 
     labels.push({
       type: 'Feature',
@@ -146,12 +161,19 @@ export function buildLabelCollection(collection) {
         _labelShort: label.short,
         _labelScale: label.scale,
         _labelClass: label.kind,
-        _labelMinZoom: label.minZoom,
+        _labelMinZoom: minZoom,
+        _labelFullZoom: fullZoom,
         _letterSpacing: label.letterSpacing,
-        _labelAngle: angle,
+        // Horizontal labels keep the fit estimate honest and avoid diagonal clutter.
+        _labelAngle: 0,
+        _labelRoomWidth: placement.width,
+        _labelRoomHeight: placement.height,
+        _presentationRole: dependent ? 'dependent' : 'primary',
+        _labelOpacity: dependent ? 0.78 : 0.96,
         _entityArea: entityArea,
         _priority: priority,
-        _sortKey: -priority,
+        // All primary labels precede dependents; area orders each tier.
+        _sortKey: (dependent ? 100_000_000 : 0) - priority,
       },
     });
   }
@@ -247,26 +269,85 @@ function normalizePrecision(value) {
   return n === 1 || n === 2 || n === 3 ? n : 0;
 }
 
-function labelData(name, area) {
-  const canonical = canonicalEntityName(name).toLowerCase();
-  const override = LABEL_OVERRIDES.get(canonical);
-  const full = (override?.full || canonicalEntityName(name)).toUpperCase();
-  const short = override?.short || acronym(name);
-  const forcedWorld = WORLD_LABEL_NAMES.has(canonical);
+function sourceParent(name, partOf, authority) {
+  const own = canonicalEntityName(name).toLowerCase();
+  for (const candidate of [partOf, authority]) {
+    if (!shouldSuppressLabel(candidate) && canonicalEntityName(candidate).toLowerCase() !== own) {
+      return clean(candidate);
+    }
+  }
+  // This is a presentation tier, not an assertion of sovereignty or independence.
+  return '';
+}
 
-  if (forcedWorld || area >= 0.07) {
-    return { full, short: full, display: full, scale: area >= 0.18 ? 1.34 : 1.22, kind: 'major', minZoom: 1, letterSpacing: area >= 0.18 ? 0.16 : 0.11 };
+function labelData(name, area, dependent = false) {
+  const canonical = canonicalEntityName(name);
+  const key = canonical.toLowerCase();
+  const override = LABEL_OVERRIDES.get(key);
+  const full = (override?.full || canonical).toUpperCase();
+  // Keep unknown names readable: no automatic initialisms or truncated words.
+  const short = override?.short || PRESENTATION_ALIASES.get(key) || full;
+  let scale, kind, minZoom, letterSpacing;
+  if (area >= 0.07) {
+    scale = area >= 0.18 ? 1.16 : 1.10;
+    kind = 'major'; minZoom = -1; letterSpacing = 0.06;
+  } else if (area >= 0.012) {
+    scale = 1.06; kind = 'regional'; minZoom = 1.6; letterSpacing = 0.055;
+  } else if (area >= 0.004) {
+    scale = 0.98; kind = 'medium'; minZoom = 2.4; letterSpacing = 0.035;
+  } else if (area >= 0.001) {
+    scale = 0.90; kind = 'small'; minZoom = 3.5; letterSpacing = 0.02;
+  } else {
+    scale = 0.82; kind = 'local'; minZoom = 5; letterSpacing = 0.01;
   }
-  if (area >= 0.012) {
-    return { full, short: full, display: full, scale: 1.08, kind: 'regional', minZoom: 1.15, letterSpacing: 0.075 };
+  return {
+    full, short, display: short, kind,
+    scale: scale * (dependent ? 0.86 : 1),
+    minZoom: minZoom + (dependent ? 1.25 : 0),
+    letterSpacing: letterSpacing * (dependent ? 0.45 : 1),
+  };
+}
+
+// Match the MapLibre text-size stops. Fit includes conservative glyph advances,
+// letter spacing, line height and a small margin, measured in CSS pixels.
+export function labelFontSize(zoom, scale = 1) {
+  const stops = [[0, 11.2], [1, 11.2], [3, 12.4], [6, 14.8], [10, 18.2], [14, 21.5], [18, 24]];
+  for (let i = 1; i < stops.length; i += 1) {
+    const [z, size] = stops[i];
+    const [previousZ, previousSize] = stops[i - 1];
+    if (zoom <= z) return (previousSize + (size - previousSize) * Math.max(0, (zoom - previousZ) / (z - previousZ))) * scale;
   }
-  if (area >= 0.004) {
-    return { full, short: full.length <= 15 ? full : short, display: full.length <= 15 ? full : short, scale: 0.98, kind: 'medium', minZoom: 2.15, letterSpacing: 0.045 };
+  return 24 * scale;
+}
+
+function textFits(properties, text, zoom) {
+  const size = labelFontSize(zoom, properties._labelScale);
+  let advance = 0;
+  for (const char of text) {
+    advance += /[MW@]/.test(char) ? 0.95 : /[I1 .,'-]/.test(char) ? 0.34 : 0.68;
   }
-  if (area >= 0.001) {
-    return { full, short, display: short, scale: 0.90, kind: 'small', minZoom: 3.35, letterSpacing: 0.025 };
+  const width = size * (advance + Math.max(0, text.length - 1) * properties._letterSpacing) + 8;
+  const height = size * 1.35 + 6;
+  const magnification = 2 ** zoom;
+  return width <= properties._labelRoomWidth * magnification &&
+    height <= properties._labelRoomHeight * magnification;
+}
+
+function fitZoom(properties, text) {
+  // An impossible label remains hidden even at the maximum navigation zoom.
+  if (!textFits(properties, text, 18)) return 19;
+  let low = -1, high = 18;
+  for (let i = 0; i < 12; i += 1) {
+    const middle = (low + high) / 2;
+    if (textFits(properties, text, middle)) high = middle;
+    else low = middle;
   }
-  return { full, short, display: short, scale: 0.82, kind: 'local', minZoom: 5.25, letterSpacing: 0.015 };
+  return Math.ceil(high * 20) / 20;
+}
+
+export function labelTextAtZoom(properties, zoom) {
+  if (zoom < properties._labelMinZoom) return '';
+  return zoom >= properties._labelFullZoom ? properties._labelFull : properties._labelShort;
 }
 
 function shouldSuppressLabel(name) {
@@ -275,21 +356,6 @@ function shouldSuppressLabel(name) {
   if (JUNK_LABEL_PATTERNS.some(pattern => pattern.test(value))) return true;
   const compact = value.replace(/[^A-Za-z0-9]/g, '');
   return compact.length < 2;
-}
-
-function acronym(name) {
-  const ignored = new Set(['OF', 'THE', 'AND', 'DE', 'DA', 'DEL', 'LA', 'LE', 'AL', 'DU']);
-  const words = clean(name)
-    .toUpperCase()
-    .replace(/\([^)]*\)/g, '')
-    .replace(/[^A-ZÀ-Ÿ0-9 ]/g, ' ')
-    .split(/\s+/)
-    .filter(Boolean)
-    .filter(word => !ignored.has(word));
-
-  if (words.length > 1) return words.slice(0, 4).map(word => word[0]).join('');
-  const word = words[0] || clean(name).toUpperCase();
-  return word.length <= 7 ? word : word.slice(0, 4);
 }
 
 function colorFor(text) {
@@ -326,94 +392,110 @@ function largestLabelPiece(features) {
   return best;
 }
 
-function interiorPoint(feature) {
-  const polygon = largestPolygonCoordinates(feature?.geometry);
-  if (!polygon?.[0]?.length) return safeCentroid(feature);
+function mercatorPoint(point) {
+  const latitude = Math.max(-85, Math.min(85, point[1])) * Math.PI / 180;
+  return [512 * (point[0] + 180) / 360,
+    256 * (1 - Math.log(Math.tan(Math.PI / 4 + latitude / 2)) / Math.PI)];
+}
 
-  const outer = polygon[0];
-  const bbox = ringBounds(outer);
-  if (!bbox) return safeCentroid(feature);
+function geographicPoint(point) {
+  const longitude = point[0] / 512 * 360 - 180;
+  return [((longitude + 180) % 360 + 360) % 360 - 180,
+    Math.atan(Math.sinh(Math.PI * (1 - point[1] / 256))) * 180 / Math.PI];
+}
 
-  const candidates = [];
-  const centroid = safeCentroid({ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: polygon } });
-  if (centroid) candidates.push(centroid);
-  candidates.push([(bbox.minX + bbox.maxX) / 2, (bbox.minY + bbox.maxY) / 2]);
+function projectedPolygon(polygon) {
+  const reference = polygon[0][0][0];
+  return polygon.map(ring => {
+    let previous = reference;
+    return ring.map(point => {
+      let longitude = point[0];
+      while (longitude - previous > 180) longitude -= 360;
+      while (longitude - previous < -180) longitude += 360;
+      previous = longitude;
+      return mercatorPoint([longitude, point[1]]);
+    });
+  });
+}
 
-  // A small deterministic grid gives us a robust point inside concave countries
-  // without adding another runtime dependency. We choose the point furthest from
-  // the polygon edge, which behaves much like a simplified pole-of-inaccessibility.
-  const steps = 10;
+// Distance to both sides of the containing scanline interval; using all rings
+// includes holes. This rejects attractive centroids that sit in water or outside.
+function horizontalRoom(point, polygon) {
+  const crossings = [];
+  for (const ring of polygon) {
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const a = ring[j], b = ring[i];
+      if ((a[1] > point[1]) === (b[1] > point[1])) continue;
+      crossings.push(a[0] + (point[1] - a[1]) * (b[0] - a[0]) / (b[1] - a[1]));
+    }
+  }
+  crossings.sort((a, b) => a - b);
+  for (let i = 0; i + 1 < crossings.length; i += 2) {
+    if (point[0] >= crossings[i] && point[0] <= crossings[i + 1]) {
+      return 2 * Math.min(point[0] - crossings[i], crossings[i + 1] - point[0]);
+    }
+  }
+  return 0;
+}
+
+function labelPlacement(feature) {
+  const geographic = largestPolygonCoordinates(feature?.geometry);
+  if (!geographic?.[0]?.length) return null;
+  const polygon = projectedPolygon(geographic);
+  const bbox = ringBounds(polygon[0]);
+  if (!bbox) return null;
+  const candidates = [[(bbox.minX + bbox.maxX) / 2, (bbox.minY + bbox.maxY) / 2]];
+  const centroid = safeCentroid(feature);
+  if (centroid) {
+    while (centroid[0] - geographic[0][0][0] > 180) centroid[0] -= 360;
+    while (centroid[0] - geographic[0][0][0] < -180) centroid[0] += 360;
+    candidates.push(mercatorPoint(centroid));
+  }
+  const steps = 14;
   for (let y = 0; y < steps; y += 1) {
     for (let x = 0; x < steps; x += 1) {
       candidates.push([
-        bbox.minX + ((x + 0.5) / steps) * (bbox.maxX - bbox.minX),
-        bbox.minY + ((y + 0.5) / steps) * (bbox.maxY - bbox.minY),
+        bbox.minX + (x + 0.5) / steps * (bbox.maxX - bbox.minX),
+        bbox.minY + (y + 0.5) / steps * (bbox.maxY - bbox.minY),
       ]);
     }
   }
-
-  let best = null;
-  let bestScore = -Infinity;
+  let best = null, bestScore = -Infinity;
   for (const point of candidates) {
     if (!pointInPolygon(point, polygon)) continue;
-    const edgeDistance = distanceToRing(point, outer);
-    const centerPenalty = centroid ? planarDistance(point, centroid) * 0.025 : 0;
-    const score = edgeDistance - centerPenalty;
-    if (score > bestScore) { best = point; bestScore = score; }
+    // Also respect the spherical source edges used by d3's area/containment.
+    if (!geoContains(feature, geographicPoint(point))) continue;
+    let edge = Infinity;
+    for (const ring of polygon) {
+      for (let i = 1; i < ring.length; i += 1) {
+        edge = Math.min(edge, segmentDistance(point, ring[i - 1], ring[i]));
+      }
+    }
+    if (!(edge > 0)) continue;
+    // Test above and below the baseline too: a long slit should not host a label.
+    const offset = edge * 0.45;
+    const width = Math.min(
+      horizontalRoom(point, polygon),
+      horizontalRoom([point[0], point[1] - offset], polygon),
+      horizontalRoom([point[0], point[1] + offset], polygon),
+    ) * 0.85;
+    const height = edge * 1.5;
+    const score = Math.sqrt(width * height) + Math.min(width, height * 6) * 0.18;
+    if (width > 0 && score > bestScore) {
+      bestScore = score;
+      best = { anchor: geographicPoint(point), width, height };
+    }
   }
-
-  return best || centroid || outer[0] || null;
+  // For very thin/degenerate shapes, omit the label instead of placing it outside.
+  return best;
 }
 
-function labelAngle(feature) {
-  const polygon = largestPolygonCoordinates(feature?.geometry);
-  const ring = polygon?.[0];
-  if (!ring || ring.length < 4) return 0;
-
-  const bbox = ringBounds(ring);
-  if (!bbox) return 0;
-  const width = bbox.maxX - bbox.minX;
-  const height = bbox.maxY - bbox.minY;
-  if (width <= 0 || height <= 0) return 0;
-
-  // Keep broad east-west countries horizontal. Only elongated shapes receive a
-  // modest rotation; near-vertical labels are deliberately avoided for readability.
-  const elongation = Math.max(width / height, height / width);
-  if (elongation < 1.65 || width / height > 2.2) return 0;
-
-  const meanLat = ring.reduce((sum, p) => sum + Number(p?.[1] || 0), 0) / ring.length;
-  const xScale = Math.max(0.25, Math.cos(meanLat * Math.PI / 180));
-  let meanX = 0;
-  let meanY = 0;
-  let count = 0;
-  for (const point of ring) {
-    if (!Number.isFinite(point?.[0]) || !Number.isFinite(point?.[1])) continue;
-    meanX += point[0] * xScale;
-    meanY += point[1];
-    count += 1;
-  }
-  if (!count) return 0;
-  meanX /= count;
-  meanY /= count;
-
-  let xx = 0;
-  let yy = 0;
-  let xy = 0;
-  for (const point of ring) {
-    if (!Number.isFinite(point?.[0]) || !Number.isFinite(point?.[1])) continue;
-    const dx = point[0] * xScale - meanX;
-    const dy = point[1] - meanY;
-    xx += dx * dx;
-    yy += dy * dy;
-    xy += dx * dy;
-  }
-
-  let degrees = 0.5 * Math.atan2(2 * xy, xx - yy) * 180 / Math.PI;
-  while (degrees > 90) degrees -= 180;
-  while (degrees < -90) degrees += 180;
-  if (Math.abs(degrees) > 42) degrees = Math.sign(degrees) * 42;
-  if (Math.abs(degrees) < 7) degrees = 0;
-  return Math.round(degrees * 10) / 10;
+function segmentDistance(point, a, b) {
+  const dx = b[0] - a[0], dy = b[1] - a[1];
+  const length = dx * dx + dy * dy;
+  const t = length ? Math.max(0, Math.min(1,
+    ((point[0] - a[0]) * dx + (point[1] - a[1]) * dy) / length)) : 0;
+  return Math.hypot(point[0] - a[0] - t * dx, point[1] - a[1] - t * dy);
 }
 
 function largestPolygonCoordinates(geometry) {
@@ -469,35 +551,6 @@ function pointInRing(point, ring) {
     if (intersects) inside = !inside;
   }
   return inside;
-}
-
-function distanceToRing(point, ring) {
-  let best = Infinity;
-  for (let i = 1; i < (ring?.length || 0); i += 1) {
-    best = Math.min(best, pointSegmentDistance(point, ring[i - 1], ring[i]));
-  }
-  return best;
-}
-
-function pointSegmentDistance(point, a, b) {
-  const latScale = Math.max(0.25, Math.cos(point[1] * Math.PI / 180));
-  const px = point[0] * latScale;
-  const py = point[1];
-  const ax = Number(a?.[0]) * latScale;
-  const ay = Number(a?.[1]);
-  const bx = Number(b?.[0]) * latScale;
-  const by = Number(b?.[1]);
-  if (![px, py, ax, ay, bx, by].every(Number.isFinite)) return Infinity;
-  const dx = bx - ax;
-  const dy = by - ay;
-  const len2 = dx * dx + dy * dy;
-  const t = len2 ? Math.max(0, Math.min(1, ((px - ax) * dx + (py - ay) * dy) / len2)) : 0;
-  return Math.hypot(px - (ax + t * dx), py - (ay + t * dy));
-}
-
-function planarDistance(a, b) {
-  const latScale = Math.max(0.25, Math.cos(((a[1] + b[1]) / 2) * Math.PI / 180));
-  return Math.hypot((a[0] - b[0]) * latScale, a[1] - b[1]);
 }
 
 function safeCentroid(feature) {

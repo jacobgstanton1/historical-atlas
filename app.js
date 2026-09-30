@@ -6,7 +6,7 @@ import {
   buildPresenceIndex,
   presenceSummary,
   clean,
-} from './data-pipeline.js';
+} from './data-pipeline.js?v=0.5';
 
 const SNAPSHOTS = [
   { year: 1800, file: 'world_1800.geojson' },
@@ -25,6 +25,7 @@ const SNAPSHOTS = [
 const TEST_MIN_YEAR = SNAPSHOTS[0].year;
 const TEST_MAX_YEAR = SNAPSHOTS[SNAPSHOTS.length - 1].year;
 const INITIAL_YEAR = 1938;
+const WORLD_BOUNDS = [[-179, -56], [179, 74]];
 const HISTORICAL_BASE = 'https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/';
 const INDEX_URL = 'https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/index.json';
 const LAND_URL = 'https://cdn.jsdelivr.net/gh/nvkelso/natural-earth-vector@ca96624a/geojson/ne_50m_land.geojson';
@@ -70,6 +71,8 @@ let labelsVisible = true;
 let playTimer = null;
 let presenceRegistry = new Map();
 let presenceReady = false;
+let lastLabelZoom = null;
+let worldViewActive = true;
 const snapshotCache = new Map();
 
 configureTimeline();
@@ -80,15 +83,24 @@ const map = new maplibregl.Map({
   style: {
     version: 8,
     sources: {},
-    glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
+    glyphs: 'https://fonts.openmaptiles.org/{fontstack}/{range}.pbf',
     layers: [{ id: 'background', type: 'background', paint: { 'background-color': '#bcd9e6' } }],
   },
-  center: [8, 24],
-  zoom: 1.35,
-  minZoom: 1,
+  center: [0, 12],
+  zoom: 0.5,
+  minZoom: -1,
   maxZoom: 18,
-  maxBounds: [[-179.9, -58.5], [179.9, 84]],
+  // Fixed maxBounds forces a covering zoom, cropping short or narrow screens.
+  // Fit the inhabited world to the unobscured UI instead.
   renderWorldCopies: false,
+  // Permit a single world to be smaller than the canvas; retain bounded panning.
+  transformConstrain: (center, zoom) => ({
+    center: new maplibregl.LngLat(
+      Math.max(-179.9, Math.min(179.9, center.lng)),
+      Math.max(-58.5, Math.min(84, center.lat)),
+    ),
+    zoom: Math.max(-1, Math.min(18, zoom)),
+  }),
   attributionControl: false,
   dragRotate: false,
   pitchWithRotate: false,
@@ -101,6 +113,7 @@ map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'bottom
 map.on('load', async () => {
   installMapLayers();
   wireMapInteractions();
+  resetView({ duration: 0 });
   setControlsDisabled(false);
   showLoading('Loading map data…');
 
@@ -186,7 +199,7 @@ function installMapLayers() {
     },
   });
 
-  // v0.4 political hierarchy: one label per polity, collision-aware, with
+  // v0.5 political hierarchy: one label per polity, collision-aware, with
   // progressively smaller entities revealed as the user zooms in.
   map.addLayer({
     id: 'territory-labels',
@@ -194,15 +207,7 @@ function installMapLayers() {
     source: 'historical-labels',
     filter: ['<=', ['get', '_labelMinZoom'], map.getZoom()],
     layout: {
-      'text-field': [
-        'case',
-        ['any',
-          ['==', ['get', '_labelClass'], 'major'],
-          ['==', ['get', '_labelClass'], 'regional'],
-        ],
-        ['get', '_labelFull'],
-        ['get', '_labelShort'],
-      ],
+      'text-field': ['get', '_labelShort'],
       'text-size': [
         'interpolate', ['linear'], ['zoom'],
         1, ['*', 11.2, ['get', '_labelScale']],
@@ -217,7 +222,7 @@ function installMapLayers() {
       'text-rotate': ['get', '_labelAngle'],
       'text-rotation-alignment': 'map',
       'text-pitch-alignment': 'map',
-      'text-max-width': 18,
+      'text-max-width': 100, // Fit metadata assumes a single horizontal line.
       'text-line-height': 1,
       'text-anchor': 'center',
       'text-justify': 'center',
@@ -235,12 +240,7 @@ function installMapLayers() {
     },
     paint: {
       'text-color': '#111416',
-      'text-opacity': [
-        'interpolate', ['linear'], ['zoom'],
-        1, 0.88,
-        3, 0.94,
-        6, 0.98,
-      ],
+      'text-opacity': ['get', '_labelOpacity'],
     },
   });
 
@@ -340,25 +340,24 @@ function wireMapInteractions() {
 
 function updateLabelZoomFilter() {
   if (!map.getLayer('territory-labels')) return;
-  const zoom = Math.max(1, map.getZoom());
+  // Conservative buckets avoid changing layout for every animation tick.
+  const zoom = Math.floor(map.getZoom() * 20) / 20;
+  if (zoom === lastLabelZoom) return;
+  lastLabelZoom = zoom;
   map.setFilter('territory-labels', ['<=', ['get', '_labelMinZoom'], zoom]);
-
-  // At close zoom levels there is enough room to expand acronyms back to full
-  // historical names. At world scale, only major/regional entities use full names.
-  map.setLayoutProperty('territory-labels', 'text-field', zoom >= 5
-    ? ['get', '_labelFull']
-    : [
-        'case',
-        ['any',
-          ['==', ['get', '_labelClass'], 'major'],
-          ['==', ['get', '_labelClass'], 'regional'],
-        ],
-        ['get', '_labelFull'],
-        ['get', '_labelShort'],
-      ]);
+  map.setLayoutProperty('territory-labels', 'text-field', [
+    'case', ['<=', ['get', '_labelFullZoom'], zoom],
+    ['get', '_labelFull'], ['get', '_labelShort'],
+  ]);
 }
 
-map.on('zoomend', updateLabelZoomFilter);
+map.on('zoom', updateLabelZoomFilter);
+map.on('movestart', event => {
+  if (event.originalEvent) worldViewActive = false;
+});
+map.on('resize', () => {
+  if (worldViewActive) resetView({ duration: 0 });
+});
 
 function chooseMostSpecificFeature(features) {
   return [...features]
@@ -372,7 +371,9 @@ async function setSnapshot(index, { resetSelection = true, requested = null } = 
   if (!snapshot) return;
 
   currentIndex = index;
-  requestedYear = Number.isFinite(Number(requested)) ? Number(requested) : snapshot.year;
+  requestedYear = requested !== null && Number.isFinite(Number(requested))
+    ? clamp(Math.round(Number(requested)), TEST_MIN_YEAR, TEST_MAX_YEAR)
+    : snapshot.year;
   const serial = ++loadSerial;
 
   if (activeAbort) activeAbort.abort();
@@ -390,18 +391,19 @@ async function setSnapshot(index, { resetSelection = true, requested = null } = 
     currentFeatures = prepared.features;
     map.getSource('historical').setData(prepared);
     map.getSource('historical-labels').setData(buildLabelCollection(prepared));
+    lastLabelZoom = null;
     updateLabelZoomFilter();
 
     if (resetSelection) clearSelection();
     else if (selectedStableId) renderInspector(selectedStableId);
 
-    els.status.textContent = `${snapshot.year} CE · ${currentFeatures.length} mapped regions`;
+    updateMapStatus();
     hideLoading();
     updateSearchResults();
     updateSnapshotMarks();
     prefetchNeighbours(index);
   } catch (error) {
-    if (error.name === 'AbortError') return;
+    if (error.name === 'AbortError' || serial !== loadSerial) return;
     console.error(error);
     els.status.textContent = `Could not load ${snapshot.year}`;
     els.snapshotNote.textContent = 'Boundary file unavailable';
@@ -455,6 +457,7 @@ function selectFeature(stableId, { zoomTo = false } = {}) {
   renderInspector(stableId);
 
   if (zoomTo) {
+    worldViewActive = false;
     const bounds = featuresBounds(matches);
     if (bounds) map.fitBounds(bounds, { padding: responsiveFitPadding(), maxZoom: 7.8, duration: 550 });
   }
@@ -609,10 +612,10 @@ function configureTimeline() {
 function updateTimelineUi(snapshot, requested) {
   els.timeline.value = String(clamp(requested, TEST_MIN_YEAR, TEST_MAX_YEAR));
   els.yearJump.value = String(clamp(requested, TEST_MIN_YEAR, TEST_MAX_YEAR));
-  els.yearLabel.textContent = `${snapshot.year} CE`;
+  els.yearLabel.textContent = requested + ' CE';
   els.snapshotNote.textContent = requested === snapshot.year
     ? 'Exact boundary snapshot'
-    : `Nearest available boundary snapshot to ${requested}`;
+    : 'Boundary data: nearest available snapshot — ' + snapshot.year;
   els.previous.disabled = currentIndex <= 0;
   els.next.disabled = currentIndex >= SNAPSHOTS.length - 1;
   updateSnapshotMarks();
@@ -646,13 +649,36 @@ function goToRequestedYear(year) {
   if (index === currentIndex && snapshotCache.has(SNAPSHOTS[index].year)) {
     requestedYear = clampedYear;
     updateTimelineUi(SNAPSHOTS[index], requestedYear);
+    if (els.loading.hidden) updateMapStatus();
     return;
   }
   setSnapshot(index, { resetSelection: true, requested: clampedYear });
 }
 
-function resetView() {
-  map.easeTo({ center: [8, 24], zoom: 1.35, bearing: 0, pitch: 0, duration: 450 });
+function worldPadding() {
+  const height = map.getContainer().clientHeight;
+  const topbar = document.querySelector('.topbar').getBoundingClientRect();
+  const timeline = document.querySelector('.timeline-shell').getBoundingClientRect();
+  return {
+    top: Math.min(height * 0.22, topbar.bottom + 12),
+    bottom: Math.min(height * 0.35, height - timeline.top + 18),
+    left: 18, right: 18,
+  };
+}
+
+function resetView({ duration = 450 } = {}) {
+  worldViewActive = true;
+  map.fitBounds(WORLD_BOUNDS, {
+    padding: worldPadding(), maxZoom: 1.35, bearing: 0, pitch: 0,
+    duration, retainPadding: false,
+  });
+}
+
+function updateMapStatus() {
+  const snapshotYear = SNAPSHOTS[currentIndex].year;
+  els.status.textContent = requestedYear === snapshotYear
+    ? requestedYear + ' CE · ' + currentFeatures.length + ' mapped regions'
+    : requestedYear + ' CE · boundary data ' + snapshotYear + ' · ' + currentFeatures.length + ' regions';
 }
 
 function step(delta) {
@@ -665,7 +691,9 @@ function togglePlay() {
     stopPlay();
     return;
   }
-  if (currentIndex >= SNAPSHOTS.length - 1) currentIndex = -1;
+  if (currentIndex >= SNAPSHOTS.length - 1) {
+    setSnapshot(0, { resetSelection: true, requested: SNAPSHOTS[0].year });
+  }
   els.play.textContent = '❚❚';
   els.play.setAttribute('aria-label', 'Pause timeline');
   playTimer = window.setInterval(() => {
@@ -708,18 +736,7 @@ function isEditableTarget(target) {
 }
 
 els.timeline.addEventListener('input', event => {
-  const year = Number(event.target.value);
-  const index = nearestSnapshotIndex(year);
-  requestedYear = year;
-  els.yearJump.value = String(year);
-  els.yearLabel.textContent = `${SNAPSHOTS[index].year} CE`;
-  els.snapshotNote.textContent = year === SNAPSHOTS[index].year
-    ? 'Exact boundary snapshot'
-    : `Nearest available boundary snapshot to ${year}`;
-  if (index !== currentIndex) {
-    stopPlay();
-    setSnapshot(index, { resetSelection: true, requested: year });
-  }
+  goToRequestedYear(Number(event.target.value));
 });
 
 els.timeline.addEventListener('change', event => {

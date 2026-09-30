@@ -235,9 +235,9 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
   margin: 0 2px 4px;
   font-size: 12px;
 }
-.timeline-heading > div { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.timeline-heading > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; min-width: 0; }
 .timeline-heading strong { font-size: 15px; }
-.snapshot-note { color: var(--dark-muted); white-space: nowrap; }
+.snapshot-note { color: var(--dark-muted); line-height: 1.35; }
 .test-range-badge { color: var(--dark-muted); font-size: 10px; white-space: nowrap; }
 .timeline-track-wrap { position: relative; padding: 0 1px 8px; }
 #timeline { width: 100%; margin: 0; accent-color: #f4f5f3; }
@@ -334,12 +334,17 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
   .brand { display: none; }
   .search-wrap { grid-column: 1; }
   .top-actions { grid-column: 2; }
-  #labels-toggle { display: none; }
-  
+  .ui-button { padding: 0 9px; }
+  .timeline-heading { align-items: start; }
+  .test-range-badge { display: none; }
+  .timeline-footer { grid-template-columns: 26px minmax(0, 1fr) 26px; gap: 4px; }
+  .year-form label { display: none; }
+  .year-form input { width: 56px; }
+  .year-form button { padding: 0 6px; }
+}
+
 
 @media (max-width: 430px) {
-  .timeline-footer { grid-template-columns: 30px minmax(0, 1fr) 30px; }
-  .year-form button { padding: 0 7px; }
   .top-actions #reset-view { font-size: 0; width: 42px; padding: 0; }
   .top-actions #reset-view::after { content: '⌂'; font-size: 17px; }
 }
