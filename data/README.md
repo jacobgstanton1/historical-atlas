@@ -48,10 +48,7 @@ Add a registry source before adding a fact. Record the institution, exact title,
 URL, access date, known publication/date/version and applicable reuse terms.
 Do not invent unknown publication dates or licences. Validate evidence and
 periods manually; schema validation cannot establish historical truth. Narratives
-are curated factual paraphrases, not runtime generation. Population data are a
-single public-domain US federal census observation. Economic figures, density,
-urban population, currencies, most capitals, comprehensive leadership lists
-and flags for the other examples are intentionally unpopulated.
+are curated factual paraphrases, not runtime generation. The v0.6.1 reference profiles include historical capitals, currencies, leadership, flags and scoped population observations. Coverage remains limited to researched periods; area, density and GDP are deliberately absent. See ../README.md for exact coverage and licensing.
 
 The initial records demonstrate US, UK, Germany under Nazi rule, Soviet Union,
 imperial Japan, post-war Japan and British Raj. They are partial profiles, not
@@ -61,9 +58,12 @@ succession is a sourced administrative/partition relationship, not polygon
 overlap. The upstream 1945 map already contains India and Pakistan; this does not
 move the independently sourced partition date from 1947.
 
-The local US flag SVGs are unmodified Commons downloads. Registry entries record
-their public-domain basis, original asset URLs and attribution. Smithsonian
-flag-history information establishes date applicability. There is no modern
+The local flag SVGs are unmodified Commons downloads. Registry entries record their reuse terms, original asset URLs, attribution and applicability sources. The Soviet 1955 asset is CC BY-SA 3.0; other added assets have public-domain bases. The British Raj asset is an office standard, not a national flag. There is no modern
 flag fallback. The app’s supported range currently ends in 1960.
 
 Run node --test tests/dossiers.test.mjs after curation or resolver changes.
+
+
+## v0.7 Phase 1 development checklist
+
+The production knowledge layer remains unchanged. Run **node scripts/coverage.mjs** from the repository root to regenerate the development-only manifest/report from every locked snapshot using the actual production pipeline. Run **node scripts/coverage.mjs --check** to verify reproducibility. See [the coverage report](../development/coverage/REPORT.md) and [planning decisions](../development/coverage/research-plan.json). These files are not production imports. Core/enriched completion requires explicit source-backed reviewed intervals, not nonempty fields or names.

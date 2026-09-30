@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 1,
+  "scope": "Development planning only. Candidate families and geography are not historical assertions.",
+  "statuses": [
+    "existing-enriched",
+    "core-complete",
+    "enriched",
+    "needs-research",
+    "identity-review",
+    "mapping-review"
+  ],
+  "tiers": {
+    "none": "No accepted core/enriched curation.",
+    "existing-enriched": "Preserved v0.6.1 reference profile, partial temporal coverage; not globally complete.",
+    "core": "Reviewed sourced core fields or documented evidence-based omissions for a defined interval.",
+    "enriched": "Reviewed core plus independently sourced enrichment for a defined interval."
+  },
+  "regions": [
+    {
+      "id": "identity-triage",
+      "name": "Unidentified/composite source labels",
+      "limit": 15,
+      "sources": "Upstream naming conventions and bibliographic provenance first; do not supply national-state templates."
+    },
+    {
+      "id": "west-north-europe",
+      "name": "Western/Northern Europe",
+      "limit": 25,
+      "sources": "National archives, parliaments, royal archives and statistical libraries; dates and offices remain entity-specific."
+    },
+    {
+      "id": "central-europe",
+      "name": "Central Europe and German/Italian source families",
+      "limit": 25,
+      "sources": "Regional/state archives and constitutional collections; establish small-state and imperial scope before statistics."
+    },
+    {
+      "id": "east-europe",
+      "name": "Eastern Europe, Russian/Soviet and Balkan source families",
+      "limit": 20,
+      "sources": "National archives and constitutional treaties; occupation, federation and regime continuity require separate evidence."
+    },
+    {
+      "id": "north-america",
+      "name": "North America",
+      "limit": 25,
+      "sources": "National/provincial archives; colonial charters and Indigenous institutional sources require distinct treatment."
+    },
+    {
+      "id": "caribbean",
+      "name": "Caribbean and Central America",
+      "limit": 25,
+      "sources": "Colonial archives, local national libraries and institutional statistical sources; distinguish islands, administrations and federations."
+    },
+    {
+      "id": "south-america",
+      "name": "South America",
+      "limit": 25,
+      "sources": "National archives, independence-era documents and historical censuses; do not equate viceroyalties with modern states."
+    },
+    {
+      "id": "north-africa",
+      "name": "North Africa and Saharan source families",
+      "limit": 25,
+      "sources": "Local archives plus Ottoman/colonial records; distinguish administrative partitions and wider imperial authority."
+    },
+    {
+      "id": "west-africa",
+      "name": "West Africa",
+      "limit": 25,
+      "sources": "Local archives, scholarly regional collections and colonial records; confederacies and community labels require scope review."
+    },
+    {
+      "id": "central-africa",
+      "name": "Central Africa",
+      "limit": 25,
+      "sources": "Regional archives, local institutional histories and colonial records; Congo/Zaire naming and composite labels require priority review."
+    },
+    {
+      "id": "east-africa",
+      "name": "East Africa and Horn",
+      "limit": 25,
+      "sources": "Local archives and historical administrative publications; different names and authority fields do not prove succession."
+    },
+    {
+      "id": "southern-africa",
+      "name": "Southern Africa",
+      "limit": 25,
+      "sources": "Local archives, regional constitutional histories and colonial collections; distinguish unions, colonies and community labels."
+    },
+    {
+      "id": "middle-east",
+      "name": "Middle East and Arabian source families",
+      "limit": 25,
+      "sources": "Local/Ottoman archives and mandate records; treaties and administrative authority require specific evidence."
+    },
+    {
+      "id": "south-central-asia",
+      "name": "South/Central Asia",
+      "limit": 25,
+      "sources": "India Office/Parliament, local archives and regional scholarship; princely states, Company rule, Raj and partition need separate identities."
+    },
+    {
+      "id": "east-asia",
+      "name": "East Asia",
+      "limit": 25,
+      "sources": "National archives, official cabinet chronologies and occupation records; constitutional continuity cannot be inferred from labels."
+    },
+    {
+      "id": "southeast-asia",
+      "name": "Southeast Asia",
+      "limit": 25,
+      "sources": "Local national archives and Dutch/French/British collections; colony, constituent region and occupation periods require explicit scope."
+    },
+    {
+      "id": "pacific",
+      "name": "Pacific/Oceania states and administrations",
+      "limit": 25,
+      "sources": "Local archives, Pacific scholarly collections and community-authorised histories; standards and colonial administrations require careful applicability."
+    },
+    {
+      "id": "australian-communities",
+      "name": "Australian source-defined communities",
+      "limit": 20,
+      "sources": "Upstream bibliography and relevant community-authorised institutions first. Establish whether labels describe language, people, land or governance; sovereignty/state-office templates are inappropriate."
+    }
+  ],
+  "families": [
+    {
+      "id": "britain",
+      "names": [
+        "United Kingdom",
+        "United Kingdom of Great Britain and Ireland",
+        "Kingdom of Ireland",
+        "Ireland"
+      ],
+      "region": "west-north-europe",
+      "question": "Review British and Irish name/state/union continuity. Do not extend the current UK profile backward simply because an ID repeats."
+    },
+    {
+      "id": "scandinavian",
+      "names": [
+        "Denmark-Norway",
+        "Denmark",
+        "Sweden",
+        "Sweden–Norway",
+        "Norway"
+      ],
+      "region": "west-north-europe",
+      "question": "Review Scandinavian union labels and constituent governments without assuming that a source-name change establishes state succession."
+    },
+    {
+      "id": "german",
+      "names": [
+        "Prussia",
+        "Germany",
+        "German Empire",
+        "East Prussia",
+        "Germany (Soviet)",
+        "Germany (USA)",
+        "Germany (UK)",
+        "Germany (France)",
+        "Saar Protectorate",
+        "West Germany",
+        "East Germany"
+      ],
+      "region": "central-europe",
+      "question": "Distinguish state, constitutional regime, constituent area, occupation zone and later republic. The existing Nazi-period mapping must not cover earlier Germany automatically."
+    },
+    {
+      "id": "italian",
+      "names": [
+        "Italy",
+        "Kingdom of Italy",
+        "Kingdom of the Two Sicilies",
+        "Kingdom of Sardinia",
+        "Papal States",
+        "Venetia",
+        "Lombardy",
+        "Tuscany",
+        "Modena",
+        "Parma",
+        "Lucca"
+      ],
+      "region": "central-europe",
+      "question": "Separate source naming variation, constituent governments and potential unification/succession; no overlap-derived chain."
+    },
+    {
+      "id": "habsburg",
+      "names": [
+        "Austrian Empire",
+        "Austria Hungary",
+        "Austro-Hungarian Empire",
+        "Austria",
+        "Hungary",
+        "Bosnia-Herzegovina"
+      ],
+      "region": "central-europe",
+      "question": "Review composite monarchy, constituent territory and later state/regime coverage separately."
+    },
+    {
+      "id": "russian",
+      "names": [
+        "Russian Empire",
+        "USSR",
+        "White Russia",
+        "South Russia",
+        "Far Eastern SSR",
+        "Ukraine",
+        "Georgia",
+        "Armenia",
+        "Azerbaijan"
+      ],
+      "region": "east-europe",
+      "question": "Source USSR appears in 1920 although the curated Union formation is dated 1922. Review civil-war source labels and republic/union relationships without inventing continuity."
+    },
+    {
+      "id": "japanese-korean",
+      "names": [
+        "Japan",
+        "Imperial Japan",
+        "Empire of Japan",
+        "Japan (USA)",
+        "Korea",
+        "Korea (USSR)",
+        "Korea (USA)",
+        "Korea, Democratic People's Republic of",
+        "Korea, Republic of",
+        "Kuril Islands",
+        "Sakhalin (RU)"
+      ],
+      "region": "east-asia",
+      "question": "Review three imperial/Japan names, occupation authorities and divided Korea; preserve the separate 1947 constitutional profile."
+    },
+    {
+      "id": "chinese",
+      "names": [
+        "Qing Empire",
+        "Manchu Empire",
+        "Chinese Warlords",
+        "China",
+        "Manchuria",
+        "Xinjiang",
+        "Tibet",
+        "Taiwan",
+        "Hong Kong"
+      ],
+      "region": "east-asia",
+      "question": "Determine whether each source grouping describes an administration, constituent territory or multiple polities; no modern-country fallback."
+    },
+    {
+      "id": "south-asian",
+      "names": [
+        "British East India Company",
+        "British Raj",
+        "India",
+        "Pakistan",
+        "Bangladesh",
+        "Ceylon (Dutch)",
+        "Ceylon",
+        "Sri Lanka",
+        "Mysore",
+        "Mysore (Indian princely state)",
+        "Sikkim (Indian princely state)"
+      ],
+      "region": "south-central-asia",
+      "question": "Source India/Pakistan/Bangladesh dates and administrative scope need review; existing sourced partition dates must remain independent of snapshot names."
+    },
+    {
+      "id": "iranian",
+      "names": [
+        "Persia",
+        "Iran",
+        "central Asian khanates",
+        "Turan",
+        "Bokhara Khanate"
+      ],
+      "region": "south-central-asia",
+      "question": "Review name continuity and whether plural khanate/group labels can represent one dossier."
+    },
+    {
+      "id": "ottoman-arabian",
+      "names": [
+        "Ottoman Empire",
+        "Ottoman Sultanate",
+        "Republic of Turkey",
+        "Turkey",
+        "Mesopotamia (GB)",
+        "Iraq",
+        "Syria (France)",
+        "Syria",
+        "Lebanon",
+        "Mandatory Palestine (GB)",
+        "Israel",
+        "Jordan",
+        "Nejd",
+        "Arabia",
+        "Arabia (Nejd)",
+        "Hejaz",
+        "Hail",
+        "Saudi Arabia",
+        "Oman",
+        "Muscat and Oman",
+        "Oman (British Raj)",
+        "Trucial Oman",
+        "United Arab Emirates",
+        "British Protectorate",
+        "Yemen",
+        "Yemen (UK)",
+        "Emirate of Bin Shal'an"
+      ],
+      "region": "middle-east",
+      "question": "Review empire/constituent scope, mandates, occupation and source labels that may precede named states. Do not reinterpret authority fields as constitutional status."
+    },
+    {
+      "id": "libyan",
+      "names": [
+        "Tripolitania",
+        "Cyrenaica",
+        "Libya",
+        "Libya (IT)",
+        "Cyraneica (UK Lybia)",
+        "Fezzan (Frech Lybia)",
+        "Tripolitana (UK Lybia)"
+      ],
+      "region": "north-africa",
+      "question": "Preserve spelling errors as source evidence; review Ottoman/colonial/occupation partitions and later state continuity."
+    },
+    {
+      "id": "congo",
+      "names": [
+        "Congo",
+        "Congo (France)",
+        "Belgian Congo",
+        "Zaire (Belgium)",
+        "Zaire"
+      ],
+      "region": "central-africa",
+      "question": "Separate the two Congo source families and review earlier snapshots using Zaire; never derive succession from identical polygons."
+    },
+    {
+      "id": "african-east",
+      "names": [
+        "Ethiopia",
+        "Abyssinia",
+        "Ethiopia (Italy)",
+        "Tanzania, United Republic of",
+        "German E. Africa (Tanganyika)",
+        "Zanzibar",
+        "Sultinate of Zanzibar",
+        "Sultanate of Zanzibar",
+        "British East Africa",
+        "Kenya",
+        "Djibouti",
+        "French Somaliland"
+      ],
+      "region": "east-africa",
+      "question": "Review historical-name variants, colonies/occupations and labels such as Tanzania in earlier snapshots; explicit dates need later research."
+    },
+    {
+      "id": "african-south",
+      "names": [
+        "South Africa",
+        "Union of South Africa",
+        "Rhodesia",
+        "Southern Rhodesia",
+        "Zimbabwe",
+        "Northern Rhodesia",
+        "Zambia",
+        "Nyasaland",
+        "Malawi",
+        "Basutoland",
+        "Lesotho",
+        "German South-West Africa",
+        "Namibia"
+      ],
+      "region": "southern-africa",
+      "question": "Review colonies, unions and source-name substitution; no modern sovereignty is inferred from the shared geographic label."
+    },
+    {
+      "id": "indochinese",
+      "names": [
+        "French Indochina",
+        "French Indo-China",
+        "Cochin China",
+        "Annam",
+        "Tonkin",
+        "Vietnam",
+        "Laos",
+        "Cambodia"
+      ],
+      "region": "southeast-asia",
+      "question": "Distinguish colonial federation, constituent regions and later states; determine whether differently spelled federation labels share historical identity."
+    },
+    {
+      "id": "maritime-asian",
+      "names": [
+        "Dutch East Indies",
+        "Netherlands Indies",
+        "Indonesia",
+        "Malaya",
+        "Malaysia",
+        "Rattanakosin Kingdom",
+        "Siam",
+        "Thailand",
+        "Burma"
+      ],
+      "region": "southeast-asia",
+      "question": "Review colony/state/name continuity and multiple simultaneous source names; do not auto-merge."
+    },
+    {
+      "id": "brazilian",
+      "names": [
+        "Viceroyalty of Brazil",
+        "Kingdom of Brazil",
+        "Brazil"
+      ],
+      "region": "south-america",
+      "question": "Establish actual colonial/constitutional periods rather than assuming that the source name is dated correctly."
+    },
+    {
+      "id": "maori",
+      "names": [
+        "Māori",
+        "Maori",
+        "M?ori",
+        "New Zealand"
+      ],
+      "region": "pacific",
+      "question": "Encoding and accent variants need review; people/land/community labels are not equivalent to the later state."
+    }
+  ],
+  "overrides": {
+    "entity-unnamed-territory": "identity-triage",
+    "entity-africa": "identity-triage",
+    "entity-denmark-norway": "west-north-europe",
+    "entity-tu-i-tonga-empire": "pacific",
+    "entity-polynesians": "pacific",
+    "entity-papuans": "pacific",
+    "entity-papua-new-guinea": "pacific",
+    "entity-dutch-guinea": "pacific",
+    "entity-guam": "pacific",
+    "entity-saipan": "pacific",
+    "entity-tunis": "north-africa",
+    "entity-sotho": "southern-africa",
+    "entity-kong": "west-africa",
+    "entity-nguni": "southern-africa",
+    "entity-kingdom-of-hawaii": "pacific",
+    "entity-france": "west-north-europe",
+    "entity-spain": "west-north-europe",
+    "entity-portugal": "west-north-europe",
+    "entity-netherlands": "west-north-europe",
+    "entity-belgium": "west-north-europe",
+    "entity-luxembourg": "west-north-europe",
+    "entity-switzerland": "west-north-europe",
+    "entity-denmark": "west-north-europe",
+    "entity-iceland": "west-north-europe",
+    "entity-finland": "west-north-europe",
+    "entity-batavian-republic": "west-north-europe",
+    "entity-austrian-netherlands": "west-north-europe",
+    "entity-helvetic-republic": "west-north-europe",
+    "entity-malta": "west-north-europe",
+    "entity-andorra": "west-north-europe",
+    "entity-san-marino": "west-north-europe",
+    "entity-new-south-wales": "pacific"
+  },
+  "reviews": {},
+  "acceptance": {
+    "core": [
+      "historical identity/name",
+      "existence/status",
+      "capital",
+      "government/political structure",
+      "principal leadership",
+      "currency",
+      "concise dated overview",
+      "source provenance"
+    ],
+    "enrichment": [
+      "dated scoped population",
+      "licensed historically applicable flags/standards",
+      "legislature",
+      "party",
+      "dynasty",
+      "explicit predecessor/successor",
+      "successive overviews",
+      "timeline",
+      "other independently supported facts"
+    ],
+    "rule": "A tier is accepted only by an explicit reviewed decision, with date intervals, evidence/omission rationale and reviewer note. Structural field presence alone never marks completeness."
+  }
+}
