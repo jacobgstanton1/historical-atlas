@@ -64,8 +64,8 @@ export function createMetadataIndex(database, sources) {
 }
 let pending;
 export function loadMetadata() {
-  return pending ||= Promise.all(['./data/historical-entities.json?v=0.6',
-    './data/historical-sources.json?v=0.6'].map(async url => {
+  return pending ||= Promise.all(['./data/historical-entities.json?v=0.6.1',
+    './data/historical-sources.json?v=0.6.1'].map(async url => {
       const r = await fetch(url); if (!r.ok) throw new Error('Metadata HTTP ' + r.status); return r.json();
     })).then(([db, sources]) => createMetadataIndex(db, sources));
 }

@@ -9,7 +9,7 @@
       "mapId": "entity-united-kingdom",
       "entityId": "united-kingdom",
       "validFrom": "1936-12",
-      "validUntil": "1952-02-06"
+      "validUntil": "1961-01-01"
     },
     {
       "mapId": "entity-germany",
@@ -50,6 +50,16 @@
           ],
           "confidence": "documented",
           "kind": "primary"
+        },
+        {
+          "value": "United States of America",
+          "validFrom": "1789-03-04",
+          "sourceIds": [
+            "us-constitution",
+            "us-constitutional-start"
+          ],
+          "confidence": "documented",
+          "kind": "formal"
         }
       ],
       "aliases": [
@@ -104,7 +114,17 @@
           "attribution": "Wikimedia Commons contributors; U.S. government design"
         }
       ],
-      "politicalStatus": [],
+      "politicalStatus": [
+        {
+          "value": "Federal republic under the Constitution",
+          "validFrom": "1789-03-04",
+          "sourceIds": [
+            "us-constitution",
+            "us-constitutional-start"
+          ],
+          "confidence": "documented"
+        }
+      ],
       "capitals": [
         {
           "value": "Washington, D.C.",
@@ -116,18 +136,59 @@
           "note": "Source documents the move of Congress in November 1800; month-level precision is retained."
         }
       ],
-      "governments": [],
+      "governments": [
+        {
+          "value": "Separate legislative, executive and judicial powers",
+          "validFrom": "1789-03-04",
+          "sourceIds": [
+            "us-constitution",
+            "us-constitutional-start"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "Congress: Senate and House of Representatives",
+          "validFrom": "1789-03-04",
+          "sourceIds": [
+            "us-constitution",
+            "us-constitutional-start"
+          ],
+          "confidence": "documented",
+          "label": "Legislature"
+        }
+      ],
       "leaders": [
         {
           "value": "Franklin D. Roosevelt",
           "validFrom": "1933-03-04",
           "validUntil": "1945-04-12",
           "sourceIds": [
-            "fdr"
+            "fdr",
+            "us-constitution"
           ],
           "confidence": "documented",
           "role": "President",
-          "note": "Both head of state and head of government. Other presidencies are not yet curated."
+          "note": "The presidency combines head-of-state and executive functions under Article II."
+        },
+        {
+          "value": "Harry S. Truman",
+          "validFrom": "1945-04-12",
+          "validUntil": "1953-01-20",
+          "sourceIds": [
+            "truman-calendar"
+          ],
+          "confidence": "documented",
+          "role": "President"
+        },
+        {
+          "value": "Dwight D. Eisenhower",
+          "validFrom": "1953-01-20",
+          "validUntil": "1961-01-20",
+          "sourceIds": [
+            "eisenhower"
+          ],
+          "confidence": "documented",
+          "role": "President"
         }
       ],
       "population": [
@@ -140,13 +201,50 @@
           "sourceIds": [
             "census1930"
           ],
-          "confidence": "documented"
+          "confidence": "documented",
+          "note": "Historical continental census total; excludes outlying territories and possessions and is not asserted to equal every mapped U.S. piece. Retained as a 1930 observation, not a selected-year estimate."
         }
       ],
       "economy": [],
       "area": [],
-      "currencies": [],
-      "relationships": [],
+      "currencies": [
+        {
+          "value": "United States dollar",
+          "validFrom": "1792-04-02",
+          "sourceIds": [
+            "us-dollar"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "relationships": [
+        {
+          "value": "Soviet Union",
+          "validFrom": "1933-11-16",
+          "sourceIds": [
+            "us-soviet-recognition"
+          ],
+          "confidence": "documented",
+          "type": "Diplomatic recognition",
+          "mapIds": [
+            "entity-soviet-union"
+          ],
+          "note": "Recognition and diplomatic relations do not imply political alignment."
+        },
+        {
+          "value": "Soviet Union",
+          "validFrom": "1941-12",
+          "validUntil": "1945",
+          "sourceIds": [
+            "us-soviet-war"
+          ],
+          "confidence": "documented",
+          "type": "Wartime ally",
+          "mapIds": [
+            "entity-soviet-union"
+          ]
+        }
+      ],
       "predecessors": [],
       "successors": [],
       "events": [
@@ -165,10 +263,31 @@
           ]
         },
         {
+          "date": "1933-11-16",
+          "title": "United States recognises the Soviet Union",
+          "sourceIds": [
+            "us-soviet-recognition"
+          ]
+        },
+        {
           "date": "1945-04-12",
           "title": "Roosevelt dies in office",
           "sourceIds": [
             "fdr"
+          ]
+        },
+        {
+          "date": "1945-04-12",
+          "title": "Truman becomes president",
+          "sourceIds": [
+            "truman-calendar"
+          ]
+        },
+        {
+          "date": "1953-01-20",
+          "title": "Eisenhower begins his presidency",
+          "sourceIds": [
+            "eisenhower"
           ]
         }
       ],
@@ -182,8 +301,55 @@
             "census1930"
           ],
           "confidence": "documented"
+        },
+        {
+          "value": "Roosevelt entered his third presidential term in January 1941. American aid to the Allies preceded direct entry into the war. This interval ends with U.S. belligerency in December.",
+          "validFrom": "1941-01-20",
+          "validUntil": "1941-12-08",
+          "sourceIds": [
+            "fdr",
+            "us-soviet-war"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "The United States entered the war in late 1941 and coordinated with Britain and the Soviet Union. Cooperation against Nazi Germany included disagreements over the second front. Roosevelt’s death in April 1945 brought Truman to the presidency.",
+          "validFrom": "1941-12-08",
+          "validUntil": "1945-09",
+          "sourceIds": [
+            "us-soviet-war",
+            "fdr",
+            "truman-calendar"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "Truman took office after Roosevelt’s death in April 1945. His presidential calendar documents the administration through January 1953. The end of the Second World War did not produce a new United States map identity: the presidency and bicameral Congress remained institutions of the same federal constitutional state. This profile covers the administration without attaching later presidents to earlier selected years.",
+          "validFrom": "1945-09",
+          "validUntil": "1953-01-20",
+          "sourceIds": [
+            "truman-calendar",
+            "us-constitution"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "Eisenhower’s presidency began on 20 January 1953. His administration occupied a Cold War setting, while domestic measures included the interstate highway programme. The presidential library’s chronology records both domestic legislation and international diplomacy, including the 1959 opening of the St. Lawrence Seaway with Queen Elizabeth II. The earlier census observation remains labelled with its original date and territorial scope.",
+          "validFrom": "1953-01-20",
+          "validUntil": "1961-01-20",
+          "sourceIds": [
+            "eisenhower"
+          ],
+          "confidence": "documented"
         }
-      ]
+      ],
+      "existence": {
+        "validFrom": "1776-07-04",
+        "sourceIds": [
+          "archives-independence"
+        ],
+        "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+      }
     },
     {
       "id": "united-kingdom",
@@ -196,7 +362,18 @@
           "confidence": "documented",
           "kind": "primary",
           "validFrom": "1936-12",
-          "validUntil": "1952-02-06"
+          "validUntil": "1961-01-01"
+        },
+        {
+          "value": "United Kingdom of Great Britain and Northern Ireland",
+          "validFrom": "1936-12",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "uk-formal-name"
+          ],
+          "confidence": "documented",
+          "kind": "formal",
+          "note": "Formal wording documented by the 1927 Act; the curated profile begins in 1936, not the state’s inception."
         }
       ],
       "aliases": [
@@ -207,43 +384,232 @@
           ],
           "confidence": "documented",
           "validFrom": "1936-12",
-          "validUntil": "1952-02-06"
+          "validUntil": "1961-01-01"
         }
       ],
-      "flags": [],
-      "politicalStatus": [],
-      "capitals": [],
-      "governments": [],
+      "flags": [
+        {
+          "value": "Union Flag (1801 design, land variant)",
+          "validFrom": "1801-01-01",
+          "sourceIds": [
+            "uk-union",
+            "uk-flag-history"
+          ],
+          "confidence": "documented",
+          "asset": "./assets/flags/uk-union.svg",
+          "alt": "Union Flag (1801 design, land variant)",
+          "license": "Public domain",
+          "attribution": "Yaddah; historical Union Flag design",
+          "note": "Historical design introduced in 1801; no modern replacement is substituted."
+        }
+      ],
+      "politicalStatus": [
+        {
+          "value": "Parliamentary monarchy",
+          "validFrom": "1936-12",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "george-vi",
+            "elizabeth-ii",
+            "uk-parliament"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "capitals": [
+        {
+          "value": "London",
+          "validFrom": "1936-12",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "uk-capital"
+          ],
+          "confidence": "documented",
+          "note": "Historical capital, not a modern successor-state substitution. This interval is curated coverage, not the date London became the capital."
+        }
+      ],
+      "governments": [
+        {
+          "value": "Parliament: House of Commons and House of Lords",
+          "validFrom": "1936-12",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "uk-parliament"
+          ],
+          "confidence": "documented",
+          "label": "Legislature",
+          "note": "The Parliament Acts changed the Lords’ powers; they did not create a new map entity."
+        }
+      ],
       "leaders": [
         {
           "value": "George VI",
           "validFrom": "1936-12",
           "validUntil": "1952-02-06",
           "sourceIds": [
-            "george-vi"
+            "george-vi",
+            "windsor"
           ],
           "confidence": "documented",
           "role": "King / head of state",
-          "note": "Accession is documented to December; no day is inferred."
+          "note": "Accession is documented to December; no day is inferred.",
+          "dynasty": "House of Windsor"
         },
         {
           "value": "Neville Chamberlain",
           "validFrom": "1937-05",
-          "validUntil": "1940-05",
+          "validUntil": "1940-05-10",
           "sourceIds": [
-            "chamberlain"
+            "chamberlain",
+            "downing-street"
           ],
           "confidence": "documented",
           "role": "Prime minister / head of government",
           "party": "Conservative",
-          "note": "Source supplies the months of appointment and resignation."
+          "note": "Resignation date documented in the history of 10 Downing Street."
+        },
+        {
+          "value": "Winston Churchill",
+          "validFrom": "1940-05-10",
+          "validUntil": "1945-07",
+          "sourceIds": [
+            "churchill",
+            "downing-street"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister / head of government",
+          "party": "Conservative",
+          "note": "Led a wartime coalition; his party affiliation is not a claim of a single-party wartime government."
+        },
+        {
+          "value": "Clement Attlee",
+          "validFrom": "1945",
+          "validUntil": "1951",
+          "sourceIds": [
+            "attlee"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister / head of government",
+          "party": "Labour",
+          "note": "This source gives years of office; transition years can include more than one prime minister."
+        },
+        {
+          "value": "Winston Churchill",
+          "validFrom": "1951",
+          "validUntil": "1955",
+          "sourceIds": [
+            "churchill"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister / head of government",
+          "party": "Conservative"
+        },
+        {
+          "value": "Harold Macmillan",
+          "validFrom": "1957",
+          "validUntil": "1963",
+          "sourceIds": [
+            "macmillan"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister / head of government",
+          "party": "Conservative"
+        },
+        {
+          "value": "Elizabeth II",
+          "validFrom": "1952-02-06",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "elizabeth-ii",
+            "windsor"
+          ],
+          "confidence": "documented",
+          "role": "Queen / head of state",
+          "dynasty": "House of Windsor",
+          "note": "Curated coverage ends at the atlas’s supported limit; it is not the end of her reign."
+        },
+        {
+          "value": "Anthony Eden",
+          "validFrom": "1955-04",
+          "validUntil": "1957-01-09",
+          "sourceIds": [
+            "eden"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister / head of government",
+          "party": "Conservative",
+          "note": "Appointment is documented to April; resignation is documented to 9 January 1957."
         }
       ],
-      "population": [],
+      "population": [
+        {
+          "value": 46073600,
+          "metric": "Population",
+          "asOf": "1931-06",
+          "observationType": "official estimate",
+          "scope": "United Kingdom",
+          "sourceIds": [
+            "ons-historical"
+          ],
+          "confidence": "documented",
+          "note": "Mid-year estimate, not a census count; month precision retained. Excludes the wider British Empire."
+        },
+        {
+          "value": 47547700,
+          "metric": "Population",
+          "asOf": "1939-06",
+          "observationType": "official estimate",
+          "scope": "United Kingdom",
+          "sourceIds": [
+            "ons-historical"
+          ],
+          "confidence": "documented",
+          "note": "Mid-year home population: civilians and home armed forces, excluding UK armed forces posted abroad. Excludes the wider empire."
+        },
+        {
+          "value": 52372500,
+          "metric": "Population",
+          "asOf": "1960-06",
+          "observationType": "official estimate",
+          "scope": "United Kingdom",
+          "sourceIds": [
+            "ons-historical"
+          ],
+          "confidence": "documented",
+          "note": "Mid-year official estimate; excludes the wider empire. Historical estimates are not accurate to every published digit."
+        }
+      ],
       "economy": [],
       "area": [],
-      "currencies": [],
-      "relationships": [],
+      "currencies": [
+        {
+          "value": "Pound sterling",
+          "validFrom": "1936-12",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "sterling"
+          ],
+          "confidence": "documented",
+          "note": "The link between Bank of England notes and gold had been broken in 1931."
+        }
+      ],
+      "relationships": [
+        {
+          "value": "British Raj",
+          "validFrom": "1936-12",
+          "validUntil": "1947",
+          "sourceIds": [
+            "raj-parliament",
+            "partition"
+          ],
+          "confidence": "documented",
+          "type": "Imperial administration",
+          "mapIds": [
+            "entity-british-raj"
+          ],
+          "note": "Direct Crown administration and princely-state relationships were not identical."
+        }
+      ],
       "predecessors": [],
       "successors": [],
       "events": [
@@ -267,19 +633,85 @@
           "sourceIds": [
             "chamberlain"
           ]
+        },
+        {
+          "date": "1940-05-10",
+          "title": "Churchill asked to form a government",
+          "sourceIds": [
+            "downing-street"
+          ]
+        },
+        {
+          "date": "1945",
+          "title": "Attlee becomes prime minister",
+          "sourceIds": [
+            "attlee"
+          ]
+        },
+        {
+          "date": "1952-02-06",
+          "title": "Elizabeth II accedes to the throne",
+          "sourceIds": [
+            "elizabeth-ii"
+          ]
         }
       ],
       "descriptions": [
         {
-          "value": "George VI became king in December 1936 following the abdication of Edward VIII. Neville Chamberlain became prime minister in May 1937 and was a Conservative politician. The monarchy and premiership are shown as distinct offices, with separate periods of service. Chamberlain’s foreign policy sought to avoid another European war through negotiation and concessions; the Munich agreement of 1938 was a central expression of that policy. These leadership records apply to the requested year, rather than the nearest boundary snapshot. Relationships shown elsewhere from the map’s SUBJECTO and PARTOF fields retain their original dataset meaning and are not a substitute for a constitutional account of Britain’s imperial possessions.",
-          "validFrom": "1938",
-          "validUntil": "1939-01-01",
+          "value": "George VI became king after Edward VIII’s abdication in December 1936. Chamberlain’s Conservative premiership began in May 1937. British policy sought to avoid another European war through negotiation and concessions; the Munich agreement of 1938 became its best-known expression. The monarch and prime minister held distinct offices within a parliamentary monarchy. The British Empire extended well beyond the United Kingdom’s domestic population series. This interval ends when Britain entered the war in September 1939.",
+          "validFrom": "1937-05",
+          "validUntil": "1939-09-03",
           "sourceIds": [
             "george-vi",
-            "chamberlain"
+            "chamberlain",
+            "ons-historical",
+            "uk-parliament"
           ],
-          "confidence": "documented",
-          "note": "Overview is curated for 1938; other periods are not yet covered."
+          "confidence": "documented"
+        },
+        {
+          "value": "Britain entered war against Germany in September 1939 while Chamberlain remained prime minister. The outbreak of war changed the setting of government and foreign policy, but did not merge the monarchy and premiership into a single office. Chamberlain resigned on 10 May 1940; George VI then asked Churchill to form a government. This overview ends at that governmental transition.",
+          "validFrom": "1939-09-03",
+          "validUntil": "1940-05-10",
+          "sourceIds": [
+            "chamberlain",
+            "downing-street"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "Churchill became prime minister in May 1940 and formed a wartime coalition. His Conservative affiliation should not be mistaken for the composition of that all-party administration. Britain’s war effort depended on military operations and cooperation with allies; the government continued to operate through parliamentary institutions. George VI remained monarch throughout the war. The leadership records preserve the change to Attlee in 1945 rather than assigning one prime minister to the entire transition year.",
+          "validFrom": "1940-05-10",
+          "validUntil": "1945-07",
+          "sourceIds": [
+            "churchill",
+            "george-vi",
+            "attlee"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "Attlee’s Labour government followed the 1945 election. Its programme expanded public services and nationalised important industries. The National Health Service and national insurance legislation were central to postwar reconstruction. Overseas, the government presided over independence for India and Pakistan and the end of British rule in other territories. These were changes in imperial relationships, not grounds for treating every formerly governed territory as a part of the United Kingdom’s domestic census population.",
+          "validFrom": "1945-07",
+          "validUntil": "1951",
+          "sourceIds": [
+            "attlee",
+            "ons-historical"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "Churchill returned to the premiership in 1951, with Anthony Eden and then Harold Macmillan following during the decade. Elizabeth II succeeded George VI in February 1952. Under Macmillan, the Conservatives increased their majority in the 1959 election. Britain’s international position involved Cold War diplomacy and changing imperial relationships. The domestic population estimate is separately dated and does not include the populations of overseas possessions.",
+          "validFrom": "1951",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "downing-street",
+            "elizabeth-ii",
+            "macmillan",
+            "ons-historical",
+            "eden"
+          ],
+          "confidence": "documented"
         }
       ]
     },
@@ -305,6 +737,17 @@
           ],
           "confidence": "documented",
           "kind": "alternate"
+        },
+        {
+          "value": "German Reich",
+          "validFrom": "1933-01-30",
+          "validUntil": "1945-04-30",
+          "sourceIds": [
+            "reich-flag-law"
+          ],
+          "confidence": "documented",
+          "kind": "formal",
+          "note": "Reich terminology documented in the 1935 law; not a claim that “Third Reich” was a separate sovereign successor state."
         }
       ],
       "aliases": [
@@ -318,9 +761,45 @@
           "confidence": "documented"
         }
       ],
-      "flags": [],
-      "politicalStatus": [],
-      "capitals": [],
+      "flags": [
+        {
+          "value": "German national flag under Nazi rule (1935 design)",
+          "validFrom": "1935-09-15",
+          "validUntil": "1945",
+          "sourceIds": [
+            "de-1935",
+            "reich-flag-law"
+          ],
+          "confidence": "documented",
+          "asset": "./assets/flags/de-1935.svg",
+          "alt": "German national flag under Nazi rule (1935 design)",
+          "license": "Public domain",
+          "attribution": "German government",
+          "note": "Swastika flag made the national and merchant flag by the Reich Flag Law; displayed for historical documentation."
+        }
+      ],
+      "politicalStatus": [
+        {
+          "value": "German state under National Socialist rule",
+          "validFrom": "1933-01-30",
+          "validUntil": "1945-04-30",
+          "sourceIds": [
+            "reichstag"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "capitals": [
+        {
+          "value": "Berlin",
+          "validFrom": "1933-01-30",
+          "validUntil": "1945-04-30",
+          "sourceIds": [
+            "berlin-nazi"
+          ],
+          "confidence": "documented"
+        }
+      ],
       "governments": [
         {
           "value": "Nazi one-party dictatorship",
@@ -332,6 +811,26 @@
           ],
           "confidence": "documented",
           "note": "This curated interval covers consolidated rule under Hitler; the transition during 1933–1934 is not flattened into a full-year fact."
+        },
+        {
+          "value": "NSDAP (National Socialist German Workers’ Party)",
+          "validFrom": "1934-08-02",
+          "validUntil": "1945-04-30",
+          "sourceIds": [
+            "nazi-party"
+          ],
+          "confidence": "documented",
+          "label": "Ruling party"
+        },
+        {
+          "value": "Reichstag (one-party body, deprived of independent legislative scrutiny)",
+          "validFrom": "1933-11",
+          "validUntil": "1945-04-30",
+          "sourceIds": [
+            "reichstag"
+          ],
+          "confidence": "documented",
+          "label": "Legislature"
         }
       ],
       "leaders": [
@@ -358,12 +857,57 @@
           "role": "Führer and Reich chancellor"
         }
       ],
-      "population": [],
+      "population": [
+        {
+          "value": 65218000,
+          "metric": "Population",
+          "asOf": "1933-06",
+          "observationType": "census",
+          "scope": "German Reich census series",
+          "sourceIds": [
+            "destatis-historical"
+          ],
+          "confidence": "documented",
+          "note": "June census result, published rounded to thousands. Territory belongs to the historical Reich series, not present-day Germany."
+        },
+        {
+          "value": 69314000,
+          "metric": "Population",
+          "asOf": "1939-05",
+          "observationType": "census",
+          "scope": "German Reich census series",
+          "sourceIds": [
+            "destatis-historical"
+          ],
+          "confidence": "documented",
+          "note": "May census, rounded to thousands, recalculated for territory at 31 December 1937; excludes subsequent annexations, so it is not the population of the expanded mapped polity."
+        }
+      ],
       "economy": [],
       "area": [],
-      "currencies": [],
+      "currencies": [
+        {
+          "value": "Reichsmark",
+          "validFrom": "1933-01-30",
+          "validUntil": "1945-04-30",
+          "sourceIds": [
+            "reichsmark"
+          ],
+          "confidence": "documented"
+        }
+      ],
       "relationships": [],
-      "predecessors": [],
+      "predecessors": [
+        {
+          "value": "Weimar parliamentary order",
+          "date": "1933-01-30",
+          "mapIds": [],
+          "sourceIds": [
+            "reichstag"
+          ],
+          "note": "Preceding constitutional order within the German state, not an inferred new sovereign identity."
+        }
+      ],
       "successors": [],
       "events": [
         {
@@ -374,10 +918,45 @@
           ]
         },
         {
+          "date": "1933-03-23",
+          "title": "Reichstag approves the Enabling Act",
+          "sourceIds": [
+            "reichstag"
+          ]
+        },
+        {
           "date": "1934-08-02",
           "title": "Presidential and chancellorial authority combined",
           "sourceIds": [
             "nazi-party"
+          ]
+        },
+        {
+          "date": "1935-09-15",
+          "title": "Reich Flag Law makes the swastika flag the national flag",
+          "sourceIds": [
+            "reich-flag-law"
+          ]
+        },
+        {
+          "date": "1938-03-12",
+          "title": "German annexation of Austria",
+          "sourceIds": [
+            "berlin-nazi"
+          ]
+        },
+        {
+          "date": "1939-09-01",
+          "title": "Germany invades Poland",
+          "sourceIds": [
+            "europe-war"
+          ]
+        },
+        {
+          "date": "1941-06-22",
+          "title": "Germany invades the Soviet Union",
+          "sourceIds": [
+            "europe-war"
           ]
         },
         {
@@ -392,10 +971,30 @@
         {
           "value": "After Hitler’s appointment as chancellor in January 1933, the Nazi leadership dismantled Germany’s democratic institutions and suppressed political opposition. The regime used emergency powers and legislation to concentrate authority, while excluding opponents from public life. Following President Hindenburg’s death in August 1934, Hitler combined presidential authority with the chancellorship. The Nazi Party dominated a dictatorship rather than a competitive parliamentary system. This overview describes the consolidated regime of the mid-1930s, without treating its later territorial conquests as facts about every selected year. The atlas’s boundary reconstructions are a separate geographical source and do not establish the constitutional or political status of every territory represented on the map.",
           "validFrom": "1934-08-02",
-          "validUntil": "1939-01-01",
+          "validUntil": "1939-09-01",
           "sourceIds": [
             "nazi-rule",
             "nazi-party"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "Germany’s invasion of Poland in September 1939 began the European phase of the Second World War. Britain and France declared war in response. The Nazi dictatorship remained in place while German military campaigns expanded into other countries. Wartime territorial control and occupation should not be treated as proof that all conquered populations formed an unchanged national census unit. The German population figures in this dossier retain the territorial definitions of their statistical source.",
+          "validFrom": "1939-09-01",
+          "validUntil": "1941-06-22",
+          "sourceIds": [
+            "europe-war",
+            "destatis-historical"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "Germany invaded the Soviet Union in June 1941, widening the war in Europe. Nazi rule combined dictatorship and persecution with military occupation across extensive territories. The conflict imposed destruction on occupied societies and on Germany itself. The profile’s leadership coverage ends with Hitler’s death in April 1945. The atlas’s later occupation-zone identities remain separate: no modern German state or occupation authority is silently inserted as the same Nazi-period political identity.",
+          "validFrom": "1941-06-22",
+          "validUntil": "1945-04-30",
+          "sourceIds": [
+            "europe-war",
+            "hitler-death"
           ],
           "confidence": "documented"
         }
@@ -411,20 +1010,85 @@
           ],
           "confidence": "documented",
           "kind": "primary"
+        },
+        {
+          "value": "Union of Soviet Socialist Republics",
+          "validFrom": "1936-12-05",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "ussr-constitution"
+          ],
+          "confidence": "documented",
+          "kind": "formal"
         }
       ],
       "aliases": [
         {
           "value": "USSR",
           "sourceIds": [
-            "basemaps"
+            "basemaps",
+            "ussr-constitution"
           ],
           "confidence": "documented"
         }
       ],
-      "flags": [],
-      "politicalStatus": [],
-      "capitals": [],
+      "flags": [
+        {
+          "value": "Soviet flag (1936–1955 design)",
+          "validFrom": "1936-12-05",
+          "validUntil": "1955",
+          "sourceIds": [
+            "su-1936",
+            "ussr-constitution"
+          ],
+          "confidence": "documented",
+          "asset": "./assets/flags/su-1936.svg",
+          "alt": "Soviet flag (1936–1955 design)",
+          "license": "Public domain",
+          "attribution": "Rotemliss; subsequent Wikimedia Commons contributors",
+          "note": "Article 144 specifies the red field, hammer and sickle, star and 1:2 proportions; transition year has year-level precision."
+        },
+        {
+          "value": "Soviet flag (1955 design, darker-red variant)",
+          "validFrom": "1955",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "su-1955",
+            "ussr-constitution"
+          ],
+          "confidence": "documented",
+          "asset": "./assets/flags/su-1955.svg",
+          "alt": "Soviet flag (1955 design, darker-red variant)",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Cmapm",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "note": "Commons records the 1955 construction scheme. Adoption is curated to year precision; this profile ends at the atlas’s supported limit."
+        }
+      ],
+      "politicalStatus": [
+        {
+          "value": "Federated socialist state (constitutional description)",
+          "validFrom": "1936-12-05",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "ussr-constitution"
+          ],
+          "confidence": "documented",
+          "note": "The constitution’s self-description is distinct from the documented dictatorship in political practice."
+        }
+      ],
+      "capitals": [
+        {
+          "value": "Moscow",
+          "validFrom": "1936-12-05",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "ussr-constitution"
+          ],
+          "confidence": "documented",
+          "note": "Article 145. Curated coverage begins with this constitution, not the capital’s inception."
+        }
+      ],
       "governments": [
         {
           "value": "Communist Party dictatorship",
@@ -435,6 +1099,38 @@
           ],
           "confidence": "documented",
           "note": "Curated coverage from 1935; this is not a claim that the system began in that year."
+        },
+        {
+          "value": "Supreme Soviet: Soviet of the Union and Soviet of Nationalities",
+          "validFrom": "1936-12-05",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "ussr-constitution"
+          ],
+          "confidence": "documented",
+          "label": "Legislature",
+          "note": "Constitutional institutional structure; does not imply competitive parliamentary government."
+        },
+        {
+          "value": "Communist Party of the Soviet Union",
+          "validFrom": "1956",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "khrushchev-congress"
+          ],
+          "confidence": "documented",
+          "label": "Ruling party"
+        },
+        {
+          "value": "All-Union Communist Party (Bolsheviks)",
+          "validFrom": "1936-12-05",
+          "validUntil": "1952",
+          "sourceIds": [
+            "ussr-constitution"
+          ],
+          "confidence": "documented",
+          "label": "Ruling party",
+          "note": "Historical party wording of Article 126; later CPSU terminology is shown separately."
         }
       ],
       "leaders": [
@@ -448,16 +1144,190 @@
           "confidence": "documented",
           "role": "Party-state leadership",
           "note": "The source describes unchallenged leadership by late 1934. This is not the title or term of a formal head-of-state office; coverage begins in 1935."
+        },
+        {
+          "value": "Mikhail Kalinin",
+          "validFrom": "1938",
+          "validUntil": "1946-03-15",
+          "sourceIds": [
+            "kalinin-tenure",
+            "kalinin1939"
+          ],
+          "confidence": "documented",
+          "role": "President of the Presidium of the Supreme Soviet",
+          "note": "Formal head-of-state office, distinct from Stalin’s effective party-state power. Start is documented to year precision."
+        },
+        {
+          "value": "Nikita Khrushchev",
+          "validFrom": "1953",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "soviet-government-history",
+            "khrushchev-congress"
+          ],
+          "confidence": "documented",
+          "role": "First Secretary of the Communist Party",
+          "note": "Formal party office; start retains year precision. Coverage ends at the atlas limit, not his actual departure."
+        },
+        {
+          "value": "Vyacheslav Molotov",
+          "validFrom": "1930",
+          "validUntil": "1941-05-06",
+          "sourceIds": [
+            "molotov-tenure",
+            "stalin-appointment"
+          ],
+          "confidence": "documented",
+          "role": "Chairman of the Council of People’s Commissars",
+          "note": "Head of government; retained separately from Stalin’s dominant party-state position."
+        },
+        {
+          "value": "Nikita Khrushchev",
+          "validFrom": "1958-03",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "soviet-government-history"
+          ],
+          "confidence": "documented",
+          "role": "Chairman of the Council of Ministers",
+          "note": "Government office held alongside the party office. Appointment is documented here to month precision; end is the atlas coverage limit."
+        },
+        {
+          "value": "Joseph Stalin",
+          "validFrom": "1941-05-06",
+          "validUntil": "1946",
+          "sourceIds": [
+            "stalin-appointment",
+            "stalin-offices"
+          ],
+          "confidence": "documented",
+          "role": "Chairman of the Council of People’s Commissars",
+          "note": "Formal head-of-government office, separate from effective party-state leadership. The 1946 change of institutional title retains year precision."
+        },
+        {
+          "value": "Joseph Stalin",
+          "validFrom": "1946",
+          "validUntil": "1953-03-05",
+          "sourceIds": [
+            "stalin-offices"
+          ],
+          "confidence": "documented",
+          "role": "Chairman of the Council of Ministers",
+          "note": "Government chairmanship continued after the 1946 institutional renaming; separate from the party-state leadership record."
         }
       ],
-      "population": [],
+      "population": [
+        {
+          "value": 147027915,
+          "metric": "Population",
+          "asOf": "1926",
+          "observationType": "census",
+          "scope": "USSR in the respective census",
+          "sourceIds": [
+            "ussr-census1926"
+          ],
+          "confidence": "documented",
+          "note": "Historical Union census total, not Russia alone. Predates later territorial expansion; not a selected-year estimate. The politically contested 1939 census is not used in this release."
+        },
+        {
+          "value": 208826650,
+          "metric": "Population",
+          "asOf": "1959",
+          "observationType": "census",
+          "scope": "USSR in the respective census",
+          "sourceIds": [
+            "ussr-census1959"
+          ],
+          "confidence": "documented",
+          "note": "All-Union total from the census table, not the Russian republic alone. Territorial coverage differs from 1926; no population growth calculation or interpolation is implied. Date retains the source table’s year precision."
+        }
+      ],
       "economy": [],
       "area": [],
-      "currencies": [],
-      "relationships": [],
+      "currencies": [
+        {
+          "value": "Soviet ruble; bank notes also denominated in chervonets",
+          "validFrom": "1938",
+          "validUntil": "1947",
+          "sourceIds": [
+            "soviet-currency"
+          ],
+          "confidence": "documented",
+          "note": "Treasury and State Bank issues coexisted; this coverage does not assert that the currency began in 1938."
+        },
+        {
+          "value": "Soviet ruble (1947 issues)",
+          "validFrom": "1947",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "soviet-currency"
+          ],
+          "confidence": "documented",
+          "note": "Distinct from the Russian Federation’s later ruble and the redenominated 1961 issues."
+        }
+      ],
+      "relationships": [
+        {
+          "value": "Germany",
+          "validFrom": "1939-08-23",
+          "validUntil": "1941-06-22",
+          "sourceIds": [
+            "us-soviet-war",
+            "us-soviet-recognition"
+          ],
+          "confidence": "documented",
+          "type": "Non-aggression pact",
+          "mapIds": [
+            "entity-germany"
+          ],
+          "note": "Treaty relationship, not subordination or shared sovereignty."
+        }
+      ],
       "predecessors": [],
-      "successors": [],
+      "successors": [
+        {
+          "value": "Russia",
+          "date": "1991",
+          "mapIds": [],
+          "sourceIds": [
+            "ussr-dissolution"
+          ],
+          "note": "One of several independent states resulting from dissolution; this is an explicitly partial list, not sole succession by Russia."
+        },
+        {
+          "value": "Ukraine",
+          "date": "1991",
+          "mapIds": [],
+          "sourceIds": [
+            "ussr-dissolution"
+          ],
+          "note": "One of several independent states resulting from dissolution; this is an explicitly partial list, not sole succession by Russia."
+        },
+        {
+          "value": "Belarus",
+          "date": "1991",
+          "mapIds": [],
+          "sourceIds": [
+            "ussr-dissolution"
+          ],
+          "note": "One of several independent states resulting from dissolution; this is an explicitly partial list, not sole succession by Russia."
+        }
+      ],
       "events": [
+        {
+          "date": "1922-12-30",
+          "title": "Union formation treaty",
+          "sourceIds": [
+            "ussr-formation"
+          ]
+        },
+        {
+          "date": "1933-11-16",
+          "title": "United States recognises the Soviet Union",
+          "sourceIds": [
+            "us-soviet-recognition"
+          ]
+        },
         {
           "date": "1936",
           "title": "Great Terror show trials begin",
@@ -466,24 +1336,114 @@
           ]
         },
         {
+          "date": "1936-12-05",
+          "title": "New Soviet constitution ratified",
+          "sourceIds": [
+            "ussr-constitution"
+          ]
+        },
+        {
           "date": "1937",
           "title": "Terror reaches its peak in 1937–1938",
           "sourceIds": [
             "soviet-archives"
           ]
+        },
+        {
+          "date": "1939-08-23",
+          "title": "German–Soviet non-aggression pact",
+          "sourceIds": [
+            "us-soviet-recognition"
+          ]
+        },
+        {
+          "date": "1941-06-22",
+          "title": "Germany invades the Soviet Union",
+          "sourceIds": [
+            "europe-war"
+          ]
+        },
+        {
+          "date": "1956-02",
+          "title": "Khrushchev criticises Stalin at the Twentieth Party Congress",
+          "sourceIds": [
+            "khrushchev-congress"
+          ]
+        },
+        {
+          "date": "1991-12-25",
+          "title": "Gorbachev resigns; Soviet flag lowered over the Kremlin",
+          "sourceIds": [
+            "ussr-dissolution"
+          ]
+        },
+        {
+          "date": "1941-05-06",
+          "title": "Stalin appointed chairman of the Council of People’s Commissars",
+          "sourceIds": [
+            "stalin-appointment"
+          ],
+          "confidence": "documented"
         }
       ],
       "descriptions": [
         {
-          "value": "The Soviet Union was governed through a Communist Party dictatorship. By the mid-1930s, Joseph Stalin had eliminated major rivals and consolidated control over party and state. Forced collectivisation and centrally directed industrial development had imposed severe costs on the population. Political policing and repression were central instruments of government. During 1936–1938, public trials and mass persecution formed part of the Great Terror, which reached its height in 1937–1938. Leadership here refers to Stalin’s dominant position in the party-state system, rather than an assumed presidential or prime-ministerial office. The overview is limited to this period; it does not substitute information about the later Russian Federation for the Soviet political entity.",
-          "validFrom": "1938",
-          "validUntil": "1939-01-01",
+          "value": "The Soviet Union was governed through a Communist Party dictatorship. By the mid-1930s, Joseph Stalin had eliminated major rivals and consolidated control over party and state. Forced collectivisation and centrally directed industrial development had imposed severe costs on the population. Political policing and repression were central instruments of government. During 1936–1938, public trials and mass persecution formed part of the Great Terror, which reached its height in 1937–1938. Leadership here refers to Stalin’s dominant position in the party-state system, rather than an assumed presidential or prime-ministerial office. The constitutional description and the practice of party dictatorship are kept distinct.",
+          "validFrom": "1936",
+          "validUntil": "1939-08-23",
           "sourceIds": [
             "soviet-archives"
           ],
           "confidence": "documented"
+        },
+        {
+          "value": "The Soviet Union concluded a non-aggression pact with Nazi Germany in August 1939, then occupied eastern Poland and fought Finland. Relations with the United States deteriorated without diplomatic recognition being withdrawn. Germany’s invasion in June 1941 ended this political setting.",
+          "validFrom": "1939-08-23",
+          "validUntil": "1941-06-22",
+          "sourceIds": [
+            "us-soviet-war"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "Germany’s invasion in June 1941 changed the Soviet Union’s position. Cooperation with Britain and the United States developed into a wartime alliance, despite disagreements over strategy. Soviet losses were devastating. The earlier census figure cannot represent wartime population or casualties.",
+          "validFrom": "1941-06-22",
+          "validUntil": "1945",
+          "sourceIds": [
+            "us-soviet-war"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "The wartime alliance unravelled after the conflict. Stalin remained dominant until his death in March 1953. Communist Party control continued alongside the formal institutions of the constitutional federation and Supreme Soviet. The later reconsideration of Stalin’s legacy belongs to a separate overview period.",
+          "validFrom": "1945",
+          "validUntil": "1953-03",
+          "sourceIds": [
+            "us-soviet-war",
+            "soviet-archives",
+            "ussr-constitution"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "Stalin’s death in 1953 opened a struggle among leading Soviet officials. Khrushchev consolidated his position by the middle of the decade. At the Twentieth Party Congress in 1956, he criticised Stalin’s abuses while defending the Communist system. De-Stalinisation and a policy of peaceful coexistence changed the political setting; they did not transform the Soviet Union into the later Russian Federation. Each displayed census observation retains its own date and Union-wide territorial scope.",
+          "validFrom": "1953-03",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "khrushchev-congress"
+          ],
+          "confidence": "documented"
         }
-      ]
+      ],
+      "existence": {
+        "validFrom": "1922-12-30",
+        "validUntil": "1991-12",
+        "sourceIds": [
+          "ussr-formation",
+          "ussr-dissolution"
+        ],
+        "note": "Treaty formation and dissolution; dissolution is retained at month precision, not an inferred day."
+      }
     },
     {
       "id": "japan-meiji-framework",
@@ -510,9 +1470,46 @@
           "confidence": "documented"
         }
       ],
-      "flags": [],
-      "politicalStatus": [],
-      "capitals": [],
+      "flags": [
+        {
+          "value": "Historic Hinomaru (1870 merchant-flag design)",
+          "validFrom": "1870-02-27",
+          "validUntil": "1999-08-13",
+          "sourceIds": [
+            "jp-1870",
+            "japan-flag-history"
+          ],
+          "confidence": "documented",
+          "asset": "./assets/flags/jp-1870.svg",
+          "alt": "Historic Hinomaru (1870 merchant-flag design)",
+          "license": "Public domain",
+          "attribution": "Kahusi",
+          "note": "The historical 7:10, offset-disc variant is used. National-flag legislation of 1999 is not projected backward."
+        }
+      ],
+      "politicalStatus": [
+        {
+          "value": "Imperial constitutional sovereignty",
+          "validFrom": "1930",
+          "validUntil": "1945-01-01",
+          "sourceIds": [
+            "meiji"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "capitals": [
+        {
+          "value": "Tokyo",
+          "validFrom": "1930",
+          "validUntil": "1945-01-01",
+          "sourceIds": [
+            "tokyo-history"
+          ],
+          "confidence": "documented",
+          "note": "Historical seat of government; the city’s name and imperial relocation date from the Meiji transition, not a modern successor substitution."
+        }
+      ],
       "governments": [
         {
           "value": "Meiji constitutional framework",
@@ -523,16 +1520,180 @@
           ],
           "confidence": "documented",
           "note": "Curated coverage only. The constitution vested sovereignty in the emperor; this is not a claim that all practice followed its text."
+        },
+        {
+          "value": "Imperial Diet: House of Peers and House of Representatives",
+          "validFrom": "1930",
+          "validUntil": "1945-01-01",
+          "sourceIds": [
+            "meiji"
+          ],
+          "confidence": "documented",
+          "label": "Legislature"
         }
       ],
-      "leaders": [],
-      "population": [],
+      "leaders": [
+        {
+          "value": "Hirohito",
+          "validFrom": "1930",
+          "validUntil": "1945-01-01",
+          "sourceIds": [
+            "showa",
+            "meiji"
+          ],
+          "confidence": "documented",
+          "role": "Emperor (constitutional sovereign)",
+          "note": "Posthumously named Emperor Shōwa. Acceded 25 December 1926; this interval is the dossier’s constitutional coverage, not his full reign."
+        },
+        {
+          "value": "Konoe Fumimaro",
+          "validFrom": "1937-06-04",
+          "validUntil": "1939-01-05",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Hiranuma Kiichirō",
+          "validFrom": "1939-01-05",
+          "validUntil": "1939-08-30",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Abe Nobuyuki",
+          "validFrom": "1939-08-30",
+          "validUntil": "1940-01-16",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Yonai Mitsumasa",
+          "validFrom": "1940-01-16",
+          "validUntil": "1940-07-22",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Konoe Fumimaro",
+          "validFrom": "1940-07-22",
+          "validUntil": "1941-10-18",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Tōjō Hideki",
+          "validFrom": "1941-10-18",
+          "validUntil": "1944-07-22",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Koiso Kuniaki",
+          "validFrom": "1944-07-22",
+          "validUntil": "1945-04-07",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Suzuki Kantarō",
+          "validFrom": "1945-04-07",
+          "validUntil": "1945-08-17",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        }
+      ],
+      "population": [
+        {
+          "value": 64450000,
+          "metric": "Population",
+          "asOf": "1930-10-01",
+          "observationType": "census",
+          "scope": "Prefectural Japan; excludes imperial colonies",
+          "sourceIds": [
+            "japan-census"
+          ],
+          "confidence": "documented",
+          "note": "De facto census population, rounded to thousands. This is not the population of the whole Empire of Japan represented by imperial possessions."
+        },
+        {
+          "value": 69254000,
+          "metric": "Population",
+          "asOf": "1935-10-01",
+          "observationType": "census",
+          "scope": "Prefectural Japan; excludes imperial colonies",
+          "sourceIds": [
+            "japan-census"
+          ],
+          "confidence": "documented",
+          "note": "De facto census population, rounded to thousands. This is not the population of the whole Empire of Japan represented by imperial possessions."
+        },
+        {
+          "value": 73114000,
+          "metric": "Population",
+          "asOf": "1940-10-01",
+          "observationType": "census",
+          "scope": "Prefectural Japan; excludes imperial colonies",
+          "sourceIds": [
+            "japan-census"
+          ],
+          "confidence": "documented",
+          "note": "De facto census population, rounded to thousands. This is not the population of the whole Empire of Japan represented by imperial possessions."
+        }
+      ],
       "economy": [],
       "area": [],
-      "currencies": [],
+      "currencies": [
+        {
+          "value": "Yen",
+          "validFrom": "1930",
+          "validUntil": "1945-01-01",
+          "sourceIds": [
+            "yen-history"
+          ],
+          "confidence": "documented",
+          "note": "Yen established by the 1871 New Currency Act. This is coverage of the selected constitutional period, not a claim of unchanged exchange value."
+        }
+      ],
       "relationships": [],
       "predecessors": [],
-      "successors": [],
+      "successors": [
+        {
+          "value": "Japan under the 1947 constitutional framework",
+          "date": "1947-05-03",
+          "mapIds": [
+            "entity-japan"
+          ],
+          "sourceIds": [
+            "japan1947",
+            "japan-constitution"
+          ],
+          "note": "Constitutional succession within Japan, not formation of an unrelated state. The intervening occupation map identity is not equated to either profile."
+        }
+      ],
       "events": [
         {
           "date": "1889-02-11",
@@ -541,15 +1702,71 @@
             "meiji"
           ],
           "note": "Promulgation, not commencement."
+        },
+        {
+          "date": "1937-07",
+          "title": "War in China expands",
+          "sourceIds": [
+            "pearl-harbor"
+          ]
+        },
+        {
+          "date": "1939-01-05",
+          "title": "Hiranuma succeeds Konoe as prime minister",
+          "sourceIds": [
+            "japan-cabinets"
+          ]
+        },
+        {
+          "date": "1939-08-30",
+          "title": "Abe succeeds Hiranuma as prime minister",
+          "sourceIds": [
+            "japan-cabinets"
+          ]
+        },
+        {
+          "date": "1940-01-16",
+          "title": "Yonai becomes prime minister",
+          "sourceIds": [
+            "japan-cabinets"
+          ]
+        },
+        {
+          "date": "1941-12-07",
+          "title": "Japan attacks Pearl Harbor",
+          "sourceIds": [
+            "pearl-harbor"
+          ]
         }
       ],
       "descriptions": [
         {
           "value": "The Meiji Constitution placed the emperor at the centre of the constitutional order. Its provisions described imperial sovereignty and provided for legislative power to be exercised with the Imperial Diet. The Diet consisted of a House of Peers and a House of Representatives. Ministers of state advised the emperor and bore responsibility for their advice. This dossier records those constitutional provisions rather than assuming that the formal document explains every aspect of political practice in the 1930s. Its curated coverage is limited to the imperial polity represented by the mapped identity. It does not use the post-war constitution or a modern government profile as a silent substitute for the selected historical period.",
           "validFrom": "1930",
-          "validUntil": "1945-01-01",
+          "validUntil": "1937-07",
           "sourceIds": [
             "meiji"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "The war in China that expanded in 1937 increasingly shaped Japan’s foreign relations. Japanese military operations and territorial ambitions brought escalating tension with the United States, which opposed the expansion of the conflict. At home, the Meiji Constitution continued to define imperial sovereignty and a bicameral Imperial Diet. Prime ministers changed repeatedly in 1939 and 1940; the dated cabinet records preserve those transitions. Prefectural census figures describe a narrower territory than the whole empire.",
+          "validFrom": "1937-07",
+          "validUntil": "1941-12",
+          "sourceIds": [
+            "pearl-harbor",
+            "meiji",
+            "japan-census"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "Japan’s attack on Pearl Harbor in December 1941 brought direct war with the United States. The imperial constitutional framework remained distinct from the postwar constitution that later established popular sovereignty and a symbolic imperial office. This dossier’s interval concerns the imperial map identity; it does not substitute an occupation authority or postwar government when that identity is absent from a boundary snapshot.",
+          "validFrom": "1941-12",
+          "validUntil": "1945-01-01",
+          "sourceIds": [
+            "pearl-harbor",
+            "japan-constitution"
           ],
           "confidence": "documented"
         }
@@ -569,7 +1786,23 @@
         }
       ],
       "aliases": [],
-      "flags": [],
+      "flags": [
+        {
+          "value": "Historic Hinomaru (1870 merchant-flag design)",
+          "validFrom": "1870-02-27",
+          "validUntil": "1999-08-13",
+          "sourceIds": [
+            "jp-1870",
+            "japan-flag-history"
+          ],
+          "confidence": "documented",
+          "asset": "./assets/flags/jp-1870.svg",
+          "alt": "Historic Hinomaru (1870 merchant-flag design)",
+          "license": "Public domain",
+          "attribution": "Kahusi",
+          "note": "The historical 7:10, offset-disc variant is used. National-flag legislation of 1999 is not projected backward."
+        }
+      ],
       "politicalStatus": [
         {
           "value": "Emperor as symbol of the state",
@@ -580,9 +1813,38 @@
           ],
           "confidence": "documented",
           "label": "Constitutional status"
+        },
+        {
+          "value": "Under Allied occupation",
+          "validFrom": "1947-05-03",
+          "validUntil": "1952-04-28",
+          "sourceIds": [
+            "japan-occupation"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "Sovereign state after the peace treaty",
+          "validFrom": "1952-04-28",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "japan-peace1952"
+          ],
+          "confidence": "documented"
         }
       ],
-      "capitals": [],
+      "capitals": [
+        {
+          "value": "Tokyo",
+          "validFrom": "1947-05-03",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "tokyo-history"
+          ],
+          "confidence": "documented",
+          "note": "Historical seat of government; the city’s name and imperial relocation date from the Meiji transition, not a modern successor substitution."
+        }
+      ],
       "governments": [
         {
           "value": "Constitution of Japan: popular sovereignty",
@@ -592,15 +1854,167 @@
             "japan-constitution"
           ],
           "confidence": "documented"
+        },
+        {
+          "value": "National Diet: House of Representatives and House of Councillors",
+          "validFrom": "1947-05-03",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "japan-constitution"
+          ],
+          "confidence": "documented",
+          "label": "Legislature"
         }
       ],
-      "leaders": [],
-      "population": [],
+      "leaders": [
+        {
+          "value": "Hirohito",
+          "validFrom": "1947-05-03",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "showa",
+            "japan-constitution"
+          ],
+          "confidence": "documented",
+          "role": "Emperor (symbolic constitutional office)",
+          "note": "Posthumously named Emperor Shōwa. Acceded 25 December 1926; this interval is the dossier’s constitutional coverage, not his full reign."
+        },
+        {
+          "value": "Yoshida Shigeru",
+          "validFrom": "1946-05-22",
+          "validUntil": "1947-05-24",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Katayama Tetsu",
+          "validFrom": "1947-05-24",
+          "validUntil": "1948-03-10",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Ashida Hitoshi",
+          "validFrom": "1948-03-10",
+          "validUntil": "1948-10-15",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Yoshida Shigeru",
+          "validFrom": "1948-10-15",
+          "validUntil": "1954-12-10",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Hatoyama Ichirō",
+          "validFrom": "1954-12-10",
+          "validUntil": "1956-12-23",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Ishibashi Tanzan",
+          "validFrom": "1956-12-23",
+          "validUntil": "1957-02-25",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Kishi Nobusuke",
+          "validFrom": "1957-02-25",
+          "validUntil": "1960-07-19",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        },
+        {
+          "value": "Ikeda Hayato",
+          "validFrom": "1960-07-19",
+          "validUntil": "1964-11-09",
+          "sourceIds": [
+            "japan-cabinets"
+          ],
+          "confidence": "documented",
+          "role": "Prime minister"
+        }
+      ],
+      "population": [
+        {
+          "value": 84115000,
+          "metric": "Population",
+          "asOf": "1950-10-01",
+          "observationType": "census",
+          "scope": "Prefectural Japan statistical series",
+          "sourceIds": [
+            "japan-census"
+          ],
+          "confidence": "documented",
+          "note": "De jure population except Okinawa (de facto, 1 December), whose count includes the Amami Islands. Rounded to thousands; geographical coverage differs from political administration."
+        },
+        {
+          "value": 94302000,
+          "metric": "Population",
+          "asOf": "1960-10-01",
+          "observationType": "census",
+          "scope": "Prefectural Japan statistical series",
+          "sourceIds": [
+            "japan-census"
+          ],
+          "confidence": "documented",
+          "note": "De jure population rounded to thousands; Okinawa’s component is dated 1 December. A prefectural geographic series, not a claim that every included area had the same political administration."
+        }
+      ],
       "economy": [],
       "area": [],
-      "currencies": [],
+      "currencies": [
+        {
+          "value": "Yen",
+          "validFrom": "1947-05-03",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "yen-history"
+          ],
+          "confidence": "documented",
+          "note": "Yen established by the 1871 New Currency Act. This is coverage of the selected constitutional period, not a claim of unchanged exchange value."
+        }
+      ],
       "relationships": [],
-      "predecessors": [],
+      "predecessors": [
+        {
+          "value": "Japan under the Meiji constitutional framework",
+          "date": "1947-05-03",
+          "mapIds": [
+            "entity-empire-of-japan"
+          ],
+          "sourceIds": [
+            "meiji",
+            "japan1947"
+          ],
+          "note": "Preceding constitutional system; this is not an assertion that the imperial map identity persisted until 1947."
+        }
+      ],
       "successors": [],
       "events": [
         {
@@ -609,9 +2023,47 @@
           "sourceIds": [
             "japan1947"
           ]
+        },
+        {
+          "date": "1960-07-19",
+          "title": "Ikeda succeeds Kishi as prime minister",
+          "sourceIds": [
+            "japan-cabinets"
+          ]
+        },
+        {
+          "date": "1952-04-28",
+          "title": "Peace treaty takes effect and Allied occupation ends",
+          "sourceIds": [
+            "japan-peace1952"
+          ],
+          "confidence": "documented"
         }
       ],
-      "descriptions": []
+      "descriptions": [
+        {
+          "value": "The constitution effective from May 1947 established popular sovereignty. The emperor became a symbol of the state, while the Diet consisted of the House of Representatives and House of Councillors. The cabinet exercised executive authority and was collectively responsible to the Diet. Hirohito continued in the imperial office, but its constitutional meaning differed from the Meiji framework. Prime ministerial changes are shown separately; this continuity of a person is not continuity of the earlier system of imperial sovereignty. These domestic constitutional institutions operated during the Allied occupation, under the authority of the Supreme Commander for the Allied Powers.",
+          "validFrom": "1947-05-03",
+          "validUntil": "1952-04-28",
+          "sourceIds": [
+            "japan1947",
+            "japan-constitution",
+            "showa",
+            "japan-occupation"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "The peace treaty took effect on 28 April 1952, ending the Allied occupation and restoring Japan to sovereign equality. The 1947 constitution continued to place sovereignty in the people, with an emperor who symbolised the state, a bicameral Diet and a cabinet responsible to it. This post-occupation setting differs both from the earlier imperial framework and from the first years of the new constitution under occupation. Changes of prime minister are recorded separately.",
+          "validFrom": "1952-04-28",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "japan-peace1952",
+            "japan-constitution"
+          ],
+          "confidence": "documented"
+        }
+      ]
     },
     {
       "id": "british-raj",
@@ -625,6 +2077,17 @@
           ],
           "confidence": "documented",
           "kind": "primary"
+        },
+        {
+          "value": "British India",
+          "validFrom": "1858",
+          "validUntil": "1947",
+          "sourceIds": [
+            "raj-parliament"
+          ],
+          "confidence": "documented",
+          "kind": "alternate",
+          "note": "Common administrative wording; does not imply that every princely state was directly administered."
         }
       ],
       "aliases": [
@@ -638,7 +2101,23 @@
           "confidence": "documented"
         }
       ],
-      "flags": [],
+      "flags": [
+        {
+          "value": "Viceroy and Governor-General’s office standard (Star of India)",
+          "validFrom": "1935",
+          "validUntil": "1947",
+          "sourceIds": [
+            "raj-viceroy",
+            "raj-viceroy-history"
+          ],
+          "confidence": "documented",
+          "asset": "./assets/flags/raj-viceroy.svg",
+          "alt": "Viceroy and Governor-General’s office standard (Star of India)",
+          "license": "Public domain",
+          "attribution": "Greentubing~commonswiki (attribution as recorded by Commons); Union Flag by Zscout",
+          "note": "Office standard, not a national flag for all India. The museum documents a surviving example in 1935; earlier use is outside this curated interval."
+        }
+      ],
       "politicalStatus": [
         {
           "value": "British imperial rule",
@@ -651,7 +2130,27 @@
           "confidence": "documented"
         }
       ],
-      "capitals": [],
+      "capitals": [
+        {
+          "value": "Delhi (capital transfer and new-capital construction)",
+          "validFrom": "1911",
+          "validUntil": "1931-02",
+          "sourceIds": [
+            "raj-capital"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "New Delhi",
+          "validFrom": "1931-02",
+          "validUntil": "1947",
+          "sourceIds": [
+            "raj-capital"
+          ],
+          "confidence": "documented",
+          "note": "New capital opened in February 1931. Official accounts disagree on the inauguration day; no precise day is inferred."
+        }
+      ],
       "governments": [
         {
           "value": "Secretary of State for India and Crown-appointed viceroy",
@@ -661,13 +2160,98 @@
             "raj-parliament"
           ],
           "confidence": "documented"
+        },
+        {
+          "value": "Governor-General, Council of State and Legislative Assembly",
+          "validFrom": "1936-01-01",
+          "validUntil": "1947",
+          "sourceIds": [
+            "raj-legislature"
+          ],
+          "confidence": "documented",
+          "label": "Central legislature",
+          "note": "Institutions established under the 1919 Act; this interval is curated showcase coverage, not their creation date. Does not imply representation of every princely state or an independent sovereign parliament."
         }
       ],
-      "leaders": [],
-      "population": [],
+      "leaders": [
+        {
+          "value": "Lord Linlithgow",
+          "validFrom": "1936",
+          "validUntil": "1943",
+          "sourceIds": [
+            "linlithgow"
+          ],
+          "confidence": "documented",
+          "role": "Viceroy and Governor-General",
+          "note": "Catalogue supplies years of office; no appointment or departure day inferred."
+        },
+        {
+          "value": "George VI",
+          "validFrom": "1936-12",
+          "validUntil": "1947",
+          "sourceIds": [
+            "george-vi",
+            "windsor",
+            "raj-parliament",
+            "partition"
+          ],
+          "confidence": "documented",
+          "role": "British Crown monarch",
+          "dynasty": "House of Windsor",
+          "note": "Shown in relation to Crown administration. This interval does not date the separate legal abolition of the title Emperor of India."
+        },
+        {
+          "value": "Lord Wavell",
+          "validFrom": "1943",
+          "validUntil": "1947",
+          "sourceIds": [
+            "wavell"
+          ],
+          "confidence": "documented",
+          "role": "Viceroy and Governor-General",
+          "note": "Source supplies years of service; transition years retain more than one applicable record."
+        }
+      ],
+      "population": [
+        {
+          "value": 338171000,
+          "metric": "Population",
+          "asOf": "1931",
+          "observationType": "census",
+          "scope": "India excluding Burma, as reported to Parliament",
+          "sourceIds": [
+            "raj-census"
+          ],
+          "confidence": "documented",
+          "note": "Census-wide total is not asserted to match one British Raj polygon or only directly administered provinces."
+        },
+        {
+          "value": 388800000,
+          "metric": "Population",
+          "asOf": "1941",
+          "observationType": "census",
+          "scope": "India excluding Burma, as reported to Parliament",
+          "sourceIds": [
+            "raj-census"
+          ],
+          "confidence": "documented",
+          "note": "Reported by the Secretary of State in 1942. Geographic total is not asserted to match one British Raj polygon or only directly administered provinces."
+        }
+      ],
       "economy": [],
       "area": [],
-      "currencies": [],
+      "currencies": [
+        {
+          "value": "Indian rupee",
+          "validFrom": "1935",
+          "validUntil": "1947",
+          "sourceIds": [
+            "rupee-history"
+          ],
+          "confidence": "documented",
+          "note": "RBI assumed currency-note functions in 1935; its first five-rupee note followed in January 1938. Coverage does not imply the rupee originated in 1935."
+        }
+      ],
       "relationships": [
         {
           "value": "United Kingdom",
@@ -726,6 +2310,27 @@
           ]
         },
         {
+          "date": "1911",
+          "title": "Decision to transfer the capital from Calcutta to Delhi",
+          "sourceIds": [
+            "raj-capital"
+          ]
+        },
+        {
+          "date": "1931-02",
+          "title": "New Delhi opens as the new capital",
+          "sourceIds": [
+            "raj-capital"
+          ]
+        },
+        {
+          "date": "1939",
+          "title": "Viceroy declares India a belligerent without provincial consultation",
+          "sourceIds": [
+            "raj-war"
+          ]
+        },
+        {
           "date": "1947-08",
           "title": "Independence and partition",
           "sourceIds": [
@@ -735,11 +2340,23 @@
       ],
       "descriptions": [
         {
-          "value": "The Government of India Act of 1858 transferred the East India Company’s administrative powers, possessions and armed forces to the British Crown. Responsibility in Britain passed to a Secretary of State for India, assisted by a council, while the Crown appointed the viceroy and governors. This arrangement is commonly described as the British Raj. It was an imperial system, rather than an independent national government. The mapped entity should not be read as proof of uniform direct British administration across all of the subcontinent. Princely states had a distinct position, and the geographical dataset’s authority fields provide only a simplified representation. This dossier keeps that distinction visible rather than treating administrative control as an unqualified statement of sovereignty.",
+          "value": "The Government of India Act of 1858 transferred the East India Company’s administrative powers, possessions and armed forces to the British Crown. Responsibility in Britain passed to a Secretary of State for India, while the Crown appointed the viceroy and governors. Later constitutional reforms changed the institutions within this imperial framework. This arrangement is commonly described as the British Raj. It was an imperial system, rather than an independent national government. The mapped entity should not be read as proof of uniform direct British administration across all of the subcontinent. Princely states had a distinct position, and the geographical dataset’s authority fields provide only a simplified representation. This dossier keeps that distinction visible rather than treating administrative control as an unqualified statement of sovereignty.",
           "validFrom": "1858",
-          "validUntil": "1947",
+          "validUntil": "1939-09",
           "sourceIds": [
             "raj-parliament",
+            "partition"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "value": "The viceroy declared India a belligerent in the Second World War in 1939 without consulting the elected provincial representatives. The Indian National Congress intensified its campaign for independence. British imperial administration therefore faced both the demands of war and opposition to continued colonial rule. New Delhi was the administrative capital. The broader Indian census totals shown separately exclude Burma and should not be read as the population of a single directly administered map polygon. The later partition into India and Pakistan is recorded as a dated transition, not inferred from overlap between map snapshots.",
+          "validFrom": "1939-09",
+          "validUntil": "1947",
+          "sourceIds": [
+            "raj-war",
+            "raj-capital",
+            "raj-census",
             "partition"
           ],
           "confidence": "documented"

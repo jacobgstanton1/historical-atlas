@@ -66,7 +66,7 @@ export function renderDossier(container, context) {
     const figure = node('figure', undefined, 'dossier-flag');
     const img = node('img'); img.src = flag.asset; img.alt = flag.alt || flag.value;
     img.addEventListener('error', () => figure.remove(), {once:true});
-    const caption = markers(node('figcaption', flag.value + ' · ' + period(flag)), flag.sourceIds);
+    const caption = markers(node('figcaption', [flag.value, period(flag), flag.note, flag.license + ' · ' + flag.attribution].filter(Boolean).join(' · ')), flag.sourceIds);
     figure.append(img, caption); content.append(figure);
   }
   const keyFields = ['politicalStatus','capitals','population','area','currencies'];

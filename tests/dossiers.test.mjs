@@ -83,3 +83,99 @@ test('identity mappings are explicit, ambiguity is omitted and aliases do not cr
  assert.ok(index.searchTerms('entity-british-raj',1938).includes('British India'));
  assert.deepEqual(index.searchTerms('missing',1938),[]);
 });
+
+const showcase=['entity-united-states','entity-united-kingdom','entity-germany','entity-soviet-union','entity-empire-of-japan','entity-british-raj'];
+test('all six 1939 showcases have sourced basics and sustained overview coverage',()=>{
+ assert.equal(db.entities.length,7); assert.equal(db.mappings.length,7);
+ for(const id of showcase) for(const year of [1938,1939,1940]) {
+  const r=index.resolve(id,year);assert.ok(r.entity,id);
+  for(const field of ['names','flags','politicalStatus','capitals','population','governments','leaders','currencies','descriptions','events'])
+   assert.ok(r[field].length,id+' '+year+' '+field);
+  for(const p of r.population) {assert.ok(p.asOf&&p.observationType&&p.scope&&p.note);assert.ok(Number(p.asOf.slice(0,4))<=year);}
+ }
+});
+test('expanded observations preserve dates, scopes and precision without future substitution',()=>{
+ for(const [id,year,date,value] of [
+ ['entity-united-kingdom',1938,'1931-06',46073600],['entity-united-kingdom',1939,'1939-06',47547700],
+ ['entity-germany',1938,'1933-06',65218000],['entity-germany',1939,'1939-05',69314000],
+ ['entity-soviet-union',1939,'1926',147027915],['entity-soviet-union',1960,'1959',208826650],
+ ['entity-empire-of-japan',1939,'1935-10-01',69254000],['entity-empire-of-japan',1940,'1940-10-01',73114000],
+ ['entity-british-raj',1939,'1931',338171000],['entity-british-raj',1945,'1941',388800000],
+ ['entity-japan',1960,'1960-10-01',94302000]]) {
+  const p=index.resolve(id,year).population[0];assert.equal(p.asOf,date);assert.equal(p.value,value);
+ }
+ assert.match(index.resolve('entity-germany',1939).population[0].note,/1937/);
+ assert.match(index.resolve('entity-empire-of-japan',1939).population[0].scope,/excludes/i);
+ assert.match(index.resolve('entity-british-raj',1939).population[0].scope,/Burma/);
+ assert.match(index.resolve('entity-japan',1960).population[0].note,/December/);
+});
+test('historical flags resolve by actual design periods and keep licensing/provenance',()=>{
+ const assets=(id,year)=>index.resolve(id,year).flags.map(f=>f.asset);
+ assert.deepEqual(assets('entity-germany',1934),[]);
+ assert.deepEqual(assets('entity-germany',1939),['./assets/flags/de-1935.svg']);
+ assert.deepEqual(assets('entity-soviet-union',1939),['./assets/flags/su-1936.svg']);
+ assert.equal(assets('entity-soviet-union',1955).length,2);
+ assert.deepEqual(assets('entity-soviet-union',1960),['./assets/flags/su-1955.svg']);
+ assert.deepEqual(assets('entity-empire-of-japan',1939),['./assets/flags/jp-1870.svg']);
+ assert.deepEqual(assets('entity-japan',1960),['./assets/flags/jp-1870.svg']);
+ const raj=index.resolve('entity-british-raj',1939).flags[0];assert.match(raj.note,/not a national flag/i);
+ for(const e of db.entities)for(const f of e.flags||[]) {
+  assert.ok(f.alt&&f.license&&f.attribution);
+  const svg=fs.readFileSync(new URL('../'+f.asset,import.meta.url),'utf8');
+  assert.doesNotMatch(svg,/<script\b|<foreignObject\b|\bon[a-z]+\s*=|javascript:/i);
+ }
+});
+test('leadership preserves real offices and changes within a selected year',()=>{
+ const names=(id,year)=>index.resolve(id,year).leaders.map(f=>f.value).join('|');
+ assert.match(names('entity-united-kingdom',1940),/Chamberlain/);assert.match(names('entity-united-kingdom',1940),/Churchill/);
+ assert.match(names('entity-united-states',1945),/Roosevelt/);assert.match(names('entity-united-states',1945),/Truman/);
+ assert.match(names('entity-united-kingdom',1960),/Elizabeth II/);assert.match(names('entity-united-kingdom',1960),/Macmillan/);
+ assert.doesNotMatch(names('entity-united-kingdom',1960),/George VI|Chamberlain/);
+ const japan=index.resolve('entity-empire-of-japan',1939).leaders;
+ for(const n of ['Konoe','Hiranuma','Abe'])assert.ok(japan.some(f=>f.value.includes(n)),n);
+ assert.equal(japan.filter(f=>f.role==='Prime minister').length,3);
+ assert.match(names('entity-japan',1960),/Kishi/);assert.match(names('entity-japan',1960),/Ikeda/);
+ const soviet=index.resolve('entity-soviet-union',1939).leaders;
+ assert.ok(soviet.some(f=>f.value.includes('Stalin')&&/Party-state/.test(f.role)));
+ assert.ok(soviet.some(f=>f.value.includes('Molotov')&&/Council/.test(f.role)));
+ assert.ok(soviet.some(f=>f.value.includes('Kalinin')&&/Presidium/.test(f.role)));
+});
+test('overview and constitutional transitions resolve meaningful successive periods',()=>{
+ const prose=(id,year)=>index.resolve(id,year).descriptions.map(f=>f.value).join(' ');
+ assert.notEqual(prose('entity-germany',1938),prose('entity-germany',1940));
+ assert.notEqual(prose('entity-soviet-union',1938),prose('entity-soviet-union',1940));
+ assert.notEqual(prose('entity-british-raj',1938),prose('entity-british-raj',1940));
+ assert.equal(index.resolve('entity-japan',1952).descriptions.length,2);
+ assert.match(prose('entity-japan',1950),/Allied occupation/);
+ assert.match(prose('entity-japan',1960),/ending the Allied occupation/);
+ assert.match(index.resolve('entity-japan',1960).leaders.find(f=>f.value==='Hirohito').role,/symbol/i);
+ for(const [id,years] of [
+ ['entity-united-states',[1945,1960]],['entity-united-kingdom',[1945,1960]],
+ ['entity-germany',[1945]],['entity-soviet-union',[1945,1960]],
+ ['entity-british-raj',[1945]],['entity-japan',[1960]]])
+ for(const y of years)assert.ok(index.resolve(id,y).descriptions.length,id+' '+y);
+ assert.equal(index.resolve('entity-empire-of-japan',1945).entity,null);
+ assert.equal(index.resolve('entity-british-raj',1960).entity,null);
+ assert.equal(index.resolve('entity-germany',1960).entity,null);
+});
+test('succession is explicit and constitutional changes do not infer new map identity',()=>{
+ for(const e of db.entities) for(const f of [...(e.predecessors||[]),...(e.successors||[])]) {
+  assert.ok(Array.isArray(f.mapIds)&&f.sourceIds.length&&f.date);
+ }
+ assert.equal(index.resolve('entity-british-raj',1939).successors.length,2);
+ const successors=index.resolve('entity-soviet-union',1939).successors;
+ assert.equal(successors.length,3);assert.ok(successors.every(f=>/partial|not/i.test(f.note)));
+ assert.match(index.resolve('entity-germany',1939).predecessors[0].note,/constitutional|order/i);
+ assert.match(index.resolve('entity-empire-of-japan',1939).successors[0].note,/constitutional/i);
+ assert.equal(index.resolve('entity-japan',1939).entity,null);
+ assert.ok(index.searchTerms('entity-soviet-union',1939).includes('USSR'));
+ assert.ok(index.searchTerms('entity-british-raj',1939).includes('British India'));
+});
+
+test('formal government and alias coverage remains distinct from functional leadership',()=>{
+ assert.ok(index.resolve('entity-soviet-union',1945).leaders.some(f=>f.value==='Joseph Stalin'&&/People’s Commissars/.test(f.role)));
+ assert.ok(index.resolve('entity-soviet-union',1950).leaders.some(f=>f.value==='Joseph Stalin'&&/Council of Ministers/.test(f.role)));
+ assert.ok(index.resolve('entity-united-kingdom',1956).leaders.some(f=>f.value==='Anthony Eden'));
+ assert.ok(index.searchTerms('entity-united-kingdom',1960).includes('UK'));
+ assert.equal(index.searchTerms('entity-soviet-union',1939).filter(t=>t==='USSR').length,1);
+});

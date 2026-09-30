@@ -6,10 +6,10 @@ import {
   buildPresenceIndex,
   presenceSummary,
   clean,
-} from './data-pipeline.js?v=0.6';
-import { loadMetadata } from './historical-metadata.js?v=0.6';
-import { renderDossier } from './dossier.js?v=0.6';
-import { createBoundaryHistory } from './boundary-history.js?v=0.6';
+} from './data-pipeline.js?v=0.6.1';
+import { loadMetadata } from './historical-metadata.js?v=0.6.1';
+import { renderDossier } from './dossier.js?v=0.6.1';
+import { createBoundaryHistory } from './boundary-history.js?v=0.6.1';
 
 const SNAPSHOTS = [
   { year: 1800, file: 'world_1800.geojson' },
