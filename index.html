@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#11161b" />
+  <title>Historical Atlas</title>
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.11.2/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <main id="app" class="app-shell">
+    <section class="map-stage" aria-label="Historical world map">
+      <div id="map"></div>
+
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-title">Historical Atlas</div>
+          <div id="status" class="brand-status">Starting map…</div>
+        </div>
+
+        <div class="search-wrap">
+          <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Search territory…" aria-label="Search territory" />
+          <div id="search-results" class="search-results" hidden></div>
+        </div>
+
+        <div class="top-actions">
+          <button id="labels-toggle" class="ui-button" type="button" aria-pressed="true">Labels</button>
+          <button id="reset-view" class="ui-button" type="button">Reset view</button>
+        </div>
+      </header>
+
+      <div id="loading-indicator" class="loading-indicator" hidden aria-live="polite">
+        <span class="loading-spinner" aria-hidden="true"></span>
+        <span id="loading-text">Loading historical boundaries…</span>
+      </div>
+
+      <aside id="inspector" class="inspector" aria-live="polite" aria-hidden="true">
+        <button id="close-inspector" class="inspector-close" type="button" aria-label="Close territory information">×</button>
+        <div class="inspector-kicker">Selected territory</div>
+        <h1 id="territory-name">Select a territory</h1>
+        <div id="territory-subtitle" class="territory-subtitle">Click or tap a territory on the map.</div>
+
+        <dl class="territory-grid">
+          <div class="territory-row">
+            <dt>Authority</dt>
+            <dd id="territory-authority">—</dd>
+          </div>
+          <div class="territory-row">
+            <dt>Part of</dt>
+            <dd id="territory-partof">—</dd>
+          </div>
+          <div class="territory-row">
+            <dt>Boundary</dt>
+            <dd id="territory-confidence">—</dd>
+          </div>
+          <div class="territory-row">
+            <dt>Test-range presence</dt>
+            <dd id="territory-continuity">—</dd>
+          </div>
+          <div class="territory-row territory-row-id">
+            <dt>Stable ID</dt>
+            <dd id="territory-id">—</dd>
+          </div>
+        </dl>
+
+        <div id="territory-note" class="territory-note" hidden></div>
+      </aside>
+
+      <section class="timeline-shell" aria-label="Historical timeline">
+        <div class="timeline-controls">
+          <button id="previous-year" class="timeline-button" type="button" aria-label="Previous available snapshot">‹</button>
+          <button id="play" class="timeline-button play-button" type="button" aria-label="Play timeline">▶</button>
+
+          <div class="timeline-main">
+            <div class="timeline-heading">
+              <div>
+                <strong id="year-label">1938 CE</strong>
+                <span id="snapshot-note" class="snapshot-note">Exact boundary snapshot</span>
+              </div>
+              <span class="test-range-badge">1800–1960 test range</span>
+            </div>
+
+            <div class="timeline-track-wrap">
+              <input id="timeline" type="range" min="1800" max="1960" step="1" value="1938" aria-label="Historical year" />
+              <div id="snapshot-marks" class="snapshot-marks" aria-label="Available boundary snapshots"></div>
+            </div>
+
+            <div class="timeline-footer">
+              <span>1800</span>
+              <form id="year-form" class="year-form">
+                <label for="year-jump">Jump to year</label>
+                <input id="year-jump" type="number" min="1800" max="1960" inputmode="numeric" value="1938" aria-label="Jump to year" />
+                <button type="submit">Go</button>
+              </form>
+              <span>1960</span>
+            </div>
+          </div>
+
+          <button id="next-year" class="timeline-button" type="button" aria-label="Next available snapshot">›</button>
+        </div>
+      </section>
+
+      <div class="source-credit">Historical boundaries: Historical Basemaps · v0.3</div>
+    </section>
+  </main>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
