@@ -1,14 +1,14 @@
 # Campaign 1 checkpoint report
 
-Selected 30; integrated 6; claims 10; sources added 8, reused 2.
-Fingerprint: 12ff0f2cbe16fb167e4635c022b6ed4bf18f5b35c54662dca82194b6499a42f1.
+Selected 30; integrated 12; claims 41; sources added 23, reused 3.
+Fingerprint: 505c817c76bc267a7c95442a3fe122fc345633696990b44b5b08d4cf5bc93804.
 
 | Field | Eligible entity/years | Supported before | Supported after | Partial before | Partial after |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| capital | 868 | 230 | 308 | 0 | 6 |
-| leadership | 868 | 76 | 195 | 1 | 11 |
+| capital | 868 | 230 | 384 | 0 | 14 |
+| leadership | 868 | 76 | 354 | 1 | 27 |
 | political-institutional | 868 | 744 | 744 | 107 | 107 |
-| currency | 868 | 66 | 112 | 2 | 4 |
+| currency | 868 | 66 | 183 | 2 | 6 |
 
 - Coverage is bounded to selected entity/periods, not all lifetime facts.
 - Partial source dates remain partial coverage; unsupported currencies/office transitions stay missing.

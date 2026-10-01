@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 46,
+  "revision": 81,
   "concurrency": 3,
   "jobs": [
     {
@@ -2592,7 +2592,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 126,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "12ff0f2cbe16fb167e4635c022b6ed4bf18f5b35c54662dca82194b6499a42f1",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -2608,7 +2608,7 @@
       },
       "scopeId": "scope-07c0abe0206b52d8b742533b",
       "id": "c01-67fe11812dbdc98c623b5066",
-      "status": "researching",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -2616,10 +2616,566 @@
           "at": "2026-10-01T19:30:24.805Z",
           "actor": "campaign-selection",
           "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:52:00.801Z",
+          "actor": "campaign-selection",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:52:00.896Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:52:00.913Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:52:00.949Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read Land Berlin imperial-capital chronology, three DHM museum bodies and Bundesbank historical-money section. Berlin imperial role is dated from 1871 through the imperial era; clipped 1872–1913. DHM supports 9 March and 15 June 1888 succession boundaries, keeping Emperor distinct from Prussian offices. Bundesbank explicitly dates sole-valid Mark to 1 January 1876; no unchanged parity or statistical inference imported. Current entity has no conflicting capital, monetary or Emperor records. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:52:02.185Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign-selection",
-      "claimedAt": "2026-10-01T19:30:24.805Z"
+      "claimedAt": "2026-10-01T19:30:24.805Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "campaign01-germany-imperial-framework",
+        "jobId": "c01-67fe11812dbdc98c623b5066",
+        "worker": {
+          "id": "campaign-selection",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "12ff0f2cbe16fb167e4635c022b6ed4bf18f5b35c54662dca82194b6499a42f1",
+        "entityId": "germany-imperial-framework",
+        "mapIds": [
+          "entity-german-empire",
+          "entity-germany"
+        ],
+        "period": {
+          "from": "1872",
+          "until": "1913"
+        },
+        "category": "core-state",
+        "claims": [
+          {
+            "id": "c01-german-capital",
+            "category": "capital",
+            "value": "Berlin",
+            "temporal": {
+              "kind": "interval",
+              "from": "1872",
+              "until": "1913"
+            },
+            "entityId": "germany-imperial-framework",
+            "geographicScope": {
+              "description": "Imperial capital; no claim that federal-state administrations relocated to Berlin.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-berlin-imperial-capital"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-berlin-imperial-capital",
+                "note": "Official Berlin chronology identifies imperial capital from 1871; requested 1872–1913 is within imperial-capital era. Year precision retained.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1872",
+                "until": "1913"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-german-wilhelm-i",
+            "category": "leadership",
+            "value": "Wilhelm I",
+            "temporal": {
+              "kind": "interval",
+              "from": "1872-01-01",
+              "until": "1888-03-09"
+            },
+            "entityId": "germany-imperial-framework",
+            "geographicScope": {
+              "description": "Entity-level office or monetary system; no assertion of uniform territorial control.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-dhm-wilhelm-i"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-dhm-wilhelm-i",
+                "note": "Imperial office began 18 January 1871 and ended at death 9 March 1888. Start clipped to campaign scope.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1872-01-01",
+                "until": "1888-03-09"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "German Emperor"
+          },
+          {
+            "id": "c01-german-friedrich-iii",
+            "category": "leadership",
+            "value": "Friedrich III",
+            "temporal": {
+              "kind": "interval",
+              "from": "1888-03-09",
+              "until": "1888-06-15"
+            },
+            "entityId": "germany-imperial-framework",
+            "geographicScope": {
+              "description": "Entity-level office or monetary system; no assertion of uniform territorial control.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-dhm-three-emperors"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-dhm-three-emperors",
+                "note": "Museum explains succession after 9 March death and end at 15 June death.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1888-03-09",
+                "until": "1888-06-15"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "German Emperor"
+          },
+          {
+            "id": "c01-german-wilhelm-ii",
+            "category": "leadership",
+            "value": "Wilhelm II",
+            "temporal": {
+              "kind": "interval",
+              "from": "1888-06-15",
+              "until": "1914-01-01"
+            },
+            "entityId": "germany-imperial-framework",
+            "geographicScope": {
+              "description": "Entity-level office or monetary system; no assertion of uniform territorial control.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-dhm-wilhelm-ii"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-dhm-wilhelm-ii",
+                "note": "Accession 15 June 1888; biography continues to 1918 abdication. End clips at exclusive end of campaign 1913.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1888-06-15",
+                "until": "1914-01-01"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "German Emperor"
+          },
+          {
+            "id": "c01-german-mark",
+            "category": "currency",
+            "value": "Mark",
+            "temporal": {
+              "kind": "interval",
+              "from": "1876-01-01",
+              "until": "1914-01-01"
+            },
+            "entityId": "germany-imperial-framework",
+            "geographicScope": {
+              "description": "Reich currency; earlier competing local currencies and later wartime gold-convertibility suspension are outside interval.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-bundesbank-historical-money"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-bundesbank-historical-money",
+                "note": "Mark was sole valid Reich currency from 1 January 1876; 1914 suspension establishes later limit of prewar parity. Clip through campaign 1913.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1876-01-01",
+                "until": "1914-01-01"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-berlin-imperial-capital",
+            "url": "https://www.berlin.de/geschichte/8479394-3689745-die-kaiserliche-reichshauptstadt.html",
+            "title": "Die kaiserliche Reichshauptstadt",
+            "institution": "Land Berlin",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Historical body read 1871 capital designation through imperial-era chronology and 1918 revolution; narrow administrative-seat claim."
+          },
+          {
+            "id": "c01-dhm-wilhelm-i",
+            "url": "https://www.dhm.de/lemo/biografie/wilhelm-i",
+            "title": "Wilhelm I. 1797–1888",
+            "institution": "Deutsches Historisches Museum",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Complete biography read; 1871 imperial title and death 9 March 1888."
+          },
+          {
+            "id": "c01-dhm-three-emperors",
+            "url": "https://www.dhm.de/lemo/bestand/objekt/tragbare-medaille-auf-das-dreikaiserjahr-1888",
+            "title": "Tragbare Medaille auf das Dreikaiserjahr",
+            "institution": "Deutsches Historisches Museum",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Complete museum object contextual text read; three successive emperors and both 1888 death dates."
+          },
+          {
+            "id": "c01-dhm-wilhelm-ii",
+            "url": "https://www.dhm.de/lemo/biografie/wilhelm-ii",
+            "title": "Wilhelm II. 1859–1941",
+            "institution": "Deutsches Historisches Museum",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Complete biography chronology read; accession 15 June 1888, November 1918 abdication distinguished."
+          },
+          {
+            "id": "c01-bundesbank-historical-money",
+            "url": "https://www.bundesbank.de/en/statistics/economic-activity-and-prices/national-producer-and-consumer-prices/purchasing-power-comparisons-of-historical-amounts-of-money-795290",
+            "title": "The history of money — from thaler and florin to euro",
+            "institution": "Deutsche Bundesbank",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Historical-money section read; mark sole Reich currency from 1 January 1876, gold parity suspended 31 July 1914. No purchasing-power estimates copied."
+          }
+        ],
+        "absenceOfEvidence": [
+          "1872–1875 currency coexistence not encoded. Existing sourced constitutional records preserved; no duplicate government facts."
+        ],
+        "reviewNotes": [
+          "Isolated research only; independent coordinator evidence review mandatory.",
+          "Intervals are editorial clips within sourced office or monetary periods; they do not claim foundation or territorial control."
+        ],
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ]
+      },
+      "packageHash": "5dcce05c1d5df15783f8cbf889e74acb23120709b5a9d8f318bd809ef84ddbdf",
+      "submittedAt": "2026-10-01T19:52:00.801Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "campaign01-germany-imperial-framework",
+            "jobId": "c01-67fe11812dbdc98c623b5066",
+            "worker": {
+              "id": "campaign-selection",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "germany-imperial-framework",
+            "mapIds": [
+              "entity-german-empire",
+              "entity-germany"
+            ],
+            "period": {
+              "from": "1872",
+              "until": "1913"
+            },
+            "category": "core-state",
+            "claims": [
+              {
+                "id": "c01-german-capital",
+                "category": "capital",
+                "value": "Berlin",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1872",
+                  "until": "1913"
+                },
+                "entityId": "germany-imperial-framework",
+                "geographicScope": {
+                  "description": "Imperial capital; no claim that federal-state administrations relocated to Berlin.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-berlin-imperial-capital"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-berlin-imperial-capital",
+                    "note": "Official Berlin chronology identifies imperial capital from 1871; requested 1872–1913 is within imperial-capital era. Year precision retained.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1872",
+                    "until": "1913"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-german-wilhelm-i",
+                "category": "leadership",
+                "value": "Wilhelm I",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1872-01-01",
+                  "until": "1888-03-09"
+                },
+                "entityId": "germany-imperial-framework",
+                "geographicScope": {
+                  "description": "Entity-level office or monetary system; no assertion of uniform territorial control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-dhm-wilhelm-i"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-dhm-wilhelm-i",
+                    "note": "Imperial office began 18 January 1871 and ended at death 9 March 1888. Start clipped to campaign scope.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1872-01-01",
+                    "until": "1888-03-09"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "German Emperor"
+              },
+              {
+                "id": "c01-german-friedrich-iii",
+                "category": "leadership",
+                "value": "Friedrich III",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1888-03-09",
+                  "until": "1888-06-15"
+                },
+                "entityId": "germany-imperial-framework",
+                "geographicScope": {
+                  "description": "Entity-level office or monetary system; no assertion of uniform territorial control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-dhm-three-emperors"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-dhm-three-emperors",
+                    "note": "Museum explains succession after 9 March death and end at 15 June death.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1888-03-09",
+                    "until": "1888-06-15"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "German Emperor"
+              },
+              {
+                "id": "c01-german-wilhelm-ii",
+                "category": "leadership",
+                "value": "Wilhelm II",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1888-06-15",
+                  "until": "1914-01-01"
+                },
+                "entityId": "germany-imperial-framework",
+                "geographicScope": {
+                  "description": "Entity-level office or monetary system; no assertion of uniform territorial control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-dhm-wilhelm-ii"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-dhm-wilhelm-ii",
+                    "note": "Accession 15 June 1888; biography continues to 1918 abdication. End clips at exclusive end of campaign 1913.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1888-06-15",
+                    "until": "1914-01-01"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "German Emperor"
+              },
+              {
+                "id": "c01-german-mark",
+                "category": "currency",
+                "value": "Mark",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1876-01-01",
+                  "until": "1914-01-01"
+                },
+                "entityId": "germany-imperial-framework",
+                "geographicScope": {
+                  "description": "Reich currency; earlier competing local currencies and later wartime gold-convertibility suspension are outside interval.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-bundesbank-historical-money"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-bundesbank-historical-money",
+                    "note": "Mark was sole valid Reich currency from 1 January 1876; 1914 suspension establishes later limit of prewar parity. Clip through campaign 1913.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1876-01-01",
+                    "until": "1914-01-01"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-berlin-imperial-capital",
+                "url": "https://www.berlin.de/geschichte/8479394-3689745-die-kaiserliche-reichshauptstadt.html",
+                "title": "Die kaiserliche Reichshauptstadt",
+                "institution": "Land Berlin",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Historical body read 1871 capital designation through imperial-era chronology and 1918 revolution; narrow administrative-seat claim."
+              },
+              {
+                "id": "c01-dhm-wilhelm-i",
+                "url": "https://www.dhm.de/lemo/biografie/wilhelm-i",
+                "title": "Wilhelm I. 1797–1888",
+                "institution": "Deutsches Historisches Museum",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Complete biography read; 1871 imperial title and death 9 March 1888."
+              },
+              {
+                "id": "c01-dhm-three-emperors",
+                "url": "https://www.dhm.de/lemo/bestand/objekt/tragbare-medaille-auf-das-dreikaiserjahr-1888",
+                "title": "Tragbare Medaille auf das Dreikaiserjahr",
+                "institution": "Deutsches Historisches Museum",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Complete museum object contextual text read; three successive emperors and both 1888 death dates."
+              },
+              {
+                "id": "c01-dhm-wilhelm-ii",
+                "url": "https://www.dhm.de/lemo/biografie/wilhelm-ii",
+                "title": "Wilhelm II. 1859–1941",
+                "institution": "Deutsches Historisches Museum",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Complete biography chronology read; accession 15 June 1888, November 1918 abdication distinguished."
+              },
+              {
+                "id": "c01-bundesbank-historical-money",
+                "url": "https://www.bundesbank.de/en/statistics/economic-activity-and-prices/national-producer-and-consumer-prices/purchasing-power-comparisons-of-historical-amounts-of-money-795290",
+                "title": "The history of money — from thaler and florin to euro",
+                "institution": "Deutsche Bundesbank",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Historical-money section read; mark sole Reich currency from 1 January 1876, gold parity suspended 31 July 1914. No purchasing-power estimates copied."
+              }
+            ],
+            "absenceOfEvidence": [
+              "1872–1875 currency coexistence not encoded. Existing sourced constitutional records preserved; no duplicate government facts."
+            ],
+            "reviewNotes": [
+              "Isolated research only; independent coordinator evidence review mandatory.",
+              "Intervals are editorial clips within sourced office or monetary periods; they do not claim foundation or territorial control."
+            ],
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ]
+          },
+          "packageHash": "34c42a19ef828aca6a05ccebcea2d7757124d53a30e41d04a75787eaf104d65f",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:52:00.896Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Source c01-dhm-wilhelm-i: confirm full body reading and claim support",
+          "Source c01-dhm-three-emperors: confirm full body reading and claim support",
+          "Source c01-dhm-wilhelm-ii: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "5dcce05c1d5df15783f8cbf889e74acb23120709b5a9d8f318bd809ef84ddbdf"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-67fe11812dbdc98c623b5066",
+        "packageHash": "5dcce05c1d5df15783f8cbf889e74acb23120709b5a9d8f318bd809ef84ddbdf",
+        "productionFingerprint": "12ff0f2cbe16fb167e4635c022b6ed4bf18f5b35c54662dca82194b6499a42f1",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read Land Berlin imperial-capital chronology, three DHM museum bodies and Bundesbank historical-money section. Berlin imperial role is dated from 1871 through the imperial era; clipped 1872–1913. DHM supports 9 March and 15 June 1888 succession boundaries, keeping Emperor distinct from Prussian offices. Bundesbank explicitly dates sole-valid Mark to 1 January 1876; no unchanged parity or statistical inference imported. Current entity has no conflicting capital, monetary or Emperor records. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Source c01-dhm-wilhelm-i: confirm full body reading and claim support",
+          "Source c01-dhm-three-emperors: confirm full body reading and claim support",
+          "Source c01-dhm-wilhelm-ii: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:52:00.949Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-67fe11812dbdc98c623b5066",
+        "packageHash": "5dcce05c1d5df15783f8cbf889e74acb23120709b5a9d8f318bd809ef84ddbdf",
+        "beforeFingerprint": "12ff0f2cbe16fb167e4635c022b6ed4bf18f5b35c54662dca82194b6499a42f1",
+        "afterFingerprint": "157818ad6bb7e5793b04d130f9a1c0b87764aa954952949c9ff6b64b741740f4",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "india-republic-1950-framework",
@@ -2718,7 +3274,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 22,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "157818ad6bb7e5793b04d130f9a1c0b87764aa954952949c9ff6b64b741740f4",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -2734,9 +3290,390 @@
       },
       "scopeId": "scope-3460a3fed9e25d8dd40c605e",
       "id": "c01-6eb8ac74a016130cfe0fe251",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:52:02.242Z",
+          "actor": "campaign-selection",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:52:02.259Z",
+          "actor": "campaign-selection",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:52:02.346Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:52:02.364Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:52:02.395Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read official PM India Nehru entry and RBI Republic India Coinage body. Nehru tenure 1947–1964 encloses 1951–1960 republican scope. Current President Rajendra Prasad is a distinct role, not a conflicting officeholder. RBI dates amended Coinage Act commencement to 1 April 1957 and retains rupee denomination while changing 16 annas to 100 naye paise; no value interpolation. Colonial capital evidence appropriately omitted. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:52:03.903Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-selection",
+      "claimedAt": "2026-10-01T19:52:02.242Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "campaign01-india-republic-1950-framework",
+        "jobId": "c01-6eb8ac74a016130cfe0fe251",
+        "worker": {
+          "id": "campaign-selection",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "157818ad6bb7e5793b04d130f9a1c0b87764aa954952949c9ff6b64b741740f4",
+        "entityId": "india-republic-1950-framework",
+        "mapIds": [
+          "entity-india"
+        ],
+        "period": {
+          "from": "1951",
+          "until": "1960"
+        },
+        "category": "core-state",
+        "claims": [
+          {
+            "id": "c01-india-nehru",
+            "category": "leadership",
+            "value": "Jawaharlal Nehru",
+            "temporal": {
+              "kind": "interval",
+              "from": "1951-01-01",
+              "until": "1961-01-01"
+            },
+            "entityId": "india-republic-1950-framework",
+            "geographicScope": {
+              "description": "Entity-level office or monetary system; no assertion of uniform territorial control.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-india-pm-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-india-pm-tenures",
+                "note": "Official list dates uninterrupted premiership 15 August 1947–27 May 1964; interval clips only selected republican campaign years.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1951-01-01",
+                "until": "1961-01-01"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-india-rupee-anna",
+            "category": "currency",
+            "value": "Indian rupee (16 annas)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1951-01-01",
+              "until": "1957-04-01"
+            },
+            "entityId": "india-republic-1950-framework",
+            "geographicScope": {
+              "description": "Republic currency denomination; no statistical-area or modern-value equivalence.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-rbi-republic-coinage"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-rbi-republic-coinage",
+                "note": "RBI explains 1950 Anna Series retained rupee of 16 annas until decimal Act took effect 1 April 1957.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1951-01-01",
+                "until": "1957-04-01"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-india-rupee-decimal",
+            "category": "currency",
+            "value": "Indian rupee (100 naye paise)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1957-04-01",
+              "until": "1961-01-01"
+            },
+            "entityId": "india-republic-1950-framework",
+            "geographicScope": {
+              "description": "Republic currency denomination; no change in rupee value asserted.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-rbi-republic-coinage"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-rbi-republic-coinage",
+                "note": "RBI dates decimal division into 100 paisa from 1 April 1957, termed naya paisa until 1 June 1964; unit stayed rupee.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1957-04-01",
+                "until": "1961-01-01"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-india-pm-tenures",
+            "url": "https://www.pmindia.gov.in/en/former-prime-ministers/",
+            "title": "Former Prime Ministers — Jawaharlal Nehru",
+            "institution": "Prime Minister’s Office, Government of India",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Nehru historical entry read: office 15 August 1947 to 27 May 1964. Campaign begins within republican period; no Dominion status back-projection."
+          },
+          {
+            "id": "c01-rbi-republic-coinage",
+            "url": "https://www.rbi.org.in/Scripts/restrospectcoins.aspx",
+            "title": "Republic India Coinage",
+            "institution": "Reserve Bank of India",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Complete relevant Republic coinage body read: 1950 anna series and 1 April 1957 decimal change, unchanged rupee unit."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Rajendra Prasad already sourced; not duplicated. New Delhi historical continuity remains unfilled pending republic-specific evidence; colonial 1931 inauguration alone not sufficient. Existing parliamentary records retained."
+        ],
+        "reviewNotes": [
+          "Isolated research only; independent coordinator evidence review mandatory.",
+          "Intervals are editorial clips within sourced office or monetary periods; they do not claim foundation or territorial control."
+        ],
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ]
+      },
+      "packageHash": "d53ff7fcc69ea1526eb2ca1320feffc7c1a161a669400a659b4114d462f987de",
+      "submittedAt": "2026-10-01T19:52:02.259Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "campaign01-india-republic-1950-framework",
+            "jobId": "c01-6eb8ac74a016130cfe0fe251",
+            "worker": {
+              "id": "campaign-selection",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "india-republic-1950-framework",
+            "mapIds": [
+              "entity-india"
+            ],
+            "period": {
+              "from": "1951",
+              "until": "1960"
+            },
+            "category": "core-state",
+            "claims": [
+              {
+                "id": "c01-india-nehru",
+                "category": "leadership",
+                "value": "Jawaharlal Nehru",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1951-01-01",
+                  "until": "1961-01-01"
+                },
+                "entityId": "india-republic-1950-framework",
+                "geographicScope": {
+                  "description": "Entity-level office or monetary system; no assertion of uniform territorial control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-india-pm-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-india-pm-tenures",
+                    "note": "Official list dates uninterrupted premiership 15 August 1947–27 May 1964; interval clips only selected republican campaign years.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1951-01-01",
+                    "until": "1961-01-01"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-india-rupee-anna",
+                "category": "currency",
+                "value": "Indian rupee (16 annas)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1951-01-01",
+                  "until": "1957-04-01"
+                },
+                "entityId": "india-republic-1950-framework",
+                "geographicScope": {
+                  "description": "Republic currency denomination; no statistical-area or modern-value equivalence.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-rbi-republic-coinage"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-rbi-republic-coinage",
+                    "note": "RBI explains 1950 Anna Series retained rupee of 16 annas until decimal Act took effect 1 April 1957.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1951-01-01",
+                    "until": "1957-04-01"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-india-rupee-decimal",
+                "category": "currency",
+                "value": "Indian rupee (100 naye paise)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1957-04-01",
+                  "until": "1961-01-01"
+                },
+                "entityId": "india-republic-1950-framework",
+                "geographicScope": {
+                  "description": "Republic currency denomination; no change in rupee value asserted.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-rbi-republic-coinage"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-rbi-republic-coinage",
+                    "note": "RBI dates decimal division into 100 paisa from 1 April 1957, termed naya paisa until 1 June 1964; unit stayed rupee.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1957-04-01",
+                    "until": "1961-01-01"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-india-pm-tenures",
+                "url": "https://www.pmindia.gov.in/en/former-prime-ministers/",
+                "title": "Former Prime Ministers — Jawaharlal Nehru",
+                "institution": "Prime Minister’s Office, Government of India",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Nehru historical entry read: office 15 August 1947 to 27 May 1964. Campaign begins within republican period; no Dominion status back-projection."
+              },
+              {
+                "id": "c01-rbi-republic-coinage",
+                "url": "https://www.rbi.org.in/Scripts/restrospectcoins.aspx",
+                "title": "Republic India Coinage",
+                "institution": "Reserve Bank of India",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Complete relevant Republic coinage body read: 1950 anna series and 1 April 1957 decimal change, unchanged rupee unit."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Rajendra Prasad already sourced; not duplicated. New Delhi historical continuity remains unfilled pending republic-specific evidence; colonial 1931 inauguration alone not sufficient. Existing parliamentary records retained."
+            ],
+            "reviewNotes": [
+              "Isolated research only; independent coordinator evidence review mandatory.",
+              "Intervals are editorial clips within sourced office or monetary periods; they do not claim foundation or territorial control."
+            ],
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ]
+          },
+          "packageHash": "bae89fa177faa75959a45218b177099bac94a573779b432a2274b5d41aefab0c",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:52:02.346Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Source c01-india-pm-tenures: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "d53ff7fcc69ea1526eb2ca1320feffc7c1a161a669400a659b4114d462f987de"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-6eb8ac74a016130cfe0fe251",
+        "packageHash": "d53ff7fcc69ea1526eb2ca1320feffc7c1a161a669400a659b4114d462f987de",
+        "productionFingerprint": "157818ad6bb7e5793b04d130f9a1c0b87764aa954952949c9ff6b64b741740f4",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read official PM India Nehru entry and RBI Republic India Coinage body. Nehru tenure 1947–1964 encloses 1951–1960 republican scope. Current President Rajendra Prasad is a distinct role, not a conflicting officeholder. RBI dates amended Coinage Act commencement to 1 April 1957 and retains rupee denomination while changing 16 annas to 100 naye paise; no value interpolation. Colonial capital evidence appropriately omitted. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Source c01-india-pm-tenures: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:52:02.395Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-6eb8ac74a016130cfe0fe251",
+        "packageHash": "d53ff7fcc69ea1526eb2ca1320feffc7c1a161a669400a659b4114d462f987de",
+        "beforeFingerprint": "157818ad6bb7e5793b04d130f9a1c0b87764aa954952949c9ff6b64b741740f4",
+        "afterFingerprint": "5ff31d5b69a0d2ad61b9320e50650408ce05aaf919b13116264f73ecb311a636",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "canada-1867-federal-framework",
@@ -2831,7 +3768,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 126,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "5ff31d5b69a0d2ad61b9320e50650408ce05aaf919b13116264f73ecb311a636",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -2847,9 +3784,1058 @@
       },
       "scopeId": "scope-aa89cca57e49f42671b2b2b6",
       "id": "c01-70e9d56601a8b9f7c87e5c03",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:52:03.934Z",
+          "actor": "campaign-selection",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:52:03.951Z",
+          "actor": "campaign-selection",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:52:04.025Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:52:04.043Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:52:04.180Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read House of Commons Appendix 6 body and all relevant rows from first through fifteenth ministries. Dates agree with package; unsupported inter-ministry days are preserved. Borden tenure combines contiguous 1911–1917 and 1917–1920 ministries of the same officeholder, not inferred succession or unchanging party framework. First and last terms explicitly clipped to job. Existing Ottawa statutory seat is preserved and not duplicated. Current entity has no conflicting Prime Minister records. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:52:05.991Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-selection",
+      "claimedAt": "2026-10-01T19:52:03.934Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "campaign01-canada-1867-federal-framework",
+        "jobId": "c01-70e9d56601a8b9f7c87e5c03",
+        "worker": {
+          "id": "campaign-selection",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "5ff31d5b69a0d2ad61b9320e50650408ce05aaf919b13116264f73ecb311a636",
+        "entityId": "canada-1867-federal-framework",
+        "mapIds": [
+          "entity-canada"
+        ],
+        "period": {
+          "from": "1868",
+          "until": "1930"
+        },
+        "category": "core-state",
+        "claims": [
+          {
+            "id": "c01-canada-macdonald-first",
+            "category": "leadership",
+            "value": "John A. Macdonald",
+            "temporal": {
+              "kind": "interval",
+              "from": "1868-01-01",
+              "until": "1873-11-05"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1868-01-01",
+                "until": "1873-11-05"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-mackenzie",
+            "category": "leadership",
+            "value": "Alexander Mackenzie",
+            "temporal": {
+              "kind": "interval",
+              "from": "1873-11-07",
+              "until": "1878-10-08"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1873-11-07",
+                "until": "1878-10-08"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-macdonald-second",
+            "category": "leadership",
+            "value": "John A. Macdonald",
+            "temporal": {
+              "kind": "interval",
+              "from": "1878-10-17",
+              "until": "1891-06-06"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1878-10-17",
+                "until": "1891-06-06"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-abbott",
+            "category": "leadership",
+            "value": "John Abbott",
+            "temporal": {
+              "kind": "interval",
+              "from": "1891-06-16",
+              "until": "1892-11-24"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1891-06-16",
+                "until": "1892-11-24"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-thompson",
+            "category": "leadership",
+            "value": "John Thompson",
+            "temporal": {
+              "kind": "interval",
+              "from": "1892-12-05",
+              "until": "1894-12-12"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1892-12-05",
+                "until": "1894-12-12"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-bowell",
+            "category": "leadership",
+            "value": "Mackenzie Bowell",
+            "temporal": {
+              "kind": "interval",
+              "from": "1894-12-21",
+              "until": "1896-04-27"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1894-12-21",
+                "until": "1896-04-27"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-tupper",
+            "category": "leadership",
+            "value": "Charles Tupper",
+            "temporal": {
+              "kind": "interval",
+              "from": "1896-05-01",
+              "until": "1896-07-08"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1896-05-01",
+                "until": "1896-07-08"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-laurier",
+            "category": "leadership",
+            "value": "Wilfrid Laurier",
+            "temporal": {
+              "kind": "interval",
+              "from": "1896-07-11",
+              "until": "1911-10-06"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1896-07-11",
+                "until": "1911-10-06"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-borden",
+            "category": "leadership",
+            "value": "Robert Borden",
+            "temporal": {
+              "kind": "interval",
+              "from": "1911-10-10",
+              "until": "1920-07-10"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1911-10-10",
+                "until": "1920-07-10"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-meighen-first",
+            "category": "leadership",
+            "value": "Arthur Meighen",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-07-10",
+              "until": "1921-12-29"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1920-07-10",
+                "until": "1921-12-29"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-king-first",
+            "category": "leadership",
+            "value": "W. L. Mackenzie King",
+            "temporal": {
+              "kind": "interval",
+              "from": "1921-12-29",
+              "until": "1926-06-28"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1921-12-29",
+                "until": "1926-06-28"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-meighen-second",
+            "category": "leadership",
+            "value": "Arthur Meighen",
+            "temporal": {
+              "kind": "interval",
+              "from": "1926-06-29",
+              "until": "1926-09-25"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1926-06-29",
+                "until": "1926-09-25"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-king-second",
+            "category": "leadership",
+            "value": "W. L. Mackenzie King",
+            "temporal": {
+              "kind": "interval",
+              "from": "1926-09-25",
+              "until": "1930-08-07"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1926-09-25",
+                "until": "1930-08-07"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-canada-bennett",
+            "category": "leadership",
+            "value": "R. B. Bennett",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-08-07",
+              "until": "1931-01-01"
+            },
+            "entityId": "canada-1867-federal-framework",
+            "geographicScope": {
+              "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-canada-ministry-tenures"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-canada-ministry-tenures",
+                "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1930-08-07",
+                "until": "1931-01-01"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-canada-ministry-tenures",
+            "url": "https://www.ourcommons.ca/procedure/procedure-and-practice-4/app06-e.html",
+            "title": "Government Ministries and Prime Ministers of Canada Since 1867",
+            "institution": "House of Commons of Canada",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Full historical table and relevant footnotes read; ministry oath/end chronology. Short inter-ministry gaps retained; 1917 Borden continuity explained by footnote5."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Ottawa statutory capital and constitutional institutions already sourced. Currency not researched to sufficient interval evidence; retained gap."
+        ],
+        "reviewNotes": [
+          "Isolated research only; independent coordinator evidence review mandatory.",
+          "Intervals are editorial clips within sourced office or monetary periods; they do not claim foundation or territorial control."
+        ],
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ]
+      },
+      "packageHash": "94983d1da4072cfc1cd8deb865874b6c4acd6813ff54464af72b9c2b1ca3e5f3",
+      "submittedAt": "2026-10-01T19:52:03.951Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "campaign01-canada-1867-federal-framework",
+            "jobId": "c01-70e9d56601a8b9f7c87e5c03",
+            "worker": {
+              "id": "campaign-selection",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "canada-1867-federal-framework",
+            "mapIds": [
+              "entity-canada"
+            ],
+            "period": {
+              "from": "1868",
+              "until": "1930"
+            },
+            "category": "core-state",
+            "claims": [
+              {
+                "id": "c01-canada-macdonald-first",
+                "category": "leadership",
+                "value": "John A. Macdonald",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1868-01-01",
+                  "until": "1873-11-05"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1868-01-01",
+                    "until": "1873-11-05"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-mackenzie",
+                "category": "leadership",
+                "value": "Alexander Mackenzie",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1873-11-07",
+                  "until": "1878-10-08"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1873-11-07",
+                    "until": "1878-10-08"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-macdonald-second",
+                "category": "leadership",
+                "value": "John A. Macdonald",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1878-10-17",
+                  "until": "1891-06-06"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1878-10-17",
+                    "until": "1891-06-06"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-abbott",
+                "category": "leadership",
+                "value": "John Abbott",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1891-06-16",
+                  "until": "1892-11-24"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1891-06-16",
+                    "until": "1892-11-24"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-thompson",
+                "category": "leadership",
+                "value": "John Thompson",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1892-12-05",
+                  "until": "1894-12-12"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1892-12-05",
+                    "until": "1894-12-12"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-bowell",
+                "category": "leadership",
+                "value": "Mackenzie Bowell",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1894-12-21",
+                  "until": "1896-04-27"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1894-12-21",
+                    "until": "1896-04-27"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-tupper",
+                "category": "leadership",
+                "value": "Charles Tupper",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1896-05-01",
+                  "until": "1896-07-08"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1896-05-01",
+                    "until": "1896-07-08"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-laurier",
+                "category": "leadership",
+                "value": "Wilfrid Laurier",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1896-07-11",
+                  "until": "1911-10-06"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1896-07-11",
+                    "until": "1911-10-06"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-borden",
+                "category": "leadership",
+                "value": "Robert Borden",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1911-10-10",
+                  "until": "1920-07-10"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1911-10-10",
+                    "until": "1920-07-10"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-meighen-first",
+                "category": "leadership",
+                "value": "Arthur Meighen",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1920-07-10",
+                  "until": "1921-12-29"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1920-07-10",
+                    "until": "1921-12-29"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-king-first",
+                "category": "leadership",
+                "value": "W. L. Mackenzie King",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1921-12-29",
+                  "until": "1926-06-28"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1921-12-29",
+                    "until": "1926-06-28"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-meighen-second",
+                "category": "leadership",
+                "value": "Arthur Meighen",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1926-06-29",
+                  "until": "1926-09-25"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1926-06-29",
+                    "until": "1926-09-25"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-king-second",
+                "category": "leadership",
+                "value": "W. L. Mackenzie King",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1926-09-25",
+                  "until": "1930-08-07"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1926-09-25",
+                    "until": "1930-08-07"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-canada-bennett",
+                "category": "leadership",
+                "value": "R. B. Bennett",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1930-08-07",
+                  "until": "1931-01-01"
+                },
+                "entityId": "canada-1867-federal-framework",
+                "geographicScope": {
+                  "description": "Federal Prime Minister office; no claim of provincial or Indigenous territorial government.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-canada-ministry-tenures"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-canada-ministry-tenures",
+                    "note": "Parliamentary table supplies dated office interval; campaign bounds clip first/last terms. Borden continued through 1917 ministry reorganization. Short unsupported inter-ministry days retained as gaps.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1930-08-07",
+                    "until": "1931-01-01"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-canada-ministry-tenures",
+                "url": "https://www.ourcommons.ca/procedure/procedure-and-practice-4/app06-e.html",
+                "title": "Government Ministries and Prime Ministers of Canada Since 1867",
+                "institution": "House of Commons of Canada",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Full historical table and relevant footnotes read; ministry oath/end chronology. Short inter-ministry gaps retained; 1917 Borden continuity explained by footnote5."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Ottawa statutory capital and constitutional institutions already sourced. Currency not researched to sufficient interval evidence; retained gap."
+            ],
+            "reviewNotes": [
+              "Isolated research only; independent coordinator evidence review mandatory.",
+              "Intervals are editorial clips within sourced office or monetary periods; they do not claim foundation or territorial control."
+            ],
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ]
+          },
+          "packageHash": "0718213adeaa111f60ccfd903bbd66b5de244a9c55461b7019f3d51d7a0b48f6",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:52:04.025Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Source c01-canada-ministry-tenures: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "94983d1da4072cfc1cd8deb865874b6c4acd6813ff54464af72b9c2b1ca3e5f3"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-70e9d56601a8b9f7c87e5c03",
+        "packageHash": "94983d1da4072cfc1cd8deb865874b6c4acd6813ff54464af72b9c2b1ca3e5f3",
+        "productionFingerprint": "5ff31d5b69a0d2ad61b9320e50650408ce05aaf919b13116264f73ecb311a636",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read House of Commons Appendix 6 body and all relevant rows from first through fifteenth ministries. Dates agree with package; unsupported inter-ministry days are preserved. Borden tenure combines contiguous 1911–1917 and 1917–1920 ministries of the same officeholder, not inferred succession or unchanging party framework. First and last terms explicitly clipped to job. Existing Ottawa statutory seat is preserved and not duplicated. Current entity has no conflicting Prime Minister records. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Source c01-canada-ministry-tenures: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:52:04.180Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-70e9d56601a8b9f7c87e5c03",
+        "packageHash": "94983d1da4072cfc1cd8deb865874b6c4acd6813ff54464af72b9c2b1ca3e5f3",
+        "beforeFingerprint": "5ff31d5b69a0d2ad61b9320e50650408ce05aaf919b13116264f73ecb311a636",
+        "afterFingerprint": "61b65a1e1160162c86a8baf3a5f2f7734b376ddd9c78a8c633bdd2da4fe14a70",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "australia-prewestminster-federal-core",
@@ -2939,7 +4925,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 75,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "61b65a1e1160162c86a8baf3a5f2f7734b376ddd9c78a8c633bdd2da4fe14a70",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -2955,9 +4941,554 @@
       },
       "scopeId": "scope-14ee7390d0e526e0d03b9e3f",
       "id": "c01-484f6bb64691fb7f8a8c2e74",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:52:06.108Z",
+          "actor": "campaign-selection",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:52:06.126Z",
+          "actor": "campaign-selection",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:52:06.324Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:52:06.367Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:52:06.432Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read all three National Museum bodies and Reserve Bank museum timeline. Canberra designation in 1913 is distinguished from actual Parliament move on 9 May 1927 and gradual department transfer. Interior full-year seat intervals preserve 1927 transition gap. Museum headings explicitly give Bruce and Scullin exact office boundaries. RBA historical national banknotes through 1930s and 1966 decimal change support pound unit, without constant exchange parity. No current conflicting capital, currency or PM facts. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:52:08.108Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-selection",
+      "claimedAt": "2026-10-01T19:52:06.108Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "campaign01-australia-prewestminster-federal-core",
+        "jobId": "c01-484f6bb64691fb7f8a8c2e74",
+        "worker": {
+          "id": "campaign-selection",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "61b65a1e1160162c86a8baf3a5f2f7734b376ddd9c78a8c633bdd2da4fe14a70",
+        "entityId": "australia-prewestminster-federal-core",
+        "mapIds": [
+          "entity-australia"
+        ],
+        "period": {
+          "from": "1914",
+          "until": "1938"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-australia-designated-capital",
+            "category": "capital",
+            "value": "Canberra (designated capital; Parliament still in Melbourne)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1914",
+              "until": "1926"
+            },
+            "entityId": "australia-prewestminster-federal-core",
+            "geographicScope": {
+              "description": "Designated federal capital; Parliament in Melbourne, and construction/department transfer gradual.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-nma-canberra"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-nma-canberra",
+                "note": "Naming12March1913 designated Canberra national capital; Melbourne remained parliamentary seat until relocation. Full years1914–1926 preserve distinction, not an assertion government physically already relocated.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1914",
+                "until": "1926"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-australia-capital-after-transfer",
+            "category": "capital",
+            "value": "Canberra (capital and parliamentary seat)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1928",
+              "until": "1938"
+            },
+            "entityId": "australia-prewestminster-federal-core",
+            "geographicScope": {
+              "description": "Federal parliamentary seat; not every department relocated at once.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-nma-bruce"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-nma-bruce",
+                "note": "Museum identifies first Federal Parliament in Canberra9May1927 and beginning of department transfers; continuous parliamentary seat thereafter. Full years1928–1938 clipped campaign bounds.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1928",
+                "until": "1938"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-australia-bruce",
+            "category": "leadership",
+            "value": "Stanley Bruce",
+            "temporal": {
+              "kind": "interval",
+              "from": "1923-02-09",
+              "until": "1929-10-22"
+            },
+            "entityId": "australia-prewestminster-federal-core",
+            "geographicScope": {
+              "description": "Entity-level office; no assertion of territorial control.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-nma-bruce"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-nma-bruce",
+                "note": "Explicit continuous prime-minister term9February1923–22October1929.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1923-02-09",
+                "until": "1929-10-22"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-australia-scullin",
+            "category": "leadership",
+            "value": "James Scullin",
+            "temporal": {
+              "kind": "interval",
+              "from": "1929-10-22",
+              "until": "1932-01-06"
+            },
+            "entityId": "australia-prewestminster-federal-core",
+            "geographicScope": {
+              "description": "Entity-level office; no assertion of territorial control.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-nma-scullin"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-nma-scullin",
+                "note": "Explicit continuous prime-minister term22October1929–6January1932.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1929-10-22",
+                "until": "1932-01-06"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          },
+          {
+            "id": "c01-australia-pound",
+            "category": "currency",
+            "value": "Australian pound",
+            "temporal": {
+              "kind": "interval",
+              "from": "1914",
+              "until": "1938"
+            },
+            "entityId": "australia-prewestminster-federal-core",
+            "geographicScope": {
+              "description": "Federal currency unit; convertibility and note-issue authority changed within period, notably1932.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-rba-timeline"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-rba-timeline",
+                "note": "Timeline follows national pound/shilling banknotes from1913 through1930s, before1966 conversion from pounds. Full-year campaign clip is unit continuity, not monetary-policy or parity continuity.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1914",
+                "until": "1938"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-nma-canberra",
+            "url": "https://www.nma.gov.au/defining-moments/resources/founding-of-canberra",
+            "title": "Founding of Canberra",
+            "institution": "National Museum of Australia",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Complete historical narrative read: new capital named 12 March1913; constitutional compromise Parliament Melbourne until dedicated city built; construction delays and continuing capital role."
+          },
+          {
+            "id": "c01-nma-bruce",
+            "url": "https://www.nma.gov.au/explore/features/prime-ministers/stanley-bruce",
+            "title": "Stanley Bruce",
+            "institution": "National Museum of Australia",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Historical biography read: premiership9Feb1923–22Oct1929; first Canberra Parliament9May1927 and gradual transfer of departments."
+          },
+          {
+            "id": "c01-nma-scullin",
+            "url": "https://www.nma.gov.au/explore/features/prime-ministers/james-scullin",
+            "title": "James Scullin",
+            "institution": "National Museum of Australia",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Historical biography read: premiership22Oct1929–6Jan1932; dated office distinct from election."
+          },
+          {
+            "id": "c01-rba-timeline",
+            "url": "https://museum.rba.gov.au/exhibitions/timeline/",
+            "title": "Australian banknote timeline",
+            "institution": "Reserve Bank of Australia Museum",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Historical1910–1966 chronology read:1913 national notes,1920/1924 note authority,1932 legal tender/gold change,1966 conversion from pounds. No claim of unchanged gold convertibility."
+          }
+        ],
+        "absenceOfEvidence": [
+          "1927 seat-transition year omitted pending stronger interval-specific production portrayal. Remaining prime ministers not guessed; Hughes museum term header implies ambiguous1917 ministry gap, so not encoded from that heading. Political-institutional facts already sourced."
+        ],
+        "reviewNotes": [
+          "Independent coordinator evidence review mandatory; no production changes.",
+          "Conservative bounded dates preserve year-only precision; omitted accession/seat transition years remain gaps."
+        ]
+      },
+      "packageHash": "52d5fa2c0e30aa5af19ca682276fd87815669329274f24a4e617738937ce01a0",
+      "submittedAt": "2026-10-01T19:52:06.126Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "campaign01-australia-prewestminster-federal-core",
+            "jobId": "c01-484f6bb64691fb7f8a8c2e74",
+            "worker": {
+              "id": "campaign-selection",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "australia-prewestminster-federal-core",
+            "mapIds": [
+              "entity-australia"
+            ],
+            "period": {
+              "from": "1914",
+              "until": "1938"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-australia-designated-capital",
+                "category": "capital",
+                "value": "Canberra (designated capital; Parliament still in Melbourne)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1914",
+                  "until": "1926"
+                },
+                "entityId": "australia-prewestminster-federal-core",
+                "geographicScope": {
+                  "description": "Designated federal capital; Parliament in Melbourne, and construction/department transfer gradual.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-nma-canberra"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-nma-canberra",
+                    "note": "Naming12March1913 designated Canberra national capital; Melbourne remained parliamentary seat until relocation. Full years1914–1926 preserve distinction, not an assertion government physically already relocated.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1914",
+                    "until": "1926"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-australia-capital-after-transfer",
+                "category": "capital",
+                "value": "Canberra (capital and parliamentary seat)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1928",
+                  "until": "1938"
+                },
+                "entityId": "australia-prewestminster-federal-core",
+                "geographicScope": {
+                  "description": "Federal parliamentary seat; not every department relocated at once.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-nma-bruce"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-nma-bruce",
+                    "note": "Museum identifies first Federal Parliament in Canberra9May1927 and beginning of department transfers; continuous parliamentary seat thereafter. Full years1928–1938 clipped campaign bounds.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1928",
+                    "until": "1938"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-australia-bruce",
+                "category": "leadership",
+                "value": "Stanley Bruce",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1923-02-09",
+                  "until": "1929-10-22"
+                },
+                "entityId": "australia-prewestminster-federal-core",
+                "geographicScope": {
+                  "description": "Entity-level office; no assertion of territorial control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-nma-bruce"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-nma-bruce",
+                    "note": "Explicit continuous prime-minister term9February1923–22October1929.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1923-02-09",
+                    "until": "1929-10-22"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-australia-scullin",
+                "category": "leadership",
+                "value": "James Scullin",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1929-10-22",
+                  "until": "1932-01-06"
+                },
+                "entityId": "australia-prewestminster-federal-core",
+                "geographicScope": {
+                  "description": "Entity-level office; no assertion of territorial control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-nma-scullin"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-nma-scullin",
+                    "note": "Explicit continuous prime-minister term22October1929–6January1932.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1929-10-22",
+                    "until": "1932-01-06"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c01-australia-pound",
+                "category": "currency",
+                "value": "Australian pound",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1914",
+                  "until": "1938"
+                },
+                "entityId": "australia-prewestminster-federal-core",
+                "geographicScope": {
+                  "description": "Federal currency unit; convertibility and note-issue authority changed within period, notably1932.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-rba-timeline"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-rba-timeline",
+                    "note": "Timeline follows national pound/shilling banknotes from1913 through1930s, before1966 conversion from pounds. Full-year campaign clip is unit continuity, not monetary-policy or parity continuity.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1914",
+                    "until": "1938"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-nma-canberra",
+                "url": "https://www.nma.gov.au/defining-moments/resources/founding-of-canberra",
+                "title": "Founding of Canberra",
+                "institution": "National Museum of Australia",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Complete historical narrative read: new capital named 12 March1913; constitutional compromise Parliament Melbourne until dedicated city built; construction delays and continuing capital role."
+              },
+              {
+                "id": "c01-nma-bruce",
+                "url": "https://www.nma.gov.au/explore/features/prime-ministers/stanley-bruce",
+                "title": "Stanley Bruce",
+                "institution": "National Museum of Australia",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Historical biography read: premiership9Feb1923–22Oct1929; first Canberra Parliament9May1927 and gradual transfer of departments."
+              },
+              {
+                "id": "c01-nma-scullin",
+                "url": "https://www.nma.gov.au/explore/features/prime-ministers/james-scullin",
+                "title": "James Scullin",
+                "institution": "National Museum of Australia",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Historical biography read: premiership22Oct1929–6Jan1932; dated office distinct from election."
+              },
+              {
+                "id": "c01-rba-timeline",
+                "url": "https://museum.rba.gov.au/exhibitions/timeline/",
+                "title": "Australian banknote timeline",
+                "institution": "Reserve Bank of Australia Museum",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Historical1910–1966 chronology read:1913 national notes,1920/1924 note authority,1932 legal tender/gold change,1966 conversion from pounds. No claim of unchanged gold convertibility."
+              }
+            ],
+            "absenceOfEvidence": [
+              "1927 seat-transition year omitted pending stronger interval-specific production portrayal. Remaining prime ministers not guessed; Hughes museum term header implies ambiguous1917 ministry gap, so not encoded from that heading. Political-institutional facts already sourced."
+            ],
+            "reviewNotes": [
+              "Independent coordinator evidence review mandatory; no production changes.",
+              "Conservative bounded dates preserve year-only precision; omitted accession/seat transition years remain gaps."
+            ]
+          },
+          "packageHash": "b1b7935f9b392f763733735eb58eb2114555f7ce6b7bc3a7e36e3904324a80fa",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:52:06.324Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Source c01-nma-canberra: confirm full body reading and claim support",
+          "Source c01-nma-bruce: confirm full body reading and claim support",
+          "Source c01-nma-scullin: confirm full body reading and claim support",
+          "Source c01-rba-timeline: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "52d5fa2c0e30aa5af19ca682276fd87815669329274f24a4e617738937ce01a0"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-484f6bb64691fb7f8a8c2e74",
+        "packageHash": "52d5fa2c0e30aa5af19ca682276fd87815669329274f24a4e617738937ce01a0",
+        "productionFingerprint": "61b65a1e1160162c86a8baf3a5f2f7734b376ddd9c78a8c633bdd2da4fe14a70",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read all three National Museum bodies and Reserve Bank museum timeline. Canberra designation in 1913 is distinguished from actual Parliament move on 9 May 1927 and gradual department transfer. Interior full-year seat intervals preserve 1927 transition gap. Museum headings explicitly give Bruce and Scullin exact office boundaries. RBA historical national banknotes through 1930s and 1966 decimal change support pound unit, without constant exchange parity. No current conflicting capital, currency or PM facts. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Source c01-nma-canberra: confirm full body reading and claim support",
+          "Source c01-nma-bruce: confirm full body reading and claim support",
+          "Source c01-nma-scullin: confirm full body reading and claim support",
+          "Source c01-rba-timeline: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:52:06.432Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-484f6bb64691fb7f8a8c2e74",
+        "packageHash": "52d5fa2c0e30aa5af19ca682276fd87815669329274f24a4e617738937ce01a0",
+        "beforeFingerprint": "61b65a1e1160162c86a8baf3a5f2f7734b376ddd9c78a8c633bdd2da4fe14a70",
+        "afterFingerprint": "389f1498033c7f658d2cd9bc4155e5adda183124db0da4ff45422ad9e21a1806",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "austria-imperial-framework",
@@ -3031,7 +5562,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 248,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "389f1498033c7f658d2cd9bc4155e5adda183124db0da4ff45422ad9e21a1806",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -3047,9 +5578,398 @@
       },
       "scopeId": "scope-485f0dfbdca27cd67637de9d",
       "id": "c01-97c88c4442046b66e9b909a6",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:52:08.135Z",
+          "actor": "campaign-selection",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:52:08.154Z",
+          "actor": "campaign-selection",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:52:08.244Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:52:08.265Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:52:08.386Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read institutional Habsburg biographies for Franz II/I, Ferdinand I and reused Franz Joseph I. Austrian imperial title 1804–1835 is distinguished from Holy Roman office ending 1806. Conservative 1805–1834, 1836–1847 and 1849–1866 interior years preserve year-only chronology and 1835/1848 gaps. Ferdinand office does not assert sole practical rule; Franz Joseph interval stops before 1867 dual monarchy. Current entity has no competing Emperor records. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:52:09.783Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-selection",
+      "claimedAt": "2026-10-01T19:52:08.135Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "campaign01-austria-imperial-framework",
+        "jobId": "c01-97c88c4442046b66e9b909a6",
+        "worker": {
+          "id": "campaign-selection",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "389f1498033c7f658d2cd9bc4155e5adda183124db0da4ff45422ad9e21a1806",
+        "entityId": "austria-imperial-framework",
+        "mapIds": [
+          "entity-austrian-empire"
+        ],
+        "period": {
+          "from": "1805",
+          "until": "1866"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-austria-franz-i",
+            "category": "leadership",
+            "value": "Franz I",
+            "temporal": {
+              "kind": "interval",
+              "from": "1805",
+              "until": "1834"
+            },
+            "entityId": "austria-imperial-framework",
+            "geographicScope": {
+              "description": "Entity-level office; no assertion of territorial control.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-habsburg-franz-i"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-habsburg-franz-i",
+                "note": "Austrian imperial office1804–1835; interior full years1805–1834 avoid unsupported accession-day precision. Distinct from Holy Roman Emperor FranzII.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1805",
+                "until": "1834"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Emperor of Austria"
+          },
+          {
+            "id": "c01-austria-ferdinand",
+            "category": "leadership",
+            "value": "Ferdinand I",
+            "temporal": {
+              "kind": "interval",
+              "from": "1836",
+              "until": "1847"
+            },
+            "entityId": "austria-imperial-framework",
+            "geographicScope": {
+              "description": "Entity-level office; no assertion of territorial control.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-habsburg-ferdinand-i"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-habsburg-ferdinand-i",
+                "note": "Reign1835–1848; only interior full years encoded. Office does not imply exclusive personal direction of government.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1836",
+                "until": "1847"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Emperor of Austria"
+          },
+          {
+            "id": "c01-austria-franz-joseph",
+            "category": "leadership",
+            "value": "Franz Joseph I",
+            "temporal": {
+              "kind": "interval",
+              "from": "1849",
+              "until": "1866"
+            },
+            "entityId": "austria-imperial-framework",
+            "geographicScope": {
+              "description": "Entity-level office; no assertion of territorial control.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "b03-franz-joseph"
+            ],
+            "evidence": [
+              {
+                "sourceId": "b03-franz-joseph",
+                "note": "Existing source body reread: ruled1848–1916 as emperor,1848 accession and1867 compromise distinct. Clip interior full years1849–1866 before dual-monarchy framework.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1849",
+                "until": "1866"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Emperor of Austria"
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-habsburg-franz-i",
+            "url": "https://www.habsburger.net/de/personen/habsburger-herrscher/franz-iii",
+            "title": "Franz II./I.",
+            "institution": "Schönbrunn Group — World of the Habsburgs",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Complete biographical historical text read: separate Holy Roman/Austrian imperial offices; Austrian emperor1804–1835."
+          },
+          {
+            "id": "c01-habsburg-ferdinand-i",
+            "url": "https://www.habsburger.net/de/personen/habsburger-herrscher/ferdinand-i-0",
+            "title": "Ferdinand I.",
+            "institution": "Schönbrunn Group — World of the Habsburgs",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Complete biographical text read: Austrian reign1835–1848; actual governance qualified by Metternich and Secret State Conference."
+          }
+        ],
+        "absenceOfEvidence": [
+          "1835 and1848 leadership-transition years intentionally unfilled without day-level accession support. Capital/currency and changing constitutional arrangements not substantiated by these biographies and remain gaps."
+        ],
+        "reviewNotes": [
+          "Independent coordinator evidence review mandatory; no production changes.",
+          "Conservative bounded dates preserve year-only precision; omitted accession/seat transition years remain gaps.",
+          "Source reused: b03-franz-joseph; https://www.habsburger.net/en/persons/habsburg-emperor/franz-joseph-i full historical biography body reread."
+        ]
+      },
+      "packageHash": "22eb0ea524c30f1375c60b35125ca2b157e7df7ced65afb366b8a24dd4e89b81",
+      "submittedAt": "2026-10-01T19:52:08.154Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "campaign01-austria-imperial-framework",
+            "jobId": "c01-97c88c4442046b66e9b909a6",
+            "worker": {
+              "id": "campaign-selection",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "austria-imperial-framework",
+            "mapIds": [
+              "entity-austrian-empire"
+            ],
+            "period": {
+              "from": "1805",
+              "until": "1866"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-austria-franz-i",
+                "category": "leadership",
+                "value": "Franz I",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1805",
+                  "until": "1834"
+                },
+                "entityId": "austria-imperial-framework",
+                "geographicScope": {
+                  "description": "Entity-level office; no assertion of territorial control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-habsburg-franz-i"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-habsburg-franz-i",
+                    "note": "Austrian imperial office1804–1835; interior full years1805–1834 avoid unsupported accession-day precision. Distinct from Holy Roman Emperor FranzII.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1805",
+                    "until": "1834"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Emperor of Austria"
+              },
+              {
+                "id": "c01-austria-ferdinand",
+                "category": "leadership",
+                "value": "Ferdinand I",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1836",
+                  "until": "1847"
+                },
+                "entityId": "austria-imperial-framework",
+                "geographicScope": {
+                  "description": "Entity-level office; no assertion of territorial control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-habsburg-ferdinand-i"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-habsburg-ferdinand-i",
+                    "note": "Reign1835–1848; only interior full years encoded. Office does not imply exclusive personal direction of government.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1836",
+                    "until": "1847"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Emperor of Austria"
+              },
+              {
+                "id": "c01-austria-franz-joseph",
+                "category": "leadership",
+                "value": "Franz Joseph I",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1849",
+                  "until": "1866"
+                },
+                "entityId": "austria-imperial-framework",
+                "geographicScope": {
+                  "description": "Entity-level office; no assertion of territorial control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b03-franz-joseph"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b03-franz-joseph",
+                    "note": "Existing source body reread: ruled1848–1916 as emperor,1848 accession and1867 compromise distinct. Clip interior full years1849–1866 before dual-monarchy framework.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1849",
+                    "until": "1866"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Emperor of Austria"
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-habsburg-franz-i",
+                "url": "https://www.habsburger.net/de/personen/habsburger-herrscher/franz-iii",
+                "title": "Franz II./I.",
+                "institution": "Schönbrunn Group — World of the Habsburgs",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Complete biographical historical text read: separate Holy Roman/Austrian imperial offices; Austrian emperor1804–1835."
+              },
+              {
+                "id": "c01-habsburg-ferdinand-i",
+                "url": "https://www.habsburger.net/de/personen/habsburger-herrscher/ferdinand-i-0",
+                "title": "Ferdinand I.",
+                "institution": "Schönbrunn Group — World of the Habsburgs",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Complete biographical text read: Austrian reign1835–1848; actual governance qualified by Metternich and Secret State Conference."
+              }
+            ],
+            "absenceOfEvidence": [
+              "1835 and1848 leadership-transition years intentionally unfilled without day-level accession support. Capital/currency and changing constitutional arrangements not substantiated by these biographies and remain gaps."
+            ],
+            "reviewNotes": [
+              "Independent coordinator evidence review mandatory; no production changes.",
+              "Conservative bounded dates preserve year-only precision; omitted accession/seat transition years remain gaps.",
+              "Source reused: b03-franz-joseph; https://www.habsburger.net/en/persons/habsburg-emperor/franz-joseph-i full historical biography body reread."
+            ]
+          },
+          "packageHash": "deaffd1ee76ae643b3c4c42d908ae2d135053e1d60db9d854ae4ff9bbf6562fa",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:52:08.244Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Source c01-habsburg-franz-i: confirm full body reading and claim support",
+          "Source c01-habsburg-ferdinand-i: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "22eb0ea524c30f1375c60b35125ca2b157e7df7ced65afb366b8a24dd4e89b81"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-97c88c4442046b66e9b909a6",
+        "packageHash": "22eb0ea524c30f1375c60b35125ca2b157e7df7ced65afb366b8a24dd4e89b81",
+        "productionFingerprint": "389f1498033c7f658d2cd9bc4155e5adda183124db0da4ff45422ad9e21a1806",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read institutional Habsburg biographies for Franz II/I, Ferdinand I and reused Franz Joseph I. Austrian imperial title 1804–1835 is distinguished from Holy Roman office ending 1806. Conservative 1805–1834, 1836–1847 and 1849–1866 interior years preserve year-only chronology and 1835/1848 gaps. Ferdinand office does not assert sole practical rule; Franz Joseph interval stops before 1867 dual monarchy. Current entity has no competing Emperor records. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Source c01-habsburg-franz-i: confirm full body reading and claim support",
+          "Source c01-habsburg-ferdinand-i: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:52:08.386Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-97c88c4442046b66e9b909a6",
+        "packageHash": "22eb0ea524c30f1375c60b35125ca2b157e7df7ced65afb366b8a24dd4e89b81",
+        "beforeFingerprint": "389f1498033c7f658d2cd9bc4155e5adda183124db0da4ff45422ad9e21a1806",
+        "afterFingerprint": "cff531eeec655d73a51a0924395982c3a53079ec01a5e85a1454fb12694e3fcb",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "france-political-frameworks",
@@ -3595,7 +6515,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 54,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "cff531eeec655d73a51a0924395982c3a53079ec01a5e85a1454fb12694e3fcb",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -3611,9 +6531,248 @@
       },
       "scopeId": "scope-31c5ac592c32e66cb310b851",
       "id": "c01-c4b0ee0c96350853385d10c2",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:52:09.866Z",
+          "actor": "campaign-selection",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:52:09.912Z",
+          "actor": "campaign-selection",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:52:10.038Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:52:10.078Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:52:10.124Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read National Assembly Palais Bourbon historical article body. Restoration lease, 1827 acquisition and reconstruction, July Monarchy Chamber and separate 1848 temporary Constituent Assembly hall support bounded 1830–1847 parliamentary-seat claim. Value explicitly identifies Chamber of Deputies rather than unrestricted general capital or uniform government framework in transition year 1830. Existing later Versailles/Paris/Vichy seat records do not overlap proposed interval; source supports this parliamentary institution, not polity succession. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:52:12.506Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-selection",
+      "claimedAt": "2026-10-01T19:52:09.866Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "campaign01-france-political-frameworks",
+        "jobId": "c01-c4b0ee0c96350853385d10c2",
+        "worker": {
+          "id": "campaign-selection",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "cff531eeec655d73a51a0924395982c3a53079ec01a5e85a1454fb12694e3fcb",
+        "entityId": "france-political-frameworks",
+        "mapIds": [
+          "entity-france"
+        ],
+        "period": {
+          "from": "1830",
+          "until": "1847"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-france-chamber-seat",
+            "category": "capital",
+            "value": "Paris (Chamber of Deputies seat: Palais Bourbon)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1830",
+              "until": "1847"
+            },
+            "entityId": "france-political-frameworks",
+            "geographicScope": {
+              "description": "Chamber of Deputies parliamentary seat in Paris; not a claim of unchanged sovereign/regime in1830.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-france-palais-bourbon-history"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-france-palais-bourbon-history",
+                "note": "Historical narrative places Chamber in Palais Bourbon through Restoration and July Monarchy;1848 Constituent Assembly temporary hall separately described. Campaign1830–1847 refers parliamentary seat, not one unchanged regime.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1830",
+                "until": "1847"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-france-palais-bourbon-history",
+            "url": "https://www2.assemblee-nationale.fr/decouvrir-l-assemblee/patrimoine/palais-bourbon-et-hotel-de-lassay/l-histoire-du-palais-bourbon-et-de-l-hotel-de-lassay/de-la-restauration-a-nos-jours",
+            "title": "De la Restauration à nos jours — Palais Bourbon",
+            "institution": "Assemblée nationale",
+            "kind": "institutional-historical",
+            "accessed": "2026-10-01",
+            "usage": "Complete historical article body read: Chamber leased Palace under Restoration,1827 acquisition, rebuild and July Monarchy chamber,1848 temporary hall distinguished."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Existing monarchy leaders and French-franc unit retained; no duplicates. Precise1830 transition framework remains as curated. Capital claim limited to parliamentary seat rather than extending modern capital assumptions."
+        ],
+        "reviewNotes": [
+          "Independent coordinator evidence review mandatory; no production changes.",
+          "Conservative bounded dates preserve year-only precision; omitted accession/seat transition years remain gaps."
+        ]
+      },
+      "packageHash": "92355b4d35cfe9cffed80b68d636b63c041496390a8b618a3703d0a90a93e26e",
+      "submittedAt": "2026-10-01T19:52:09.912Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "campaign01-france-political-frameworks",
+            "jobId": "c01-c4b0ee0c96350853385d10c2",
+            "worker": {
+              "id": "campaign-selection",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "france-political-frameworks",
+            "mapIds": [
+              "entity-france"
+            ],
+            "period": {
+              "from": "1830",
+              "until": "1847"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-france-chamber-seat",
+                "category": "capital",
+                "value": "Paris (Chamber of Deputies seat: Palais Bourbon)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1830",
+                  "until": "1847"
+                },
+                "entityId": "france-political-frameworks",
+                "geographicScope": {
+                  "description": "Chamber of Deputies parliamentary seat in Paris; not a claim of unchanged sovereign/regime in1830.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-france-palais-bourbon-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-france-palais-bourbon-history",
+                    "note": "Historical narrative places Chamber in Palais Bourbon through Restoration and July Monarchy;1848 Constituent Assembly temporary hall separately described. Campaign1830–1847 refers parliamentary seat, not one unchanged regime.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1830",
+                    "until": "1847"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-france-palais-bourbon-history",
+                "url": "https://www2.assemblee-nationale.fr/decouvrir-l-assemblee/patrimoine/palais-bourbon-et-hotel-de-lassay/l-histoire-du-palais-bourbon-et-de-l-hotel-de-lassay/de-la-restauration-a-nos-jours",
+                "title": "De la Restauration à nos jours — Palais Bourbon",
+                "institution": "Assemblée nationale",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Complete historical article body read: Chamber leased Palace under Restoration,1827 acquisition, rebuild and July Monarchy chamber,1848 temporary hall distinguished."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Existing monarchy leaders and French-franc unit retained; no duplicates. Precise1830 transition framework remains as curated. Capital claim limited to parliamentary seat rather than extending modern capital assumptions."
+            ],
+            "reviewNotes": [
+              "Independent coordinator evidence review mandatory; no production changes.",
+              "Conservative bounded dates preserve year-only precision; omitted accession/seat transition years remain gaps."
+            ]
+          },
+          "packageHash": "e9020a05e8c278ab678ced2a3f540dce72004e619d2eb3dbe36110cf82f7dc13",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:52:10.038Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "92355b4d35cfe9cffed80b68d636b63c041496390a8b618a3703d0a90a93e26e"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-c4b0ee0c96350853385d10c2",
+        "packageHash": "92355b4d35cfe9cffed80b68d636b63c041496390a8b618a3703d0a90a93e26e",
+        "productionFingerprint": "cff531eeec655d73a51a0924395982c3a53079ec01a5e85a1454fb12694e3fcb",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read National Assembly Palais Bourbon historical article body. Restoration lease, 1827 acquisition and reconstruction, July Monarchy Chamber and separate 1848 temporary Constituent Assembly hall support bounded 1830–1847 parliamentary-seat claim. Value explicitly identifies Chamber of Deputies rather than unrestricted general capital or uniform government framework in transition year 1830. Existing later Versailles/Paris/Vichy seat records do not overlap proposed interval; source supports this parliamentary institution, not polity succession. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:52:10.124Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-c4b0ee0c96350853385d10c2",
+        "packageHash": "92355b4d35cfe9cffed80b68d636b63c041496390a8b618a3703d0a90a93e26e",
+        "beforeFingerprint": "cff531eeec655d73a51a0924395982c3a53079ec01a5e85a1454fb12694e3fcb",
+        "afterFingerprint": "505c817c76bc267a7c95442a3fe122fc345633696990b44b5b08d4cf5bc93804",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "japan-restoration-framework",
