@@ -69,7 +69,7 @@ test('continuity families and proposed canonical pairs stay together without cha
 test('occupation zones are administrative candidates with no automatic later-state mapping',()=>{
  for(const name of ['Germany (France)','Germany (Soviet)','Germany (UK)','Germany (USA)','Japan (USA)','Korea (USA)','Korea (USSR)']){
   const r=m.identities.find(r=>r.displayName===name);assert.equal(r.classification.classification,'dependent-administration');
-  assert.equal(r.dossierEligibility,'political-candidate');assert.equal(r.mappings.length,0);
+  assert.equal(r.dossierEligibility,'political-candidate');for(const mapping of r.mappings){assert.ok(mapping.sourceIds?.length);assert.ok(mapping.validFrom);assert.ok(mapping.validUntil);assert.ok(!/korea-(dprk|republic)-1948/.test(mapping.entityId),'Occupation label not automatically mapped to a later republic');}
  }
  const raj=m.identities.find(r=>r.displayName==='British Raj');assert.equal(raj.classification.classification,'dependent-administration');assert.ok(raj.currentlyResolvesToDossier);
 });

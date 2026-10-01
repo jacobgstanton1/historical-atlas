@@ -4,9 +4,9 @@ Development-only classification overlay. Visible site remains v0.6.1. Phase 2 Ba
 
 ## Two denominators
 
-Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **29 (3.3%)**; raw fallback-only IDs: **851**. The original identity/source/presence/mapping inventory remains intact.
+Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **43 (4.89%)**; raw fallback-only IDs: **837**. The original identity/source/presence/mapping inventory remains intact.
 
-Political dossier candidates: **401**; currently covered: **29 (7.23%)**; uncovered political candidates: **372**. Existing curated metadata entities: **32**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
+Political dossier candidates: **401**; currently covered: **43 (10.72%)**; uncovered political candidates: **358**. Existing curated metadata entities: **51**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
 
 | Classification | Raw IDs |
 | --- | ---: |
@@ -25,23 +25,23 @@ Explicit per-ID decisions reviewed from locked source names, Phase 1 families an
 
 A classification applies to the inventory identity, not every historical period. A political-polity candidate may have colonial/occupation periods; a dependent-administration candidate may later become a polity. Eligibility means the template can be useful, not that sovereignty, constitutions, capitals or other facts are established. Source authority fields are evidence requiring interpretation, never sovereignty findings. No historical institutions or facts are inferred from geometry. Explicit source-label decisions live in classification-plan.json, with confidence, rationale, evidence references and canonical candidates. Generated manifest fields also include unresolved classification questions and current dated mappings.
 
-The [upstream documentation](https://github.com/aourednik/historical-basemaps) describes both countries and cultural regions and cultural PARTOF groupings. [AIATSIS methodology](https://aiatsis.gov.au/explore/map-indigenous-australia) explains language/social/nation labels, approximate boundaries and spelling variation; this is methodological context, not proof that this dataset derives from its map. Accessed 2026-10-01. The classification methodology remains unchanged; historical research is limited to Batch 01.
+The [upstream documentation](https://github.com/aourednik/historical-basemaps) describes both countries and cultural regions and cultural PARTOF groupings. [AIATSIS methodology](https://aiatsis.gov.au/explore/map-indigenous-australia) explains language/social/nation labels, approximate boundaries and spelling variation; this is methodological context, not proof that this dataset derives from its map. Accessed 2026-10-01. The classification methodology remains unchanged; historical research progress is recorded per batch.
 
 ## Classification and political coverage by snapshot
 
 | Year | Raw | Polity | Dependent | Community | Geographic/composite | Variant | Unresolved | Political candidates | Covered | Uncovered | Coverage |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 1800 | 547 | 90 | 31 | 392 | 2 | 1 | 31 | 121 | 9 | 112 | 7.44% |
-| 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 11 | 113 | 8.87% |
-| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 14 | 128 | 9.86% |
-| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 14 | 129 | 9.79% |
-| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 14 | 125 | 10.07% |
-| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 16 | 120 | 11.76% |
-| 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 16 | 134 | 10.67% |
-| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 16 | 135 | 10.6% |
-| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 19 | 143 | 11.73% |
-| 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 17 | 152 | 10.06% |
-| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 18 | 129 | 12.24% |
+| 1800 | 547 | 90 | 31 | 392 | 2 | 1 | 31 | 121 | 12 | 109 | 9.92% |
+| 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 14 | 110 | 11.29% |
+| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 19 | 123 | 13.38% |
+| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 19 | 124 | 13.29% |
+| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 18 | 121 | 12.95% |
+| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 20 | 116 | 14.71% |
+| 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 19 | 131 | 12.67% |
+| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 18 | 133 | 11.92% |
+| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 21 | 141 | 12.96% |
+| 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 23 | 146 | 13.61% |
+| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 24 | 123 | 16.33% |
 
 The 1800 denominator is explained by its classification table, not modern-country assumptions. Of the 377 explicitly recorded Australian community cohort IDs, 377 appear in 1800. None is counted as an uncovered political dossier or assigned a political research batch. All remain selectable in production. They are deferred to a separately designed, community-appropriate profile project; this says nothing about political significance or organisation.
 
@@ -154,7 +154,7 @@ These cases must establish their referent/template fit before political research
 - Zaire (entity-zaire), snapshots 1945, 1960: Insufficient Phase 1 source-label evidence to distinguish polity, administration, people or composite geography. Establish the historical referent and date/scope before dossier eligibility.
 - Zulu (entity-zulu), snapshots 1800, 1815: Insufficient Phase 1 source-label evidence to distinguish polity, administration, people or composite geography. Establish the historical referent and date/scope before dossier eligibility.
 
-## Phase 2 political research batches (Batch 01 reviewed; others not started)
+## Phase 2 political research batches (current per-batch review states)
 
 21 batches partition all 401 political candidates plus 6 necessary political naming reviews exactly once. A community encoding review is routed separately. Unresolved family members appear as classification prerequisites; resolve eligibility before collecting dossier facts. The original Phase 1 47-batch raw audit remains in the appendix/manifest.batches for provenance, and is superseded as a political research plan.
 
@@ -165,7 +165,7 @@ Families and candidate canonical pairs are indivisible. Batch sizes aim for 15�
 | Order | Group | IDs incl. reviews | Political candidates | Uncovered | Name reviews |
 | --- | --- | ---: | ---: | ---: | ---: |
 | 1 | Western/Northern Europe | 24 | 24 | 1 | 0 |
-| 2 | East Asia | 17 | 17 | 15 | 0 |
+| 2 | East Asia | 17 | 17 | 1 | 0 |
 | 3 | Central Europe and German/Italian source families | 17 | 16 | 15 | 1 |
 | 4 | Central Europe and German/Italian source families | 21 | 21 | 21 | 0 |
 | 5 | Central Europe and German/Italian source families | 15 | 15 | 15 | 0 |
@@ -199,7 +199,7 @@ Difficult continuity cases: Review British and Irish name/state/union continuity
 
 ### political-batch-02 — East Asia
 
-State: proposed-not-authorised. Included: Empire of Japan (entity-empire-of-japan); Imperial Japan (entity-imperial-japan); Japan (entity-japan); Japan (USA) (entity-japan-usa); Korea (entity-korea); Korea, Democratic People's Republic of (entity-korea-democratic-people-s-republic-of); Korea, Republic of (entity-korea-republic-of); Korea (USA) (entity-korea-usa); Korea (USSR) (entity-korea-ussr); Sakhalin (RU) (entity-sakhalin-ru); China (entity-china); Hong Kong (entity-hong-kong); Manchu Empire (entity-manchu-empire); Qing Empire (entity-qing-empire); Taiwan (entity-taiwan); Tibet (entity-tibet); Mongolia (entity-mongolia).
+State: researched-with-partial-coverage. Included: Empire of Japan (entity-empire-of-japan); Imperial Japan (entity-imperial-japan); Japan (entity-japan); Japan (USA) (entity-japan-usa); Korea (entity-korea); Korea, Democratic People's Republic of (entity-korea-democratic-people-s-republic-of); Korea, Republic of (entity-korea-republic-of); Korea (USA) (entity-korea-usa); Korea (USSR) (entity-korea-ussr); Sakhalin (RU) (entity-sakhalin-ru); China (entity-china); Hong Kong (entity-hong-kong); Manchu Empire (entity-manchu-empire); Qing Empire (entity-qing-empire); Taiwan (entity-taiwan); Tibet (entity-tibet); Mongolia (entity-mongolia).
 
 High-value continuing/source-family candidates: Empire of Japan (entity-empire-of-japan); Imperial Japan (entity-imperial-japan); Japan (entity-japan); Korea (entity-korea); China (entity-china); Hong Kong (entity-hong-kong); Manchu Empire (entity-manchu-empire); Qing Empire (entity-qing-empire).
 
@@ -424,13 +424,13 @@ Batch 01 expands the production metadata while preserving the seven reference re
 
 Run **node scripts/coverage.mjs** to regenerate the manifest and combined report; **node scripts/coverage.mjs --check** recalculates both classification and raw outputs and rejects drift. Classification inputs and module hashes are recorded. Unknown IDs, missing/invalid decisions, missing evidence and broken canonical references fail rather than falling back to assumed country eligibility. New raw IDs require explicit decisions before regeneration succeeds.
 
-Limitations: provisional source-label classifications do not validate historical identities/status periods, prove duplicates or establish source availability. Sparse snapshots and uncertain/anachronistic names remain. The denominator is not a final deduplicated historical entity count. Future classification decisions may enlarge or reduce it; only Batch 01 has researched historical facts; other research batches have not started.
+Limitations: provisional source-label classifications do not validate historical identities/status periods, prove duplicates or establish source availability. Sparse snapshots and uncertain/anachronistic names remain. The denominator is not a final deduplicated historical entity count. Future classification decisions may enlarge or reduce it; historical facts have been researched only in batches marked reviewed.
 
 ---
 
 # Appendix: preserved Phase 1 raw-map audit
 
-Generated by node scripts/coverage.mjs. Development audit only; visible site remains v0.6.1. Batch 01 has reviewed historical data; other batches remain unstarted.
+Generated by node scripts/coverage.mjs. Development audit only; visible site remains v0.6.1. Reviewed batches and their states are listed in the current Phase 2 plan.
 
 Covered means the existing production resolver returns a curated entity in at least one snapshot where this map ID is selectable. It does not mean core completeness or coverage throughout 1800–1960. All other IDs still have map-derived fallback panels.
 
@@ -439,18 +439,18 @@ Covered means the existing production resolver returns a curated entity in at le
 | Measure | Count |
 | --- | ---: |
 | totalIdentities | 880 |
-| curatedMetadataEntities | 32 |
-| mappedIdentities | 29 |
-| coveredIdentities | 29 |
-| uncoveredIdentities | 851 |
-| percentage | 3.3 |
+| curatedMetadataEntities | 51 |
+| mappedIdentities | 43 |
+| coveredIdentities | 43 |
+| uncoveredIdentities | 837 |
+| percentage | 4.89 |
 | multipleSnapshotIdentities | 519 |
 | singleSnapshotIdentities | 361 |
 | unresolvedQuestions | 261 |
 | identitiesWithQuestions | 818 |
 | brokenMappings | 0 |
 | orphanMetadataEntities | 0 |
-| ambiguousMappingYearPairs | 3 |
+| ambiguousMappingYearPairs | 13 |
 
 The denominator includes selectable unlabeled/composite/community identities, not just countries or visible labels. “First/last snapshot” are observations of source presence, never existence dates. Source geometry, metadata and requested-year resolution remain separate.
 
@@ -458,17 +458,17 @@ The denominator includes selectable unlabeled/composite/community identities, no
 
 | Snapshot | Selectable IDs | Curated dossier | Fallback only | Coverage |
 | --- | ---: | ---: | ---: | ---: |
-| 1800 | 547 | 9 | 538 | 1.65% |
-| 1815 | 313 | 11 | 302 | 3.51% |
-| 1878 | 173 | 14 | 159 | 8.09% |
-| 1880 | 170 | 14 | 156 | 8.24% |
-| 1900 | 166 | 14 | 152 | 8.43% |
-| 1914 | 143 | 16 | 127 | 11.19% |
-| 1920 | 164 | 16 | 148 | 9.76% |
-| 1930 | 164 | 16 | 148 | 9.76% |
-| 1938 | 172 | 19 | 153 | 11.05% |
-| 1945 | 183 | 17 | 166 | 9.29% |
-| 1960 | 157 | 18 | 139 | 11.46% |
+| 1800 | 547 | 12 | 535 | 2.19% |
+| 1815 | 313 | 14 | 299 | 4.47% |
+| 1878 | 173 | 19 | 154 | 10.98% |
+| 1880 | 170 | 19 | 151 | 11.18% |
+| 1900 | 166 | 18 | 148 | 10.84% |
+| 1914 | 143 | 20 | 123 | 13.99% |
+| 1920 | 164 | 19 | 145 | 11.59% |
+| 1930 | 164 | 18 | 146 | 10.98% |
+| 1938 | 172 | 21 | 151 | 12.21% |
+| 1945 | 183 | 23 | 160 | 12.57% |
+| 1960 | 157 | 24 | 133 | 15.29% |
 
 ## Persistent and briefly represented identities
 
@@ -881,7 +881,7 @@ Other questions track source-presence gaps, changing authority/grouping, normali
 
 ## Archived Phase 1 raw audit batches — superseded for political research
 
-Batches partition all 880 IDs once. Uncurated counts sum to 851; existing profiles may still require additional periods/identity review. Counts measure map IDs, not a claim that each is one state. A compound label may require several historical records. Geography is a planning hint from the largest prepared feature; manual overrides/candidate families improve it, but it is not historical evidence. Australian community batches are smaller and have a distinct institutional review approach.
+Batches partition all 880 IDs once. Uncurated counts sum to 837; existing profiles may still require additional periods/identity review. Counts measure map IDs, not a claim that each is one state. A compound label may require several historical records. Geography is a planning hint from the largest prepared feature; manual overrides/candidate families improve it, but it is not historical evidence. Australian community batches are smaller and have a distinct institutional review approach.
 
 ### batch-01 — Unidentified/composite source labels · 1/1
 
@@ -1161,7 +1161,7 @@ Continuity: Keep candidate families together across linked batches; share instit
 
 ### batch-26 — East Asia · 1/1
 
-21 identities; 19 uncurated; 2 already mapped. 21 require some research/review before acceptance.
+21 identities; 5 uncurated; 16 already mapped. 21 require some research/review before acceptance.
 
 National archives, official cabinet chronologies and occupation records; constitutional continuity cannot be inferred from labels.
 
@@ -1405,4 +1405,4 @@ Run **node scripts/coverage.mjs** to regenerate lock-backed manifest.json and th
 
 The development manifest is generated: edit research-plan.json for planning/review decisions, not generated totals. Future reviewed batches update the curated metadata, then regenerate. No production code imports the audit files.
 
-Limitations: snapshot dates are sparse, source names may be anachronistic or corrupt, largest-piece geography can mislead for empires/disconnected pieces, and automatic flags cannot establish historical truth. Only the authorised Western/Northern Europe batch has historical research. Reviewed decisions apply only to their documented intervals; remaining candidates are unresearched.
+Limitations: snapshot dates are sparse, source names may be anachronistic or corrupt, largest-piece geography can mislead for empires/disconnected pieces, and automatic flags cannot establish historical truth. Historical research applies only to reviewed batches and their documented intervals. Reviewed decisions apply only to their documented intervals; remaining candidates are unresearched.

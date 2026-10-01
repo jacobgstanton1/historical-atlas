@@ -33,7 +33,7 @@ test('year resolution retains intra-year leadership transitions and excludes mod
  const leaders=index.resolve('entity-germany',1934).leaders;
  assert.equal(leaders.length,2);
  assert.equal(index.resolve('entity-germany',1960).entity,null);
- assert.equal(index.resolve('entity-japan',1938).entity,null);
+ assert.equal(index.resolve('entity-japan',1938).entity.id,'japan-meiji-framework');
  assert.equal(index.resolve('entity-empire-of-japan',1938).entity.id,'japan-meiji-framework');
  assert.equal(index.resolve('entity-japan',1960).entity.id,'japan-postwar-framework');
  assert.equal(index.resolve('entity-united-states',1932).leaders.length,0);
@@ -167,7 +167,7 @@ test('succession is explicit and constitutional changes do not infer new map ide
  assert.equal(successors.length,3);assert.ok(successors.every(f=>/partial|not/i.test(f.note)));
  assert.match(index.resolve('entity-germany',1939).predecessors[0].note,/constitutional|order/i);
  assert.match(index.resolve('entity-empire-of-japan',1939).successors[0].note,/constitutional/i);
- assert.equal(index.resolve('entity-japan',1939).entity,null);
+ assert.equal(index.resolve('entity-japan',1939).entity.id,'japan-meiji-framework');
  assert.ok(index.searchTerms('entity-soviet-union',1939).includes('USSR'));
  assert.ok(index.searchTerms('entity-british-raj',1939).includes('British India'));
 });

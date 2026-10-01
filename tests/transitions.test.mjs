@@ -43,9 +43,9 @@ test('exact, month and year precision plus exclusive endpoints remain unchanged'
  assert.equal(period({validFrom:'1900-06',validUntil:'1901'}),'1900-06 – ends during 1901');
  assert.equal(period({validFrom:'1900-06-01',validUntil:'1901-01-01'}),'1900-06-01 – before 1901-01-01');
 });
-test('all Batch 01 historical facts, mappings and 183 source records are preserved',()=>{
- const baseline=read('tests/fixtures/transition-baseline.json'),hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');
- for(const ref of baseline.entities){const entity=structuredClone(db.entities.find(e=>e.id===ref.id));if(ref.id==='united-kingdom')delete entity.frameworkContinuity;assert.equal(hash(entity),ref.hash,ref.id);}
- assert.equal(hash(db.mappings),baseline.mappingsHash);assert.equal(hash(sources.sources),baseline.sourcesHash);
+test('all pre-programme facts, mappings and source records are preserved as immutable prefixes',()=>{
+ const baseline=read('tests/fixtures/programme-baseline.json'),hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');
+ for(const ref of baseline.entities){const entity=db.entities.find(e=>e.id===ref.id);assert.ok(entity,ref.id);const preserved=Object.fromEntries(ref.keys.map(k=>[k,Array.isArray(entity[k])?entity[k].slice(0,ref.counts[k]):entity[k]]));assert.equal(hash(preserved),ref.hash,ref.id);}
+ assert.equal(hash(db.mappings.slice(0,baseline.mappingCount)),baseline.mappingsHash);assert.equal(hash(sources.sources.slice(0,baseline.sourceCount)),baseline.sourceHash);
  const groups=db.entities.find(e=>e.id==='united-kingdom').frameworkContinuity;for(const g of groups){assert.ok(g.values.length>1);assert.ok(g.sourceIds.every(id=>index.registry.has(id)));assert.ok(g.note);}
 });

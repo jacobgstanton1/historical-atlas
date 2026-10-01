@@ -7,7 +7,7 @@ import {
   presenceSummary,
   clean,
 } from './data-pipeline.js?v=0.6.1';
-import { loadMetadata } from './historical-metadata.js?v=0.6.1&data=b01-transition1';
+import { loadMetadata } from './historical-metadata.js?v=0.6.1&data=b02';
 import { renderDossier } from './dossier.js?v=0.6.1&review=transition1';
 import { createBoundaryHistory } from './boundary-history.js?v=0.6.1';
 
