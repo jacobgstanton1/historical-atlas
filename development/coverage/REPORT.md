@@ -4,9 +4,9 @@ Development-only classification overlay. Visible site remains v0.6.1. Phase 2 Ba
 
 ## Two denominators
 
-Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **43 (4.89%)**; raw fallback-only IDs: **837**. The original identity/source/presence/mapping inventory remains intact.
+Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **59 (6.7%)**; raw fallback-only IDs: **821**. The original identity/source/presence/mapping inventory remains intact.
 
-Political dossier candidates: **401**; currently covered: **43 (10.72%)**; uncovered political candidates: **358**. Existing curated metadata entities: **51**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
+Political dossier candidates: **401**; currently covered: **58 (14.46%)**; uncovered political candidates: **343**. Existing curated metadata entities: **70**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
 
 | Classification | Raw IDs |
 | --- | ---: |
@@ -31,17 +31,17 @@ The [upstream documentation](https://github.com/aourednik/historical-basemaps) d
 
 | Year | Raw | Polity | Dependent | Community | Geographic/composite | Variant | Unresolved | Political candidates | Covered | Uncovered | Coverage |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 1800 | 547 | 90 | 31 | 392 | 2 | 1 | 31 | 121 | 12 | 109 | 9.92% |
-| 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 14 | 110 | 11.29% |
-| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 19 | 123 | 13.38% |
-| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 19 | 124 | 13.29% |
-| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 18 | 121 | 12.95% |
-| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 20 | 116 | 14.71% |
-| 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 19 | 131 | 12.67% |
-| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 18 | 133 | 11.92% |
-| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 21 | 141 | 12.96% |
-| 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 23 | 146 | 13.61% |
-| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 24 | 123 | 16.33% |
+| 1800 | 547 | 90 | 31 | 392 | 2 | 1 | 31 | 121 | 13 | 108 | 10.74% |
+| 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 16 | 108 | 12.9% |
+| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 21 | 121 | 14.79% |
+| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 21 | 122 | 14.69% |
+| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 20 | 119 | 14.39% |
+| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 22 | 114 | 16.18% |
+| 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 23 | 127 | 15.33% |
+| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 22 | 129 | 14.57% |
+| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 22 | 140 | 13.58% |
+| 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 29 | 140 | 17.16% |
+| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 28 | 119 | 19.05% |
 
 The 1800 denominator is explained by its classification table, not modern-country assumptions. Of the 377 explicitly recorded Australian community cohort IDs, 377 appear in 1800. None is counted as an uncovered political dossier or assigned a political research batch. All remain selectable in production. They are deferred to a separately designed, community-appropriate profile project; this says nothing about political significance or organisation.
 
@@ -166,7 +166,7 @@ Families and candidate canonical pairs are indivisible. Batch sizes aim for 15�
 | --- | --- | ---: | ---: | ---: | ---: |
 | 1 | Western/Northern Europe | 24 | 24 | 1 | 0 |
 | 2 | East Asia | 17 | 17 | 1 | 0 |
-| 3 | Central Europe and German/Italian source families | 17 | 16 | 15 | 1 |
+| 3 | Central Europe and German/Italian source families | 17 | 16 | 0 | 1 |
 | 4 | Central Europe and German/Italian source families | 21 | 21 | 21 | 0 |
 | 5 | Central Europe and German/Italian source families | 15 | 15 | 15 | 0 |
 | 6 | Eastern Europe, Russian/Soviet and Balkan source families | 18 | 18 | 17 | 0 |
@@ -212,7 +212,7 @@ Classification prerequisites (excluded from this batch denominator): Chinese War
 
 ### political-batch-03 — Central Europe and German/Italian source families
 
-State: proposed-not-authorised. Included: Austria (entity-austria); Austria Hungary (entity-austria-hungary); Austrian Empire (entity-austrian-empire); Austro-Hungarian Empire (entity-austro-hungarian-empire); Bosnia-Herzegovina (entity-bosnia-herzegovina); Hungary (entity-hungary); East Germany (entity-east-germany); East Prussia (entity-east-prussia); German Empire (entity-german-empire); Germany (entity-germany); Germany (France) (entity-germany-france); Germany (Soviet) (entity-germany-soviet); Germany (UK) (entity-germany-uk); Germany (USA) (entity-germany-usa); Prussia (entity-prussia); Saar Protectorate (entity-saar-protectorate); West Germany (entity-west-germany).
+State: researched-with-partial-coverage. Included: Austria (entity-austria); Austria Hungary (entity-austria-hungary); Austrian Empire (entity-austrian-empire); Austro-Hungarian Empire (entity-austro-hungarian-empire); Bosnia-Herzegovina (entity-bosnia-herzegovina); Hungary (entity-hungary); East Germany (entity-east-germany); East Prussia (entity-east-prussia); German Empire (entity-german-empire); Germany (entity-germany); Germany (France) (entity-germany-france); Germany (Soviet) (entity-germany-soviet); Germany (UK) (entity-germany-uk); Germany (USA) (entity-germany-usa); Prussia (entity-prussia); Saar Protectorate (entity-saar-protectorate); West Germany (entity-west-germany).
 
 High-value continuing/source-family candidates: Austria (entity-austria); Austrian Empire (entity-austrian-empire); Austro-Hungarian Empire (entity-austro-hungarian-empire); German Empire (entity-german-empire); Germany (entity-germany); Prussia (entity-prussia).
 
@@ -439,18 +439,18 @@ Covered means the existing production resolver returns a curated entity in at le
 | Measure | Count |
 | --- | ---: |
 | totalIdentities | 880 |
-| curatedMetadataEntities | 51 |
-| mappedIdentities | 43 |
-| coveredIdentities | 43 |
-| uncoveredIdentities | 837 |
-| percentage | 4.89 |
+| curatedMetadataEntities | 70 |
+| mappedIdentities | 59 |
+| coveredIdentities | 59 |
+| uncoveredIdentities | 821 |
+| percentage | 6.7 |
 | multipleSnapshotIdentities | 519 |
 | singleSnapshotIdentities | 361 |
 | unresolvedQuestions | 261 |
 | identitiesWithQuestions | 818 |
 | brokenMappings | 0 |
 | orphanMetadataEntities | 0 |
-| ambiguousMappingYearPairs | 13 |
+| ambiguousMappingYearPairs | 15 |
 
 The denominator includes selectable unlabeled/composite/community identities, not just countries or visible labels. “First/last snapshot” are observations of source presence, never existence dates. Source geometry, metadata and requested-year resolution remain separate.
 
@@ -458,17 +458,17 @@ The denominator includes selectable unlabeled/composite/community identities, no
 
 | Snapshot | Selectable IDs | Curated dossier | Fallback only | Coverage |
 | --- | ---: | ---: | ---: | ---: |
-| 1800 | 547 | 12 | 535 | 2.19% |
-| 1815 | 313 | 14 | 299 | 4.47% |
-| 1878 | 173 | 19 | 154 | 10.98% |
-| 1880 | 170 | 19 | 151 | 11.18% |
-| 1900 | 166 | 18 | 148 | 10.84% |
-| 1914 | 143 | 20 | 123 | 13.99% |
-| 1920 | 164 | 19 | 145 | 11.59% |
-| 1930 | 164 | 18 | 146 | 10.98% |
-| 1938 | 172 | 21 | 151 | 12.21% |
-| 1945 | 183 | 23 | 160 | 12.57% |
-| 1960 | 157 | 24 | 133 | 15.29% |
+| 1800 | 547 | 13 | 534 | 2.38% |
+| 1815 | 313 | 16 | 297 | 5.11% |
+| 1878 | 173 | 22 | 151 | 12.72% |
+| 1880 | 170 | 22 | 148 | 12.94% |
+| 1900 | 166 | 21 | 145 | 12.65% |
+| 1914 | 143 | 22 | 121 | 15.38% |
+| 1920 | 164 | 23 | 141 | 14.02% |
+| 1930 | 164 | 22 | 142 | 13.41% |
+| 1938 | 172 | 22 | 150 | 12.79% |
+| 1945 | 183 | 29 | 154 | 15.85% |
+| 1960 | 157 | 28 | 129 | 17.83% |
 
 ## Persistent and briefly represented identities
 
@@ -881,7 +881,7 @@ Other questions track source-presence gaps, changing authority/grouping, normali
 
 ## Archived Phase 1 raw audit batches — superseded for political research
 
-Batches partition all 880 IDs once. Uncurated counts sum to 837; existing profiles may still require additional periods/identity review. Counts measure map IDs, not a claim that each is one state. A compound label may require several historical records. Geography is a planning hint from the largest prepared feature; manual overrides/candidate families improve it, but it is not historical evidence. Australian community batches are smaller and have a distinct institutional review approach.
+Batches partition all 880 IDs once. Uncurated counts sum to 821; existing profiles may still require additional periods/identity review. Counts measure map IDs, not a claim that each is one state. A compound label may require several historical records. Geography is a planning hint from the largest prepared feature; manual overrides/candidate families improve it, but it is not historical evidence. Australian community batches are smaller and have a distinct institutional review approach.
 
 ### batch-01 — Unidentified/composite source labels · 1/1
 
@@ -909,7 +909,7 @@ Continuity: Keep candidate families together across linked batches; share instit
 
 ### batch-03 — Central Europe and German/Italian source families · 1/3
 
-21 identities; 20 uncurated; 1 already mapped. 21 require some research/review before acceptance.
+21 identities; 4 uncurated; 17 already mapped. 21 require some research/review before acceptance.
 
 Regional/state archives and constitutional collections; establish small-state and imperial scope before statistics.
 

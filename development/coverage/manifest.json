@@ -4,96 +4,96 @@
   "coverageDefinition": "Covered means the existing production resolver returns a curated entity in at least one snapshot where this map ID is selectable. It does not mean core completeness or coverage throughout 1800–1960. All other IDs still have map-derived fallback panels.",
   "summary": {
     "totalIdentities": 880,
-    "curatedMetadataEntities": 51,
-    "mappedIdentities": 43,
-    "coveredIdentities": 43,
-    "uncoveredIdentities": 837,
-    "percentage": 4.89,
+    "curatedMetadataEntities": 70,
+    "mappedIdentities": 59,
+    "coveredIdentities": 59,
+    "uncoveredIdentities": 821,
+    "percentage": 6.7,
     "multipleSnapshotIdentities": 519,
     "singleSnapshotIdentities": 361,
     "unresolvedQuestions": 261,
     "identitiesWithQuestions": 818,
     "brokenMappings": 0,
     "orphanMetadataEntities": 0,
-    "ambiguousMappingYearPairs": 13
+    "ambiguousMappingYearPairs": 15
   },
   "bySnapshot": [
     {
       "year": 1800,
       "selectableIdentities": 547,
-      "covered": 12,
-      "uncovered": 535,
-      "percentage": 2.19
+      "covered": 13,
+      "uncovered": 534,
+      "percentage": 2.38
     },
     {
       "year": 1815,
       "selectableIdentities": 313,
-      "covered": 14,
-      "uncovered": 299,
-      "percentage": 4.47
+      "covered": 16,
+      "uncovered": 297,
+      "percentage": 5.11
     },
     {
       "year": 1878,
       "selectableIdentities": 173,
-      "covered": 19,
-      "uncovered": 154,
-      "percentage": 10.98
+      "covered": 22,
+      "uncovered": 151,
+      "percentage": 12.72
     },
     {
       "year": 1880,
       "selectableIdentities": 170,
-      "covered": 19,
-      "uncovered": 151,
-      "percentage": 11.18
+      "covered": 22,
+      "uncovered": 148,
+      "percentage": 12.94
     },
     {
       "year": 1900,
       "selectableIdentities": 166,
-      "covered": 18,
-      "uncovered": 148,
-      "percentage": 10.84
+      "covered": 21,
+      "uncovered": 145,
+      "percentage": 12.65
     },
     {
       "year": 1914,
       "selectableIdentities": 143,
-      "covered": 20,
-      "uncovered": 123,
-      "percentage": 13.99
+      "covered": 22,
+      "uncovered": 121,
+      "percentage": 15.38
     },
     {
       "year": 1920,
       "selectableIdentities": 164,
-      "covered": 19,
-      "uncovered": 145,
-      "percentage": 11.59
+      "covered": 23,
+      "uncovered": 141,
+      "percentage": 14.02
     },
     {
       "year": 1930,
       "selectableIdentities": 164,
-      "covered": 18,
-      "uncovered": 146,
-      "percentage": 10.98
+      "covered": 22,
+      "uncovered": 142,
+      "percentage": 13.41
     },
     {
       "year": 1938,
       "selectableIdentities": 172,
-      "covered": 21,
-      "uncovered": 151,
-      "percentage": 12.21
+      "covered": 22,
+      "uncovered": 150,
+      "percentage": 12.79
     },
     {
       "year": 1945,
       "selectableIdentities": 183,
-      "covered": 23,
-      "uncovered": 160,
-      "percentage": 12.57
+      "covered": 29,
+      "uncovered": 154,
+      "percentage": 15.85
     },
     {
       "year": 1960,
       "selectableIdentities": 157,
-      "covered": 24,
-      "uncovered": 133,
-      "percentage": 15.29
+      "covered": 28,
+      "uncovered": 129,
+      "percentage": 17.83
     }
   ],
   "brokenMappings": [],
@@ -120,6 +120,10 @@
       "requestedYear": 1848
     },
     {
+      "mapId": "entity-germany",
+      "requestedYear": 1933
+    },
+    {
       "mapId": "entity-imperial-japan",
       "requestedYear": 1890
     },
@@ -142,6 +146,10 @@
     {
       "mapId": "entity-finland",
       "requestedYear": 1917
+    },
+    {
+      "mapId": "entity-austria",
+      "requestedYear": 1933
     },
     {
       "mapId": "entity-china",
@@ -8494,8 +8502,8 @@
         "entity-tuscany"
       ],
       "totalIdentities": 21,
-      "uncuratedIdentities": 20,
-      "existingProfilesToReview": 1,
+      "uncuratedIdentities": 4,
+      "existingProfilesToReview": 17,
       "requiresHistoricalResearch": 21,
       "sourceStrategy": "Regional/state archives and constitutional collections; establish small-state and imperial scope before statistics.",
       "questionIds": [
@@ -18459,78 +18467,159 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-austria",
+          "entityId": "austria-first-republic-framework",
+          "validFrom": "1918-11-12",
+          "validUntil": "1933-03",
+          "sourceIds": [
+            "b03-austrian-republic-birth",
+            "b03-first-republic",
+            "b03-bvg-1920",
+            "b03-austria-constitution"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        },
+        {
+          "mapId": "entity-austria",
+          "entityId": "austria-authoritarian-framework",
+          "validFrom": "1933-03",
+          "validUntil": "1938-03",
+          "sourceIds": [
+            "b03-first-republic"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        },
+        {
+          "mapId": "entity-austria",
+          "entityId": "austria-second-republic-framework",
+          "validFrom": "1945-04-27",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b03-austria-postwar",
+            "b03-austria-constitution"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "austria-authoritarian-framework",
+        "austria-first-republic-framework",
+        "austria-second-republic-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "austria-first-republic-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "austria-first-republic-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "austria-second-republic-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "austria-second-republic-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austrian Empire is not mapped in 1800: pre-1804 dynastic scope remains a research gap. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austrian Empire is not mapped in 1800: pre-1804 dynastic scope remains a research gap. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1918-11-12",
+            "validUntil": "1933-03",
+            "sourceIds": [
+              "b03-austrian-republic-birth",
+              "b03-first-republic",
+              "b03-bvg-1920",
+              "b03-austria-constitution"
+            ],
+            "entityId": "austria-first-republic-framework"
+          },
+          {
+            "validFrom": "1933-03",
+            "validUntil": "1938-03",
+            "sourceIds": [
+              "b03-first-republic"
+            ],
+            "entityId": "austria-authoritarian-framework"
+          },
+          {
+            "validFrom": "1945-04-27",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b03-austria-postwar",
+              "b03-austria-constitution"
+            ],
+            "entityId": "austria-second-republic-framework"
+          }
+        ]
+      },
       "planningFamily": "habsburg",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -18539,7 +18628,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-austria-hungary",
           "entity-austrian-empire",
@@ -18547,7 +18636,40 @@
           "entity-bosnia-herzegovina",
           "entity-hungary"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austrian Empire is not mapped in 1800: pre-1804 dynastic scope remains a research gap. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented.",
+        "intervals": [
+          {
+            "validFrom": "1918-11-12",
+            "validUntil": "1933-03",
+            "sourceIds": [
+              "b03-austrian-republic-birth",
+              "b03-first-republic",
+              "b03-bvg-1920",
+              "b03-austria-constitution"
+            ],
+            "entityId": "austria-first-republic-framework"
+          },
+          {
+            "validFrom": "1933-03",
+            "validUntil": "1938-03",
+            "sourceIds": [
+              "b03-first-republic"
+            ],
+            "entityId": "austria-authoritarian-framework"
+          },
+          {
+            "validFrom": "1945-04-27",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b03-austria-postwar",
+              "b03-austria-constitution"
+            ],
+            "entityId": "austria-second-republic-framework"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -18647,62 +18769,98 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1900,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-austria-hungary",
+          "entityId": "austria-hungary-dual-framework",
+          "validFrom": "1867",
+          "validUntil": "1918-01-01",
+          "sourceIds": [
+            "b03-compromise",
+            "b03-dual-institutions"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "austria-hungary-dual-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "austria-hungary-dual-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "austria-hungary-dual-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "austria-hungary-dual-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austrian Empire is not mapped in 1800: pre-1804 dynastic scope remains a research gap. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austrian Empire is not mapped in 1800: pre-1804 dynastic scope remains a research gap. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1867",
+            "validUntil": "1918-01-01",
+            "sourceIds": [
+              "b03-compromise",
+              "b03-dual-institutions"
+            ],
+            "entityId": "austria-hungary-dual-framework"
+          }
+        ]
+      },
       "planningFamily": "habsburg",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -18710,7 +18868,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-austria",
           "entity-austrian-empire",
@@ -18718,7 +18876,21 @@
           "entity-bosnia-herzegovina",
           "entity-hungary"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austrian Empire is not mapped in 1800: pre-1804 dynastic scope remains a research gap. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented.",
+        "intervals": [
+          {
+            "validFrom": "1867",
+            "validUntil": "1918-01-01",
+            "sourceIds": [
+              "b03-compromise",
+              "b03-dual-institutions"
+            ],
+            "entityId": "austria-hungary-dual-framework"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -18807,8 +18979,22 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-austrian-empire",
+          "entityId": "austria-imperial-framework",
+          "validFrom": "1804-08-11",
+          "validUntil": "1867",
+          "sourceIds": [
+            "b03-austria-1804",
+            "b03-compromise"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "austria-imperial-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
@@ -18828,25 +19014,45 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "austria-imperial-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
+            "descriptions"
+          ],
+          "missingCoreFields": [
             "capitals",
             "governments",
             "leaders",
-            "currencies",
-            "descriptions"
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austrian Empire is not mapped in 1800: pre-1804 dynastic scope remains a research gap. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austrian Empire is not mapped in 1800: pre-1804 dynastic scope remains a research gap. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1804-08-11",
+            "validUntil": "1867",
+            "sourceIds": [
+              "b03-austria-1804",
+              "b03-compromise"
+            ],
+            "entityId": "austria-imperial-framework"
+          }
+        ]
+      },
       "planningFamily": "habsburg",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -18854,7 +19060,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-austria",
           "entity-austria-hungary",
@@ -18862,7 +19068,21 @@
           "entity-bosnia-herzegovina",
           "entity-hungary"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austrian Empire is not mapped in 1800: pre-1804 dynastic scope remains a research gap. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented.",
+        "intervals": [
+          {
+            "validFrom": "1804-08-11",
+            "validUntil": "1867",
+            "sourceIds": [
+              "b03-austria-1804",
+              "b03-compromise"
+            ],
+            "entityId": "austria-imperial-framework"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -19034,37 +19254,71 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1914,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-austro-hungarian-empire",
+          "entityId": "austria-hungary-dual-framework",
+          "validFrom": "1867",
+          "validUntil": "1918-01-01",
+          "sourceIds": [
+            "b03-compromise",
+            "b03-dual-institutions"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "austria-hungary-dual-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "austria-hungary-dual-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austrian Empire is not mapped in 1800: pre-1804 dynastic scope remains a research gap. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austrian Empire is not mapped in 1800: pre-1804 dynastic scope remains a research gap. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1867",
+            "validUntil": "1918-01-01",
+            "sourceIds": [
+              "b03-compromise",
+              "b03-dual-institutions"
+            ],
+            "entityId": "austria-hungary-dual-framework"
+          }
+        ]
+      },
       "planningFamily": "habsburg",
       "planningRegion": "central-europe",
       "questionIds": [
         "family-habsburg"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-austria",
           "entity-austria-hungary",
@@ -19072,7 +19326,21 @@
           "entity-bosnia-herzegovina",
           "entity-hungary"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austrian Empire is not mapped in 1800: pre-1804 dynastic scope remains a research gap. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented.",
+        "intervals": [
+          {
+            "validFrom": "1867",
+            "validUntil": "1918-01-01",
+            "sourceIds": [
+              "b03-compromise",
+              "b03-dual-institutions"
+            ],
+            "entityId": "austria-hungary-dual-framework"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -26161,62 +26429,96 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1900,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-bosnia-herzegovina",
+          "entityId": "bosnia-habsburg-administration",
+          "validFrom": "1878",
+          "validUntil": "1918-01-01",
+          "sourceIds": [
+            "b03-bosnia"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "bosnia-habsburg-administration"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "bosnia-habsburg-administration",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "bosnia-habsburg-administration",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "bosnia-habsburg-administration",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1878",
+            "validUntil": "1918-01-01",
+            "sourceIds": [
+              "b03-bosnia"
+            ],
+            "entityId": "bosnia-habsburg-administration"
+          }
+        ]
+      },
       "planningFamily": "habsburg",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -26224,7 +26526,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-austria",
           "entity-austria-hungary",
@@ -26232,7 +26534,20 @@
           "entity-austro-hungarian-empire",
           "entity-hungary"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Bosnia 1878/1908 and Austria 1933/1938 retain year/month precision; date precision is not invented.",
+        "intervals": [
+          {
+            "validFrom": "1878",
+            "validUntil": "1918-01-01",
+            "sourceIds": [
+              "b03-bosnia"
+            ],
+            "entityId": "bosnia-habsburg-administration"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -41396,37 +41711,73 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1960,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-east-germany",
+          "entityId": "germany-democratic-1949-framework",
+          "validFrom": "1949-10-07",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b03-germany-diplomatic",
+            "b03-divided-germany",
+            "b03-grotewohl"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "germany-democratic-1949-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "germany-democratic-1949-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1949-10-07",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b03-germany-diplomatic",
+              "b03-divided-germany",
+              "b03-grotewohl"
+            ],
+            "entityId": "germany-democratic-1949-framework"
+          }
+        ]
+      },
       "planningFamily": "german",
       "planningRegion": "central-europe",
       "questionIds": [
         "family-german"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-east-prussia",
           "entity-german-empire",
@@ -41439,7 +41790,22 @@
           "entity-saar-protectorate",
           "entity-west-germany"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "intervals": [
+          {
+            "validFrom": "1949-10-07",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b03-germany-diplomatic",
+              "b03-divided-germany",
+              "b03-grotewohl"
+            ],
+            "entityId": "germany-democratic-1949-framework"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -41517,46 +41883,79 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1930,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-east-prussia",
+          "entityId": "east-prussia-provincial-framework",
+          "validFrom": "1920-01-01",
+          "validUntil": "1931-01-01",
+          "sourceIds": [
+            "b03-east-prussian-administration"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "east-prussia-provincial-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "east-prussia-provincial-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "east-prussia-provincial-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1920-01-01",
+            "validUntil": "1931-01-01",
+            "sourceIds": [
+              "b03-east-prussian-administration"
+            ],
+            "entityId": "east-prussia-provincial-framework"
+          }
+        ]
+      },
       "planningFamily": "german",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -41564,7 +41963,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-east-germany",
           "entity-german-empire",
@@ -41577,7 +41976,20 @@
           "entity-saar-protectorate",
           "entity-west-germany"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback.",
+        "intervals": [
+          {
+            "validFrom": "1920-01-01",
+            "validUntil": "1931-01-01",
+            "sourceIds": [
+              "b03-east-prussian-administration"
+            ],
+            "entityId": "east-prussia-provincial-framework"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -50791,37 +51203,69 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1914,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-german-empire",
+          "entityId": "germany-imperial-framework",
+          "validFrom": "1871",
+          "validUntil": "1918-11-09",
+          "sourceIds": [
+            "b03-german-imperial"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "germany-imperial-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "germany-imperial-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1871",
+            "validUntil": "1918-11-09",
+            "sourceIds": [
+              "b03-german-imperial"
+            ],
+            "entityId": "germany-imperial-framework"
+          }
+        ]
+      },
       "planningFamily": "german",
       "planningRegion": "central-europe",
       "questionIds": [
         "family-german"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-east-germany",
           "entity-east-prussia",
@@ -50834,7 +51278,20 @@
           "entity-saar-protectorate",
           "entity-west-germany"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "intervals": [
+          {
+            "validFrom": "1871",
+            "validUntil": "1918-11-09",
+            "sourceIds": [
+              "b03-german-imperial"
+            ],
+            "entityId": "germany-imperial-framework"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -51107,90 +51564,119 @@
           "entityId": "germany-nazi-period",
           "validFrom": "1933-01-30",
           "validUntil": "1945-04-30"
+        },
+        {
+          "mapId": "entity-germany",
+          "entityId": "germany-imperial-framework",
+          "validFrom": "1871",
+          "validUntil": "1918-11-09",
+          "sourceIds": [
+            "b03-german-imperial"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        },
+        {
+          "mapId": "entity-germany",
+          "entityId": "germany-weimar-framework",
+          "validFrom": "1919-08-14",
+          "validUntil": "1933-01-30",
+          "sourceIds": [
+            "b03-weimar-commencement",
+            "b03-weimar-framework",
+            "reichstag"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
         }
       ],
       "curatedEntityIds": [
-        "germany-nazi-period"
+        "germany-imperial-framework",
+        "germany-nazi-period",
+        "germany-weimar-framework"
       ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "germany-imperial-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "germany-imperial-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "germany-imperial-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "germany-weimar-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "germany-weimar-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
@@ -51211,9 +51697,45 @@
         }
       ],
       "currentlyResolvesToDossier": true,
-      "researchStatus": "existing-enriched",
-      "coverageTier": "existing-enriched",
-      "researchDecision": null,
+      "researchStatus": "needs-research",
+      "coverageTier": "none",
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1933-01-30",
+            "validUntil": "1945-04-30",
+            "sourceIds": [
+              "reichstag"
+            ],
+            "entityId": "germany-nazi-period"
+          },
+          {
+            "validFrom": "1871",
+            "validUntil": "1918-11-09",
+            "sourceIds": [
+              "b03-german-imperial"
+            ],
+            "entityId": "germany-imperial-framework"
+          },
+          {
+            "validFrom": "1919-08-14",
+            "validUntil": "1933-01-30",
+            "sourceIds": [
+              "b03-weimar-commencement",
+              "b03-weimar-framework",
+              "reichstag"
+            ],
+            "entityId": "germany-weimar-framework"
+          }
+        ]
+      },
       "planningFamily": "german",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -51222,7 +51744,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-east-germany",
           "entity-east-prussia",
@@ -51235,7 +51757,38 @@
           "entity-saar-protectorate",
           "entity-west-germany"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "intervals": [
+          {
+            "validFrom": "1933-01-30",
+            "validUntil": "1945-04-30",
+            "sourceIds": [
+              "reichstag"
+            ],
+            "entityId": "germany-nazi-period"
+          },
+          {
+            "validFrom": "1871",
+            "validUntil": "1918-11-09",
+            "sourceIds": [
+              "b03-german-imperial"
+            ],
+            "entityId": "germany-imperial-framework"
+          },
+          {
+            "validFrom": "1919-08-14",
+            "validUntil": "1933-01-30",
+            "sourceIds": [
+              "b03-weimar-commencement",
+              "b03-weimar-framework",
+              "reichstag"
+            ],
+            "entityId": "germany-weimar-framework"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -51292,30 +51845,64 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1945,
       "lastAvailableSnapshot": 1945,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-germany-france",
+          "entityId": "germany-france-occupation",
+          "validFrom": "1945-08-02",
+          "validUntil": "1949-01-01",
+          "sourceIds": [
+            "b03-potsdam",
+            "b03-allied-declaration"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "germany-france-occupation"
+      ],
       "snapshotCoverage": [
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "germany-france-occupation",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1945-08-02",
+            "validUntil": "1949-01-01",
+            "sourceIds": [
+              "b03-potsdam",
+              "b03-allied-declaration"
+            ],
+            "entityId": "germany-france-occupation"
+          }
+        ]
+      },
       "planningFamily": "german",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -51323,7 +51910,7 @@
         "authority-entity-germany-france"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-east-germany",
           "entity-east-prussia",
@@ -51336,7 +51923,21 @@
           "entity-saar-protectorate",
           "entity-west-germany"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "intervals": [
+          {
+            "validFrom": "1945-08-02",
+            "validUntil": "1949-01-01",
+            "sourceIds": [
+              "b03-potsdam",
+              "b03-allied-declaration"
+            ],
+            "entityId": "germany-france-occupation"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -51392,30 +51993,64 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1945,
       "lastAvailableSnapshot": 1945,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-germany-soviet",
+          "entityId": "germany-soviet-occupation",
+          "validFrom": "1945-08-02",
+          "validUntil": "1949-01-01",
+          "sourceIds": [
+            "b03-potsdam",
+            "b03-allied-declaration"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "germany-soviet-occupation"
+      ],
       "snapshotCoverage": [
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "germany-soviet-occupation",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1945-08-02",
+            "validUntil": "1949-01-01",
+            "sourceIds": [
+              "b03-potsdam",
+              "b03-allied-declaration"
+            ],
+            "entityId": "germany-soviet-occupation"
+          }
+        ]
+      },
       "planningFamily": "german",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -51423,7 +52058,7 @@
         "authority-entity-germany-soviet"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-east-germany",
           "entity-east-prussia",
@@ -51436,7 +52071,21 @@
           "entity-saar-protectorate",
           "entity-west-germany"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "intervals": [
+          {
+            "validFrom": "1945-08-02",
+            "validUntil": "1949-01-01",
+            "sourceIds": [
+              "b03-potsdam",
+              "b03-allied-declaration"
+            ],
+            "entityId": "germany-soviet-occupation"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -51492,30 +52141,64 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1945,
       "lastAvailableSnapshot": 1945,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-germany-uk",
+          "entityId": "germany-british-occupation",
+          "validFrom": "1945-08-02",
+          "validUntil": "1949-01-01",
+          "sourceIds": [
+            "b03-potsdam",
+            "b03-allied-declaration"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "germany-british-occupation"
+      ],
       "snapshotCoverage": [
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "germany-british-occupation",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1945-08-02",
+            "validUntil": "1949-01-01",
+            "sourceIds": [
+              "b03-potsdam",
+              "b03-allied-declaration"
+            ],
+            "entityId": "germany-british-occupation"
+          }
+        ]
+      },
       "planningFamily": "german",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -51523,7 +52206,7 @@
         "authority-entity-germany-uk"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-east-germany",
           "entity-east-prussia",
@@ -51536,7 +52219,21 @@
           "entity-saar-protectorate",
           "entity-west-germany"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "intervals": [
+          {
+            "validFrom": "1945-08-02",
+            "validUntil": "1949-01-01",
+            "sourceIds": [
+              "b03-potsdam",
+              "b03-allied-declaration"
+            ],
+            "entityId": "germany-british-occupation"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -51592,30 +52289,64 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1945,
       "lastAvailableSnapshot": 1945,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-germany-usa",
+          "entityId": "germany-american-occupation",
+          "validFrom": "1945-08-02",
+          "validUntil": "1949-01-01",
+          "sourceIds": [
+            "b03-potsdam",
+            "b03-allied-declaration"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "germany-american-occupation"
+      ],
       "snapshotCoverage": [
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "germany-american-occupation",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1945-08-02",
+            "validUntil": "1949-01-01",
+            "sourceIds": [
+              "b03-potsdam",
+              "b03-allied-declaration"
+            ],
+            "entityId": "germany-american-occupation"
+          }
+        ]
+      },
       "planningFamily": "german",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -51623,7 +52354,7 @@
         "authority-entity-germany-usa"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-east-germany",
           "entity-east-prussia",
@@ -51636,7 +52367,21 @@
           "entity-saar-protectorate",
           "entity-west-germany"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "intervals": [
+          {
+            "validFrom": "1945-08-02",
+            "validUntil": "1949-01-01",
+            "sourceIds": [
+              "b03-potsdam",
+              "b03-allied-declaration"
+            ],
+            "entityId": "germany-american-occupation"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -60322,55 +61067,83 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-hungary",
+          "entityId": "hungary-horthy-framework",
+          "validFrom": "1920",
+          "validUntil": "1944-03-19",
+          "sourceIds": [
+            "b03-hungary-horthy"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        },
+        {
+          "mapId": "entity-hungary",
+          "entityId": "hungary-post1956-framework",
+          "validFrom": "1957-11-08",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b03-hungary-1957",
+            "b03-hungary-1960"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "hungary-horthy-framework",
+        "hungary-post1956-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "hungary-horthy-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "hungary-horthy-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "hungary-horthy-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
@@ -60391,25 +61164,53 @@
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "hungary-post1956-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Hungary 1944–1957 institutional changes remain gaps; party leadership is not mislabelled as prime minister. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Hungary 1944–1957 institutional changes remain gaps; party leadership is not mislabelled as prime minister.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1920",
+            "validUntil": "1944-03-19",
+            "sourceIds": [
+              "b03-hungary-horthy"
+            ],
+            "entityId": "hungary-horthy-framework"
+          },
+          {
+            "validFrom": "1957-11-08",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b03-hungary-1957",
+              "b03-hungary-1960"
+            ],
+            "entityId": "hungary-post1956-framework"
+          }
+        ]
+      },
       "planningFamily": "habsburg",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -60417,7 +61218,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-austria",
           "entity-austria-hungary",
@@ -60425,7 +61226,29 @@
           "entity-austro-hungarian-empire",
           "entity-bosnia-herzegovina"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Austria-Hungary naming variants consolidate only inside the sourced dual-monarchy interval; 1918 dissolution remains uncurated. Hungary 1944–1957 institutional changes remain gaps; party leadership is not mislabelled as prime minister.",
+        "intervals": [
+          {
+            "validFrom": "1920",
+            "validUntil": "1944-03-19",
+            "sourceIds": [
+              "b03-hungary-horthy"
+            ],
+            "entityId": "hungary-horthy-framework"
+          },
+          {
+            "validFrom": "1957-11-08",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b03-hungary-1957",
+              "b03-hungary-1960"
+            ],
+            "entityId": "hungary-post1956-framework"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -109123,46 +109946,79 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-prussia",
+          "entityId": "prussia-monarchy-early-framework",
+          "validFrom": "1800-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b03-prussian-monarch"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "prussia-monarchy-early-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "prussia-monarchy-early-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "prussia-monarchy-early-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b03-prussian-monarch"
+            ],
+            "entityId": "prussia-monarchy-early-framework"
+          }
+        ]
+      },
       "planningFamily": "german",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -109170,7 +110026,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-east-germany",
           "entity-east-prussia",
@@ -109183,7 +110039,20 @@
           "entity-saar-protectorate",
           "entity-west-germany"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback.",
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b03-prussian-monarch"
+            ],
+            "entityId": "prussia-monarchy-early-framework"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -113516,30 +114385,62 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1945,
       "lastAvailableSnapshot": 1945,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-saar-protectorate",
+          "entityId": "saar-french-occupation-1945",
+          "validFrom": "1945-07-10",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "b03-saar-occupation"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "saar-french-occupation-1945"
+      ],
       "snapshotCoverage": [
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "saar-french-occupation-1945",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Saar 1945 is French military occupation, not a retroactive protectorate. Later protectorate institutions remain uncurated. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Saar 1945 is French military occupation, not a retroactive protectorate. Later protectorate institutions remain uncurated.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1945-07-10",
+            "validUntil": "1946-01-01",
+            "sourceIds": [
+              "b03-saar-occupation"
+            ],
+            "entityId": "saar-french-occupation-1945"
+          }
+        ]
+      },
       "planningFamily": "german",
       "planningRegion": "central-europe",
       "questionIds": [
@@ -113548,7 +114449,7 @@
         "scope-entity-saar-protectorate"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-east-germany",
           "entity-east-prussia",
@@ -113561,7 +114462,20 @@
           "entity-prussia",
           "entity-west-germany"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. Saar 1945 is French military occupation, not a retroactive protectorate. Later protectorate institutions remain uncurated.",
+        "intervals": [
+          {
+            "validFrom": "1945-07-10",
+            "validUntil": "1946-01-01",
+            "sourceIds": [
+              "b03-saar-occupation"
+            ],
+            "entityId": "saar-french-occupation-1945"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -140063,37 +140977,73 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1960,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-west-germany",
+          "entityId": "germany-federal-1949-framework",
+          "validFrom": "1949-05-24",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b03-basic-law",
+            "b03-allied-reserved-rights",
+            "b03-divided-germany"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "germany-federal-1949-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "germany-federal-1949-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently. Accepted partial coverage; see BATCH-03.md.",
+        "identityResolution": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1949-05-24",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b03-basic-law",
+              "b03-allied-reserved-rights",
+              "b03-divided-germany"
+            ],
+            "entityId": "germany-federal-1949-framework"
+          }
+        ]
+      },
       "planningFamily": "german",
       "planningRegion": "central-europe",
       "questionIds": [
         "family-german"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-east-germany",
           "entity-east-prussia",
@@ -140106,7 +141056,22 @@
           "entity-prussia",
           "entity-saar-protectorate"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback. German November 1918–August 1919 provisional institutions remain a gap. Weimar and Nazi frameworks remain separate without asserting that the constitution was formally repealed in January 1933. German occupation coverage starts at the end of Potsdam and stops before 1949 state formation; these are curated bounds, not full occupation lifetimes. Generic Germany is not mapped to either simultaneous post-1949 German state. Specific East/West source IDs resolve independently.",
+        "intervals": [
+          {
+            "validFrom": "1949-05-24",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b03-basic-law",
+              "b03-allied-reserved-rights",
+              "b03-divided-germany"
+            ],
+            "entityId": "germany-federal-1949-framework"
+          }
+        ],
+        "omissions": [
+          "No new flags, population, GDP, area or inferred successor links. Currency and missing office/seat chronologies remain explicit omissions."
+        ]
       },
       "batchId": "batch-03",
       "classification": {
@@ -148931,9 +149896,9 @@
     },
     "politicalCoverage": {
       "candidates": 401,
-      "covered": 43,
-      "uncovered": 358,
-      "percentage": 10.72
+      "covered": 58,
+      "uncovered": 343,
+      "percentage": 14.46
     },
     "nonStateTemplateIdentities": 400,
     "bySnapshot": [
@@ -148949,9 +149914,9 @@
           "unresolved": 31
         },
         "politicalCandidates": 121,
-        "politicalCovered": 12,
-        "politicalUncovered": 109,
-        "politicalPercentage": 9.92
+        "politicalCovered": 13,
+        "politicalUncovered": 108,
+        "politicalPercentage": 10.74
       },
       {
         "year": 1815,
@@ -148965,9 +149930,9 @@
           "unresolved": 24
         },
         "politicalCandidates": 124,
-        "politicalCovered": 14,
-        "politicalUncovered": 110,
-        "politicalPercentage": 11.29
+        "politicalCovered": 16,
+        "politicalUncovered": 108,
+        "politicalPercentage": 12.9
       },
       {
         "year": 1878,
@@ -148981,9 +149946,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 142,
-        "politicalCovered": 19,
-        "politicalUncovered": 123,
-        "politicalPercentage": 13.38
+        "politicalCovered": 21,
+        "politicalUncovered": 121,
+        "politicalPercentage": 14.79
       },
       {
         "year": 1880,
@@ -148997,9 +149962,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 143,
-        "politicalCovered": 19,
-        "politicalUncovered": 124,
-        "politicalPercentage": 13.29
+        "politicalCovered": 21,
+        "politicalUncovered": 122,
+        "politicalPercentage": 14.69
       },
       {
         "year": 1900,
@@ -149013,9 +149978,9 @@
           "unresolved": 21
         },
         "politicalCandidates": 139,
-        "politicalCovered": 18,
-        "politicalUncovered": 121,
-        "politicalPercentage": 12.95
+        "politicalCovered": 20,
+        "politicalUncovered": 119,
+        "politicalPercentage": 14.39
       },
       {
         "year": 1914,
@@ -149029,9 +149994,9 @@
           "unresolved": 5
         },
         "politicalCandidates": 136,
-        "politicalCovered": 20,
-        "politicalUncovered": 116,
-        "politicalPercentage": 14.71
+        "politicalCovered": 22,
+        "politicalUncovered": 114,
+        "politicalPercentage": 16.18
       },
       {
         "year": 1920,
@@ -149045,9 +150010,9 @@
           "unresolved": 11
         },
         "politicalCandidates": 150,
-        "politicalCovered": 19,
-        "politicalUncovered": 131,
-        "politicalPercentage": 12.67
+        "politicalCovered": 23,
+        "politicalUncovered": 127,
+        "politicalPercentage": 15.33
       },
       {
         "year": 1930,
@@ -149061,9 +150026,9 @@
           "unresolved": 10
         },
         "politicalCandidates": 151,
-        "politicalCovered": 18,
-        "politicalUncovered": 133,
-        "politicalPercentage": 11.92
+        "politicalCovered": 22,
+        "politicalUncovered": 129,
+        "politicalPercentage": 14.57
       },
       {
         "year": 1938,
@@ -149077,9 +150042,9 @@
           "unresolved": 6
         },
         "politicalCandidates": 162,
-        "politicalCovered": 21,
-        "politicalUncovered": 141,
-        "politicalPercentage": 12.96
+        "politicalCovered": 22,
+        "politicalUncovered": 140,
+        "politicalPercentage": 13.58
       },
       {
         "year": 1945,
@@ -149093,9 +150058,9 @@
           "unresolved": 12
         },
         "politicalCandidates": 169,
-        "politicalCovered": 23,
-        "politicalUncovered": 146,
-        "politicalPercentage": 13.61
+        "politicalCovered": 29,
+        "politicalUncovered": 140,
+        "politicalPercentage": 17.16
       },
       {
         "year": 1960,
@@ -149109,9 +150074,9 @@
           "unresolved": 8
         },
         "politicalCandidates": 147,
-        "politicalCovered": 24,
-        "politicalUncovered": 123,
-        "politicalPercentage": 16.33
+        "politicalCovered": 28,
+        "politicalUncovered": 119,
+        "politicalPercentage": 19.05
       }
     ],
     "questionAudit": {
@@ -152294,8 +153259,8 @@
       "totalIdentities": 17,
       "politicalCandidates": 16,
       "nameReviews": 1,
-      "uncoveredPoliticalCandidates": 15,
-      "coveredPoliticalCandidates": 1,
+      "uncoveredPoliticalCandidates": 0,
+      "coveredPoliticalCandidates": 16,
       "sourceStrategy": "Regional/state archives and constitutional collections; establish small-state and imperial scope before statistics.",
       "priorityRationale": "Early source-family batches prioritise long snapshot presence, broad period potential and national archival/constitutional collections. Source availability is a planning expectation, not an entity-by-entity research finding. Families remain indivisible; no periods are researched now.",
       "highValueMapIds": [
@@ -152321,7 +153286,7 @@
           "question": "Review composite monarchy, constituent territory and later state/regime coverage separately."
         }
       ],
-      "state": "proposed-not-authorised"
+      "state": "researched-with-partial-coverage"
     },
     {
       "id": "political-batch-04",
@@ -153318,10 +154283,10 @@
       }
     ],
     "pipelineSha256": "3c1cd4c196d1b7c52e603ad810a8b5cfb6b8c74b49afd099b9807a1e3781a53b",
-    "resolverSha256": "47d72e0ef6d42e3daae900a8c432c0aed7f1226ff46eb77ed2b352ae25587232",
-    "metadataSha256": "fab70c7f31ccc1c7ad3738289689aabf03d8f69838eb4b51636064cbc8ca7778",
-    "sourcesSha256": "fac31df7f19599265a768a451c1603c2f7528c1cb3593d201ec1c8e737953558",
-    "planSha256": "c65a5acb658cc8bbd1e8c1eecf61bb5b49c95384efe1495083ede032421ca207",
+    "resolverSha256": "478adcd21517b9c5fc40e7098ed625b120071dca867babc1b1fc1942987f2fc6",
+    "metadataSha256": "cd7f5cfc741a41e293b96dfeff48fc7f2fe2320c90f92a1ed3065f151650e689",
+    "sourcesSha256": "ecfe8c067a7428e5ad5a3a088414461268bb8f291e4a99c72ee77e53aa13904c",
+    "planSha256": "c5b196a1988c016bd95c610cfc705615e1271759fbd3a92b91e006df09a9c0a7",
     "classificationPlanSha256": "260036271b0aaec99acf6f41da9b8d82c0c018988744ab2cb655ed85104198fc",
     "classificationModuleSha256": "bfa1973c868b7a645de8552553ee015e2ce9c5778026b70450cfa9daacb63314"
   }

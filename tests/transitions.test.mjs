@@ -49,3 +49,5 @@ test('all pre-programme facts, mappings and source records are preserved as immu
  assert.equal(hash(db.mappings.slice(0,baseline.mappingCount)),baseline.mappingsHash);assert.equal(hash(sources.sources.slice(0,baseline.sourceCount)),baseline.sourceHash);
  const groups=db.entities.find(e=>e.id==='united-kingdom').frameworkContinuity;for(const g of groups){assert.ok(g.values.length>1);assert.ok(g.sourceIds.every(id=>index.registry.has(id)));assert.ok(g.note);}
 });
+
+test('Batch 02 immutable checkpoint remains preserved',()=>{const baseline=read('tests/fixtures/batch02-checkpoint.json'),hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');for(const ref of baseline.entities){const entity=db.entities.find(e=>e.id===ref.id);assert.ok(entity,ref.id);assert.equal(hash(Object.fromEntries(ref.keys.map(k=>[k,Array.isArray(entity[k])?entity[k].slice(0,ref.counts[k]):entity[k]]))),ref.hash,ref.id);}assert.equal(hash(db.mappings.slice(0,baseline.mappingCount)),baseline.mappingsHash);assert.equal(hash(sources.sources.slice(0,baseline.sourceCount)),baseline.sourceHash);});
