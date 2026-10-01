@@ -1,12 +1,12 @@
 # v0.7 Phase 1.5 — political dossier eligibility
 
-Development-only classification overlay. Visible site remains v0.6.1. No Phase 2 research is performed or authorised.
+Development-only classification overlay. Visible site remains v0.6.1. Phase 2 Batch 01 has been researched; other batches have not begun. See [Batch 01 decisions](BATCH-01.md) for dated acceptance and omissions.
 
 ## Two denominators
 
-Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **7 (0.8%)**; raw fallback-only IDs: **873**. The original identity/source/presence/mapping inventory remains intact.
+Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **29 (3.3%)**; raw fallback-only IDs: **851**. The original identity/source/presence/mapping inventory remains intact.
 
-Political dossier candidates: **401**; currently covered: **7 (1.75%)**; uncovered political candidates: **394**. Existing curated metadata entities: **7**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
+Political dossier candidates: **401**; currently covered: **29 (7.23%)**; uncovered political candidates: **372**. Existing curated metadata entities: **32**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
 
 | Classification | Raw IDs |
 | --- | ---: |
@@ -25,23 +25,23 @@ Explicit per-ID decisions reviewed from locked source names, Phase 1 families an
 
 A classification applies to the inventory identity, not every historical period. A political-polity candidate may have colonial/occupation periods; a dependent-administration candidate may later become a polity. Eligibility means the template can be useful, not that sovereignty, constitutions, capitals or other facts are established. Source authority fields are evidence requiring interpretation, never sovereignty findings. No historical institutions or facts are inferred from geometry. Explicit source-label decisions live in classification-plan.json, with confidence, rationale, evidence references and canonical candidates. Generated manifest fields also include unresolved classification questions and current dated mappings.
 
-The [upstream documentation](https://github.com/aourednik/historical-basemaps) describes both countries and cultural regions and cultural PARTOF groupings. [AIATSIS methodology](https://aiatsis.gov.au/explore/map-indigenous-australia) explains language/social/nation labels, approximate boundaries and spelling variation; this is methodological context, not proof that this dataset derives from its map. Accessed 2026-10-01. No mass entity research was needed or performed.
+The [upstream documentation](https://github.com/aourednik/historical-basemaps) describes both countries and cultural regions and cultural PARTOF groupings. [AIATSIS methodology](https://aiatsis.gov.au/explore/map-indigenous-australia) explains language/social/nation labels, approximate boundaries and spelling variation; this is methodological context, not proof that this dataset derives from its map. Accessed 2026-10-01. The classification methodology remains unchanged; historical research is limited to Batch 01.
 
 ## Classification and political coverage by snapshot
 
 | Year | Raw | Polity | Dependent | Community | Geographic/composite | Variant | Unresolved | Political candidates | Covered | Uncovered | Coverage |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 1800 | 547 | 90 | 31 | 392 | 2 | 1 | 31 | 121 | 1 | 120 | 0.83% |
-| 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 1 | 123 | 0.81% |
-| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 2 | 140 | 1.41% |
-| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 2 | 141 | 1.4% |
-| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 2 | 137 | 1.44% |
-| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 2 | 134 | 1.47% |
-| 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 3 | 147 | 2% |
-| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 3 | 148 | 1.99% |
-| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 6 | 156 | 3.7% |
-| 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 3 | 166 | 1.78% |
-| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 4 | 143 | 2.72% |
+| 1800 | 547 | 90 | 31 | 392 | 2 | 1 | 31 | 121 | 9 | 112 | 7.44% |
+| 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 11 | 113 | 8.87% |
+| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 14 | 128 | 9.86% |
+| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 14 | 129 | 9.79% |
+| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 14 | 125 | 10.07% |
+| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 16 | 120 | 11.76% |
+| 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 16 | 134 | 10.67% |
+| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 16 | 135 | 10.6% |
+| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 19 | 143 | 11.73% |
+| 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 17 | 152 | 10.06% |
+| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 18 | 129 | 12.24% |
 
 The 1800 denominator is explained by its classification table, not modern-country assumptions. Of the 377 explicitly recorded Australian community cohort IDs, 377 appear in 1800. None is counted as an uncovered political dossier or assigned a political research batch. All remain selectable in production. They are deferred to a separately designed, community-appropriate profile project; this says nothing about political significance or organisation.
 
@@ -154,7 +154,7 @@ These cases must establish their referent/template fit before political research
 - Zaire (entity-zaire), snapshots 1945, 1960: Insufficient Phase 1 source-label evidence to distinguish polity, administration, people or composite geography. Establish the historical referent and date/scope before dossier eligibility.
 - Zulu (entity-zulu), snapshots 1800, 1815: Insufficient Phase 1 source-label evidence to distinguish polity, administration, people or composite geography. Establish the historical referent and date/scope before dossier eligibility.
 
-## Proposed Phase 2 political research batches (not started)
+## Phase 2 political research batches (Batch 01 reviewed; others not started)
 
 21 batches partition all 401 political candidates plus 6 necessary political naming reviews exactly once. A community encoding review is routed separately. Unresolved family members appear as classification prerequisites; resolve eligibility before collecting dossier facts. The original Phase 1 47-batch raw audit remains in the appendix/manifest.batches for provenance, and is superseded as a political research plan.
 
@@ -164,7 +164,7 @@ Families and candidate canonical pairs are indivisible. Batch sizes aim for 15�
 
 | Order | Group | IDs incl. reviews | Political candidates | Uncovered | Name reviews |
 | --- | --- | ---: | ---: | ---: | ---: |
-| 1 | Western/Northern Europe | 24 | 24 | 23 | 0 |
+| 1 | Western/Northern Europe | 24 | 24 | 1 | 0 |
 | 2 | East Asia | 17 | 17 | 15 | 0 |
 | 3 | Central Europe and German/Italian source families | 17 | 16 | 15 | 1 |
 | 4 | Central Europe and German/Italian source families | 21 | 21 | 21 | 0 |
@@ -188,7 +188,7 @@ Families and candidate canonical pairs are indivisible. Batch sizes aim for 15�
 
 ### political-batch-01 — Western/Northern Europe
 
-Included: Denmark (entity-denmark); Denmark-Norway (entity-denmark-norway); Norway (entity-norway); Sweden (entity-sweden); Sweden–Norway (entity-sweden-norway); Ireland (entity-ireland); Kingdom of Ireland (entity-kingdom-of-ireland); United Kingdom (entity-united-kingdom); United Kingdom of Great Britain and Ireland (entity-united-kingdom-of-great-britain-and-ireland); France (entity-france); Portugal (entity-portugal); Spain (entity-spain); Switzerland (entity-switzerland); Netherlands (entity-netherlands); Luxembourg (entity-luxembourg); Belgium (entity-belgium); Iceland (entity-iceland); Finland (entity-finland); Malta (entity-malta); Andorra (entity-andorra); Austrian Netherlands (entity-austrian-netherlands); Batavian Republic (entity-batavian-republic); Helvetic Republic (entity-helvetic-republic); San Marino (entity-san-marino).
+State: researched-with-partial-coverage. Included: Denmark (entity-denmark); Denmark-Norway (entity-denmark-norway); Norway (entity-norway); Sweden (entity-sweden); Sweden–Norway (entity-sweden-norway); Ireland (entity-ireland); Kingdom of Ireland (entity-kingdom-of-ireland); United Kingdom (entity-united-kingdom); United Kingdom of Great Britain and Ireland (entity-united-kingdom-of-great-britain-and-ireland); France (entity-france); Portugal (entity-portugal); Spain (entity-spain); Switzerland (entity-switzerland); Netherlands (entity-netherlands); Luxembourg (entity-luxembourg); Belgium (entity-belgium); Iceland (entity-iceland); Finland (entity-finland); Malta (entity-malta); Andorra (entity-andorra); Austrian Netherlands (entity-austrian-netherlands); Batavian Republic (entity-batavian-republic); Helvetic Republic (entity-helvetic-republic); San Marino (entity-san-marino).
 
 High-value continuing/source-family candidates: Denmark (entity-denmark); Norway (entity-norway); Sweden (entity-sweden); Sweden–Norway (entity-sweden-norway); United Kingdom (entity-united-kingdom); United Kingdom of Great Britain and Ireland (entity-united-kingdom-of-great-britain-and-ireland); France (entity-france); Portugal (entity-portugal); Spain (entity-spain); Switzerland (entity-switzerland); Netherlands (entity-netherlands); Luxembourg (entity-luxembourg); Belgium (entity-belgium).
 
@@ -199,7 +199,7 @@ Difficult continuity cases: Review British and Irish name/state/union continuity
 
 ### political-batch-02 — East Asia
 
-Included: Empire of Japan (entity-empire-of-japan); Imperial Japan (entity-imperial-japan); Japan (entity-japan); Japan (USA) (entity-japan-usa); Korea (entity-korea); Korea, Democratic People's Republic of (entity-korea-democratic-people-s-republic-of); Korea, Republic of (entity-korea-republic-of); Korea (USA) (entity-korea-usa); Korea (USSR) (entity-korea-ussr); Sakhalin (RU) (entity-sakhalin-ru); China (entity-china); Hong Kong (entity-hong-kong); Manchu Empire (entity-manchu-empire); Qing Empire (entity-qing-empire); Taiwan (entity-taiwan); Tibet (entity-tibet); Mongolia (entity-mongolia).
+State: proposed-not-authorised. Included: Empire of Japan (entity-empire-of-japan); Imperial Japan (entity-imperial-japan); Japan (entity-japan); Japan (USA) (entity-japan-usa); Korea (entity-korea); Korea, Democratic People's Republic of (entity-korea-democratic-people-s-republic-of); Korea, Republic of (entity-korea-republic-of); Korea (USA) (entity-korea-usa); Korea (USSR) (entity-korea-ussr); Sakhalin (RU) (entity-sakhalin-ru); China (entity-china); Hong Kong (entity-hong-kong); Manchu Empire (entity-manchu-empire); Qing Empire (entity-qing-empire); Taiwan (entity-taiwan); Tibet (entity-tibet); Mongolia (entity-mongolia).
 
 High-value continuing/source-family candidates: Empire of Japan (entity-empire-of-japan); Imperial Japan (entity-imperial-japan); Japan (entity-japan); Korea (entity-korea); China (entity-china); Hong Kong (entity-hong-kong); Manchu Empire (entity-manchu-empire); Qing Empire (entity-qing-empire).
 
@@ -212,7 +212,7 @@ Classification prerequisites (excluded from this batch denominator): Chinese War
 
 ### political-batch-03 — Central Europe and German/Italian source families
 
-Included: Austria (entity-austria); Austria Hungary (entity-austria-hungary); Austrian Empire (entity-austrian-empire); Austro-Hungarian Empire (entity-austro-hungarian-empire); Bosnia-Herzegovina (entity-bosnia-herzegovina); Hungary (entity-hungary); East Germany (entity-east-germany); East Prussia (entity-east-prussia); German Empire (entity-german-empire); Germany (entity-germany); Germany (France) (entity-germany-france); Germany (Soviet) (entity-germany-soviet); Germany (UK) (entity-germany-uk); Germany (USA) (entity-germany-usa); Prussia (entity-prussia); Saar Protectorate (entity-saar-protectorate); West Germany (entity-west-germany).
+State: proposed-not-authorised. Included: Austria (entity-austria); Austria Hungary (entity-austria-hungary); Austrian Empire (entity-austrian-empire); Austro-Hungarian Empire (entity-austro-hungarian-empire); Bosnia-Herzegovina (entity-bosnia-herzegovina); Hungary (entity-hungary); East Germany (entity-east-germany); East Prussia (entity-east-prussia); German Empire (entity-german-empire); Germany (entity-germany); Germany (France) (entity-germany-france); Germany (Soviet) (entity-germany-soviet); Germany (UK) (entity-germany-uk); Germany (USA) (entity-germany-usa); Prussia (entity-prussia); Saar Protectorate (entity-saar-protectorate); West Germany (entity-west-germany).
 
 High-value continuing/source-family candidates: Austria (entity-austria); Austrian Empire (entity-austrian-empire); Austro-Hungarian Empire (entity-austro-hungarian-empire); German Empire (entity-german-empire); Germany (entity-germany); Prussia (entity-prussia).
 
@@ -223,7 +223,7 @@ Difficult continuity cases: Distinguish state, constitutional regime, constituen
 
 ### political-batch-04 — Central Europe and German/Italian source families
 
-Included: Italy (entity-italy); Kingdom of Italy (entity-kingdom-of-italy); Kingdom of Sardinia (entity-kingdom-of-sardinia); Kingdom of the Two Sicilies (entity-kingdom-of-the-two-sicilies); Lombardy (entity-lombardy); Lucca (entity-lucca); Modena (entity-modena); Papal States (entity-papal-states); Parma (entity-parma); Tuscany (entity-tuscany); Venetia (entity-venetia); Czechoslovakia (entity-czechoslovakia); Anhalt (entity-anhalt); Baden (entity-baden); Bavaria (entity-bavaria); Bremen (entity-bremen); Brunswick (entity-brunswick); Hamburg (entity-hamburg); Hanover (entity-hanover); Hohenzollern (entity-hohenzollern); Holstein (entity-holstein).
+State: proposed-not-authorised. Included: Italy (entity-italy); Kingdom of Italy (entity-kingdom-of-italy); Kingdom of Sardinia (entity-kingdom-of-sardinia); Kingdom of the Two Sicilies (entity-kingdom-of-the-two-sicilies); Lombardy (entity-lombardy); Lucca (entity-lucca); Modena (entity-modena); Papal States (entity-papal-states); Parma (entity-parma); Tuscany (entity-tuscany); Venetia (entity-venetia); Czechoslovakia (entity-czechoslovakia); Anhalt (entity-anhalt); Baden (entity-baden); Bavaria (entity-bavaria); Bremen (entity-bremen); Brunswick (entity-brunswick); Hamburg (entity-hamburg); Hanover (entity-hanover); Hohenzollern (entity-hohenzollern); Holstein (entity-holstein).
 
 High-value continuing/source-family candidates: Regional administrations and linked continuity reviews.
 
@@ -234,7 +234,7 @@ Difficult continuity cases: Separate source naming variation, constituent govern
 
 ### political-batch-05 — Central Europe and German/Italian source families
 
-Included: Lippe-Detmold (entity-lippe-detmold); Lübeck (entity-lubeck); Mecklenburg-Schwerin (entity-mecklenburg-schwerin); Yugoslavia (entity-yugoslavia); Mecklenburg-Strelitz (entity-mecklenburg-strelitz); Oldenburg (entity-oldenburg); Saxony (entity-saxony); Schaumburg-Lippe (entity-schaumburg-lippe); Waldeck (entity-waldeck); Württemberg (entity-wurttemberg); Danzig (entity-danzig); Electoral Hesse (entity-electoral-hesse); Grand Duchy of Hesse (entity-grand-duchy-of-hesse); Nassau (entity-nassau); Schleswig (entity-schleswig).
+State: proposed-not-authorised. Included: Lippe-Detmold (entity-lippe-detmold); Lübeck (entity-lubeck); Mecklenburg-Schwerin (entity-mecklenburg-schwerin); Yugoslavia (entity-yugoslavia); Mecklenburg-Strelitz (entity-mecklenburg-strelitz); Oldenburg (entity-oldenburg); Saxony (entity-saxony); Schaumburg-Lippe (entity-schaumburg-lippe); Waldeck (entity-waldeck); Württemberg (entity-wurttemberg); Danzig (entity-danzig); Electoral Hesse (entity-electoral-hesse); Grand Duchy of Hesse (entity-grand-duchy-of-hesse); Nassau (entity-nassau); Schleswig (entity-schleswig).
 
 High-value continuing/source-family candidates: Regional administrations and linked continuity reviews.
 
@@ -243,7 +243,7 @@ Shared source discovery: Regional/state archives and constitutional collections;
 
 ### political-batch-06 — Eastern Europe, Russian/Soviet and Balkan source families
 
-Included: Armenia (entity-armenia); Azerbaijan (entity-azerbaijan); Georgia (entity-georgia); Russian Empire (entity-russian-empire); USSR (entity-soviet-union); Ukraine (entity-ukraine); Bulgaria (entity-bulgaria); Greece (entity-greece); Romania (entity-romania); Albania (entity-albania); Poland (entity-poland); Montenegro (entity-montenegro); Serbia (entity-serbia); Estonia (entity-estonia); Latvia (entity-latvia); Lithuania (entity-lithuania); Dodecanese Islands (entity-dodecanese-islands); Republic of Kraków (entity-republic-of-krakow).
+State: proposed-not-authorised. Included: Armenia (entity-armenia); Azerbaijan (entity-azerbaijan); Georgia (entity-georgia); Russian Empire (entity-russian-empire); USSR (entity-soviet-union); Ukraine (entity-ukraine); Bulgaria (entity-bulgaria); Greece (entity-greece); Romania (entity-romania); Albania (entity-albania); Poland (entity-poland); Montenegro (entity-montenegro); Serbia (entity-serbia); Estonia (entity-estonia); Latvia (entity-latvia); Lithuania (entity-lithuania); Dodecanese Islands (entity-dodecanese-islands); Republic of Kraków (entity-republic-of-krakow).
 
 High-value continuing/source-family candidates: Russian Empire (entity-russian-empire); USSR (entity-soviet-union); Bulgaria (entity-bulgaria); Greece (entity-greece); Romania (entity-romania).
 
@@ -256,7 +256,7 @@ Classification prerequisites (excluded from this batch denominator): Far Eastern
 
 ### political-batch-07 — South/Central Asia
 
-Included: British East India Company (entity-british-east-india-company); British Raj (entity-british-raj); Ceylon (entity-ceylon); Ceylon (Dutch) (entity-ceylon-dutch); India (entity-india); Mysore (entity-mysore); Mysore (Indian princely state) (entity-mysore-indian-princely-state); Pakistan (entity-pakistan); Sikkim (Indian princely state) (entity-sikkim-indian-princely-state); Sri Lanka (entity-sri-lanka); Bokhara Khanate (entity-bokhara-khanate); Iran (entity-iran); Persia (entity-persia); Afghanistan (entity-afghanistan); Bhutan (entity-bhutan); Nepal (entity-nepal); Goa (entity-goa); Maratha Confederacy (entity-maratha-confederacy); Oudh (entity-oudh); Travancore (entity-travancore); Bahawalpur (entity-bahawalpur); Cochin (entity-cochin); Kandy (entity-kandy); Madras (entity-madras); Nizam's Dominions (entity-nizam-s-dominions); Sindh (entity-sindh).
+State: proposed-not-authorised. Included: British East India Company (entity-british-east-india-company); British Raj (entity-british-raj); Ceylon (entity-ceylon); Ceylon (Dutch) (entity-ceylon-dutch); India (entity-india); Mysore (entity-mysore); Mysore (Indian princely state) (entity-mysore-indian-princely-state); Pakistan (entity-pakistan); Sikkim (Indian princely state) (entity-sikkim-indian-princely-state); Sri Lanka (entity-sri-lanka); Bokhara Khanate (entity-bokhara-khanate); Iran (entity-iran); Persia (entity-persia); Afghanistan (entity-afghanistan); Bhutan (entity-bhutan); Nepal (entity-nepal); Goa (entity-goa); Maratha Confederacy (entity-maratha-confederacy); Oudh (entity-oudh); Travancore (entity-travancore); Bahawalpur (entity-bahawalpur); Cochin (entity-cochin); Kandy (entity-kandy); Madras (entity-madras); Nizam's Dominions (entity-nizam-s-dominions); Sindh (entity-sindh).
 
 High-value continuing/source-family candidates: British Raj (entity-british-raj); India (entity-india); Iran (entity-iran); Persia (entity-persia); Afghanistan (entity-afghanistan); Bhutan (entity-bhutan); Nepal (entity-nepal).
 
@@ -269,7 +269,7 @@ Classification prerequisites (excluded from this batch denominator): Bangladesh 
 
 ### political-batch-08 — North America
 
-Included: United States of America (entity-united-states); Canada (entity-canada); Mexico (entity-mexico); Greenland (entity-greenland); Dominion of Newfoundland (entity-dominion-of-newfoundland); Viceroyalty of New Spain (entity-viceroyalty-of-new-spain); Acadian Peninsula (UK) (entity-acadian-peninsula-uk); Luisiana (entity-luisiana); Quebec (entity-quebec); Rupert's Land (entity-rupert-s-land).
+State: proposed-not-authorised. Included: United States of America (entity-united-states); Canada (entity-canada); Mexico (entity-mexico); Greenland (entity-greenland); Dominion of Newfoundland (entity-dominion-of-newfoundland); Viceroyalty of New Spain (entity-viceroyalty-of-new-spain); Acadian Peninsula (UK) (entity-acadian-peninsula-uk); Luisiana (entity-luisiana); Quebec (entity-quebec); Rupert's Land (entity-rupert-s-land).
 
 High-value continuing/source-family candidates: United States of America (entity-united-states); Canada (entity-canada); Mexico (entity-mexico).
 
@@ -278,7 +278,7 @@ Shared source discovery: National/provincial archives; colonial charters and Ind
 
 ### political-batch-09 — South America
 
-Included: Brazil (entity-brazil); Kingdom of Brazil (entity-kingdom-of-brazil); Viceroyalty of Brazil (entity-viceroyalty-of-brazil); Paraguay (entity-paraguay); Argentina (entity-argentina); Bolivia (entity-bolivia); Chile (entity-chile); Colombia (entity-colombia); Ecuador (entity-ecuador); French Guiana (entity-french-guiana); Peru (entity-peru); Uruguay (entity-uruguay); Venezuela (entity-venezuela); Guyana (entity-guyana); Suriname (entity-suriname); Dutch Guiana (entity-dutch-guiana); Viceroyalty of New Granada (entity-viceroyalty-of-new-granada); Viceroyalty of Peru (entity-viceroyalty-of-peru); United Provinces of the Río de la Plata (entity-united-provinces-of-the-rio-de-la-plata); Viceroyalty of the Río de la Plata (entity-viceroyalty-of-the-rio-de-la-plata).
+State: proposed-not-authorised. Included: Brazil (entity-brazil); Kingdom of Brazil (entity-kingdom-of-brazil); Viceroyalty of Brazil (entity-viceroyalty-of-brazil); Paraguay (entity-paraguay); Argentina (entity-argentina); Bolivia (entity-bolivia); Chile (entity-chile); Colombia (entity-colombia); Ecuador (entity-ecuador); French Guiana (entity-french-guiana); Peru (entity-peru); Uruguay (entity-uruguay); Venezuela (entity-venezuela); Guyana (entity-guyana); Suriname (entity-suriname); Dutch Guiana (entity-dutch-guiana); Viceroyalty of New Granada (entity-viceroyalty-of-new-granada); Viceroyalty of Peru (entity-viceroyalty-of-peru); United Provinces of the Río de la Plata (entity-united-provinces-of-the-rio-de-la-plata); Viceroyalty of the Río de la Plata (entity-viceroyalty-of-the-rio-de-la-plata).
 
 High-value continuing/source-family candidates: Paraguay (entity-paraguay); Argentina (entity-argentina); Bolivia (entity-bolivia); Chile (entity-chile); Colombia (entity-colombia); Ecuador (entity-ecuador); French Guiana (entity-french-guiana); Peru (entity-peru); Uruguay (entity-uruguay); Venezuela (entity-venezuela).
 
@@ -289,7 +289,7 @@ Difficult continuity cases: Establish actual colonial/constitutional periods rat
 
 ### political-batch-10 — Caribbean and Central America
 
-Included: Anguilla (entity-anguilla); Dominica (entity-dominica); Haiti (entity-haiti); Netherlands Antilles (entity-netherlands-antilles); Antigua and Barbuda (entity-antigua-and-barbuda); Belize (entity-belize); Costa Rica (entity-costa-rica); Dominican Republic (entity-dominican-republic); El Salvador (entity-el-salvador); Guadeloupe (entity-guadeloupe); Guatemala (entity-guatemala); Honduras (entity-honduras); Montserrat (entity-montserrat); Nicaragua (entity-nicaragua); Barbados (entity-barbados); Cuba (entity-cuba); Grenada (entity-grenada); Panama (entity-panama).
+State: proposed-not-authorised. Included: Anguilla (entity-anguilla); Dominica (entity-dominica); Haiti (entity-haiti); Netherlands Antilles (entity-netherlands-antilles); Antigua and Barbuda (entity-antigua-and-barbuda); Belize (entity-belize); Costa Rica (entity-costa-rica); Dominican Republic (entity-dominican-republic); El Salvador (entity-el-salvador); Guadeloupe (entity-guadeloupe); Guatemala (entity-guatemala); Honduras (entity-honduras); Montserrat (entity-montserrat); Nicaragua (entity-nicaragua); Barbados (entity-barbados); Cuba (entity-cuba); Grenada (entity-grenada); Panama (entity-panama).
 
 High-value continuing/source-family candidates: Anguilla (entity-anguilla); Dominica (entity-dominica); Haiti (entity-haiti); Netherlands Antilles (entity-netherlands-antilles); Antigua and Barbuda (entity-antigua-and-barbuda); Belize (entity-belize); Costa Rica (entity-costa-rica); Dominican Republic (entity-dominican-republic); El Salvador (entity-el-salvador); Guadeloupe (entity-guadeloupe); Guatemala (entity-guatemala); Honduras (entity-honduras); Montserrat (entity-montserrat); Nicaragua (entity-nicaragua).
 
@@ -298,7 +298,7 @@ Shared source discovery: Colonial archives, local national libraries and institu
 
 ### political-batch-11 — Caribbean and Central America
 
-Included: Puerto Rico (entity-puerto-rico); Saint Barthelemy (entity-saint-barthelemy); Saint Kitts and Nevis (entity-saint-kitts-and-nevis); Saint Lucia (entity-saint-lucia); Saint Martin (entity-saint-martin); Saint Vincent and the Grenadines (entity-saint-vincent-and-the-grenadines); United States Virgin Islands (entity-united-states-virgin-islands); Trinidad (entity-trinidad); Martinique (entity-martinique); Bahamas (entity-bahamas); British Guiana (entity-british-guiana); Jamaica (entity-jamaica); Turks and Caicos Islands (entity-turks-and-caicos-islands); Jamaica (UK) (entity-jamaica-uk); Martinique (France) (entity-martinique-france).
+State: proposed-not-authorised. Included: Puerto Rico (entity-puerto-rico); Saint Barthelemy (entity-saint-barthelemy); Saint Kitts and Nevis (entity-saint-kitts-and-nevis); Saint Lucia (entity-saint-lucia); Saint Martin (entity-saint-martin); Saint Vincent and the Grenadines (entity-saint-vincent-and-the-grenadines); United States Virgin Islands (entity-united-states-virgin-islands); Trinidad (entity-trinidad); Martinique (entity-martinique); Bahamas (entity-bahamas); British Guiana (entity-british-guiana); Jamaica (entity-jamaica); Turks and Caicos Islands (entity-turks-and-caicos-islands); Jamaica (UK) (entity-jamaica-uk); Martinique (France) (entity-martinique-france).
 
 High-value continuing/source-family candidates: Saint Barthelemy (entity-saint-barthelemy); Saint Kitts and Nevis (entity-saint-kitts-and-nevis); Saint Martin (entity-saint-martin).
 
@@ -307,7 +307,7 @@ Shared source discovery: Colonial archives, local national libraries and institu
 
 ### political-batch-12 — Middle East and Arabian source families
 
-Included: Emirate of Bin Shal'an (entity-emirate-of-bin-shal-an); Hail (entity-hail); Hejaz (entity-hejaz); Iraq (entity-iraq); Israel (entity-israel); Jordan (entity-jordan); Lebanon (entity-lebanon); Mandatory Palestine (GB) (entity-mandatory-palestine-gb); Mesopotamia (GB) (entity-mesopotamia-gb); Muscat and Oman (entity-muscat-and-oman); Oman (entity-oman); Oman (British Raj) (entity-oman-british-raj); Ottoman Empire (entity-ottoman-empire); Ottoman Sultanate (entity-ottoman-sultanate); Republic of Turkey (entity-republic-of-turkey); Saudi Arabia (entity-saudi-arabia); Syria (entity-syria); Syria (France) (entity-syria-france); Trucial Oman (entity-trucial-oman); Turkey (entity-turkey); Yemen (entity-yemen); Yemen (UK) (entity-yemen-uk); Qatar (entity-qatar); Eritrea (entity-eritrea); Kuwait (entity-kuwait); Awsa (entity-awsa); Eritrea (Italy) (entity-eritrea-italy).
+State: proposed-not-authorised. Included: Emirate of Bin Shal'an (entity-emirate-of-bin-shal-an); Hail (entity-hail); Hejaz (entity-hejaz); Iraq (entity-iraq); Israel (entity-israel); Jordan (entity-jordan); Lebanon (entity-lebanon); Mandatory Palestine (GB) (entity-mandatory-palestine-gb); Mesopotamia (GB) (entity-mesopotamia-gb); Muscat and Oman (entity-muscat-and-oman); Oman (entity-oman); Oman (British Raj) (entity-oman-british-raj); Ottoman Empire (entity-ottoman-empire); Ottoman Sultanate (entity-ottoman-sultanate); Republic of Turkey (entity-republic-of-turkey); Saudi Arabia (entity-saudi-arabia); Syria (entity-syria); Syria (France) (entity-syria-france); Trucial Oman (entity-trucial-oman); Turkey (entity-turkey); Yemen (entity-yemen); Yemen (UK) (entity-yemen-uk); Qatar (entity-qatar); Eritrea (entity-eritrea); Kuwait (entity-kuwait); Awsa (entity-awsa); Eritrea (Italy) (entity-eritrea-italy).
 
 High-value continuing/source-family candidates: Ottoman Empire (entity-ottoman-empire); Qatar (entity-qatar).
 
@@ -320,7 +320,7 @@ Classification prerequisites (excluded from this batch denominator): Arabia (ent
 
 ### political-batch-13 — Southeast Asia
 
-Included: Burma (entity-burma); Dutch East Indies (entity-dutch-east-indies); Indonesia (entity-indonesia); Malaya (entity-malaya); Netherlands Indies (entity-netherlands-indies); Rattanakosin Kingdom (entity-rattanakosin-kingdom); Siam (entity-siam); Thailand (entity-thailand); Cambodia (entity-cambodia); French Indo-China (entity-french-indo-china); French Indochina (entity-french-indochina); Laos (entity-laos); Tonkin (entity-tonkin); Vietnam (entity-vietnam); Brunei (entity-brunei); Philippines (entity-philippines); Đại Việt (entity-ai-viet).
+State: proposed-not-authorised. Included: Burma (entity-burma); Dutch East Indies (entity-dutch-east-indies); Indonesia (entity-indonesia); Malaya (entity-malaya); Netherlands Indies (entity-netherlands-indies); Rattanakosin Kingdom (entity-rattanakosin-kingdom); Siam (entity-siam); Thailand (entity-thailand); Cambodia (entity-cambodia); French Indo-China (entity-french-indo-china); French Indochina (entity-french-indochina); Laos (entity-laos); Tonkin (entity-tonkin); Vietnam (entity-vietnam); Brunei (entity-brunei); Philippines (entity-philippines); Đại Việt (entity-ai-viet).
 
 High-value continuing/source-family candidates: Brunei (entity-brunei); Philippines (entity-philippines).
 
@@ -333,7 +333,7 @@ Classification prerequisites (excluded from this batch denominator): Annam (enti
 
 ### political-batch-14 — North Africa and Saharan source families
 
-Included: Egypt (entity-egypt); Morocco (entity-morocco); Cyraneica (UK Lybia) (entity-cyraneica-uk-lybia); Fezzan (Frech Lybia) (entity-fezzan-frech-lybia); Libya (entity-libya); Libya (IT) (entity-libya-it); Tripolitana (UK Lybia) (entity-tripolitana-uk-lybia); Tunisia (entity-tunisia); Algeria (entity-algeria); Rio De Oro (entity-rio-de-oro); Spanish Sahara (entity-spanish-sahara); Algeria (FR) (entity-algeria-fr); Mauritania (entity-mauritania); Tunis (entity-tunis); Western Sahara (entity-western-sahara); Algeria (France) (entity-algeria-france); Morocco (France) (entity-morocco-france); Spanish Morocco (entity-spanish-morocco).
+State: proposed-not-authorised. Included: Egypt (entity-egypt); Morocco (entity-morocco); Cyraneica (UK Lybia) (entity-cyraneica-uk-lybia); Fezzan (Frech Lybia) (entity-fezzan-frech-lybia); Libya (entity-libya); Libya (IT) (entity-libya-it); Tripolitana (UK Lybia) (entity-tripolitana-uk-lybia); Tunisia (entity-tunisia); Algeria (entity-algeria); Rio De Oro (entity-rio-de-oro); Spanish Sahara (entity-spanish-sahara); Algeria (FR) (entity-algeria-fr); Mauritania (entity-mauritania); Tunis (entity-tunis); Western Sahara (entity-western-sahara); Algeria (France) (entity-algeria-france); Morocco (France) (entity-morocco-france); Spanish Morocco (entity-spanish-morocco).
 
 High-value continuing/source-family candidates: Egypt (entity-egypt); Morocco (entity-morocco).
 
@@ -346,7 +346,7 @@ Classification prerequisites (excluded from this batch denominator): Cyrenaica (
 
 ### political-batch-15 — West Africa
 
-Included: Sierra Leone (entity-sierra-leone); Gambia (entity-gambia); Gambia, The (entity-gambia-the); Liberia (entity-liberia); Nigeria (entity-nigeria); Portuguese Guinea (entity-portuguese-guinea); Asante (entity-asante); Benin (entity-benin); Ivory Coast (entity-ivory-coast); Oyo (entity-oyo); Senegal (entity-senegal); Togo (entity-togo); Dahomey (entity-dahomey); French West Africa (entity-french-west-africa); Guinea-Bissau (entity-guinea-bissau); Futa Jalon (entity-futa-jalon); Futa Toro (entity-futa-toro); Ghana (entity-ghana); Gold Coast (entity-gold-coast); Kong Empire (entity-kong-empire); Lagos (entity-lagos); Opobo (entity-opobo); Sokoto Caliphate (entity-sokoto-caliphate); Tukular Caliphate (entity-tukular-caliphate); Burkina Faso (entity-burkina-faso).
+State: proposed-not-authorised. Included: Sierra Leone (entity-sierra-leone); Gambia (entity-gambia); Gambia, The (entity-gambia-the); Liberia (entity-liberia); Nigeria (entity-nigeria); Portuguese Guinea (entity-portuguese-guinea); Asante (entity-asante); Benin (entity-benin); Ivory Coast (entity-ivory-coast); Oyo (entity-oyo); Senegal (entity-senegal); Togo (entity-togo); Dahomey (entity-dahomey); French West Africa (entity-french-west-africa); Guinea-Bissau (entity-guinea-bissau); Futa Jalon (entity-futa-jalon); Futa Toro (entity-futa-toro); Ghana (entity-ghana); Gold Coast (entity-gold-coast); Kong Empire (entity-kong-empire); Lagos (entity-lagos); Opobo (entity-opobo); Sokoto Caliphate (entity-sokoto-caliphate); Tukular Caliphate (entity-tukular-caliphate); Burkina Faso (entity-burkina-faso).
 
 High-value continuing/source-family candidates: Sierra Leone (entity-sierra-leone); Liberia (entity-liberia).
 
@@ -355,7 +355,7 @@ Shared source discovery: Local archives, scholarly regional collections and colo
 
 ### political-batch-16 — West Africa
 
-Included: Dendi Kingdom (entity-dendi-kingdom); Gold Coast (GB) (entity-gold-coast-gb); Guinea (entity-guinea); Kaarta (entity-kaarta); Niger (entity-niger); Senegal (FR) (entity-senegal-fr); Wassoulou Empire (entity-wassoulou-empire); First Samori Empire (entity-first-samori-empire); Fulani Empire (entity-fulani-empire); Guinea-Bissau (Portugal) (entity-guinea-bissau-portugal); Second Samori Empire (entity-second-samori-empire); Segu (entity-segu); Songhai (entity-songhai); Southern Cameroon (entity-southern-cameroon); Togoland (entity-togoland).
+State: proposed-not-authorised. Included: Dendi Kingdom (entity-dendi-kingdom); Gold Coast (GB) (entity-gold-coast-gb); Guinea (entity-guinea); Kaarta (entity-kaarta); Niger (entity-niger); Senegal (FR) (entity-senegal-fr); Wassoulou Empire (entity-wassoulou-empire); First Samori Empire (entity-first-samori-empire); Fulani Empire (entity-fulani-empire); Guinea-Bissau (Portugal) (entity-guinea-bissau-portugal); Second Samori Empire (entity-second-samori-empire); Segu (entity-segu); Songhai (entity-songhai); Southern Cameroon (entity-southern-cameroon); Togoland (entity-togoland).
 
 High-value continuing/source-family candidates: Regional administrations and linked continuity reviews.
 
@@ -364,7 +364,7 @@ Shared source discovery: Local archives, scholarly regional collections and colo
 
 ### political-batch-17 — Central Africa
 
-Included: Burundi (entity-burundi); Angola (entity-angola); Equatorial Guinea (entity-equatorial-guinea); Rwanda (entity-rwanda); Belgian Congo (entity-belgian-congo); Congo (France) (entity-congo-france); Zaire (Belgium) (entity-zaire-belgium); Gabon (entity-gabon); Kanem-Bornu (entity-kanem-bornu); Lunda (entity-lunda); Sudan (entity-sudan); Angola (Portugal) (entity-angola-portugal); French Equatorial Africa (entity-french-equatorial-africa); Luba (entity-luba); French Cameroons (entity-french-cameroons); Kuba (entity-kuba); Rwanda (Belgium) (entity-rwanda-belgium); Spanish Guinea (entity-spanish-guinea); Sultanate of Utetera (entity-sultanate-of-utetera); Cameroon (entity-cameroon); Central African Republic (entity-central-african-republic); Chad (entity-chad); Sultanate of Damagaram (entity-sultanate-of-damagaram); Wadai Empire (entity-wadai-empire); Anglo-Egyptian Sudan (entity-anglo-egyptian-sudan); Bagirmi (entity-bagirmi); Darfur (entity-darfur); Kamerun (entity-kamerun); Nkore (entity-nkore); Wadai (entity-wadai).
+State: proposed-not-authorised. Included: Burundi (entity-burundi); Angola (entity-angola); Equatorial Guinea (entity-equatorial-guinea); Rwanda (entity-rwanda); Belgian Congo (entity-belgian-congo); Congo (France) (entity-congo-france); Zaire (Belgium) (entity-zaire-belgium); Gabon (entity-gabon); Kanem-Bornu (entity-kanem-bornu); Lunda (entity-lunda); Sudan (entity-sudan); Angola (Portugal) (entity-angola-portugal); French Equatorial Africa (entity-french-equatorial-africa); Luba (entity-luba); French Cameroons (entity-french-cameroons); Kuba (entity-kuba); Rwanda (Belgium) (entity-rwanda-belgium); Spanish Guinea (entity-spanish-guinea); Sultanate of Utetera (entity-sultanate-of-utetera); Cameroon (entity-cameroon); Central African Republic (entity-central-african-republic); Chad (entity-chad); Sultanate of Damagaram (entity-sultanate-of-damagaram); Wadai Empire (entity-wadai-empire); Anglo-Egyptian Sudan (entity-anglo-egyptian-sudan); Bagirmi (entity-bagirmi); Darfur (entity-darfur); Kamerun (entity-kamerun); Nkore (entity-nkore); Wadai (entity-wadai).
 
 High-value continuing/source-family candidates: Burundi (entity-burundi).
 
@@ -377,7 +377,7 @@ Classification prerequisites (excluded from this batch denominator): Congo (enti
 
 ### political-batch-18 — East Africa and Horn
 
-Included: British East Africa (entity-british-east-africa); Djibouti (entity-djibouti); Ethiopia (entity-ethiopia); Ethiopia (Italy) (entity-ethiopia-italy); French Somaliland (entity-french-somaliland); German E. Africa (Tanganyika) (entity-german-e-africa-tanganyika); Kenya (entity-kenya); Sultanate of Zanzibar (entity-sultanate-of-zanzibar); Sultinate of Zanzibar (entity-sultinate-of-zanzibar); Zanzibar (entity-zanzibar); Uganda (entity-uganda); British Somaliland (entity-british-somaliland); Buganda (entity-buganda); Bunyoro (entity-bunyoro); Italian Somaliland (entity-italian-somaliland); Harer (Egypt) (entity-harer-egypt); Somalia (entity-somalia); Funj (entity-funj); Kazembe (entity-kazembe).
+State: proposed-not-authorised. Included: British East Africa (entity-british-east-africa); Djibouti (entity-djibouti); Ethiopia (entity-ethiopia); Ethiopia (Italy) (entity-ethiopia-italy); French Somaliland (entity-french-somaliland); German E. Africa (Tanganyika) (entity-german-e-africa-tanganyika); Kenya (entity-kenya); Sultanate of Zanzibar (entity-sultanate-of-zanzibar); Sultinate of Zanzibar (entity-sultinate-of-zanzibar); Zanzibar (entity-zanzibar); Uganda (entity-uganda); British Somaliland (entity-british-somaliland); Buganda (entity-buganda); Bunyoro (entity-bunyoro); Italian Somaliland (entity-italian-somaliland); Harer (Egypt) (entity-harer-egypt); Somalia (entity-somalia); Funj (entity-funj); Kazembe (entity-kazembe).
 
 High-value continuing/source-family candidates: Ethiopia (entity-ethiopia).
 
@@ -390,7 +390,7 @@ Classification prerequisites (excluded from this batch denominator): Abyssinia (
 
 ### political-batch-19 — Southern Africa
 
-Included: Basutoland (entity-basutoland); German South-West Africa (entity-german-south-west-africa); Lesotho (entity-lesotho); Malawi (entity-malawi); Namibia (entity-namibia); Northern Rhodesia (entity-northern-rhodesia); Nyasaland (entity-nyasaland); Rhodesia (entity-rhodesia); South Africa (entity-south-africa); Southern Rhodesia (entity-southern-rhodesia); Union of South Africa (entity-union-of-south-africa); Zambia (entity-zambia); Zimbabwe (entity-zimbabwe); Botswana (entity-botswana); Cape Colony (entity-cape-colony); Griqualand West (entity-griqualand-west).
+State: proposed-not-authorised. Included: Basutoland (entity-basutoland); German South-West Africa (entity-german-south-west-africa); Lesotho (entity-lesotho); Malawi (entity-malawi); Namibia (entity-namibia); Northern Rhodesia (entity-northern-rhodesia); Nyasaland (entity-nyasaland); Rhodesia (entity-rhodesia); South Africa (entity-south-africa); Southern Rhodesia (entity-southern-rhodesia); Union of South Africa (entity-union-of-south-africa); Zambia (entity-zambia); Zimbabwe (entity-zimbabwe); Botswana (entity-botswana); Cape Colony (entity-cape-colony); Griqualand West (entity-griqualand-west).
 
 High-value continuing/source-family candidates: Regional administrations and linked continuity reviews.
 
@@ -401,7 +401,7 @@ Difficult continuity cases: Review colonies, unions and source-name substitution
 
 ### political-batch-20 — Southern Africa
 
-Included: Imerina (entity-imerina); Madagascar (entity-madagascar); Madagascar (France) (entity-madagascar-france); Mozambique (entity-mozambique); Natal (entity-natal); Orange Free State (entity-orange-free-state); Portuguese East Africa (entity-portuguese-east-africa); Swaziland (entity-swaziland); Transvaal (entity-transvaal); Zululand (entity-zululand); Delagoa Bay (entity-delagoa-bay); Merina Kingdom (entity-merina-kingdom); Mozambique (Portugal) (entity-mozambique-portugal); Rozwi (entity-rozwi); Walbis Bay (entity-walbis-bay).
+State: proposed-not-authorised. Included: Imerina (entity-imerina); Madagascar (entity-madagascar); Madagascar (France) (entity-madagascar-france); Mozambique (entity-mozambique); Natal (entity-natal); Orange Free State (entity-orange-free-state); Portuguese East Africa (entity-portuguese-east-africa); Swaziland (entity-swaziland); Transvaal (entity-transvaal); Zululand (entity-zululand); Delagoa Bay (entity-delagoa-bay); Merina Kingdom (entity-merina-kingdom); Mozambique (Portugal) (entity-mozambique-portugal); Rozwi (entity-rozwi); Walbis Bay (entity-walbis-bay).
 
 High-value continuing/source-family candidates: Swaziland (entity-swaziland).
 
@@ -410,7 +410,7 @@ Shared source discovery: Local archives, regional constitutional histories and c
 
 ### political-batch-21 — Pacific/Oceania states and administrations
 
-Included: American Samoa (entity-american-samoa); Fiji (entity-fiji); Niue (entity-niue); Papua New Guinea (entity-papua-new-guinea); Samoa (entity-samoa); Tonga (entity-tonga); Wallis and Futuna Islands (entity-wallis-and-futuna-islands); Australia (entity-australia); New Zealand (entity-new-zealand); Kingdom of Hawaii (entity-kingdom-of-hawaii); New South Wales (UK) (entity-new-south-wales-uk); Northern Territory (UK) (entity-northern-territory-uk); Queensland (UK) (entity-queensland-uk); South Australia (UK) (entity-south-australia-uk); Victoria (UK) (entity-victoria-uk); Western Australia (UK) (entity-western-australia-uk); Tuʻi Tonga Empire (entity-tu-i-tonga-empire); Dutch Guinea (entity-dutch-guinea); Gilbert and Ellice Islands (entity-gilbert-and-ellice-islands); Guam (entity-guam); New Caledonia (entity-new-caledonia); New Hebrides (entity-new-hebrides); New South Wales (entity-new-south-wales); Saipan (entity-saipan).
+State: proposed-not-authorised. Included: American Samoa (entity-american-samoa); Fiji (entity-fiji); Niue (entity-niue); Papua New Guinea (entity-papua-new-guinea); Samoa (entity-samoa); Tonga (entity-tonga); Wallis and Futuna Islands (entity-wallis-and-futuna-islands); Australia (entity-australia); New Zealand (entity-new-zealand); Kingdom of Hawaii (entity-kingdom-of-hawaii); New South Wales (UK) (entity-new-south-wales-uk); Northern Territory (UK) (entity-northern-territory-uk); Queensland (UK) (entity-queensland-uk); South Australia (UK) (entity-south-australia-uk); Victoria (UK) (entity-victoria-uk); Western Australia (UK) (entity-western-australia-uk); Tuʻi Tonga Empire (entity-tu-i-tonga-empire); Dutch Guinea (entity-dutch-guinea); Gilbert and Ellice Islands (entity-gilbert-and-ellice-islands); Guam (entity-guam); New Caledonia (entity-new-caledonia); New Hebrides (entity-new-hebrides); New South Wales (entity-new-south-wales); Saipan (entity-saipan).
 
 High-value continuing/source-family candidates: American Samoa (entity-american-samoa); Fiji (entity-fiji); Niue (entity-niue); Papua New Guinea (entity-papua-new-guinea); Samoa (entity-samoa); Tonga (entity-tonga); Wallis and Futuna Islands (entity-wallis-and-futuna-islands).
 
@@ -420,17 +420,17 @@ Difficult continuity cases: Encoding and accent variants need review; people/lan
 
 ## Architecture, maintenance and verification
 
-Production files, seven profiles, flags, UI and requested-year/geometry model are unchanged. Classification is a development-only overlay; edit classification-plan.json for reviewed eligibility decisions, research-plan.json for existing family/tier review decisions. Neither is fetched by production. Raw inventory generation and input locks remain the same. Core/enriched completion still requires reviewed source-backed intervals, not template eligibility.
+Batch 01 expands the production metadata while preserving the seven reference records, existing flags, UI and requested-year/geometry model. Classification is a development-only overlay; edit classification-plan.json for reviewed eligibility decisions, research-plan.json for existing family/tier review decisions. Neither is fetched by production. Raw inventory generation and input locks remain the same. Core/enriched completion still requires reviewed source-backed intervals, not template eligibility.
 
 Run **node scripts/coverage.mjs** to regenerate the manifest and combined report; **node scripts/coverage.mjs --check** recalculates both classification and raw outputs and rejects drift. Classification inputs and module hashes are recorded. Unknown IDs, missing/invalid decisions, missing evidence and broken canonical references fail rather than falling back to assumed country eligibility. New raw IDs require explicit decisions before regeneration succeeds.
 
-Limitations: provisional source-label classifications do not validate historical identities/status periods, prove duplicates or establish source availability. Sparse snapshots and uncertain/anachronistic names remain. The denominator is not a final deduplicated historical entity count. Future classification decisions may enlarge or reduce it; no mass historical facts or research batches have been added.
+Limitations: provisional source-label classifications do not validate historical identities/status periods, prove duplicates or establish source availability. Sparse snapshots and uncertain/anachronistic names remain. The denominator is not a final deduplicated historical entity count. Future classification decisions may enlarge or reduce it; only Batch 01 has researched historical facts; other research batches have not started.
 
 ---
 
 # Appendix: preserved Phase 1 raw-map audit
 
-Generated by node scripts/coverage.mjs. Development audit only; visible site remains v0.6.1. No research batch is authorised or performed.
+Generated by node scripts/coverage.mjs. Development audit only; visible site remains v0.6.1. Batch 01 has reviewed historical data; other batches remain unstarted.
 
 Covered means the existing production resolver returns a curated entity in at least one snapshot where this map ID is selectable. It does not mean core completeness or coverage throughout 1800–1960. All other IDs still have map-derived fallback panels.
 
@@ -439,18 +439,18 @@ Covered means the existing production resolver returns a curated entity in at le
 | Measure | Count |
 | --- | ---: |
 | totalIdentities | 880 |
-| curatedMetadataEntities | 7 |
-| mappedIdentities | 7 |
-| coveredIdentities | 7 |
-| uncoveredIdentities | 873 |
-| percentage | 0.8 |
+| curatedMetadataEntities | 32 |
+| mappedIdentities | 29 |
+| coveredIdentities | 29 |
+| uncoveredIdentities | 851 |
+| percentage | 3.3 |
 | multipleSnapshotIdentities | 519 |
 | singleSnapshotIdentities | 361 |
 | unresolvedQuestions | 261 |
 | identitiesWithQuestions | 818 |
 | brokenMappings | 0 |
 | orphanMetadataEntities | 0 |
-| ambiguousMappingYearPairs | 0 |
+| ambiguousMappingYearPairs | 3 |
 
 The denominator includes selectable unlabeled/composite/community identities, not just countries or visible labels. “First/last snapshot” are observations of source presence, never existence dates. Source geometry, metadata and requested-year resolution remain separate.
 
@@ -458,17 +458,17 @@ The denominator includes selectable unlabeled/composite/community identities, no
 
 | Snapshot | Selectable IDs | Curated dossier | Fallback only | Coverage |
 | --- | ---: | ---: | ---: | ---: |
-| 1800 | 547 | 1 | 546 | 0.18% |
-| 1815 | 313 | 1 | 312 | 0.32% |
-| 1878 | 173 | 2 | 171 | 1.16% |
-| 1880 | 170 | 2 | 168 | 1.18% |
-| 1900 | 166 | 2 | 164 | 1.2% |
-| 1914 | 143 | 2 | 141 | 1.4% |
-| 1920 | 164 | 3 | 161 | 1.83% |
-| 1930 | 164 | 3 | 161 | 1.83% |
-| 1938 | 172 | 6 | 166 | 3.49% |
-| 1945 | 183 | 3 | 180 | 1.64% |
-| 1960 | 157 | 4 | 153 | 2.55% |
+| 1800 | 547 | 9 | 538 | 1.65% |
+| 1815 | 313 | 11 | 302 | 3.51% |
+| 1878 | 173 | 14 | 159 | 8.09% |
+| 1880 | 170 | 14 | 156 | 8.24% |
+| 1900 | 166 | 14 | 152 | 8.43% |
+| 1914 | 143 | 16 | 127 | 11.19% |
+| 1920 | 164 | 16 | 148 | 9.76% |
+| 1930 | 164 | 16 | 148 | 9.76% |
+| 1938 | 172 | 19 | 153 | 11.05% |
+| 1945 | 183 | 17 | 166 | 9.29% |
+| 1960 | 157 | 18 | 139 | 11.46% |
 
 ## Persistent and briefly represented identities
 
@@ -877,11 +877,11 @@ The denominator includes selectable unlabeled/composite/community identities, no
 - **scope-entity-chinese-warlords**: Does this source label represent one political entity, several communities, an administrative area or merely a cartographic grouping? Establish scope before assigning national institutions. Source IDs: entity-chinese-warlords. Linked batches: batch-26.
 - **scope-entity-saar-protectorate**: Does this source label represent one political entity, several communities, an administrative area or merely a cartographic grouping? Establish scope before assigning national institutions. Source IDs: entity-saar-protectorate. Linked batches: batch-03.
 
-Other questions track source-presence gaps, changing authority/grouping, normalization and repeated-name continuity. Every record remains state=unresolved. SUBJECTO/PARTOF are preserved as source evidence and never converted into sovereignty. See manifest.json for the complete question list and per-ID evidence.
+Other questions track source-presence gaps, changing authority/grouping, normalization and repeated-name continuity. Legacy heuristic questions retain state=unresolved for audit traceability; sourced identity decisions and omissions are separately attached to reviewed rows. SUBJECTO/PARTOF are preserved as source evidence and never converted into sovereignty. See manifest.json for the complete question list and per-ID evidence.
 
 ## Archived Phase 1 raw audit batches — superseded for political research
 
-Batches partition all 880 IDs once. Uncurated counts sum to 873; existing profiles may still require additional periods/identity review. Counts measure map IDs, not a claim that each is one state. A compound label may require several historical records. Geography is a planning hint from the largest prepared feature; manual overrides/candidate families improve it, but it is not historical evidence. Australian community batches are smaller and have a distinct institutional review approach.
+Batches partition all 880 IDs once. Uncurated counts sum to 851; existing profiles may still require additional periods/identity review. Counts measure map IDs, not a claim that each is one state. A compound label may require several historical records. Geography is a planning hint from the largest prepared feature; manual overrides/candidate families improve it, but it is not historical evidence. Australian community batches are smaller and have a distinct institutional review approach.
 
 ### batch-01 — Unidentified/composite source labels · 1/1
 
@@ -897,7 +897,7 @@ Continuity: Keep candidate families together across linked batches; share instit
 
 ### batch-02 — Western/Northern Europe · 1/1
 
-24 identities; 23 uncurated; 1 already mapped. 24 require some research/review before acceptance.
+24 identities; 1 uncurated; 23 already mapped. 24 require some research/review before acceptance.
 
 National archives, parliaments, royal archives and statistical libraries; dates and offices remain entity-specific.
 
@@ -1389,7 +1389,7 @@ Continuity: Keep candidate families together across linked batches; share instit
 
 ## Coverage architecture and acceptance
 
-Keep the existing schema-1 knowledge files and cached production index. The current seven entities/82 sources do not justify a runtime refactor. Add records in reviewed batches; keep source IDs globally unique, explicit dated mappings and separate map geometry. If file size/merge conflicts become measurable problems later, author regional files and compile the same two static production JSON files; do not fetch hundreds of files on clicks or introduce a backend.
+Keep the existing schema-1 knowledge files and cached production index. The reviewed dataset retains the two-file static architecture; Batch 01 data and audit are documented in BATCH-01.md. Add records in reviewed batches; keep source IDs globally unique, explicit dated mappings and separate map geometry. If file size/merge conflicts become measurable problems later, author regional files and compile the same two static production JSON files; do not fetch hundreds of files on clicks or introduce a backend.
 
 Core acceptance requires documented historical identity/name, existence/status, capital, government, appropriate leadership, currency, dated overview and provenance where evidence exists. Enrichment can add dated/scoped population, licensed flags/standards, legislature, party/dynasty, explicit transitions, further overviews and events. Evidence-based omissions are acceptable. A nonempty name is not completion. research-plan.json defines statuses, review decisions and acceptance categories; explicit reviewer notes and dated source-backed intervals are required to accept a tier. The seven existing-enriched references remain temporally partial, not globally complete.
 
@@ -1405,4 +1405,4 @@ Run **node scripts/coverage.mjs** to regenerate lock-backed manifest.json and th
 
 The development manifest is generated: edit research-plan.json for planning/review decisions, not generated totals. Future reviewed batches update the curated metadata, then regenerate. No production code imports the audit files.
 
-Limitations: snapshot dates are sparse, source names may be anachronistic or corrupt, largest-piece geography can mislead for empires/disconnected pieces, and automatic flags cannot establish historical truth. No mass research was performed. The report deliberately does not estimate durations or claim historical resolution of candidates.
+Limitations: snapshot dates are sparse, source names may be anachronistic or corrupt, largest-piece geography can mislead for empires/disconnected pieces, and automatic flags cannot establish historical truth. Only the authorised Western/Northern Europe batch has historical research. Reviewed decisions apply only to their documented intervals; remaining candidates are unresearched.

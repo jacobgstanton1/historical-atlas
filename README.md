@@ -30,7 +30,7 @@ Exact end dates are exclusive; a partial end can overlap its final month/year. A
 
 ## Provenance and deliberate gaps
 
-The registry has 82 sources, including 62 added in v0.6.1. New evidence includes U.S. National Archives, presidential libraries and Mint; British Parliament, Royal Household, ONS and Bank of England; Bundestag, Berlin historical resources, Destatis and Bundesbank; the 1936 Soviet constitution, State Archive/FRUS, scholarly reference works and archival census tables; Japan’s Cabinet Office, Imperial Household, Statistics Bureau, Bank of Japan and Ministry of Foreign Affairs; India’s Parliament, RBI, New Delhi municipal history, archival viceroy records and museum collections. Full titles, links, access dates, pinpoint notes and reuse details are in [the source registry](data/historical-sources.json).
+The v0.6.1 reference registry contained 82 sources, including 62 added in that release; Batch 01 adds 101 for a current total of 183. New evidence includes U.S. National Archives, presidential libraries and Mint; British Parliament, Royal Household, ONS and Bank of England; Bundestag, Berlin historical resources, Destatis and Bundesbank; the 1936 Soviet constitution, State Archive/FRUS, scholarly reference works and archival census tables; Japan’s Cabinet Office, Imperial Household, Statistics Bureau, Bank of Japan and Ministry of Foreign Affairs; India’s Parliament, RBI, New Delhi municipal history, archival viceroy records and museum collections. Full titles, links, access dates, pinpoint notes and reuse details are in [the source registry](data/historical-sources.json).
 
 Population values retain observation dates and are never interpolated. UK figures are official mid-year estimates; German 1939 coverage uses the 1937 territory; Japanese figures retain prefectural geography, publication rounding and Okinawa date exceptions; Indian totals cover a wider census area than one Raj polygon. The contested Soviet 1939 census is omitted: 1939 displays the explicitly dated 1926 total, while 1960 displays 1959.
 
@@ -54,3 +54,7 @@ The Soviet 1955 SVG by Cmapm is distributed unchanged under [CC BY-SA 3.0](https
 ## Validation
 
 Required checks: syntax for app.js, data-pipeline.js, historical-metadata.js, dossier.js and boundary-history.js; node --test tests/dossiers.test.mjs; git diff --check. Tests cover source resolution/SVG safety, six 1939 showcases, dated statistics, flags, intra-year leadership, overview periods, explicit succession, identity separation and boundary-history behaviour. Browser validation checks the 1939/1938 distinction, showcases, navigation, controls, responsive layout and failure paths.
+
+## v0.7 preparation: Research Batch 01
+
+Western/Northern Europe adds 25 historical metadata entities and extends the UK, with 101 additional sources (183 total). Visible production remains v0.6.1. The original seven reference dossiers and their source records are preserved. [Batch 01 research decisions and omissions](development/coverage/BATCH-01.md) distinguish accepted core intervals from partial coverage; no later batch is started. Existing two-file static metadata loading remains, with a data cache increment.

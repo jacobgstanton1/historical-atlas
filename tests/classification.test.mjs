@@ -29,7 +29,7 @@ test('all snapshot classification partitions and political coverage use dated re
   assert.equal(s.politicalUncovered+s.politicalCovered,s.politicalCandidates);
  }
  const p=m.classification.politicalCoverage;
- assert.equal(p.candidates,m.identities.filter(political).length);assert.equal(p.covered,7);
+ assert.equal(p.candidates,m.identities.filter(political).length);assert.ok(p.covered>7);
  assert.equal(p.covered,m.identities.filter(r=>political(r)&&r.currentlyResolvesToDossier).length);
 });
 test('Australian and other community labels remain outside missing-country counts and political batches',()=>{
@@ -47,7 +47,7 @@ test('political batch plan includes every eligible ID once and counts only permi
  assert.equal(m.phase2Batches.reduce((n,b)=>n+b.uncoveredPoliticalCandidates,0),m.classification.politicalCoverage.uncovered);
  for(const b of m.phase2Batches){
   assert.ok(b.totalIdentities<=30);assert.equal(b.totalIdentities,b.politicalCandidates+b.nameReviews);
-  assert.equal(b.state,'proposed-not-authorised');
+  assert.equal(b.state,plan.batchReviews?.[b.id]?.state||'proposed-not-authorised');
   for(const id of b.mapIds){assert.equal(row(id).phase2BatchId,b.id);assert.ok(political(row(id))||row(id).classification.classification==='name-variant-or-duplicate');}
  }
  for(const r of m.identities.filter(r=>r.classification.classification==='unresolved'))assert.ok(!ids.includes(r.stableMapId));

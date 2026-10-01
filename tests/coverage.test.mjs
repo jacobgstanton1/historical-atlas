@@ -29,7 +29,7 @@ test('research batches partition the inventory and never mark source names compl
  assert.equal(ids.length,new Set(ids).size);assert.deepEqual([...ids].sort(),manifest.identities.map(r=>r.stableMapId).sort());
  assert.equal(manifest.batches.reduce((sum,b)=>sum+b.uncuratedIdentities,0),manifest.summary.uncoveredIdentities);
  assert.ok(manifest.batches.every(b=>b.totalIdentities<=30));
- for(const row of manifest.identities){assert.equal(row.continuity.state,'unresolved');assert.ok(!['core-complete','enriched'].includes(row.researchStatus));}
+ for(const row of manifest.identities){assert.equal(row.continuity.state,row.researchDecision?'reviewed-with-dated-decisions':'unresolved');if(!row.researchDecision)assert.ok(!['core-complete','enriched'].includes(row.researchStatus));}
  for(const q of manifest.questions){assert.equal(q.state,'unresolved');assert.ok(q.mapIds.length);assert.ok(q.linkedBatchIds.length);}
  assert.equal(manifest.questions.length,manifest.summary.unresolvedQuestions);
 });

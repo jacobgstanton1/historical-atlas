@@ -1,471 +1,443 @@
 {
   "schemaVersion": 1,
-  "scope": "Development planning only. Candidate families and geography are not historical assertions.",
-  "statuses": [
-    "existing-enriched",
-    "core-complete",
-    "enriched",
-    "needs-research",
-    "identity-review",
-    "mapping-review"
+  "batchId": "political-batch-01",
+  "researchedOn": "2026-10-01",
+  "scope": "Only the 24 Western/Northern European map identities. No Batch 02 research.",
+  "baselineCommit": "c812e8fe343ed6f54be74f56c377a517bff3eed6",
+  "policy": "Every fact is independently sourced and dated. Review intervals accept specified periods only; missing fields and temporal gaps are deliberate. Names alone are not core completion.",
+  "architectureDecision": "Retain the two static schema-1 JSON files and cached temporal index. No backend, runtime data split, geometry change or UI redesign is required for this batch.",
+  "rawMapIdentities": [
+    "entity-denmark",
+    "entity-denmark-norway",
+    "entity-norway",
+    "entity-sweden",
+    "entity-sweden-norway",
+    "entity-ireland",
+    "entity-kingdom-of-ireland",
+    "entity-united-kingdom",
+    "entity-united-kingdom-of-great-britain-and-ireland",
+    "entity-france",
+    "entity-portugal",
+    "entity-spain",
+    "entity-switzerland",
+    "entity-netherlands",
+    "entity-luxembourg",
+    "entity-belgium",
+    "entity-iceland",
+    "entity-finland",
+    "entity-malta",
+    "entity-andorra",
+    "entity-austrian-netherlands",
+    "entity-batavian-republic",
+    "entity-helvetic-republic",
+    "entity-san-marino"
   ],
-  "tiers": {
-    "none": "No accepted core/enriched curation.",
-    "existing-enriched": "Preserved v0.6.1 reference profile, partial temporal coverage; not globally complete.",
-    "core": "Reviewed sourced core fields or documented evidence-based omissions for a defined interval.",
-    "enriched": "Reviewed core plus independently sourced enrichment for a defined interval."
+  "historicalEntitiesCreated": [
+    "great-britain-1707",
+    "kingdom-of-ireland",
+    "ireland-independent",
+    "denmark-norway-monarchy",
+    "denmark-post-kiel",
+    "sweden-kingdom",
+    "sweden-norway-union",
+    "norway-constitutional-kingdom",
+    "finland-grand-duchy",
+    "finland-independent",
+    "iceland-danish-administration",
+    "iceland-sovereign",
+    "netherlands-kingdom",
+    "batavian-republic",
+    "belgium-kingdom",
+    "luxembourg-grand-duchy",
+    "helvetic-republic",
+    "swiss-confederation-1815",
+    "swiss-federal-state",
+    "france-political-frameworks",
+    "portugal-political-frameworks",
+    "spain-political-frameworks",
+    "andorra-historic-coprincipality",
+    "san-marino-republic",
+    "malta-british-administration"
+  ],
+  "existingEntitiesExtended": [
+    "united-kingdom"
+  ],
+  "sourceIdsAdded": [
+    "b01-uk-union-acts",
+    "b01-great-britain-1707",
+    "b01-uk-independence",
+    "b01-british-monarchs",
+    "b01-irish-constitution-1922",
+    "b01-irish-constitution-1937",
+    "b01-ireland-republic-act",
+    "b01-ireland-republic-commencement",
+    "b01-douglas-hyde",
+    "b01-sean-okelly",
+    "b01-de-valera",
+    "b01-irish-pound",
+    "b01-irish-pound-origins",
+    "b01-denmark-monarchs",
+    "b01-denmark-monarchy",
+    "b01-amalienborg",
+    "b01-denmark-krone",
+    "b01-denmark-banknotes",
+    "b01-norway-democracy",
+    "b01-sweden-norway-union",
+    "b01-norway-constitution-union",
+    "b01-haakon-vii",
+    "b01-olav-v",
+    "b01-norway-royal-election",
+    "b01-oslo-name",
+    "b01-norwegian-units",
+    "b01-sweden-monarchs",
+    "b01-sweden-democracy",
+    "b01-swedish-krona",
+    "b01-stockholm-palace",
+    "b01-finland-capital",
+    "b01-finnish-markka",
+    "b01-finland-constitution",
+    "b01-finland-presidents",
+    "b01-iceland-parliament",
+    "b01-iceland-sovereignty",
+    "b01-sveinn-bjornsson",
+    "b01-asgeir-asgeirsson",
+    "b01-icelandic-currency",
+    "b01-netherlands-monarchy",
+    "b01-dutch-guilder",
+    "b01-low-countries-parliament-seat",
+    "b01-batavian-institutions",
+    "b01-belgian-monarchy",
+    "b01-belgian-constitution-1831",
+    "b01-luxembourg-dynasty",
+    "b01-grand-duchess-charlotte",
+    "b01-luxembourg-occupation",
+    "b01-luxembourg-money",
+    "b01-austrian-netherlands-end",
+    "b01-swiss-constitutional-change",
+    "b01-helvetic-republic",
+    "b01-swiss-federal-council",
+    "b01-bern-federal-city",
+    "b01-swiss-franc",
+    "b01-french-consulate",
+    "b01-france-third-republic",
+    "b01-french-presidents",
+    "b01-de-gaulle",
+    "b01-france-republican-legality",
+    "b01-franc-germinal",
+    "b01-portugal-monarchy",
+    "b01-portugal-first-republic",
+    "b01-portugal-dictatorship",
+    "b01-portugal-presidents",
+    "b01-portuguese-cortes-seat",
+    "b01-portuguese-escudo",
+    "b01-spanish-monarchs",
+    "b01-fernando-vii",
+    "b01-alfonso-xii",
+    "b01-alfonso-xiii",
+    "b01-spain-constitution-1876",
+    "b01-spain-constitution-1931",
+    "b01-spain-second-republic",
+    "b01-spain-civil-war-parliament",
+    "b01-franco-1936",
+    "b01-spanish-peseta",
+    "b01-andorra-offices",
+    "b01-casa-de-la-vall",
+    "b01-san-marino-history",
+    "b01-malta-constitution",
+    "b01-malta-coinage",
+    "b01-dutch-parliament",
+    "b01-nl-king-willem-i-1772-1843",
+    "b01-nl-king-willem-ii-1792-1849",
+    "b01-nl-king-willem-iii-1817-1890",
+    "b01-nl-queen-wilhelmina-1880-1962",
+    "b01-nl-queen-juliana-1909-2004",
+    "b01-belgian-franc",
+    "b01-be-king-leopold-i",
+    "b01-be-king-leopold-ii",
+    "b01-be-king-albert-i",
+    "b01-be-king-leopold-iii",
+    "b01-be-king-baudouin",
+    "b01-belgium-regent-charles",
+    "b01-france-restoration",
+    "b01-french-new-franc",
+    "b01-portugal-court-brazil",
+    "b01-spain-franco-regime",
+    "b01-valletta-palace",
+    "b01-france-fourth-republic"
+  ],
+  "recordsAdded": {
+    "names": 37,
+    "aliases": 1,
+    "flags": 0,
+    "politicalStatus": 53,
+    "capitals": 31,
+    "governments": 54,
+    "leaders": 126,
+    "population": 0,
+    "economy": 0,
+    "area": 0,
+    "currencies": 34,
+    "relationships": 4,
+    "predecessors": 0,
+    "successors": 0,
+    "events": 59,
+    "descriptions": 48
   },
-  "regions": [
+  "beforePoliticalCoverage": {
+    "candidates": 401,
+    "covered": 7,
+    "uncovered": 394,
+    "percentage": 1.75
+  },
+  "beforeSnapshots": [
     {
-      "id": "identity-triage",
-      "name": "Unidentified/composite source labels",
-      "limit": 15,
-      "sources": "Upstream naming conventions and bibliographic provenance first; do not supply national-state templates."
+      "year": 1800,
+      "politicalCandidates": 121,
+      "covered": 1,
+      "percentage": 0.83
     },
     {
-      "id": "west-north-europe",
-      "name": "Western/Northern Europe",
-      "limit": 25,
-      "sources": "National archives, parliaments, royal archives and statistical libraries; dates and offices remain entity-specific."
+      "year": 1815,
+      "politicalCandidates": 124,
+      "covered": 1,
+      "percentage": 0.81
     },
     {
-      "id": "central-europe",
-      "name": "Central Europe and German/Italian source families",
-      "limit": 25,
-      "sources": "Regional/state archives and constitutional collections; establish small-state and imperial scope before statistics."
+      "year": 1878,
+      "politicalCandidates": 142,
+      "covered": 2,
+      "percentage": 1.41
     },
     {
-      "id": "east-europe",
-      "name": "Eastern Europe, Russian/Soviet and Balkan source families",
-      "limit": 20,
-      "sources": "National archives and constitutional treaties; occupation, federation and regime continuity require separate evidence."
+      "year": 1880,
+      "politicalCandidates": 143,
+      "covered": 2,
+      "percentage": 1.4
     },
     {
-      "id": "north-america",
-      "name": "North America",
-      "limit": 25,
-      "sources": "National/provincial archives; colonial charters and Indigenous institutional sources require distinct treatment."
+      "year": 1900,
+      "politicalCandidates": 139,
+      "covered": 2,
+      "percentage": 1.44
     },
     {
-      "id": "caribbean",
-      "name": "Caribbean and Central America",
-      "limit": 25,
-      "sources": "Colonial archives, local national libraries and institutional statistical sources; distinguish islands, administrations and federations."
+      "year": 1914,
+      "politicalCandidates": 136,
+      "covered": 2,
+      "percentage": 1.47
     },
     {
-      "id": "south-america",
-      "name": "South America",
-      "limit": 25,
-      "sources": "National archives, independence-era documents and historical censuses; do not equate viceroyalties with modern states."
+      "year": 1920,
+      "politicalCandidates": 150,
+      "covered": 3,
+      "percentage": 2
     },
     {
-      "id": "north-africa",
-      "name": "North Africa and Saharan source families",
-      "limit": 25,
-      "sources": "Local archives plus Ottoman/colonial records; distinguish administrative partitions and wider imperial authority."
+      "year": 1930,
+      "politicalCandidates": 151,
+      "covered": 3,
+      "percentage": 1.99
     },
     {
-      "id": "west-africa",
-      "name": "West Africa",
-      "limit": 25,
-      "sources": "Local archives, scholarly regional collections and colonial records; confederacies and community labels require scope review."
+      "year": 1938,
+      "politicalCandidates": 162,
+      "covered": 6,
+      "percentage": 3.7
     },
     {
-      "id": "central-africa",
-      "name": "Central Africa",
-      "limit": 25,
-      "sources": "Regional archives, local institutional histories and colonial records; Congo/Zaire naming and composite labels require priority review."
+      "year": 1945,
+      "politicalCandidates": 169,
+      "covered": 3,
+      "percentage": 1.78
     },
     {
-      "id": "east-africa",
-      "name": "East Africa and Horn",
-      "limit": 25,
-      "sources": "Local archives and historical administrative publications; different names and authority fields do not prove succession."
-    },
-    {
-      "id": "southern-africa",
-      "name": "Southern Africa",
-      "limit": 25,
-      "sources": "Local archives, regional constitutional histories and colonial collections; distinguish unions, colonies and community labels."
-    },
-    {
-      "id": "middle-east",
-      "name": "Middle East and Arabian source families",
-      "limit": 25,
-      "sources": "Local/Ottoman archives and mandate records; treaties and administrative authority require specific evidence."
-    },
-    {
-      "id": "south-central-asia",
-      "name": "South/Central Asia",
-      "limit": 25,
-      "sources": "India Office/Parliament, local archives and regional scholarship; princely states, Company rule, Raj and partition need separate identities."
-    },
-    {
-      "id": "east-asia",
-      "name": "East Asia",
-      "limit": 25,
-      "sources": "National archives, official cabinet chronologies and occupation records; constitutional continuity cannot be inferred from labels."
-    },
-    {
-      "id": "southeast-asia",
-      "name": "Southeast Asia",
-      "limit": 25,
-      "sources": "Local national archives and Dutch/French/British collections; colony, constituent region and occupation periods require explicit scope."
-    },
-    {
-      "id": "pacific",
-      "name": "Pacific/Oceania states and administrations",
-      "limit": 25,
-      "sources": "Local archives, Pacific scholarly collections and community-authorised histories; standards and colonial administrations require careful applicability."
-    },
-    {
-      "id": "australian-communities",
-      "name": "Australian source-defined communities",
-      "limit": 20,
-      "sources": "Upstream bibliography and relevant community-authorised institutions first. Establish whether labels describe language, people, land or governance; sovereignty/state-office templates are inappropriate."
+      "year": 1960,
+      "politicalCandidates": 147,
+      "covered": 4,
+      "percentage": 2.72
     }
   ],
-  "families": [
+  "beforeSnapshotClassification": [
     {
-      "id": "britain",
-      "names": [
-        "United Kingdom",
-        "United Kingdom of Great Britain and Ireland",
-        "Kingdom of Ireland",
-        "Ireland"
-      ],
-      "region": "west-north-europe",
-      "question": "Review British and Irish name/state/union continuity. Do not extend the current UK profile backward simply because an ID repeats."
+      "year": 1800,
+      "rawIdentities": 547,
+      "classifications": {
+        "political-polity": 90,
+        "dependent-administration": 31,
+        "community-people": 392,
+        "geographic-or-composite": 2,
+        "name-variant-or-duplicate": 1,
+        "unresolved": 31
+      },
+      "politicalCandidates": 121,
+      "politicalCovered": 1,
+      "politicalUncovered": 120,
+      "politicalPercentage": 0.83
     },
     {
-      "id": "scandinavian",
-      "names": [
-        "Denmark-Norway",
-        "Denmark",
-        "Sweden",
-        "Sweden–Norway",
-        "Norway"
-      ],
-      "region": "west-north-europe",
-      "question": "Review Scandinavian union labels and constituent governments without assuming that a source-name change establishes state succession."
+      "year": 1815,
+      "rawIdentities": 313,
+      "classifications": {
+        "political-polity": 86,
+        "dependent-administration": 38,
+        "community-people": 164,
+        "geographic-or-composite": 1,
+        "name-variant-or-duplicate": 0,
+        "unresolved": 24
+      },
+      "politicalCandidates": 124,
+      "politicalCovered": 1,
+      "politicalUncovered": 123,
+      "politicalPercentage": 0.81
     },
     {
-      "id": "german",
-      "names": [
-        "Prussia",
-        "Germany",
-        "German Empire",
-        "East Prussia",
-        "Germany (Soviet)",
-        "Germany (USA)",
-        "Germany (UK)",
-        "Germany (France)",
-        "Saar Protectorate",
-        "West Germany",
-        "East Germany"
-      ],
-      "region": "central-europe",
-      "question": "Distinguish state, constitutional regime, constituent area, occupation zone and later republic. The existing Nazi-period mapping must not cover earlier Germany automatically."
+      "year": 1878,
+      "rawIdentities": 173,
+      "classifications": {
+        "political-polity": 87,
+        "dependent-administration": 55,
+        "community-people": 7,
+        "geographic-or-composite": 1,
+        "name-variant-or-duplicate": 3,
+        "unresolved": 20
+      },
+      "politicalCandidates": 142,
+      "politicalCovered": 2,
+      "politicalUncovered": 140,
+      "politicalPercentage": 1.41
     },
     {
-      "id": "italian",
-      "names": [
-        "Italy",
-        "Kingdom of Italy",
-        "Kingdom of the Two Sicilies",
-        "Kingdom of Sardinia",
-        "Papal States",
-        "Venetia",
-        "Lombardy",
-        "Tuscany",
-        "Modena",
-        "Parma",
-        "Lucca"
-      ],
-      "region": "central-europe",
-      "question": "Separate source naming variation, constituent governments and potential unification/succession; no overlap-derived chain."
+      "year": 1880,
+      "rawIdentities": 170,
+      "classifications": {
+        "political-polity": 88,
+        "dependent-administration": 55,
+        "community-people": 5,
+        "geographic-or-composite": 1,
+        "name-variant-or-duplicate": 1,
+        "unresolved": 20
+      },
+      "politicalCandidates": 143,
+      "politicalCovered": 2,
+      "politicalUncovered": 141,
+      "politicalPercentage": 1.4
     },
     {
-      "id": "habsburg",
-      "names": [
-        "Austrian Empire",
-        "Austria Hungary",
-        "Austro-Hungarian Empire",
-        "Austria",
-        "Hungary",
-        "Bosnia-Herzegovina"
-      ],
-      "region": "central-europe",
-      "question": "Review composite monarchy, constituent territory and later state/regime coverage separately."
+      "year": 1900,
+      "rawIdentities": 166,
+      "classifications": {
+        "political-polity": 86,
+        "dependent-administration": 53,
+        "community-people": 4,
+        "geographic-or-composite": 1,
+        "name-variant-or-duplicate": 1,
+        "unresolved": 21
+      },
+      "politicalCandidates": 139,
+      "politicalCovered": 2,
+      "politicalUncovered": 137,
+      "politicalPercentage": 1.44
     },
     {
-      "id": "russian",
-      "names": [
-        "Russian Empire",
-        "USSR",
-        "White Russia",
-        "South Russia",
-        "Far Eastern SSR",
-        "Ukraine",
-        "Georgia",
-        "Armenia",
-        "Azerbaijan"
-      ],
-      "region": "east-europe",
-      "question": "Source USSR appears in 1920 although the curated Union formation is dated 1922. Review civil-war source labels and republic/union relationships without inventing continuity."
+      "year": 1914,
+      "rawIdentities": 143,
+      "classifications": {
+        "political-polity": 72,
+        "dependent-administration": 64,
+        "community-people": 0,
+        "geographic-or-composite": 1,
+        "name-variant-or-duplicate": 1,
+        "unresolved": 5
+      },
+      "politicalCandidates": 136,
+      "politicalCovered": 2,
+      "politicalUncovered": 134,
+      "politicalPercentage": 1.47
     },
     {
-      "id": "japanese-korean",
-      "names": [
-        "Japan",
-        "Imperial Japan",
-        "Empire of Japan",
-        "Japan (USA)",
-        "Korea",
-        "Korea (USSR)",
-        "Korea (USA)",
-        "Korea, Democratic People's Republic of",
-        "Korea, Republic of",
-        "Kuril Islands",
-        "Sakhalin (RU)"
-      ],
-      "region": "east-asia",
-      "question": "Review three imperial/Japan names, occupation authorities and divided Korea; preserve the separate 1947 constitutional profile."
+      "year": 1920,
+      "rawIdentities": 164,
+      "classifications": {
+        "political-polity": 82,
+        "dependent-administration": 68,
+        "community-people": 0,
+        "geographic-or-composite": 1,
+        "name-variant-or-duplicate": 2,
+        "unresolved": 11
+      },
+      "politicalCandidates": 150,
+      "politicalCovered": 3,
+      "politicalUncovered": 147,
+      "politicalPercentage": 2
     },
     {
-      "id": "chinese",
-      "names": [
-        "Qing Empire",
-        "Manchu Empire",
-        "Chinese Warlords",
-        "China",
-        "Manchuria",
-        "Xinjiang",
-        "Tibet",
-        "Taiwan",
-        "Hong Kong"
-      ],
-      "region": "east-asia",
-      "question": "Determine whether each source grouping describes an administration, constituent territory or multiple polities; no modern-country fallback."
+      "year": 1930,
+      "rawIdentities": 164,
+      "classifications": {
+        "political-polity": 82,
+        "dependent-administration": 69,
+        "community-people": 0,
+        "geographic-or-composite": 1,
+        "name-variant-or-duplicate": 2,
+        "unresolved": 10
+      },
+      "politicalCandidates": 151,
+      "politicalCovered": 3,
+      "politicalUncovered": 148,
+      "politicalPercentage": 1.99
     },
     {
-      "id": "south-asian",
-      "names": [
-        "British East India Company",
-        "British Raj",
-        "India",
-        "Pakistan",
-        "Bangladesh",
-        "Ceylon (Dutch)",
-        "Ceylon",
-        "Sri Lanka",
-        "Mysore",
-        "Mysore (Indian princely state)",
-        "Sikkim (Indian princely state)"
-      ],
-      "region": "south-central-asia",
-      "question": "Source India/Pakistan/Bangladesh dates and administrative scope need review; existing sourced partition dates must remain independent of snapshot names."
+      "year": 1938,
+      "rawIdentities": 172,
+      "classifications": {
+        "political-polity": 85,
+        "dependent-administration": 77,
+        "community-people": 0,
+        "geographic-or-composite": 1,
+        "name-variant-or-duplicate": 3,
+        "unresolved": 6
+      },
+      "politicalCandidates": 162,
+      "politicalCovered": 6,
+      "politicalUncovered": 156,
+      "politicalPercentage": 3.7
     },
     {
-      "id": "iranian",
-      "names": [
-        "Persia",
-        "Iran",
-        "central Asian khanates",
-        "Turan",
-        "Bokhara Khanate"
-      ],
-      "region": "south-central-asia",
-      "question": "Review name continuity and whether plural khanate/group labels can represent one dossier."
+      "year": 1945,
+      "rawIdentities": 183,
+      "classifications": {
+        "political-polity": 89,
+        "dependent-administration": 80,
+        "community-people": 0,
+        "geographic-or-composite": 1,
+        "name-variant-or-duplicate": 1,
+        "unresolved": 12
+      },
+      "politicalCandidates": 169,
+      "politicalCovered": 3,
+      "politicalUncovered": 166,
+      "politicalPercentage": 1.78
     },
     {
-      "id": "ottoman-arabian",
-      "names": [
-        "Ottoman Empire",
-        "Ottoman Sultanate",
-        "Republic of Turkey",
-        "Turkey",
-        "Mesopotamia (GB)",
-        "Iraq",
-        "Syria (France)",
-        "Syria",
-        "Lebanon",
-        "Mandatory Palestine (GB)",
-        "Israel",
-        "Jordan",
-        "Nejd",
-        "Arabia",
-        "Arabia (Nejd)",
-        "Hejaz",
-        "Hail",
-        "Saudi Arabia",
-        "Oman",
-        "Muscat and Oman",
-        "Oman (British Raj)",
-        "Trucial Oman",
-        "United Arab Emirates",
-        "British Protectorate",
-        "Yemen",
-        "Yemen (UK)",
-        "Emirate of Bin Shal'an"
-      ],
-      "region": "middle-east",
-      "question": "Review empire/constituent scope, mandates, occupation and source labels that may precede named states. Do not reinterpret authority fields as constitutional status."
-    },
-    {
-      "id": "libyan",
-      "names": [
-        "Tripolitania",
-        "Cyrenaica",
-        "Libya",
-        "Libya (IT)",
-        "Cyraneica (UK Lybia)",
-        "Fezzan (Frech Lybia)",
-        "Tripolitana (UK Lybia)"
-      ],
-      "region": "north-africa",
-      "question": "Preserve spelling errors as source evidence; review Ottoman/colonial/occupation partitions and later state continuity."
-    },
-    {
-      "id": "congo",
-      "names": [
-        "Congo",
-        "Congo (France)",
-        "Belgian Congo",
-        "Zaire (Belgium)",
-        "Zaire"
-      ],
-      "region": "central-africa",
-      "question": "Separate the two Congo source families and review earlier snapshots using Zaire; never derive succession from identical polygons."
-    },
-    {
-      "id": "african-east",
-      "names": [
-        "Ethiopia",
-        "Abyssinia",
-        "Ethiopia (Italy)",
-        "Tanzania, United Republic of",
-        "German E. Africa (Tanganyika)",
-        "Zanzibar",
-        "Sultinate of Zanzibar",
-        "Sultanate of Zanzibar",
-        "British East Africa",
-        "Kenya",
-        "Djibouti",
-        "French Somaliland"
-      ],
-      "region": "east-africa",
-      "question": "Review historical-name variants, colonies/occupations and labels such as Tanzania in earlier snapshots; explicit dates need later research."
-    },
-    {
-      "id": "african-south",
-      "names": [
-        "South Africa",
-        "Union of South Africa",
-        "Rhodesia",
-        "Southern Rhodesia",
-        "Zimbabwe",
-        "Northern Rhodesia",
-        "Zambia",
-        "Nyasaland",
-        "Malawi",
-        "Basutoland",
-        "Lesotho",
-        "German South-West Africa",
-        "Namibia"
-      ],
-      "region": "southern-africa",
-      "question": "Review colonies, unions and source-name substitution; no modern sovereignty is inferred from the shared geographic label."
-    },
-    {
-      "id": "indochinese",
-      "names": [
-        "French Indochina",
-        "French Indo-China",
-        "Cochin China",
-        "Annam",
-        "Tonkin",
-        "Vietnam",
-        "Laos",
-        "Cambodia"
-      ],
-      "region": "southeast-asia",
-      "question": "Distinguish colonial federation, constituent regions and later states; determine whether differently spelled federation labels share historical identity."
-    },
-    {
-      "id": "maritime-asian",
-      "names": [
-        "Dutch East Indies",
-        "Netherlands Indies",
-        "Indonesia",
-        "Malaya",
-        "Malaysia",
-        "Rattanakosin Kingdom",
-        "Siam",
-        "Thailand",
-        "Burma"
-      ],
-      "region": "southeast-asia",
-      "question": "Review colony/state/name continuity and multiple simultaneous source names; do not auto-merge."
-    },
-    {
-      "id": "brazilian",
-      "names": [
-        "Viceroyalty of Brazil",
-        "Kingdom of Brazil",
-        "Brazil"
-      ],
-      "region": "south-america",
-      "question": "Establish actual colonial/constitutional periods rather than assuming that the source name is dated correctly."
-    },
-    {
-      "id": "maori",
-      "names": [
-        "Māori",
-        "Maori",
-        "M?ori",
-        "New Zealand"
-      ],
-      "region": "pacific",
-      "question": "Encoding and accent variants need review; people/land/community labels are not equivalent to the later state."
+      "year": 1960,
+      "rawIdentities": 157,
+      "classifications": {
+        "political-polity": 97,
+        "dependent-administration": 50,
+        "community-people": 0,
+        "geographic-or-composite": 1,
+        "name-variant-or-duplicate": 1,
+        "unresolved": 8
+      },
+      "politicalCandidates": 147,
+      "politicalCovered": 4,
+      "politicalUncovered": 143,
+      "politicalPercentage": 2.72
     }
   ],
-  "overrides": {
-    "entity-unnamed-territory": "identity-triage",
-    "entity-africa": "identity-triage",
-    "entity-denmark-norway": "west-north-europe",
-    "entity-tu-i-tonga-empire": "pacific",
-    "entity-polynesians": "pacific",
-    "entity-papuans": "pacific",
-    "entity-papua-new-guinea": "pacific",
-    "entity-dutch-guinea": "pacific",
-    "entity-guam": "pacific",
-    "entity-saipan": "pacific",
-    "entity-tunis": "north-africa",
-    "entity-sotho": "southern-africa",
-    "entity-kong": "west-africa",
-    "entity-nguni": "southern-africa",
-    "entity-kingdom-of-hawaii": "pacific",
-    "entity-france": "west-north-europe",
-    "entity-spain": "west-north-europe",
-    "entity-portugal": "west-north-europe",
-    "entity-netherlands": "west-north-europe",
-    "entity-belgium": "west-north-europe",
-    "entity-luxembourg": "west-north-europe",
-    "entity-switzerland": "west-north-europe",
-    "entity-denmark": "west-north-europe",
-    "entity-iceland": "west-north-europe",
-    "entity-finland": "west-north-europe",
-    "entity-batavian-republic": "west-north-europe",
-    "entity-austrian-netherlands": "west-north-europe",
-    "entity-helvetic-republic": "west-north-europe",
-    "entity-malta": "west-north-europe",
-    "entity-andorra": "west-north-europe",
-    "entity-san-marino": "west-north-europe",
-    "entity-new-south-wales": "pacific"
-  },
-  "reviews": {
-    "entity-united-kingdom": {
+  "reviews": [
+    {
+      "mapId": "entity-united-kingdom",
       "status": "existing-enriched",
       "tier": "existing-enriched",
       "reviewerNote": "The 1800 source label resolves to Great Britain; from 1801 it resolves to the existing UK entity. The 1922 territorial change and 1927 title change are not a new state inferred from geometry. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -492,7 +464,8 @@
         }
       ]
     },
-    "entity-united-kingdom-of-great-britain-and-ireland": {
+    {
+      "mapId": "entity-united-kingdom-of-great-britain-and-ireland",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "Shares the existing united-kingdom entity from 1801. The 1930 map retains pre-1927 wording; the dossier uses the independently dated formal name, not a duplicate UK entity. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -512,7 +485,8 @@
         }
       ]
     },
-    "entity-kingdom-of-ireland": {
+    {
+      "mapId": "entity-kingdom-of-ireland",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "Separate pre-union kingdom; not the independent twentieth-century Irish state. Its curated period is 1800, and its disappearance is dated by the Acts, not the next map snapshot. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -531,7 +505,8 @@
         }
       ]
     },
-    "entity-ireland": {
+    {
+      "mapId": "entity-ireland",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "Independent Irish state from 1922; constitutional changes are dated within this framework, separate from the old Kingdom of Ireland and the UK. Republic of Ireland is a 1949 description, not a renamed state. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -553,7 +528,8 @@
         }
       ]
     },
-    "entity-denmark-norway": {
+    {
+      "mapId": "entity-denmark-norway",
       "status": "needs-research",
       "tier": "none",
       "reviewerNote": "Distinct composite monarchy, not an alias for modern Denmark or Norway. The Danish Crown’s loss of Norway is dated independently to the Treaty of Kiel. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -573,7 +549,8 @@
         }
       ]
     },
-    "entity-denmark": {
+    {
+      "mapId": "entity-denmark",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "Danish kingdom after the Treaty of Kiel; separate from the earlier composite monarchy. Later constitutional change is within this curated kingdom. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -594,7 +571,8 @@
         }
       ]
     },
-    "entity-sweden": {
+    {
+      "mapId": "entity-sweden",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "Swedish constituent kingdom retained separately from the Sweden–Norway personal union. The 1809 and later parliamentary changes are dated constitutional developments, not state succession derived from polygons. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -615,7 +593,8 @@
         }
       ]
     },
-    "entity-sweden-norway": {
+    {
+      "mapId": "entity-sweden-norway",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "Separate personal-union record with two constituent kingdoms; never treated as a naming alias for either state. June declaration and October recognition in 1905 remain separately dated. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -637,7 +616,8 @@
         }
       ]
     },
-    "entity-norway": {
+    {
+      "mapId": "entity-norway",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "Constitutional constituent kingdom distinguished from the union; independence in 1905 changes its royal relationship. The shared union monarchs are displayed in the union profile, using explicitly Swedish regnal names. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -660,7 +640,8 @@
         }
       ]
     },
-    "entity-finland": {
+    {
+      "mapId": "entity-finland",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "One map label requires two historical entities: imperial grand duchy and independent Finland. Calendar year 1917 spans the identity change and deliberately returns ambiguity instead of choosing arbitrarily. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -681,7 +662,8 @@
         }
       ]
     },
-    "entity-iceland": {
+    {
+      "mapId": "entity-iceland",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "One map identity is split between Danish administration and the sovereign Icelandic state from 1 December 1918. The kingdom-to-republic change in 1944 is retained within the sovereign framework; 1918 is an ambiguous whole-calendar transition. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -713,7 +695,8 @@
         }
       ]
     },
-    "entity-netherlands": {
+    {
+      "mapId": "entity-netherlands",
       "status": "needs-research",
       "tier": "none",
       "reviewerNote": "Kingdom from 1815, with constitutional and territorial developments; kept separate from the Batavian Republic. Occupation interrupts functioning institutions without turning the exiled constitutional government into an occupation regime. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -733,7 +716,8 @@
         }
       ]
     },
-    "entity-batavian-republic": {
+    {
+      "mapId": "entity-batavian-republic",
       "status": "needs-research",
       "tier": "none",
       "reviewerNote": "Distinct republic with independently sourced executive transitions; not a naming variation of the later Dutch kingdom. The five-member executive is a collective political office, not a fabricated individual leader. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -753,7 +737,8 @@
         }
       ]
     },
-    "entity-belgium": {
+    {
+      "mapId": "entity-belgium",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "Independent Belgian state, not merged into the Netherlands or Austrian Netherlands. Formal monarchy, wartime interruption and postwar regency are distinguished. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -774,7 +759,8 @@
         }
       ]
     },
-    "entity-luxembourg": {
+    {
+      "mapId": "entity-luxembourg",
       "status": "needs-research",
       "tier": "none",
       "reviewerNote": "Grand duchy only from 1815. The 1800 label refers to territory then under French administration, not a prematurely existing grand duchy. Luxembourg’s personal union does not merge it into the Netherlands. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -794,7 +780,8 @@
         }
       ]
     },
-    "entity-austrian-netherlands": {
+    {
+      "mapId": "entity-austrian-netherlands",
       "status": "mapping-review",
       "tier": "none",
       "reviewerNote": "The 1800 source label is anachronistic: French annexation is documented on 1 October 1795 and the Habsburg claims ended with Campo Formio on 17 October 1797. No production mapping to an Austrian polity in 1800 is defensible. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -812,7 +799,8 @@
         }
       ]
     },
-    "entity-helvetic-republic": {
+    {
+      "mapId": "entity-helvetic-republic",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "Distinct centralised republic, not the later federal Swiss state. January and August 1800 executive changes are retained; the five-member Directory is not assigned to all of 1800. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -830,7 +818,8 @@
         }
       ]
     },
-    "entity-switzerland": {
+    {
+      "mapId": "entity-switzerland",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "Two curated frameworks under the same map label: treaty confederation from August 1815, then federal state from 1848. The 1848 selected year deliberately resolves ambiguously; no automatic unchanged-state continuity claim. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -850,7 +839,8 @@
         }
       ]
     },
-    "entity-france": {
+    {
+      "mapId": "entity-france",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "Successive regimes curated under the French political-history identity, with explicit wartime competing claims and legal discontinuity of Vichy acts. No unchanged constitution or automatic linear succession is claimed. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -871,7 +861,8 @@
         }
       ]
     },
-    "entity-portugal": {
+    {
+      "mapId": "entity-portugal",
       "status": "needs-research",
       "tier": "none",
       "reviewerNote": "Monarchy, Brazil-based composite royal framework and republican regimes are dated separately within the Portugal political-history record. A royal seat in Rio is preserved for 1815 instead of a modern-capital fallback. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -894,7 +885,8 @@
         }
       ]
     },
-    "entity-spain": {
+    {
+      "mapId": "entity-spain",
       "status": "needs-research",
       "tier": "none",
       "reviewerNote": "Monarchical, republican and dictatorial regimes are dated within a Spanish political-history identity. Civil-war competing authorities are preserved; Franco’s 1936 insurgent office is distinct from postwar combined state/government leadership. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -918,7 +910,8 @@
         }
       ]
     },
-    "entity-andorra": {
+    {
+      "mapId": "entity-andorra",
       "status": "needs-research",
       "tier": "none",
       "reviewerNote": "Historic co-principality, with the Bishop of Urgell and French head of state as offices; not a modern parliamentary country template. The selected 1938–60 map periods precede the 1981 executive and 1993 constitution. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -937,7 +930,8 @@
         }
       ]
     },
-    "entity-san-marino": {
+    {
+      "mapId": "entity-san-marino",
       "status": "needs-research",
       "tier": "none",
       "reviewerNote": "Historic republic with a dual, rotating regency; kept separate from surrounding Italian political entities. Legendary foundation chronology is not asserted as documented fact. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -955,7 +949,8 @@
         }
       ]
     },
-    "entity-malta": {
+    {
+      "mapId": "entity-malta",
       "status": "core-complete",
       "tier": "core",
       "reviewerNote": "British protection and subsequent colonial possession, not the modern independent republic. The French period before September 1800 is outside this curated entity; political and monetary changes have independently sourced dates. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
@@ -976,37 +971,107 @@
         }
       ]
     }
+  ],
+  "limitations": [
+    "Acceptance is by reviewed interval, not global 1800–1960 coverage. Many core-accepted raw identities also have earlier partial periods.",
+    "Austrian Netherlands in 1800 is a proven source-label problem; Luxembourg in 1800 remains outside the grand-ducal mapping.",
+    "Finland 1917, Iceland 1918 and Switzerland 1848 deliberately produce whole-calendar identity ambiguity. UK 1801 begins on 1 January and is not ambiguous.",
+    "The exact/nearest map snapshot remains independent of requested-year facts; source-layer absence does not imply dissolution.",
+    "No new population, flag, area or GDP data. All original sources, flags and observations remain.",
+    "No new simplified predecessor/successor chains. Union and constitutional developments are recorded as dated events and explicit relationships."
+  ],
+  "afterPoliticalCoverage": {
+    "candidates": 401,
+    "covered": 29,
+    "uncovered": 372,
+    "percentage": 7.23
   },
-  "acceptance": {
-    "core": [
-      "historical identity/name",
-      "existence/status",
-      "capital",
-      "government/political structure",
-      "principal leadership",
-      "currency",
-      "concise dated overview",
-      "source provenance"
-    ],
-    "enrichment": [
-      "dated scoped population",
-      "licensed historically applicable flags/standards",
-      "legislature",
-      "party",
-      "dynasty",
-      "explicit predecessor/successor",
-      "successive overviews",
-      "timeline",
-      "other independently supported facts"
-    ],
-    "rule": "A tier is accepted only by an explicit reviewed decision, with date intervals, evidence/omission rationale and reviewer note. Structural field presence alone never marks completeness."
-  },
-  "batchReviews": {
-    "political-batch-01": {
-      "state": "researched-with-partial-coverage",
-      "report": "research-batch-01.json",
-      "reviewedOn": "2026-10-01",
-      "note": "All 24 raw identities researched; accepted core intervals and documented omissions. Other batches not started."
+  "afterSnapshots": [
+    {
+      "year": 1800,
+      "politicalCandidates": 121,
+      "covered": 9,
+      "percentage": 7.44
+    },
+    {
+      "year": 1815,
+      "politicalCandidates": 124,
+      "covered": 11,
+      "percentage": 8.87
+    },
+    {
+      "year": 1878,
+      "politicalCandidates": 142,
+      "covered": 14,
+      "percentage": 9.86
+    },
+    {
+      "year": 1880,
+      "politicalCandidates": 143,
+      "covered": 14,
+      "percentage": 9.79
+    },
+    {
+      "year": 1900,
+      "politicalCandidates": 139,
+      "covered": 14,
+      "percentage": 10.07
+    },
+    {
+      "year": 1914,
+      "politicalCandidates": 136,
+      "covered": 16,
+      "percentage": 11.76
+    },
+    {
+      "year": 1920,
+      "politicalCandidates": 150,
+      "covered": 16,
+      "percentage": 10.67
+    },
+    {
+      "year": 1930,
+      "politicalCandidates": 151,
+      "covered": 16,
+      "percentage": 10.6
+    },
+    {
+      "year": 1938,
+      "politicalCandidates": 162,
+      "covered": 19,
+      "percentage": 11.73
+    },
+    {
+      "year": 1945,
+      "politicalCandidates": 169,
+      "covered": 17,
+      "percentage": 10.06
+    },
+    {
+      "year": 1960,
+      "politicalCandidates": 147,
+      "covered": 18,
+      "percentage": 12.24
     }
+  ],
+  "validation": {
+    "automatedTestsPassed": 37,
+    "browserChecksPassed": 108,
+    "browserRuntimeErrors": 0,
+    "allNewEntitiesBrowserTested": 25,
+    "referenceRecordsPreserved": 7,
+    "originalSourcesPreserved": 82,
+    "syntaxChecks": "All root JavaScript modules and coverage/test modules",
+    "metadataChecks": [
+      "Unique entity/source IDs",
+      "All source references resolve",
+      "All new mappings resolve in at least one atlas year",
+      "Structurally valid dates and intervals",
+      "No new flags/population/GDP/area fallback",
+      "Accepted core calendar years have all required fields"
+    ],
+    "coverageGeneration": "passed",
+    "coverageReproducibility": "passed",
+    "gitDiffCheck": "passed"
   }
 }

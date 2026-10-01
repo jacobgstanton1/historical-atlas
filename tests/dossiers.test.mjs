@@ -86,7 +86,7 @@ test('identity mappings are explicit, ambiguity is omitted and aliases do not cr
 
 const showcase=['entity-united-states','entity-united-kingdom','entity-germany','entity-soviet-union','entity-empire-of-japan','entity-british-raj'];
 test('all six 1939 showcases have sourced basics and sustained overview coverage',()=>{
- assert.equal(db.entities.length,7); assert.equal(db.mappings.length,7);
+ assert.ok(db.entities.length>=7); assert.ok(db.mappings.length>=7);
  for(const id of showcase) for(const year of [1938,1939,1940]) {
   const r=index.resolve(id,year);assert.ok(r.entity,id);
   for(const field of ['names','flags','politicalStatus','capitals','population','governments','leaders','currencies','descriptions','events'])

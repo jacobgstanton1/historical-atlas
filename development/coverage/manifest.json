@@ -4,101 +4,114 @@
   "coverageDefinition": "Covered means the existing production resolver returns a curated entity in at least one snapshot where this map ID is selectable. It does not mean core completeness or coverage throughout 1800–1960. All other IDs still have map-derived fallback panels.",
   "summary": {
     "totalIdentities": 880,
-    "curatedMetadataEntities": 7,
-    "mappedIdentities": 7,
-    "coveredIdentities": 7,
-    "uncoveredIdentities": 873,
-    "percentage": 0.8,
+    "curatedMetadataEntities": 32,
+    "mappedIdentities": 29,
+    "coveredIdentities": 29,
+    "uncoveredIdentities": 851,
+    "percentage": 3.3,
     "multipleSnapshotIdentities": 519,
     "singleSnapshotIdentities": 361,
     "unresolvedQuestions": 261,
     "identitiesWithQuestions": 818,
     "brokenMappings": 0,
     "orphanMetadataEntities": 0,
-    "ambiguousMappingYearPairs": 0
+    "ambiguousMappingYearPairs": 3
   },
   "bySnapshot": [
     {
       "year": 1800,
       "selectableIdentities": 547,
-      "covered": 1,
-      "uncovered": 546,
-      "percentage": 0.18
+      "covered": 9,
+      "uncovered": 538,
+      "percentage": 1.65
     },
     {
       "year": 1815,
       "selectableIdentities": 313,
-      "covered": 1,
-      "uncovered": 312,
-      "percentage": 0.32
+      "covered": 11,
+      "uncovered": 302,
+      "percentage": 3.51
     },
     {
       "year": 1878,
       "selectableIdentities": 173,
-      "covered": 2,
-      "uncovered": 171,
-      "percentage": 1.16
+      "covered": 14,
+      "uncovered": 159,
+      "percentage": 8.09
     },
     {
       "year": 1880,
       "selectableIdentities": 170,
-      "covered": 2,
-      "uncovered": 168,
-      "percentage": 1.18
+      "covered": 14,
+      "uncovered": 156,
+      "percentage": 8.24
     },
     {
       "year": 1900,
       "selectableIdentities": 166,
-      "covered": 2,
-      "uncovered": 164,
-      "percentage": 1.2
+      "covered": 14,
+      "uncovered": 152,
+      "percentage": 8.43
     },
     {
       "year": 1914,
       "selectableIdentities": 143,
-      "covered": 2,
-      "uncovered": 141,
-      "percentage": 1.4
+      "covered": 16,
+      "uncovered": 127,
+      "percentage": 11.19
     },
     {
       "year": 1920,
       "selectableIdentities": 164,
-      "covered": 3,
-      "uncovered": 161,
-      "percentage": 1.83
+      "covered": 16,
+      "uncovered": 148,
+      "percentage": 9.76
     },
     {
       "year": 1930,
       "selectableIdentities": 164,
-      "covered": 3,
-      "uncovered": 161,
-      "percentage": 1.83
+      "covered": 16,
+      "uncovered": 148,
+      "percentage": 9.76
     },
     {
       "year": 1938,
       "selectableIdentities": 172,
-      "covered": 6,
-      "uncovered": 166,
-      "percentage": 3.49
+      "covered": 19,
+      "uncovered": 153,
+      "percentage": 11.05
     },
     {
       "year": 1945,
       "selectableIdentities": 183,
-      "covered": 3,
-      "uncovered": 180,
-      "percentage": 1.64
+      "covered": 17,
+      "uncovered": 166,
+      "percentage": 9.29
     },
     {
       "year": 1960,
       "selectableIdentities": 157,
-      "covered": 4,
-      "uncovered": 153,
-      "percentage": 2.55
+      "covered": 18,
+      "uncovered": 139,
+      "percentage": 11.46
     }
   ],
   "brokenMappings": [],
   "orphanMetadataEntities": [],
-  "ambiguousMappings": [],
+  "ambiguousMappings": [
+    {
+      "mapId": "entity-switzerland",
+      "requestedYear": 1848
+    },
+    {
+      "mapId": "entity-iceland",
+      "requestedYear": 1918
+    },
+    {
+      "mapId": "entity-finland",
+      "requestedYear": 1917
+    }
+  ],
   "questions": [
     {
       "id": "family-britain",
@@ -8385,8 +8398,8 @@
         "entity-iceland"
       ],
       "totalIdentities": 24,
-      "uncuratedIdentities": 23,
-      "existingProfilesToReview": 1,
+      "uncuratedIdentities": 1,
+      "existingProfilesToReview": 23,
       "requiresHistoricalResearch": 24,
       "sourceStrategy": "National archives, parliaments, royal archives and statistical libraries; dates and offices remain entity-specific.",
       "questionIds": [
@@ -13676,70 +13689,113 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1938,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-andorra",
+          "entityId": "andorra-historic-coprincipality",
+          "validFrom": "1806",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "andorra-historic-coprincipality"
+      ],
       "snapshotCoverage": [
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "andorra-historic-coprincipality",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "andorra-historic-coprincipality",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "andorra-historic-coprincipality",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Historic co-principality, with the Bishop of Urgell and French head of state as offices; not a modern parliamentary country template. The selected 1938–60 map periods precede the 1981 executive and 1993 constitution. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Historic co-principality, with the Bishop of Urgell and French head of state as offices; not a modern parliamentary country template. The selected 1938–60 map periods precede the 1981 executive and 1993 constitution.",
+        "omissions": [
+          "Individual co-princes, syndics, currency circulation and capital-city history omitted. Office descriptions are not recorded as invented named leaders."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1806",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-andorra-offices",
+              "b01-casa-de-la-vall"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Historic co-principality, with the Bishop of Urgell and French head of state as offices; not a modern parliamentary country template. The selected 1938–60 map periods precede the 1981 executive and 1993 constitution.",
+        "intervals": [
+          {
+            "validFrom": "1806",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-andorra-offices",
+              "b01-casa-de-la-vall"
+            ]
+          }
+        ],
+        "omissions": [
+          "Individual co-princes, syndics, currency circulation and capital-city history omitted. Office descriptions are not recorded as invented named leaders."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -18843,17 +18899,46 @@
         }
       ],
       "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "researchStatus": "mapping-review",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "mapping-review",
+        "tier": "none",
+        "reviewerNote": "The 1800 source label is anachronistic: French annexation is documented on 1 October 1795 and the Habsburg claims ended with Campo Formio on 17 October 1797. No production mapping to an Austrian polity in 1800 is defensible. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "The 1800 source label is anachronistic: French annexation is documented on 1 October 1795 and the Habsburg claims ended with Campo Formio on 17 October 1797. No production mapping to an Austrian polity in 1800 is defensible.",
+        "omissions": [
+          "No dossier created. The precise French administrative entity or extent represented by the 1800 polygon needs source-layer investigation; polygon overlap is not succession evidence."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1795-10-01",
+            "validUntil": "1797-10-17",
+            "sourceIds": [
+              "b01-austrian-netherlands-end"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [
         "authority-entity-austrian-netherlands"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "The 1800 source label is anachronistic: French annexation is documented on 1 October 1795 and the Habsburg claims ended with Campo Formio on 17 October 1797. No production mapping to an Austrian polity in 1800 is defensible.",
+        "intervals": [
+          {
+            "validFrom": "1795-10-01",
+            "validUntil": "1797-10-17",
+            "sourceIds": [
+              "b01-austrian-netherlands-end"
+            ]
+          }
+        ],
+        "omissions": [
+          "No dossier created. The precise French administrative entity or extent represented by the 1800 polygon needs source-layer investigation; polygon overlap is not succession evidence."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -22235,36 +22320,79 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1800,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-batavian-republic",
+          "entityId": "batavian-republic",
+          "validFrom": "1795",
+          "validUntil": "1806-06-05"
+        }
+      ],
+      "curatedEntityIds": [
+        "batavian-republic"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "batavian-republic",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
+      "currentlyResolvesToDossier": true,
       "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Distinct republic with independently sourced executive transitions; not a naming variation of the later Dutch kingdom. The five-member executive is a collective political office, not a fabricated individual leader. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Distinct republic with independently sourced executive transitions; not a naming variation of the later Dutch kingdom. The five-member executive is a collective political office, not a fabricated individual leader.",
+        "omissions": [
+          "Capital/seat and individual members of the collegiate executives omitted pending direct institutional seat and office-holder evidence. No automatic direct succession to the 1815 kingdom, skipping Holland and French annexation."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1798-08",
+            "validUntil": "1806-06-05",
+            "sourceIds": [
+              "b01-batavian-institutions",
+              "b01-netherlands-monarchy",
+              "b01-dutch-guilder"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct republic with independently sourced executive transitions; not a naming variation of the later Dutch kingdom. The five-member executive is a collective political office, not a fabricated individual leader.",
+        "intervals": [
+          {
+            "validFrom": "1798-08",
+            "validUntil": "1806-06-05",
+            "sourceIds": [
+              "b01-batavian-institutions",
+              "b01-netherlands-monarchy",
+              "b01-dutch-guilder"
+            ]
+          }
+        ],
+        "omissions": [
+          "Capital/seat and individual members of the collegiate executives omitted pending direct institutional seat and office-holder evidence. No automatic direct succession to the 1815 kingdom, skipping Holland and French annexation."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -22844,16 +22972,24 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-belgium",
+          "entityId": "belgium-kingdom",
+          "validFrom": "1830",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "belgium-kingdom"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "belgium-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -22861,15 +22997,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "belgium-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -22877,15 +23013,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "belgium-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -22893,15 +23029,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "belgium-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -22909,15 +23045,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "belgium-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -22925,15 +23061,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "belgium-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -22941,15 +23077,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "belgium-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -22957,15 +23093,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "belgium-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -22973,15 +23109,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "belgium-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -22989,21 +23125,57 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "Independent Belgian state, not merged into the Netherlands or Austrian Netherlands. Formal monarchy, wartime interruption and postwar regency are distinguished. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Independent Belgian state, not merged into the Netherlands or Austrian Netherlands. Formal monarchy, wartime interruption and postwar regency are distinguished.",
+        "omissions": [
+          "Prime ministers, occupation administrations and wartime exile-seat chronology omitted; Brussels is labelled constitutional capital only. The source’s parliamentary framework is not presented as uninterrupted wartime operation."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1832",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-belgian-monarchy",
+              "b01-belgian-constitution-1831",
+              "b01-belgian-franc",
+              "b01-belgium-regent-charles"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independent Belgian state, not merged into the Netherlands or Austrian Netherlands. Formal monarchy, wartime interruption and postwar regency are distinguished.",
+        "intervals": [
+          {
+            "validFrom": "1832",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-belgian-monarchy",
+              "b01-belgian-constitution-1831",
+              "b01-belgian-franc",
+              "b01-belgium-regent-charles"
+            ]
+          }
+        ],
+        "omissions": [
+          "Prime ministers, occupation administrations and wartime exile-seat chronology omitted; Brussels is labelled constitutional capital only. The source’s parliamentary framework is not presented as uninterrupted wartime operation."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -37842,32 +38014,41 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-denmark",
+          "entityId": "denmark-post-kiel",
+          "validFrom": "1814-01-14",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "denmark-post-kiel"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "denmark-post-kiel",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "denmark-post-kiel",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -37875,15 +38056,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "denmark-post-kiel",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -37891,15 +38072,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "denmark-post-kiel",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -37907,15 +38088,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "denmark-post-kiel",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -37923,15 +38104,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "denmark-post-kiel",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -37939,15 +38120,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "denmark-post-kiel",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -37955,15 +38136,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "denmark-post-kiel",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -37971,15 +38152,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "denmark-post-kiel",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -37987,15 +38168,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "denmark-post-kiel",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -38003,13 +38184,34 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "Danish kingdom after the Treaty of Kiel; separate from the earlier composite monarchy. Later constitutional change is within this curated kingdom. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Danish kingdom after the Treaty of Kiel; separate from the earlier composite monarchy. Later constitutional change is within this curated kingdom.",
+        "omissions": [
+          "Core accepted for 1875–1960; earlier currency chronology remains partial (the 1819 note series is not extended). Prime ministers and full constitutional amendment history omitted. Royal seat is explicitly identified as such."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1875",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-denmark-monarchy",
+              "b01-denmark-monarchs",
+              "b01-denmark-krone",
+              "b01-amalienborg"
+            ]
+          }
+        ]
+      },
       "planningFamily": "scandinavian",
       "planningRegion": "west-north-europe",
       "questionIds": [
@@ -38017,14 +38219,29 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-denmark-norway",
           "entity-norway",
           "entity-sweden",
           "entity-sweden-norway"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Danish kingdom after the Treaty of Kiel; separate from the earlier composite monarchy. Later constitutional change is within this curated kingdom.",
+        "intervals": [
+          {
+            "validFrom": "1875",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-denmark-monarchy",
+              "b01-denmark-monarchs",
+              "b01-denmark-krone",
+              "b01-amalienborg"
+            ]
+          }
+        ],
+        "omissions": [
+          "Core accepted for 1875–1960; earlier currency chronology remains partial (the 1819 note series is not extended). Prime ministers and full constitutional amendment history omitted. Royal seat is explicitly identified as such."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -38069,44 +38286,87 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1800,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-denmark-norway",
+          "entityId": "denmark-norway-monarchy",
+          "validFrom": "1800-01-01",
+          "validUntil": "1814-01-14"
+        }
+      ],
+      "curatedEntityIds": [
+        "denmark-norway-monarchy"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "denmark-norway-monarchy",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Distinct composite monarchy, not an alias for modern Denmark or Norway. The Danish Crown’s loss of Norway is dated independently to the Treaty of Kiel. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Distinct composite monarchy, not an alias for modern Denmark or Norway. The Danish Crown’s loss of Norway is dated independently to the Treaty of Kiel.",
+        "omissions": [
+          "Currency and separate constituent administrative seats omitted; a Norwegian unit alone cannot stand for the whole composite monarchy."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1814-01-14",
+            "sourceIds": [
+              "b01-norway-constitution-union",
+              "b01-norway-democracy",
+              "b01-amalienborg"
+            ]
+          }
+        ]
+      },
       "planningFamily": "scandinavian",
       "planningRegion": "west-north-europe",
       "questionIds": [
         "family-scandinavian"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-denmark",
           "entity-norway",
           "entity-sweden",
           "entity-sweden-norway"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct composite monarchy, not an alias for modern Denmark or Norway. The Danish Crown’s loss of Norway is dated independently to the Treaty of Kiel.",
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1814-01-14",
+            "sourceIds": [
+              "b01-norway-constitution-union",
+              "b01-norway-democracy",
+              "b01-amalienborg"
+            ]
+          }
+        ],
+        "omissions": [
+          "Currency and separate constituent administrative seats omitted; a Norwegian unit alone cannot stand for the whole composite monarchy."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -45266,32 +45526,48 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-finland",
+          "entityId": "finland-grand-duchy",
+          "validFrom": "1809",
+          "validUntil": "1917"
+        },
+        {
+          "mapId": "entity-finland",
+          "entityId": "finland-independent",
+          "validFrom": "1917",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "finland-grand-duchy",
+        "finland-independent"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "finland-grand-duchy",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders"
           ]
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "finland-independent",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -45299,15 +45575,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "finland-independent",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -45315,15 +45591,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "finland-independent",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -45331,15 +45607,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "finland-independent",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -45347,15 +45623,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "finland-independent",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -45363,21 +45639,57 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "One map label requires two historical entities: imperial grand duchy and independent Finland. Calendar year 1917 spans the identity change and deliberately returns ambiguity instead of choosing arbitrarily. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "One map label requires two historical entities: imperial grand duchy and independent Finland. Calendar year 1917 spans the identity change and deliberately returns ambiguity instead of choosing arbitrarily.",
+        "omissions": [
+          "Grand-ducal individual office-holders and full constitutional powers omitted; no imperial monarch list copied from a Russian source without Finland-specific evidence. Core accepted only for the republican period from 1919; ministers, wartime seat movements and detailed war chronology remain uncurated."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1919-07-17",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-finland-constitution",
+              "b01-finland-presidents",
+              "b01-finnish-markka",
+              "b01-finland-capital"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "One map label requires two historical entities: imperial grand duchy and independent Finland. Calendar year 1917 spans the identity change and deliberately returns ambiguity instead of choosing arbitrarily.",
+        "intervals": [
+          {
+            "validFrom": "1919-07-17",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-finland-constitution",
+              "b01-finland-presidents",
+              "b01-finnish-markka",
+              "b01-finland-capital"
+            ]
+          }
+        ],
+        "omissions": [
+          "Grand-ducal individual office-holders and full constitutional powers omitted; no imperial monarch list copied from a Russian source without Finland-specific evidence. Core accepted only for the republican period from 1919; ministers, wartime seat movements and detailed war chronology remain uncurated."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -45960,48 +46272,58 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-france",
+          "entityId": "france-political-frameworks",
+          "validFrom": "1799-12-13",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "france-political-frameworks"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "france-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "france-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "france-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -46009,15 +46331,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "france-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -46025,15 +46347,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "france-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -46041,15 +46363,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "france-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -46057,15 +46379,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "france-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -46073,15 +46395,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "france-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -46089,15 +46411,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "france-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -46105,53 +46427,91 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "france-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "france-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "Successive regimes curated under the French political-history identity, with explicit wartime competing claims and legal discontinuity of Vichy acts. No unchanged constitution or automatic linear succession is claimed. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Successive regimes curated under the French political-history identity, with explicit wartime competing claims and legal discontinuity of Vichy acts. No unchanged constitution or automatic linear succession is claimed.",
+        "omissions": [
+          "Core accepted for 1880–1939. Early capital and currency before 1803, 1804–14 and 1830–74 regime detail, all of the Hundred Days, post-1940 seat changes, Pétain’s full office term, ministers, 1946–47 and 1958 constitutional detail remain partial. No modern Paris or current constitution fallback."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1880",
+            "validUntil": "1940-01-01",
+            "sourceIds": [
+              "b01-france-third-republic",
+              "b01-french-presidents",
+              "b01-franc-germinal",
+              "b01-french-new-franc"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Successive regimes curated under the French political-history identity, with explicit wartime competing claims and legal discontinuity of Vichy acts. No unchanged constitution or automatic linear succession is claimed.",
+        "intervals": [
+          {
+            "validFrom": "1880",
+            "validUntil": "1940-01-01",
+            "sourceIds": [
+              "b01-france-third-republic",
+              "b01-french-presidents",
+              "b01-franc-germinal",
+              "b01-french-new-franc"
+            ]
+          }
+        ],
+        "omissions": [
+          "Core accepted for 1880–1939. Early capital and currency before 1803, 1804–14 and 1830–74 regime detail, all of the Hundred Days, post-1940 seat changes, Pétain’s full office term, ministers, 1946–47 and 1958 constitutional detail remain partial. No modern Paris or current constitution fallback."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -58446,16 +58806,24 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1800,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-helvetic-republic",
+          "entityId": "helvetic-republic",
+          "validFrom": "1798-04-12",
+          "validUntil": "1803-03-10"
+        }
+      ],
+      "curatedEntityIds": [
+        "helvetic-republic"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "helvetic-republic",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -58463,19 +58831,49 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "needs-research",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "Distinct centralised republic, not the later federal Swiss state. January and August 1800 executive changes are retained; the five-member Directory is not assigned to all of 1800. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Distinct centralised republic, not the later federal Swiss state. January and August 1800 executive changes are retained; the five-member Directory is not assigned to all of 1800.",
+        "omissions": [
+          "Individual directors, 1801–03 office-holder and constitutional changes remain partial. Core acceptance limited to the represented 1800 calendar year; the year contains several real collegiate executives. No uncertain population or unlicensed flag added."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b01-helvetic-republic"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct centralised republic, not the later federal Swiss state. January and August 1800 executive changes are retained; the five-member Directory is not assigned to all of 1800.",
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b01-helvetic-republic"
+            ]
+          }
+        ],
+        "omissions": [
+          "Individual directors, 1801–03 office-holder and constitutional changes remain partial. Core acceptance limited to the represented 1800 calendar year; the year contains several real collegiate executives. No uncertain population or unlicensed flag added."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -60180,48 +60578,65 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-iceland",
+          "entityId": "iceland-danish-administration",
+          "validFrom": "1845",
+          "validUntil": "1918-12-01"
+        },
+        {
+          "mapId": "entity-iceland",
+          "entityId": "iceland-sovereign",
+          "validFrom": "1918-12-01",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "iceland-danish-administration",
+        "iceland-sovereign"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "iceland-danish-administration",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "iceland-danish-administration",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "iceland-danish-administration",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -60229,15 +60644,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "iceland-danish-administration",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -60245,15 +60660,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "iceland-sovereign",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -60261,15 +60676,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "iceland-sovereign",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -60277,15 +60692,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "iceland-sovereign",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -60293,15 +60708,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "iceland-sovereign",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -60309,13 +60724,45 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "One map identity is split between Danish administration and the sovereign Icelandic state from 1 December 1918. The kingdom-to-republic change in 1944 is retained within the sovereign framework; 1918 is an ambiguous whole-calendar transition. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "One map identity is split between Danish administration and the sovereign Icelandic state from 1 December 1918. The kingdom-to-republic change in 1944 is retained within the sovereign framework; 1918 is an ambiguous whole-calendar transition.",
+        "omissions": [
+          "Core accepted from 1884 for the dependent period and from 1919 for sovereignty, with the 1952 interim executive explicitly omitted. Pre-1884 currency, early Danish monarchs, prime ministers and an exhaustive constitutional account omitted. No Danish facts reused without Iceland-specific constitutional evidence.",
+          "The transition year 1918 is excluded from core acceptance because the calendar-year resolver correctly reports two historical identities."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1884",
+            "validUntil": "1918-01-01",
+            "sourceIds": [
+              "b01-iceland-parliament",
+              "b01-icelandic-currency",
+              "b01-denmark-monarchs"
+            ]
+          },
+          {
+            "validFrom": "1919",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-iceland-parliament",
+              "b01-iceland-sovereignty",
+              "b01-sveinn-bjornsson",
+              "b01-asgeir-asgeirsson",
+              "b01-icelandic-currency"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [
         "gap-entity-iceland",
@@ -60323,9 +60770,35 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "One map identity is split between Danish administration and the sovereign Icelandic state from 1 December 1918. The kingdom-to-republic change in 1944 is retained within the sovereign framework; 1918 is an ambiguous whole-calendar transition.",
+        "intervals": [
+          {
+            "validFrom": "1884",
+            "validUntil": "1918-01-01",
+            "sourceIds": [
+              "b01-iceland-parliament",
+              "b01-icelandic-currency",
+              "b01-denmark-monarchs"
+            ]
+          },
+          {
+            "validFrom": "1919",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-iceland-parliament",
+              "b01-iceland-sovereignty",
+              "b01-sveinn-bjornsson",
+              "b01-asgeir-asgeirsson",
+              "b01-icelandic-currency"
+            ]
+          }
+        ],
+        "omissions": [
+          "Core accepted from 1884 for the dependent period and from 1919 for sovereignty, with the 1952 interim executive explicitly omitted. Pre-1884 currency, early Danish monarchs, prime ministers and an exhaustive constitutional account omitted. No Danish facts reused without Iceland-specific constitutional evidence.",
+          "The transition year 1918 is excluded from core acceptance because the calendar-year resolver correctly reports two historical identities."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -61772,16 +62245,24 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1938,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-ireland",
+          "entityId": "ireland-independent",
+          "validFrom": "1922-12-06",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "ireland-independent"
+      ],
       "snapshotCoverage": [
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ireland-independent",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -61789,15 +62270,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ireland-independent",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -61805,15 +62286,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ireland-independent",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -61821,13 +62302,35 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "Independent Irish state from 1922; constitutional changes are dated within this framework, separate from the old Kingdom of Ireland and the UK. Republic of Ireland is a 1949 description, not a renamed state. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Independent Irish state from 1922; constitutional changes are dated within this framework, separate from the old Kingdom of Ireland and the UK. Republic of Ireland is a 1949 description, not a renamed state.",
+        "omissions": [
+          "Core accepted from the first presidential term in 1938. 1922–37 capital, executive office-holders and overview remain partial; Taoisigh are not substituted by Presidents. No claim of continuity with the pre-1801 kingdom."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1938-06-25",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-irish-constitution-1937",
+              "b01-irish-pound",
+              "b01-douglas-hyde",
+              "b01-sean-okelly",
+              "b01-de-valera"
+            ]
+          }
+        ]
+      },
       "planningFamily": "britain",
       "planningRegion": "west-north-europe",
       "questionIds": [
@@ -61835,13 +62338,29 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-kingdom-of-ireland",
           "entity-united-kingdom",
           "entity-united-kingdom-of-great-britain-and-ireland"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independent Irish state from 1922; constitutional changes are dated within this framework, separate from the old Kingdom of Ireland and the UK. Republic of Ireland is a 1949 description, not a renamed state.",
+        "intervals": [
+          {
+            "validFrom": "1938-06-25",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-irish-constitution-1937",
+              "b01-irish-pound",
+              "b01-douglas-hyde",
+              "b01-sean-okelly",
+              "b01-de-valera"
+            ]
+          }
+        ],
+        "omissions": [
+          "Core accepted from the first presidential term in 1938. 1922–37 capital, executive office-holders and overview remain partial; Taoisigh are not substituted by Presidents. No claim of continuity with the pre-1801 kingdom."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -68232,16 +68751,24 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1800,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-kingdom-of-ireland",
+          "entityId": "kingdom-of-ireland",
+          "validFrom": "1800-01-01",
+          "validUntil": "1801-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "kingdom-of-ireland"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "kingdom-of-ireland",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -68249,13 +68776,32 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "Separate pre-union kingdom; not the independent twentieth-century Irish state. Its curated period is 1800, and its disappearance is dated by the Acts, not the next map snapshot. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Separate pre-union kingdom; not the independent twentieth-century Irish state. Its curated period is 1800, and its disappearance is dated by the Acts, not the next map snapshot.",
+        "omissions": [
+          "Lord Lieutenant and ministers omitted; earlier foundation and earlier institutional history outside curated scope."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b01-uk-union-acts",
+              "b01-irish-pound-origins"
+            ]
+          }
+        ]
+      },
       "planningFamily": "britain",
       "planningRegion": "west-north-europe",
       "questionIds": [
@@ -68263,13 +68809,26 @@
         "authority-entity-kingdom-of-ireland"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-ireland",
           "entity-united-kingdom",
           "entity-united-kingdom-of-great-britain-and-ireland"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Separate pre-union kingdom; not the independent twentieth-century Irish state. Its curated period is 1800, and its disappearance is dated by the Acts, not the next map snapshot.",
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b01-uk-union-acts",
+              "b01-irish-pound-origins"
+            ]
+          }
+        ],
+        "omissions": [
+          "Lord Lieutenant and ministers omitted; earlier foundation and earlier institutional history outside curated scope."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -76894,8 +77453,17 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-luxembourg",
+          "entityId": "luxembourg-grand-duchy",
+          "validFrom": "1815",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "luxembourg-grand-duchy"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
@@ -76915,177 +77483,220 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "luxembourg-grand-duchy",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
-            "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "governments"
           ]
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "luxembourg-grand-duchy",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
-            "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "governments"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "luxembourg-grand-duchy",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
-            "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "governments"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "luxembourg-grand-duchy",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
-            "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "governments"
           ]
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "luxembourg-grand-duchy",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
-            "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "governments"
           ]
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "luxembourg-grand-duchy",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
-            "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "governments"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "luxembourg-grand-duchy",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
-            "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "governments"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "luxembourg-grand-duchy",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
-            "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "governments"
           ]
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "luxembourg-grand-duchy",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
-            "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "governments"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "luxembourg-grand-duchy",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
-            "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "governments"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Grand duchy only from 1815. The 1800 label refers to territory then under French administration, not a prematurely existing grand duchy. Luxembourg’s personal union does not merge it into the Netherlands. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Grand duchy only from 1815. The 1800 label refers to territory then under French administration, not a prematurely existing grand duchy. Luxembourg’s personal union does not merge it into the Netherlands.",
+        "omissions": [
+          "1800 remains unmapped pending French administrative-scope curation. Capital/seat after the documented 1842 Estates meeting, constitutional changes after 1848, wartime monetary administration, regencies and exile-seat chronology remain partial."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-luxembourg-dynasty",
+              "b01-luxembourg-occupation",
+              "b01-luxembourg-money"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Grand duchy only from 1815. The 1800 label refers to territory then under French administration, not a prematurely existing grand duchy. Luxembourg’s personal union does not merge it into the Netherlands.",
+        "intervals": [
+          {
+            "validFrom": "1815",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-luxembourg-dynasty",
+              "b01-luxembourg-occupation",
+              "b01-luxembourg-money"
+            ]
+          }
+        ],
+        "omissions": [
+          "1800 remains unmapped pending French administrative-scope curation. Capital/seat after the documented 1842 Estates meeting, constitutional changes after 1848, wartime monetary administration, regencies and exile-seat chronology remain partial."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -79330,16 +79941,24 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1914,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-malta",
+          "entityId": "malta-british-administration",
+          "validFrom": "1800-09",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "malta-british-administration"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "malta-british-administration",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -79347,15 +79966,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "malta-british-administration",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -79363,15 +79982,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "malta-british-administration",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -79379,15 +79998,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "malta-british-administration",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -79395,21 +80014,57 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "British protection and subsequent colonial possession, not the modern independent republic. The French period before September 1800 is outside this curated entity; political and monetary changes have independently sourced dates. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "British protection and subsequent colonial possession, not the modern independent republic. The French period before September 1800 is outside this curated entity; political and monetary changes have independently sourced dates.",
+        "omissions": [
+          "Core accepted for 1887–1920, including the 1903 loss of representative government. Governors and local ministers, early monetary circulation, the 1936 Crown transition, and post-1921 constitutional suspensions/restorations remain partial; the British monarch is labelled formal Crown authority only."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1887",
+            "validUntil": "1921-01-01",
+            "sourceIds": [
+              "b01-malta-constitution",
+              "b01-malta-coinage",
+              "b01-valletta-palace",
+              "b01-british-monarchs"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "British protection and subsequent colonial possession, not the modern independent republic. The French period before September 1800 is outside this curated entity; political and monetary changes have independently sourced dates.",
+        "intervals": [
+          {
+            "validFrom": "1887",
+            "validUntil": "1921-01-01",
+            "sourceIds": [
+              "b01-malta-constitution",
+              "b01-malta-coinage",
+              "b01-valletta-palace",
+              "b01-british-monarchs"
+            ]
+          }
+        ],
+        "omissions": [
+          "Core accepted for 1887–1920, including the 1903 loss of representative government. Governors and local ministers, early monetary circulation, the 1936 Crown transition, and post-1921 constitutional suspensions/restorations remain partial; the British monarch is labelled formal Crown authority only."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -90701,128 +91356,143 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-netherlands",
+          "entityId": "netherlands-kingdom",
+          "validFrom": "1815-03-16",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "netherlands-kingdom"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "netherlands-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "netherlands-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "netherlands-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "netherlands-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "netherlands-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "netherlands-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "netherlands-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "netherlands-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -90830,37 +91500,72 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "netherlands-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Kingdom from 1815, with constitutional and territorial developments; kept separate from the Batavian Republic. Occupation interrupts functioning institutions without turning the exiled constitutional government into an occupation regime. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Kingdom from 1815, with constitutional and territorial developments; kept separate from the Batavian Republic. Occupation interrupts functioning institutions without turning the exiled constitutional government into an occupation regime.",
+        "omissions": [
+          "Normal domestic governmental seat after 1830 is not independently curated here; modern Amsterdam is not substituted. 1848 power changes and suffrage are summarised, not exhaustively dated. Wartime currency issues, prime ministers and the 1946–48 overview remain partial."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-03-16",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-netherlands-monarchy",
+              "b01-dutch-parliament",
+              "b01-dutch-guilder"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Kingdom from 1815, with constitutional and territorial developments; kept separate from the Batavian Republic. Occupation interrupts functioning institutions without turning the exiled constitutional government into an occupation regime.",
+        "intervals": [
+          {
+            "validFrom": "1815-03-16",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-netherlands-monarchy",
+              "b01-dutch-parliament",
+              "b01-dutch-guilder"
+            ]
+          }
+        ],
+        "omissions": [
+          "Normal domestic governmental seat after 1830 is not independently curated here; modern Amsterdam is not substituted. 1848 power changes and suffrage are summarised, not exhaustively dated. Wartime currency issues, prime ministers and the 1946–48 overview remain partial."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -98261,16 +98966,24 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-norway",
+          "entityId": "norway-constitutional-kingdom",
+          "validFrom": "1814-05-17",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "norway-constitutional-kingdom"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "norway-constitutional-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -98278,15 +98991,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "norway-constitutional-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -98294,15 +99007,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "norway-constitutional-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -98310,15 +99023,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "norway-constitutional-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -98326,15 +99039,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "norway-constitutional-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -98342,15 +99055,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "norway-constitutional-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -98358,13 +99071,36 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "Constitutional constituent kingdom distinguished from the union; independence in 1905 changes its royal relationship. The shared union monarchs are displayed in the union profile, using explicitly Swedish regnal names. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Constitutional constituent kingdom distinguished from the union; independence in 1905 changes its royal relationship. The shared union monarchs are displayed in the union profile, using explicitly Swedish regnal names.",
+        "omissions": [
+          "Core accepted for the independent kingdom from the 1905 royal election. 1814–1905 Norwegian office-holders and early seat history remain partial; prime ministers and occupied domestic administration omitted. Exile government return day not invented."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1905-11-18",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-haakon-vii",
+              "b01-olav-v",
+              "b01-norway-democracy",
+              "b01-norwegian-units",
+              "b01-norway-royal-election",
+              "b01-oslo-name"
+            ]
+          }
+        ]
+      },
       "planningFamily": "scandinavian",
       "planningRegion": "west-north-europe",
       "questionIds": [
@@ -98372,14 +99108,31 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-denmark",
           "entity-denmark-norway",
           "entity-sweden",
           "entity-sweden-norway"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Constitutional constituent kingdom distinguished from the union; independence in 1905 changes its royal relationship. The shared union monarchs are displayed in the union profile, using explicitly Swedish regnal names.",
+        "intervals": [
+          {
+            "validFrom": "1905-11-18",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-haakon-vii",
+              "b01-olav-v",
+              "b01-norway-democracy",
+              "b01-norwegian-units",
+              "b01-norway-royal-election",
+              "b01-oslo-name"
+            ]
+          }
+        ],
+        "omissions": [
+          "Core accepted for the independent kingdom from the 1905 royal election. 1814–1905 Norwegian office-holders and early seat history remain partial; prime ministers and occupied domestic administration omitted. Exile government return day not invented."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -106664,8 +107417,17 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-portugal",
+          "entityId": "portugal-political-frameworks",
+          "validFrom": "1808",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "portugal-political-frameworks"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
@@ -106685,177 +107447,226 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "portugal-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "portugal-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "portugal-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "portugal-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "portugal-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "portugal-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "portugal-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "portugal-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "portugal-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "portugal-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Monarchy, Brazil-based composite royal framework and republican regimes are dated separately within the Portugal political-history record. A royal seat in Rio is preserved for 1815 instead of a modern-capital fallback. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Monarchy, Brazil-based composite royal framework and republican regimes are dated separately within the Portugal political-history record. A royal seat in Rio is preserved for 1815 instead of a modern-capital fallback.",
+        "omissions": [
+          "1800 remains uncurated. Full Brazil-union title/dissolution chronology, João’s change from regent to king, 1821–42 regimes, later monarchs, pre-1911 monetary detail, post-1910 governmental seats, Sidónio’s earlier executive role, 1951 interim presidency and prime ministers including Salazar remain partial. No formal President is labelled practical head of government."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1808",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-portugal-court-brazil",
+              "b01-portugal-monarchy",
+              "b01-portugal-first-republic",
+              "b01-portugal-dictatorship",
+              "b01-portugal-presidents",
+              "b01-portuguese-escudo"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Monarchy, Brazil-based composite royal framework and republican regimes are dated separately within the Portugal political-history record. A royal seat in Rio is preserved for 1815 instead of a modern-capital fallback.",
+        "intervals": [
+          {
+            "validFrom": "1808",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-portugal-court-brazil",
+              "b01-portugal-monarchy",
+              "b01-portugal-first-republic",
+              "b01-portugal-dictatorship",
+              "b01-portugal-presidents",
+              "b01-portuguese-escudo"
+            ]
+          }
+        ],
+        "omissions": [
+          "1800 remains uncurated. Full Brazil-union title/dissolution chronology, João’s change from regent to king, 1821–42 regimes, later monarchs, pre-1911 monetary detail, post-1910 governmental seats, Sidónio’s earlier executive role, 1951 interim presidency and prime ministers including Salazar remain partial. No formal President is labelled practical head of government."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -114205,36 +115016,75 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-san-marino",
+          "entityId": "san-marino-republic",
+          "validFrom": "1800-01-01",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "san-marino-republic"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "san-marino-republic",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
+      "currentlyResolvesToDossier": true,
       "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Historic republic with a dual, rotating regency; kept separate from surrounding Italian political entities. Legendary foundation chronology is not asserted as documented fact. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Historic republic with a dual, rotating regency; kept separate from surrounding Italian political entities. Legendary foundation chronology is not asserted as documented fact.",
+        "omissions": [
+          "Individual six-month office-holders, historical governmental-seat chronology and the 1815 monetary circulation omitted. The later Sammarinese lira is not projected into 1815; no modern population or flag fallback."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-san-marino-history"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Historic republic with a dual, rotating regency; kept separate from surrounding Italian political entities. Legendary foundation chronology is not asserted as documented fact.",
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-san-marino-history"
+            ]
+          }
+        ],
+        "omissions": [
+          "Individual six-month office-holders, historical governmental-seat chronology and the 1815 monetary circulation omitted. The later Sammarinese lira is not projected into 1815; no modern population or flag fallback."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -118297,144 +119147,160 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-spain",
+          "entityId": "spain-political-frameworks",
+          "validFrom": "1800-01-01",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "spain-political-frameworks"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "spain-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
+            "leaders"
+          ],
+          "missingCoreFields": [
             "capitals",
             "governments",
-            "leaders",
             "currencies",
             "descriptions"
           ]
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "spain-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "spain-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "spain-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "spain-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "spain-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "spain-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "spain-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
+            "leaders",
+            "currencies"
+          ],
+          "missingCoreFields": [
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "spain-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -118442,53 +119308,97 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "spain-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "spain-political-frameworks",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Monarchical, republican and dictatorial regimes are dated within a Spanish political-history identity. Civil-war competing authorities are preserved; Franco’s 1936 insurgent office is distinct from postwar combined state/government leadership. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Monarchical, republican and dictatorial regimes are dated within a Spanish political-history identity. Civil-war competing authorities are preserved; Franco’s 1936 insurgent office is distinct from postwar combined state/government leadership.",
+        "omissions": [
+          "Early monetary systems and governmental seats outside the Republican constitutional capital omitted. 1808–14, 1820–76 and 1930–31 institutional detail, Primo de Rivera’s exact office term, Republican Presidents and wartime operating seats remain partial. No modern constitutional monarchy is applied to Franco’s period."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-spanish-monarchs",
+              "b01-fernando-vii",
+              "b01-spain-constitution-1876",
+              "b01-spain-constitution-1931",
+              "b01-franco-1936",
+              "b01-spain-franco-regime",
+              "b01-spanish-peseta"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Monarchical, republican and dictatorial regimes are dated within a Spanish political-history identity. Civil-war competing authorities are preserved; Franco’s 1936 insurgent office is distinct from postwar combined state/government leadership.",
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-spanish-monarchs",
+              "b01-fernando-vii",
+              "b01-spain-constitution-1876",
+              "b01-spain-constitution-1931",
+              "b01-franco-1936",
+              "b01-spain-franco-regime",
+              "b01-spanish-peseta"
+            ]
+          }
+        ],
+        "omissions": [
+          "Early monetary systems and governmental seats outside the Republican constitutional capital omitted. 1808–14, 1820–76 and 1930–31 institutional detail, Primo de Rivera’s exact office term, Republican Presidents and wartime operating seats remain partial. No modern constitutional monarchy is applied to Franco’s period."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -120885,32 +121795,41 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-sweden",
+          "entityId": "sweden-kingdom",
+          "validFrom": "1800-01-01",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "sweden-kingdom"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "sweden-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
+            "leaders"
+          ],
+          "missingCoreFields": [
             "governments",
-            "leaders",
             "currencies",
             "descriptions"
           ]
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "sweden-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -120918,15 +121837,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "sweden-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -120934,15 +121853,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "sweden-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -120950,15 +121869,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "sweden-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -120966,15 +121885,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "sweden-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -120982,15 +121901,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "sweden-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -120998,13 +121917,34 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "Swedish constituent kingdom retained separately from the Sweden–Norway personal union. The 1809 and later parliamentary changes are dated constitutional developments, not state succession derived from polygons. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Swedish constituent kingdom retained separately from the Sweden–Norway personal union. The 1809 and later parliamentary changes are dated constitutional developments, not state succession derived from polygons.",
+        "omissions": [
+          "Core accepted from 1873. Pre-1809 political structure, pre-krona units and prime ministers remain uncurated. Palace evidence is a historically scoped seat, not a universal palace-location claim."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1873",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-sweden-democracy",
+              "b01-sweden-monarchs",
+              "b01-swedish-krona",
+              "b01-stockholm-palace"
+            ]
+          }
+        ]
+      },
       "planningFamily": "scandinavian",
       "planningRegion": "west-north-europe",
       "questionIds": [
@@ -121013,14 +121953,29 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-denmark",
           "entity-denmark-norway",
           "entity-norway",
           "entity-sweden-norway"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Swedish constituent kingdom retained separately from the Sweden–Norway personal union. The 1809 and later parliamentary changes are dated constitutional developments, not state succession derived from polygons.",
+        "intervals": [
+          {
+            "validFrom": "1873",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-sweden-democracy",
+              "b01-sweden-monarchs",
+              "b01-swedish-krona",
+              "b01-stockholm-palace"
+            ]
+          }
+        ],
+        "omissions": [
+          "Core accepted from 1873. Pre-1809 political structure, pre-krona units and prime ministers remain uncurated. Palace evidence is a historically scoped seat, not a universal palace-location claim."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -121132,32 +122087,41 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1900,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-sweden-norway",
+          "entityId": "sweden-norway-union",
+          "validFrom": "1814-11-04",
+          "validUntil": "1905-10-26"
+        }
+      ],
+      "curatedEntityIds": [
+        "sweden-norway-union"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "sweden-norway-union",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "sweden-norway-union",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -121165,15 +122129,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "sweden-norway-union",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -121181,15 +122145,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "sweden-norway-union",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -121197,13 +122161,35 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "Separate personal-union record with two constituent kingdoms; never treated as a naming alias for either state. June declaration and October recognition in 1905 remain separately dated. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Separate personal-union record with two constituent kingdoms; never treated as a naming alias for either state. June declaration and October recognition in 1905 remain separately dated.",
+        "omissions": [
+          "Earlier constituent currencies and Norwegian governmental seat chronology omitted. Core accepted for 1875–1904 using explicitly qualified constituent seats/units, not one manufactured union capital or currency. Monarchs use Swedish regnal names explicitly."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1875",
+            "validUntil": "1905-01-01",
+            "sourceIds": [
+              "b01-sweden-norway-union",
+              "b01-sweden-monarchs",
+              "b01-swedish-krona",
+              "b01-norwegian-units",
+              "b01-stockholm-palace"
+            ]
+          }
+        ]
+      },
       "planningFamily": "scandinavian",
       "planningRegion": "west-north-europe",
       "questionIds": [
@@ -121211,14 +122197,30 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-denmark",
           "entity-denmark-norway",
           "entity-norway",
           "entity-sweden"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Separate personal-union record with two constituent kingdoms; never treated as a naming alias for either state. June declaration and October recognition in 1905 remain separately dated.",
+        "intervals": [
+          {
+            "validFrom": "1875",
+            "validUntil": "1905-01-01",
+            "sourceIds": [
+              "b01-sweden-norway-union",
+              "b01-sweden-monarchs",
+              "b01-swedish-krona",
+              "b01-norwegian-units",
+              "b01-stockholm-palace"
+            ]
+          }
+        ],
+        "omissions": [
+          "Earlier constituent currencies and Norwegian governmental seat chronology omitted. Core accepted for 1875–1904 using explicitly qualified constituent seats/units, not one manufactured union capital or currency. Monarchs use Swedish regnal names explicitly."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -121472,32 +122474,48 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-switzerland",
+          "entityId": "swiss-confederation-1815",
+          "validFrom": "1815-08-07",
+          "validUntil": "1848"
+        },
+        {
+          "mapId": "entity-switzerland",
+          "entityId": "swiss-federal-state",
+          "validFrom": "1848",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "swiss-confederation-1815",
+        "swiss-federal-state"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "swiss-confederation-1815",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders"
           ]
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "swiss-federal-state",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -121505,15 +122523,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "swiss-federal-state",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -121521,15 +122539,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "swiss-federal-state",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -121537,15 +122555,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "swiss-federal-state",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -121553,15 +122571,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "swiss-federal-state",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -121569,15 +122587,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "swiss-federal-state",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -121585,15 +122603,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "swiss-federal-state",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -121601,15 +122619,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "swiss-federal-state",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -121617,15 +122635,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "swiss-federal-state",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -121633,21 +122651,55 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "Two curated frameworks under the same map label: treaty confederation from August 1815, then federal state from 1848. The 1848 selected year deliberately resolves ambiguously; no automatic unchanged-state continuity claim. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Two curated frameworks under the same map label: treaty confederation from August 1815, then federal state from 1848. The 1848 selected year deliberately resolves ambiguously; no automatic unchanged-state continuity claim.",
+        "omissions": [
+          "1815 confederal seats and presiding office-holders omitted; no single capital manufactured. Core accepted for the federal state from 1850 using the real collective executive; individual Council members and annual Presidents remain uncurated."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1850",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-swiss-federal-council",
+              "b01-bern-federal-city",
+              "b01-swiss-franc"
+            ]
+          }
+        ]
+      },
       "planningRegion": "west-north-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Two curated frameworks under the same map label: treaty confederation from August 1815, then federal state from 1848. The 1848 selected year deliberately resolves ambiguously; no automatic unchanged-state continuity claim.",
+        "intervals": [
+          {
+            "validFrom": "1850",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-swiss-federal-council",
+              "b01-bern-federal-city",
+              "b01-swiss-franc"
+            ]
+          }
+        ],
+        "omissions": [
+          "1815 confederal seats and presiding office-holders omitted; no single capital manufactured. Core accepted for the federal state from 1850 using the real collective executive; individual Council members and annual Presidents remain uncurated."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -129497,21 +130549,27 @@
         {
           "mapId": "entity-united-kingdom",
           "entityId": "united-kingdom",
-          "validFrom": "1936-12",
+          "validFrom": "1801-01-01",
           "validUntil": "1961-01-01"
+        },
+        {
+          "mapId": "entity-united-kingdom",
+          "entityId": "great-britain-1707",
+          "validFrom": "1800-01-01",
+          "validUntil": "1801-01-01"
         }
       ],
       "curatedEntityIds": [
+        "great-britain-1707",
         "united-kingdom"
       ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "great-britain-1707",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -129519,15 +130577,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "united-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -129535,7 +130593,8 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1938,
@@ -129589,7 +130648,33 @@
       "currentlyResolvesToDossier": true,
       "researchStatus": "existing-enriched",
       "coverageTier": "existing-enriched",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "existing-enriched",
+        "tier": "existing-enriched",
+        "reviewerNote": "The 1800 source label resolves to Great Britain; from 1801 it resolves to the existing UK entity. The 1922 territorial change and 1927 title change are not a new state inferred from geometry. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "The 1800 source label resolves to Great Britain; from 1801 it resolves to the existing UK entity. The 1922 territorial change and 1927 title change are not a new state inferred from geometry.",
+        "omissions": [
+          "Existing reference facts retained. Pre-1936 prime ministers and the 1936–37 overview gap remain uncurated; earlier London is represented specifically by the parliamentary seat."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b01-great-britain-1707",
+              "b01-uk-union-acts"
+            ]
+          },
+          {
+            "validFrom": "1801-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-uk-independence",
+              "b01-uk-union-acts"
+            ]
+          }
+        ]
+      },
       "planningFamily": "britain",
       "planningRegion": "west-north-europe",
       "questionIds": [
@@ -129599,13 +130684,34 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-ireland",
           "entity-kingdom-of-ireland",
           "entity-united-kingdom-of-great-britain-and-ireland"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "The 1800 source label resolves to Great Britain; from 1801 it resolves to the existing UK entity. The 1922 territorial change and 1927 title change are not a new state inferred from geometry.",
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b01-great-britain-1707",
+              "b01-uk-union-acts"
+            ]
+          },
+          {
+            "validFrom": "1801-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-uk-independence",
+              "b01-uk-union-acts"
+            ]
+          }
+        ],
+        "omissions": [
+          "Existing reference facts retained. Pre-1936 prime ministers and the 1936–37 overview gap remain uncurated; earlier London is represented specifically by the parliamentary seat."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -129794,16 +130900,24 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1930,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-united-kingdom-of-great-britain-and-ireland",
+          "entityId": "united-kingdom",
+          "validFrom": "1801-01-01",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "curatedEntityIds": [
+        "united-kingdom"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "united-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -129811,15 +130925,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "united-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -129827,15 +130941,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "united-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -129843,15 +130957,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "united-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -129859,15 +130973,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "united-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -129875,15 +130989,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "united-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -129891,15 +131005,15 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "united-kingdom",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -129907,13 +131021,33 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
-      "researchDecision": null,
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "core-complete",
+      "coverageTier": "core",
+      "researchDecision": {
+        "status": "core-complete",
+        "tier": "core",
+        "reviewerNote": "Shares the existing united-kingdom entity from 1801. The 1930 map retains pre-1927 wording; the dossier uses the independently dated formal name, not a duplicate UK entity. Accepted coverage is limited to the listed intervals; see research-batch-01.json for field omissions and temporal gaps.",
+        "identityResolution": "Shares the existing united-kingdom entity from 1801. The 1930 map retains pre-1927 wording; the dossier uses the independently dated formal name, not a duplicate UK entity.",
+        "omissions": [
+          "Pre-1936 prime ministers omitted. Earlier parliamentary seat is stated without claiming a separately verified capital history."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1801-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-uk-union-acts",
+              "b01-uk-independence",
+              "uk-formal-name"
+            ]
+          }
+        ]
+      },
       "planningFamily": "britain",
       "planningRegion": "west-north-europe",
       "questionIds": [
@@ -129921,13 +131055,27 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-ireland",
           "entity-kingdom-of-ireland",
           "entity-united-kingdom"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Shares the existing united-kingdom entity from 1801. The 1930 map retains pre-1927 wording; the dossier uses the independently dated formal name, not a duplicate UK entity.",
+        "intervals": [
+          {
+            "validFrom": "1801-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-uk-union-acts",
+              "b01-uk-independence",
+              "uk-formal-name"
+            ]
+          }
+        ],
+        "omissions": [
+          "Pre-1936 prime ministers omitted. Earlier parliamentary seat is stated without claiming a separately verified capital history."
+        ]
       },
       "batchId": "batch-02",
       "classification": {
@@ -146627,9 +147775,9 @@
     },
     "politicalCoverage": {
       "candidates": 401,
-      "covered": 7,
-      "uncovered": 394,
-      "percentage": 1.75
+      "covered": 29,
+      "uncovered": 372,
+      "percentage": 7.23
     },
     "nonStateTemplateIdentities": 400,
     "bySnapshot": [
@@ -146645,9 +147793,9 @@
           "unresolved": 31
         },
         "politicalCandidates": 121,
-        "politicalCovered": 1,
-        "politicalUncovered": 120,
-        "politicalPercentage": 0.83
+        "politicalCovered": 9,
+        "politicalUncovered": 112,
+        "politicalPercentage": 7.44
       },
       {
         "year": 1815,
@@ -146661,9 +147809,9 @@
           "unresolved": 24
         },
         "politicalCandidates": 124,
-        "politicalCovered": 1,
-        "politicalUncovered": 123,
-        "politicalPercentage": 0.81
+        "politicalCovered": 11,
+        "politicalUncovered": 113,
+        "politicalPercentage": 8.87
       },
       {
         "year": 1878,
@@ -146677,9 +147825,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 142,
-        "politicalCovered": 2,
-        "politicalUncovered": 140,
-        "politicalPercentage": 1.41
+        "politicalCovered": 14,
+        "politicalUncovered": 128,
+        "politicalPercentage": 9.86
       },
       {
         "year": 1880,
@@ -146693,9 +147841,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 143,
-        "politicalCovered": 2,
-        "politicalUncovered": 141,
-        "politicalPercentage": 1.4
+        "politicalCovered": 14,
+        "politicalUncovered": 129,
+        "politicalPercentage": 9.79
       },
       {
         "year": 1900,
@@ -146709,9 +147857,9 @@
           "unresolved": 21
         },
         "politicalCandidates": 139,
-        "politicalCovered": 2,
-        "politicalUncovered": 137,
-        "politicalPercentage": 1.44
+        "politicalCovered": 14,
+        "politicalUncovered": 125,
+        "politicalPercentage": 10.07
       },
       {
         "year": 1914,
@@ -146725,9 +147873,9 @@
           "unresolved": 5
         },
         "politicalCandidates": 136,
-        "politicalCovered": 2,
-        "politicalUncovered": 134,
-        "politicalPercentage": 1.47
+        "politicalCovered": 16,
+        "politicalUncovered": 120,
+        "politicalPercentage": 11.76
       },
       {
         "year": 1920,
@@ -146741,9 +147889,9 @@
           "unresolved": 11
         },
         "politicalCandidates": 150,
-        "politicalCovered": 3,
-        "politicalUncovered": 147,
-        "politicalPercentage": 2
+        "politicalCovered": 16,
+        "politicalUncovered": 134,
+        "politicalPercentage": 10.67
       },
       {
         "year": 1930,
@@ -146757,9 +147905,9 @@
           "unresolved": 10
         },
         "politicalCandidates": 151,
-        "politicalCovered": 3,
-        "politicalUncovered": 148,
-        "politicalPercentage": 1.99
+        "politicalCovered": 16,
+        "politicalUncovered": 135,
+        "politicalPercentage": 10.6
       },
       {
         "year": 1938,
@@ -146773,9 +147921,9 @@
           "unresolved": 6
         },
         "politicalCandidates": 162,
-        "politicalCovered": 6,
-        "politicalUncovered": 156,
-        "politicalPercentage": 3.7
+        "politicalCovered": 19,
+        "politicalUncovered": 143,
+        "politicalPercentage": 11.73
       },
       {
         "year": 1945,
@@ -146789,9 +147937,9 @@
           "unresolved": 12
         },
         "politicalCandidates": 169,
-        "politicalCovered": 3,
-        "politicalUncovered": 166,
-        "politicalPercentage": 1.78
+        "politicalCovered": 17,
+        "politicalUncovered": 152,
+        "politicalPercentage": 10.06
       },
       {
         "year": 1960,
@@ -146805,9 +147953,9 @@
           "unresolved": 8
         },
         "politicalCandidates": 147,
-        "politicalCovered": 4,
-        "politicalUncovered": 143,
-        "politicalPercentage": 2.72
+        "politicalCovered": 18,
+        "politicalUncovered": 129,
+        "politicalPercentage": 12.24
       }
     ],
     "questionAudit": {
@@ -149826,7 +150974,7 @@
   },
   "planningStatus": {
     "batches": "archived-phase1-raw-audit-not-the-political-research-plan",
-    "phase2Batches": "current-proposed-political-plan-not-authorised",
+    "phase2Batches": "batch-01-reviewed-with-partial-coverage-other-batches-not-started",
     "reviewQueue": "classification-and-mapping-gates-not-historical-fact-research"
   },
   "phase2Batches": [
@@ -149864,8 +151012,8 @@
       "totalIdentities": 24,
       "politicalCandidates": 24,
       "nameReviews": 0,
-      "uncoveredPoliticalCandidates": 23,
-      "coveredPoliticalCandidates": 1,
+      "uncoveredPoliticalCandidates": 1,
+      "coveredPoliticalCandidates": 23,
       "sourceStrategy": "National archives, parliaments, royal archives and statistical libraries; dates and offices remain entity-specific.",
       "priorityRationale": "Early source-family batches prioritise long snapshot presence, broad period potential and national archival/constitutional collections. Source availability is a planning expectation, not an entity-by-entity research finding. Families remain indivisible; no periods are researched now.",
       "highValueMapIds": [
@@ -149898,7 +151046,7 @@
           "question": "Review Scandinavian union labels and constituent governments without assuming that a source-name change establishes state succession."
         }
       ],
-      "state": "proposed-not-authorised"
+      "state": "researched-with-partial-coverage"
     },
     {
       "id": "political-batch-02",
@@ -151014,11 +152162,11 @@
       }
     ],
     "pipelineSha256": "3c1cd4c196d1b7c52e603ad810a8b5cfb6b8c74b49afd099b9807a1e3781a53b",
-    "resolverSha256": "6a800be202b653a635e277a72564f42f049977b5facd355bcc6d2d05d6db8213",
-    "metadataSha256": "2dcf5cf94c595429aa371294480f641c00ad3aeb69c07c15f511c319836576e0",
-    "sourcesSha256": "8e6c75e4de22011c782c4d9ab146fe664af1d304ab290e6ec3c406fe549842d6",
-    "planSha256": "6db12e438324a22789602ea864008a71f640c39935158b7e0b7f776ac558573f",
+    "resolverSha256": "55689ebe4a5c26dd99de995b91585a4afb5f270791b63660ccc0b286b87c5d6a",
+    "metadataSha256": "a8cec736b87c7be7e0f17b467f4ed320d10246659c0b90194347af51823c9310",
+    "sourcesSha256": "19003ce73c4ede0a1a256eeed8162369be4ae5dc875904f4ca18597830d0a101",
+    "planSha256": "5d91d89213939ac318bb26c3b64c563f786f584c91a15080d056131b36fa10de",
     "classificationPlanSha256": "260036271b0aaec99acf6f41da9b8d82c0c018988744ab2cb655ed85104198fc",
-    "classificationModuleSha256": "d716094cc3f2f82fecfe7a0e830e536456a3ccdb266177e5d36817674d22d2c9"
+    "classificationModuleSha256": "084f51b76ff21ac3dd1e86c6f9aa115934aed2596010ed8456c416d4d2b6b61a"
   }
 }
