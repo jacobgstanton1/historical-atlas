@@ -65,7 +65,7 @@ export function integrateReviewedFiles(packageFile,jobFile,reviewFile,directory=
  ledger.integrations.push({entityId:original.entityId,period:original.period,packageId:original.id,originalPackageHash:digest(original),integratedClaimIds:integrated.map(c=>c.id),newResearchClaims:integrated.filter(c=>c.origin.kind==='new-research').length,
   reusedEvidenceClaims:integrated.filter(c=>c.origin.kind!=='new-research').length,claimsByCategory:Object.fromEntries([...new Set(integrated.map(c=>c.category))].map(f=>[f,integrated.filter(c=>c.category===f).length])),
   held:Object.values(readJSON(reviewFile).decisions).filter(d=>d==='held').length,rejected:Object.values(readJSON(reviewFile).decisions).filter(d=>d==='rejected').length,skippedDuplicates:prepared.skipped,validationChecks:prepared.validation.checks.length,contextChange:prepared.contextChange,result});
- saveJSON(ledgerFile,ledger);saveJSON(path.join(directory,'research/scale-01/integrated',original.entityId+'-'+digest(original.period).slice(0,8)+'.json'),prepared);
+ saveJSON(ledgerFile,ledger);saveJSON(path.join(directory,'research/scale-01/integrated',original.entityId+'-'+digest({packageId:original.id,period:original.period}).slice(0,16)+'.json'),prepared);
  return {entityId:original.entityId,integrated:integrated.length,newResearch:integrated.filter(c=>c.origin.kind==='new-research').length,duplicates:Object.keys(prepared.skipped).length};
 }
 if(isCLI(import.meta.url)){const[p,j,r]=process.argv.slice(2);console.log(JSON.stringify(integrateReviewedFiles(p,j,r),null,2));}

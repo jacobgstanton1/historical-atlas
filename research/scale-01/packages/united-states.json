@@ -1,0 +1,1646 @@
+{
+  "schemaVersion": 2,
+  "id": "scale01-design-united-states",
+  "jobId": "dossier-71361749a3a5cc0e9278245f",
+  "entityId": "united-states",
+  "mapIds": [
+    "entity-united-states"
+  ],
+  "worker": {
+    "id": "campaign-design",
+    "assignmentType": "comprehensive-entity-period"
+  },
+  "productionFingerprint": "4b7e47acddea71308b7aee433fc5d75177a5bcebd5fba70ab02001d75e0c5d6d",
+  "chronology": {
+    "calendar": "proleptic-gregorian",
+    "yearConvention": "astronomical"
+  },
+  "period": {
+    "from": "1901",
+    "until": "1912"
+  },
+  "claims": [
+    {
+      "id": "s01-united-states-reuse-names-1",
+      "category": "identity",
+      "value": "United States of America",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1901",
+        "until": "1912",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "us-constitution",
+        "us-constitutional-start"
+      ],
+      "evidence": [
+        {
+          "sourceId": "us-constitution",
+          "locator": "Existing production sourced record: names[1]",
+          "note": "Existing dated sourced record, clipped to bounded campaign interval.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1901",
+            "until": "1912",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [
+        "Existing sourced fact reused, excluded from new-information throughput."
+      ],
+      "origin": {
+        "kind": "production-reuse",
+        "reference": "data/historical-entities.json#united-states/names/1"
+      }
+    },
+    {
+      "id": "s01-united-states-reuse-capitals-0",
+      "category": "capital",
+      "value": "Washington, D.C.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1901",
+        "until": "1912",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "us-capital"
+      ],
+      "evidence": [
+        {
+          "sourceId": "us-capital",
+          "locator": "Existing production sourced record: capitals[0]",
+          "note": "Source documents the move of Congress in November 1800; month-level precision is retained.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1901",
+            "until": "1912",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [
+        "Existing sourced fact reused, excluded from new-information throughput."
+      ],
+      "origin": {
+        "kind": "production-reuse",
+        "reference": "data/historical-entities.json#united-states/capitals/0"
+      }
+    },
+    {
+      "id": "s01-united-states-reuse-currencies-0",
+      "category": "currency",
+      "value": "United States dollar",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1901",
+        "until": "1912",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "us-dollar"
+      ],
+      "evidence": [
+        {
+          "sourceId": "us-dollar",
+          "locator": "Existing production sourced record: currencies[0]",
+          "note": "Existing dated sourced record, clipped to bounded campaign interval.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1901",
+            "until": "1912",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [
+        "Existing sourced fact reused, excluded from new-information throughput."
+      ],
+      "origin": {
+        "kind": "production-reuse",
+        "reference": "data/historical-entities.json#united-states/currencies/0"
+      }
+    },
+    {
+      "id": "s01-united-states-congress-elections",
+      "category": "political-institutional",
+      "value": "House members served two-year terms; each state’s legislature selected two senators for six years.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1901",
+        "until": "1912",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "us-constitution"
+      ],
+      "evidence": [
+        {
+          "sourceId": "us-constitution",
+          "locator": "ArticleI sections2–3",
+          "note": "Original legislative selection applies before1913SeventeenthAmendment.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1901",
+            "until": "1912",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "us-constitution"
+      },
+      "metric": "congress-elections"
+    },
+    {
+      "id": "s01-united-states-lawmaking",
+      "category": "political-institutional",
+      "value": "Revenue bills originated in the House; presidential vetoes could be overridden by two-thirds of each house.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1901",
+        "until": "1912",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "us-constitution"
+      ],
+      "evidence": [
+        {
+          "sourceId": "us-constitution",
+          "locator": "ArticleI section7",
+          "note": "Distinct revenue/veto legislative procedure.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1901",
+            "until": "1912",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "us-constitution"
+      },
+      "metric": "lawmaking"
+    },
+    {
+      "id": "s01-united-states-federal-powers",
+      "category": "political-institutional",
+      "value": "Congress controlled federal taxation, borrowing, interstate and foreign commerce, coinage and war declarations.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1901",
+        "until": "1912",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "us-constitution"
+      ],
+      "evidence": [
+        {
+          "sourceId": "us-constitution",
+          "locator": "ArticleI section8",
+          "note": "Grouped enumerated federal powers.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1901",
+            "until": "1912",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "us-constitution"
+      },
+      "metric": "federal-powers"
+    },
+    {
+      "id": "s01-united-states-executive",
+      "category": "political-institutional",
+      "value": "A four-year president headed the executive and military; treaties required concurrence of two-thirds of senators present.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1901",
+        "until": "1912",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "us-constitution"
+      ],
+      "evidence": [
+        {
+          "sourceId": "us-constitution",
+          "locator": "ArticleII sections1–2",
+          "note": "Does not imply later presidential term limits.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1901",
+            "until": "1912",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "us-constitution"
+      },
+      "metric": "executive"
+    },
+    {
+      "id": "s01-united-states-judiciary",
+      "category": "political-institutional",
+      "value": "Federal judges held office during good behaviour; Supreme Court and lower federal courts exercised constitutional jurisdiction.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1901",
+        "until": "1912",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "us-constitution"
+      ],
+      "evidence": [
+        {
+          "sourceId": "us-constitution",
+          "locator": "ArticleIII sections1–2",
+          "note": "Formal judicial design, not a statement about equal practical access.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1901",
+            "until": "1912",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "us-constitution"
+      },
+      "metric": "judiciary"
+    },
+    {
+      "id": "s01-united-states-federalism",
+      "category": "political-institutional",
+      "value": "States could not make treaties or coin money; constitutional federal law and treaties were supreme over conflicting state law.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1901",
+        "until": "1912",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "us-constitution"
+      ],
+      "evidence": [
+        {
+          "sourceId": "us-constitution",
+          "locator": "ArticleI section10;ArticleVI",
+          "note": "Formal constitutional allocation, not geometry-derived sovereignty.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1901",
+            "until": "1912",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "us-constitution"
+      },
+      "metric": "federalism"
+    },
+    {
+      "id": "s01-united-states-mckinley",
+      "category": "leadership",
+      "value": "William McKinley",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1901-01-01",
+        "until": "1901-09-14",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-mckinley"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-mckinley",
+          "locator": "Assassination paragraph",
+          "note": "Beginning is a bounded-year clip; death ends presidency.",
+          "precision": "day",
+          "temporal": {
+            "kind": "interval",
+            "from": "1901-01-01",
+            "until": "1901-09-14",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-mckinley"
+      },
+      "role": "President"
+    },
+    {
+      "id": "s01-united-states-roosevelt",
+      "category": "leadership",
+      "value": "Theodore Roosevelt",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1901-09-14",
+        "until": "1909-03-04",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "14September1901and4March1909entries",
+          "note": "Accession and succession dates independently explicit.",
+          "precision": "day",
+          "temporal": {
+            "kind": "interval",
+            "from": "1901-09-14",
+            "until": "1909-03-04",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      },
+      "role": "President"
+    },
+    {
+      "id": "s01-united-states-taft",
+      "category": "leadership",
+      "value": "William Howard Taft",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1909-03-04",
+        "until": "1913-01-01",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-taft"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-taft",
+          "locator": "FastFactsinauguration/end",
+          "note": "Research clip excludes1913whiletenure continueduntilMarch4.",
+          "precision": "day",
+          "temporal": {
+            "kind": "interval",
+            "from": "1909-03-04",
+            "until": "1913-01-01",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-taft"
+      },
+      "role": "President"
+    },
+    {
+      "id": "s01-united-states-reclamation",
+      "category": "events-context",
+      "value": "The Newlands Reclamation Act authorised federal irrigation projects.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1902-06-17",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "Datedchronologyentry1902-06-17",
+          "note": "Historical event dated explicitly; no later result silently projected into eventyear.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1902-06-17",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      }
+    },
+    {
+      "id": "s01-united-states-coal-strike",
+      "category": "events-context",
+      "value": "The anthracite coal strike ended following presidential mediation and a commission.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1902-10-21",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "Datedchronologyentry1902-10-21",
+          "note": "Historical event dated explicitly; no later result silently projected into eventyear.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1902-10-21",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      }
+    },
+    {
+      "id": "s01-united-states-cabinet-department",
+      "category": "events-context",
+      "value": "The Department of Commerce and Labor was created.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1903-02-14",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "Datedchronologyentry1903-02-14",
+          "note": "Historical event dated explicitly; no later result silently projected into eventyear.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1903-02-14",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      }
+    },
+    {
+      "id": "s01-united-states-trust-decision",
+      "category": "events-context",
+      "value": "The Supreme Court ordered Northern Securities dissolved under antitrust law.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1904-03-14",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "Datedchronologyentry1904-03-14",
+          "note": "Historical event dated explicitly; no later result silently projected into eventyear.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1904-03-14",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      }
+    },
+    {
+      "id": "s01-united-states-forest-service",
+      "category": "events-context",
+      "value": "The national Forest Service was established.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1905-02-01",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "Datedchronologyentry1905-02-01",
+          "note": "Historical event dated explicitly; no later result silently projected into eventyear.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1905-02-01",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      }
+    },
+    {
+      "id": "s01-united-states-railroad-rates",
+      "category": "events-context",
+      "value": "The Hepburn Act strengthened Interstate Commerce Commission regulation of railroad rates.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1906-06-29",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "Datedchronologyentry1906-06-29",
+          "note": "Historical event dated explicitly; no later result silently projected into eventyear.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1906-06-29",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      }
+    },
+    {
+      "id": "s01-united-states-food-safety",
+      "category": "events-context",
+      "value": "Meat Inspection and Pure Food and Drug legislation strengthened federal inspection and labelling.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1906-06-30",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "Datedchronologyentry1906-06-30",
+          "note": "Historical event dated explicitly; no later result silently projected into eventyear.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1906-06-30",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      }
+    },
+    {
+      "id": "s01-united-states-panic",
+      "category": "events-context",
+      "value": "Banking panic spread amid fears about New York trust companies.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1907-10-22",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "Datedchronologyentry1907-10-22",
+          "note": "Historical event dated explicitly; no later result silently projected into eventyear.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1907-10-22",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      }
+    },
+    {
+      "id": "s01-united-states-oklahoma",
+      "category": "events-context",
+      "value": "Oklahoma was admitted as the46thstate.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1907-11-16",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "Datedchronologyentry1907-11-16",
+          "note": "Historical event dated explicitly; no later result silently projected into eventyear.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1907-11-16",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      }
+    },
+    {
+      "id": "s01-united-states-fleet",
+      "category": "events-context",
+      "value": "The Great White Fleet departed on its world cruise; return was in1909.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1907-12-16",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "Datedchronologyentry1907-12-16",
+          "note": "Historical event dated explicitly; no later result silently projected into eventyear.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1907-12-16",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      }
+    },
+    {
+      "id": "s01-united-states-model-t",
+      "category": "events-context",
+      "value": "Ford introduced the Model T automobile.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1908-10-01",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "Datedchronologyentry1908-10-01",
+          "note": "Historical event dated explicitly; no later result silently projected into eventyear.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1908-10-01",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      }
+    },
+    {
+      "id": "s01-united-states-naacp",
+      "category": "events-context",
+      "value": "Black intellectuals and white progressives formed the NAACP.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1909-02-12",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-miller-roosevelt-events"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-miller-roosevelt-events",
+          "locator": "Datedchronologyentry1909-02-12",
+          "note": "Historical event dated explicitly; no later result silently projected into eventyear.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1909-02-12",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-miller-roosevelt-events"
+      }
+    },
+    {
+      "id": "s01-united-states-canal-treaty",
+      "category": "events-context",
+      "value": "The Hay-Pauncefote Treaty replaced the earlier Anglo-American canal arrangement and permitted the United States to build and manage a canal.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1901",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-state-panama"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-state-panama",
+          "locator": "1901treaty paragraph",
+          "note": "Year precision; treaty licensing not canal completion.",
+          "precision": "year",
+          "temporal": {
+            "kind": "event",
+            "date": "1901",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-state-panama"
+      }
+    },
+    {
+      "id": "s01-united-states-panama-concession",
+      "category": "events-context",
+      "value": "The1903Hay-Bunau-Varilla treaty granted a canal strip and pledged USguarantee of Panama’s independence in exchange for stipulated payments.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1903",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-state-panama"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-state-panama",
+          "locator": "1903treaty paragraph",
+          "note": "Event text records treaty provisions, not map-derived territorial status.",
+          "precision": "year",
+          "temporal": {
+            "kind": "event",
+            "date": "1903",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-state-panama"
+      }
+    },
+    {
+      "id": "s01-united-states-corollary",
+      "category": "events-context",
+      "value": "Roosevelt asserted a USright of intervention in the Western Hemisphere in cases involving chronic instability and foreign creditors.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1904-12",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-state-roosevelt-corollary"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-state-roosevelt-corollary",
+          "locator": "December1904corollary paragraph",
+          "note": "Policy assertion is not recognition of legitimate universal sovereignty.",
+          "precision": "month",
+          "temporal": {
+            "kind": "event",
+            "date": "1904-12",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-state-roosevelt-corollary"
+      }
+    },
+    {
+      "id": "s01-united-states-dollar-diplomacy",
+      "category": "political-institutional",
+      "value": "The Taft administration promoted UScommercial and financial interests through diplomacy, investment and regional intervention.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1910",
+        "until": "1912",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-state-dollar-diplomacy"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-state-dollar-diplomacy",
+          "locator": "Openingandpolicyparagraphs",
+          "note": "Economic policy description, not invented GDP or exchange-rate series.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1910",
+            "until": "1912",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-state-dollar-diplomacy"
+      },
+      "metric": "foreign-economic-policy"
+    },
+    {
+      "id": "s01-united-states-population1910",
+      "category": "population-statistics",
+      "value": 92228496,
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "observation",
+        "observationDate": "1910-04-15",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "us-census1910-panel",
+        "description": "USresidentpopulation reported in1910historicalpanel; overseas/territorial inclusion footnotes not supplied here.",
+        "relationship": "uncertain"
+      },
+      "sourceIds": [
+        "s01-us-census1910"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-us-census1910",
+          "locator": "1910Populationpanel",
+          "note": "Residentpopulationpanel count andcensusday; geographicinclusions requireoriginaltable review.",
+          "precision": "day",
+          "temporal": {
+            "kind": "observation",
+            "observationDate": "1910-04-15",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "partial",
+      "risks": [
+        "statistical-geography-footnotes-required"
+      ],
+      "qualifications": [
+        "No interpolation to1909or1911.",
+        "Count not equated with the complete USoverseaspolitical framework."
+      ],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-us-census1910"
+      },
+      "metric": "reported-resident-census-population",
+      "unit": "persons"
+    },
+    {
+      "id": "s01-united-states-addams",
+      "category": "important-figures",
+      "value": "Jane Addams — settlement and civic reformer",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1905",
+        "until": "1910",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-nobel-addams"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-nobel-addams",
+          "locator": "Chicago civic appointments andpeacelecturesparagraphs",
+          "note": "Datedlocalinstitutional activity, not genericnationalfame.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1905",
+            "until": "1910",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [
+        "1931Nobelprize is provenance context, not selected-period achievement."
+      ],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-nobel-addams"
+      },
+      "figure": {
+        "personId": "jane-addams",
+        "name": "Jane Addams",
+        "categories": [
+          "social-reform",
+          "education",
+          "peace-advocacy"
+        ],
+        "lifespan": {
+          "from": "1860-09-06",
+          "until": "1935-05-21"
+        },
+        "relationship": "Chicago settlementworker andcivicreformer with specific publiceducation andsocialservice activity.",
+        "activity": "Chicago educationboard1905,schoolofcivicsfounding1908,nationalcharitiesconferencepresidency1909,andpeacelectures1906.",
+        "contribution": "Connected settlementwork, civicinvestigation andsocialreform."
+      }
+    },
+    {
+      "id": "s01-united-states-orville",
+      "category": "important-figures",
+      "value": "Orville Wright — aviation inventor",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "interval",
+        "from": "1901",
+        "until": "1909",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-nps-orville"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-nps-orville",
+          "locator": "Aeronautical research,firstflight andcompanyparagraphs",
+          "note": "SpecificDaytonandNorthCarolinatechnical activity;flightpause nothidden.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1901",
+            "until": "1909",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [
+        "Researchcontinuedwhilethebrothersdidnotflybetweenlate1905andspring1908."
+      ],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-nps-orville"
+      },
+      "figure": {
+        "personId": "orville-wright",
+        "name": "Orville Wright",
+        "categories": [
+          "invention",
+          "aviation"
+        ],
+        "lifespan": {
+          "from": "1871-08-19",
+          "until": "1948-01-30"
+        },
+        "relationship": "US-basedmechanic/inventor working withWilbur inDaytonandKittyHawk.",
+        "activity": "Developedaerodynamiccontrols, flew1903Flyer, resumedpublictests1908andformedWrightCompany1909.",
+        "contribution": "Integrated poweredflight withpracticalcontrol systems."
+      }
+    },
+    {
+      "id": "s01-united-states-first-flight",
+      "category": "events-context",
+      "value": "The Wright brothers achieved controlled powered flight at Kill Devil Hills.",
+      "entityId": "united-states",
+      "temporal": {
+        "kind": "event",
+        "date": "1903-12-17",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "united-states-institutional",
+        "description": "Historical entity institutions and associated dated activity, not inferred polygon control.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "s01-nps-orville"
+      ],
+      "evidence": [
+        {
+          "sourceId": "s01-nps-orville",
+          "locator": "17December1903flightparagraph",
+          "note": "Datedtechnicalevent; no inventedannualaviationstatistic.",
+          "precision": "day",
+          "temporal": {
+            "kind": "event",
+            "date": "1903-12-17",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "s01-nps-orville"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "s01-miller-roosevelt-events",
+      "title": "Theodore Roosevelt — Key Events",
+      "institution": "Miller Center, University of Virginia",
+      "url": "https://millercenter.org/president/theodore-roosevelt/key-events",
+      "accessed": "2026-10-02",
+      "usage": "Read complete1901–1909chronology; use explicit dates and concise significant legislative/social/diplomatic events.",
+      "kind": "institutional-historical"
+    },
+    {
+      "id": "s01-miller-mckinley",
+      "title": "William McKinley: Life in Brief",
+      "institution": "Miller Center, University of Virginia",
+      "url": "https://millercenter.org/president/mckinley/life-in-brief",
+      "accessed": "2026-10-02",
+      "usage": "Read complete biography; death14September1901; earlierwar history contextual only.",
+      "kind": "institutional-historical"
+    },
+    {
+      "id": "s01-miller-taft",
+      "title": "William Howard Taft — historical presidential record",
+      "institution": "Miller Center, University of Virginia",
+      "url": "https://millercenter.org/president/taft",
+      "accessed": "2026-10-02",
+      "usage": "Read full relevant office/dates and scholarly overview;4March1909–4March1913presidency.",
+      "kind": "institutional-historical"
+    },
+    {
+      "id": "s01-state-panama",
+      "title": "Building the Panama Canal,1903–1914",
+      "institution": "US Department of State, Office of the Historian",
+      "url": "https://history.state.gov/milestones/1899-1913/panama-canal",
+      "accessed": "2026-10-02",
+      "usage": "Read complete substantive narrative;1901HayPauncefote,1902Senatevote,1903treaty;1914completion excluded.",
+      "kind": "institutional-historical"
+    },
+    {
+      "id": "s01-state-roosevelt-corollary",
+      "title": "Roosevelt Corollary to the Monroe Doctrine,1904",
+      "institution": "US Department of State, Office of the Historian",
+      "url": "https://history.state.gov/milestones/1899-1913/roosevelt-and-monroe-doctrine",
+      "accessed": "2026-10-02",
+      "usage": "Complete substantive paragraphs;December1904policyinterventionjustification, no automaticdependencymapping.",
+      "kind": "institutional-historical"
+    },
+    {
+      "id": "s01-state-dollar-diplomacy",
+      "title": "Dollar Diplomacy,1909–1913",
+      "institution": "US Department of State, Office of the Historian",
+      "url": "https://history.state.gov/milestones/1899-1913/dollar-diplo",
+      "accessed": "2026-10-02",
+      "usage": "Completepolicybodyread;Taft/Knox commercialcapitaldiplomacy and limits.",
+      "kind": "institutional-historical"
+    },
+    {
+      "id": "s01-us-census1910",
+      "title": "1910 Decennial Census historical data",
+      "institution": "US Census Bureau",
+      "url": "https://www.census.gov/programs-surveys/decennial-census/decade.1910.html",
+      "accessed": "2026-10-02",
+      "usage": "Read1910populationpanel andcensus-daystatement;territorialfootnotes absent so scopeheld.",
+      "kind": "institutional-historical"
+    },
+    {
+      "id": "s01-nobel-addams",
+      "title": "Jane Addams — Biographical",
+      "institution": "Nobel Foundation / Nobel Lectures biography",
+      "url": "https://www.nobelprize.org/prizes/peace/1931/addams/biographical/",
+      "accessed": "2026-10-02",
+      "usage": "Entire substantive biography read through directHTTP200;Chicago1905Board,1908schoolfounding,1909nationalconference,1906peacelectures;laterWWI/Nobelnotprojectedback.",
+      "kind": "institutional-historical"
+    },
+    {
+      "id": "s01-nps-orville",
+      "title": "Orville Wright’s Life Story",
+      "institution": "US National Park Service, Dayton Aviation Heritage",
+      "url": "https://www.nps.gov/daav/learn/historyculture/orvillewrightslifestory.htm",
+      "accessed": "2026-10-02",
+      "usage": "Read complete life story, includinggliderwork,1903firstflight,1905/1908flightpause and1909company.",
+      "kind": "institutional-historical"
+    }
+  ],
+  "investigation": [
+    {
+      "category": "identity",
+      "status": "supported",
+      "rationale": "Bounded dated evidence and existing facts examined together; independently reviewed before serial integration.",
+      "consultedSourceIds": [
+        "us-constitution",
+        "us-constitutional-start"
+      ],
+      "gaps": []
+    },
+    {
+      "category": "political-institutional",
+      "status": "supported",
+      "rationale": "Bounded dated evidence and existing facts examined together; independently reviewed before serial integration.",
+      "consultedSourceIds": [
+        "us-constitution",
+        "s01-state-dollar-diplomacy"
+      ],
+      "gaps": []
+    },
+    {
+      "category": "leadership",
+      "status": "partial",
+      "rationale": "Bounded dated evidence and existing facts examined together; independently reviewed before serial integration.",
+      "consultedSourceIds": [
+        "s01-miller-mckinley",
+        "s01-miller-roosevelt-events",
+        "s01-miller-taft"
+      ],
+      "gaps": [
+        "Separate vice-presidents/cabinet sequence remains a gap; head ofstate/government presidency is combined."
+      ]
+    },
+    {
+      "category": "capital",
+      "status": "supported",
+      "rationale": "Bounded dated evidence and existing facts examined together; independently reviewed before serial integration.",
+      "consultedSourceIds": [
+        "us-capital"
+      ],
+      "gaps": []
+    },
+    {
+      "category": "currency",
+      "status": "supported",
+      "rationale": "Bounded dated evidence and existing facts examined together; independently reviewed before serial integration.",
+      "consultedSourceIds": [
+        "us-dollar"
+      ],
+      "gaps": []
+    },
+    {
+      "category": "historical-flag",
+      "status": "unresolved",
+      "rationale": "Applicable category considered against core sources and reuse index; no unsupported fallback.",
+      "consultedSourceIds": [
+        "us-constitution",
+        "us-constitutional-start",
+        "us-capital"
+      ],
+      "gaps": [
+        "Parallel flag worker handles licensed historical design; no guessed asset."
+      ]
+    },
+    {
+      "category": "population-statistics",
+      "status": "partial",
+      "rationale": "Bounded dated evidence and existing facts examined together; independently reviewed before serial integration.",
+      "consultedSourceIds": [
+        "s01-us-census1910"
+      ],
+      "gaps": [
+        "Original enumeration territorial footnotes require review."
+      ]
+    },
+    {
+      "category": "area-statistics",
+      "status": "unresolved",
+      "rationale": "Applicable category considered against core sources and reuse index; no unsupported fallback.",
+      "consultedSourceIds": [
+        "us-constitution",
+        "us-constitutional-start",
+        "us-capital"
+      ],
+      "gaps": [
+        "No compatible dated census geography area accepted."
+      ]
+    },
+    {
+      "category": "density",
+      "status": "unresolved",
+      "rationale": "Applicable category considered against core sources and reuse index; no unsupported fallback.",
+      "consultedSourceIds": [
+        "us-constitution",
+        "us-constitutional-start",
+        "us-capital"
+      ],
+      "gaps": [
+        "No derived density from mismatched geography."
+      ]
+    },
+    {
+      "category": "economy",
+      "status": "unresolved",
+      "rationale": "Applicable category considered against core sources and reuse index; no unsupported fallback.",
+      "consultedSourceIds": [
+        "us-constitution",
+        "us-constitutional-start",
+        "us-capital"
+      ],
+      "gaps": [
+        "No sufficiently precise bounded evidence accepted in this pass."
+      ]
+    },
+    {
+      "category": "events-context",
+      "status": "supported",
+      "rationale": "Bounded dated evidence and existing facts examined together; independently reviewed before serial integration.",
+      "consultedSourceIds": [
+        "s01-miller-roosevelt-events",
+        "s01-state-panama",
+        "s01-state-roosevelt-corollary",
+        "s01-nps-orville"
+      ],
+      "gaps": []
+    },
+    {
+      "category": "relationships",
+      "status": "unresolved",
+      "rationale": "Applicable category considered against core sources and reuse index; no unsupported fallback.",
+      "consultedSourceIds": [
+        "us-constitution",
+        "us-constitutional-start",
+        "us-capital"
+      ],
+      "gaps": [
+        "Canal treaty recorded as event pending related-framework matching."
+      ]
+    },
+    {
+      "category": "overview",
+      "status": "unresolved",
+      "rationale": "Applicable category considered against core sources and reuse index; no unsupported fallback.",
+      "consultedSourceIds": [
+        "us-constitution",
+        "us-constitutional-start",
+        "us-capital"
+      ],
+      "gaps": [
+        "No sufficiently precise bounded evidence accepted in this pass."
+      ]
+    },
+    {
+      "category": "important-figures",
+      "status": "supported",
+      "rationale": "Bounded dated evidence and existing facts examined together; independently reviewed before serial integration.",
+      "consultedSourceIds": [
+        "s01-nobel-addams",
+        "s01-nps-orville"
+      ],
+      "gaps": []
+    }
+  ],
+  "conflicts": [],
+  "provenance": {
+    "createdAt": "2026-10-02",
+    "method": "One coherent deep entity/period pass; production registry, preserved accepted evidence and comprehensive pilot sources searched before external institutional research.",
+    "preservedPackageHashes": []
+  }
+}
