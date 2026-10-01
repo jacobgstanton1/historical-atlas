@@ -29,3 +29,12 @@ if(plan.batchReviews['political-batch-13'])test('Ottoman source/calendar correct
  assert.equal(index.resolve('entity-ottoman-empire',1878).calendarYear.kind,'identity-transition');
  const audit=read('development/coverage/research-batch-13.json');assert.equal(audit.priorBatchCorrections.beforeRecords.mappings.length,3);assert.ok(audit.priorBatchCorrections.sourcesAdded.every(id=>registry.sources.some(s=>s.id===id)));
 });
+if(plan.batchReviews['political-batch-16'])test('shared West African raw labels reuse administrations and preserve earlier facts',()=>{
+ assert.equal(index.resolve('entity-gold-coast-gb',1914).entity.id,index.resolve('entity-ghana',1914).entity.id);
+ assert.equal(index.resolve('entity-gold-coast-gb',1930).entity.id,index.resolve('entity-ghana',1930).entity.id);
+ assert.equal(index.resolve('entity-gold-coast-gb',1938).entity.id,index.resolve('entity-gold-coast',1938).entity.id);
+ assert.equal(index.resolve('entity-fulani-empire',1815).entity.id,index.resolve('entity-sokoto-caliphate',1880).entity.id);
+ const a=read('development/coverage/research-batch-15.json'),b=read('development/coverage/research-batch-16.json');
+ for(const id of b.existingEntitiesExtended){const before=a.entities.find(e=>e.id===id),after=db.entities.find(e=>e.id===id);for(const[k,v]of Object.entries(before))if(Array.isArray(v))assert.deepEqual(after[k].slice(0,v.length),v);}
+ assert.ok(!db.entities.some(e=>['b16-gold-coast-1902','b16-senegal-aof','b16-sokoto-1815'].includes(e.id)));
+});
