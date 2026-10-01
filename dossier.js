@@ -45,23 +45,44 @@ export function renderDossier(container, context) {
     for (const f of resolved[field] || []) row(dl, f.label || label, f.value, [f],
       [period(f), f.note].filter(Boolean).join(' · '));
   };
-  const name = resolved.names?.find(f => f.kind === 'primary')?.value || savedName || stableId;
+  const primaryNames = (resolved.names || []).filter(f=>f.kind === 'primary');
+  const name = (primaryNames.length === 1 ? primaryNames[0].value : '') || savedName || stableId;
   content.append(node('div', 'Historical Territory Dossier', 'inspector-kicker'));
   const heading = node('h1', name); heading.id = 'territory-name';
-  markers(heading, resolved.names?.find(f => f.kind === 'primary')?.sourceIds || ['basemaps']);
+  markers(heading, primaryNames.length === 1 ? primaryNames[0].sourceIds : ['basemaps']);
   content.append(heading);
-  for (const f of resolved.names || []) if (f.kind !== 'primary')
-    content.append(markers(node('p', f.value, 'dossier-alternate'), f.sourceIds));
-  const status = (resolved.politicalStatus || []).map(f => f.value).join('; ');
+  for (const f of resolved.names || []) if (f.kind !== 'primary' || primaryNames.length > 1)
+    content.append(markers(node('p', [f.value, period(f)].filter(Boolean).join(' · '), 'dossier-alternate'), f.sourceIds));
+  const calendar = resolved.calendarYear || {};
+  const status = calendar.isTransition
+    ? calendar.kind === 'partial-framework'
+      ? 'Transition-year review — partial dated framework coverage'
+      : 'Transition year — multiple curated political frameworks'
+    : (resolved.politicalStatus || []).map(f => f.value).join('; ');
   content.append(markers(node('p', (status ? status + ' · ' : '') + year + ' CE · selected year', 'dossier-year'),
     (resolved.politicalStatus || []).flatMap(f => f.sourceIds || [])));
   if (!features.length) {
     content.append(node('p', 'This selected map identity is not present in the ' + snapshotYear +
       ' boundary snapshot. No successor has been selected.', 'dossier-notice'));
   }
-  if (resolved.ambiguous) content.append(node('p',
-    'The selected calendar year spans more than one curated identity. Metadata is omitted until a more precise date can be selected.',
+  if (calendar.isTransition) content.append(node('p', resolved.ambiguous
+    ? 'This calendar year spans more than one curated identity. Their dated records are shown separately; no single identity describes the whole year.'
+    : calendar.needsResearch
+      ? 'The dated records below cover only the documented frameworks or intervals. A complete chronology for this calendar year needs research; no partial-year framework is presented as the whole year.'
+      : 'Different dated political frameworks apply within this calendar year. Read each record with its applicability dates; none is selected as representative of the whole year.',
     'dossier-notice'));
+  if (resolved.identityPeriods?.length) {
+    const s = section('Historical identities during the selected year');
+    for (const candidate of resolved.identityPeriods) {
+      const names = candidate.names.filter(f=>f.kind === 'primary');
+      const heading = markers(node('h3',names.map(f=>f.value).join(' / ') || candidate.entity.id),names.flatMap(f=>f.sourceIds||[]));
+      s.append(heading);
+      for (const mapping of candidate.mappings) s.append(node('small','Mapped applicability: '+period(mapping),'fact-context'));
+      const dl = node('dl');s.append(dl);
+      for (const [field,label] of [['names','Name'],['politicalStatus','Political status'],['governments','Government'],['leaders','Leadership'],['capitals','Capital / seat'],['currencies','Currency'],['descriptions','Overview']])
+        for (const f of candidate[field] || []) row(dl,f.role||f.label||label,f.value,[f],[period(f),f.note].filter(Boolean).join(' · '));
+    }
+  }
   for (const flag of resolved.flags || []) {
     const figure = node('figure', undefined, 'dossier-flag');
     const img = node('img'); img.src = flag.asset; img.alt = flag.alt || flag.value;
@@ -173,7 +194,7 @@ export function renderDossier(container, context) {
   row(dl,'Boundary precision',precision.length > 1 ? 'Mixed: ' + precision.join('; ') : precision[0] || 'No geometry in this snapshot',[{sourceIds:['basemaps']}]);
   row(dl,'Available-map presence',presence,[{sourceIds:['basemaps']}]);
   row(dl,'Map identity',stableId);
-  if (!entity) content.append(node('p',context.metadataError ?
+  if (!entity && !resolved.ambiguous) content.append(node('p',context.metadataError ?
     'Historical metadata could not be loaded. Map-derived information remains available.' :
     'Additional historical metadata has not yet been curated for this identity and selected year.','dossier-muted'));
   const sources = section('Sources'), ol = node('ol',undefined,'dossier-sources');
