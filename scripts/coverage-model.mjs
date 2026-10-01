@@ -100,7 +100,7 @@ export function buildCoverage(snapshots,database,sources,plan){
   const chunkCount=Math.ceil(group.length/region.limit);const chunks=[];
   let offset=0;for(let i=0;i<chunkCount;i++){const size=Math.ceil((group.length-offset)/(chunkCount-i));chunks.push(group.slice(offset,offset+size));offset+=size;}
   for(const members of chunks){
-   const ids=members.map(r=>r.stableMapId),needs=members.filter(r=>r.curatedEntityIds.length===0).length;
+   const ids=members.map(r=>r.stableMapId),needs=members.filter(r=>!r.currentlyResolvesToDossier).length;
    const q=questions.filter(q=>q.mapIds.some(id=>ids.includes(id)));
    const b={id:'batch-'+String(batches.length+1).padStart(2,'0'),order:batches.length+1,title:region.name+' · '+(chunks.indexOf(members)+1)+'/'+chunks.length,mapIds:ids,totalIdentities:ids.length,uncuratedIdentities:needs,existingProfilesToReview:ids.length-needs,requiresHistoricalResearch:ids.length,sourceStrategy:region.sources,questionIds:q.map(q=>q.id),difficultCases:q.filter(x=>x.type==='candidate-family'||x.type==='mapping-date-review'||x.type==='identity-scope').map(x=>({id:x.id,question:x.question})),continuityPolicy:'Keep candidate families together across linked batches; share institutional discovery, never unsupported facts. Phase 2 approval required.'};batches.push(b);
    for(const row of members)row.batchId=b.id;
