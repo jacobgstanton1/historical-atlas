@@ -145,4 +145,4 @@ Only read source bodies support accepted facts. Worker body-reading cautions and
 
 Scheduled full regression: 754 browser checks passed, including failure paths and representatives from all integrated batches; full automated suite passed.
 
-Next authorised batch: political-batch-22. Push and clean-main verification precede further integration.
+Next authorised step: the final Phase 2 global audit. Stop after its verified push and deployment; Phase 3 is not authorised.
