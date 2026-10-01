@@ -15,6 +15,8 @@ export const preferences = {
 export function sourceCatalogue(context) {
   return {schemaVersion:1,registryDigest:digest(context.registry),productionFingerprint:context.productionFingerprint,
     policy:'Reuse IDs and exact URLs. Unclassified legacy entries require claim-specific review; institution alone does not establish evidence quality.',
-    preferences,sources:context.registry.sources.map(s=>({...s,kind:sourceKinds.includes(s.kind)?s.kind:'unclassified',classificationBasis:s.kind?'Existing explicit classification':'Legacy provenance retained; no automatic quality classification'})).sort((a,b)=>a.id.localeCompare(b.id))};
+    preferences,sources:context.registry.sources.map(s=>({...s,kind:s.kind==='primary'?'primary-document':sourceKinds.includes(s.kind)?s.kind:'unclassified',
+      classificationBasis:s.kind==='primary'||sourceKinds.includes(s.kind)?'Existing explicit classification':'Legacy provenance retained; no automatic quality classification',
+      ...(s.kind&&!sourceKinds.includes(s.kind)&&s.kind!=='primary'?{originalKind:s.kind}:{})})).sort((a,b)=>a.id.localeCompare(b.id))};
 }
 if(isCLI(import.meta.url)) {const report=sourceCatalogue(readContext());saveJSON(path.join(root,'research/sources/catalogue.json'),report);console.log('Reused '+report.sources.length+' registered sources; no production changes.');}

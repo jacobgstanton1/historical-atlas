@@ -35,6 +35,15 @@ test('source exact URL reuse retains original source, remaps claim and refuses s
 test('conflicting overlapping office facts refuse even with accepted review receipt',()=>{
   const f=fixture();try{const c=readContext(f.dir);c.db.entities[0].leaders.push({value:'Different officeholder',role:'Prime minister',validFrom:'1901-01-01',validUntil:'1903-01-01',sourceIds:['old']});assert.throws(()=>planIntegration(f.pkg,f.job,c,f.receipt(c)),/Conflicting production/);}finally{f.cleanup();}
 });
+test('distinct same-day events coexist, duplicate event identities refuse, provenance survives',()=>{
+  const f=fixture();try{
+    f.job.category=f.pkg.category=f.pkg.claims[0].category='events-context';f.pkg.worker.specialism='events-context';
+    f.pkg.claims[0].value='A sourced constitutional event';f.pkg.claims[0].temporal={kind:'observation',observationDate:'1901-01-01'};
+    const c=readContext(f.dir);c.db.entities[0].events.push({date:'1901-01-01',title:'Another independently sourced event',sourceIds:['old']});
+    const p=planIntegration(f.pkg,f.job,c,f.receipt(c));assert.equal(p.db.entities[0].events.length,2);assert.equal(p.appended[0].fact.title,'A sourced constitutional event');assert.equal(p.appended[0].fact.researchProvenance.jobId,'job');
+    c.db.entities[0].events[0].title='A sourced constitutional event';assert.throws(()=>planIntegration(f.pkg,f.job,c,f.receipt(c)),/Duplicate dated event/);
+  }finally{f.cleanup();}
+});
 test('serialized apply refuses held lock and journal rolls back a partial write',()=>{
   const f=fixture();try{const before=productionFingerprint(f.dir);withLock(path.join(f.dir,'research','.integration-state'),()=>assert.throws(()=>integratePackage(f.dir,f.pkg,f.job,f.receipt(),{apply:true}),/lock is held/));assert.throws(()=>integratePackage(f.dir,f.pkg,f.job,f.receipt(),{apply:true,afterWrite:()=>{throw Error('Simulated interruption');}}),/Simulated interruption/);assert.equal(recoverIntegration(f.dir).action,'rollback');assert.notEqual(productionFingerprint(f.dir),before);assert.throws(()=>integratePackage(f.dir,f.pkg,f.job,f.receipt(),{apply:true}),/recovered first/);assert.equal(recoverIntegration(f.dir,{apply:true}).status,'rolled-back');assert.equal(productionFingerprint(f.dir),before);}finally{f.cleanup();}
 });

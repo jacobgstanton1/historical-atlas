@@ -15,6 +15,10 @@ test('claim ownership and capacity are exclusive and input stays immutable',()=>
   assert.throws(()=>transitionQueue(s,'submit',{jobId:'one',workerId:'other',package:pkg('one')}),/own/);
   assert.throws(()=>transitionQueue(s,'claim',{jobId:'one',workerId:'worker'}),/queued/);
 });
+test('different IDs cannot concurrently dispatch the same historical research scope',()=>{
+  let s=createQueue([job('one'),job('two')],{concurrency:2});s=transitionQueue(s,'claim',{jobId:'one',workerId:'worker'});
+  assert.throws(()=>transitionQueue(s,'claim',{jobId:'two',workerId:'other'}),/Equivalent research scope/);
+});
 test('workers cannot self-accept; independent coordinator review and exact hash required',()=>{
   let s=submitted();assert.throws(()=>transitionQueue(s,'accept',{jobId:'one',actor:{role:'worker',id:'worker'}}),/Coordinator/);
   s=transitionQueue(s,'validate',{jobId:'one',actor},{validatePackage:validation,context:{}});assert.equal(s.jobs[0].status,'historical-review');

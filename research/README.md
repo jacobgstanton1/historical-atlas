@@ -22,10 +22,14 @@ node scripts/research-sources.mjs
 node scripts/research-scan.mjs --from 1939 --until 1939 --entities germany-nazi-period
 node scripts/research-generate.mjs --limit 5 --from 1939 --until 1939 --entities germany-nazi-period --categories leadership,population-statistics
 node scripts/research-report.mjs
+node scripts/research-report.mjs --queue research/pilot/queue.json
+node scripts/research-audit.mjs
 node --test tests/*.test.mjs
 ```
 
 The scanner's full output can be large. Its CLI writes `research/reports/scan.json`; regenerate on demand rather than committing a global job queue. The generator requires a positive explicit CLI limit (maximum 100). It creates suggestions, not active research. Generated jobs include existing evidence, mappings, cautions, schema path, priority and deterministic provenance. New timestamps belong to queue actions and worker provenance, not deterministic IDs.
+
+The generator and report CLI load `research/jobs/queue.json` when present, otherwise the saved pilot queue; `--queue PATH` selects explicitly. Regeneration subtracts retained research scopes, including accepted research outside production. `scopeId` identifies the stable entity/raw-ID/period/category unit; job IDs bind its evidence-context revision. Queue claims also reject concurrent equivalent scopes with different IDs. Retry a retained failed job explicitly rather than silently redispatching the same scope. Reports include accepted research claims separately from production coverage, so the pilot's accepted figure does not imply a production figure is displayed.
 
 Use the exported queue APIs (`createQueue`, `initializeQueue`, `transitionQueue`, `updateQueue`, `readQueue`) for coordinator operations. They are ordinary Node functions and work with any orchestration host. `updateQueue` locks the queue and atomically saves each transition. Claims prevent duplicate active assignments and enforce concurrency. The `submit` action requires the owning worker and package. `validate` requires the validator and fresh context. `accept` requires coordinator identity, fingerprint, explicit review resolution and rationale. Rejected/failed packages can be retried with a reason; preserved source packages are never overwritten by recovery.
 
@@ -84,9 +88,13 @@ Each claim has its own ID, value, category, entity scope, temporal form, geograp
 
 The validator checks the checked-in schema subset directly without evaluating worker code or fetching worker-supplied URLs. Unknown fields fail rather than silently disappearing. Calendar validation, reference resolution, duplicate detection, scope and temporal checks run before review. Rejections and review notes are returned as structured output. Safe source-ID aliasing preserves existing production provenance; historical ambiguity is never silently normalised.
 
+Optional evidence dates constrain claimed intervals, observation dates and title establishment. Explicit risk flags distinguish prohibited inferences from review-worthy conflicts. Sources supporting different aspects of a compound claim require coordinator review of their combined support; no automated test can establish source truth from a worker's assertion. Source-kind aliases normalize `primary` to `primary-document`; unrecognized institutional labels remain unclassified with the original label retained. A source category is not a quality verdict.
+
 ## Recovery and completeness
 
 Read persisted state first after interruption. Preserve completed worker packages. Recover only a demonstrably interrupted research claim; do not steal an active job or remove a live lock. Retrying requires a coordinator reason. An integration journal records before/after content and hashes before writing. Inspect it, recover an incomplete write set by rollback, and revalidate against the restored fingerprint. External edits cause recovery to refuse an overwrite. A completed integration must be validated, committed and pushed before subsequent integration.
+
+Accepted receipts bind the whole production fingerprint. An unrelated production integration can therefore make remaining receipts stale. Preserve the original research and acceptance history, create an explicit fresh job/package revision, and revalidate/review against the changed baseline; never silently rewrite a worker's historical meaning or reuse a stale receipt. Automatic campaign rebasing and permission-isolated workers are not implemented in Stage 1. Applied facts retain job/worker/claim/package provenance. Distinct same-day events may coexist; duplicate event identity or conflicting offices are refused.
 
 Reports distinguish resolver availability, entity/year research scope, full/partial field evidence, exact-year statistical observations, transition gaps, classifications/reviews and queue states. Lack of an annual census is a research opportunity, not a database error or an obligation to manufacture a number. Editorial existence envelopes do not establish a state's entire lifetime. There is no combined percentage claiming that historical knowledge is complete.
 

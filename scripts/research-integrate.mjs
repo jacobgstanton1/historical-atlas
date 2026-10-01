@@ -41,6 +41,7 @@ function recordFor(claim){
 }
 function factRange(fact){return fact.asOf?dateRange(fact.asOf):fact.date?dateRange(fact.date):periodBounds(fact);}
 function sameSlot(a,b,field){
+  if(field==='events')return (a.title??a.value)===(b.title??b.value);
   if(field==='leaders')return (a.role||'')===(b.role||'');
   if(['population','economy','area'].includes(field))return (a.metric||'')===(b.metric||'')&&(a.scope||'')===(b.scope||'');
   return true;
@@ -71,6 +72,9 @@ export function planIntegration(pkg,job,context,receipt){
   const appended=[];
   for(const claim of aliased.claims){
     const {field,fact}=recordFor(claim);check(Array.isArray(entity[field]),'Production field unavailable: '+field);
+    fact.researchProvenance={packageId:pkg.id,jobId:job.id,claimId:claim.id,worker:structuredClone(pkg.worker),packageHash:digest(pkg)};
+    check(!entity[field].some(f=>f.researchProvenance?.claimId===claim.id),'Duplicate historical claim ID refused');
+    if(field==='events')check(!entity[field].some(f=>sameSlot(f,fact,field)&&overlap(factRange(f),factRange(fact))),'Duplicate dated event refused');
     check(!entity[field].some(f=>digest(f)===digest(fact)),'Duplicate production fact refused');
     for(const old of entity[field]){
       if(!sameSlot(old,fact,field)||!overlap(factRange(old),factRange(fact)))continue;

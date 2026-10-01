@@ -6,6 +6,7 @@ import {digest} from './research-common.mjs';
 
 const clone = value => structuredClone(value);
 export const packageDigest = digest;
+const jobScope=j=>digest({entityId:j.entityId,mapIds:[...(j.mapIds||[])].sort(),period:j.period,category:j.category});
 function requireCondition(condition, message) { if (!condition) throw new Error(message); }
 export function withLock(file, operation) {
   requireCondition(operation?.constructor?.name!=='AsyncFunction','Lock operations must be synchronous');
@@ -57,6 +58,7 @@ export function transitionQueue(input, action, args = {}, options = {}) {
     requireCondition(job.status==='queued','Job is not queued'); requireCondition(args.workerId,'Worker identity required');
     requireCondition(!state.jobs.some(j=>j.status==='researching'&&j.owner===args.workerId),'Worker already owns active research');
     requireCondition(state.jobs.filter(j=>j.status==='researching').length<state.concurrency,'Research concurrency exhausted');
+    requireCondition(!state.jobs.some(j=>j.status==='researching'&&jobScope(j)===jobScope(job)),'Equivalent research scope already active');
     job.status='researching';job.owner=args.workerId;job.claimedAt=now;job.attempt++;
   } else if (action === 'submit') {
     owner(); requireCondition(job.status==='researching','Job is not researching');

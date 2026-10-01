@@ -78,3 +78,8 @@ test('France 1958 remains incomplete between snapshots despite visible Fourth Re
   assert.equal(r.metrics.fieldCoverage['political-institutional'].fullySupportedYears,0);
   assert.equal(r.metrics.fieldCoverage['political-institutional'].partialYears,1);
 });
+test('retained research prevents redundant dispatch even when production context changes',()=>{
+  const c=fixture(),s=scan(c,{from:1900,until:1900}),first=generateJobs(s,c,{limit:1,categories:['leadership']});
+  const second=generateJobs(s,c,{limit:1,categories:['leadership'],existingJobs:[{...first.jobs[0],id:'retained-revision',productionFingerprint:'previous'}]});
+  assert.equal(second.jobs.length,0);assert.ok(first.jobs[0].scopeId);
+});
