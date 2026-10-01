@@ -251,6 +251,14 @@ try {
  check('Visible v0.6 credit',await page.locator('.source-credit').innerText().then(t=>t.includes('v0.6')));
  check('No browser runtime errors',errors.length===0);
  check('Only expected local-snapshot and favicon HTTP misses',httpErrors.every(e=>e.status===404&&(e.url.includes('/data/world_')||e.url.includes('/favicon.ico'))));
+ // Every integrated research batch contributes dated representatives, including
+ // all distinct newly created entities, before the deliberate failure paths.
+ const priorEntityChecks=[];
+ for(const b of manifest.phase2Batches.filter(b=>b.order>=2&&b.state==='researched-with-partial-coverage')){
+  const n=String(b.order).padStart(2,'0'),audit=JSON.parse(fs.readFileSync(path.join(root,'development/coverage/research-batch-'+n+'.json')));const seen=new Set();
+  for(const c of audit.browserCases||[]){if(seen.has(c.entityId))continue;seen.add(c.entityId);await year(c.seedYear);await select(c.mapId);await year(c.year);const ok=await page.evaluate(c=>{const r=window.__atlas.metadata.resolve(c.mapId,c.year);return r.entity?.id===c.entityId||r.identityPeriods?.some(p=>p.entity?.id===c.entityId);},c);check('Integrated '+b.id+' entity '+c.entityId+' '+c.year,ok&&(await text()).includes(String(c.year))&&await page.locator('.fact-source').count()>0);priorEntityChecks.push({...c,batchId:b.id});}
+ }
+ check('No runtime errors across integrated batch representatives',errors.length===0);
  // Enrichment failures must leave the core map and fallback dossier usable.
  const fallback=await browser.newPage({viewport:{width:1200,height:850},ignoreHTTPSErrors:true});
  fallback.on('pageerror',e=>errors.push(e.message));
@@ -267,6 +275,6 @@ try {
   (await fallback.locator('#dossier-content').innerText()).includes('1938 · retained snapshot'));
  await fallback.close();
  check('No runtime errors including failure paths',errors.length===0);
- fs.writeFileSync(path.join(out,'validation-report.json'),JSON.stringify({checks,errors,labelReport,layout},null,2));
+ fs.writeFileSync(path.join(out,'validation-report.json'),JSON.stringify({checks,errors,labelReport,layout,priorEntityChecks},null,2));
  console.log('RESULT',JSON.stringify({passed:checks.length,errors,output:out}));
 } finally {await browser.close();await new Promise(r=>server.close(r));}
