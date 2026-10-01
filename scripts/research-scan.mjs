@@ -19,7 +19,11 @@ const weak = (r, sources) => !r.sourceIds?.length || r.sourceIds.some(id => {
 }) || ['uncertain', 'speculative', 'inferred', 'low'].includes(r.confidence);
 function covers(records, year) {
   let cursor = Date.UTC(year,0,1); const end = Date.UTC(year+1,0,1);
-  for (const [a,b] of records.map(intervalBounds).sort((a,b)=>a[0]-b[0])) {
+  // Resolver visibility intersects imprecise periods; annual completeness needs
+  // coverage even under their conservative boundaries, not guessed Jan 1 dates.
+  const conservative=r=>[r.validFrom&&r.validFrom.length<10?dateBounds(r.validFrom)[1]:intervalBounds(r)[0],
+    r.validUntil&&r.validUntil.length<10?dateBounds(r.validUntil)[0]:intervalBounds(r)[1]];
+  for (const [a,b] of records.map(conservative).filter(([a,b])=>a<b).sort((a,b)=>a[0]-b[0])) {
     if (a > cursor) return false; cursor = Math.max(cursor,b); if (cursor >= end) return true;
   }
   return false;
@@ -53,7 +57,7 @@ export function scan(context, {from=1800, until=1960, entityIds}={}) {
     const bounds=dated.map(intervalBounds), envelope=bounds.length?[Math.min(...bounds.map(x=>x[0])),Math.max(...bounds.map(x=>x[1]))]:null;
     for (let year=from;year<=until;year++) {
       if (!envelope || envelope[0]>=Date.UTC(year+1,0,1) || envelope[1]<=Date.UTC(year,0,1)) continue; metrics.entityYearsScanned++;
-      const mappings=allMappings.filter(m=>validInYear(m,year)), mapIds=unique(mappings.map(m=>m.mapId));
+      const mappings=allMappings.filter(m=>validInYear(m,year)), mapIds=unique((mappings.length?mappings:allMappings).map(m=>m.mapId));
       if(!covers(mappings,year)){
         metrics.entityMappingReviewYears++;
         add({entityId:e.id,mapIds:unique(allMappings.map(m=>m.mapId)),name,period:{from:String(year),until:String(year)},category:'mapping-review',
@@ -67,14 +71,15 @@ export function scan(context, {from=1800, until=1960, entityIds}={}) {
         const coverage=metrics.fieldCoverage[category]||={entityYearsEligible:0,fullySupportedYears:0,partialYears:0,observationYears:0,missingYears:0};coverage.entityYearsEligible++;
         const applies=r=>statistics?observed(r,year):timeline?contextual(r,year):validInYear(r,year);
         const existing=fields.flatMap(f=>e[f]||[]), eligible=existing.filter(applies);
-        const healthy=eligible.filter(r=>!weak(r,sources));
-        const absent=fields.filter(f=>!(e[f]||[]).some(r=>applies(r)&&!weak(r,sources)));
+        const adequate=r=>!weak(r,sources)&&(!statistics||typeof r.scope==='string'&&r.scope.trim());
+        const healthy=eligible.filter(adequate);
+        const absent=fields.filter(f=>!(e[f]||[]).some(r=>applies(r)&&adequate(r)));
         const partial=!statistics&&!timeline&&fields.some(f=>!covers((e[f]||[]).filter(r=>validInYear(r,year)&&!weak(r,sources)),year));
         if (!absent.length && !partial) {coverage.fullySupportedYears++;if(statistics){metrics.exactObservedYears++;coverage.observationYears++;}continue;}
         if(partial&&healthy.length)coverage.partialYears++;else coverage.missingYears++;
         const nearby=statistics?existing.filter(r=>(r.asOf||r.date)&&!observed(r,year)):[];
         if(nearby.length)metrics.nearbyDatedEvidenceGaps++; if(eligible.some(r=>weak(r,sources)))metrics.weakSourceGaps++;
-        const reason=eligible.length&&!healthy.length?'Existing evidence has missing or weak source provenance.':absent.length?
+        const reason=eligible.length&&!healthy.length?'Existing evidence has missing or weak source provenance or statistical geographic scope.':absent.length?
           (statistics?'No adequately sourced observation for the requested year.':'No adequately sourced '+absent.join(', ')+' record for the requested year.'):
           'Sourced records cover only part of the requested calendar year.';
         const cautions=['Partial research bounds are not a full historical lifetime.','No geometry-inferred sovereignty or succession.'];

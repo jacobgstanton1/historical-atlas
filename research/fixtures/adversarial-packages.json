@@ -1,0 +1,801 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Synthetic adversarial examples only, never historical evidence.",
+  "context": {
+    "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "db": {
+      "entities": [
+        {
+          "id": "example-polity",
+          "existence": {
+            "validFrom": "1800",
+            "validUntil": "1961"
+          }
+        }
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-example",
+          "entityId": "example-polity",
+          "validFrom": "1800",
+          "validUntil": "1961"
+        }
+      ]
+    },
+    "registry": {
+      "sources": []
+    },
+    "manifest": {}
+  },
+  "cases": [
+    {
+      "id": "germany-1935-fact-in-1939",
+      "expected": "validation-failed",
+      "job": {
+        "id": "job-1",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1939",
+          "until": "1939"
+        },
+        "category": "political-institutional",
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "cautions": []
+      },
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-1",
+        "jobId": "job-1",
+        "worker": {
+          "id": "synthetic-worker",
+          "specialism": "political-institutional"
+        },
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1939",
+          "until": "1939"
+        },
+        "category": "political-institutional",
+        "claims": [
+          {
+            "id": "claim-1",
+            "category": "political-institutional",
+            "metric": "government",
+            "value": "Documented institutional framework",
+            "temporal": {
+              "kind": "interval",
+              "from": "1935",
+              "until": "1935"
+            },
+            "entityId": "example-polity",
+            "geographicScope": {
+              "description": "Exact assigned historical entity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "synthetic-source"
+            ],
+            "evidence": [
+              {
+                "sourceId": "synthetic-source",
+                "note": "Synthetic body passage supports the complete claim and exact endpoints",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "synthetic-source",
+            "title": "Synthetic institutional document",
+            "institution": "Synthetic archive",
+            "url": "https://example.org/historical-document",
+            "accessed": "2026-10-01",
+            "usage": "Synthetic full body evidence for isolated validator tests only",
+            "kind": "institutional"
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": []
+      }
+    },
+    {
+      "id": "1937-census-relabeled-1939",
+      "expected": "validation-failed",
+      "job": {
+        "id": "job-1",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1939",
+          "until": "1939"
+        },
+        "category": "population-statistics",
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "cautions": []
+      },
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-1",
+        "jobId": "job-1",
+        "worker": {
+          "id": "synthetic-worker",
+          "specialism": "population-statistics"
+        },
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1939",
+          "until": "1939"
+        },
+        "category": "population-statistics",
+        "claims": [
+          {
+            "id": "claim-1",
+            "category": "population-statistics",
+            "metric": "government",
+            "value": "Documented institutional framework",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1939"
+            },
+            "entityId": "example-polity",
+            "geographicScope": {
+              "description": "Exact assigned historical entity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "synthetic-source"
+            ],
+            "evidence": [
+              {
+                "sourceId": "synthetic-source",
+                "note": "Synthetic body passage supports the complete claim and exact endpoints",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "observationDate": "1937"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "synthetic-source",
+            "title": "Synthetic institutional document",
+            "institution": "Synthetic archive",
+            "url": "https://example.org/historical-document",
+            "accessed": "2026-10-01",
+            "usage": "Synthetic full body evidence for isolated validator tests only",
+            "kind": "institutional"
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": []
+      }
+    },
+    {
+      "id": "leader-title-before-office-existed",
+      "expected": "validation-failed",
+      "job": {
+        "id": "job-1",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "leadership",
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "cautions": []
+      },
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-1",
+        "jobId": "job-1",
+        "worker": {
+          "id": "synthetic-worker",
+          "specialism": "leadership"
+        },
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "leadership",
+        "claims": [
+          {
+            "id": "claim-1",
+            "category": "leadership",
+            "metric": "government",
+            "value": "Documented institutional framework",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900-01-01",
+              "until": "1910-01-01"
+            },
+            "entityId": "example-polity",
+            "geographicScope": {
+              "description": "Exact assigned historical entity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "synthetic-source"
+            ],
+            "evidence": [
+              {
+                "sourceId": "synthetic-source",
+                "note": "Synthetic body passage supports the complete claim and exact endpoints",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "roleValidFrom": "1905"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Synthetic office"
+          }
+        ],
+        "sources": [
+          {
+            "id": "synthetic-source",
+            "title": "Synthetic institutional document",
+            "institution": "Synthetic archive",
+            "url": "https://example.org/historical-document",
+            "accessed": "2026-10-01",
+            "usage": "Synthetic full body evidence for isolated validator tests only",
+            "kind": "institutional"
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": []
+      }
+    },
+    {
+      "id": "census-geography-differs-from-polity",
+      "expected": "historical-review",
+      "job": {
+        "id": "job-1",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "political-institutional",
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "cautions": []
+      },
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-1",
+        "jobId": "job-1",
+        "worker": {
+          "id": "synthetic-worker",
+          "specialism": "political-institutional"
+        },
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "political-institutional",
+        "claims": [
+          {
+            "id": "claim-1",
+            "category": "political-institutional",
+            "metric": "government",
+            "value": "Documented institutional framework",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900-01-01",
+              "until": "1910-01-01"
+            },
+            "entityId": "example-polity",
+            "geographicScope": {
+              "description": "Exact assigned historical entity",
+              "relationship": "different"
+            },
+            "sourceIds": [
+              "synthetic-source"
+            ],
+            "evidence": [
+              {
+                "sourceId": "synthetic-source",
+                "note": "Synthetic body passage supports the complete claim and exact endpoints",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "required",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "synthetic-source",
+            "title": "Synthetic institutional document",
+            "institution": "Synthetic archive",
+            "url": "https://example.org/historical-document",
+            "accessed": "2026-10-01",
+            "usage": "Synthetic full body evidence for isolated validator tests only",
+            "kind": "institutional"
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": []
+      }
+    },
+    {
+      "id": "modern-nationality-backprojection",
+      "expected": "validation-failed",
+      "job": {
+        "id": "job-1",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "political-institutional",
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "cautions": []
+      },
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-1",
+        "jobId": "job-1",
+        "worker": {
+          "id": "synthetic-worker",
+          "specialism": "political-institutional"
+        },
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "political-institutional",
+        "claims": [
+          {
+            "id": "claim-1",
+            "category": "political-institutional",
+            "metric": "government",
+            "value": "Documented institutional framework",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900-01-01",
+              "until": "1910-01-01"
+            },
+            "entityId": "example-polity",
+            "geographicScope": {
+              "description": "Exact assigned historical entity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "synthetic-source"
+            ],
+            "evidence": [
+              {
+                "sourceId": "synthetic-source",
+                "note": "Synthetic body passage supports the complete claim and exact endpoints",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "riskFlags": [
+              "modern-nationality"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "synthetic-source",
+            "title": "Synthetic institutional document",
+            "institution": "Synthetic archive",
+            "url": "https://example.org/historical-document",
+            "accessed": "2026-10-01",
+            "usage": "Synthetic full body evidence for isolated validator tests only",
+            "kind": "institutional"
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": []
+      }
+    },
+    {
+      "id": "succession-from-polygon-overlap",
+      "expected": "validation-failed",
+      "job": {
+        "id": "job-1",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "political-institutional",
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "cautions": []
+      },
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-1",
+        "jobId": "job-1",
+        "worker": {
+          "id": "synthetic-worker",
+          "specialism": "political-institutional"
+        },
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "political-institutional",
+        "claims": [
+          {
+            "id": "claim-1",
+            "category": "political-institutional",
+            "metric": "government",
+            "value": "Documented institutional framework",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900-01-01",
+              "until": "1910-01-01"
+            },
+            "entityId": "example-polity",
+            "geographicScope": {
+              "description": "Exact assigned historical entity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "synthetic-source"
+            ],
+            "evidence": [
+              {
+                "sourceId": "synthetic-source",
+                "note": "Synthetic body passage supports the complete claim and exact endpoints",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "riskFlags": [
+              "geometry-succession"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "synthetic-source",
+            "title": "Synthetic institutional document",
+            "institution": "Synthetic archive",
+            "url": "https://example.org/historical-document",
+            "accessed": "2026-10-01",
+            "usage": "Synthetic full body evidence for isolated validator tests only",
+            "kind": "institutional"
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": []
+      }
+    },
+    {
+      "id": "conflicting-worker-governments",
+      "expected": "historical-review",
+      "job": {
+        "id": "job-1",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "political-institutional",
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "cautions": []
+      },
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-1",
+        "jobId": "job-1",
+        "worker": {
+          "id": "synthetic-worker",
+          "specialism": "political-institutional"
+        },
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "political-institutional",
+        "claims": [
+          {
+            "id": "claim-1",
+            "category": "political-institutional",
+            "metric": "government",
+            "value": "Documented institutional framework",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900-01-01",
+              "until": "1910-01-01"
+            },
+            "entityId": "example-polity",
+            "geographicScope": {
+              "description": "Exact assigned historical entity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "synthetic-source"
+            ],
+            "evidence": [
+              {
+                "sourceId": "synthetic-source",
+                "note": "Synthetic body passage supports the complete claim and exact endpoints",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "conflicting",
+            "category": "political-institutional",
+            "metric": "government",
+            "value": "Incompatible synthetic government",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900-01-01",
+              "until": "1910-01-01"
+            },
+            "entityId": "example-polity",
+            "geographicScope": {
+              "description": "Exact assigned historical entity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "synthetic-source"
+            ],
+            "evidence": [
+              {
+                "sourceId": "synthetic-source",
+                "note": "Synthetic body passage supports the complete claim and exact endpoints",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "synthetic-source",
+            "title": "Synthetic institutional document",
+            "institution": "Synthetic archive",
+            "url": "https://example.org/historical-document",
+            "accessed": "2026-10-01",
+            "usage": "Synthetic full body evidence for isolated validator tests only",
+            "kind": "institutional"
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": []
+      }
+    },
+    {
+      "id": "invented-day-from-year-source",
+      "expected": "validation-failed",
+      "job": {
+        "id": "job-1",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "political-institutional",
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "cautions": []
+      },
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-1",
+        "jobId": "job-1",
+        "worker": {
+          "id": "synthetic-worker",
+          "specialism": "political-institutional"
+        },
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "political-institutional",
+        "claims": [
+          {
+            "id": "claim-1",
+            "category": "political-institutional",
+            "metric": "government",
+            "value": "Documented institutional framework",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900-01-01",
+              "until": "1910-01-01"
+            },
+            "entityId": "example-polity",
+            "geographicScope": {
+              "description": "Exact assigned historical entity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "synthetic-source"
+            ],
+            "evidence": [
+              {
+                "sourceId": "synthetic-source",
+                "note": "Synthetic body passage supports the complete claim and exact endpoints",
+                "supportedPrecision": "year",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "synthetic-source",
+            "title": "Synthetic institutional document",
+            "institution": "Synthetic archive",
+            "url": "https://example.org/historical-document",
+            "accessed": "2026-10-01",
+            "usage": "Synthetic full body evidence for isolated validator tests only",
+            "kind": "institutional"
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": []
+      }
+    },
+    {
+      "id": "unresolved-sovereignty-auto-resolved",
+      "expected": "validation-failed",
+      "job": {
+        "id": "job-1",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "political-institutional",
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "cautions": []
+      },
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-1",
+        "jobId": "job-1",
+        "worker": {
+          "id": "synthetic-worker",
+          "specialism": "political-institutional"
+        },
+        "productionFingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "entityId": "example-polity",
+        "mapIds": [
+          "entity-example"
+        ],
+        "period": {
+          "from": "1900-01-01",
+          "until": "1910-01-01"
+        },
+        "category": "political-institutional",
+        "claims": [
+          {
+            "id": "claim-1",
+            "category": "political-institutional",
+            "metric": "government",
+            "value": "Documented institutional framework",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900-01-01",
+              "until": "1910-01-01"
+            },
+            "entityId": "example-polity",
+            "geographicScope": {
+              "description": "Exact assigned historical entity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "synthetic-source"
+            ],
+            "evidence": [
+              {
+                "sourceId": "synthetic-source",
+                "note": "Synthetic body passage supports the complete claim and exact endpoints",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "riskFlags": [
+              "contested-sovereignty"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "synthetic-source",
+            "title": "Synthetic institutional document",
+            "institution": "Synthetic archive",
+            "url": "https://example.org/historical-document",
+            "accessed": "2026-10-01",
+            "usage": "Synthetic full body evidence for isolated validator tests only",
+            "kind": "institutional"
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": []
+      }
+    }
+  ]
+}
