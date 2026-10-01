@@ -38,3 +38,16 @@ if(plan.batchReviews['political-batch-16'])test('shared West African raw labels 
  for(const id of b.existingEntitiesExtended){const before=a.entities.find(e=>e.id===id),after=db.entities.find(e=>e.id===id);for(const[k,v]of Object.entries(before))if(Array.isArray(v))assert.deepEqual(after[k].slice(0,v.length),v);}
  assert.ok(!db.entities.some(e=>['b16-gold-coast-1902','b16-senegal-aof','b16-sokoto-1815'].includes(e.id)));
 });
+if(plan.batchReviews['political-batch-18'])test('East African shared frameworks preserve gaps and avoid a false post-coup constitution',()=>{
+ assert.equal(index.resolve('entity-djibouti',1930).entity.id,index.resolve('entity-french-somaliland',1930).entity.id);
+ assert.equal(index.resolve('entity-buganda',1815).entity.id,index.resolve('entity-buganda',1880).entity.id);
+ assert.equal(index.resolve('entity-buganda',1850).entity,null);
+ const result=index.resolve('entity-ethiopia',1960);
+ assert.equal(result.entity.id,'ethiopia-1955-constitutional-core');
+ assert.equal(result.calendarYear.kind,'partial-framework');
+ assert.equal(result.calendarYear.needsResearch,true);
+ const mappings=db.mappings.filter(m=>m.entityId===result.entity.id);
+ assert.ok(mappings.some(m=>m.validUntil==='1960-12-13'));
+ assert.ok(mappings.some(m=>m.validFrom==='1960-12-17'));
+ assert.ok(!mappings.some(m=>m.validFrom<'1960-12-17'&&m.validUntil>'1960-12-13'));
+});

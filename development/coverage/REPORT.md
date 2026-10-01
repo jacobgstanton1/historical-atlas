@@ -1,12 +1,12 @@
 # v0.7 Phase 1.5 — political dossier eligibility
 
-Development-only classification overlay. Visible site remains v0.6.1. Reviewed Phase 2 batches: **17/21**. See [Batch 01 decisions](BATCH-01.md), [Batch 02 decisions](BATCH-02.md), [Batch 03 decisions](BATCH-03.md), [Batch 04 decisions](BATCH-04.md), [Batch 05 decisions](BATCH-05.md), [Batch 06 decisions](BATCH-06.md), [Batch 07 decisions](BATCH-07.md), [Batch 08 decisions](BATCH-08.md), [Batch 09 decisions](BATCH-09.md), [Batch 10 decisions](BATCH-10.md), [Batch 11 decisions](BATCH-11.md), [Batch 12 decisions](BATCH-12.md), [Batch 13 decisions](BATCH-13.md), [Batch 14 decisions](BATCH-14.md), [Batch 15 decisions](BATCH-15.md), [Batch 16 decisions](BATCH-16.md), [Batch 17 decisions](BATCH-17.md) for dated acceptance and omissions. Unreviewed batches remain pending; availability is not historical completeness.
+Development-only classification overlay. Visible site remains v0.6.1. Reviewed Phase 2 batches: **18/21**. See [Batch 01 decisions](BATCH-01.md), [Batch 02 decisions](BATCH-02.md), [Batch 03 decisions](BATCH-03.md), [Batch 04 decisions](BATCH-04.md), [Batch 05 decisions](BATCH-05.md), [Batch 06 decisions](BATCH-06.md), [Batch 07 decisions](BATCH-07.md), [Batch 08 decisions](BATCH-08.md), [Batch 09 decisions](BATCH-09.md), [Batch 10 decisions](BATCH-10.md), [Batch 11 decisions](BATCH-11.md), [Batch 12 decisions](BATCH-12.md), [Batch 13 decisions](BATCH-13.md), [Batch 14 decisions](BATCH-14.md), [Batch 15 decisions](BATCH-15.md), [Batch 16 decisions](BATCH-16.md), [Batch 17 decisions](BATCH-17.md), [Batch 18 decisions](BATCH-18.md) for dated acceptance and omissions. Unreviewed batches remain pending; availability is not historical completeness.
 
 ## Two denominators
 
-Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **298 (33.86%)**; raw fallback-only IDs: **582**. The original identity/source/presence/mapping inventory remains intact.
+Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **317 (36.02%)**; raw fallback-only IDs: **563**. The original identity/source/presence/mapping inventory remains intact.
 
-Political dossier candidates: **401**; currently covered: **294 (73.32%)**; uncovered political candidates: **107**. Existing curated metadata entities: **514**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
+Political dossier candidates: **401**; currently covered: **312 (77.81%)**; uncovered political candidates: **89**. Existing curated metadata entities: **550**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
 
 | Classification | Raw IDs |
 | --- | ---: |
@@ -31,17 +31,17 @@ The [upstream documentation](https://github.com/aourednik/historical-basemaps) d
 
 | Year | Raw | Polity | Dependent | Community | Geographic/composite | Variant | Unresolved | Political candidates | Covered | Uncovered | Coverage |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 1800 | 547 | 90 | 31 | 392 | 2 | 1 | 31 | 121 | 53 | 68 | 43.8% |
-| 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 74 | 50 | 59.68% |
-| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 77 | 65 | 54.23% |
-| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 78 | 65 | 54.55% |
-| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 74 | 65 | 53.24% |
-| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 83 | 53 | 61.03% |
-| 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 98 | 52 | 65.33% |
-| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 96 | 55 | 63.58% |
-| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 101 | 61 | 62.35% |
-| 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 98 | 71 | 57.99% |
-| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 95 | 52 | 64.63% |
+| 1800 | 547 | 90 | 31 | 392 | 2 | 1 | 31 | 121 | 56 | 65 | 46.28% |
+| 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 79 | 45 | 63.71% |
+| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 81 | 61 | 57.04% |
+| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 83 | 60 | 58.04% |
+| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 77 | 62 | 55.4% |
+| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 89 | 47 | 65.44% |
+| 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 103 | 47 | 68.67% |
+| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 101 | 50 | 66.89% |
+| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 107 | 55 | 66.05% |
+| 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 104 | 65 | 61.54% |
+| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 99 | 48 | 67.35% |
 
 The 1800 denominator is explained by its classification table, not modern-country assumptions. Of the 377 explicitly recorded Australian community cohort IDs, 377 appear in 1800. None is counted as an uncovered political dossier or assigned a political research batch. All remain selectable in production. They are deferred to a separately designed, community-appropriate profile project; this says nothing about political significance or organisation.
 
@@ -181,7 +181,7 @@ Families and candidate canonical pairs are indivisible. Batch sizes aim for 15�
 | 15 | West Africa | 25 | 24 | 2 | 1 |
 | 16 | West Africa | 15 | 15 | 7 | 0 |
 | 17 | Central Africa | 30 | 30 | 2 | 0 |
-| 18 | East Africa and Horn | 19 | 18 | 18 | 1 |
+| 18 | East Africa and Horn | 19 | 18 | 0 | 1 |
 | 19 | Southern Africa | 16 | 16 | 16 | 0 |
 | 20 | Southern Africa | 15 | 14 | 14 | 1 |
 | 21 | Pacific/Oceania states and administrations | 24 | 24 | 24 | 0 |
@@ -377,7 +377,7 @@ Classification prerequisites (excluded from this batch denominator): Congo (enti
 
 ### political-batch-18 — East Africa and Horn
 
-State: proposed-not-authorised. Included: British East Africa (entity-british-east-africa); Djibouti (entity-djibouti); Ethiopia (entity-ethiopia); Ethiopia (Italy) (entity-ethiopia-italy); French Somaliland (entity-french-somaliland); German E. Africa (Tanganyika) (entity-german-e-africa-tanganyika); Kenya (entity-kenya); Sultanate of Zanzibar (entity-sultanate-of-zanzibar); Sultinate of Zanzibar (entity-sultinate-of-zanzibar); Zanzibar (entity-zanzibar); Uganda (entity-uganda); British Somaliland (entity-british-somaliland); Buganda (entity-buganda); Bunyoro (entity-bunyoro); Italian Somaliland (entity-italian-somaliland); Harer (Egypt) (entity-harer-egypt); Somalia (entity-somalia); Funj (entity-funj); Kazembe (entity-kazembe).
+State: researched-with-partial-coverage. Included: British East Africa (entity-british-east-africa); Djibouti (entity-djibouti); Ethiopia (entity-ethiopia); Ethiopia (Italy) (entity-ethiopia-italy); French Somaliland (entity-french-somaliland); German E. Africa (Tanganyika) (entity-german-e-africa-tanganyika); Kenya (entity-kenya); Sultanate of Zanzibar (entity-sultanate-of-zanzibar); Sultinate of Zanzibar (entity-sultinate-of-zanzibar); Zanzibar (entity-zanzibar); Uganda (entity-uganda); British Somaliland (entity-british-somaliland); Buganda (entity-buganda); Bunyoro (entity-bunyoro); Italian Somaliland (entity-italian-somaliland); Harer (Egypt) (entity-harer-egypt); Somalia (entity-somalia); Funj (entity-funj); Kazembe (entity-kazembe).
 
 High-value continuing/source-family candidates: Ethiopia (entity-ethiopia).
 
@@ -439,18 +439,18 @@ Covered means the existing production resolver returns a curated entity in at le
 | Measure | Count |
 | --- | ---: |
 | totalIdentities | 880 |
-| curatedMetadataEntities | 514 |
-| mappedIdentities | 307 |
-| coveredIdentities | 298 |
-| uncoveredIdentities | 582 |
-| percentage | 33.86 |
+| curatedMetadataEntities | 550 |
+| mappedIdentities | 326 |
+| coveredIdentities | 317 |
+| uncoveredIdentities | 563 |
+| percentage | 36.02 |
 | multipleSnapshotIdentities | 519 |
 | singleSnapshotIdentities | 361 |
 | unresolvedQuestions | 260 |
 | identitiesWithQuestions | 818 |
 | brokenMappings | 0 |
 | orphanMetadataEntities | 0 |
-| ambiguousMappingYearPairs | 58 |
+| ambiguousMappingYearPairs | 60 |
 
 The denominator includes selectable unlabeled/composite/community identities, not just countries or visible labels. “First/last snapshot” are observations of source presence, never existence dates. Source geometry, metadata and requested-year resolution remain separate.
 
@@ -458,17 +458,17 @@ The denominator includes selectable unlabeled/composite/community identities, no
 
 | Snapshot | Selectable IDs | Curated dossier | Fallback only | Coverage |
 | --- | ---: | ---: | ---: | ---: |
-| 1800 | 547 | 54 | 493 | 9.87% |
-| 1815 | 313 | 74 | 239 | 23.64% |
-| 1878 | 173 | 78 | 95 | 45.09% |
-| 1880 | 170 | 79 | 91 | 46.47% |
-| 1900 | 166 | 75 | 91 | 45.18% |
-| 1914 | 143 | 84 | 59 | 58.74% |
-| 1920 | 164 | 100 | 64 | 60.98% |
-| 1930 | 164 | 98 | 66 | 59.76% |
-| 1938 | 172 | 103 | 69 | 59.88% |
-| 1945 | 183 | 99 | 84 | 54.1% |
-| 1960 | 157 | 96 | 61 | 61.15% |
+| 1800 | 547 | 57 | 490 | 10.42% |
+| 1815 | 313 | 79 | 234 | 25.24% |
+| 1878 | 173 | 83 | 90 | 47.98% |
+| 1880 | 170 | 84 | 86 | 49.41% |
+| 1900 | 166 | 78 | 88 | 46.99% |
+| 1914 | 143 | 90 | 53 | 62.94% |
+| 1920 | 164 | 105 | 59 | 64.02% |
+| 1930 | 164 | 103 | 61 | 62.8% |
+| 1938 | 172 | 109 | 63 | 63.37% |
+| 1945 | 183 | 105 | 78 | 57.38% |
+| 1960 | 157 | 100 | 57 | 63.69% |
 
 ## Persistent and briefly represented identities
 
@@ -880,7 +880,7 @@ Other questions track source-presence gaps, changing authority/grouping, normali
 
 ## Archived Phase 1 raw audit batches — superseded for political research
 
-Batches partition all 880 IDs once. Uncurated counts sum to 582; existing profiles may still require additional periods/identity review. Counts measure map IDs, not a claim that each is one state. A compound label may require several historical records. Geography is a planning hint from the largest prepared feature; manual overrides/candidate families improve it, but it is not historical evidence. Australian community batches are smaller and have a distinct institutional review approach.
+Batches partition all 880 IDs once. Uncurated counts sum to 563; existing profiles may still require additional periods/identity review. Counts measure map IDs, not a claim that each is one state. A compound label may require several historical records. Geography is a planning hint from the largest prepared feature; manual overrides/candidate families improve it, but it is not historical evidence. Australian community batches are smaller and have a distinct institutional review approach.
 
 ### batch-01 — Unidentified/composite source labels · 1/1
 
@@ -1080,7 +1080,7 @@ Continuity: Keep candidate families together across linked batches; share instit
 
 ### batch-19 — East Africa and Horn · 1/1
 
-25 identities; 25 uncurated; 0 already mapped. 25 require some research/review before acceptance.
+25 identities; 6 uncurated; 19 already mapped. 25 require some research/review before acceptance.
 
 Local archives and historical administrative publications; different names and authority fields do not prove succession.
 

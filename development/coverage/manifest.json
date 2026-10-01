@@ -4,96 +4,96 @@
   "coverageDefinition": "Covered means the existing production resolver returns a curated entity in at least one snapshot where this map ID is selectable. It does not mean core completeness or coverage throughout 1800–1960. All other IDs still have map-derived fallback panels.",
   "summary": {
     "totalIdentities": 880,
-    "curatedMetadataEntities": 514,
-    "mappedIdentities": 307,
-    "coveredIdentities": 298,
-    "uncoveredIdentities": 582,
-    "percentage": 33.86,
+    "curatedMetadataEntities": 550,
+    "mappedIdentities": 326,
+    "coveredIdentities": 317,
+    "uncoveredIdentities": 563,
+    "percentage": 36.02,
     "multipleSnapshotIdentities": 519,
     "singleSnapshotIdentities": 361,
     "unresolvedQuestions": 260,
     "identitiesWithQuestions": 818,
     "brokenMappings": 0,
     "orphanMetadataEntities": 0,
-    "ambiguousMappingYearPairs": 58
+    "ambiguousMappingYearPairs": 60
   },
   "bySnapshot": [
     {
       "year": 1800,
       "selectableIdentities": 547,
-      "covered": 54,
-      "uncovered": 493,
-      "percentage": 9.87
+      "covered": 57,
+      "uncovered": 490,
+      "percentage": 10.42
     },
     {
       "year": 1815,
       "selectableIdentities": 313,
-      "covered": 74,
-      "uncovered": 239,
-      "percentage": 23.64
+      "covered": 79,
+      "uncovered": 234,
+      "percentage": 25.24
     },
     {
       "year": 1878,
       "selectableIdentities": 173,
-      "covered": 78,
-      "uncovered": 95,
-      "percentage": 45.09
+      "covered": 83,
+      "uncovered": 90,
+      "percentage": 47.98
     },
     {
       "year": 1880,
       "selectableIdentities": 170,
-      "covered": 79,
-      "uncovered": 91,
-      "percentage": 46.47
+      "covered": 84,
+      "uncovered": 86,
+      "percentage": 49.41
     },
     {
       "year": 1900,
       "selectableIdentities": 166,
-      "covered": 75,
-      "uncovered": 91,
-      "percentage": 45.18
+      "covered": 78,
+      "uncovered": 88,
+      "percentage": 46.99
     },
     {
       "year": 1914,
       "selectableIdentities": 143,
-      "covered": 84,
-      "uncovered": 59,
-      "percentage": 58.74
+      "covered": 90,
+      "uncovered": 53,
+      "percentage": 62.94
     },
     {
       "year": 1920,
       "selectableIdentities": 164,
-      "covered": 100,
-      "uncovered": 64,
-      "percentage": 60.98
+      "covered": 105,
+      "uncovered": 59,
+      "percentage": 64.02
     },
     {
       "year": 1930,
       "selectableIdentities": 164,
-      "covered": 98,
-      "uncovered": 66,
-      "percentage": 59.76
+      "covered": 103,
+      "uncovered": 61,
+      "percentage": 62.8
     },
     {
       "year": 1938,
       "selectableIdentities": 172,
-      "covered": 103,
-      "uncovered": 69,
-      "percentage": 59.88
+      "covered": 109,
+      "uncovered": 63,
+      "percentage": 63.37
     },
     {
       "year": 1945,
       "selectableIdentities": 183,
-      "covered": 99,
-      "uncovered": 84,
-      "percentage": 54.1
+      "covered": 105,
+      "uncovered": 78,
+      "percentage": 57.38
     },
     {
       "year": 1960,
       "selectableIdentities": 157,
-      "covered": 96,
-      "uncovered": 61,
-      "percentage": 61.15
+      "covered": 100,
+      "uncovered": 57,
+      "percentage": 63.69
     }
   ],
   "brokenMappings": [],
@@ -128,6 +128,10 @@
       "requestedYear": 1947
     },
     {
+      "mapId": "entity-ethiopia",
+      "requestedYear": 1930
+    },
+    {
       "mapId": "entity-korea",
       "requestedYear": 1897
     },
@@ -154,6 +158,10 @@
     {
       "mapId": "entity-egypt",
       "requestedYear": 1914
+    },
+    {
+      "mapId": "entity-somalia",
+      "requestedYear": 1960
     },
     {
       "mapId": "entity-ceylon",
@@ -9381,8 +9389,8 @@
         "entity-funj"
       ],
       "totalIdentities": 25,
-      "uncuratedIdentities": 25,
-      "existingProfilesToReview": 0,
+      "uncuratedIdentities": 6,
+      "existingProfilesToReview": 19,
       "requiresHistoricalResearch": 25,
       "sourceStrategy": "Local archives and historical administrative publications; different names and authority fields do not prove succession.",
       "questionIds": [
@@ -29706,30 +29714,68 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1914,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-british-east-africa",
+          "entityId": "east-africa-protectorate-1914-core",
+          "validFrom": "1914-01-01",
+          "validUntil": "1915-01-01",
+          "sourceIds": [
+            "b18-kenya-archives",
+            "b18-uganda-colonial"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "east-africa-protectorate-1914-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "east-africa-protectorate-1914-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-kenya-archives",
+          "b18-uganda-colonial"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "east-africa-protectorate-1914-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b18-kenya-archives",
+              "b18-uganda-colonial"
+            ]
+          }
+        ]
+      },
       "planningFamily": "african-east",
       "planningRegion": "east-africa",
       "questionIds": [
@@ -29737,7 +29783,7 @@
         "authority-entity-british-east-africa"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-abyssinia",
           "entity-djibouti",
@@ -29751,7 +29797,21 @@
           "entity-tanzania-united-republic-of",
           "entity-zanzibar"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "east-africa-protectorate-1914-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b18-kenya-archives",
+              "b18-uganda-colonial"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -30803,103 +30863,191 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1945,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-british-somaliland",
+          "entityId": "british-somaliland-prewar-core",
+          "validFrom": "1914-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b18-somali-partition",
+            "b18-somali-colonial-consolidation",
+            "b18-somali-dervish-resistance"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-british-somaliland",
+          "entityId": "british-somaliland-1945-military-core",
+          "validFrom": "1945-01-01",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "b18-somali-military-administration"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "british-somaliland-1945-military-core",
+        "british-somaliland-prewar-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "british-somaliland-prewar-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "british-somaliland-prewar-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "british-somaliland-prewar-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "british-somaliland-prewar-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "british-somaliland-1945-military-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-somali-partition",
+          "b18-somali-colonial-consolidation",
+          "b18-somali-dervish-resistance",
+          "b18-somali-military-administration"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "british-somaliland-prewar-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b18-somali-partition",
+              "b18-somali-colonial-consolidation",
+              "b18-somali-dervish-resistance"
+            ]
+          },
+          {
+            "entityId": "british-somaliland-1945-military-core",
+            "validFrom": "1945-01-01",
+            "validUntil": "1946-01-01",
+            "sourceIds": [
+              "b18-somali-military-administration"
+            ]
+          }
+        ]
+      },
       "planningRegion": "east-africa",
       "questionIds": [
         "authority-entity-british-somaliland",
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "british-somaliland-prewar-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b18-somali-partition",
+              "b18-somali-colonial-consolidation",
+              "b18-somali-dervish-resistance"
+            ]
+          },
+          {
+            "entityId": "british-somaliland-1945-military-core",
+            "validFrom": "1945-01-01",
+            "validUntil": "1946-01-01",
+            "sourceIds": [
+              "b18-somali-military-administration"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -31954,55 +32102,93 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1900,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-buganda",
+          "entityId": "buganda-precolonial-kingship-core",
+          "validFrom": "1815-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b18-uganda-precolonial"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-buganda",
+          "entityId": "buganda-precolonial-kingship-core",
+          "validFrom": "1878-01-01",
+          "validUntil": "1881-01-01",
+          "sourceIds": [
+            "b18-uganda-precolonial",
+            "b18-uganda-foreign-contact"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-buganda",
+          "entityId": "buganda-post1900-dependent-core",
+          "validFrom": "1901-01-01",
+          "validUntil": "1902-01-01",
+          "sourceIds": [
+            "b18-uganda-colonial"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "buganda-post1900-dependent-core",
+        "buganda-precolonial-kingship-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "buganda-precolonial-kingship-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "buganda-precolonial-kingship-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "buganda-precolonial-kingship-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
@@ -32022,18 +32208,90 @@
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-uganda-precolonial",
+          "b18-uganda-foreign-contact",
+          "b18-uganda-colonial"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated.",
+          "1900 agreement day unverified; requested1901 uses selectable1900 boundary seed, without January1900 colonial fallback."
+        ],
+        "intervals": [
+          {
+            "entityId": "buganda-precolonial-kingship-core",
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b18-uganda-precolonial"
+            ]
+          },
+          {
+            "entityId": "buganda-precolonial-kingship-core",
+            "validFrom": "1878-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b18-uganda-precolonial",
+              "b18-uganda-foreign-contact"
+            ]
+          },
+          {
+            "entityId": "buganda-post1900-dependent-core",
+            "validFrom": "1901-01-01",
+            "validUntil": "1902-01-01",
+            "sourceIds": [
+              "b18-uganda-colonial"
+            ]
+          }
+        ]
+      },
       "planningRegion": "east-africa",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "buganda-precolonial-kingship-core",
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b18-uganda-precolonial"
+            ]
+          },
+          {
+            "entityId": "buganda-precolonial-kingship-core",
+            "validFrom": "1878-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b18-uganda-precolonial",
+              "b18-uganda-foreign-contact"
+            ]
+          },
+          {
+            "entityId": "buganda-post1900-dependent-core",
+            "validFrom": "1901-01-01",
+            "validUntil": "1902-01-01",
+            "sourceIds": [
+              "b18-uganda-colonial"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated.",
+          "1900 agreement day unverified; requested1901 uses selectable1900 boundary seed, without January1900 colonial fallback."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -33022,86 +33280,198 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1900,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-bunyoro",
+          "entityId": "bunyoro-precolonial-kingship-core",
+          "validFrom": "1815-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b18-uganda-precolonial"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-bunyoro",
+          "entityId": "bunyoro-precolonial-kingship-core",
+          "validFrom": "1878-01-01",
+          "validUntil": "1881-01-01",
+          "sourceIds": [
+            "b18-uganda-precolonial",
+            "b18-uganda-foreign-contact"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-bunyoro",
+          "entityId": "bunyoro-1900-dependent-core",
+          "validFrom": "1900-01-01",
+          "validUntil": "1901-01-01",
+          "sourceIds": [
+            "b18-uganda-foreign-contact",
+            "b18-uganda-colonial"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "bunyoro-1900-dependent-core",
+        "bunyoro-precolonial-kingship-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "bunyoro-precolonial-kingship-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "bunyoro-precolonial-kingship-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "bunyoro-precolonial-kingship-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "bunyoro-1900-dependent-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-uganda-precolonial",
+          "b18-uganda-foreign-contact",
+          "b18-uganda-colonial"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "bunyoro-precolonial-kingship-core",
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b18-uganda-precolonial"
+            ]
+          },
+          {
+            "entityId": "bunyoro-precolonial-kingship-core",
+            "validFrom": "1878-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b18-uganda-precolonial",
+              "b18-uganda-foreign-contact"
+            ]
+          },
+          {
+            "entityId": "bunyoro-1900-dependent-core",
+            "validFrom": "1900-01-01",
+            "validUntil": "1901-01-01",
+            "sourceIds": [
+              "b18-uganda-foreign-contact",
+              "b18-uganda-colonial"
+            ]
+          }
+        ]
+      },
       "planningRegion": "east-africa",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "bunyoro-precolonial-kingship-core",
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b18-uganda-precolonial"
+            ]
+          },
+          {
+            "entityId": "bunyoro-precolonial-kingship-core",
+            "validFrom": "1878-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b18-uganda-precolonial",
+              "b18-uganda-foreign-contact"
+            ]
+          },
+          {
+            "entityId": "bunyoro-1900-dependent-core",
+            "validFrom": "1900-01-01",
+            "validUntil": "1901-01-01",
+            "sourceIds": [
+              "b18-uganda-foreign-contact",
+              "b18-uganda-colonial"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -44326,62 +44696,142 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-djibouti",
+          "entityId": "french-somaliland-colonial-core",
+          "validFrom": "1914-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b18-djibouti-history",
+            "b18-somali-partition"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-djibouti",
+          "entityId": "french-somaliland-colonial-core",
+          "validFrom": "1945-01-01",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "b18-djibouti-history"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-djibouti",
+          "entityId": "french-somaliland-1960-overseas-core",
+          "validFrom": "1960-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b18-djibouti-history",
+            "b18-french-somaliland-1960-law"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "french-somaliland-1960-overseas-core",
+        "french-somaliland-colonial-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "french-somaliland-colonial-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "french-somaliland-colonial-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "french-somaliland-1960-overseas-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Historical body explicitly links earlier French Somaliland to later named Djibouti; all accepted pre1977 cores use colonial/overseas institutions.",
+        "sourceIds": [
+          "b18-djibouti-history",
+          "b18-somali-partition",
+          "b18-french-somaliland-1960-law"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "french-somaliland-colonial-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b18-djibouti-history",
+              "b18-somali-partition"
+            ]
+          },
+          {
+            "entityId": "french-somaliland-colonial-core",
+            "validFrom": "1945-01-01",
+            "validUntil": "1946-01-01",
+            "sourceIds": [
+              "b18-djibouti-history"
+            ]
+          },
+          {
+            "entityId": "french-somaliland-1960-overseas-core",
+            "validFrom": "1960-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b18-djibouti-history",
+              "b18-french-somaliland-1960-law"
+            ]
+          }
+        ]
+      },
       "planningFamily": "african-east",
       "planningRegion": "east-africa",
       "questionIds": [
@@ -44391,7 +44841,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-abyssinia",
           "entity-british-east-africa",
@@ -44405,7 +44855,38 @@
           "entity-tanzania-united-republic-of",
           "entity-zanzibar"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Historical body explicitly links earlier French Somaliland to later named Djibouti; all accepted pre1977 cores use colonial/overseas institutions.",
+        "intervals": [
+          {
+            "entityId": "french-somaliland-colonial-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b18-djibouti-history",
+              "b18-somali-partition"
+            ]
+          },
+          {
+            "entityId": "french-somaliland-colonial-core",
+            "validFrom": "1945-01-01",
+            "validUntil": "1946-01-01",
+            "sourceIds": [
+              "b18-djibouti-history"
+            ]
+          },
+          {
+            "entityId": "french-somaliland-1960-overseas-core",
+            "validFrom": "1960-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b18-djibouti-history",
+              "b18-french-somaliland-1960-law"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -50835,109 +51316,229 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-ethiopia",
+          "entityId": "ethiopia-era-princes-core",
+          "validFrom": "1800-01-01",
+          "validUntil": "1801-01-01",
+          "sourceIds": [
+            "b18-ethiopia-princes"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-ethiopia",
+          "entityId": "ethiopia-era-princes-core",
+          "validFrom": "1815-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b18-ethiopia-princes"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-ethiopia",
+          "entityId": "ethiopia-yohannis-1880-core",
+          "validFrom": "1878-01-01",
+          "validUntil": "1881-01-01",
+          "sourceIds": [
+            "b18-ethiopia-yohannis"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-ethiopia",
+          "entityId": "ethiopia-menelik-1900-core",
+          "validFrom": "1900-01-01",
+          "validUntil": "1901-01-01",
+          "sourceIds": [
+            "b18-ethiopia-menelik"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-ethiopia",
+          "entityId": "ethiopia-zawditu-regency-core",
+          "validFrom": "1917-01-01",
+          "validUntil": "1930-04-01",
+          "sourceIds": [
+            "b18-ethiopia-interregnum",
+            "b18-ethiopia-prewar"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-ethiopia",
+          "entityId": "ethiopia-1930-coronation-core",
+          "validFrom": "1930-12-01",
+          "validUntil": "1931-07-01",
+          "sourceIds": [
+            "b18-ethiopia-prewar"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-ethiopia",
+          "entityId": "ethiopia-1931-constitutional-core",
+          "validFrom": "1932-01-01",
+          "validUntil": "1935-10-03",
+          "sourceIds": [
+            "b18-ethiopia-prewar",
+            "b18-ethiopia-occupation"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-ethiopia",
+          "entityId": "ethiopia-restored-1945-core",
+          "validFrom": "1945-01-01",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "b18-ethiopia-restoration"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-ethiopia",
+          "entityId": "ethiopia-1955-constitutional-core",
+          "validFrom": "1956-01-01",
+          "validUntil": "1960-12-13",
+          "sourceIds": [
+            "b18-ethiopia-1955",
+            "b18-ethiopia-1960-coup"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-ethiopia",
+          "entityId": "ethiopia-1955-constitutional-core",
+          "validFrom": "1960-12-17",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b18-ethiopia-1955",
+            "b18-ethiopia-1960-coup"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "ethiopia-1930-coronation-core",
+        "ethiopia-1931-constitutional-core",
+        "ethiopia-1955-constitutional-core",
+        "ethiopia-era-princes-core",
+        "ethiopia-menelik-1900-core",
+        "ethiopia-restored-1945-core",
+        "ethiopia-yohannis-1880-core",
+        "ethiopia-zawditu-regency-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ethiopia-era-princes-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ethiopia-era-princes-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ethiopia-yohannis-1880-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ethiopia-yohannis-1880-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ethiopia-menelik-1900-core",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ethiopia-zawditu-regency-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
           "receivesCuratedDossier": false,
-          "ambiguous": false,
+          "ambiguous": true,
           "entityId": null,
           "availableFields": [],
           "missingCoreFields": [
@@ -50952,41 +51553,149 @@
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ethiopia-restored-1945-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ethiopia-1955-constitutional-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-ethiopia-princes",
+          "b18-ethiopia-yohannis",
+          "b18-ethiopia-menelik",
+          "b18-ethiopia-interregnum",
+          "b18-ethiopia-prewar",
+          "b18-ethiopia-occupation",
+          "b18-ethiopia-restoration",
+          "b18-ethiopia-1955",
+          "b18-ethiopia-1960-coup"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated.",
+          "Coup capital-seizure interval 13–17 December 1960 omitted. Transitional 1930/1931 months and unresearched periods remain gaps."
+        ],
+        "intervals": [
+          {
+            "entityId": "ethiopia-era-princes-core",
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b18-ethiopia-princes"
+            ]
+          },
+          {
+            "entityId": "ethiopia-era-princes-core",
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b18-ethiopia-princes"
+            ]
+          },
+          {
+            "entityId": "ethiopia-yohannis-1880-core",
+            "validFrom": "1878-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b18-ethiopia-yohannis"
+            ]
+          },
+          {
+            "entityId": "ethiopia-menelik-1900-core",
+            "validFrom": "1900-01-01",
+            "validUntil": "1901-01-01",
+            "sourceIds": [
+              "b18-ethiopia-menelik"
+            ]
+          },
+          {
+            "entityId": "ethiopia-zawditu-regency-core",
+            "validFrom": "1917-01-01",
+            "validUntil": "1930-04-01",
+            "sourceIds": [
+              "b18-ethiopia-interregnum",
+              "b18-ethiopia-prewar"
+            ]
+          },
+          {
+            "entityId": "ethiopia-1930-coronation-core",
+            "validFrom": "1930-12-01",
+            "validUntil": "1931-07-01",
+            "sourceIds": [
+              "b18-ethiopia-prewar"
+            ]
+          },
+          {
+            "entityId": "ethiopia-1931-constitutional-core",
+            "validFrom": "1932-01-01",
+            "validUntil": "1935-10-03",
+            "sourceIds": [
+              "b18-ethiopia-prewar",
+              "b18-ethiopia-occupation"
+            ]
+          },
+          {
+            "entityId": "ethiopia-restored-1945-core",
+            "validFrom": "1945-01-01",
+            "validUntil": "1946-01-01",
+            "sourceIds": [
+              "b18-ethiopia-restoration"
+            ]
+          },
+          {
+            "entityId": "ethiopia-1955-constitutional-core",
+            "validFrom": "1956-01-01",
+            "validUntil": "1960-12-13",
+            "sourceIds": [
+              "b18-ethiopia-1955",
+              "b18-ethiopia-1960-coup"
+            ]
+          },
+          {
+            "entityId": "ethiopia-1955-constitutional-core",
+            "validFrom": "1960-12-17",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b18-ethiopia-1955",
+              "b18-ethiopia-1960-coup"
+            ]
+          }
+        ]
+      },
       "planningFamily": "african-east",
       "planningRegion": "east-africa",
       "questionIds": [
@@ -50995,7 +51704,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-abyssinia",
           "entity-british-east-africa",
@@ -51009,7 +51718,97 @@
           "entity-tanzania-united-republic-of",
           "entity-zanzibar"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "ethiopia-era-princes-core",
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b18-ethiopia-princes"
+            ]
+          },
+          {
+            "entityId": "ethiopia-era-princes-core",
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b18-ethiopia-princes"
+            ]
+          },
+          {
+            "entityId": "ethiopia-yohannis-1880-core",
+            "validFrom": "1878-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b18-ethiopia-yohannis"
+            ]
+          },
+          {
+            "entityId": "ethiopia-menelik-1900-core",
+            "validFrom": "1900-01-01",
+            "validUntil": "1901-01-01",
+            "sourceIds": [
+              "b18-ethiopia-menelik"
+            ]
+          },
+          {
+            "entityId": "ethiopia-zawditu-regency-core",
+            "validFrom": "1917-01-01",
+            "validUntil": "1930-04-01",
+            "sourceIds": [
+              "b18-ethiopia-interregnum",
+              "b18-ethiopia-prewar"
+            ]
+          },
+          {
+            "entityId": "ethiopia-1930-coronation-core",
+            "validFrom": "1930-12-01",
+            "validUntil": "1931-07-01",
+            "sourceIds": [
+              "b18-ethiopia-prewar"
+            ]
+          },
+          {
+            "entityId": "ethiopia-1931-constitutional-core",
+            "validFrom": "1932-01-01",
+            "validUntil": "1935-10-03",
+            "sourceIds": [
+              "b18-ethiopia-prewar",
+              "b18-ethiopia-occupation"
+            ]
+          },
+          {
+            "entityId": "ethiopia-restored-1945-core",
+            "validFrom": "1945-01-01",
+            "validUntil": "1946-01-01",
+            "sourceIds": [
+              "b18-ethiopia-restoration"
+            ]
+          },
+          {
+            "entityId": "ethiopia-1955-constitutional-core",
+            "validFrom": "1956-01-01",
+            "validUntil": "1960-12-13",
+            "sourceIds": [
+              "b18-ethiopia-1955",
+              "b18-ethiopia-1960-coup"
+            ]
+          },
+          {
+            "entityId": "ethiopia-1955-constitutional-core",
+            "validFrom": "1960-12-17",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b18-ethiopia-1955",
+              "b18-ethiopia-1960-coup"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated.",
+          "Coup capital-seizure interval 13–17 December 1960 omitted. Transitional 1930/1931 months and unresearched periods remain gaps."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -51065,30 +51864,69 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1938,
       "lastAvailableSnapshot": 1938,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-ethiopia-italy",
+          "entityId": "ethiopia-italian-occupation-1938-core",
+          "validFrom": "1938-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b18-ethiopia-occupation",
+            "b12-eritrea-1936-primary"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "ethiopia-italian-occupation-1938-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ethiopia-italian-occupation-1938-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-ethiopia-occupation",
+          "b12-eritrea-1936-primary"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated.",
+          "Occupation and claimed annexation are qualified; exact provincial reorganisation after June 1936 remains partial."
+        ],
+        "intervals": [
+          {
+            "entityId": "ethiopia-italian-occupation-1938-core",
+            "validFrom": "1938-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b18-ethiopia-occupation",
+              "b12-eritrea-1936-primary"
+            ]
+          }
+        ]
+      },
       "planningFamily": "african-east",
       "planningRegion": "east-africa",
       "questionIds": [
@@ -51096,7 +51934,7 @@
         "authority-entity-ethiopia-italy"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-abyssinia",
           "entity-british-east-africa",
@@ -51110,7 +51948,22 @@
           "entity-tanzania-united-republic-of",
           "entity-zanzibar"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "ethiopia-italian-occupation-1938-core",
+            "validFrom": "1938-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b18-ethiopia-occupation",
+              "b12-eritrea-1936-primary"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated.",
+          "Occupation and claimed annexation are qualified; exact provincial reorganisation after June 1936 remains partial."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -54775,62 +55628,102 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1938,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-french-somaliland",
+          "entityId": "french-somaliland-colonial-core",
+          "validFrom": "1914-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b18-djibouti-history",
+            "b18-somali-partition"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "french-somaliland-colonial-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "french-somaliland-colonial-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "french-somaliland-colonial-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "french-somaliland-colonial-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-djibouti-history",
+          "b18-somali-partition"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "french-somaliland-colonial-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b18-djibouti-history",
+              "b18-somali-partition"
+            ]
+          }
+        ]
+      },
       "planningFamily": "african-east",
       "planningRegion": "east-africa",
       "questionIds": [
@@ -54839,7 +55732,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-abyssinia",
           "entity-british-east-africa",
@@ -54853,7 +55746,21 @@
           "entity-tanzania-united-republic-of",
           "entity-zanzibar"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "french-somaliland-colonial-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b18-djibouti-history",
+              "b18-somali-partition"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -55303,36 +56210,84 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1800,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-funj",
+          "entityId": "funj-1800-vizier-core",
+          "validFrom": "1800-01-01",
+          "validUntil": "1801-01-01",
+          "sourceIds": [
+            "b18-funj-vizier-core"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "funj-1800-vizier-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "funj-1800-vizier-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
+      "currentlyResolvesToDossier": true,
       "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-funj-vizier-core"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "funj-1800-vizier-core",
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b18-funj-vizier-core"
+            ]
+          }
+        ]
+      },
       "planningRegion": "east-africa",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "funj-1800-vizier-core",
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b18-funj-vizier-core"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -58080,30 +59035,65 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1914,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-german-e-africa-tanganyika",
+          "entityId": "german-east-africa-1914-core",
+          "validFrom": "1914-01-01",
+          "validUntil": "1915-01-01",
+          "sourceIds": [
+            "b18-tanzania-historical-review"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "german-east-africa-1914-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "german-east-africa-1914-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-tanzania-historical-review"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "german-east-africa-1914-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b18-tanzania-historical-review"
+            ]
+          }
+        ]
+      },
       "planningFamily": "african-east",
       "planningRegion": "east-africa",
       "questionIds": [
@@ -58111,7 +59101,7 @@
         "authority-entity-german-e-africa-tanganyika"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-abyssinia",
           "entity-british-east-africa",
@@ -58125,7 +59115,20 @@
           "entity-tanzania-united-republic-of",
           "entity-zanzibar"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "german-east-africa-1914-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b18-tanzania-historical-review"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -67781,39 +68784,55 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1900,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-harer-egypt",
+          "entityId": "harer-egyptian-1880-core",
+          "validFrom": "1878-01-01",
+          "validUntil": "1881-01-01",
+          "sourceIds": [
+            "b18-ethiopia-yohannis",
+            "b18-somali-partition"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "harer-egyptian-1880-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "harer-egyptian-1880-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "harer-egyptian-1880-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
@@ -67833,18 +68852,57 @@
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "mapping-review",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "mapping-review",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-ethiopia-yohannis",
+          "b18-somali-partition"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated.",
+          "1900 Egyptian component is anachronistic after withdrawal; no automatic substitution of Ethiopia or former emirate."
+        ],
+        "intervals": [
+          {
+            "entityId": "harer-egyptian-1880-core",
+            "validFrom": "1878-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b18-ethiopia-yohannis",
+              "b18-somali-partition"
+            ]
+          }
+        ]
+      },
       "planningRegion": "east-africa",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "harer-egyptian-1880-core",
+            "validFrom": "1878-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b18-ethiopia-yohannis",
+              "b18-somali-partition"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated.",
+          "1900 Egyptian component is anachronistic after withdrawal; no automatic substitution of Ethiopia or former emirate."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -73007,87 +74065,204 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1938,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-italian-somaliland",
+          "entityId": "italian-somaliland-early-core",
+          "validFrom": "1914-01-01",
+          "validUntil": "1921-01-01",
+          "sourceIds": [
+            "b18-somali-partition",
+            "b18-somali-colonial-consolidation"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-italian-somaliland",
+          "entityId": "italian-somaliland-1930-core",
+          "validFrom": "1930-01-01",
+          "validUntil": "1931-01-01",
+          "sourceIds": [
+            "b18-somali-colonial-consolidation"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-italian-somaliland",
+          "entityId": "somaliland-aio-1938-core",
+          "validFrom": "1938-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b12-eritrea-1936-primary",
+            "b18-ethiopia-occupation",
+            "b18-somali-colonial-consolidation"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "italian-somaliland-1930-core",
+        "italian-somaliland-early-core",
+        "somaliland-aio-1938-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "italian-somaliland-early-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "italian-somaliland-early-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "italian-somaliland-1930-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "somaliland-aio-1938-core",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-somali-partition",
+          "b18-somali-colonial-consolidation",
+          "b12-eritrea-1936-primary",
+          "b18-ethiopia-occupation"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "italian-somaliland-early-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1921-01-01",
+            "sourceIds": [
+              "b18-somali-partition",
+              "b18-somali-colonial-consolidation"
+            ]
+          },
+          {
+            "entityId": "italian-somaliland-1930-core",
+            "validFrom": "1930-01-01",
+            "validUntil": "1931-01-01",
+            "sourceIds": [
+              "b18-somali-colonial-consolidation"
+            ]
+          },
+          {
+            "entityId": "somaliland-aio-1938-core",
+            "validFrom": "1938-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b12-eritrea-1936-primary",
+              "b18-ethiopia-occupation",
+              "b18-somali-colonial-consolidation"
+            ]
+          }
+        ]
+      },
       "planningRegion": "east-africa",
       "questionIds": [
         "authority-entity-italian-somaliland",
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "italian-somaliland-early-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1921-01-01",
+            "sourceIds": [
+              "b18-somali-partition",
+              "b18-somali-colonial-consolidation"
+            ]
+          },
+          {
+            "entityId": "italian-somaliland-1930-core",
+            "validFrom": "1930-01-01",
+            "validUntil": "1931-01-01",
+            "sourceIds": [
+              "b18-somali-colonial-consolidation"
+            ]
+          },
+          {
+            "entityId": "somaliland-aio-1938-core",
+            "validFrom": "1938-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b12-eritrea-1936-primary",
+              "b18-ethiopia-occupation",
+              "b18-somali-colonial-consolidation"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -79306,36 +80481,84 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-kazembe",
+          "entityId": "kazembe-1815-monarchy-core",
+          "validFrom": "1815-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b18-kazembe-political-core"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "kazembe-1815-monarchy-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "kazembe-1815-monarchy-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
+      "currentlyResolvesToDossier": true,
       "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-kazembe-political-core"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "kazembe-1815-monarchy-core",
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b18-kazembe-political-core"
+            ]
+          }
+        ]
+      },
       "planningRegion": "east-africa",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "kazembe-1815-monarchy-core",
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b18-kazembe-political-core"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -79479,8 +80702,43 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-kenya",
+          "entityId": "kenya-colony-protectorate-prewar-core",
+          "validFrom": "1921-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b18-kenya-archives"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-kenya",
+          "entityId": "kenya-1945-colonial-core",
+          "validFrom": "1945-01-01",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "b18-kenya-archives"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-kenya",
+          "entityId": "kenya-1960-colonial-core",
+          "validFrom": "1960-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b18-kenya-archives"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "kenya-1945-colonial-core",
+        "kenya-1960-colonial-core",
+        "kenya-colony-protectorate-prewar-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
@@ -79500,73 +80758,115 @@
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "kenya-colony-protectorate-prewar-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "kenya-colony-protectorate-prewar-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "kenya-1945-colonial-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "kenya-1960-colonial-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-kenya-archives"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated.",
+          "1920 before the conservative 1921 core remains unresolved; seed1920/ requested1921 deliberately separated."
+        ],
+        "intervals": [
+          {
+            "entityId": "kenya-colony-protectorate-prewar-core",
+            "validFrom": "1921-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b18-kenya-archives"
+            ]
+          },
+          {
+            "entityId": "kenya-1945-colonial-core",
+            "validFrom": "1945-01-01",
+            "validUntil": "1946-01-01",
+            "sourceIds": [
+              "b18-kenya-archives"
+            ]
+          },
+          {
+            "entityId": "kenya-1960-colonial-core",
+            "validFrom": "1960-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b18-kenya-archives"
+            ]
+          }
+        ]
+      },
       "planningFamily": "african-east",
       "planningRegion": "east-africa",
       "questionIds": [
@@ -79575,7 +80875,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-abyssinia",
           "entity-british-east-africa",
@@ -79589,7 +80889,37 @@
           "entity-tanzania-united-republic-of",
           "entity-zanzibar"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "kenya-colony-protectorate-prewar-core",
+            "validFrom": "1921-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b18-kenya-archives"
+            ]
+          },
+          {
+            "entityId": "kenya-1945-colonial-core",
+            "validFrom": "1945-01-01",
+            "validUntil": "1946-01-01",
+            "sourceIds": [
+              "b18-kenya-archives"
+            ]
+          },
+          {
+            "entityId": "kenya-1960-colonial-core",
+            "validFrom": "1960-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b18-kenya-archives"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated.",
+          "1920 before the conservative 1921 core remains unresolved; seed1920/ requested1921 deliberately separated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -136947,8 +138277,43 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-somalia",
+          "entityId": "somalia-south-1945-military-core",
+          "validFrom": "1945-01-01",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "b18-somali-military-administration"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-somalia",
+          "entityId": "somalia-1960-trust-core",
+          "validFrom": "1960-01-01",
+          "validUntil": "1960-07-01",
+          "sourceIds": [
+            "b18-somali-trust-independence"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-somalia",
+          "entityId": "somalia-1960-republic-core",
+          "validFrom": "1960-07-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b18-somali-trust-independence"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "somalia-1960-republic-core",
+        "somalia-1960-trust-core",
+        "somalia-south-1945-military-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
@@ -136968,24 +138333,25 @@
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "somalia-south-1945-military-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1960,
           "receivesCuratedDossier": false,
-          "ambiguous": false,
+          "ambiguous": true,
           "entityId": null,
           "availableFields": [],
           "missingCoreFields": [
@@ -136999,10 +138365,50 @@
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "mapping-review",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "mapping-review",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-somali-military-administration",
+          "b18-somali-trust-independence",
+          "b18-somali-prepartition"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated.",
+          "1815 generic label spans distinct coastal/interior political settings; no unified state inferred. 1960 northern 26–30 June independence is not mapped onto southern trust geometry."
+        ],
+        "intervals": [
+          {
+            "entityId": "somalia-south-1945-military-core",
+            "validFrom": "1945-01-01",
+            "validUntil": "1946-01-01",
+            "sourceIds": [
+              "b18-somali-military-administration"
+            ]
+          },
+          {
+            "entityId": "somalia-1960-trust-core",
+            "validFrom": "1960-01-01",
+            "validUntil": "1960-07-01",
+            "sourceIds": [
+              "b18-somali-trust-independence"
+            ]
+          },
+          {
+            "entityId": "somalia-1960-republic-core",
+            "validFrom": "1960-07-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b18-somali-trust-independence"
+            ]
+          }
+        ]
+      },
       "planningRegion": "east-africa",
       "questionIds": [
         "gap-entity-somalia",
@@ -137010,9 +138416,39 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "somalia-south-1945-military-core",
+            "validFrom": "1945-01-01",
+            "validUntil": "1946-01-01",
+            "sourceIds": [
+              "b18-somali-military-administration"
+            ]
+          },
+          {
+            "entityId": "somalia-1960-trust-core",
+            "validFrom": "1960-01-01",
+            "validUntil": "1960-07-01",
+            "sourceIds": [
+              "b18-somali-trust-independence"
+            ]
+          },
+          {
+            "entityId": "somalia-1960-republic-core",
+            "validFrom": "1960-07-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b18-somali-trust-independence"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated.",
+          "1815 generic label spans distinct coastal/interior political settings; no unified state inferred. 1960 northern 26–30 June independence is not mapped onto southern trust geometry."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -140397,46 +141833,110 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1880,
       "lastAvailableSnapshot": 1900,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-sultanate-of-zanzibar",
+          "entityId": "zanzibar-1880-sultanate-core",
+          "validFrom": "1878-01-01",
+          "validUntil": "1881-01-01",
+          "sourceIds": [
+            "b18-zanzibar-legal-history",
+            "b18-tanzania-historical-review"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-sultanate-of-zanzibar",
+          "entityId": "zanzibar-1900-protected-sultanate-core",
+          "validFrom": "1900-01-01",
+          "validUntil": "1901-01-01",
+          "sourceIds": [
+            "b18-zanzibar-protectorate-primary",
+            "b18-zanzibar-legal-history",
+            "b18-east-africa-archives"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "zanzibar-1880-sultanate-core",
+        "zanzibar-1900-protected-sultanate-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "zanzibar-1880-sultanate-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "zanzibar-1900-protected-sultanate-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-zanzibar-legal-history",
+          "b18-tanzania-historical-review",
+          "b18-zanzibar-protectorate-primary",
+          "b18-east-africa-archives"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "zanzibar-1880-sultanate-core",
+            "validFrom": "1878-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b18-zanzibar-legal-history",
+              "b18-tanzania-historical-review"
+            ]
+          },
+          {
+            "entityId": "zanzibar-1900-protected-sultanate-core",
+            "validFrom": "1900-01-01",
+            "validUntil": "1901-01-01",
+            "sourceIds": [
+              "b18-zanzibar-protectorate-primary",
+              "b18-zanzibar-legal-history",
+              "b18-east-africa-archives"
+            ]
+          }
+        ]
+      },
       "planningFamily": "african-east",
       "planningRegion": "east-africa",
       "questionIds": [
@@ -140444,7 +141944,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-abyssinia",
           "entity-british-east-africa",
@@ -140458,7 +141958,31 @@
           "entity-tanzania-united-republic-of",
           "entity-zanzibar"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "zanzibar-1880-sultanate-core",
+            "validFrom": "1878-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b18-zanzibar-legal-history",
+              "b18-tanzania-historical-review"
+            ]
+          },
+          {
+            "entityId": "zanzibar-1900-protected-sultanate-core",
+            "validFrom": "1900-01-01",
+            "validUntil": "1901-01-01",
+            "sourceIds": [
+              "b18-zanzibar-protectorate-primary",
+              "b18-zanzibar-legal-history",
+              "b18-east-africa-archives"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -140514,37 +142038,75 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1878,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-sultinate-of-zanzibar",
+          "entityId": "zanzibar-1880-sultanate-core",
+          "validFrom": "1878-01-01",
+          "validUntil": "1881-01-01",
+          "sourceIds": [
+            "b18-zanzibar-legal-history",
+            "b18-tanzania-historical-review"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "zanzibar-1880-sultanate-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "zanzibar-1880-sultanate-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Orthographic name-variant candidate of Sultanate of Zanzibar; same historically sourced 1878 royal framework, no classification mutation or geometry inference.",
+        "sourceIds": [
+          "b18-zanzibar-legal-history",
+          "b18-tanzania-historical-review"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "zanzibar-1880-sultanate-core",
+            "validFrom": "1878-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b18-zanzibar-legal-history",
+              "b18-tanzania-historical-review"
+            ]
+          }
+        ]
+      },
       "planningFamily": "african-east",
       "planningRegion": "east-africa",
       "questionIds": [
         "family-african-east"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-abyssinia",
           "entity-british-east-africa",
@@ -140558,7 +142120,21 @@
           "entity-tanzania-united-republic-of",
           "entity-zanzibar"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Orthographic name-variant candidate of Sultanate of Zanzibar; same historically sourced 1878 royal framework, no classification mutation or geometry inference.",
+        "intervals": [
+          {
+            "entityId": "zanzibar-1880-sultanate-core",
+            "validFrom": "1878-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b18-zanzibar-legal-history",
+              "b18-tanzania-historical-review"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -150519,119 +152095,211 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-uganda",
+          "entityId": "uganda-colonial-pre1952-core",
+          "validFrom": "1914-01-01",
+          "validUntil": "1952-01-01",
+          "sourceIds": [
+            "b18-uganda-colonial",
+            "b18-east-africa-archives"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-uganda",
+          "entityId": "uganda-1960-reformed-colonial-core",
+          "validFrom": "1960-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b18-uganda-postwar",
+            "b18-uganda-1960-framework",
+            "b18-east-africa-archives"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "uganda-1960-reformed-colonial-core",
+        "uganda-colonial-pre1952-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "uganda-colonial-pre1952-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "uganda-colonial-pre1952-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "uganda-colonial-pre1952-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "uganda-colonial-pre1952-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "uganda-colonial-pre1952-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "uganda-1960-reformed-colonial-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "sourceIds": [
+          "b18-uganda-colonial",
+          "b18-east-africa-archives",
+          "b18-uganda-postwar",
+          "b18-uganda-1960-framework"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "uganda-colonial-pre1952-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1952-01-01",
+            "sourceIds": [
+              "b18-uganda-colonial",
+              "b18-east-africa-archives"
+            ]
+          },
+          {
+            "entityId": "uganda-1960-reformed-colonial-core",
+            "validFrom": "1960-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b18-uganda-postwar",
+              "b18-uganda-1960-framework",
+              "b18-east-africa-archives"
+            ]
+          }
+        ]
+      },
       "planningRegion": "east-africa",
       "questionIds": [
         "authority-entity-uganda",
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Dated political framework supported independently of boundary geometry; unresearched periods remain unavailable.",
+        "intervals": [
+          {
+            "entityId": "uganda-colonial-pre1952-core",
+            "validFrom": "1914-01-01",
+            "validUntil": "1952-01-01",
+            "sourceIds": [
+              "b18-uganda-colonial",
+              "b18-east-africa-archives"
+            ]
+          },
+          {
+            "entityId": "uganda-1960-reformed-colonial-core",
+            "validFrom": "1960-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b18-uganda-postwar",
+              "b18-uganda-1960-framework",
+              "b18-east-africa-archives"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -170302,46 +171970,85 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-zanzibar",
+          "entityId": "zanzibar-early-omani-dependency-core",
+          "validFrom": "1800-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b18-tanzania-historical-review",
+            "b18-zanzibar-legal-history"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "curatedEntityIds": [
+        "zanzibar-early-omani-dependency-core"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "zanzibar-early-omani-dependency-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "zanzibar-early-omani-dependency-core",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial political core supported by body-read historical evidence; not an enriched dossier.",
+        "identityResolution": "Earlier Zanzibar is an Omani dependency, distinct from the later independent sultanate and whole Omani state.",
+        "sourceIds": [
+          "b18-tanzania-historical-review",
+          "b18-zanzibar-legal-history"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "zanzibar-early-omani-dependency-core",
+            "validFrom": "1800-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b18-tanzania-historical-review",
+              "b18-zanzibar-legal-history"
+            ]
+          }
+        ]
+      },
       "planningFamily": "african-east",
       "planningRegion": "east-africa",
       "questionIds": [
@@ -170349,7 +172056,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-abyssinia",
           "entity-british-east-africa",
@@ -170363,7 +172070,21 @@
           "entity-sultinate-of-zanzibar",
           "entity-tanzania-united-republic-of"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Earlier Zanzibar is an Omani dependency, distinct from the later independent sultanate and whole Omani state.",
+        "intervals": [
+          {
+            "entityId": "zanzibar-early-omani-dependency-core",
+            "validFrom": "1800-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b18-tanzania-historical-review",
+              "b18-zanzibar-legal-history"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive leadership and succession uncurated."
+        ]
       },
       "batchId": "batch-19",
       "classification": {
@@ -170898,9 +172619,9 @@
     },
     "politicalCoverage": {
       "candidates": 401,
-      "covered": 294,
-      "uncovered": 107,
-      "percentage": 73.32
+      "covered": 312,
+      "uncovered": 89,
+      "percentage": 77.81
     },
     "nonStateTemplateIdentities": 400,
     "bySnapshot": [
@@ -170916,9 +172637,9 @@
           "unresolved": 31
         },
         "politicalCandidates": 121,
-        "politicalCovered": 53,
-        "politicalUncovered": 68,
-        "politicalPercentage": 43.8
+        "politicalCovered": 56,
+        "politicalUncovered": 65,
+        "politicalPercentage": 46.28
       },
       {
         "year": 1815,
@@ -170932,9 +172653,9 @@
           "unresolved": 24
         },
         "politicalCandidates": 124,
-        "politicalCovered": 74,
-        "politicalUncovered": 50,
-        "politicalPercentage": 59.68
+        "politicalCovered": 79,
+        "politicalUncovered": 45,
+        "politicalPercentage": 63.71
       },
       {
         "year": 1878,
@@ -170948,9 +172669,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 142,
-        "politicalCovered": 77,
-        "politicalUncovered": 65,
-        "politicalPercentage": 54.23
+        "politicalCovered": 81,
+        "politicalUncovered": 61,
+        "politicalPercentage": 57.04
       },
       {
         "year": 1880,
@@ -170964,9 +172685,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 143,
-        "politicalCovered": 78,
-        "politicalUncovered": 65,
-        "politicalPercentage": 54.55
+        "politicalCovered": 83,
+        "politicalUncovered": 60,
+        "politicalPercentage": 58.04
       },
       {
         "year": 1900,
@@ -170980,9 +172701,9 @@
           "unresolved": 21
         },
         "politicalCandidates": 139,
-        "politicalCovered": 74,
-        "politicalUncovered": 65,
-        "politicalPercentage": 53.24
+        "politicalCovered": 77,
+        "politicalUncovered": 62,
+        "politicalPercentage": 55.4
       },
       {
         "year": 1914,
@@ -170996,9 +172717,9 @@
           "unresolved": 5
         },
         "politicalCandidates": 136,
-        "politicalCovered": 83,
-        "politicalUncovered": 53,
-        "politicalPercentage": 61.03
+        "politicalCovered": 89,
+        "politicalUncovered": 47,
+        "politicalPercentage": 65.44
       },
       {
         "year": 1920,
@@ -171012,9 +172733,9 @@
           "unresolved": 11
         },
         "politicalCandidates": 150,
-        "politicalCovered": 98,
-        "politicalUncovered": 52,
-        "politicalPercentage": 65.33
+        "politicalCovered": 103,
+        "politicalUncovered": 47,
+        "politicalPercentage": 68.67
       },
       {
         "year": 1930,
@@ -171028,9 +172749,9 @@
           "unresolved": 10
         },
         "politicalCandidates": 151,
-        "politicalCovered": 96,
-        "politicalUncovered": 55,
-        "politicalPercentage": 63.58
+        "politicalCovered": 101,
+        "politicalUncovered": 50,
+        "politicalPercentage": 66.89
       },
       {
         "year": 1938,
@@ -171044,9 +172765,9 @@
           "unresolved": 6
         },
         "politicalCandidates": 162,
-        "politicalCovered": 101,
-        "politicalUncovered": 61,
-        "politicalPercentage": 62.35
+        "politicalCovered": 107,
+        "politicalUncovered": 55,
+        "politicalPercentage": 66.05
       },
       {
         "year": 1945,
@@ -171060,9 +172781,9 @@
           "unresolved": 12
         },
         "politicalCandidates": 169,
-        "politicalCovered": 98,
-        "politicalUncovered": 71,
-        "politicalPercentage": 57.99
+        "politicalCovered": 104,
+        "politicalUncovered": 65,
+        "politicalPercentage": 61.54
       },
       {
         "year": 1960,
@@ -171076,9 +172797,9 @@
           "unresolved": 8
         },
         "politicalCandidates": 147,
-        "politicalCovered": 95,
-        "politicalUncovered": 52,
-        "politicalPercentage": 64.63
+        "politicalCovered": 99,
+        "politicalUncovered": 48,
+        "politicalPercentage": 67.35
       }
     ],
     "questionAudit": {
@@ -174113,7 +175834,8 @@
       "political-batch-14",
       "political-batch-15",
       "political-batch-16",
-      "political-batch-17"
+      "political-batch-17",
+      "political-batch-18"
     ],
     "reviewQueue": "classification-and-mapping-gates-not-historical-fact-research"
   },
@@ -175043,8 +176765,8 @@
       "totalIdentities": 19,
       "politicalCandidates": 18,
       "nameReviews": 1,
-      "uncoveredPoliticalCandidates": 18,
-      "coveredPoliticalCandidates": 0,
+      "uncoveredPoliticalCandidates": 0,
+      "coveredPoliticalCandidates": 18,
       "sourceStrategy": "Local archives and historical administrative publications; different names and authority fields do not prove succession.",
       "priorityRationale": "Early source-family batches prioritise long snapshot presence, broad period potential and national archival/constitutional collections. Source availability is a planning expectation, not an entity-by-entity research finding. Families remain indivisible; no periods are researched now.",
       "highValueMapIds": [
@@ -175063,7 +176785,7 @@
           "question": "Review historical-name variants, colonies/occupations and labels such as Tanzania in earlier snapshots; explicit dates need later research."
         }
       ],
-      "state": "proposed-not-authorised"
+      "state": "researched-with-partial-coverage"
     },
     {
       "id": "political-batch-19",
@@ -175298,10 +177020,10 @@
       }
     ],
     "pipelineSha256": "3c1cd4c196d1b7c52e603ad810a8b5cfb6b8c74b49afd099b9807a1e3781a53b",
-    "resolverSha256": "c3df057ef2f89276ba3ad3419a66dd1bcb940f7711634ff58d63878843cb8b53",
-    "metadataSha256": "01cfa19a094cd621b25378e69d13c5b01717ec7796c5b3917fdf5360e5cd4e7a",
-    "sourcesSha256": "860d76dcfdaa273aeb50b6f0b3c8edcfd81a9fdf92388d43b9d90060be5ca28e",
-    "planSha256": "89f3508063ad45496fcc904fa13b635455b55f18a08dda7a4cdc050c71c52479",
+    "resolverSha256": "153f9539e71d02a1038558c21e468ec31ee156977088bf3b87498c85fbbe6617",
+    "metadataSha256": "3264628b6fb668ba1d838e97e467e947b77bf6bf2e9e0d7bda47b0eaa18cbd83",
+    "sourcesSha256": "3926fdbf159c9f64622e969e07a4de71ff64e2afa5b057787b7a010a96499ee3",
+    "planSha256": "21ce0491e249dd377ed9c582a1320972cb4db18ffd4b2b2157f46de17ff4cef0",
     "classificationPlanSha256": "260036271b0aaec99acf6f41da9b8d82c0c018988744ab2cb655ed85104198fc",
     "classificationModuleSha256": "c8eee902a88feef8ace890a7f776ade411c40af4473611d47decac2a7a5e9231"
   }
