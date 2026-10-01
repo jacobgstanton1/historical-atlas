@@ -189,6 +189,7 @@ export function validatePackage(pkg, job, context={}) {
     if(c.category==='political-institutional'&&!['government','politicalStatus','description'].includes(c.metric)) errors.push(`Claim ${c.id}: political-institutional requires explicit government, politicalStatus or description metric`);
     const field=c.category==='political-institutional'?({government:'governments',politicalStatus:'politicalStatus',description:'descriptions'}[c.metric]):categoryFields[c.category]||c.category;
     for (const f of entity?.[field]||[]) {
+      if(field==='leaders'&&(f.role||'')!==(c.role||''))continue;
       const oldRange=bounds(f.validFrom,f.validUntil);
       if (oldRange&&range&&overlaps(oldRange,range)&&hash(f.value)!==hash(c.value)) review.push(`Claim ${c.id}: conflicts with existing ${field} fact; explicit historical review required`);
     }

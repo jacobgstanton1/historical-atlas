@@ -20,6 +20,12 @@ function validate(mutate=()=>{}){const pairData=pair();mutate(pairData.pkg,pairD
 test('entity-centric package supports four separately dated sourced core fields and still needs independent review',()=>{
   const result=validate();assert.equal(result.valid,true,result.errors.join('\n'));assert.equal(result.status,'historical-review');
 });
+test('existing simultaneous distinct offices are not contradictory leaders',()=>{
+  const {pkg,job}=pair(),ctx=structuredClone(context);
+  ctx.db.entities[0].leaders=[{value:'Different person',role:'Head of government',validFrom:pkg.period.from,validUntil:pkg.period.until}];
+  assert.equal(validatePackage(pkg,job,ctx).review.some(x=>/existing leaders fact/.test(x)),false);
+  ctx.db.entities[0].leaders[0].role='Head of state';assert.equal(validatePackage(pkg,job,ctx).review.some(x=>/existing leaders fact/.test(x)),true);
+});
 test('entity-centric assignment categories are explicit, bounded, unique and job-bound',()=>{
   for(const mutate of [(p)=>delete p.categories,(p,j)=>delete j.categories,(p,j)=>j.categories.push('population-statistics'),(p,j)=>j.categories.push('capital'),(p)=>p.categories.pop()]){
     const result=validate(mutate);assert.equal(result.valid,false);assert.ok(result.errors.length);
