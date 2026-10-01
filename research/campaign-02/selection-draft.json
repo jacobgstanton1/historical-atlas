@@ -1,0 +1,4802 @@
+{
+  "schemaVersion": 1,
+  "campaign": "phase3-stage2-campaign02",
+  "status": "selection-draft-for-coordinator-review",
+  "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+  "targetEntities": 60,
+  "assignments": 60,
+  "checkpoints": 5,
+  "priorityFields": [
+    "capital",
+    "leadership",
+    "currency",
+    "political-institutional",
+    "historical-flag"
+  ],
+  "selectionMethod": "Current post-Campaign1 field/year scan combined with explicit value, period length, geographic and chronological diversity; every assignment is a distinct resolved entity ID, excludes Campaign1 overlapping periods, and requires field-specific source review.",
+  "naiveCoreCategoryYearOpportunities": 4235,
+  "flagMetricNote": "The current scanner has no historical-flag category; missing flag rows are identified explicitly, not miscounted as already supported. Coordinator must add dated flag reporting before baseline/reporting.",
+  "trustedSourceReuse": {
+    "catalogueSources": 739,
+    "registrySources": 739,
+    "catalogueFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+    "policy": "Per-entity sourceLeads reference registered exact URLs. A lead is not proof of every proposed field; read full bodies. Search broader catalogue before new discovery."
+  },
+  "entities": [
+    {
+      "sequence": 1,
+      "checkpoint": 1,
+      "entityId": "germany-weimar-framework",
+      "name": "Germany — Weimar constitutional framework",
+      "period": {
+        "from": "1920",
+        "until": "1932"
+      },
+      "region": "Europe",
+      "rationale": "Large unsourced republican capital/leadership/currency intervals; official federal history reuse.",
+      "priority": "initial checkpoint",
+      "mapIds": [
+        "entity-germany"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-germany",
+          "entityId": "germany-weimar-framework",
+          "validFrom": "1919-08-14",
+          "validUntil": "1933-01-30",
+          "sourceIds": [
+            "b03-weimar-commencement",
+            "b03-weimar-framework",
+            "reichstag"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b03-weimar-commencement",
+        "b03-weimar-framework",
+        "reichstag"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b03-weimar-commencement",
+          "title": "Unterzeichnung der Weimarer Verfassung",
+          "url": "https://weimar.bundesarchiv.de/WEIMAR/DE/Content/Dokumente-zur-Zeitgeschichte/1919-08-11_Verfassung.html",
+          "institution": "German Federal Archives",
+          "catalogued": true
+        },
+        {
+          "id": "b03-weimar-framework",
+          "title": "Die Weimarer Reichsverfassung",
+          "url": "https://www.dhm.de/lemo/kapitel/weimarer-republik/innenpolitik/verfassung",
+          "institution": "German Historical Museum",
+          "catalogued": true
+        },
+        {
+          "id": "reichstag",
+          "title": "National Socialism (1933–1945)",
+          "url": "https://www.bundestag.de/en/parliament/history/parliamentarism/third_reich",
+          "institution": "German Bundestag",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 2,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 40,
+      "scannerGapsByCategory": {
+        "capital": 13,
+        "leadership": 13,
+        "currency": 13,
+        "political-institutional": 1
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 2,
+      "checkpoint": 1,
+      "entityId": "italy-liberal-monarchy-framework",
+      "name": "Kingdom of Italy — liberal monarchical framework",
+      "period": {
+        "from": "1872",
+        "until": "1900"
+      },
+      "region": "Europe",
+      "rationale": "Post-Rome-capital monarchy; long weak core dossier; distinct national/state flag type.",
+      "priority": "initial checkpoint",
+      "mapIds": [
+        "entity-italy",
+        "entity-kingdom-of-italy"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-italy",
+          "entityId": "italy-liberal-monarchy-framework",
+          "validFrom": "1861-03-17",
+          "validUntil": "1922-01-01",
+          "sourceIds": [
+            "b04-italian-unity",
+            "b04-statuto",
+            "b04-unification-framework"
+          ],
+          "note": "Independent documentary identity and partial researched interval; no inference from snapshot appearance, no automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-kingdom-of-italy",
+          "entityId": "italy-liberal-monarchy-framework",
+          "validFrom": "1861-03-17",
+          "validUntil": "1922-01-01",
+          "sourceIds": [
+            "b04-italian-unity",
+            "b04-statuto",
+            "b04-unification-framework"
+          ],
+          "note": "Independent documentary identity and partial researched interval; no inference from snapshot appearance, no automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b04-italian-unity",
+        "b04-statuto",
+        "b04-unification-framework"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b04-italian-unity",
+          "title": "17 marzo 1861: Unità nazionale",
+          "url": "https://cultura.gov.it/evento/iorestoacasa-17-marzo-2020-giornata-dell-unita-nazionale-della-costituzione-dell-inno-e-della-bandiera",
+          "institution": "Italian Ministry of Culture / State Archives of Modena",
+          "catalogued": true
+        },
+        {
+          "id": "b04-statuto",
+          "title": "Statuto Albertino, 1848",
+          "url": "https://www.quirinale.it/allegati_statici/costituzione/Statutoalbertino.pdf",
+          "institution": "Italian Presidency — constitutional document collection",
+          "catalogued": true
+        },
+        {
+          "id": "b04-unification-framework",
+          "title": "150° anniversario dell’Unità d’Italia, 2011",
+          "url": "https://presidenti.quirinale.it/elementi/54797",
+          "institution": "Italian Presidency",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 87,
+      "scannerGapsByCategory": {
+        "capital": 29,
+        "leadership": 29,
+        "currency": 29,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 3,
+      "checkpoint": 1,
+      "entityId": "korea-joseon-framework",
+      "name": "Korea — Joseon dynasty",
+      "period": {
+        "from": "1864",
+        "until": "1896"
+      },
+      "region": "East Asia",
+      "rationale": "Gojong-era royal framework; avoid projecting later Korean Empire flag/title backward.",
+      "priority": "initial checkpoint",
+      "mapIds": [
+        "entity-korea"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-korea",
+          "entityId": "korea-joseon-framework",
+          "validFrom": "1800-01-01",
+          "validUntil": "1897-10",
+          "sourceIds": [
+            "b02-joseon-museum",
+            "b02-korean-empire"
+          ],
+          "note": "Dynastic framework, not a timeless modern Korean state."
+        }
+      ],
+      "existingSourceIds": [
+        "b02-joseon-museum",
+        "b02-korean-empire"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b02-joseon-museum",
+          "title": "Joseon dynasty in Medieval and Early Modern History",
+          "url": "https://www.museum.go.kr/ENG/contents/E0201040400.do",
+          "institution": "National Museum of Korea",
+          "catalogued": true
+        },
+        {
+          "id": "b02-korean-empire",
+          "title": "Korean Empire",
+          "url": "https://www.museum.go.kr/ENG/contents/E0201040600.do?showHallId=759&showroomCode=DM0041",
+          "institution": "National Museum of Korea",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 99,
+      "scannerGapsByCategory": {
+        "capital": 33,
+        "leadership": 33,
+        "currency": 33,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 4,
+      "checkpoint": 1,
+      "entityId": "qajar-preconstitutional-framework",
+      "name": "Persia — Qajar royal framework",
+      "period": {
+        "from": "1849",
+        "until": "1895"
+      },
+      "region": "West/Central Asia",
+      "rationale": "Nasir al-Din reign interior; large temporal core gaps; royal/state symbol qualification.",
+      "priority": "initial checkpoint",
+      "mapIds": [
+        "entity-persia"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-persia",
+          "entityId": "qajar-preconstitutional-framework",
+          "validFrom": "1800-01-01",
+          "validUntil": "1906-01-01",
+          "sourceIds": [
+            "b07-qajar-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b07-qajar-history"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b07-qajar-history",
+          "title": "Iran ii(2): Qajar dynasty history",
+          "url": "https://www.iranicaonline.org/articles/iran-ii2-islamic-period-page-5/",
+          "institution": "Encyclopaedia Iranica",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 3,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 94,
+      "scannerGapsByCategory": {
+        "capital": 47,
+        "leadership": 0,
+        "currency": 47,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 5,
+      "checkpoint": 1,
+      "entityId": "ceylon-independent-parliamentary-framework",
+      "name": "Ceylon — independent parliamentary framework",
+      "period": {
+        "from": "1949",
+        "until": "1956"
+      },
+      "region": "South Asia",
+      "rationale": "Independent Commonwealth monarchy before 1957; constitutional and currency source reuse.",
+      "priority": "initial checkpoint",
+      "mapIds": [
+        "entity-ceylon",
+        "entity-sri-lanka"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-sri-lanka",
+          "entityId": "ceylon-independent-parliamentary-framework",
+          "validFrom": "1948-02-04",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b07-ceylon-independence",
+            "b07-ceylon-parliament"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-ceylon",
+          "entityId": "ceylon-independent-parliamentary-framework",
+          "validFrom": "1948-02-04",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b07-ceylon-independence",
+            "b07-ceylon-parliament"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b07-ceylon-independence",
+        "b07-ceylon-parliament"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b07-ceylon-independence",
+          "title": "Ceylon: gift of Mace and Speaker’s Chair, 2 December 1948",
+          "url": "https://hansard.parliament.uk/commons/1948-12-02/debates/8d5ced49-8aa3-487c-bfda-be78f63b9ac9/OrdersOfTheDay",
+          "institution": "UK Parliament, Hansard",
+          "catalogued": true
+        },
+        {
+          "id": "b07-ceylon-parliament",
+          "title": "Evolution of the Parliamentary System",
+          "url": "https://www.parliament.lk/en/learn/handbook-of-parliament/evolution-of-the-parliamentary-system",
+          "institution": "Parliament of Sri Lanka",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 1,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 16,
+      "scannerGapsByCategory": {
+        "capital": 0,
+        "leadership": 8,
+        "currency": 8,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 6,
+      "checkpoint": 1,
+      "entityId": "pakistan-dominion-constituent-framework",
+      "name": "Pakistan — Dominion constituent framework",
+      "period": {
+        "from": "1948",
+        "until": "1953"
+      },
+      "region": "South Asia",
+      "rationale": "Dominion capital/currency/leadership gaps; no republic-title back-projection.",
+      "priority": "initial checkpoint",
+      "mapIds": [
+        "entity-pakistan"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-pakistan",
+          "entityId": "pakistan-dominion-constituent-framework",
+          "validFrom": "1947-08-15",
+          "validUntil": "1954-01-01",
+          "sourceIds": [
+            "b07-pakistan-constitutional-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b07-pakistan-constitutional-history"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b07-pakistan-constitutional-history",
+          "title": "Historical background of Pakistan’s National Assembly",
+          "url": "https://na.gov.pk/en/content.php/content.php?id=75",
+          "institution": "National Assembly of Pakistan",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 1,
+        "leaders": 1,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 12,
+      "scannerGapsByCategory": {
+        "capital": 0,
+        "leadership": 6,
+        "currency": 6,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 7,
+      "checkpoint": 1,
+      "entityId": "b13-burma-afpfl",
+      "name": "Union of Burma — AFPFL government",
+      "period": {
+        "from": "1949",
+        "until": "1957"
+      },
+      "region": "Southeast Asia",
+      "rationale": "Early parliamentary republic, official independence and bank sources.",
+      "priority": "initial checkpoint",
+      "mapIds": [
+        "entity-burma"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-burma",
+          "entityId": "b13-burma-afpfl",
+          "validFrom": "1948-01-04",
+          "validUntil": "1958-10-28",
+          "sourceIds": [
+            "b13-burma-portal-history",
+            "b13-burma-recognition"
+          ],
+          "note": "Sourced historical administrative referent; neither sovereignty, succession nor practical territorial reach is inferred from geometry."
+        }
+      ],
+      "existingSourceIds": [
+        "b13-burma-portal-history",
+        "b13-burma-recognition"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b13-burma-portal-history",
+          "title": "A Brief History of Myanmar",
+          "url": "https://www.myanmar.gov.mm/en/web/guest/history",
+          "institution": "Myanmar National Portal",
+          "catalogued": true
+        },
+        {
+          "id": "b13-burma-recognition",
+          "title": "Burma: recognition and diplomatic relations",
+          "url": "https://history.state.gov/countries/burma",
+          "institution": "US Department of State, Office of the Historian",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 27,
+      "scannerGapsByCategory": {
+        "capital": 9,
+        "leadership": 9,
+        "currency": 9,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 8,
+      "checkpoint": 1,
+      "entityId": "turkey-1937-constitutional-framework",
+      "name": "Turkey — 1937 constitutional principles",
+      "period": {
+        "from": "1938",
+        "until": "1950"
+      },
+      "region": "West Asia",
+      "rationale": "Long republican framework with presidential transition and defined flag statute.",
+      "priority": "initial checkpoint",
+      "mapIds": [
+        "entity-turkey"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-turkey",
+          "entityId": "turkey-1937-constitutional-framework",
+          "validFrom": "1937-02-05",
+          "validUntil": "1960-05-27",
+          "sourceIds": [
+            "b12-turkish-parliament-history"
+          ],
+          "note": "Independently sourced editorial partial core; no geometry-derived sovereignty/succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b12-turkish-parliament-history"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b12-turkish-parliament-history",
+          "title": "History — Ottoman and republican constitutions",
+          "url": "https://www.tbmm.gov.tr/history/",
+          "institution": "Grand National Assembly of Türkiye",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 39,
+      "scannerGapsByCategory": {
+        "capital": 13,
+        "leadership": 13,
+        "currency": 13,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 9,
+      "checkpoint": 1,
+      "entityId": "liberia-presidential-constitutional-core",
+      "name": "Liberia — amended 1847 constitutional tradition",
+      "period": {
+        "from": "1931",
+        "until": "1960"
+      },
+      "region": "West Africa",
+      "rationale": "Tubman/Barclay period; major long-range core gaps and sourced flag opportunities.",
+      "priority": "initial checkpoint",
+      "mapIds": [
+        "entity-liberia"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-liberia",
+          "entityId": "liberia-presidential-constitutional-core",
+          "validFrom": "1878-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b15-liberia-law-history",
+            "b15-liberia-recognition"
+          ],
+          "note": "Source-based editorial partial core, not geometry-derived sovereignty or automatic succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b15-liberia-law-history",
+        "b15-liberia-recognition"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b15-liberia-law-history",
+          "title": "Constitutional and legal development — Liberia historical section",
+          "url": "https://tile.loc.gov/storage-services/service/ll/llglrdppub/2019668796/2019668796.pdf",
+          "institution": "Law Library of Congress",
+          "catalogued": true
+        },
+        {
+          "id": "b15-liberia-recognition",
+          "title": "Liberia — historical recognition",
+          "url": "https://history.state.gov/countries/liberia",
+          "institution": "US Department of State Office of the Historian",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 90,
+      "scannerGapsByCategory": {
+        "capital": 30,
+        "leadership": 30,
+        "currency": 30,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 10,
+      "checkpoint": 1,
+      "entityId": "b17-belgian-congo-colonial",
+      "name": "Belgian Congo — colonial administration",
+      "period": {
+        "from": "1915",
+        "until": "1938"
+      },
+      "region": "Central Africa",
+      "rationale": "Dependent colonial administration; flag/ensign distinct from Belgian nationhood.",
+      "priority": "initial checkpoint",
+      "mapIds": [
+        "entity-belgian-congo",
+        "entity-zaire-belgium"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-belgian-congo",
+          "entityId": "b17-belgian-congo-colonial",
+          "validFrom": "1914-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b17-congo-belgian"
+          ],
+          "note": "Independently researched partial political framework; geometry does not prove sovereignty, control or succession."
+        },
+        {
+          "mapId": "entity-zaire-belgium",
+          "entityId": "b17-belgian-congo-colonial",
+          "validFrom": "1914-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b17-congo-belgian"
+          ],
+          "note": "Independently researched partial political framework; geometry does not prove sovereignty, control or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b17-congo-belgian"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b17-congo-belgian",
+          "title": "Congo Belgian colony and independence",
+          "url": "https://independance.africamuseum.be/fr/node/63",
+          "institution": "Royal Museum for Central Africa, Belgium",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 72,
+      "scannerGapsByCategory": {
+        "capital": 24,
+        "leadership": 24,
+        "currency": 24,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 11,
+      "checkpoint": 1,
+      "entityId": "tonga-british-protected-core",
+      "name": "Tonga — protected constitutional kingdom",
+      "period": {
+        "from": "1902",
+        "until": "1959"
+      },
+      "region": "Oceania",
+      "rationale": "Long protected monarchy, continuity must be sourced; government flag history.",
+      "priority": "initial checkpoint",
+      "mapIds": [
+        "entity-tonga"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-tonga",
+          "entityId": "tonga-british-protected-core",
+          "validFrom": "1901-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b21-tonga-political-history",
+            "b21-western-pacific-archives"
+          ],
+          "note": "Source-based political framework independent of boundary snapshot. Unresearched transitions and local control remain partial."
+        }
+      ],
+      "existingSourceIds": [
+        "b21-tonga-political-history",
+        "b21-western-pacific-archives"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b21-tonga-political-history",
+          "title": "Tonga — historical recognition and treaties",
+          "url": "https://history.state.gov/countries/tonga",
+          "institution": "US Department of State, Office of the Historian",
+          "catalogued": true
+        },
+        {
+          "id": "b21-western-pacific-archives",
+          "title": "Pambu November2002 — Western Pacific Archives historical account",
+          "url": "https://asiapacific.anu.edu.au/sites/default/files/2025-08/Pambu15%2002Nov.pdf",
+          "institution": "Pacific Manuscripts Bureau, Australian National University / University of Auckland archivists",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 174,
+      "scannerGapsByCategory": {
+        "capital": 58,
+        "leadership": 58,
+        "currency": 58,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 12,
+      "checkpoint": 1,
+      "entityId": "brazil-early-federal-republic-framework",
+      "name": "Brazil — early federal republic",
+      "period": {
+        "from": "1893",
+        "until": "1929"
+      },
+      "region": "South America",
+      "rationale": "Federal republican dossier distinct from Campaign1 imperial period.",
+      "priority": "initial checkpoint",
+      "mapIds": [
+        "entity-brazil",
+        "entity-kingdom-of-brazil"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-kingdom-of-brazil",
+          "entityId": "brazil-early-federal-republic-framework",
+          "validFrom": "1892-01-01",
+          "validUntil": "1930-01-01",
+          "sourceIds": [
+            "b09-brazil-1891"
+          ],
+          "note": "Partial framework independently sourced; requested year and boundary seed distinct. No geometry-derived sovereignty or succession."
+        },
+        {
+          "mapId": "entity-brazil",
+          "entityId": "brazil-early-federal-republic-framework",
+          "validFrom": "1892-01-01",
+          "validUntil": "1930-01-01",
+          "sourceIds": [
+            "b09-brazil-1891"
+          ],
+          "note": "Partial framework independently sourced; requested year and boundary seed distinct. No geometry-derived sovereignty or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b09-brazil-1891"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b09-brazil-1891",
+          "title": "Constitution of Brazil, 1891",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao91.htm",
+          "institution": "Presidency of Brazil, constitutional archive",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 111,
+      "scannerGapsByCategory": {
+        "capital": 37,
+        "leadership": 37,
+        "currency": 37,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 13,
+      "checkpoint": 2,
+      "entityId": "netherlands-kingdom",
+      "name": "Netherlands",
+      "period": {
+        "from": "1831",
+        "until": "1890"
+      },
+      "region": "Europe",
+      "rationale": "Long monarchical interval; chronological flag and office coverage.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-netherlands"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-netherlands",
+          "entityId": "netherlands-kingdom",
+          "validFrom": "1815-03-16",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "existingSourceIds": [
+        "b01-dutch-guilder",
+        "b01-dutch-parliament",
+        "b01-low-countries-parliament-seat",
+        "b01-netherlands-monarchy",
+        "b01-nl-king-willem-i-1772-1843",
+        "b01-nl-king-willem-ii-1792-1849",
+        "b01-nl-king-willem-iii-1817-1890",
+        "b01-nl-queen-juliana-1909-2004",
+        "b01-nl-queen-wilhelmina-1880-1962"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b01-dutch-guilder",
+          "title": "Geschiedenis van de gulden",
+          "url": "https://www.knm.nl/blog/geschiedenis-van-de-gulden.html",
+          "institution": "Royal Dutch Mint",
+          "catalogued": true
+        },
+        {
+          "id": "b01-dutch-parliament",
+          "title": "Geschiedenis: Staten-Generaal",
+          "url": "https://www.eerstekamer.nl/staten-generaal/begrip/geschiedenis",
+          "institution": "Senate of the Netherlands",
+          "catalogued": true
+        },
+        {
+          "id": "b01-low-countries-parliament-seat",
+          "title": "Place de la Nation: historical facade and parliamentary seats",
+          "url": "https://www.senate.be/virtualtour/natieplein-voorgevel_fr.html",
+          "institution": "Belgian Senate",
+          "catalogued": true
+        },
+        {
+          "id": "b01-netherlands-monarchy",
+          "title": "Kings and Queens: history",
+          "url": "https://www.royal-house.nl/topics/history/kings-and-queens",
+          "institution": "Royal House of the Netherlands",
+          "catalogued": true
+        },
+        {
+          "id": "b01-nl-king-willem-i-1772-1843",
+          "title": "Willem I: historical biography",
+          "url": "https://www.royal-house.nl/topics/history/kings-and-queens/king-willem-i-1772-1843",
+          "institution": "Royal House of the Netherlands",
+          "catalogued": true
+        },
+        {
+          "id": "b01-nl-king-willem-ii-1792-1849",
+          "title": "Willem II: historical biography",
+          "url": "https://www.royal-house.nl/topics/history/kings-and-queens/king-willem-ii-1792-1849",
+          "institution": "Royal House of the Netherlands",
+          "catalogued": true
+        },
+        {
+          "id": "b01-nl-king-willem-iii-1817-1890",
+          "title": "Willem III: historical biography",
+          "url": "https://www.royal-house.nl/topics/history/kings-and-queens/king-willem-iii-1817-1890",
+          "institution": "Royal House of the Netherlands",
+          "catalogued": true
+        },
+        {
+          "id": "b01-nl-queen-juliana-1909-2004",
+          "title": "Juliana: historical biography",
+          "url": "https://www.royal-house.nl/topics/history/kings-and-queens/queen-juliana-1909-2004",
+          "institution": "Royal House of the Netherlands",
+          "catalogued": true
+        },
+        {
+          "id": "b01-nl-queen-wilhelmina-1880-1962",
+          "title": "Wilhelmina: historical biography",
+          "url": "https://www.royal-house.nl/topics/history/kings-and-queens/queen-wilhelmina-1880-1962",
+          "institution": "Royal House of the Netherlands",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 2,
+        "leaders": 6,
+        "currencies": 1,
+        "governments": 4,
+        "politicalStatus": 1,
+        "descriptions": 3,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 60,
+      "scannerGapsByCategory": {
+        "capital": 60,
+        "leadership": 0,
+        "currency": 0,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 14,
+      "checkpoint": 2,
+      "entityId": "belgium-kingdom",
+      "name": "Belgium",
+      "period": {
+        "from": "1832",
+        "until": "1908"
+      },
+      "region": "Europe",
+      "rationale": "Post-constitution kingdom; capital/flag evidence can cover decades.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-belgium"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-belgium",
+          "entityId": "belgium-kingdom",
+          "validFrom": "1830",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "existingSourceIds": [
+        "b01-be-king-albert-i",
+        "b01-be-king-baudouin",
+        "b01-be-king-leopold-i",
+        "b01-be-king-leopold-ii",
+        "b01-be-king-leopold-iii",
+        "b01-belgian-constitution-1831",
+        "b01-belgian-franc",
+        "b01-belgian-monarchy",
+        "b01-belgium-regent-charles",
+        "b01-low-countries-parliament-seat"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b01-be-king-albert-i",
+          "title": "Albert I: biography",
+          "url": "https://www.monarchie.be/en/royal-family/king-albert-i",
+          "institution": "Belgian Monarchy",
+          "catalogued": true
+        },
+        {
+          "id": "b01-be-king-baudouin",
+          "title": "Baudouin: biography",
+          "url": "https://www.monarchie.be/en/royal-family/king-baudouin",
+          "institution": "Belgian Monarchy",
+          "catalogued": true
+        },
+        {
+          "id": "b01-be-king-leopold-i",
+          "title": "Leopold I: biography",
+          "url": "https://www.monarchie.be/en/royal-family/king-leopold-i",
+          "institution": "Belgian Monarchy",
+          "catalogued": true
+        },
+        {
+          "id": "b01-be-king-leopold-ii",
+          "title": "Leopold II: biography",
+          "url": "https://www.monarchie.be/en/royal-family/king-leopold-ii",
+          "institution": "Belgian Monarchy",
+          "catalogued": true
+        },
+        {
+          "id": "b01-be-king-leopold-iii",
+          "title": "Leopold III: biography",
+          "url": "https://www.monarchie.be/en/royal-family/king-leopold-iii",
+          "institution": "Belgian Monarchy",
+          "catalogued": true
+        },
+        {
+          "id": "b01-belgian-constitution-1831",
+          "title": "Constitution belge du 7 février 1831 (historical annotated edition)",
+          "url": "https://www.senate.be/doc/constitution_1831.pdf",
+          "institution": "Belgian Senate",
+          "catalogued": true
+        },
+        {
+          "id": "b01-belgian-franc",
+          "title": "A brief history of the Belgian franc",
+          "url": "https://www.nbb.be/en/banknotes-and-coins/history-euro-and-belgian-franc/brief-history-belgian-franc",
+          "institution": "National Bank of Belgium",
+          "catalogued": true
+        },
+        {
+          "id": "b01-belgian-monarchy",
+          "title": "History",
+          "url": "https://www.monarchie.be/en/royal-family/history",
+          "institution": "Belgian Monarchy",
+          "catalogued": true
+        },
+        {
+          "id": "b01-belgium-regent-charles",
+          "title": "Prince Regent Charles",
+          "url": "https://www.monarchie.be/en/royal-family/prince-regent-charles",
+          "institution": "Belgian Monarchy",
+          "catalogued": true
+        },
+        {
+          "id": "b01-low-countries-parliament-seat",
+          "title": "Place de la Nation: historical facade and parliamentary seats",
+          "url": "https://www.senate.be/virtualtour/natieplein-voorgevel_fr.html",
+          "institution": "Belgian Senate",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 1,
+        "leaders": 6,
+        "currencies": 1,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 2,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 2,
+      "scannerGapsByCategory": {
+        "capital": 0,
+        "leadership": 1,
+        "currency": 1,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 15,
+      "checkpoint": 2,
+      "entityId": "denmark-post-kiel",
+      "name": "Denmark",
+      "period": {
+        "from": "1850",
+        "until": "1905"
+      },
+      "region": "Europe",
+      "rationale": "Constitutional monarchy; dated offices/currency/flag usage distinctions.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-denmark"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-denmark",
+          "entityId": "denmark-post-kiel",
+          "validFrom": "1814-01-14",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "existingSourceIds": [
+        "b01-amalienborg",
+        "b01-denmark-banknotes",
+        "b01-denmark-krone",
+        "b01-denmark-monarchs",
+        "b01-denmark-monarchy",
+        "b01-norway-democracy"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b01-amalienborg",
+          "title": "Amalienborg",
+          "url": "https://www.kongehuset.dk/en/palaces-and-the-royal-yacht/amalienborg/",
+          "institution": "Danish Royal House",
+          "catalogued": true
+        },
+        {
+          "id": "b01-denmark-banknotes",
+          "title": "Historical banknotes",
+          "url": "https://www.nationalbanken.dk/en/what-we-do/notes-and-coins/historical-banknotes",
+          "institution": "Danmarks Nationalbank",
+          "catalogued": true
+        },
+        {
+          "id": "b01-denmark-krone",
+          "title": "Kim Abildgren: A chronology of Denmark’s exchange-rate policy 1875–2003 (Working Paper 12, 2004)",
+          "url": "https://www.nationalbanken.dk/media/umxbdsnc/dkval-dnwp-12.pdf",
+          "institution": "Danmarks Nationalbank",
+          "catalogued": true
+        },
+        {
+          "id": "b01-denmark-monarchs",
+          "title": "The Royal Lineage",
+          "url": "https://www.kongehuset.dk/en/the-monarchy-in-denmark/the-royal-lineage",
+          "institution": "Danish Royal House",
+          "catalogued": true
+        },
+        {
+          "id": "b01-denmark-monarchy",
+          "title": "Kongehusets historie",
+          "url": "https://www.kongehuset.dk/monarkiet-i-danmark/kongehusets-historie",
+          "institution": "Danish Royal House",
+          "catalogued": true
+        },
+        {
+          "id": "b01-norway-democracy",
+          "title": "Milestones in Norway’s democratic history",
+          "url": "https://www.stortinget.no/en/In-English/About-the-Storting/historical-highlights/milestones-in-norways-democratic-history/",
+          "institution": "Storting",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 1,
+        "leaders": 7,
+        "currencies": 2,
+        "governments": 2,
+        "politicalStatus": 2,
+        "descriptions": 2,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 53,
+      "scannerGapsByCategory": {
+        "capital": 0,
+        "leadership": 1,
+        "currency": 26,
+        "political-institutional": 26
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 16,
+      "checkpoint": 2,
+      "entityId": "sweden-kingdom",
+      "name": "Sweden",
+      "period": {
+        "from": "1874",
+        "until": "1906"
+      },
+      "region": "Europe",
+      "rationale": "Currency-union and union-symbol flag transition requires dated independent claims.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-sweden"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-sweden",
+          "entityId": "sweden-kingdom",
+          "validFrom": "1800-01-01",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "existingSourceIds": [
+        "b01-stockholm-palace",
+        "b01-sweden-democracy",
+        "b01-sweden-monarchs",
+        "b01-sweden-norway-union",
+        "b01-swedish-krona"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b01-stockholm-palace",
+          "title": "Royal Palace: History",
+          "url": "https://www.kungligaslotten.se/english/royal-palaces-and-sites/the-royal-palace/history.html",
+          "institution": "Swedish Royal Palaces",
+          "catalogued": true
+        },
+        {
+          "id": "b01-sweden-democracy",
+          "title": "The development of democracy in Sweden",
+          "url": "https://www.riksdagen.se/en/how-the-riksdag-works/the-history-of-the-riksdag/the-development-of-democracy-in-sweden2/",
+          "institution": "Riksdag",
+          "catalogued": true
+        },
+        {
+          "id": "b01-sweden-monarchs",
+          "title": "Monarkins historia",
+          "url": "https://www.kungahuset.se/sveriges-monarki/monarkins-historia",
+          "institution": "Swedish Royal Court",
+          "catalogued": true
+        },
+        {
+          "id": "b01-sweden-norway-union",
+          "title": "Stortinget og unionen med Sverige",
+          "url": "https://stortinget.no/no/Stortinget-og-demokratiet/Historikk/stortinget-og-unionen-med-sverige/",
+          "institution": "Storting",
+          "catalogued": true
+        },
+        {
+          "id": "b01-swedish-krona",
+          "title": "Sweden gets the krona",
+          "url": "https://www.riksbank.se/en-gb/about-the-riksbank/history/historical-timeline/1800-1899/sweden-gets-the-krona/",
+          "institution": "Sveriges Riksbank",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 1,
+        "leaders": 8,
+        "currencies": 1,
+        "governments": 3,
+        "politicalStatus": 2,
+        "descriptions": 2,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 0,
+      "scannerGapsByCategory": {
+        "capital": 0,
+        "leadership": 0,
+        "currency": 0,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 17,
+      "checkpoint": 2,
+      "entityId": "swiss-federal-state",
+      "name": "Switzerland",
+      "period": {
+        "from": "1851",
+        "until": "1890"
+      },
+      "region": "Europe",
+      "rationale": "Federal seat qualification and collective rather than sovereign office assumptions.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-switzerland"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-switzerland",
+          "entityId": "swiss-federal-state",
+          "validFrom": "1848",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "existingSourceIds": [
+        "b01-bern-federal-city",
+        "b01-swiss-federal-council",
+        "b01-swiss-franc"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b01-bern-federal-city",
+          "title": "175 Jahre Bern als Bundesstadt",
+          "url": "https://www.bern.ch/themen/stadt-recht-und-politik/informationen-im-stadtarchiv/nachrichten/175-jahre-bern-als-bundesstadt",
+          "institution": "City Archives of Bern",
+          "catalogued": true
+        },
+        {
+          "id": "b01-swiss-federal-council",
+          "title": "Composition of the Swiss government",
+          "url": "https://www.admin.ch/en/composition-of-the-swiss-government",
+          "institution": "Swiss Federal Council",
+          "catalogued": true
+        },
+        {
+          "id": "b01-swiss-franc",
+          "title": "History",
+          "url": "https://www.snb.ch/en/snb-explained/history",
+          "institution": "Swiss National Bank",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 1,
+        "leaders": 1,
+        "currencies": 1,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 0,
+      "scannerGapsByCategory": {
+        "capital": 0,
+        "leadership": 0,
+        "currency": 0,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 18,
+      "checkpoint": 2,
+      "entityId": "portugal-political-frameworks",
+      "name": "Portugal",
+      "period": {
+        "from": "1912",
+        "until": "1925"
+      },
+      "region": "Europe",
+      "rationale": "First Republic coherent interior; republican flag/currency changes.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-portugal"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-portugal",
+          "entityId": "portugal-political-frameworks",
+          "validFrom": "1808",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "existingSourceIds": [
+        "b01-portugal-court-brazil",
+        "b01-portugal-dictatorship",
+        "b01-portugal-first-republic",
+        "b01-portugal-monarchy",
+        "b01-portugal-presidents",
+        "b01-portuguese-cortes-seat",
+        "b01-portuguese-escudo"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b01-portugal-court-brazil",
+          "title": "Gonçalo Sampaio e Mello: Da partida da Família Real Portuguesa à obra de D. João VI no Brasil (RJLB 2018/3)",
+          "url": "https://www.cidp.pt/revistas/rjlb/2018/3/2018_03_0433_0442.pdf",
+          "institution": "University of Lisbon, Faculty of Law / CIDP",
+          "catalogued": true
+        },
+        {
+          "id": "b01-portugal-dictatorship",
+          "title": "Os dias da ditadura",
+          "url": "https://www.parlamento.pt/Parlamento/Paginas/dias-ditadura.aspx",
+          "institution": "Portuguese Assembly of the Republic",
+          "catalogued": true
+        },
+        {
+          "id": "b01-portugal-first-republic",
+          "title": "I República",
+          "url": "https://www.parlamento.pt/Parlamento/Paginas/republica.aspx",
+          "institution": "Portuguese Assembly of the Republic",
+          "catalogued": true
+        },
+        {
+          "id": "b01-portugal-monarchy",
+          "title": "Monarquia Constitucional (1820–1910)",
+          "url": "https://www.parlamento.pt/Parlamento/Paginas/monarquia.aspx",
+          "institution": "Portuguese Assembly of the Republic",
+          "catalogued": true
+        },
+        {
+          "id": "b01-portugal-presidents",
+          "title": "Presidentes da República: biografias",
+          "url": "https://www.museu.presidencia.pt/pt/conhecer/presidentes-da-republica-biografias/",
+          "institution": "Museum of the Presidency of the Republic",
+          "catalogued": true
+        },
+        {
+          "id": "b01-portuguese-cortes-seat",
+          "title": "Palácio de São Bento: introdução",
+          "url": "https://app.parlamento.pt/visita/introducao/index.html",
+          "institution": "Portuguese Assembly of the Republic",
+          "catalogued": true
+        },
+        {
+          "id": "b01-portuguese-escudo",
+          "title": "Newsletter Biblioteca, Ano III 4: centenary of the escudo",
+          "url": "https://www.bportugal.pt/publicacao/newsletter-bilbioteca-ano-iii-4",
+          "institution": "Banco de Portugal",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 2,
+        "leaders": 14,
+        "currencies": 1,
+        "governments": 5,
+        "politicalStatus": 5,
+        "descriptions": 4,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 16,
+      "scannerGapsByCategory": {
+        "capital": 14,
+        "leadership": 2,
+        "currency": 0,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 19,
+      "checkpoint": 2,
+      "entityId": "spain-political-frameworks",
+      "name": "Spain",
+      "period": {
+        "from": "1875",
+        "until": "1900"
+      },
+      "region": "Europe",
+      "rationale": "Restoration interior with sourced flags and regency changes.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-spain"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-spain",
+          "entityId": "spain-political-frameworks",
+          "validFrom": "1800-01-01",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "existingSourceIds": [
+        "b01-alfonso-xii",
+        "b01-alfonso-xiii",
+        "b01-fernando-vii",
+        "b01-franco-1936",
+        "b01-spain-civil-war-parliament",
+        "b01-spain-constitution-1876",
+        "b01-spain-constitution-1931",
+        "b01-spain-franco-regime",
+        "b01-spain-second-republic",
+        "b01-spanish-monarchs",
+        "b01-spanish-peseta"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b01-alfonso-xii",
+          "title": "Alfonso XII: Biografía",
+          "url": "https://www.cervantesvirtual.com/portales/reyes_y_reinas_espana_contemporanea/alfonso_xii_biografia/",
+          "institution": "Biblioteca Virtual Miguel de Cervantes / University of Alicante",
+          "catalogued": true
+        },
+        {
+          "id": "b01-alfonso-xiii",
+          "title": "Alfonso XIII: Biografía",
+          "url": "https://www.cervantesvirtual.com/portales/reyes_y_reinas_espana_contemporanea/alfonso_xiii_biografia/",
+          "institution": "Biblioteca Virtual Miguel de Cervantes / University of Alicante",
+          "catalogued": true
+        },
+        {
+          "id": "b01-fernando-vii",
+          "title": "Fernando VII: Biografía",
+          "url": "https://www.cervantesvirtual.com/portales/reyes_y_reinas_espana_contemporanea/fernando_vii_biografia/",
+          "institution": "Biblioteca Virtual Miguel de Cervantes / University of Alicante",
+          "catalogued": true
+        },
+        {
+          "id": "b01-franco-1936",
+          "title": "Luis Fernando Crespo Montes: España, 1.º de octubre de 1936",
+          "url": "https://www.cepc.gob.es/sites/default/files/2021-12/17197repne102233.pdf",
+          "institution": "Centro de Estudios Políticos y Constitucionales",
+          "catalogued": true
+        },
+        {
+          "id": "b01-spain-civil-war-parliament",
+          "title": "II República: febrero de 1936",
+          "url": "https://www.congreso.es/es/cem/iirep-feb-1936",
+          "institution": "Congress of Deputies of Spain",
+          "catalogued": true
+        },
+        {
+          "id": "b01-spain-constitution-1876",
+          "title": "Constitución de 1876",
+          "url": "https://www.congreso.es/en/cem/const1876",
+          "institution": "Congress of Deputies of Spain",
+          "catalogued": true
+        },
+        {
+          "id": "b01-spain-constitution-1931",
+          "title": "Constitución de 1931: original text",
+          "url": "https://www.congreso.es/constitucion/ficheros/historicas/cons_1931.pdf",
+          "institution": "Congress of Deputies of Spain",
+          "catalogued": true
+        },
+        {
+          "id": "b01-spain-franco-regime",
+          "title": "Dictadura del General Franco: Las Cortes Españolas",
+          "url": "https://www.congreso.es/gl/cem/cortesp",
+          "institution": "Congress of Deputies of Spain",
+          "catalogued": true
+        },
+        {
+          "id": "b01-spain-second-republic",
+          "title": "II República española",
+          "url": "https://www.congreso.es/es/cem/iirepesp",
+          "institution": "Congress of Deputies of Spain",
+          "catalogued": true
+        },
+        {
+          "id": "b01-spanish-monarchs",
+          "title": "Reyes y reinas de la España contemporánea",
+          "url": "https://www.cervantesvirtual.com/portales/reyes_y_reinas_espana_contemporanea/inicio/",
+          "institution": "Biblioteca Virtual Miguel de Cervantes / University of Alicante",
+          "catalogued": true
+        },
+        {
+          "id": "b01-spanish-peseta",
+          "title": "Adiós, peseta",
+          "url": "https://www.bde.es/f/webbde/EYC/billemone/ficheros/es/peseta.pdf",
+          "institution": "Banco de España / FNMT",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 1,
+        "leaders": 7,
+        "currencies": 1,
+        "governments": 4,
+        "politicalStatus": 7,
+        "descriptions": 4,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 29,
+      "scannerGapsByCategory": {
+        "capital": 26,
+        "leadership": 1,
+        "currency": 0,
+        "political-institutional": 2
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 20,
+      "checkpoint": 2,
+      "entityId": "greek-1864-crowned-framework",
+      "name": "Kingdom of Greece — 1864 framework",
+      "period": {
+        "from": "1879",
+        "until": "1908"
+      },
+      "region": "Europe",
+      "rationale": "Long parliamentary monarchy gaps; no retrojected republic flag.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-greece"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-greece",
+          "entityId": "greek-1864-crowned-framework",
+          "validFrom": "1878-01-01",
+          "validUntil": "1909-01-01",
+          "sourceIds": [
+            "b06-greek-constitutional-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b06-greek-constitutional-history"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b06-greek-constitutional-history",
+          "title": "Constitutional history — 1864, 1927 and 1952 frameworks",
+          "url": "https://www.hellenicparliament.gr/en/Vouli-ton-Ellinon/To-Politevma/Syntagmatiki-Istoria/",
+          "institution": "Hellenic Parliament",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 90,
+      "scannerGapsByCategory": {
+        "capital": 30,
+        "leadership": 30,
+        "currency": 30,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 21,
+      "checkpoint": 2,
+      "entityId": "czechoslovakia-first-republic-framework",
+      "name": "Czechoslovakia — First Republic constitutional framework",
+      "period": {
+        "from": "1922",
+        "until": "1937"
+      },
+      "region": "Europe",
+      "rationale": "Interwar constitutional framework; dated currency and flag evidence.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-czechoslovakia"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-czechoslovakia",
+          "entityId": "czechoslovakia-first-republic-framework",
+          "validFrom": "1921-01-01",
+          "validUntil": "1938-01-01",
+          "sourceIds": [
+            "b04-czechoslovak-parliament"
+          ],
+          "note": "Independent documentary identity and partial researched interval; no inference from snapshot appearance, no automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b04-czechoslovak-parliament"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b04-czechoslovak-parliament",
+          "title": "History of Parliament",
+          "url": "https://www.psp.cz/files/okv/en_History.pdf",
+          "institution": "Chamber of Deputies, Parliament of the Czech Republic",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 48,
+      "scannerGapsByCategory": {
+        "capital": 16,
+        "leadership": 16,
+        "currency": 16,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 22,
+      "checkpoint": 2,
+      "entityId": "yugoslav-federal-peoples-republic-framework",
+      "name": "Federal People’s Republic of Yugoslavia",
+      "period": {
+        "from": "1947",
+        "until": "1960"
+      },
+      "region": "Europe",
+      "rationale": "Federal republican offices and state symbols; avoid earlier royal flag.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-yugoslavia"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-yugoslavia",
+          "entityId": "yugoslav-federal-peoples-republic-framework",
+          "validFrom": "1945-11-29",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b05-yugoslav-acts"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b05-yugoslav-acts",
+        "b05-yugoslav-offices",
+        "b05-yugoslav-timeline"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b05-yugoslav-acts",
+          "title": "Constituent Acts of Yugoslavia — Mitar Todorović",
+          "url": "https://arhivyu.rs/en/leksikon-jugoslavije/konstitutivni_akti_jugoslavije",
+          "institution": "Archives of Yugoslavia",
+          "catalogued": true
+        },
+        {
+          "id": "b05-yugoslav-offices",
+          "title": "Dignitaries and government offices — Dragoš Petrović",
+          "url": "https://arhivyu.rs/en/leksikon-jugoslavije/licnosti",
+          "institution": "Archives of Yugoslavia",
+          "catalogued": true
+        },
+        {
+          "id": "b05-yugoslav-timeline",
+          "title": "Yugoslav historical chronology",
+          "url": "https://muzej-jugoslavije.org/rs/o-nama/",
+          "institution": "Museum of Yugoslavia",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 2,
+        "currencies": 0,
+        "governments": 3,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 29,
+      "scannerGapsByCategory": {
+        "capital": 14,
+        "leadership": 1,
+        "currency": 14,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 23,
+      "checkpoint": 2,
+      "entityId": "russian-imperial-fundamental-laws-framework",
+      "name": "Russian Empire — Fundamental Laws framework",
+      "period": {
+        "from": "1908",
+        "until": "1914"
+      },
+      "region": "Europe/North Asia",
+      "rationale": "Post-Fundamental-Laws monarchy; civil/state/imperial flag distinctions.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-russian-empire"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-russian-empire",
+          "entityId": "russian-imperial-fundamental-laws-framework",
+          "validFrom": "1907-01-01",
+          "validUntil": "1915-01-01",
+          "sourceIds": [
+            "b06-russian-fundamental-laws"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b06-russian-fundamental-laws"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b06-russian-fundamental-laws",
+          "title": "Fundamental Laws of the Russian Empire, 1906",
+          "url": "https://novaonline.nvcc.edu/eli/evans/his241/documents/RobBeaDocs/FundamentalLaws.html",
+          "institution": "Northern Virginia Community College / Robinson and Beard, Readings in Modern European History",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 21,
+      "scannerGapsByCategory": {
+        "capital": 7,
+        "leadership": 7,
+        "currency": 7,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 24,
+      "checkpoint": 2,
+      "entityId": "romanian-1923-monarchical-framework",
+      "name": "Kingdom of Romania — 1923 framework",
+      "period": {
+        "from": "1925",
+        "until": "1937"
+      },
+      "region": "Europe",
+      "rationale": "Constitutional monarchy with succession/regency transitions.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-romania"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-romania",
+          "entityId": "romanian-1923-monarchical-framework",
+          "validFrom": "1924-01-01",
+          "validUntil": "1938-02-10",
+          "sourceIds": [
+            "b06-romanian-parliament-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b06-romanian-parliament-history"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b06-romanian-parliament-history",
+          "title": "Short history of the parliamentary institution",
+          "url": "https://www.cdep.ro/ords/pls/dic/site2015.page?den=istorie1",
+          "institution": "Romanian Chamber of Deputies",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 39,
+      "scannerGapsByCategory": {
+        "capital": 13,
+        "leadership": 13,
+        "currency": 13,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 25,
+      "checkpoint": 3,
+      "entityId": "korea-republic-1948",
+      "name": "Republic of Korea",
+      "period": {
+        "from": "1949",
+        "until": "1959"
+      },
+      "region": "East Asia",
+      "rationale": "Early republic leadership and dated monetary/flag changes; war-era capital relocation caution.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-korea-republic-of"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-korea-republic-of",
+          "entityId": "korea-republic-1948",
+          "validFrom": "1948-08",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b02-korea-origins",
+            "b02-rok-recognition",
+            "b02-rhee-resignation"
+          ],
+          "note": "Recognition date is not creation date."
+        }
+      ],
+      "existingSourceIds": [
+        "b02-korea-origins",
+        "b02-rhee-resignation",
+        "b02-rok-recognition"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b02-korea-origins",
+          "title": "North Korea: A Country Study (1993), Origins of the DPRK",
+          "url": "https://countrystudies.us/north-korea/14.htm",
+          "institution": "United States Library of Congress; Country Studies mirror",
+          "catalogued": true
+        },
+        {
+          "id": "b02-rhee-resignation",
+          "title": "FRUS 1958–1960, Volume XVIII, Document 310",
+          "url": "https://history.state.gov/historicaldocuments/frus1958-60v18/d310",
+          "institution": "United States Department of State, Office of the Historian",
+          "catalogued": true
+        },
+        {
+          "id": "b02-rok-recognition",
+          "title": "Republic of Korea: recognition and diplomatic relations",
+          "url": "https://history.state.gov/countries/korea-south",
+          "institution": "United States Department of State, Office of the Historian",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 1,
+        "leaders": 1,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 43,
+      "scannerGapsByCategory": {
+        "capital": 10,
+        "leadership": 11,
+        "currency": 11,
+        "political-institutional": 11
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 26,
+      "checkpoint": 3,
+      "entityId": "mongolia-peoples-republic-framework",
+      "name": "Mongolian People’s Republic",
+      "period": {
+        "from": "1925",
+        "until": "1940"
+      },
+      "region": "Central Asia",
+      "rationale": "Republic flag and currency institutions; socialist title chronology.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-mongolia"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-mongolia",
+          "entityId": "mongolia-peoples-republic-framework",
+          "validFrom": "1924-11",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b02-mongolia-republic"
+          ],
+          "note": "November precision retained pending reconciliation of founding-day accounts."
+        }
+      ],
+      "existingSourceIds": [
+        "b02-mongolia-consolidation",
+        "b02-mongolia-postwar",
+        "b02-mongolia-republic",
+        "b02-mongolia-wartime"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b02-mongolia-consolidation",
+          "title": "Mongolian People’s Republic, 1925–1928",
+          "url": "https://countrystudies.us/mongolia/28.htm",
+          "institution": "United States Library of Congress; Country Studies mirror",
+          "catalogued": true
+        },
+        {
+          "id": "b02-mongolia-postwar",
+          "title": "Socialist Construction under Tsedenbal, 1952–1984",
+          "url": "https://countrystudies.us/mongolia/32.htm",
+          "institution": "United States Library of Congress; Country Studies mirror",
+          "catalogued": true
+        },
+        {
+          "id": "b02-mongolia-republic",
+          "title": "Mongolia: A Country Study, Revolutionary Transformation 1921–1924",
+          "url": "https://countrystudies.us/mongolia/27.htm",
+          "institution": "United States Library of Congress; Country Studies mirror",
+          "catalogued": true
+        },
+        {
+          "id": "b02-mongolia-wartime",
+          "title": "Economic Gradualism and National Defense, 1932–1945",
+          "url": "https://countrystudies.us/mongolia/30.htm",
+          "institution": "United States Library of Congress; Country Studies mirror",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 1,
+        "leaders": 2,
+        "currencies": 0,
+        "governments": 2,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 31,
+      "scannerGapsByCategory": {
+        "capital": 0,
+        "leadership": 15,
+        "currency": 16,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 27,
+      "checkpoint": 3,
+      "entityId": "china-republic-nationalist-framework",
+      "name": "Republic of China — Nationalist government",
+      "period": {
+        "from": "1950",
+        "until": "1960"
+      },
+      "region": "East Asia",
+      "rationale": "Taiwan-based government only; no inferred mainland geographic scope.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-china",
+        "entity-taiwan"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-china",
+          "entityId": "china-republic-nationalist-framework",
+          "validFrom": "1945-01-01",
+          "validUntil": "1949-10-01",
+          "sourceIds": [
+            "b02-chinese-revolution-1949"
+          ],
+          "note": "Curated mainland framework mapping ends at PRC proclamation; not extinction of the ROC."
+        },
+        {
+          "mapId": "entity-taiwan",
+          "entityId": "china-republic-nationalist-framework",
+          "validFrom": "1945",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b02-taiwan-museum",
+            "b02-chinese-revolution-1949"
+          ],
+          "note": "Postwar ROC administration; administrative evidence is not a resolution of contested sovereignty."
+        }
+      ],
+      "existingSourceIds": [
+        "b02-chinese-revolution-1949",
+        "b02-taiwan-museum"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b02-chinese-revolution-1949",
+          "title": "The Chinese Revolution of 1949",
+          "url": "https://history.state.gov/milestones/1945-1952/chinese-rev",
+          "institution": "United States Department of State, Office of the Historian",
+          "catalogued": true
+        },
+        {
+          "id": "b02-taiwan-museum",
+          "title": "Permanent Exhibition: Taiwan, an Island of Encounters",
+          "url": "https://the.nmth.gov.tw/nmth/zh-tw/Home/PermanentExhibition",
+          "institution": "National Museum of Taiwan History",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 33,
+      "scannerGapsByCategory": {
+        "capital": 11,
+        "leadership": 11,
+        "currency": 11,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 28,
+      "checkpoint": 3,
+      "entityId": "afghan-abd-al-rahman-framework",
+      "name": "Afghanistan — Abd al-Rahman’s centralized monarchy",
+      "period": {
+        "from": "1882",
+        "until": "1900"
+      },
+      "region": "South/Central Asia",
+      "rationale": "Single emir reign interior; dynastic/state symbol distinction.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-afghanistan"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-afghanistan",
+          "entityId": "afghan-abd-al-rahman-framework",
+          "validFrom": "1881-01-01",
+          "validUntil": "1901",
+          "sourceIds": [
+            "b07-afghan-constitutions"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b07-afghan-constitutions"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b07-afghan-constitutions",
+          "title": "Constitutional history of Afghanistan",
+          "url": "https://www.iranicaonline.org/articles/constitutional-history-of-afghanistan/",
+          "institution": "Encyclopaedia Iranica, Mohammad Hassan Kakar",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 1,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 38,
+      "scannerGapsByCategory": {
+        "capital": 19,
+        "leadership": 0,
+        "currency": 19,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 29,
+      "checkpoint": 3,
+      "entityId": "nepal-rana-framework",
+      "name": "Nepal — Rana governmental framework",
+      "period": {
+        "from": "1858",
+        "until": "1910"
+      },
+      "region": "South Asia",
+      "rationale": "Rana government and monarchy offices must remain distinct.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-nepal"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-nepal",
+          "entityId": "nepal-rana-framework",
+          "validFrom": "1857-01-01",
+          "validUntil": "1950-01-01",
+          "sourceIds": [
+            "b07-nepal-historical-profile",
+            "b07-nepal-rana-constitutional-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b07-nepal-historical-profile",
+        "b07-nepal-rana-constitutional-history"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b07-nepal-historical-profile",
+          "title": "Country Profile: Nepal — historical background, November 2005",
+          "url": "https://tile.loc.gov/storage-services/master/frd/copr/Nepal.pdf",
+          "institution": "US Library of Congress, Federal Research Division",
+          "catalogued": true
+        },
+        {
+          "id": "b07-nepal-rana-constitutional-history",
+          "title": "Nepal: constitutional development, Rana system",
+          "url": "https://countrystudies.us/nepal/47.htm",
+          "institution": "Library of Congress Country Study, 1991; public text mirror",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 159,
+      "scannerGapsByCategory": {
+        "capital": 53,
+        "leadership": 53,
+        "currency": 53,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 30,
+      "checkpoint": 3,
+      "entityId": "bhutan-punakha-treaty-framework",
+      "name": "Bhutan — Punakha treaty framework",
+      "period": {
+        "from": "1912",
+        "until": "1946"
+      },
+      "region": "South Asia",
+      "rationale": "Protected treaty monarchy; flag history potentially absent, no modern fallback.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-bhutan"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-bhutan",
+          "entityId": "bhutan-punakha-treaty-framework",
+          "validFrom": "1911-01-01",
+          "validUntil": "1947-01-01",
+          "sourceIds": [
+            "b07-bhutan-monarchy",
+            "b07-bhutan-treaty-analysis"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b07-bhutan-monarchy",
+        "b07-bhutan-treaty-analysis"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b07-bhutan-monarchy",
+          "title": "Bhutan core document HRI/CORE/1/Add.105, 1999: historical monarchy",
+          "url": "https://digitallibrary.un.org/record/406590/files/HRI_CORE_1_Add.105-EN.pdf",
+          "institution": "Royal Government of Bhutan; United Nations human-rights core document archive",
+          "catalogued": true
+        },
+        {
+          "id": "b07-bhutan-treaty-analysis",
+          "title": "Indo-Bhutan relations: serving mutual interests, 1999",
+          "url": "https://ciaotest.cc.columbia.edu/olj/sa/sa_99mup03.html",
+          "institution": "Strategic Analysis / Institute for Defence Studies and Analyses, Padmaja Murthy; Columbia archive",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 105,
+      "scannerGapsByCategory": {
+        "capital": 35,
+        "leadership": 35,
+        "currency": 35,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 31,
+      "checkpoint": 3,
+      "entityId": "ceylon-state-council-framework",
+      "name": "Ceylon — State Council framework",
+      "period": {
+        "from": "1933",
+        "until": "1946"
+      },
+      "region": "South Asia",
+      "rationale": "Dependent State Council framework separate from selected independent Ceylon.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-ceylon",
+        "entity-sri-lanka"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-ceylon",
+          "entityId": "ceylon-state-council-framework",
+          "validFrom": "1932-01-01",
+          "validUntil": "1947",
+          "sourceIds": [
+            "b07-ceylon-parliament"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-sri-lanka",
+          "entityId": "ceylon-state-council-framework",
+          "validFrom": "1932-01-01",
+          "validUntil": "1947",
+          "sourceIds": [
+            "b07-ceylon-parliament"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "existingSourceIds": [
+        "b07-ceylon-parliament"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b07-ceylon-parliament",
+          "title": "Evolution of the Parliamentary System",
+          "url": "https://www.parliament.lk/en/learn/handbook-of-parliament/evolution-of-the-parliamentary-system",
+          "institution": "Parliament of Sri Lanka",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 1,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 28,
+      "scannerGapsByCategory": {
+        "capital": 0,
+        "leadership": 14,
+        "currency": 14,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 32,
+      "checkpoint": 3,
+      "entityId": "b13-cambodia-protectorate",
+      "name": "Cambodia — French protectorate",
+      "period": {
+        "from": "1901",
+        "until": "1938"
+      },
+      "region": "Southeast Asia",
+      "rationale": "French-protected kingdom, monarch and colonial administrator distinctions.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-cambodia"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-cambodia",
+          "entityId": "b13-cambodia-protectorate",
+          "validFrom": "1900-01-01",
+          "validUntil": "1940-01-01",
+          "sourceIds": [
+            "b13-indochina-archives"
+          ],
+          "note": "Sourced historical administrative referent; neither sovereignty, succession nor practical territorial reach is inferred from geometry."
+        }
+      ],
+      "existingSourceIds": [
+        "b13-indochina-archives"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b13-indochina-archives",
+          "title": "Indochine: research guide",
+          "url": "https://archives-nationales-outre-mer.culture.gouv.fr/faire-une-recherche/indochine",
+          "institution": "Archives nationales d’outre-mer",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 114,
+      "scannerGapsByCategory": {
+        "capital": 38,
+        "leadership": 38,
+        "currency": 38,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 33,
+      "checkpoint": 3,
+      "entityId": "b13-laos-protectorate",
+      "name": "Laos — French protectorate",
+      "period": {
+        "from": "1901",
+        "until": "1938"
+      },
+      "region": "Southeast Asia",
+      "rationale": "Protectorate offices and Luang Prabang scope distinctions.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-laos"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-laos",
+          "entityId": "b13-laos-protectorate",
+          "validFrom": "1900-01-01",
+          "validUntil": "1940-01-01",
+          "sourceIds": [
+            "b13-indochina-archives"
+          ],
+          "note": "Sourced historical administrative referent; neither sovereignty, succession nor practical territorial reach is inferred from geometry."
+        }
+      ],
+      "existingSourceIds": [
+        "b13-indochina-archives"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b13-indochina-archives",
+          "title": "Indochine: research guide",
+          "url": "https://archives-nationales-outre-mer.culture.gouv.fr/faire-une-recherche/indochine",
+          "institution": "Archives nationales d’outre-mer",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 114,
+      "scannerGapsByCategory": {
+        "capital": 38,
+        "leadership": 38,
+        "currency": 38,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 34,
+      "checkpoint": 3,
+      "entityId": "b13-philippines-jones",
+      "name": "Philippines — Jones Act government",
+      "period": {
+        "from": "1918",
+        "until": "1934"
+      },
+      "region": "Southeast Asia",
+      "rationale": "Jones Act colonial government, national versus official ensign restrictions.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-philippines"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-philippines",
+          "entityId": "b13-philippines-jones",
+          "validFrom": "1917-01-01",
+          "validUntil": "1935-01-01",
+          "sourceIds": [
+            "b13-philippines-us-house-history",
+            "b13-philippines-jones-history"
+          ],
+          "note": "Sourced historical administrative referent; neither sovereignty, succession nor practical territorial reach is inferred from geometry."
+        }
+      ],
+      "existingSourceIds": [
+        "b13-philippines-jones-history",
+        "b13-philippines-us-house-history"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b13-philippines-jones-history",
+          "title": "Philippines: The Jones Act",
+          "url": "https://countrystudies.us/philippines/18.htm",
+          "institution": "Library of Congress, Federal Research Division (public chapter mirror)",
+          "catalogued": true
+        },
+        {
+          "id": "b13-philippines-us-house-history",
+          "title": "The Philippines, 1898–1946",
+          "url": "https://history.house.gov/Exhibitions-and-Publications/APA/Historical-Essays/Exclusion-and-Empire/The-Philippines/",
+          "institution": "US House of Representatives, History Art and Archives",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 51,
+      "scannerGapsByCategory": {
+        "capital": 17,
+        "leadership": 17,
+        "currency": 17,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 35,
+      "checkpoint": 3,
+      "entityId": "b13-siam-constitutional",
+      "name": "Siam — early constitutional monarchy",
+      "period": {
+        "from": "1935",
+        "until": "1938"
+      },
+      "region": "Southeast Asia",
+      "rationale": "Constitutional kingdom distinct from Campaign1 absolute monarchy.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-siam"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-siam",
+          "entityId": "b13-siam-constitutional",
+          "validFrom": "1934-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b13-siam-1932-coup"
+          ],
+          "note": "Sourced historical administrative referent; neither sovereignty, succession nor practical territorial reach is inferred from geometry."
+        }
+      ],
+      "existingSourceIds": [
+        "b13-siam-1932-coup"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b13-siam-1932-coup",
+          "title": "Thailand: 1932 Coup",
+          "url": "https://countrystudies.us/thailand/19.htm",
+          "institution": "Library of Congress, Federal Research Division (public chapter mirror)",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 12,
+      "scannerGapsByCategory": {
+        "capital": 4,
+        "leadership": 4,
+        "currency": 4,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 36,
+      "checkpoint": 3,
+      "entityId": "saudi-1932-monarchical-core",
+      "name": "Saudi Arabia — 1932 royal state",
+      "period": {
+        "from": "1933",
+        "until": "1952"
+      },
+      "region": "West Asia",
+      "rationale": "Early unified kingdom; flag design variants and royal office chronology.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-saudi-arabia"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-saudi-arabia",
+          "entityId": "saudi-1932-monarchical-core",
+          "validFrom": "1932-09-23",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b12-saudi-unification-history"
+          ],
+          "note": "Independently sourced editorial partial core; no geometry-derived sovereignty/succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b12-saudi-unification-history"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b12-saudi-unification-history",
+          "title": "Unification of Saudi Arabia — historical sections",
+          "url": "https://saudipedia.com/en/unification-of-saudi-arabia",
+          "institution": "Saudipedia / Saudi Ministry of Media",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 60,
+      "scannerGapsByCategory": {
+        "capital": 20,
+        "leadership": 20,
+        "currency": 20,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 37,
+      "checkpoint": 4,
+      "entityId": "morocco-french-protectorate-framework",
+      "name": "Morocco — French protectorate framework",
+      "period": {
+        "from": "1914",
+        "until": "1938"
+      },
+      "region": "North Africa",
+      "rationale": "Protected sultanate and resident-general institutions; sourced 1915 flag transition.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-morocco",
+        "entity-morocco-france"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-morocco",
+          "entityId": "morocco-french-protectorate-framework",
+          "validFrom": "1913-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b14-morocco-fes",
+            "b14-french-protectorates"
+          ],
+          "note": "Partial framework independently sourced; geometry seed is not requested-year political status, sovereignty or effective control."
+        },
+        {
+          "mapId": "entity-morocco-france",
+          "entityId": "morocco-french-protectorate-framework",
+          "validFrom": "1913-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b14-morocco-fes",
+            "b14-french-protectorates"
+          ],
+          "note": "Partial framework independently sourced; geometry seed is not requested-year political status, sovereignty or effective control."
+        }
+      ],
+      "existingSourceIds": [
+        "b14-french-protectorates",
+        "b14-morocco-fes"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b14-french-protectorates",
+          "title": "French protectorates and mandate archives",
+          "url": "https://www.diplomatie.gouv.fr/fr/archives-bibliotheque/s-orienter-dans-les-fonds-et-collections/protectorats-et-mandat-francais-1881-1956",
+          "institution": "French Ministry for Europe and Foreign Affairs",
+          "catalogued": true
+        },
+        {
+          "id": "b14-morocco-fes",
+          "title": "US reply concerning Treaty of Fez, 22 January 1913",
+          "url": "https://history.state.gov/historicaldocuments/frus1914/d1629",
+          "institution": "US Department of State, Office of the Historian",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 75,
+      "scannerGapsByCategory": {
+        "capital": 25,
+        "leadership": 25,
+        "currency": 25,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 38,
+      "checkpoint": 4,
+      "entityId": "tunisia-french-protectorate-framework",
+      "name": "Tunisia — French protectorate",
+      "period": {
+        "from": "1885",
+        "until": "1938"
+      },
+      "region": "North Africa",
+      "rationale": "Beylical protectorate; flag type and Tunis seat qualifications.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-tunisia"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-tunisia",
+          "entityId": "tunisia-french-protectorate-framework",
+          "validFrom": "1884-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b14-french-protectorates",
+            "b14-tunis-resident"
+          ],
+          "note": "Partial framework independently sourced; geometry seed is not requested-year political status, sovereignty or effective control."
+        }
+      ],
+      "existingSourceIds": [
+        "b14-french-protectorates",
+        "b14-tunis-resident"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b14-french-protectorates",
+          "title": "French protectorates and mandate archives",
+          "url": "https://www.diplomatie.gouv.fr/fr/archives-bibliotheque/s-orienter-dans-les-fonds-et-collections/protectorats-et-mandat-francais-1881-1956",
+          "institution": "French Ministry for Europe and Foreign Affairs",
+          "catalogued": true
+        },
+        {
+          "id": "b14-tunis-resident",
+          "title": "Tunis Residency: correspondence administrative history",
+          "url": "https://archivesdiplomatiques.diplomatie.gouv.fr/ark:/14366/91t0hsbxv87n",
+          "institution": "French Diplomatic Archives",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 162,
+      "scannerGapsByCategory": {
+        "capital": 54,
+        "leadership": 54,
+        "currency": 54,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 39,
+      "checkpoint": 4,
+      "entityId": "b17-sudan-condominium",
+      "name": "Anglo-Egyptian Sudan — formal joint authority and British administration",
+      "period": {
+        "from": "1915",
+        "until": "1945"
+      },
+      "region": "Northeast Africa",
+      "rationale": "Joint authority versus British administration; avoid invented unique national flag.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-anglo-egyptian-sudan",
+        "entity-sudan"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-anglo-egyptian-sudan",
+          "entityId": "b17-sudan-condominium",
+          "validFrom": "1914-01-01",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "b17-sudan-condominium"
+          ],
+          "note": "Independently researched partial political framework; geometry does not prove sovereignty, control or succession."
+        },
+        {
+          "mapId": "entity-sudan",
+          "entityId": "b17-sudan-condominium",
+          "validFrom": "1914-01-01",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "b17-sudan-condominium"
+          ],
+          "note": "Independently researched partial political framework; geometry does not prove sovereignty, control or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b17-sudan-condominium"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b17-sudan-condominium",
+          "title": "Anglo-Egyptian condominium",
+          "url": "https://countrystudies.us/sudan/15.htm",
+          "institution": "US Library of Congress, Federal Research Division; historical Country Study text mirror",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 93,
+      "scannerGapsByCategory": {
+        "capital": 31,
+        "leadership": 31,
+        "currency": 31,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 40,
+      "checkpoint": 4,
+      "entityId": "uganda-colonial-pre1952-core",
+      "name": "Uganda — colonial protectorate framework",
+      "period": {
+        "from": "1915",
+        "until": "1951"
+      },
+      "region": "East Africa",
+      "rationale": "Protectorate administrative seat and currency, distinct local kingdoms.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-uganda"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-uganda",
+          "entityId": "uganda-colonial-pre1952-core",
+          "validFrom": "1914-01-01",
+          "validUntil": "1952-01-01",
+          "sourceIds": [
+            "b18-uganda-colonial",
+            "b18-east-africa-archives"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b18-east-africa-archives",
+        "b18-uganda-colonial"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b18-east-africa-archives",
+          "title": "Migrated archives eighth tranche — Tanganyika, Uganda and Zanzibar historical introductions",
+          "url": "https://cdn.nationalarchives.gov.uk/documents/migrated-archives-8-tranche-guide.pdf",
+          "institution": "The National Archives (UK)",
+          "catalogued": true
+        },
+        {
+          "id": "b18-uganda-colonial",
+          "title": "Uganda — colonial administration and kingdom agreements",
+          "url": "https://countrystudies.us/uganda/6.htm",
+          "institution": "Library of Congress Federal Research Division, historical Country Study (HTML transcription)",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 111,
+      "scannerGapsByCategory": {
+        "capital": 37,
+        "leadership": 37,
+        "currency": 37,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 41,
+      "checkpoint": 4,
+      "entityId": "kenya-colony-protectorate-prewar-core",
+      "name": "Kenya — colony and coastal protectorate",
+      "period": {
+        "from": "1922",
+        "until": "1938"
+      },
+      "region": "East Africa",
+      "rationale": "Composite colony/coastal protectorate; colonial ensign not independent flag.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-kenya"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-kenya",
+          "entityId": "kenya-colony-protectorate-prewar-core",
+          "validFrom": "1921-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b18-kenya-archives"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b18-kenya-archives"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b18-kenya-archives",
+          "title": "Migrated archives first tranche — Kenya historical introduction and council records",
+          "url": "https://cdn.nationalarchives.gov.uk/documents/migrated-archives-guidance.pdf",
+          "institution": "The National Archives (UK)",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 51,
+      "scannerGapsByCategory": {
+        "capital": 17,
+        "leadership": 17,
+        "currency": 17,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 42,
+      "checkpoint": 4,
+      "entityId": "french-somaliland-colonial-core",
+      "name": "French Somaliland — prewar colonial administration",
+      "period": {
+        "from": "1915",
+        "until": "1945"
+      },
+      "region": "Horn of Africa",
+      "rationale": "Dated colonial seat and franc; administrative flag evidence only if sufficient.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-djibouti",
+        "entity-french-somaliland"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-french-somaliland",
+          "entityId": "french-somaliland-colonial-core",
+          "validFrom": "1914-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b18-djibouti-history",
+            "b18-somali-partition"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-djibouti",
+          "entityId": "french-somaliland-colonial-core",
+          "validFrom": "1914-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b18-djibouti-history",
+            "b18-somali-partition"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        },
+        {
+          "mapId": "entity-djibouti",
+          "entityId": "french-somaliland-colonial-core",
+          "validFrom": "1945-01-01",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "b18-djibouti-history"
+          ],
+          "note": "Source-based editorial partial core; boundaries and raw labels do not establish sovereignty or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b18-djibouti-history",
+        "b18-somali-partition"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b18-djibouti-history",
+          "title": "Hrvatska enciklopedija — Djibouti historical section",
+          "url": "https://www.enciklopedija.hr/clanak/dzibuti",
+          "institution": "Miroslav Krleža Institute of Lexicography",
+          "catalogued": true
+        },
+        {
+          "id": "b18-somali-partition",
+          "title": "Somalia — imperial partition",
+          "url": "https://countrystudies.us/somalia/9.htm",
+          "institution": "Library of Congress Federal Research Division, historical Country Study (HTML transcription)",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 2,
+        "politicalStatus": 2,
+        "descriptions": 2,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 99,
+      "scannerGapsByCategory": {
+        "capital": 31,
+        "leadership": 31,
+        "currency": 31,
+        "political-institutional": 6
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Entity exists within an editorial envelope but has no accepted mapping in this year; resolve identity before adding facts.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 43,
+      "checkpoint": 4,
+      "entityId": "b19-northern-rhodesia-crown",
+      "name": "Northern Rhodesia — Crown administration",
+      "period": {
+        "from": "1925",
+        "until": "1952"
+      },
+      "region": "Southern Africa",
+      "rationale": "Livingstone/Lusaka seat transition, colonial office/currency provenance.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-northern-rhodesia",
+        "entity-zambia"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-northern-rhodesia",
+          "entityId": "b19-northern-rhodesia-crown",
+          "validFrom": "1924-04-01",
+          "validUntil": "1953-01-01",
+          "sourceIds": [
+            "b19-northern-rhodesia-transfer",
+            "b15-sierra-leone-archives"
+          ],
+          "note": "Historical referent sourced independently of geometry; editorial period may differ from raw boundary snapshot date. No inferred sovereignty, succession or uniform practical control."
+        },
+        {
+          "mapId": "entity-zambia",
+          "entityId": "b19-northern-rhodesia-crown",
+          "validFrom": "1924-04-01",
+          "validUntil": "1953-01-01",
+          "sourceIds": [
+            "b19-northern-rhodesia-transfer",
+            "b15-sierra-leone-archives"
+          ],
+          "note": "Historical referent sourced independently of geometry; editorial period may differ from raw boundary snapshot date. No inferred sovereignty, succession or uniform practical control."
+        }
+      ],
+      "existingSourceIds": [
+        "b15-sierra-leone-archives",
+        "b19-northern-rhodesia-transfer"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b15-sierra-leone-archives",
+          "title": "Migrated archives fifth tranche — Northern Rhodesia, Nyasaland and Sierra Leone historical introductions",
+          "url": "https://cdn.nationalarchives.gov.uk/documents/migrated-archives-5-guidance.pdf",
+          "institution": "The National Archives (UK)",
+          "catalogued": true
+        },
+        {
+          "id": "b19-northern-rhodesia-transfer",
+          "title": "Northern Rhodesia: 20 March 1924",
+          "url": "https://api.parliament.uk/historic-hansard/lords/1924/mar/20/northern-rhodesia",
+          "institution": "UK Parliament, Hansard",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 84,
+      "scannerGapsByCategory": {
+        "capital": 28,
+        "leadership": 28,
+        "currency": 28,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 44,
+      "checkpoint": 4,
+      "entityId": "b19-nyasaland-governor",
+      "name": "Nyasaland Protectorate — governor administration",
+      "period": {
+        "from": "1909",
+        "until": "1952"
+      },
+      "region": "Southern Africa",
+      "rationale": "Governor administration, long core gaps and qualified colonial ensign.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-malawi",
+        "entity-nyasaland"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-malawi",
+          "entityId": "b19-nyasaland-governor",
+          "validFrom": "1908-01-01",
+          "validUntil": "1953-01-01",
+          "sourceIds": [
+            "b15-sierra-leone-archives",
+            "b19-country-aliases"
+          ],
+          "note": "Historical referent sourced independently of geometry; editorial period may differ from raw boundary snapshot date. No inferred sovereignty, succession or uniform practical control."
+        },
+        {
+          "mapId": "entity-nyasaland",
+          "entityId": "b19-nyasaland-governor",
+          "validFrom": "1908-01-01",
+          "validUntil": "1953-01-01",
+          "sourceIds": [
+            "b15-sierra-leone-archives",
+            "b19-country-aliases"
+          ],
+          "note": "Historical referent sourced independently of geometry; editorial period may differ from raw boundary snapshot date. No inferred sovereignty, succession or uniform practical control."
+        }
+      ],
+      "existingSourceIds": [
+        "b15-sierra-leone-archives",
+        "b19-country-aliases"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b15-sierra-leone-archives",
+          "title": "Migrated archives fifth tranche — Northern Rhodesia, Nyasaland and Sierra Leone historical introductions",
+          "url": "https://cdn.nationalarchives.gov.uk/documents/migrated-archives-5-guidance.pdf",
+          "institution": "The National Archives (UK)",
+          "catalogued": true
+        },
+        {
+          "id": "b19-country-aliases",
+          "title": "Other countries: historical records guide",
+          "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/other-countries/",
+          "institution": "The National Archives, UK",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 132,
+      "scannerGapsByCategory": {
+        "capital": 44,
+        "leadership": 44,
+        "currency": 44,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 45,
+      "checkpoint": 4,
+      "entityId": "b19-southern-rhodesia-self-government",
+      "name": "Southern Rhodesia — responsible-government colony",
+      "period": {
+        "from": "1925",
+        "until": "1952"
+      },
+      "region": "Southern Africa",
+      "rationale": "Responsible government before Federation, colonial designation retained.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-southern-rhodesia",
+        "entity-zimbabwe"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-southern-rhodesia",
+          "entityId": "b19-southern-rhodesia-self-government",
+          "validFrom": "1924-01-01",
+          "validUntil": "1953-01-01",
+          "sourceIds": [
+            "b19-southern-rhodesia-letters",
+            "b19-southern-rhodesia-archives"
+          ],
+          "note": "Historical referent sourced independently of geometry; editorial period may differ from raw boundary snapshot date. No inferred sovereignty, succession or uniform practical control."
+        },
+        {
+          "mapId": "entity-zimbabwe",
+          "entityId": "b19-southern-rhodesia-self-government",
+          "validFrom": "1924-01-01",
+          "validUntil": "1953-01-01",
+          "sourceIds": [
+            "b19-southern-rhodesia-letters",
+            "b19-southern-rhodesia-archives"
+          ],
+          "note": "Historical referent sourced independently of geometry; editorial period may differ from raw boundary snapshot date. No inferred sovereignty, succession or uniform practical control."
+        }
+      ],
+      "existingSourceIds": [
+        "b19-southern-rhodesia-archives",
+        "b19-southern-rhodesia-letters"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b19-southern-rhodesia-archives",
+          "title": "Migrated archives seventh tranche — Southern Rhodesia and Swaziland historical introductions",
+          "url": "https://cdn.nationalarchives.gov.uk/documents/migrated-archives-7-tranche-guide.pdf",
+          "institution": "The National Archives, UK",
+          "catalogued": true
+        },
+        {
+          "id": "b19-southern-rhodesia-letters",
+          "title": "Southern Rhodesia Constitution Letters Patent 1923, amended 1927/1934/1937",
+          "url": "https://vlex.co.uk/vid/southern-rhodesia-constitution-letters-812450145",
+          "institution": "UK Crown, primary Letters Patent republished by vLex",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 84,
+      "scannerGapsByCategory": {
+        "capital": 28,
+        "leadership": 28,
+        "currency": 28,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 46,
+      "checkpoint": 4,
+      "entityId": "b19-cape-responsible",
+      "name": "Cape Colony — responsible government",
+      "period": {
+        "from": "1874",
+        "until": "1909"
+      },
+      "region": "Southern Africa",
+      "rationale": "Responsible government before Union; no inferred South Africa continuity.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-cape-colony",
+        "entity-griqualand-west"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-cape-colony",
+          "entityId": "b19-cape-responsible",
+          "validFrom": "1873-01-01",
+          "validUntil": "1910-05-31",
+          "sourceIds": [
+            "b19-cape-prime-ministers",
+            "b19-union-office-history"
+          ],
+          "note": "Historical referent sourced independently of geometry; editorial period may differ from raw boundary snapshot date. No inferred sovereignty, succession or uniform practical control."
+        },
+        {
+          "mapId": "entity-griqualand-west",
+          "entityId": "b19-cape-responsible",
+          "validFrom": "1880-10-19",
+          "validUntil": "1910-05-31",
+          "sourceIds": [
+            "b19-griqualand-annexation",
+            "b19-cape-prime-ministers",
+            "b19-union-office-history"
+          ],
+          "note": "Gazette-backed effective annexation19 October1880; earlier act/proclamation dates not confused with commencement."
+        }
+      ],
+      "existingSourceIds": [
+        "b19-cape-prime-ministers",
+        "b19-griqualand-annexation",
+        "b19-union-office-history"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b19-cape-prime-ministers",
+          "title": "Prime Minister, Cape of Good Hope authority record",
+          "url": "https://atom.dac.gov.za/index.php/pmo",
+          "institution": "National Archives and Records Service of South Africa, Cape Archives",
+          "catalogued": true
+        },
+        {
+          "id": "b19-griqualand-annexation",
+          "title": "Magistrate, Kimberley: gazette-backed authority record",
+          "url": "https://atom.dac.gov.za/index.php/actor/browse?place=40748092&sort=identifier&sortDir=asc&subject=40715414",
+          "institution": "National Archives and Records Service of South Africa, Cape Archives",
+          "catalogued": true
+        },
+        {
+          "id": "b19-union-office-history",
+          "title": "Former heads of state, government and Governors-General",
+          "url": "https://www.presidency.gov.za/history",
+          "institution": "Presidency of South Africa",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 2,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 105,
+      "scannerGapsByCategory": {
+        "capital": 36,
+        "leadership": 33,
+        "currency": 36,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 47,
+      "checkpoint": 4,
+      "entityId": "b20-madagascar-french-colony",
+      "name": "Madagascar — French colony",
+      "period": {
+        "from": "1901",
+        "until": "1938"
+      },
+      "region": "Indian Ocean/Africa",
+      "rationale": "Supported prewar colonial mapping span only; no broadening 1939–1945 gaps.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-madagascar",
+        "entity-madagascar-france"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-madagascar",
+          "entityId": "b20-madagascar-french-colony",
+          "validFrom": "1900-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b20-madagascar-colony"
+          ],
+          "note": "Cited partial political framework; geometry does notproveuniformsovereignty,controlorsuccession."
+        },
+        {
+          "mapId": "entity-madagascar-france",
+          "entityId": "b20-madagascar-french-colony",
+          "validFrom": "1900-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b20-madagascar-colony"
+          ],
+          "note": "Cited partial political framework; geometry does notproveuniformsovereignty,controlorsuccession."
+        },
+        {
+          "mapId": "entity-madagascar-france",
+          "entityId": "b20-madagascar-french-colony",
+          "validFrom": "1945-01-01",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "b20-madagascar-colony"
+          ],
+          "note": "Cited partial political framework; geometry does notproveuniformsovereignty,controlorsuccession."
+        }
+      ],
+      "existingSourceIds": [
+        "b20-madagascar-colony"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b20-madagascar-colony",
+          "title": "French colonization of Madagascar",
+          "url": "https://countrystudies.us/madagascar/3.htm",
+          "institution": "US Library of Congress, Federal Research Division; historical Country Study text mirror",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 2,
+        "politicalStatus": 2,
+        "descriptions": 2,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 114,
+      "scannerGapsByCategory": {
+        "capital": 38,
+        "leadership": 38,
+        "currency": 38,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 48,
+      "checkpoint": 4,
+      "entityId": "b17-aef-prewar",
+      "name": "French Equatorial Africa — colonial federation",
+      "period": {
+        "from": "1912",
+        "until": "1938"
+      },
+      "region": "Central Africa",
+      "rationale": "Federation seat/governor/currency; do not replace constituent entities.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-french-equatorial-africa"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-french-equatorial-africa",
+          "entityId": "b17-aef-prewar",
+          "validFrom": "1911-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b16-aof-archives",
+            "b17-aef-chad"
+          ],
+          "note": "Independently researched partial political framework; geometry does not prove sovereignty, control or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b16-aof-archives",
+        "b17-aef-chad"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b16-aof-archives",
+          "title": "Les fonds territoriaux — AOF and AEF administrative histories",
+          "url": "https://archives-nationales-outre-mer.culture.gouv.fr/faire-une-recherche/les-fonds-territoriaux",
+          "institution": "Archives nationales d’outre-mer",
+          "catalogued": true
+        },
+        {
+          "id": "b17-aef-chad",
+          "title": "French colonial administration in Chad",
+          "url": "https://countrystudies.us/chad/8.htm",
+          "institution": "US Library of Congress, Federal Research Division; historical Country Study text mirror",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 81,
+      "scannerGapsByCategory": {
+        "capital": 27,
+        "leadership": 27,
+        "currency": 27,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 49,
+      "checkpoint": 5,
+      "entityId": "mexico-porfirian-framework",
+      "name": "Mexico — Porfirian republican framework",
+      "period": {
+        "from": "1879",
+        "until": "1909"
+      },
+      "region": "North America",
+      "rationale": "Porfirian interval distinct from Campaign1 1917 constitution.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-mexico"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-mexico",
+          "entityId": "mexico-porfirian-framework",
+          "validFrom": "1878-01-01",
+          "validUntil": "1910-01-01",
+          "sourceIds": [
+            "b08-mexico-loc-study",
+            "b08-mexico-porfiriato"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        }
+      ],
+      "existingSourceIds": [
+        "b08-mexico-loc-study",
+        "b08-mexico-porfiriato"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b08-mexico-loc-study",
+          "title": "Mexico: A Country Study (1996) — historical setting and constitutional history",
+          "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/me/mexicocountrystu00merr_0/mexicocountrystu00merr_0.pdf",
+          "institution": "Library of Congress Federal Research Division",
+          "catalogued": true
+        },
+        {
+          "id": "b08-mexico-porfiriato",
+          "title": "México bajo Porfirio Díaz, 1876–1911",
+          "url": "https://www.loc.gov/exhibits/mexican-revolution-and-the-united-states/porfiriato-sp.html",
+          "institution": "Library of Congress",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 2,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 67,
+      "scannerGapsByCategory": {
+        "capital": 31,
+        "leadership": 5,
+        "currency": 31,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 50,
+      "checkpoint": 5,
+      "entityId": "chile-parliamentary-practice-framework",
+      "name": "Chile — parliamentary political practice",
+      "period": {
+        "from": "1893",
+        "until": "1923"
+      },
+      "region": "South America",
+      "rationale": "Parliamentary practice interior; president offices and republican symbols.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-chile"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-chile",
+          "entityId": "chile-parliamentary-practice-framework",
+          "validFrom": "1892-01-01",
+          "validUntil": "1924-01-01",
+          "sourceIds": [
+            "b09-chile-parliament"
+          ],
+          "note": "Partial framework independently sourced; requested year and boundary seed distinct. No geometry-derived sovereignty or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b09-chile-parliament"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b09-chile-parliament",
+          "title": "Parliamentary republic, 1891–1925",
+          "url": "https://www.memoriachilena.gob.cl/602/w3-article-3537.html",
+          "institution": "National Library of Chile, Memoria Chilena",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 93,
+      "scannerGapsByCategory": {
+        "capital": 31,
+        "leadership": 31,
+        "currency": 31,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 51,
+      "checkpoint": 5,
+      "entityId": "uruguay-late-1830-framework",
+      "name": "Uruguay — 1830 constitutional framework",
+      "period": {
+        "from": "1891",
+        "until": "1916"
+      },
+      "region": "South America",
+      "rationale": "Pre-dual-executive framework; dated capital/currency/flags.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-uruguay"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-uruguay",
+          "entityId": "uruguay-late-1830-framework",
+          "validFrom": "1890-01-01",
+          "validUntil": "1917-01-01",
+          "sourceIds": [
+            "b09-uruguay-1830",
+            "b09-uruguay-executive"
+          ],
+          "note": "Partial framework independently sourced; requested year and boundary seed distinct. No geometry-derived sovereignty or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b09-uruguay-1830",
+        "b09-uruguay-executive"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b09-uruguay-1830",
+          "title": "Constitution of Uruguay, 1830",
+          "url": "https://biblioteca.parlamento.gub.uy/File/biblioteca/Constituciones/1830/1830%20Constitucion%20-%20OCR.pdf",
+          "institution": "Parliament of Uruguay Library",
+          "catalogued": true
+        },
+        {
+          "id": "b09-uruguay-executive",
+          "title": "Uruguay executive historical evolution",
+          "url": "https://www.gub.uy/presidencia/institucional/creacion-evolucion-historica",
+          "institution": "Presidency of Uruguay",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 78,
+      "scannerGapsByCategory": {
+        "capital": 26,
+        "leadership": 26,
+        "currency": 26,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 52,
+      "checkpoint": 5,
+      "entityId": "peru-later-1860-framework",
+      "name": "Peru — later 1860 constitutional framework",
+      "period": {
+        "from": "1891",
+        "until": "1918"
+      },
+      "region": "South America",
+      "rationale": "Restored 1860 framework, long core gaps and national/state flag distinctions.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-peru"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-peru",
+          "entityId": "peru-later-1860-framework",
+          "validFrom": "1890-01-01",
+          "validUntil": "1919-01-01",
+          "sourceIds": [
+            "b09-peru-periods",
+            "b09-peru-1860"
+          ],
+          "note": "Partial framework independently sourced; requested year and boundary seed distinct. No geometry-derived sovereignty or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b09-peru-1860",
+        "b09-peru-periods"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b09-peru-1860",
+          "title": "Constitution of Peru, 1860, annotated historical text",
+          "url": "https://www3.congreso.gob.pe/Docs/sites/webs/constitucion/constituciones/Constitucion-1860.pdf",
+          "institution": "Congress of Peru",
+          "catalogued": true
+        },
+        {
+          "id": "b09-peru-periods",
+          "title": "Historical constitutional periods of Peru",
+          "url": "https://www3.congreso.gob.pe/Docs/sites/webs/constitucion/constitucionesperu-indice.htm",
+          "institution": "Congress of Peru",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 84,
+      "scannerGapsByCategory": {
+        "capital": 28,
+        "leadership": 28,
+        "currency": 28,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 53,
+      "checkpoint": 5,
+      "entityId": "paraguay-1870-constitutional-framework",
+      "name": "Paraguay — 1870 constitutional framework",
+      "period": {
+        "from": "1872",
+        "until": "1934"
+      },
+      "region": "South America",
+      "rationale": "Postwar republic interior with institutional/office/currency evidence.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-paraguay"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-paraguay",
+          "entityId": "paraguay-1870-constitutional-framework",
+          "validFrom": "1871-01-01",
+          "validUntil": "1935-01-01",
+          "sourceIds": [
+            "b09-paraguay-charters"
+          ],
+          "note": "Partial framework independently sourced; requested year and boundary seed distinct. No geometry-derived sovereignty or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b09-paraguay-charters"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b09-paraguay-charters",
+          "title": "Paraguay: constitutional history",
+          "url": "https://countrystudies.us/paraguay/53.htm",
+          "institution": "US Library of Congress, Federal Research Division; historical Country Study text mirror",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 189,
+      "scannerGapsByCategory": {
+        "capital": 63,
+        "leadership": 63,
+        "currency": 63,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 54,
+      "checkpoint": 5,
+      "entityId": "bolivia-late-1880-constitutional-framework",
+      "name": "Bolivia — 1880 constitutional framework",
+      "period": {
+        "from": "1882",
+        "until": "1934"
+      },
+      "region": "South America",
+      "rationale": "Constitutional framework; Sucre/La Paz differentiated by functions.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-bolivia"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-bolivia",
+          "entityId": "bolivia-late-1880-constitutional-framework",
+          "validFrom": "1881-01-01",
+          "validUntil": "1935-01-01",
+          "sourceIds": [
+            "b09-bolivia-1880",
+            "b09-bolivia-charters"
+          ],
+          "note": "Partial framework independently sourced; requested year and boundary seed distinct. No geometry-derived sovereignty or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b09-bolivia-1880",
+        "b09-bolivia-charters"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b09-bolivia-1880",
+          "title": "Constitution of Bolivia, 28 October 1880",
+          "url": "https://www.lexivox.org/norms/BO-CPE-18801028.html",
+          "institution": "LexiVox, primary historical legal-text transcription",
+          "catalogued": true
+        },
+        {
+          "id": "b09-bolivia-charters",
+          "title": "Bolivia: constitutional history",
+          "url": "https://countrystudies.us/bolivia/72.htm",
+          "institution": "US Library of Congress, Federal Research Division; historical Country Study text mirror",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 159,
+      "scannerGapsByCategory": {
+        "capital": 53,
+        "leadership": 53,
+        "currency": 53,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 55,
+      "checkpoint": 5,
+      "entityId": "venezuela-gomez-framework",
+      "name": "Venezuela — Gomez political predominance",
+      "period": {
+        "from": "1910",
+        "until": "1934"
+      },
+      "region": "South America",
+      "rationale": "Gomez political authority not automatically continuous presidential office.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-venezuela"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-venezuela",
+          "entityId": "venezuela-gomez-framework",
+          "validFrom": "1909-01-01",
+          "validUntil": "1935-01-01",
+          "sourceIds": [
+            "b09-venezuela-caudillos"
+          ],
+          "note": "Partial framework independently sourced; requested year and boundary seed distinct. No geometry-derived sovereignty or succession."
+        }
+      ],
+      "existingSourceIds": [
+        "b09-venezuela-caudillos"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b09-venezuela-caudillos",
+          "title": "Venezuela: caudillismo",
+          "url": "https://countrystudies.us/venezuela/5.htm",
+          "institution": "US Library of Congress, Federal Research Division; historical Country Study text mirror",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 1,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 50,
+      "scannerGapsByCategory": {
+        "capital": 25,
+        "leadership": 0,
+        "currency": 25,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 56,
+      "checkpoint": 5,
+      "entityId": "b10-haiti-occupation-without-legislature",
+      "name": "Haiti — US occupation framework",
+      "period": {
+        "from": "1919",
+        "until": "1928"
+      },
+      "region": "Caribbean",
+      "rationale": "US occupation plus Haitian civil offices; contested flag inference prohibited.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-haiti"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-haiti",
+          "entityId": "b10-haiti-occupation-without-legislature",
+          "validFrom": "1918-01-01",
+          "validUntil": "1929-01-01",
+          "sourceIds": [
+            "b10-haiti-occupation"
+          ],
+          "note": "Independent institutional evidence; editorial coverage bounds. Raw modern-style names do not establish earlier sovereignty."
+        }
+      ],
+      "existingSourceIds": [
+        "b10-haiti-occupation"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b10-haiti-occupation",
+          "title": "US Invasion and Occupation of Haiti, 1915–34",
+          "url": "https://history.state.gov/milestones/1914-1920/haiti",
+          "institution": "US Department of State, Office of the Historian",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 30,
+      "scannerGapsByCategory": {
+        "capital": 10,
+        "leadership": 10,
+        "currency": 10,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 57,
+      "checkpoint": 5,
+      "entityId": "newfoundland-responsible-dominion-framework",
+      "name": "Newfoundland — responsible-government Dominion",
+      "period": {
+        "from": "1909",
+        "until": "1933"
+      },
+      "region": "North Atlantic",
+      "rationale": "Dominion before Commission; qualified colonial ensign versus later unofficial tricolour.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-dominion-of-newfoundland"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-dominion-of-newfoundland",
+          "entityId": "newfoundland-responsible-dominion-framework",
+          "validFrom": "1908-01-01",
+          "validUntil": "1934-02-16",
+          "sourceIds": [
+            "b08-newfoundland-responsible",
+            "b08-dominion-1907",
+            "b08-canada-institutions",
+            "b08-westminster-1931"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        }
+      ],
+      "existingSourceIds": [
+        "b08-canada-institutions",
+        "b08-dominion-1907",
+        "b08-newfoundland-responsible",
+        "b08-westminster-1931"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b08-canada-institutions",
+          "title": "Canadian Parliamentary Institutions — historical development",
+          "url": "https://www.ourcommons.ca/procedure/procedure-and-practice-3/ch_01_2-e.html",
+          "institution": "House of Commons of Canada",
+          "catalogued": true
+        },
+        {
+          "id": "b08-dominion-1907",
+          "title": "Becoming a dominion",
+          "url": "https://nzhistory.govt.nz/page/becoming-dominion",
+          "institution": "Manatū Taonga — New Zealand Ministry for Culture and Heritage",
+          "catalogued": true
+        },
+        {
+          "id": "b08-newfoundland-responsible",
+          "title": "Responsible Government, 1855–1933",
+          "url": "https://www.heritage.nf.ca/articles/politics/responsible-government-1855-to-1933.php",
+          "institution": "Memorial University of Newfoundland",
+          "catalogued": true
+        },
+        {
+          "id": "b08-westminster-1931",
+          "title": "Statute of Westminster 1931 — original enacted text",
+          "url": "https://www.legislation.gov.uk/ukpga/Geo5/22-23/4/enacted",
+          "institution": "UK legislation.gov.uk",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 75,
+      "scannerGapsByCategory": {
+        "capital": 25,
+        "leadership": 25,
+        "currency": 25,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 58,
+      "checkpoint": 5,
+      "entityId": "australia-postadoption-federal-core",
+      "name": "Australia — federal constitutional framework after Westminster adoption",
+      "period": {
+        "from": "1946",
+        "until": "1960"
+      },
+      "region": "Oceania",
+      "rationale": "Post-adoption federation distinct from Campaign1 pre-adoption period.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-australia"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-australia",
+          "entityId": "australia-postadoption-federal-core",
+          "validFrom": "1945-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b21-australian-federation",
+            "b21-australian-first-parliament",
+            "b21-australia-westminster-primary"
+          ],
+          "note": "Source-based political framework independent of boundary snapshot. Unresearched transitions and local control remain partial."
+        }
+      ],
+      "existingSourceIds": [
+        "b21-australia-westminster-primary",
+        "b21-australian-federation",
+        "b21-australian-first-parliament"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b21-australia-westminster-primary",
+          "title": "Statute of Westminster Adoption Act1942, as made",
+          "url": "https://www.legislation.gov.au/C1942A00056/asmade/1942-10-09/text/original/epub/OEBPS/document_1/document_1.html",
+          "institution": "Australian Federal Register of Legislation",
+          "catalogued": true
+        },
+        {
+          "id": "b21-australian-federation",
+          "title": "Federation",
+          "url": "https://www.nma.gov.au/defining-moments/resources/federation",
+          "institution": "National Museum of Australia",
+          "catalogued": true
+        },
+        {
+          "id": "b21-australian-first-parliament",
+          "title": "Federation Fact Sheet2 — First Commonwealth Parliament1901",
+          "url": "https://www.aec.gov.au/About_AEC/Publications/Fact_Sheets/factsheet2.htm",
+          "institution": "Australian Electoral Commission",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 45,
+      "scannerGapsByCategory": {
+        "capital": 15,
+        "leadership": 15,
+        "currency": 15,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 59,
+      "checkpoint": 5,
+      "entityId": "samoa-nz-mandate-core",
+      "name": "Western Samoa — League of Nations mandate",
+      "period": {
+        "from": "1922",
+        "until": "1945"
+      },
+      "region": "Oceania",
+      "rationale": "League mandate, colonial/administrative flag type and Apia seat.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-samoa"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-samoa",
+          "entityId": "samoa-nz-mandate-core",
+          "validFrom": "1921-01-01",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "b21-samoa-nz-administration",
+            "b21-samoa-trusteeship-history",
+            "b21-samoa-parliament-history"
+          ],
+          "note": "Source-based political framework independent of boundary snapshot. Unresearched transitions and local control remain partial."
+        }
+      ],
+      "existingSourceIds": [
+        "b21-samoa-nz-administration",
+        "b21-samoa-parliament-history",
+        "b21-samoa-trusteeship-history"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b21-samoa-nz-administration",
+          "title": "Apia — Our Story",
+          "url": "https://www.mfat.govt.nz/en/about-us/mfat75/75-our-story/apia?l=en_NZ",
+          "institution": "New Zealand Ministry of Foreign Affairs and Trade",
+          "catalogued": true
+        },
+        {
+          "id": "b21-samoa-parliament-history",
+          "title": "History of the Parliament",
+          "url": "https://palemene.ws/history-of-the-parliament/",
+          "institution": "Parliament of Samoa",
+          "catalogued": true
+        },
+        {
+          "id": "b21-samoa-trusteeship-history",
+          "title": "New Zealand’s trusteeship administration of Western Samoa",
+          "url": "https://teara.govt.nz/mi/1966/samoa-western",
+          "institution": "An Encyclopaedia of New Zealand1966, government historical edition hosted by Manatū Taonga",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 72,
+      "scannerGapsByCategory": {
+        "capital": 24,
+        "leadership": 24,
+        "currency": 24,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    },
+    {
+      "sequence": 60,
+      "checkpoint": 5,
+      "entityId": "nsw-responsible-colonial-core",
+      "name": "New South Wales — self-governing British colony",
+      "period": {
+        "from": "1879",
+        "until": "1900"
+      },
+      "region": "Oceania",
+      "rationale": "Self-governing colony before federation; colonial ensign and offices.",
+      "priority": "later checkpoint",
+      "mapIds": [
+        "entity-new-south-wales-uk"
+      ],
+      "mappings": [
+        {
+          "mapId": "entity-new-south-wales-uk",
+          "entityId": "nsw-responsible-colonial-core",
+          "validFrom": "1878-01-01",
+          "validUntil": "1901-01-01",
+          "sourceIds": [
+            "b21-nsw-responsible-government",
+            "b21-australian-federation"
+          ],
+          "note": "Source-based political framework independent of boundary snapshot. Unresearched transitions and local control remain partial."
+        }
+      ],
+      "existingSourceIds": [
+        "b21-australian-federation",
+        "b21-nsw-responsible-government"
+      ],
+      "sourceLeads": [
+        {
+          "id": "b21-australian-federation",
+          "title": "Federation",
+          "url": "https://www.nma.gov.au/defining-moments/resources/federation",
+          "institution": "National Museum of Australia",
+          "catalogued": true
+        },
+        {
+          "id": "b21-nsw-responsible-government",
+          "title": "1856 to1889 — responsible government and colonial development",
+          "url": "https://www.parliament.nsw.gov.au/about-parliament/heritage-history/history-democracy-nsw/1856-to-1889-responsible-government-and-colonial-",
+          "institution": "Parliament of New South Wales",
+          "catalogued": true
+        }
+      ],
+      "existingAcceptedResearch": [],
+      "existingCoreFieldCounts": {
+        "capitals": 0,
+        "leaders": 0,
+        "currencies": 0,
+        "governments": 1,
+        "politicalStatus": 1,
+        "descriptions": 1,
+        "flags": 0
+      },
+      "scannerGapOpportunities": 66,
+      "scannerGapsByCategory": {
+        "capital": 22,
+        "leadership": 22,
+        "currency": 22,
+        "political-institutional": 0
+      },
+      "flagCoverageStatus": "No existing production flag records",
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.",
+        "Research bounds are assignments, not evidence that every requested year can be filled.",
+        "Flag sourcing and asset license must be independently supported; leave uncertain flags absent."
+      ]
+    }
+  ]
+}

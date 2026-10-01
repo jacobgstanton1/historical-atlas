@@ -3,17 +3,18 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createMetadataIndex, validInYear, intervalBounds, dateBounds} from '../historical-metadata.js';
 
+import {inspectFlagAsset} from './research-flags.mjs';
 const definitions = [
   ['political-institutional', ['politicalStatus', 'governments', 'descriptions'], 90],
   ['leadership', ['leaders'], 75], ['capital', ['capitals'], 70],
   ['population-statistics', ['population'], 30], ['area-statistics', ['area'], 25],
-  ['currency', ['currencies'], 45], ['economy', ['economy'], 25],
+  ['historical-flag', ['flags'], 50], ['currency', ['currencies'], 45], ['economy', ['economy'], 25],
   ['events-context', ['events'], 35], ['relationships', ['relationships'], 40],
   ['important-figures', ['importantFigures'], 20],
 ];
 const unique = x => [...new Set(x)].sort();
 const reference = r => ({value:r.value, validFrom:r.validFrom, validUntil:r.validUntil,
-  asOf:r.asOf, date:r.date, relevance:r.relevance||r.figure?.relevance, sourceIds:r.sourceIds || [], confidence:r.confidence});
+  asOf:r.asOf, date:r.date, relevance:r.relevance||r.figure?.relevance, asset:r.asset,flagType:r.flagType,license:r.license,note:r.note, sourceIds:r.sourceIds || [], confidence:r.confidence});
 const weak = (r, sources) => !r.sourceIds?.length || r.sourceIds.some(id => {
   const s = sources.get(id); return !s || !s.url || !s.title || !s.institution;
 }) || ['uncertain', 'speculative', 'inferred', 'low'].includes(r.confidence);
@@ -44,10 +45,11 @@ export function scan(context, {from=1800, until=1960, entityIds}={}) {
   const {db,registry,manifest,plan} = context, selected = entityIds && new Set(entityIds);
   if (selected && [...selected].some(id=>!db.entities.some(e=>e.id===id))) throw Error('Unknown entity selection.');
   const sources = new Map(registry.sources.map(s=>[s.id,s])), index=createMetadataIndex(db,registry);
+  const flagEntities={supported:new Set(),partial:new Set(),review:new Set(),missing:new Set()};
   const gaps=[], metrics={entitiesScanned:0,entityYearsScanned:0,rawIdentities:manifest.identities.length,
     politicalDenominator:0,unresolvedClassifications:0,mappingReviewIdentities:0,
     rawResolverYearsScanned:0,exactObservedYears:0,nearbyDatedEvidenceGaps:0,weakSourceGaps:0,
-    transitionYearGaps:0,entityMappingReviewYears:0,politicalCandidatesInvestigated:0,
+    flagCoverage:{distinctEntitiesEligible:0,distinctEntitiesSupported:0,distinctEntitiesPartial:0,distinctEntitiesReview:0,distinctEntitiesMissing:0},transitionYearGaps:0,entityMappingReviewYears:0,politicalCandidatesInvestigated:0,
     resolverAvailability:structuredClone(manifest.classification?.politicalCoverage||{}),fieldCoverage:{},byCategory:{}};
   function add(g) {gaps.push(g); metrics.byCategory[g.category]=(metrics.byCategory[g.category]||0)+1;}
   for (const e of [...db.entities].sort((a,b)=>a.id.localeCompare(b.id))) {
@@ -71,12 +73,15 @@ export function scan(context, {from=1800, until=1960, entityIds}={}) {
         const coverage=metrics.fieldCoverage[category]||={entityYearsEligible:0,fullySupportedYears:0,partialYears:0,observationYears:0,missingYears:0};coverage.entityYearsEligible++;
         const applies=r=>statistics?observed(r,year):timeline?contextual(r,year):validInYear(r,year);
         const existing=fields.flatMap(f=>e[f]||[]), eligible=existing.filter(applies);
-        const adequate=r=>!weak(r,sources)&&(!statistics||typeof r.scope==='string'&&r.scope.trim());
+        const assetValid=r=>r.validFrom&&r.asset&&r.license&&r.attribution&&!inspectFlagAsset(r.asset,context.directory,r.assetSha256).length;
+        const adequate=r=>(category!=='historical-flag'||assetValid(r))&&!weak(r,sources)&&(!statistics||typeof r.scope==='string'&&r.scope.trim());
         const healthy=eligible.filter(adequate);
         const absent=fields.filter(f=>!(e[f]||[]).some(r=>applies(r)&&adequate(r)));
-        const partial=!statistics&&!timeline&&fields.some(f=>!covers((e[f]||[]).filter(r=>validInYear(r,year)&&!weak(r,sources)),year));
-        if (!absent.length && !partial) {coverage.fullySupportedYears++;if(statistics){metrics.exactObservedYears++;coverage.observationYears++;}continue;}
-        if(partial&&healthy.length)coverage.partialYears++;else coverage.missingYears++;
+        const qualified=category==='historical-flag'&&healthy.some(r=>!r.flagType||!['national flag','state flag'].includes(r.flagType)||r.reviewStatus==='required'||r.reviewStatus==='unresolved');
+        const reviewFlag=category==='historical-flag'&&eligible.length&&!healthy.length;
+        const partial=qualified||!statistics&&!timeline&&fields.some(f=>!covers((e[f]||[]).filter(r=>validInYear(r,year)&&adequate(r)),year));
+        if (!absent.length && !partial) {if(category==='historical-flag')flagEntities.supported.add(e.id);coverage.fullySupportedYears++;if(statistics){metrics.exactObservedYears++;coverage.observationYears++;}continue;}
+        if(reviewFlag){coverage.historicalReviewYears=(coverage.historicalReviewYears||0)+1;flagEntities.review.add(e.id);}else if(partial&&healthy.length){coverage.partialYears++;if(category==='historical-flag')flagEntities.partial.add(e.id);}else {coverage.missingYears++;if(category==='historical-flag')flagEntities.missing.add(e.id);}
         const nearby=statistics?existing.filter(r=>(r.asOf||r.date)&&!observed(r,year)):[];
         if(nearby.length)metrics.nearbyDatedEvidenceGaps++; if(eligible.some(r=>weak(r,sources)))metrics.weakSourceGaps++;
         const reason=eligible.length&&!healthy.length?'Existing evidence has missing or weak source provenance or statistical geographic scope.':absent.length?
@@ -86,6 +91,7 @@ export function scan(context, {from=1800, until=1960, entityIds}={}) {
         if(!e.existence)cautions.push('Research envelope derived from existing dated mappings/facts; it does not establish a sourced full lifetime.');
         if(!mappings.length)cautions.push('Entity exists within an editorial envelope but has no accepted mapping in this year; resolve identity before adding facts.');
         if(statistics)cautions.push('Nearby observations are evidence leads only: no interpolation, modern fallback or automatic carry-forward coverage.');
+        if(category==='historical-flag')cautions.push('No modern flag fallback; preserve actual national/ensign/office/royal type and asset license.');
         if(partial)cautions.push('Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists.');
         add({entityId:e.id,mapIds,name,period:{from:String(year),until:String(year)},category,reason,priority,cautions,
           existingFacts:unique([...eligible,...nearby].map(r=>JSON.stringify(reference(r)))).map(x=>JSON.parse(x)),
@@ -115,6 +121,7 @@ export function scan(context, {from=1800, until=1960, entityIds}={}) {
     }
   }
   gaps.sort((a,b)=>b.priority-a.priority||(a.entityId||a.mapIds[0]).localeCompare(b.entityId||b.mapIds[0])||a.category.localeCompare(b.category)||a.period.from.localeCompare(b.period.from));
+  metrics.flagCoverage={distinctEntitiesEligible:metrics.entitiesScanned,distinctEntitiesSupported:flagEntities.supported.size,distinctEntitiesPartial:flagEntities.partial.size,distinctEntitiesReview:flagEntities.review.size,distinctEntitiesMissing:flagEntities.missing.size,...metrics.fieldCoverage['historical-flag']};
   metrics.totalGaps=gaps.length; return {schemaVersion:1,productionFingerprint:context.productionFingerprint,range:{from,until},gaps,metrics};
 }
 

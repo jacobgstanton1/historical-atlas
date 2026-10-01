@@ -5,11 +5,12 @@ import {readContext,readJSON,saveJSON,digest,root,isCLI} from './research-common
 import {readQueue,updateQueue} from './research-queue.mjs';
 import {validatePackage} from './research-validator.mjs';
 import {integratePackage} from './research-integrate.mjs';
-const directory=path.join(root,'research/campaign-01'),file=path.join(directory,'queue.json'),actor={role:'coordinator',id:'campaign-01-coordinator'};
-export function submitReviewed(entityId){
+import {campaignOptions,campaignArguments} from './research-campaign.mjs';
+export function submitReviewed(entityId,options={}){
+  const {directory,config}=campaignOptions(options),file=path.join(directory,'queue.json'),actor={role:'coordinator',id:config.campaign+'-coordinator'};
   let q=readQueue(file),j=q.jobs.find(j=>j.entityId===entityId);if(!j)throw Error('Unknown campaign entity');
   const pkg=readJSON(path.join(directory,'packages',entityId+'.json')),review=readJSON(path.join(directory,'review',entityId+'.json'));
-  if(review.packageHash!==digest(pkg)||!review.rationale?.trim()||review.coordinator!==actor.id||!review.bodyReviewed)throw Error('Exact independent source-body review required');
+  if((config.campaign!=='campaign-01'&&(!review.reviewer||review.reviewer===pkg.worker.id))||review.packageHash!==digest(pkg)||!review.rationale?.trim()||review.coordinator!==actor.id||!review.bodyReviewed)throw Error('Exact independent source-body review required');
   if(j.status==='queued'){q=updateQueue(file,'claim',{jobId:j.id,workerId:pkg.worker.id});j=q.jobs.find(x=>x.id===j.id);}
   if(j.status==='researching'){q=updateQueue(file,'submit',{jobId:j.id,workerId:pkg.worker.id,package:pkg});j=q.jobs.find(x=>x.id===j.id);}
   if(j.status==='integrated')return j;
@@ -25,8 +26,9 @@ export function submitReviewed(entityId){
   }
   saveJSON(path.join(directory,'review',entityId+'-current.json'),{schemaVersion:1,originalPackageHash:digest(pkg),currentPackageHash:j.packageHash,productionFingerprint:context.productionFingerprint,validation:j.validation,receipt:j.receipt});return j;
 }
-export function applyReviewed(entityId){
-  const j=submitReviewed(entityId);if(j.status==='integrated')return j.integrationReceipt;if(j.status!=='accepted')throw Error('Historical review remains unresolved: '+entityId);
+export function applyReviewed(entityId,options={}){
+  const {directory,config}=campaignOptions(options),file=path.join(directory,'queue.json'),actor={role:'coordinator',id:config.campaign+'-coordinator'};
+  const j=submitReviewed(entityId,options);if(j.status==='integrated')return j.integrationReceipt;if(j.status!=='accepted')throw Error('Historical review remains unresolved: '+entityId);
   const result=integratePackage(root,j.package,j,j.receipt,{apply:true});
   const durable=readJSON(result.journal);
   updateQueue(file,'integrated',{jobId:j.id,actor,integrationReceipt:result.integrationReceipt},{productionFingerprint:result.afterFingerprint,verifyIntegration:r=>durable.status==='completed'&&durable.jobId===r.jobId&&durable.packageHash===r.packageHash&&durable.afterFingerprint===r.afterFingerprint});
@@ -35,6 +37,6 @@ export function applyReviewed(entityId){
   return result.integrationReceipt;
 }
 if(isCLI(import.meta.url)){
-  const [command,...entities]=process.argv.slice(2);if(!['submit','apply'].includes(command)||!entities.length)throw Error('Usage: research-campaign-run.mjs submit|apply entity-id ...');
-  for(const id of entities)console.log(JSON.stringify({entityId:id,result:command==='apply'?applyReviewed(id):{status:submitReviewed(id).status}}));
+  const {options,positional}=campaignArguments(process.argv.slice(2));const [command,...entities]=positional;if(!['submit','apply'].includes(command)||!entities.length)throw Error('Usage: research-campaign-run.mjs submit|apply entity-id ...');
+  for(const id of entities)console.log(JSON.stringify({entityId:id,result:command==='apply'?applyReviewed(id,options):{status:submitReviewed(id,options).status}}));
 }

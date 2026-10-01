@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "campaign02-germany-weimar-framework",
+  "jobId": "c02-5fe7cfa37c063f280863f269",
+  "worker": {
+    "id": "campaign2-selection",
+    "specialism": "entity-core"
+  },
+  "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+  "entityId": "germany-weimar-framework",
+  "mapIds": [
+    "entity-germany"
+  ],
+  "period": {
+    "from": "1920",
+    "until": "1932"
+  },
+  "category": "core-state",
+  "categories": [
+    "capital",
+    "leadership",
+    "political-institutional",
+    "currency",
+    "historical-flag"
+  ],
+  "claims": [
+    {
+      "id": "c02-weimar-berlin",
+      "category": "capital",
+      "value": "Berlin",
+      "temporal": {
+        "kind": "interval",
+        "from": "1920",
+        "until": "1932"
+      },
+      "entityId": "germany-weimar-framework",
+      "geographicScope": {
+        "description": "Entity-level office, seat or monetary denomination; no geometry-based territorial or identity inference.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "c02-bundestag-weimar-capital"
+      ],
+      "evidence": [
+        {
+          "sourceId": "c02-bundestag-weimar-capital",
+          "note": "Printed2119historicalstatementidentifiesBerlinasWeimarRepubliccapital.",
+          "supportedPrecision": "year",
+          "supportsClaim": true,
+          "from": "1920",
+          "until": "1932"
+        }
+      ],
+      "reviewStatus": "clear",
+      "cautions": []
+    },
+    {
+      "id": "c02-weimar-ebert",
+      "category": "leadership",
+      "value": "Friedrich Ebert",
+      "temporal": {
+        "kind": "interval",
+        "from": "1920-01-01",
+        "until": "1925-02-28"
+      },
+      "entityId": "germany-weimar-framework",
+      "geographicScope": {
+        "description": "Entity-level office, seat or monetary denomination; no geometry-based territorial or identity inference.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "c02-dhm-ebert"
+      ],
+      "evidence": [
+        {
+          "sourceId": "c02-dhm-ebert",
+          "note": "Museum dates1919presidentialoffice anddeath1925-02-28; startclipped.",
+          "supportedPrecision": "day",
+          "supportsClaim": true,
+          "from": "1920-01-01",
+          "until": "1925-02-28"
+        }
+      ],
+      "reviewStatus": "clear",
+      "cautions": [],
+      "role": "Reich President"
+    },
+    {
+      "id": "c02-weimar-hindenburg",
+      "category": "leadership",
+      "value": "Paul von Hindenburg",
+      "temporal": {
+        "kind": "interval",
+        "from": "1925-05-12",
+        "until": "1933-01-01"
+      },
+      "entityId": "germany-weimar-framework",
+      "geographicScope": {
+        "description": "Entity-level office, seat or monetary denomination; no geometry-based territorial or identity inference.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "c02-archives-hindenburg-inauguration",
+        "c02-dhm-hindenburg"
+      ],
+      "evidence": [
+        {
+          "sourceId": "c02-archives-hindenburg-inauguration",
+          "note": "ArchivescaptiondatesMay12inauguration; museumbiography1932reelection/1934death. Endclipped.",
+          "supportedPrecision": "day",
+          "supportsClaim": true,
+          "from": "1925-05-12",
+          "until": "1933-01-01"
+        },
+        {
+          "sourceId": "c02-dhm-hindenburg",
+          "note": "ArchivescaptiondatesMay12inauguration; museumbiography1932reelection/1934death. Endclipped.",
+          "supportedPrecision": "day",
+          "supportsClaim": true,
+          "from": "1925-05-12",
+          "until": "1933-01-01"
+        }
+      ],
+      "reviewStatus": "clear",
+      "cautions": [],
+      "role": "Reich President"
+    },
+    {
+      "id": "c02-weimar-reichsmark",
+      "category": "currency",
+      "value": "Reichsmark",
+      "temporal": {
+        "kind": "interval",
+        "from": "1925",
+        "until": "1932"
+      },
+      "entityId": "germany-weimar-framework",
+      "geographicScope": {
+        "description": "Entity-level office, seat or monetary denomination; no geometry-based territorial or identity inference.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "c01-bundesbank-historical-money"
+      ],
+      "evidence": [
+        {
+          "sourceId": "c01-bundesbank-historical-money",
+          "note": "Existingcentralbankbodyactualintroduction1924-10-11 andcontinuationto1948; interior1925–1932 avoids enactment/introductiondistinction.",
+          "supportedPrecision": "year",
+          "supportsClaim": true,
+          "from": "1925",
+          "until": "1932"
+        }
+      ],
+      "reviewStatus": "clear",
+      "cautions": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "c02-dhm-ebert",
+      "url": "https://www.dhm.de/lemo/biografie/friedrich-ebert",
+      "title": "Friedrich Ebert1871–1925",
+      "institution": "Deutsches Historisches Museum",
+      "kind": "institutional-historical",
+      "accessed": "2026-10-01",
+      "usage": "Full biography:1919presidency,1925death."
+    },
+    {
+      "id": "c02-archives-hindenburg-inauguration",
+      "url": "https://weimar.bundesarchiv.de/WEIMAR/DE/Content/Dokumente-zur-Zeitgeschichte/1925-04-26_wahl-hindenburg.html",
+      "title": "Wahl Hindenburgs zum Reichspräsidenten",
+      "institution": "German Federal Archives",
+      "kind": "institutional-historical",
+      "accessed": "2026-10-01",
+      "usage": "Body/photo caption distinguishesApr26election andMay12inauguration."
+    },
+    {
+      "id": "c02-dhm-hindenburg",
+      "url": "https://www.dhm.de/lemo/biografie/paul-hindenburg",
+      "title": "Paul von Hindenburg1847–1934",
+      "institution": "Deutsches Historisches Museum",
+      "kind": "institutional-historical",
+      "accessed": "2026-10-01",
+      "usage": "Full biography:1932reelection,1934death."
+    },
+    {
+      "id": "c02-bundestag-weimar-capital",
+      "url": "https://dserver.bundestag.de/btp/08/08029.pdf",
+      "title": "Bundestag plenary protocol8/29,26May1977,printedpage2119",
+      "institution": "German Bundestag",
+      "kind": "primary-document",
+      "accessed": "2026-10-01",
+      "usage": "SubstantiveKunzspeechhistorical passage expresslyidentifiesWeimarcapital; notasourcedconstitutionaldesignation."
+    }
+  ],
+  "absenceOfEvidence": [
+    "Feb28–May12,1925interimpresidentialgap preserved.",
+    "1920–1924currencycoexistence/transitions unresearched.",
+    "Politicalrecords preserved withoutduplication.",
+    "FlagcandidatePD3:2Weimarassetseparatelyreviewed; no modern3:5fallback."
+  ],
+  "reviewNotes": [
+    "Isolated worker research; independent source-body review and coordinator validation required."
+  ]
+}

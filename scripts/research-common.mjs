@@ -4,7 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 export const root = fileURLToPath(new URL('../', import.meta.url));
-export const categories = ['resolver','political-institutional','leadership','capital','population-statistics','area-statistics','currency','economy','events-context','relationships','important-figures','identity-review','mapping-review'];
+export const categories = ['resolver','political-institutional','leadership','capital','population-statistics','area-statistics','currency','historical-flag','economy','events-context','relationships','important-figures','identity-review','mapping-review'];
 export const productionFiles = ['data/historical-entities.json','data/historical-sources.json','app.js','data-pipeline.js','historical-metadata.js','dossier.js','index.html','styles.css'];
 function canonical(value) {
   if (Array.isArray(value)) return value.map(canonical);
@@ -15,10 +15,16 @@ export const digest = value => crypto.createHash('sha256').update(JSON.stringify
 export function readJSON(file) {return JSON.parse(fs.readFileSync(file,'utf8').replace(/^\uFEFF/,''));}
 export function saveJSON(file, value) {fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(value,null,2)+'\n');}
 export function productionFingerprint(directory=root) {
-  return digest(Object.fromEntries(productionFiles.map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(directory,file))).digest('hex')])));
+  const hashes=Object.fromEntries(productionFiles.map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(directory,file))).digest('hex')]));
+  const db=readJSON(path.join(directory,'data/historical-entities.json'));
+  for(const e of db.entities||[])for(const f of e.flags||[])if(f.researchProvenance){
+    if(!/^\.\/assets\/flags\/[a-zA-Z0-9_-]+\.svg$/.test(f.asset||''))throw Error('Unsafe production flag asset');
+    hashes[f.asset]=crypto.createHash('sha256').update(fs.readFileSync(path.join(directory,f.asset))).digest('hex');
+  }
+  return digest(hashes);
 }
 export function readContext(directory=root) {
-  return {db:readJSON(path.join(directory,'data/historical-entities.json')),registry:readJSON(path.join(directory,'data/historical-sources.json')),manifest:readJSON(path.join(directory,'development/coverage/manifest.json')),plan:readJSON(path.join(directory,'development/coverage/research-plan.json')),productionFingerprint:productionFingerprint(directory)};
+  return {directory,db:readJSON(path.join(directory,'data/historical-entities.json')),registry:readJSON(path.join(directory,'data/historical-sources.json')),manifest:readJSON(path.join(directory,'development/coverage/manifest.json')),plan:readJSON(path.join(directory,'development/coverage/research-plan.json')),productionFingerprint:productionFingerprint(directory)};
 }
 export function dateRange(value) {
   if (typeof value!=='string'||!/^\d{4}(-\d{2})?(-\d{2})?$/.test(value)) throw Error('Invalid date '+value);

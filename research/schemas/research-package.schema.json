@@ -80,7 +80,15 @@
       "type": "array",
       "minItems": 1,
       "uniqueItems": true,
-      "items": {"enum": ["capital", "leadership", "political-institutional", "currency"]}
+      "items": {
+        "enum": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency",
+          "historical-flag"
+        ]
+      }
     },
     "claims": {
       "type": "array",
@@ -411,6 +419,69 @@
               "chronology-conflict"
             ]
           }
+        },
+        "flag": {
+          "type": "object",
+          "properties": {
+            "asset": {
+              "type": "string",
+              "pattern": "^\\./assets/flags/[a-zA-Z0-9_-]+\\.svg$"
+            },
+            "type": {
+              "enum": [
+                "national flag",
+                "state flag",
+                "civil flag",
+                "state ensign",
+                "civil ensign",
+                "colonial ensign",
+                "royal standard",
+                "imperial standard",
+                "administrative flag",
+                "office standard",
+                "state symbol"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "minLength": 1
+            },
+            "license": {
+              "type": "string",
+              "minLength": 1
+            },
+            "licenseUrl": {
+              "type": "string",
+              "minLength": 1
+            },
+            "attribution": {
+              "type": "string",
+              "minLength": 1
+            },
+            "assetSourceIds": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "required": [
+            "asset",
+            "type",
+            "alt",
+            "license",
+            "attribution",
+            "assetSourceIds",
+            "sha256"
+          ],
+          "additionalProperties": false
         }
       },
       "required": [
@@ -455,6 +526,22 @@
           "minLength": 1
         },
         "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attribution": {
+          "type": "string",
+          "minLength": 1
+        },
+        "assetUrl": {
+          "type": "string",
+          "minLength": 1
+        },
+        "licenseUrl": {
           "type": "string",
           "minLength": 1
         }

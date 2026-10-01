@@ -1,6 +1,7 @@
 import {readFileSync} from 'node:fs';
 import {digest as hash, categories, dateRange as commonDateRange, periodBounds, readContext, readJSON, isCLI, root} from './research-common.mjs';
 
+import {validateFlagClaim} from './research-flags.mjs';
 const schema = JSON.parse(readFileSync(new URL('../research/schemas/research-package.schema.json', import.meta.url), 'utf8'));
 const plain = v => v !== null && typeof v === 'object' && !Array.isArray(v);
 const canonical = v => Array.isArray(v) ? v.map(canonical) : plain(v) ? Object.fromEntries(Object.keys(v).sort().map(k => [k, canonical(v[k])])) : v;
@@ -47,7 +48,7 @@ function dateRange(value) {
 function bounds(from,until) { const a=dateRange(from),b=dateRange(until);if(!a||!b)return null;const [lo,hi]=periodBounds({from,until});return lo<hi?{lo,hi}:null; }
 const overlaps=(a,b)=>a.lo<b.hi&&b.lo<a.hi;
 const unsupported=/\b(?:geometry[- ]inferred|inferred from (?:geometry|map|boundaries)|modern fallback|assumed (?:sovereignty|succession)|estimated without (?:a )?source)\b/i;
-const categoryFields={'political-institutional':'governments',capital:'capitals',leadership:'leaders','population-statistics':'population',economy:'economy','area-statistics':'area',currency:'currencies','events-context':'events',relationships:'relationships','important-figures':'importantFigures'};
+const categoryFields={'political-institutional':'governments',capital:'capitals',leadership:'leaders','population-statistics':'population',economy:'economy','area-statistics':'area',currency:'currencies','historical-flag':'flags','events-context':'events',relationships:'relationships','important-figures':'importantFigures'};
 
 export function validatePackage(pkg, job, context={}) {
   const errors=[],review=[];
@@ -58,7 +59,7 @@ export function validatePackage(pkg, job, context={}) {
   if (!plain(job)) errors.push('Missing coordinator job');
   // Entity-centric work is a bounded assignment, not permission to mix arbitrary specialists.
   const coreState=pkg.category==='core-state';
-  const coreCategories=['capital','leadership','political-institutional','currency'];
+  const coreCategories=['capital','leadership','political-institutional','currency','historical-flag'];
   if(coreState) {
     if(!Array.isArray(pkg.categories)||!Array.isArray(job?.categories)||!pkg.categories.length||!job.categories.length||
       job.categories.some(c=>!coreCategories.includes(c))||new Set(job.categories).size!==job.categories.length||
@@ -130,6 +131,8 @@ export function validatePackage(pkg, job, context={}) {
     }
     if (['population-statistics','area-statistics'].includes(c.category)&&c.temporal.kind!=='observation') errors.push(`Claim ${c.id}: quantitative statistic requires observation date, not interpolated interval`);
     if(['political-institutional','leadership','capital','currency'].includes(c.category)&&c.temporal.kind!=='interval') errors.push(`Claim ${c.id}: institutional/office fact requires dated interval`);
+    if(c.category==='historical-flag')errors.push(...validateFlagClaim(c,sourceMap,context.directory).map(e=>'Claim '+c.id+': '+e));
+    else if(c.flag)errors.push('Claim '+c.id+': flag metadata on non-flag claim');
     if(c.category==='economy'&&c.temporal.kind!=='observation') errors.push(`Claim ${c.id}: economy fact requires observation date`);
     if (c.category==='important-figures'&&!c.figure) errors.push(`Claim ${c.id}: important figure requires sourced lifespan, relevance and contribution`);
     if (c.geographicScope.relationship!=='same') review.push(`Claim ${c.id}: ${c.geographicScope.relationship} geographic scope needs historical review`);

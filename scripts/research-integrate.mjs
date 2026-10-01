@@ -5,13 +5,13 @@ import {digest,readContext,productionFingerprint,productionFiles,dateRange,perio
 import {validatePackage} from './research-validator.mjs';
 import {withLock,atomicWrite,atomicRename} from './research-queue.mjs';
 
-const targets={'leadership':'leaders','capital':'capitals','population-statistics':'population','area-statistics':'area','currency':'currencies','economy':'economy','events-context':'events','relationships':'relationships'};
+const targets={'leadership':'leaders','capital':'capitals','population-statistics':'population','area-statistics':'area','currency':'currencies','historical-flag':'flags','economy':'economy','events-context':'events','relationships':'relationships'};
 const writeFiles=['data/historical-entities.json','data/historical-sources.json'];
 const fileHash=text=>crypto.createHash('sha256').update(text).digest('hex');
 function check(ok,message){if(!ok)throw new Error(message);}
 function aliasesIn(value,aliases){
   if(Array.isArray(value))return value.map(v=>aliasesIn(v,aliases));
-  if(value&&typeof value==='object')return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,k==='sourceId'?(aliases[v]||v):k==='sourceIds'?v.map(id=>aliases[id]||id):aliasesIn(v,aliases)]));
+  if(value&&typeof value==='object')return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,k==='sourceId'?(aliases[v]||v):['sourceIds','assetSourceIds'].includes(k)?v.map(id=>aliases[id]||id):aliasesIn(v,aliases)]));
   return value;
 }
 function fieldFor(claim){
@@ -26,6 +26,7 @@ function recordFor(claim){
   const field=fieldFor(claim),fact={value:structuredClone(claim.value),sourceIds:[...claim.sourceIds],confidence:'documented',scope:claim.geographicScope.description,
     note:[...claim.evidence.map(e=>e.note),'Geographic scope: '+claim.geographicScope.description,...claim.cautions].join(' ')};
   check(typeof claim.value==='string'||(['population','economy','area'].includes(field)&&typeof claim.value==='number'),'Structured or non-displayable claim value requires a separately reviewed production adapter');
+  if(field==='flags'){Object.assign(fact,{asset:claim.flag.asset,flagType:claim.flag.type,alt:claim.flag.alt,license:claim.flag.license,attribution:claim.flag.attribution,assetSourceIds:[...claim.flag.assetSourceIds],assetSha256:claim.flag.sha256});if(claim.flag.licenseUrl)fact.licenseUrl=claim.flag.licenseUrl;fact.note='Type: '+claim.flag.type+'. '+fact.note;}
   if(field==='relationships'){check(typeof claim.metric==='string'&&claim.metric.trim(),'Relationship claim requires explicit type in metric');fact.type=claim.metric;}
   if(field==='events')fact.title=claim.value;
   if(claim.role)fact.role=claim.role;
@@ -105,6 +106,7 @@ function journalCheck(directory,journal){
   check(journal.schemaVersion===1&&journal.root===path.resolve(directory),'Invalid integration journal root/schema');
   check(JSON.stringify(Object.keys(journal.files).sort())===JSON.stringify([...writeFiles].sort()),'Unsafe journal write set');
   for(const [name,entry]of Object.entries(journal.files))check(fileHash(entry.before)===entry.beforeHash&&fileHash(entry.after)===entry.afterHash,'Corrupt journal backup: '+name);
+  for(const [asset,hash]of Object.entries(journal.assetHashes||{})){check(/^\.\/assets\/flags\/[a-zA-Z0-9_-]+\.svg$/.test(asset),'Unsafe journal flag asset');check(fileHash(fs.readFileSync(path.join(directory,asset),'utf8'))===hash,'External flag asset modification; recovery refused: '+asset);}
   for(const name of productionFiles){
     const current=fileHash(fs.readFileSync(path.join(directory,name),'utf8')),entry=journal.files[name];
     check(entry?(current===entry.beforeHash||current===entry.afterHash):current===journal.otherHashes[name],'External production modification; recovery refused: '+name);
@@ -118,6 +120,7 @@ export function integratePackage(directory,pkg,job,receipt,{apply=false,afterWri
     const context=readContext(directory),plan=planIntegration(pkg,job,context,receipt);
     const journal={schemaVersion:1,root:path.resolve(directory),status:'prepared',jobId:job.id,packageHash:plan.packageHash,receipt:structuredClone(receipt),beforeFingerprint:context.productionFingerprint,files:{},otherHashes:{}};
     for(const name of productionFiles){const before=fs.readFileSync(path.join(directory,name),'utf8');if(writeFiles.includes(name)){const after=JSON.stringify(plan.outputs[name],null,2)+'\n';journal.files[name]={before,after,beforeHash:fileHash(before),afterHash:fileHash(after)};}else journal.otherHashes[name]=fileHash(before);}
+    journal.assetHashes={};for(const e of plan.db.entities)for(const f of e.flags||[])if(f.researchProvenance)journal.assetHashes[f.asset]=fileHash(fs.readFileSync(path.join(directory,f.asset),'utf8'));
     atomicWrite(paths.file,journal);
     for(const [index,name]of writeFiles.entries()){
       journalCheck(directory,journal);check(fileHash(fs.readFileSync(path.join(directory,name),'utf8'))===journal.files[name].beforeHash,'Unsafe overwrite refused');
