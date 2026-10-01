@@ -1,0 +1,1650 @@
+{
+  "schemaVersion": 1,
+  "revision": 31,
+  "concurrency": 3,
+  "jobs": [
+    {
+      "id": "research-cf6bccf1f83c11577d4d0028",
+      "entityId": "france-political-frameworks",
+      "mapIds": [
+        "entity-france"
+      ],
+      "name": "France",
+      "period": {
+        "from": "1848",
+        "until": "1848"
+      },
+      "category": "political-institutional",
+      "reason": "No adequately sourced politicalStatus, governments, descriptions record for the requested year.",
+      "priority": 90,
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
+      ],
+      "existingFacts": [],
+      "sourceIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-france",
+          "entityId": "france-political-frameworks",
+          "validFrom": "1799-12-13",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "status": "accepted",
+      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "expectedSchema": "research/schemas/research-package.schema.json",
+      "prohibitedAssumptions": [
+        "No modern historical fallback.",
+        "No geometry-derived sovereignty, succession or borders.",
+        "No population/economic interpolation or guessed observation dates.",
+        "No automatic community/people political dossiers.",
+        "No broad tenure or annual coverage from a single-day attestation.",
+        "Do not change production files or Git state."
+      ],
+      "provenance": {
+        "scanSchemaVersion": 1,
+        "scanRange": {
+          "from": 1848,
+          "until": 1848
+        },
+        "selection": {
+          "limit": 1,
+          "categories": [
+            "political-institutional"
+          ],
+          "entityIds": [
+            "france-political-frameworks"
+          ]
+        },
+        "gapFingerprint": "45975c7d08e943f221b4a0c40fbf64c9e430ece04e22693b34992f283bfd71cc"
+      },
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T18:00:28.903Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T18:05:44.355Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T18:05:45.037Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T18:47:43.483Z",
+          "actor": "atlas-coordinator",
+          "reason": "Cited parliamentary historical bodies and primary constitutional articles support the four bounded claims. Transition gaps, editorial clips, disputed publication dates and incomplete executive chronology remain explicit; no whole-year republic is inferred."
+        }
+      ],
+      "owner": "pilot-political",
+      "claimedAt": "2026-10-01T18:00:28.903Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "pilot-france-1848-political",
+        "jobId": "research-cf6bccf1f83c11577d4d0028",
+        "worker": {
+          "id": "pilot-political",
+          "specialism": "political-institutional"
+        },
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "entityId": "france-political-frameworks",
+        "mapIds": [
+          "entity-france"
+        ],
+        "period": {
+          "from": "1848",
+          "until": "1848"
+        },
+        "category": "political-institutional",
+        "claims": [
+          {
+            "id": "france-1848-monarchy",
+            "category": "political-institutional",
+            "metric": "politicalStatus",
+            "value": "Constitutional monarchy under Louis-Philippe (July Monarchy)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1848-01-01",
+              "until": "1848-02-24"
+            },
+            "entityId": "france-political-frameworks",
+            "geographicScope": {
+              "description": "Central French political framework; no claim of uniform colonial implementation or boundary-derived political continuity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "pilot-france-july-monarchy",
+              "pilot-france-february-revolution"
+            ],
+            "evidence": [
+              {
+                "sourceId": "pilot-france-july-monarchy",
+                "note": "Institutional historical narrative identifies the pre-revolution constitutional monarchy. 1January is the exact editorial clip of the assigned1848 year, not a dated regime foundation.",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              },
+              {
+                "sourceId": "pilot-france-february-revolution",
+                "note": "Historical body explicitly dates abdication and institutional collapse to24February1848; exclusive end preserves the transition day.",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "france-1848-provisional-government",
+            "category": "political-institutional",
+            "metric": "government",
+            "value": "Provisional republican government legislating by decree, pending constituent legitimation",
+            "temporal": {
+              "kind": "interval",
+              "from": "1848-02-25",
+              "until": "1848-05-04"
+            },
+            "entityId": "france-political-frameworks",
+            "geographicScope": {
+              "description": "Central French political framework; no claim of uniform colonial implementation or boundary-derived political continuity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "pilot-france-february-revolution",
+              "pilot-france-provisional-republic"
+            ],
+            "evidence": [
+              {
+                "sourceId": "pilot-france-february-revolution",
+                "note": "Provisional government formed evening24February and public republican proclamation25February; conservative core begins25February rather than assigning a full-day republic to24February.",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              },
+              {
+                "sourceId": "pilot-france-provisional-republic",
+                "note": "Government legislates by decree while republican legal and electoral arrangements remain unsettled; formal constituent proclamation4May supplies conservative editorial cutoff, not asserted end of cabinet tenure.",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "france-1848-formal-republic",
+            "category": "political-institutional",
+            "metric": "politicalStatus",
+            "value": "Second Republic, formally proclaimed by the Constituent Assembly",
+            "temporal": {
+              "kind": "interval",
+              "from": "1848-05-04",
+              "until": "1849-01-01"
+            },
+            "entityId": "france-political-frameworks",
+            "geographicScope": {
+              "description": "Central French political framework; no claim of uniform colonial implementation or boundary-derived political continuity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "pilot-france-provisional-republic",
+              "pilot-france-1848-constitution",
+              "pilot-france-december-presidency"
+            ],
+            "evidence": [
+              {
+                "sourceId": "pilot-france-provisional-republic",
+                "note": "Body expressly distinguishes juridical proclamation4May from February revolutionary intention/proclamation.",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              },
+              {
+                "sourceId": "pilot-france-1848-constitution",
+                "note": "Preamble identifies republican government, with institutional continuity through December supported by the accession narrative. 1January1849 clips the assigned year; it is not an end of Republic.",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              },
+              {
+                "sourceId": "pilot-france-december-presidency",
+                "note": "December presidential government and continuing Constituent Assembly belong to this republic, with constitutional coexistence extending into1849; clip stops before that further period.",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "france-1848-december-government",
+            "category": "political-institutional",
+            "metric": "government",
+            "value": "President exercises executive authority and appoints ministers; a single elected National Assembly, still the Constituent Assembly in December",
+            "temporal": {
+              "kind": "interval",
+              "from": "1848-12-20",
+              "until": "1849-01-01"
+            },
+            "entityId": "france-political-frameworks",
+            "geographicScope": {
+              "description": "Central French political framework; no claim of uniform colonial implementation or boundary-derived political continuity",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "pilot-france-1848-constitution",
+              "pilot-france-december-presidency"
+            ],
+            "evidence": [
+              {
+                "sourceId": "pilot-france-1848-constitution",
+                "note": "Primary articles20,43,64 establish single legislative assembly, presidential executive and ministerial appointment/dismissal. No Senate, seat total, colonial uniformity or power to dissolve Assembly claimed.",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              },
+              {
+                "sourceId": "pilot-france-december-presidency",
+                "note": "Body explicitly dates presidential entry into office20December and describes continuing Constituent Assembly into1849. End is research-year clip, not a tenure-end claim.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "roleValidFrom": "1848-12-20"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "pilot-france-july-monarchy",
+            "institution": "Assemblée nationale",
+            "title": "Monarchie de Juillet",
+            "url": "https://www.assemblee-nationale.fr/dyn/histoire-et-patrimoine/monarchie-de-juillet",
+            "usage": "Read historical body sections on the revised Charter and February1848 monarchy (lines145–148,183–186). Supports constitutional monarchy under Louis-Philippe preceding revolution; no extrapolated ministry tenure or electoral counts.",
+            "accessed": "2026-10-01",
+            "kind": "institutional"
+          },
+          {
+            "id": "pilot-france-february-revolution",
+            "institution": "Assemblée nationale",
+            "title": "Février1848 — Révolution de février",
+            "url": "https://www.assemblee-nationale.fr/dyn/histoire-et-patrimoine/monarchie-de-juillet/revolution-de-fevrier",
+            "usage": "Read full historical body lines135–156: Louis-Philippe abdicates24February, attempted regency rejected, provisional government formed that evening and lower chamber dissolved; public republican proclamation described25February. Supplies monarchy end rather than geometry or later-state fallback.",
+            "accessed": "2026-10-01",
+            "kind": "institutional"
+          },
+          {
+            "id": "pilot-france-provisional-republic",
+            "institution": "Assemblée nationale",
+            "title": "Février1848 — Gouvernement provisoire et proclamation de la Deuxième République",
+            "url": "https://www.assemblee-nationale.fr/dyn/histoire-et-patrimoine/deuxieme-republique/gouvernement-provisoire-et-proclamation-de-la-deuxieme-republique",
+            "usage": "Read historical body lines137–156: provisional government initially declares intention for republic and legislates by decree pending electoral/constituent legitimation; direct male suffrage decree5March and formal juridical proclamation4May1848. Distinguish revolutionary proclamation from constituent ratification; slavery chronology not used.",
+            "accessed": "2026-10-01",
+            "kind": "institutional"
+          },
+          {
+            "id": "pilot-france-1848-constitution",
+            "institution": "Présidence de la République / Élysée",
+            "title": "La Constitution du4novembre1848 — reproduced primary text",
+            "url": "https://www.elysee.fr/la-presidence/la-constitution-du-4-novembre-1848",
+            "usage": "Read primary constitutional body preamble, articles18–25,43–48,51,64,67–68 and112–116 plus historical introduction. Supports unicameral legislature, executive president, ministerial appointment/dismissal and prohibition of presidential dissolution; December implementation checked separately. Colonial article109 does not establish indigenous consent or identical territorial implementation.",
+            "accessed": "2026-10-01",
+            "kind": "primary"
+          },
+          {
+            "id": "pilot-france-december-presidency",
+            "institution": "Assemblée nationale",
+            "title": "Décembre1848–mai1849 — Élection présidentielle et victoire de Louis-Napoléon Bonaparte",
+            "url": "https://www.assemblee-nationale.fr/dyn/histoire-et-patrimoine/deuxieme-republique/election-presidentielle-et-victoire-de-louis-napoleon-bonaparte",
+            "usage": "Read historical body lines139–154: presidential election10December, entry into functions20December1848; president/ministry coexists with continuing Constituent Assembly pending legislative election13May1849. No president serving from November adoption or legislative assembly prematurely replacing Constituent Assembly.",
+            "accessed": "2026-10-01",
+            "kind": "institutional"
+          }
+        ],
+        "absenceOfEvidence": [
+          "May–December detailed executive changes (Executive Commission and Cavaignac), ministries and transition hours are not proposed as government facts.",
+          "November adoption/promulgation timing and retrospective seat counts are omitted because institutional summary pages are inconsistent."
+        ],
+        "reviewNotes": [
+          "No annual Republic label: monarchy until24February;25February–4May provisional framework; formal constituent proclamation4May; presidential institutional implementation only20December.",
+          "July Monarchy and Republican legal claims are central institutions; this does not establish consent, uniform colonial administration, territorial borders or automatic successor identity.",
+          "Exclusive interval endpoints include exact editorial year clips; these are partial research bounds rather than lifetimes. The provisional-government cutoff4May is a coverage decision, not the cabinet dismissal date.",
+          "Source precision supports transition days; constitutional rules are distinguished from the timing of actual office entry. All claims require coordinator historical review."
+        ]
+      },
+      "packageHash": "6c64294b8e184da5e99df0ea02474465c4bb3921428b5f1cb34e775199e07f77",
+      "submittedAt": "2026-10-01T18:05:44.355Z",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "6c64294b8e184da5e99df0ea02474465c4bb3921428b5f1cb34e775199e07f77"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "research-cf6bccf1f83c11577d4d0028",
+        "packageHash": "6c64294b8e184da5e99df0ea02474465c4bb3921428b5f1cb34e775199e07f77",
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "coordinator": {
+          "id": "atlas-coordinator",
+          "role": "coordinator"
+        },
+        "rationale": "Cited parliamentary historical bodies and primary constitutional articles support the four bounded claims. Transition gaps, editorial clips, disputed publication dates and incomplete executive chronology remain explicit; no whole-year republic is inferred.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T18:47:43.483Z"
+      }
+    },
+    {
+      "id": "research-a48744fe8e3b71ada37cf477",
+      "entityId": "france-political-frameworks",
+      "mapIds": [
+        "entity-france"
+      ],
+      "name": "France",
+      "period": {
+        "from": "1957",
+        "until": "1957"
+      },
+      "category": "important-figures",
+      "reason": "No adequately sourced importantFigures record for the requested year.",
+      "priority": 20,
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession."
+      ],
+      "existingFacts": [],
+      "sourceIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-france",
+          "entityId": "france-political-frameworks",
+          "validFrom": "1799-12-13",
+          "validUntil": "1961-01-01"
+        }
+      ],
+      "status": "accepted",
+      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "expectedSchema": "research/schemas/research-package.schema.json",
+      "prohibitedAssumptions": [
+        "No modern historical fallback.",
+        "No geometry-derived sovereignty, succession or borders.",
+        "No population/economic interpolation or guessed observation dates.",
+        "No automatic community/people political dossiers.",
+        "No broad tenure or annual coverage from a single-day attestation.",
+        "Do not change production files or Git state."
+      ],
+      "provenance": {
+        "scanSchemaVersion": 1,
+        "scanRange": {
+          "from": 1957,
+          "until": 1957
+        },
+        "selection": {
+          "limit": 1,
+          "categories": [
+            "important-figures"
+          ],
+          "entityIds": [
+            "france-political-frameworks"
+          ]
+        },
+        "gapFingerprint": "a0ec18d8f4fb03f624b25cd4c28cf5ac2b51c62d9936ae90107c950bce9221ec"
+      },
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T18:00:29.784Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T18:07:51.988Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T18:07:52.583Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T18:47:43.541Z",
+          "actor": "atlas-coordinator",
+          "reason": "Nobel source bodies independently checked. Residence/career association, lifespan and dated contribution support this selected-period cultural relationship; colonial birthplace and Swedish ceremony remain distinct. Accepted research only; production has no figure adapter."
+        }
+      ],
+      "owner": "pilot-culture",
+      "claimedAt": "2026-10-01T18:00:29.784Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "pilot-france-1957-camus",
+        "jobId": "research-a48744fe8e3b71ada37cf477",
+        "worker": {
+          "id": "pilot-culture",
+          "specialism": "important-figures-culture"
+        },
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "entityId": "france-political-frameworks",
+        "mapIds": [
+          "entity-france"
+        ],
+        "period": {
+          "from": "1957",
+          "until": "1957"
+        },
+        "category": "important-figures",
+        "claims": [
+          {
+            "id": "camus-1957-nobel-literature",
+            "category": "important-figures",
+            "value": "Albert Camus — writer, Nobel Prize in Literature laureate for 1957; banquet speech on 10 December 1957.",
+            "entityId": "france-political-frameworks",
+            "temporal": {
+              "kind": "interval",
+              "from": "1957-12-10",
+              "until": "1957-12-11"
+            },
+            "geographicScope": {
+              "description": "France literary/residential association at the award, including Paris work; ceremony in Stockholm; birth in French Algeria is a distinct colonial context, not metropolitan birth or modern nationality.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "pilot-camus-nobel-facts",
+              "pilot-camus-nobel-biographical",
+              "pilot-camus-nobel-speech"
+            ],
+            "evidence": [
+              {
+                "sourceId": "pilot-camus-nobel-facts",
+                "note": "Facts/Life body identifies the award, France residence, Paris career, exact birth/death dates and French Algeria birthplace.",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              },
+              {
+                "sourceId": "pilot-camus-nobel-biographical",
+                "note": "Award-time biography documents Algeria / France career and writing/theatre; later republication is explicit, not annual residence evidence.",
+                "supportedPrecision": "year",
+                "supportsClaim": true
+              },
+              {
+                "sourceId": "pilot-camus-nobel-speech",
+                "note": "Primary banquet heading explicitly dates the Stockholm speech 10 December1957; exclusive next-day end delimits that one-day attestation.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1957-12-10",
+                "until": "1957-12-11"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [
+              "France association is cultural/residential, not exclusive national ownership, citizenship adjudication, or relocation of the Swedish ceremony."
+            ],
+            "figure": {
+              "personId": "albert-camus-1913-1960",
+              "name": "Albert Camus",
+              "categories": [
+                "writer",
+                "playwright"
+              ],
+              "lifespan": {
+                "from": "1913-11-07",
+                "until": "1960-01-04"
+              },
+              "relevance": {
+                "from": "1957-12-10",
+                "until": "1957-12-11"
+              },
+              "relationship": "Resident in France at the award and Paris literary/theatrical career; born Mondovi, French Algeria under its colonial setting. No modern citizenship classification inferred.",
+              "activity": "1957 literary laureate; dated banquet speech in Stockholm 10 December1957.",
+              "contribution": "French-language prose, essays and theatre; award-time biography includes 1957 Exile and the Kingdom."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "pilot-camus-nobel-facts",
+            "title": "Albert Camus — Facts",
+            "institution": "Nobel Foundation / NobelPrize.org",
+            "url": "https://www.nobelprize.org/prizes/literature/1957/camus/facts/",
+            "accessed": "2026-10-01",
+            "usage": "Full Facts and Life/Work body read via public HTTP 200: birth 7 November1913/death 4 January1960,1957 award, residence in France, Paris career, French Algeria birth.",
+            "kind": "institutional"
+          },
+          {
+            "id": "pilot-camus-nobel-biographical",
+            "title": "Albert Camus — Biographical",
+            "institution": "Nobel Foundation / NobelPrize.org",
+            "url": "https://www.nobelprize.org/prizes/literature/1957/camus/biographical/",
+            "accessed": "2026-10-01",
+            "usage": "Full award-time biography body and publication note read via HTTP 200: Algeria / France literary formation, journalism, theatre and 1957 Exile and the Kingdom; later edited/reprinted 1969.",
+            "kind": "institutional"
+          },
+          {
+            "id": "pilot-camus-nobel-speech",
+            "title": "Albert Camus — Banquet speech",
+            "institution": "Nobel Foundation / NobelPrize.org",
+            "url": "https://www.nobelprize.org/prizes/literature/1957/camus/speech/",
+            "accessed": "2026-10-01",
+            "usage": "Full primary English banquet speech, dated heading and Karlgren introduction read via HTTP 200: Stockholm 10 December1957 and contemporary French literary association; ceremonial praise not objective ranking.",
+            "kind": "primary"
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": [
+          "One dated 1957 writer contribution, not a generic famous-person list.",
+          "Biography is award-time text later edited/reprinted; precise ceremony day comes from primary speech heading.",
+          "Lifespan endpoints reproduce documented birth/death dates, not a guessed survival date.",
+          "Important Figures lacks production consumer in Stage 1; remain isolated after any acceptance until separately authorized adapter."
+        ]
+      },
+      "packageHash": "1510ab256bd43b1c1e369fd3affafb8073cb9cf3dd0e85237e638aea0b4fedef",
+      "submittedAt": "2026-10-01T18:07:51.988Z",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Claim camus-1957-nobel-literature: historical cautions require review",
+          "Coordinator job cautions require historical review",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "1510ab256bd43b1c1e369fd3affafb8073cb9cf3dd0e85237e638aea0b4fedef"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "research-a48744fe8e3b71ada37cf477",
+        "packageHash": "1510ab256bd43b1c1e369fd3affafb8073cb9cf3dd0e85237e638aea0b4fedef",
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "coordinator": {
+          "id": "atlas-coordinator",
+          "role": "coordinator"
+        },
+        "rationale": "Nobel source bodies independently checked. Residence/career association, lifespan and dated contribution support this selected-period cultural relationship; colonial birthplace and Swedish ceremony remain distinct. Accepted research only; production has no figure adapter.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Claim camus-1957-nobel-literature: historical cautions require review",
+          "Coordinator job cautions require historical review",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T18:47:43.541Z"
+      }
+    },
+    {
+      "id": "research-6f1cd88454e56145d63d41f0",
+      "entityId": "germany-weimar-framework",
+      "mapIds": [
+        "entity-germany"
+      ],
+      "name": "Germany — Weimar constitutional framework",
+      "period": {
+        "from": "1920",
+        "until": "1920"
+      },
+      "category": "leadership",
+      "reason": "No adequately sourced leaders record for the requested year.",
+      "priority": 75,
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
+      ],
+      "existingFacts": [],
+      "sourceIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-germany",
+          "entityId": "germany-weimar-framework",
+          "validFrom": "1919-08-14",
+          "validUntil": "1933-01-30",
+          "sourceIds": [
+            "b03-weimar-commencement",
+            "b03-weimar-framework",
+            "reichstag"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "status": "accepted",
+      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "expectedSchema": "research/schemas/research-package.schema.json",
+      "prohibitedAssumptions": [
+        "No modern historical fallback.",
+        "No geometry-derived sovereignty, succession or borders.",
+        "No population/economic interpolation or guessed observation dates.",
+        "No automatic community/people political dossiers.",
+        "No broad tenure or annual coverage from a single-day attestation.",
+        "Do not change production files or Git state."
+      ],
+      "provenance": {
+        "scanSchemaVersion": 1,
+        "scanRange": {
+          "from": 1920,
+          "until": 1920
+        },
+        "selection": {
+          "limit": 1,
+          "categories": [
+            "leadership"
+          ],
+          "entityIds": [
+            "germany-weimar-framework"
+          ]
+        },
+        "gapFingerprint": "b4f851f29eef1e3a069b6008d4fa6243c4afdf81ac0217d8335407b1a07e7cfe"
+      },
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T18:00:29.111Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T18:05:43.946Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T18:05:44.142Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T18:47:43.591Z",
+          "actor": "atlas-coordinator",
+          "reason": "DHM bodies independently checked for continuous presidency and title dates. The selected calendar-year clip lies inside the sourced tenure and does not assert an accession or territorial-control date."
+        }
+      ],
+      "owner": "pilot-statistics",
+      "claimedAt": "2026-10-01T18:00:29.111Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "pilot-germany-1920-ebert",
+        "jobId": "research-6f1cd88454e56145d63d41f0",
+        "worker": {
+          "id": "pilot-statistics",
+          "specialism": "leadership"
+        },
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "entityId": "germany-weimar-framework",
+        "mapIds": [
+          "entity-germany"
+        ],
+        "period": {
+          "from": "1920",
+          "until": "1920"
+        },
+        "category": "leadership",
+        "claims": [
+          {
+            "id": "germany-1920-reich-president-ebert",
+            "category": "leadership",
+            "value": "Friedrich Ebert",
+            "role": "Reich President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920",
+              "until": "1920"
+            },
+            "entityId": "germany-weimar-framework",
+            "geographicScope": {
+              "description": "Office of Reich President of the German Reich under the Weimar constitutional framework; no territorial-control claim.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "pilot-dhm-ebert-biography",
+              "pilot-dhm-ebert-presidency"
+            ],
+            "evidence": [
+              {
+                "sourceId": "pilot-dhm-ebert-biography",
+                "note": "Biography gives presidential election11February1919, oath21August1919, term extension1922 and death28February1925. Calendar1920 is an editorial coverage clip within the office, not his accession year.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1919-02-11",
+                "until": "1925-02-28",
+                "roleValidFrom": "1919-02-11"
+              },
+              {
+                "sourceId": "pilot-dhm-ebert-presidency",
+                "note": "Opening expressly describes continuous presidential office from election11February1919 until death1925; later paragraph dates death28February1925. This supports the requested1920 year independently of one election-day attestation.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1919-02-11",
+                "until": "1925-02-28",
+                "roleValidFrom": "1919-02-11"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "pilot-dhm-ebert-biography",
+            "url": "https://www.dhm.de/lemo/biografie/friedrich-ebert",
+            "title": "Friedrich Ebert1871–1925",
+            "institution": "Deutsches Historisches Museum",
+            "accessed": "2026-10-01",
+            "kind": "institutional-historical",
+            "usage": "Complete biography body read:1919 election and oath,1922 term extension,1925 death. Used only for1920 presidential leadership; chancellor tenure not substituted."
+          },
+          {
+            "id": "pilot-dhm-ebert-presidency",
+            "url": "https://www.dhm.de/lemo/rueckblick/die-wahl-friedrich-eberts-zum-reichspraesidenten",
+            "title": "Die Wahl Friedrich Eberts zum Reichspräsidenten",
+            "institution": "Deutsches Historisches Museum",
+            "accessed": "2026-10-01",
+            "kind": "institutional-historical",
+            "usage": "Complete historical article body read: opening establishes11February1919 election and continuous presidential office until1925; death paragraph gives28February1925. Supports1920 continuity beyond isolated election-day evidence."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Changing1920 Reich chancellors and cabinet chronology are outside this minimal presidential pilot."
+        ],
+        "reviewNotes": [
+          "Complete institutional source bodies read; search snippets were not used as evidence.",
+          "Calendar1920 is accepted editorial coverage only, not the beginning or end of the presidential tenure.",
+          "No sovereignty, political succession or full territorial control inferred from geometry.",
+          "Independent coordinator review required before serial integration."
+        ]
+      },
+      "packageHash": "3c9bb259191358f2e9d017dc2b7e6d60b3f7819e5900ab2ef35f3317b5637ff4",
+      "submittedAt": "2026-10-01T18:05:43.946Z",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "3c9bb259191358f2e9d017dc2b7e6d60b3f7819e5900ab2ef35f3317b5637ff4"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "research-6f1cd88454e56145d63d41f0",
+        "packageHash": "3c9bb259191358f2e9d017dc2b7e6d60b3f7819e5900ab2ef35f3317b5637ff4",
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "coordinator": {
+          "id": "atlas-coordinator",
+          "role": "coordinator"
+        },
+        "rationale": "DHM bodies independently checked for continuous presidency and title dates. The selected calendar-year clip lies inside the sourced tenure and does not assert an accession or territorial-control date.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T18:47:43.591Z"
+      }
+    },
+    {
+      "id": "research-bc257e72a34ebbf2ec1dac3e",
+      "entityId": "germany-weimar-framework",
+      "mapIds": [
+        "entity-germany"
+      ],
+      "name": "Germany — Weimar constitutional framework",
+      "period": {
+        "from": "1925",
+        "until": "1925"
+      },
+      "category": "population-statistics",
+      "reason": "No adequately sourced observation for the requested year.",
+      "priority": 30,
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Nearby observations are evidence leads only: no interpolation, modern fallback or automatic carry-forward coverage."
+      ],
+      "existingFacts": [],
+      "sourceIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-germany",
+          "entityId": "germany-weimar-framework",
+          "validFrom": "1919-08-14",
+          "validUntil": "1933-01-30",
+          "sourceIds": [
+            "b03-weimar-commencement",
+            "b03-weimar-framework",
+            "reichstag"
+          ],
+          "note": "Independently sourced identity within partial curated coverage; no automatic succession or later-state fallback."
+        }
+      ],
+      "status": "historical-review",
+      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "expectedSchema": "research/schemas/research-package.schema.json",
+      "prohibitedAssumptions": [
+        "No modern historical fallback.",
+        "No geometry-derived sovereignty, succession or borders.",
+        "No population/economic interpolation or guessed observation dates.",
+        "No automatic community/people political dossiers.",
+        "No broad tenure or annual coverage from a single-day attestation.",
+        "Do not change production files or Git state."
+      ],
+      "provenance": {
+        "scanSchemaVersion": 1,
+        "scanRange": {
+          "from": 1925,
+          "until": 1925
+        },
+        "selection": {
+          "limit": 1,
+          "categories": [
+            "population-statistics"
+          ],
+          "entityIds": [
+            "germany-weimar-framework"
+          ]
+        },
+        "gapFingerprint": "254eaccc6e40a9aa0c4494fd867d7a02018db94b87cb7937aa191088bd983662"
+      },
+      "attempt": 2,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T18:05:45.255Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "recover",
+          "at": "2026-10-01T18:35:11.870Z",
+          "actor": "atlas-coordinator",
+          "reason": "Worker reported Codex usage-limit interruption; no submitted package found. Preserve previous research and restart ownership only."
+        },
+        {
+          "action": "claim",
+          "at": "2026-10-01T18:35:11.989Z",
+          "actor": "pilot-statistics",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T18:42:33.716Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T18:42:34.025Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        }
+      ],
+      "claimedAt": "2026-10-01T18:35:11.989Z",
+      "owner": "pilot-statistics",
+      "package": {
+        "schemaVersion": 1,
+        "id": "pilot-germany-1925-population",
+        "jobId": "research-bc257e72a34ebbf2ec1dac3e",
+        "worker": {
+          "id": "pilot-statistics",
+          "specialism": "population-statistics"
+        },
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "entityId": "germany-weimar-framework",
+        "mapIds": [
+          "entity-germany"
+        ],
+        "period": {
+          "from": "1925",
+          "until": "1925"
+        },
+        "category": "population-statistics",
+        "claims": [
+          {
+            "id": "germany-1925-june-census-population",
+            "category": "population-statistics",
+            "value": 62411000,
+            "metric": "Population",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1925-06"
+            },
+            "entityId": "germany-weimar-framework",
+            "geographicScope": {
+              "description": "Published Reichsgebiet census population for June 1925. The source does not establish equivalence to the atlas entity-germany boundary geometry; territorial comparability requires historical review. The 31 December 1937 territorial footnote belongs only to the 1939 row.",
+              "relationship": "uncertain"
+            },
+            "sourceIds": [
+              "destatis-historical"
+            ],
+            "evidence": [
+              {
+                "sourceId": "destatis-historical",
+                "note": "Actual PDF body read: Statistisches Jahrbuch 2019, printed page 26, table 2.1.2. Population unit is 1,000; 1925 row gives 62,411 and footnote 1 marks census results. Table chronology identifies June 1925; territorial heading identifies Reichsgebiet for 1871–1939. Footnote 2 (31 December 1937 territory) is attached to 1939 only. Conversion multiplies the rounded published thousand-person value by 1,000; no interpolation.",
+                "supportedPrecision": "month",
+                "supportsClaim": true,
+                "observationDate": "1925-06"
+              }
+            ],
+            "reviewStatus": "required",
+            "cautions": [
+              "Published value is rounded to thousands; conversion to persons does not add precision.",
+              "Census statistical territory is retained as published; comparability with atlas geometry is unverified.",
+              "Observation is June 1925 only, not annual or surrounding-year population coverage."
+            ]
+          }
+        ],
+        "sources": [],
+        "absenceOfEvidence": [
+          "The reviewed table supplies month precision, not an exact census day.",
+          "No documentary comparison of the census statistical territory and atlas polygon was established."
+        ],
+        "reviewNotes": [
+          "Existing exact-URL catalogue source destatis-historical reused; no new source or source alias created.",
+          "Official Destatis PDF downloaded into memory and printed page 26 body extracted with pypdf on 2026-10-01; no PDF file written.",
+          "Retain the published Reichsgebiet scope. Do not apply the 1939-only 1937 boundary footnote to the 1925 observation.",
+          "Geographic relationship uncertain and reviewStatus required; independent coordinator review must resolve presentation before production integration.",
+          "No modern fallback, extrapolation, interpolation or geometry-derived historical claim."
+        ]
+      },
+      "packageHash": "d5c5c15f3120daf0c44d00e29af0b60a640f25f428d8d326d691bfd07ba99f4b",
+      "submittedAt": "2026-10-01T18:42:33.716Z",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Claim germany-1925-june-census-population: uncertain geographic scope needs historical review",
+          "Claim germany-1925-june-census-population: worker marked required",
+          "Claim germany-1925-june-census-population: historical cautions require review",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "d5c5c15f3120daf0c44d00e29af0b60a640f25f428d8d326d691bfd07ba99f4b"
+      }
+    },
+    {
+      "id": "research-f22fd8ed08d7e4539eb7a8d6",
+      "entityId": "japan-initial-allied-occupation",
+      "mapIds": [
+        "entity-japan",
+        "entity-japan-usa"
+      ],
+      "name": "Japan — initial Allied occupation framework",
+      "period": {
+        "from": "1946",
+        "until": "1946"
+      },
+      "category": "events-context",
+      "reason": "No adequately sourced events record for the requested year.",
+      "priority": 35,
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession."
+      ],
+      "existingFacts": [],
+      "sourceIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-japan-usa",
+          "entityId": "japan-initial-allied-occupation",
+          "validFrom": "1945-09-02",
+          "validUntil": "1947-05-03",
+          "sourceIds": [
+            "b02-japan-surrender",
+            "japan1947"
+          ],
+          "note": "Occupation is not state succession; uncovered earlier 1945 remains explicit."
+        },
+        {
+          "mapId": "entity-japan",
+          "entityId": "japan-initial-allied-occupation",
+          "validFrom": "1945-09-02",
+          "validUntil": "1947-05-03",
+          "sourceIds": [
+            "b02-japan-surrender",
+            "japan1947"
+          ],
+          "note": "Occupation is not state succession; uncovered earlier 1945 remains explicit."
+        }
+      ],
+      "status": "accepted",
+      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "expectedSchema": "research/schemas/research-package.schema.json",
+      "prohibitedAssumptions": [
+        "No modern historical fallback.",
+        "No geometry-derived sovereignty, succession or borders.",
+        "No population/economic interpolation or guessed observation dates.",
+        "No automatic community/people political dossiers.",
+        "No broad tenure or annual coverage from a single-day attestation.",
+        "Do not change production files or Git state."
+      ],
+      "provenance": {
+        "scanSchemaVersion": 1,
+        "scanRange": {
+          "from": 1946,
+          "until": 1946
+        },
+        "selection": {
+          "limit": 1,
+          "categories": [
+            "events-context"
+          ],
+          "entityIds": [
+            "japan-initial-allied-occupation"
+          ]
+        },
+        "gapFingerprint": "97a8d33ebd254bcd5f1d16bb46dce907bfb813e708cebb44cf6544fbe8f9bc01"
+      },
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T18:05:45.493Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T18:35:12.347Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T18:35:12.544Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T18:47:43.624Z",
+          "actor": "atlas-coordinator",
+          "reason": "National Diet Library primary text and historical body independently checked. Dated promulgation and Society formation remain distinct from later enforcement and campaigns. Existing IDs reused; no occupation sovereignty or succession inferred."
+        }
+      ],
+      "owner": "pilot-political",
+      "claimedAt": "2026-10-01T18:05:45.493Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "pilot-japan-1946-events",
+        "jobId": "research-f22fd8ed08d7e4539eb7a8d6",
+        "worker": {
+          "id": "pilot-political",
+          "specialism": "events-context"
+        },
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "entityId": "japan-initial-allied-occupation",
+        "mapIds": [
+          "entity-japan",
+          "entity-japan-usa"
+        ],
+        "period": {
+          "from": "1946",
+          "until": "1946"
+        },
+        "category": "events-context",
+        "claims": [
+          {
+            "id": "japan-1946-constitution-promulgation",
+            "category": "events-context",
+            "value": "The Constitution of Japan was promulgated; its constitutional enforcement was deferred rather than beginning on this date.",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1946-11-03"
+            },
+            "entityId": "japan-initial-allied-occupation",
+            "geographicScope": {
+              "description": "Japanese central constitutional reform during the existing initial Allied occupation research framework; no claim of US sovereignty or territorial succession",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "japan-constitution",
+              "japan1947"
+            ],
+            "evidence": [
+              {
+                "sourceId": "japan-constitution",
+                "note": "Read primary text body dated imperial promulgation statement (lines19–22) and Article100 (248–249). Expressly dated3November1946; Article100 defers enforcement six months. This event asserts promulgation alone, not functioning1947 institutions.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "observationDate": "1946-11-03"
+              },
+              {
+                "sourceId": "japan1947",
+                "note": "Read full historical body lines7–20. Narrative distinguishes November1946 promulgation from3May1947 coming into force; the latter is outside the1946 job and supplies a caution, not a1946 event.",
+                "supportedPrecision": "day",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "japan-1946-constitution-popularization-society",
+            "category": "events-context",
+            "value": "The Constitution Popularization Society was established in the Imperial Diet to explain the new constitution before its enforcement.",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1946-12-01"
+            },
+            "entityId": "japan-initial-allied-occupation",
+            "geographicScope": {
+              "description": "Japanese central constitutional reform during the existing initial Allied occupation research framework; no claim of US sovereignty or territorial succession",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "japan1947"
+            ],
+            "evidence": [
+              {
+                "sourceId": "japan1947",
+                "note": "Read full body lines12–16: Society set up1December1946 within Imperial Diet for public constitutional education, including representatives and peers. Later1947 pamphlet distribution and enforcement are excluded from this event.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "observationDate": "1946-12-01"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [],
+        "absenceOfEvidence": [
+          "No retrospective1947 enforcement, new Diet composition, constitutional executive powers in operation, or annual coverage is assigned to1946.",
+          "No source-based assertion of changed sovereignty, automatic political succession or occupation territorial extent is proposed."
+        ],
+        "reviewNotes": [
+          "Existing sourceIDs japan-constitution and japan1947 are reused exactly after new body reads on2026-10-01; existing catalogue records are preserved. Evidence ledger records this access without overwriting their2026-09-30 catalogue dates.",
+          "Both claims are exact observed events, not year-spanning fact intervals. Initial Allied occupation identity is reused as assigned; constitutional promulgation does not end occupation or automatically alter sovereignty.",
+          "Article100 separates promulgation3November1946 from enforcement3May1947. The latter belongs outside this job; no displayed1947 event is added to1946.",
+          "The dated Society formation is distinct from its continuing campaigns and1947 pamphlet distribution. No inferred whole-year educational activity."
+        ]
+      },
+      "packageHash": "912a63f4441db3e3e160454481a31d68924a89e227afd9a472e86e0792ff7bcb",
+      "submittedAt": "2026-10-01T18:35:12.347Z",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "912a63f4441db3e3e160454481a31d68924a89e227afd9a472e86e0792ff7bcb"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "research-f22fd8ed08d7e4539eb7a8d6",
+        "packageHash": "912a63f4441db3e3e160454481a31d68924a89e227afd9a472e86e0792ff7bcb",
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "coordinator": {
+          "id": "atlas-coordinator",
+          "role": "coordinator"
+        },
+        "rationale": "National Diet Library primary text and historical body independently checked. Dated promulgation and Society formation remain distinct from later enforcement and campaigns. Existing IDs reused; no occupation sovereignty or succession inferred.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T18:47:43.624Z"
+      }
+    },
+    {
+      "id": "research-f8b2a311976ea943f0d6ef41",
+      "entityId": "iran-reza-packed-majles-framework",
+      "mapIds": [
+        "entity-iran"
+      ],
+      "name": "Iran — Reza Shah and subordinated Majles",
+      "period": {
+        "from": "1935",
+        "until": "1935"
+      },
+      "category": "events-context",
+      "reason": "No adequately sourced events record for the requested year.",
+      "priority": 35,
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession."
+      ],
+      "existingFacts": [],
+      "sourceIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-iran",
+          "entityId": "iran-reza-packed-majles-framework",
+          "validFrom": "1933-03-01",
+          "validUntil": "1941-01-01",
+          "sourceIds": [
+            "b07-iran-constitutional-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "status": "accepted",
+      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "expectedSchema": "research/schemas/research-package.schema.json",
+      "prohibitedAssumptions": [
+        "No modern historical fallback.",
+        "No geometry-derived sovereignty, succession or borders.",
+        "No population/economic interpolation or guessed observation dates.",
+        "No automatic community/people political dossiers.",
+        "No broad tenure or annual coverage from a single-day attestation.",
+        "Do not change production files or Git state."
+      ],
+      "provenance": {
+        "scanSchemaVersion": 1,
+        "scanRange": {
+          "from": 1935,
+          "until": 1935
+        },
+        "selection": {
+          "limit": 1,
+          "categories": [
+            "events-context"
+          ],
+          "entityIds": [
+            "iran-reza-packed-majles-framework"
+          ]
+        },
+        "gapFingerprint": "92a07dc8c1f6605e1e5c6abfb9361990bb049348b2469abe03829745634b2ee9"
+      },
+      "attempt": 2,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T18:07:52.837Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "recover",
+          "at": "2026-10-01T18:35:12.044Z",
+          "actor": "atlas-coordinator",
+          "reason": "Worker reported Codex usage-limit interruption; no submitted package found. Preserve previous research and restart ownership only."
+        },
+        {
+          "action": "claim",
+          "at": "2026-10-01T18:35:12.074Z",
+          "actor": "pilot-culture",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T18:38:43.165Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T18:38:43.356Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T18:47:43.653Z",
+          "actor": "atlas-coordinator",
+          "reason": "Iranica naming passage independently checked against the cited institutional corroboration. The proposal retains year precision and Western-language designation scope, without adopting nationalist ideology or claiming polity foundation."
+        }
+      ],
+      "claimedAt": "2026-10-01T18:35:12.074Z",
+      "owner": "pilot-culture",
+      "package": {
+        "schemaVersion": 1,
+        "id": "pilot-iran-1935-foreign-designation",
+        "jobId": "research-f8b2a311976ea943f0d6ef41",
+        "worker": {
+          "id": "pilot-culture",
+          "specialism": "events-context"
+        },
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "entityId": "iran-reza-packed-majles-framework",
+        "mapIds": [
+          "entity-iran"
+        ],
+        "period": {
+          "from": "1935",
+          "until": "1935"
+        },
+        "category": "events-context",
+        "claims": [
+          {
+            "id": "iran-1935-foreign-designation",
+            "category": "events-context",
+            "value": "In 1935, the government promoted Iran in place of Persia as the foreign-language designation of the existing country. Iran was already an established internal name; this naming change did not found a new state or replace the Pahlavi dynasty.",
+            "entityId": "iran-reza-packed-majles-framework",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1935"
+            },
+            "geographicScope": {
+              "description": "Country designation in foreign usage under the assigned existing Reza Shah/Pahlavi political framework; not a territorial boundary or succession claim.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "pilot-iran-1935-identity",
+              "pilot-iran-1935-ushmm"
+            ],
+            "evidence": [
+              {
+                "sourceId": "pilot-iran-1935-identity",
+                "note": "Scholarly Pahlavi nationalism section explicitly dates the Western-language designation change to 1935; year is retained, with no exact commencement day claimed.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "observationDate": "1935"
+              },
+              {
+                "sourceId": "pilot-iran-1935-ushmm",
+                "note": "Background naming paragraph dates the governmental change to 1935 and identifies Iran as a centuries-old internal designation. Earlier dynastic history distinguishes naming from state/dynasty creation.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "observationDate": "1935"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [
+              "Year precision is deliberate. This event must not become a new polity mapping, a 1935 founding date, or an inferred border/succession change."
+            ],
+            "riskFlags": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "pilot-iran-1935-identity",
+            "institution": "Encyclopaedia Iranica; Ahmad Ashraf",
+            "title": "Iranian Identity iv. In the 19th and 20th Centuries",
+            "url": "https://www.iranicaonline.org/articles/iranian-identity-iv-19th-20th-centuries/",
+            "accessed": "2026-10-01",
+            "kind": "academic",
+            "usage": "Read scholarly article body, especially The Rise of State Nationalism in the Pahlavi Era, paragraphs around the four historical innovations: Western-language country designation changed from Persia to Iran in 1935. Source supplies year precision only. Nationalist racial/primordial explanations are analyzed as historical ideology, not adopted as biological fact."
+          },
+          {
+            "id": "pilot-iran-1935-ushmm",
+            "institution": "United States Holocaust Memorial Museum, Holocaust Encyclopedia",
+            "title": "Iran during World War II — Background",
+            "url": "https://encyclopedia.ushmm.org/content/en/article/iran-during-world-war-ii",
+            "accessed": "2026-10-01",
+            "kind": "institutional",
+            "usage": "Read Background body, particularly naming paragraph: 1935 governmental change from Persia to Iran, an older designation used internally for centuries. Distinguishes naming from earlier Pahlavi establishment. Later wartime material is not imported into the 1935 event; year precision retained."
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": [
+          "Event category observation date is the sourced calendar year, not a year-long government or office interval.",
+          "No guessed 21 March date: the selected article passages supply 1935 only.",
+          "Existing b07-iran-constitutional-history body was read for framework context; it supports earlier dynastic amendment and parliamentary subordination, not the naming event, so it is not presented as naming evidence.",
+          "No adoption of nationalist racial-origin rhetoric as historical biological fact."
+        ]
+      },
+      "packageHash": "6b950603c78feabf34a1020abd0643248bf62df1ba8546ac2561faf29beebab6",
+      "submittedAt": "2026-10-01T18:38:43.165Z",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Claim iran-1935-foreign-designation: historical cautions require review",
+          "Coordinator job cautions require historical review",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "6b950603c78feabf34a1020abd0643248bf62df1ba8546ac2561faf29beebab6"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "research-f8b2a311976ea943f0d6ef41",
+        "packageHash": "6b950603c78feabf34a1020abd0643248bf62df1ba8546ac2561faf29beebab6",
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "coordinator": {
+          "id": "atlas-coordinator",
+          "role": "coordinator"
+        },
+        "rationale": "Iranica naming passage independently checked against the cited institutional corroboration. The proposal retains year precision and Western-language designation scope, without adopting nationalist ideology or claiming polity foundation.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Claim iran-1935-foreign-designation: historical cautions require review",
+          "Coordinator job cautions require historical review",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T18:47:43.653Z"
+      }
+    },
+    {
+      "id": "research-0e58f0730990286cf80aea39",
+      "entityId": "taiwan-japanese-administration",
+      "mapIds": [
+        "entity-taiwan"
+      ],
+      "name": "Taiwan under Japanese colonial administration",
+      "period": {
+        "from": "1935",
+        "until": "1935"
+      },
+      "category": "leadership",
+      "reason": "No adequately sourced leaders record for the requested year.",
+      "priority": 75,
+      "cautions": [
+        "Partial research bounds are not a full historical lifetime.",
+        "No geometry-inferred sovereignty or succession.",
+        "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
+      ],
+      "existingFacts": [],
+      "sourceIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-taiwan",
+          "entityId": "taiwan-japanese-administration",
+          "validFrom": "1895",
+          "validUntil": "1945",
+          "sourceIds": [
+            "b02-taiwan-museum"
+          ],
+          "note": "Year precision retained at both transfers."
+        }
+      ],
+      "status": "accepted",
+      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "expectedSchema": "research/schemas/research-package.schema.json",
+      "prohibitedAssumptions": [
+        "No modern historical fallback.",
+        "No geometry-derived sovereignty, succession or borders.",
+        "No population/economic interpolation or guessed observation dates.",
+        "No automatic community/people political dossiers.",
+        "No broad tenure or annual coverage from a single-day attestation.",
+        "Do not change production files or Git state."
+      ],
+      "provenance": {
+        "scanSchemaVersion": 1,
+        "scanRange": {
+          "from": 1935,
+          "until": 1935
+        },
+        "selection": {
+          "limit": 1,
+          "categories": [
+            "leadership"
+          ],
+          "entityIds": [
+            "taiwan-japanese-administration"
+          ]
+        },
+        "gapFingerprint": "202347d5d318a4d1a727cf0940e8d59401acc964795654b8c4c7baecd339e9f5"
+      },
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T18:38:43.572Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T18:42:34.264Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T18:42:34.467Z",
+          "actor": "atlas-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T18:47:43.676Z",
+          "actor": "atlas-coordinator",
+          "reason": "National Central Library description independently checked for continuous colonial office tenure. Existing museum evidence supports colonial scope rather than office dates. The selected calendar year is inside the sourced term; disputed transliteration and departure precision remain qualified."
+        }
+      ],
+      "owner": "pilot-culture",
+      "claimedAt": "2026-10-01T18:38:43.572Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "pilot-taiwan-1935-governor",
+        "jobId": "research-0e58f0730990286cf80aea39",
+        "worker": {
+          "id": "pilot-culture",
+          "specialism": "leadership"
+        },
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "entityId": "taiwan-japanese-administration",
+        "mapIds": [
+          "entity-taiwan"
+        ],
+        "period": {
+          "from": "1935",
+          "until": "1935"
+        },
+        "category": "leadership",
+        "claims": [
+          {
+            "id": "nakagawa-taiwan-governor-1935",
+            "category": "leadership",
+            "value": "中川健藏 (Nakagawa Kenzō)",
+            "role": "Governor-General of Taiwan under Japanese colonial administration",
+            "entityId": "taiwan-japanese-administration",
+            "temporal": {
+              "kind": "interval",
+              "from": "1935",
+              "until": "1935"
+            },
+            "geographicScope": {
+              "description": "Taiwan governed as a Japanese colonial administration, the assigned historical entity; governor is a colonial officeholder, not an elected president or head of an independent Taiwanese state.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "pilot-taiwan-nakagawa-ncl",
+              "b02-taiwan-museum"
+            ],
+            "evidence": [
+              {
+                "sourceId": "pilot-taiwan-nakagawa-ncl",
+                "note": "National Central Library biography identifies the sixteenth Japanese Taiwan governor, office beginning May 1932 and ending September 1936. This continuous tenure contains the complete 1935 calendar year; month endpoints preserve the departure precision.",
+                "supportedPrecision": "month",
+                "supportsClaim": true,
+                "from": "1932-05",
+                "until": "1936-09",
+                "roleValidFrom": "1932-05"
+              },
+              {
+                "sourceId": "b02-taiwan-museum",
+                "note": "Permanent exhibition Japanese-rule section independently places Taiwan within Japanese conquest and colonial rule after 1895. It supports colonial scope only; it does not supply this governor’s term.",
+                "supportedPrecision": "year",
+                "supportsClaim": true
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [
+              "Civilian governor status does not imply a sovereign democratic state or universal representative government. The selected-year claim does not adjudicate present sovereignty."
+            ],
+            "riskFlags": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "pilot-taiwan-nakagawa-ncl",
+            "institution": "National Central Library, Taiwan Memory; Chang Tzu-wen / 張子文",
+            "title": "中川健藏 — Taiwan historical biographies (Ming, Qing and Japanese-rule period)",
+            "url": "https://tm.ncl.edu.tw/article?u=016_002_0000292938",
+            "accessed": "2026-10-01",
+            "kind": "institutional",
+            "usage": "Full biography description and bibliography body read: Japanese sixteenth Taiwan governor; appointed May 1932, took office 27 May, left September 1936. Continuous four-year/four-month tenure supports all of selected 1935. Appointment and successor endpoints are not guessed; other-title romanization is not used as name evidence."
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": [
+          "Full 1935 interval is justified by a continuous sourced 1932–1936 tenure, not a single-date attestation or raw polygon date.",
+          "Chinese personal name is the institutional biography heading; Nakagawa Kenzō is conventional Japanese transliteration. The catalogue other-title form Nasegawa Kenzo is not adopted.",
+          "Departure is supplied only as September 1936 in the read biography; no exact September day is asserted. Detailed appointment disputes outside 1935 are not needed to establish selected-year incumbency.",
+          "Existing b02-taiwan-museum URL/ID is reused for colonial context; no falsely broadened governor-specific source usage or duplicated URL."
+        ]
+      },
+      "packageHash": "63b366486636e6b1f5f59e61f66c1968ed4d7cd28c6ff151e37d9a2531351580",
+      "submittedAt": "2026-10-01T18:42:34.264Z",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Claim nakagawa-taiwan-governor-1935: historical cautions require review",
+          "Coordinator job cautions require historical review",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "63b366486636e6b1f5f59e61f66c1968ed4d7cd28c6ff151e37d9a2531351580"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "research-0e58f0730990286cf80aea39",
+        "packageHash": "63b366486636e6b1f5f59e61f66c1968ed4d7cd28c6ff151e37d9a2531351580",
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "coordinator": {
+          "id": "atlas-coordinator",
+          "role": "coordinator"
+        },
+        "rationale": "National Central Library description independently checked for continuous colonial office tenure. Existing museum evidence supports colonial scope rather than office dates. The selected calendar year is inside the sourced term; disputed transliteration and departure precision remain qualified.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Claim nakagawa-taiwan-governor-1935: historical cautions require review",
+          "Coordinator job cautions require historical review",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T18:47:43.676Z"
+      }
+    }
+  ]
+}

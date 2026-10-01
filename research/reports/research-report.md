@@ -41,16 +41,25 @@ Resolver availability: 362/401 eligible raw IDs. Political candidates investigat
 
 ## Queue
 
-Jobs: 0; stale fingerprints: 0.
-- accepted: 0
+Jobs: 7; stale fingerprints: 0.
+- accepted: 6
 - awaiting-review: 0
-- historical-review: 0
+- historical-review: 1
 - integrated: 0
 - queued: 0
 - rejected: 0
 - researching: 0
 - submitted: 0
 - validation-failed: 0
+
+Submitted research packages: 7; accepted outside production: 6.
+
+- Accepted research claims (events-context): 3
+- Accepted research claims (important-figures): 1
+- Accepted research claims (leadership): 2
+- Accepted research claims (political-institutional): 4
+
+Accepted research is separate from production field coverage.
 
 ## Interpretation
 

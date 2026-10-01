@@ -23,7 +23,8 @@ function fieldFor(claim){
   return targets[claim.category];
 }
 function recordFor(claim){
-  const field=fieldFor(claim),fact={value:structuredClone(claim.value),sourceIds:[...claim.sourceIds],confidence:'documented',note:claim.evidence.map(e=>e.note).join(' ')};
+  const field=fieldFor(claim),fact={value:structuredClone(claim.value),sourceIds:[...claim.sourceIds],confidence:'documented',scope:claim.geographicScope.description,
+    note:[...claim.evidence.map(e=>e.note),'Geographic scope: '+claim.geographicScope.description,...claim.cautions].join(' ')};
   check(typeof claim.value==='string'||(['population','economy','area'].includes(field)&&typeof claim.value==='number'),'Structured or non-displayable claim value requires a separately reviewed production adapter');
   if(field==='relationships'){check(typeof claim.metric==='string'&&claim.metric.trim(),'Relationship claim requires explicit type in metric');fact.type=claim.metric;}
   if(field==='events')fact.title=claim.value;

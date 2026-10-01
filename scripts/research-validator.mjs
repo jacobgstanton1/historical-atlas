@@ -63,6 +63,7 @@ export function validatePackage(pkg, job, context={}) {
   if (JSON.stringify(canonical(pkg.period))!==JSON.stringify(canonical(job?.period))) errors.push('Job period mismatch');
   const period=bounds(pkg.period.from,pkg.period.until);
   if (!period) errors.push('Invalid or reversed package period');
+  if(period&&(period.lo<Date.UTC(config.timeline.from,0,1)||period.hi>Date.UTC(config.timeline.until+1,0,1)))errors.push('Assigned historical period extends outside the configured atlas timeline');
   const entities=records(context.db,'entities'), entity=entities.find(x=>x.id===pkg.entityId);
   if(new Set(entities.map(x=>x.id)).size!==entities.length)errors.push('Corrupt production context: duplicate entity IDs');
   const reviewOnly=pkg.entityId===null&&['resolver','identity-review','mapping-review'].includes(pkg.category);

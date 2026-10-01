@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "id": "pilot-germany-1920-ebert",
+  "jobId": "research-6f1cd88454e56145d63d41f0",
+  "worker": {
+    "id": "pilot-statistics",
+    "specialism": "leadership"
+  },
+  "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+  "entityId": "germany-weimar-framework",
+  "mapIds": [
+    "entity-germany"
+  ],
+  "period": {
+    "from": "1920",
+    "until": "1920"
+  },
+  "category": "leadership",
+  "claims": [
+    {
+      "id": "germany-1920-reich-president-ebert",
+      "category": "leadership",
+      "value": "Friedrich Ebert",
+      "role": "Reich President",
+      "temporal": {
+        "kind": "interval",
+        "from": "1920",
+        "until": "1920"
+      },
+      "entityId": "germany-weimar-framework",
+      "geographicScope": {
+        "description": "Office of Reich President of the German Reich under the Weimar constitutional framework; no territorial-control claim.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "pilot-dhm-ebert-biography",
+        "pilot-dhm-ebert-presidency"
+      ],
+      "evidence": [
+        {
+          "sourceId": "pilot-dhm-ebert-biography",
+          "note": "Biography gives presidential election11February1919, oath21August1919, term extension1922 and death28February1925. Calendar1920 is an editorial coverage clip within the office, not his accession year.",
+          "supportedPrecision": "day",
+          "supportsClaim": true,
+          "from": "1919-02-11",
+          "until": "1925-02-28",
+          "roleValidFrom": "1919-02-11"
+        },
+        {
+          "sourceId": "pilot-dhm-ebert-presidency",
+          "note": "Opening expressly describes continuous presidential office from election11February1919 until death1925; later paragraph dates death28February1925. This supports the requested1920 year independently of one election-day attestation.",
+          "supportedPrecision": "day",
+          "supportsClaim": true,
+          "from": "1919-02-11",
+          "until": "1925-02-28",
+          "roleValidFrom": "1919-02-11"
+        }
+      ],
+      "reviewStatus": "clear",
+      "cautions": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "pilot-dhm-ebert-biography",
+      "url": "https://www.dhm.de/lemo/biografie/friedrich-ebert",
+      "title": "Friedrich Ebert1871–1925",
+      "institution": "Deutsches Historisches Museum",
+      "accessed": "2026-10-01",
+      "kind": "institutional-historical",
+      "usage": "Complete biography body read:1919 election and oath,1922 term extension,1925 death. Used only for1920 presidential leadership; chancellor tenure not substituted."
+    },
+    {
+      "id": "pilot-dhm-ebert-presidency",
+      "url": "https://www.dhm.de/lemo/rueckblick/die-wahl-friedrich-eberts-zum-reichspraesidenten",
+      "title": "Die Wahl Friedrich Eberts zum Reichspräsidenten",
+      "institution": "Deutsches Historisches Museum",
+      "accessed": "2026-10-01",
+      "kind": "institutional-historical",
+      "usage": "Complete historical article body read: opening establishes11February1919 election and continuous presidential office until1925; death paragraph gives28February1925. Supports1920 continuity beyond isolated election-day evidence."
+    }
+  ],
+  "absenceOfEvidence": [
+    "Changing1920 Reich chancellors and cabinet chronology are outside this minimal presidential pilot."
+  ],
+  "reviewNotes": [
+    "Complete institutional source bodies read; search snippets were not used as evidence.",
+    "Calendar1920 is accepted editorial coverage only, not the beginning or end of the presidential tenure.",
+    "No sovereignty, political succession or full territorial control inferred from geometry.",
+    "Independent coordinator review required before serial integration."
+  ]
+}

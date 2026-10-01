@@ -17,10 +17,10 @@ test('exact interval endpoints exclude the following day while imprecise ends re
 });
 test('source catalogue reuses every production ID without guessing quality or mutating data',()=>{
   const c=readContext(),before=digest(c),a=sourceCatalogue(c),b=sourceCatalogue(c);
-  assert.equal(a.sources.length,689);assert.equal(new Set(a.sources.map(s=>s.id)).size,689);
+  assert.equal(a.sources.length,c.registry.sources.length);assert.equal(new Set(a.sources.map(s=>s.id)).size,c.registry.sources.length);
   assert.equal(digest(a),digest(b));assert.equal(digest(c),before);
   assert.ok(a.sources.every(s=>s.kind==='unclassified'||s.classificationBasis==='Existing explicit classification'));
 });
-test('Phase 3 tooling has not changed production bytes from the audited baseline',()=>{
-  assert.equal(productionFingerprint(),readJSON(new URL('../research/baseline.json',import.meta.url)).productionFingerprint);
+test('pre-integration research reads preserve actual production bytes',()=>{
+  const before=productionFingerprint();sourceCatalogue(readContext());assert.equal(productionFingerprint(),before);
 });

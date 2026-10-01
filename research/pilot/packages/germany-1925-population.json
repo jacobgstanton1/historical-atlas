@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "id": "pilot-germany-1925-population",
+  "jobId": "research-bc257e72a34ebbf2ec1dac3e",
+  "worker": {
+    "id": "pilot-statistics",
+    "specialism": "population-statistics"
+  },
+  "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+  "entityId": "germany-weimar-framework",
+  "mapIds": [
+    "entity-germany"
+  ],
+  "period": {
+    "from": "1925",
+    "until": "1925"
+  },
+  "category": "population-statistics",
+  "claims": [
+    {
+      "id": "germany-1925-june-census-population",
+      "category": "population-statistics",
+      "value": 62411000,
+      "metric": "Population",
+      "temporal": {
+        "kind": "observation",
+        "observationDate": "1925-06"
+      },
+      "entityId": "germany-weimar-framework",
+      "geographicScope": {
+        "description": "Published Reichsgebiet census population for June 1925. The source does not establish equivalence to the atlas entity-germany boundary geometry; territorial comparability requires historical review. The 31 December 1937 territorial footnote belongs only to the 1939 row.",
+        "relationship": "uncertain"
+      },
+      "sourceIds": [
+        "destatis-historical"
+      ],
+      "evidence": [
+        {
+          "sourceId": "destatis-historical",
+          "note": "Actual PDF body read: Statistisches Jahrbuch 2019, printed page 26, table 2.1.2. Population unit is 1,000; 1925 row gives 62,411 and footnote 1 marks census results. Table chronology identifies June 1925; territorial heading identifies Reichsgebiet for 1871–1939. Footnote 2 (31 December 1937 territory) is attached to 1939 only. Conversion multiplies the rounded published thousand-person value by 1,000; no interpolation.",
+          "supportedPrecision": "month",
+          "supportsClaim": true,
+          "observationDate": "1925-06"
+        }
+      ],
+      "reviewStatus": "required",
+      "cautions": [
+        "Published value is rounded to thousands; conversion to persons does not add precision.",
+        "Census statistical territory is retained as published; comparability with atlas geometry is unverified.",
+        "Observation is June 1925 only, not annual or surrounding-year population coverage."
+      ]
+    }
+  ],
+  "sources": [],
+  "absenceOfEvidence": [
+    "The reviewed table supplies month precision, not an exact census day.",
+    "No documentary comparison of the census statistical territory and atlas polygon was established."
+  ],
+  "reviewNotes": [
+    "Existing exact-URL catalogue source destatis-historical reused; no new source or source alias created.",
+    "Official Destatis PDF downloaded into memory and printed page 26 body extracted with pypdf on 2026-10-01; no PDF file written.",
+    "Retain the published Reichsgebiet scope. Do not apply the 1939-only 1937 boundary footnote to the 1925 observation.",
+    "Geographic relationship uncertain and reviewStatus required; independent coordinator review must resolve presentation before production integration.",
+    "No modern fallback, extrapolation, interpolation or geometry-derived historical claim."
+  ]
+}

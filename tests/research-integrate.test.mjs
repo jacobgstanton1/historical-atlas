@@ -44,6 +44,13 @@ test('distinct same-day events coexist, duplicate event identities refuse, prove
     c.db.entities[0].events[0].title='A sourced constitutional event';assert.throws(()=>planIntegration(f.pkg,f.job,c,f.receipt(c)),/Duplicate dated event/);
   }finally{f.cleanup();}
 });
+test('append adapters retain geographic qualifications and cautions in displayed notes',()=>{
+  const f=fixture();try{
+    f.pkg.claims[0].geographicScope.description='Central administration only; not all colonial territories';f.pkg.claims[0].cautions=['Calendar clip is not the office accession date'];
+    const fact=planIntegration(f.pkg,f.job,readContext(f.dir),f.receipt()).appended[0].fact;
+    assert.equal(fact.scope,f.pkg.claims[0].geographicScope.description);assert.match(fact.note,/Central administration only/);assert.match(fact.note,/not the office accession/);
+  }finally{f.cleanup();}
+});
 test('serialized apply refuses held lock and journal rolls back a partial write',()=>{
   const f=fixture();try{const before=productionFingerprint(f.dir);withLock(path.join(f.dir,'research','.integration-state'),()=>assert.throws(()=>integratePackage(f.dir,f.pkg,f.job,f.receipt(),{apply:true}),/lock is held/));assert.throws(()=>integratePackage(f.dir,f.pkg,f.job,f.receipt(),{apply:true,afterWrite:()=>{throw Error('Simulated interruption');}}),/Simulated interruption/);assert.equal(recoverIntegration(f.dir).action,'rollback');assert.notEqual(productionFingerprint(f.dir),before);assert.throws(()=>integratePackage(f.dir,f.pkg,f.job,f.receipt(),{apply:true}),/recovered first/);assert.equal(recoverIntegration(f.dir,{apply:true}).status,'rolled-back');assert.equal(productionFingerprint(f.dir),before);}finally{f.cleanup();}
 });
