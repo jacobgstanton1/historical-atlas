@@ -51,3 +51,12 @@ if(plan.batchReviews['political-batch-18'])test('East African shared frameworks 
  assert.ok(mappings.some(m=>m.validFrom==='1960-12-17'));
  assert.ok(!mappings.some(m=>m.validFrom<'1960-12-17'&&m.validUntil>'1960-12-13'));
 });
+if(plan.batchReviews['political-batch-19'])test('South African routine leadership succession retains one constitutional framework',()=>{
+ const result=index.resolve('entity-south-africa',1954);
+ assert.equal(result.entity.id,'b19-south-africa-apartheid-union');
+ assert.equal(result.calendarYear.kind,'ordinary');
+ assert.deepEqual(result.leaders.map(l=>l.value),['Daniel François Malan','Johannes Gerhardus Strijdom']);
+ assert.equal(index.resolve('entity-south-africa',1958).calendarYear.needsResearch,true);
+ assert.equal(index.resolve('entity-northern-rhodesia',1945).entity.id,index.resolve('entity-zambia',1930).entity.id);
+ assert.equal(index.resolve('entity-nyasaland',1945).entity.id,index.resolve('entity-malawi',1938).entity.id);
+});
