@@ -64,6 +64,10 @@ export function planIntegration(input,current){
  }
  for(const [raw,decision]of Object.entries(normalized.decisions)){
   assert.ok(['needs-research','existing-enriched','mapping-review'].includes(decision.status));assert.ok(decision.sourceIds?.length&&decision.intervals?.length&&decision.reviewerNote&&decision.identityResolution,'Incomplete review '+raw);
+  if(decision.status==='existing-enriched'){
+   assert.equal(current.plan.reviews[raw]?.tier,'existing-enriched','New partial research cannot be labelled existing-enriched');
+   assert.ok(decision.intervals.some(i=>normalized.existingEntitiesReused.includes(i.entityId)&&current.db.entities.some(e=>e.id===i.entityId)),'Enriched reuse requires an existing entity');
+  }
   for(const r of decision.intervals)auditRecord(r,raw);for(const id of decision.sourceIds)assert.ok(sourceIds.has(id));c.plan.reviews[raw]=decision;
  }
  const index=createMetadataIndex(c.db,c.registry);

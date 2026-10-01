@@ -27,3 +27,6 @@ test('incomplete scope, missing bodies/provenance and unresolvable cases fail be
 test('source-ID conflicts, entity collisions and stale extensions cannot silently overwrite checkpoints',()=>{
  let p=fixture(8);p.sources[0].id=baseline.registry.sources[0].id;assert.throws(()=>planIntegration(p,baseline));p=fixture(8);p.entities[0].id=baseline.db.entities[0].id;assert.throws(()=>planIntegration(p,baseline));p=fixture(8);p.extensions=[{entityId:baseline.db.entities[0].id,expectedHash:'stale',append:{names:[]}}];assert.throws(()=>planIntegration(p,baseline));
 });
+test('resolver availability alone cannot promote new partial research to enriched',()=>{
+ const p=fixture(9),raw=p.assignedRawIdentities[0];p.decisions[raw].status='existing-enriched';p.decisions[raw].tier='existing-enriched';assert.throws(()=>planIntegration(p,baseline),/existing-enriched/);
+});
