@@ -31,3 +31,7 @@ Automatic approval review rejected the preparation commit/push because it treate
 5. Continue the remaining authorized bounded campaign, preserving independent review, serial integration and checkpoint pushes. Stop before Campaign 3.
 
 See `reports/preintegration-validation.json`, `reports/tooling-validation.json`, `reports/checkpoint-audit.json`, and `reports/progress.json` for machine-readable evidence. No production edits or integration journals need recovery.
+
+## Authorization resumed
+
+The user directly authorized Campaign 2 production integration, commits to main and pushes to origin on resumption. The earlier authorization block is historical. Preparation commit `26196bb37ba3a8385804885ed5f55a7aae0268b1` was pushed successfully. First12 independently reviewed packages were accepted against fresh contexts and integrated serially:37 facts,30 new sources,4 existing sources reused,3 flag assets. Checkpoint1 passed721 integrity checks,8050 claim/map/year checks and18 browser checks. Prior222/46/10 suites and624 baseline checks were not repeated.

@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "id": "campaign02-denmark-post-kiel",
+  "jobId": "c02-d4a947fab09beefa9cd9dde6",
+  "worker": {
+    "id": "campaign-design",
+    "specialism": "entity-core"
+  },
+  "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+  "entityId": "denmark-post-kiel",
+  "mapIds": [
+    "entity-denmark"
+  ],
+  "period": {
+    "from": "1850",
+    "until": "1905"
+  },
+  "category": "core-state",
+  "categories": [
+    "capital",
+    "leadership",
+    "political-institutional",
+    "currency",
+    "historical-flag"
+  ],
+  "claims": [
+    {
+      "id": "c02-design-denmark-post-kiel-currency-0",
+      "category": "currency",
+      "value": "Rigsbankdaler",
+      "temporal": {
+        "kind": "interval",
+        "from": "1850",
+        "until": "1853"
+      },
+      "entityId": "denmark-post-kiel",
+      "geographicScope": {
+        "description": "Entity-level dated office or denomination; no geometry or modern nationality inference.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "b01-denmark-banknotes"
+      ],
+      "evidence": [
+        {
+          "sourceId": "b01-denmark-banknotes",
+          "note": "Central-bank historical page explicitly dates first rigsbankdaler notes to 1819 and the currency-unit rename to rigsdaler in 1854. Assigned interior ends before the year-precision rename; no fixed exchange or metal standard asserted.",
+          "supportedPrecision": "year",
+          "supportsClaim": true,
+          "from": "1850",
+          "until": "1853"
+        }
+      ],
+      "reviewStatus": "clear",
+      "cautions": []
+    },
+    {
+      "id": "c02-design-denmark-post-kiel-currency-1",
+      "category": "currency",
+      "value": "Rigsdaler",
+      "temporal": {
+        "kind": "interval",
+        "from": "1855",
+        "until": "1872"
+      },
+      "entityId": "denmark-post-kiel",
+      "geographicScope": {
+        "description": "Entity-level dated office or denomination; no geometry or modern nationality inference.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "b01-denmark-banknotes",
+        "b01-denmark-krone"
+      ],
+      "evidence": [
+        {
+          "sourceId": "b01-denmark-banknotes",
+          "note": "Nationalbank full HTTP component body states currency unit renamed in 1854 and new series issued; its 1860-series component identifies rigsdaler. Working Paper12 pages8–9 dates the 23 May 1873 Coin Act transition to krone and later phased withdrawal. Interior 1855–1872 avoids claiming either transition year as uniform.",
+          "supportedPrecision": "year",
+          "supportsClaim": true,
+          "from": "1855",
+          "until": "1872"
+        },
+        {
+          "sourceId": "b01-denmark-krone",
+          "note": "Nationalbank full HTTP component body states currency unit renamed in 1854 and new series issued; its 1860-series component identifies rigsdaler. Working Paper12 pages8–9 dates the 23 May 1873 Coin Act transition to krone and later phased withdrawal. Interior 1855–1872 avoids claiming either transition year as uniform.",
+          "supportedPrecision": "year",
+          "supportsClaim": true,
+          "from": "1855",
+          "until": "1872"
+        }
+      ],
+      "reviewStatus": "clear",
+      "cautions": []
+    }
+  ],
+  "sources": [],
+  "absenceOfEvidence": [
+    "1854 rename day not established; 1873–1874 phased krone introduction and coexistence not simplified. Existing sourced krone from 1875, monarchs, capital and government remain unchanged.",
+    "No reviewed licensed historical flag asset; flag gap remains explicit."
+  ],
+  "reviewNotes": [
+    "Isolated worker research; independent source-body review and coordinator validation required.",
+    "Historical banknote page’s HTML accordion attributes label The 1860 series, heading Rigsdaler, and explanatory body date 1854; these dates were omitted by the text-only web rendering but read directly through HTTP. Existing source reused, no duplicate catalogue source."
+  ]
+}

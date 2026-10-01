@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 63,
+  "revision": 109,
   "concurrency": 3,
   "jobs": [
     {
@@ -117,7 +117,7 @@
       },
       "scopeId": "scope-09249b3a43bfb14bcb9c6eee",
       "id": "c02-5fe7cfa37c063f280863f269",
-      "status": "historical-review",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -135,6 +135,18 @@
         {
           "action": "validate",
           "at": "2026-10-01T21:08:41.488Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T21:28:29.197Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Independently read DHM Ebert biography (1919 presidency, 1922 term extension, death 28 February 1925); Federal Archives inauguration caption explicitly 12 May 1925; DHM Hindenburg chronology includes 1932 reelection and January 1933 presidency. Exact days are supported; clipping at 1920 and 1933 is not accession/departure. Read Bundestag 8/29 printed page 2119 Kunz speech explicitly describing Berlin as Weimar capital, a retrospective historical statement. Read existing Bundesbank historical-money section: actual introduction 11 October 1924, continuation until 1948; interior 1925–1932 avoids enactment discrepancy. Interim leadership/currency gaps and missing flag remain explicit. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T21:28:32.051Z",
           "actor": "campaign-02-coordinator",
           "reason": null
         }
@@ -361,6 +373,35 @@
         ],
         "status": "historical-review",
         "packageHash": "ede2bb6797b47821b183c01f175d3d89f4a310ee2036ac9c1e54ef020d29a0d5"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c02-5fe7cfa37c063f280863f269",
+        "packageHash": "ede2bb6797b47821b183c01f175d3d89f4a310ee2036ac9c1e54ef020d29a0d5",
+        "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-02-coordinator"
+        },
+        "rationale": "Independently read DHM Ebert biography (1919 presidency, 1922 term extension, death 28 February 1925); Federal Archives inauguration caption explicitly 12 May 1925; DHM Hindenburg chronology includes 1932 reelection and January 1933 presidency. Exact days are supported; clipping at 1920 and 1933 is not accession/departure. Read Bundestag 8/29 printed page 2119 Kunz speech explicitly describing Berlin as Weimar capital, a retrospective historical statement. Read existing Bundesbank historical-money section: actual introduction 11 October 1924, continuation until 1948; interior 1925–1932 avoids enactment discrepancy. Interim leadership/currency gaps and missing flag remain explicit. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Source c02-dhm-ebert: confirm full body reading and claim support",
+          "Source c02-dhm-hindenburg: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T21:28:29.197Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c02-5fe7cfa37c063f280863f269",
+        "packageHash": "ede2bb6797b47821b183c01f175d3d89f4a310ee2036ac9c1e54ef020d29a0d5",
+        "beforeFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "afterFingerprint": "7de0490d708a8bedd2e6de232f5ecac8b8e18f61eefcfcf407e45db2523d79af",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
       }
     },
     {
@@ -467,7 +508,7 @@
         "No modern flag fallback; preserve actual national/ensign/office/royal type and asset license."
       ],
       "gapOpportunities": 116,
-      "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+      "productionFingerprint": "7de0490d708a8bedd2e6de232f5ecac8b8e18f61eefcfcf407e45db2523d79af",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -483,7 +524,7 @@
       },
       "scopeId": "scope-cf89b196be91c0be9b35bb8d",
       "id": "c02-26209dbac77153ac4d9f809f",
-      "status": "historical-review",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -503,6 +544,30 @@
           "at": "2026-10-01T21:13:56.897Z",
           "actor": "campaign-02-coordinator",
           "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T21:28:32.200Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T21:28:32.225Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T21:28:32.306Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Independently read original 1871 law Article 1 naming Rome capital; complete Quirinale two-page guide naming reign years 1861–1878 and 1878–1900; conservative interiors 1872–1877 and 1879–1899 avoid invented transition days and entire-year claims in 1878/1900. Read Banca d’Italia Stanza A substantive body: 1862 monetary unification and lira continuation to euro; denomination only, not immediate universal coin replacement. Revised package preserves government, flags absent; original unsupported leadership precision removed and preserved separately. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T21:28:33.919Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign2-selection",
@@ -515,7 +580,7 @@
           "id": "campaign2-selection",
           "specialism": "entity-core"
         },
-        "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "productionFingerprint": "7de0490d708a8bedd2e6de232f5ecac8b8e18f61eefcfcf407e45db2523d79af",
         "entityId": "italy-liberal-monarchy-framework",
         "mapIds": [
           "entity-italy",
@@ -695,8 +760,216 @@
           "Isolated worker research; independent source-body review and coordinator validation required."
         ]
       },
-      "packageHash": "94b253d8094a4dd5b770e05959d26219efda96aa360a00780093135b88c6a995",
+      "packageHash": "6a28307676c19023f1dbf42da18f012aa5424dca0009d01b61cc7c785c6e0c0a",
       "submittedAt": "2026-10-01T21:13:56.853Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+          "package": {
+            "schemaVersion": 1,
+            "id": "campaign02-italy-liberal-monarchy-framework",
+            "jobId": "c02-26209dbac77153ac4d9f809f",
+            "worker": {
+              "id": "campaign2-selection",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+            "entityId": "italy-liberal-monarchy-framework",
+            "mapIds": [
+              "entity-italy",
+              "entity-kingdom-of-italy"
+            ],
+            "period": {
+              "from": "1872",
+              "until": "1900"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency",
+              "historical-flag"
+            ],
+            "claims": [
+              {
+                "id": "c02-italy-rome",
+                "category": "capital",
+                "value": "Rome",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1872",
+                  "until": "1900"
+                },
+                "entityId": "italy-liberal-monarchy-framework",
+                "geographicScope": {
+                  "description": "Entity-level office, seat or monetary denomination; no geometry-based territorial or identity inference.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-italy-capital-law"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-italy-capital-law",
+                    "note": "Original1871lawArticle1designatesKingdomcapital;clipaftereffectiveyear.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1872",
+                    "until": "1900"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c02-italy-vittorio-ii",
+                "category": "leadership",
+                "value": "Vittorio Emanuele II",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1872",
+                  "until": "1877"
+                },
+                "entityId": "italy-liberal-monarchy-framework",
+                "geographicScope": {
+                  "description": "Entity-level office, seat or monetary denomination; no geometry-based territorial or identity inference.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-quirinale-kings"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-quirinale-kings",
+                    "note": "Official guide gives reign1861–1878. Interior1872–1877 excludes unsupported precise1878 transition; end is research boundary, not office departure.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1872",
+                    "until": "1877"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "King of Italy"
+              },
+              {
+                "id": "c02-italy-umberto-i",
+                "category": "leadership",
+                "value": "Umberto I",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1879",
+                  "until": "1899"
+                },
+                "entityId": "italy-liberal-monarchy-framework",
+                "geographicScope": {
+                  "description": "Entity-level office, seat or monetary denomination; no geometry-based territorial or identity inference.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-quirinale-kings"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-quirinale-kings",
+                    "note": "Official guide gives reign1878–1900. Interior1879–1899 excludes both year-precision transitions; bounds are research clipping, not actual office dates.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1879",
+                    "until": "1899"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "King of Italy"
+              },
+              {
+                "id": "c02-italy-lira",
+                "category": "currency",
+                "value": "Italian lira",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1872",
+                  "until": "1900"
+                },
+                "entityId": "italy-liberal-monarchy-framework",
+                "geographicScope": {
+                  "description": "Entity-level office, seat or monetary denomination; no geometry-based territorial or identity inference.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-bankitaly-unification"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-bankitaly-unification",
+                    "note": "Centralbankbody1862nationalunification andcontinuationtoeuro; requestedinteriorclip.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1872",
+                    "until": "1900"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c02-italy-capital-law",
+                "url": "https://www.normattiva.it/eli/id/1871/02/04/071U0033/ORIGINAL",
+                "title": "Law3February1871,no33: transfer of capital to Rome",
+                "institution": "Italian official legislation portal Normattiva",
+                "kind": "primary-document",
+                "accessed": "2026-10-01",
+                "usage": "OriginalArticle1bodyexplicitRomecapital; effective1871-02-19; assignmentafterboth."
+              },
+              {
+                "id": "c02-quirinale-kings",
+                "url": "https://palazzo.quirinale.it/luoghi/pdf/it/sala-regno-italia.pdf",
+                "title": "Sala del Regno d’Italia",
+                "institution": "Italian Presidency, Quirinale Palace",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Complete2pageguide namesreignyears, no exacttransitiondays."
+              },
+              {
+                "id": "c02-bankitaly-unification",
+                "url": "https://www.bancaditalia.it/servizi-cittadino/mostre-ed-eventi/mostra-moneta/esplora/stanza-a/index.html",
+                "title": "StanzaA: L’unificazione monetaria",
+                "institution": "Banca d’Italia",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Fullmainexhibitionbody identifies1862liraunification andcontinuationtoeuro."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Leadership gaps1878 and1900 deliberately retained: source gives reign years but no exact transition days; no full-year single monarch asserted.",
+              "Supportedgovernmentrecords preserved.",
+              "Savoynational/stateflag asset not yetreviewed; no republicantricolourfallback."
+            ],
+            "reviewNotes": [
+              "Isolated worker research; independent source-body review and coordinator validation required."
+            ]
+          },
+          "packageHash": "94b253d8094a4dd5b770e05959d26219efda96aa360a00780093135b88c6a995",
+          "receipt": null,
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "94b253d8094a4dd5b770e05959d26219efda96aa360a00780093135b88c6a995"
+          },
+          "at": "2026-10-01T21:28:32.200Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
       "validation": {
         "valid": true,
         "errors": [],
@@ -706,7 +979,34 @@
           "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
         ],
         "status": "historical-review",
-        "packageHash": "94b253d8094a4dd5b770e05959d26219efda96aa360a00780093135b88c6a995"
+        "packageHash": "6a28307676c19023f1dbf42da18f012aa5424dca0009d01b61cc7c785c6e0c0a"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c02-26209dbac77153ac4d9f809f",
+        "packageHash": "6a28307676c19023f1dbf42da18f012aa5424dca0009d01b61cc7c785c6e0c0a",
+        "productionFingerprint": "7de0490d708a8bedd2e6de232f5ecac8b8e18f61eefcfcf407e45db2523d79af",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-02-coordinator"
+        },
+        "rationale": "Independently read original 1871 law Article 1 naming Rome capital; complete Quirinale two-page guide naming reign years 1861–1878 and 1878–1900; conservative interiors 1872–1877 and 1879–1899 avoid invented transition days and entire-year claims in 1878/1900. Read Banca d’Italia Stanza A substantive body: 1862 monetary unification and lira continuation to euro; denomination only, not immediate universal coin replacement. Revised package preserves government, flags absent; original unsupported leadership precision removed and preserved separately. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T21:28:32.306Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c02-26209dbac77153ac4d9f809f",
+        "packageHash": "6a28307676c19023f1dbf42da18f012aa5424dca0009d01b61cc7c785c6e0c0a",
+        "beforeFingerprint": "7de0490d708a8bedd2e6de232f5ecac8b8e18f61eefcfcf407e45db2523d79af",
+        "afterFingerprint": "da7e37d18093eac3976c53540f3358374cf213f8f6b83a37b1ac98f2ad2711c0",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
       }
     },
     {
@@ -795,7 +1095,7 @@
         "No modern flag fallback; preserve actual national/ensign/office/royal type and asset license."
       ],
       "gapOpportunities": 132,
-      "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+      "productionFingerprint": "da7e37d18093eac3976c53540f3358374cf213f8f6b83a37b1ac98f2ad2711c0",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -811,7 +1111,7 @@
       },
       "scopeId": "scope-95d3fc1882a564bb0fdda96d",
       "id": "c02-5af44daa00e00e6681068216",
-      "status": "historical-review",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -831,6 +1131,30 @@
           "at": "2026-10-01T21:13:57.154Z",
           "actor": "campaign-02-coordinator",
           "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T21:28:34.046Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T21:28:34.081Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T21:28:34.126Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Independently read Seoul Museum substantive Hanyang body: capital from 1394 through dynasty end; exhibition heading 1392–1863 does not override body continuity. National Museum seal body identifies Gojong as 26th Joseon king, reign 1863–1907, and distinguishes 1897 imperial proclamation from royal title. Period 1864–1896 excludes imperial title and does not backdate the 1900 seal object. Currency and historical flag gaps explicit, no modern flag or sole-currency inference. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T21:28:36.227Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign2-selection",
@@ -843,7 +1167,7 @@
           "id": "campaign2-selection",
           "specialism": "entity-core"
         },
-        "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "productionFingerprint": "da7e37d18093eac3976c53540f3358374cf213f8f6b83a37b1ac98f2ad2711c0",
         "entityId": "korea-joseon-framework",
         "mapIds": [
           "entity-korea"
@@ -952,8 +1276,145 @@
           "Isolated worker research; independent source-body review and coordinator validation required."
         ]
       },
-      "packageHash": "41f220681ecf379d6aebf4ba9ff1f64c637d72967b0a206882aa903b38547453",
+      "packageHash": "c1001a2fdc0721d4edc045530ed107433096b880aa667d9e586f1db53ddda1fb",
       "submittedAt": "2026-10-01T21:13:57.130Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+          "package": {
+            "schemaVersion": 1,
+            "id": "campaign02-korea-joseon-framework",
+            "jobId": "c02-5af44daa00e00e6681068216",
+            "worker": {
+              "id": "campaign2-selection",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+            "entityId": "korea-joseon-framework",
+            "mapIds": [
+              "entity-korea"
+            ],
+            "period": {
+              "from": "1864",
+              "until": "1896"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency",
+              "historical-flag"
+            ],
+            "claims": [
+              {
+                "id": "c02-joseon-hanyang",
+                "category": "capital",
+                "value": "Hanyang (Hanseong; present-day Seoul)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1864",
+                  "until": "1896"
+                },
+                "entityId": "korea-joseon-framework",
+                "geographicScope": {
+                  "description": "Entity-level office, seat or monetary denomination; no geometry-based territorial or identity inference.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-joseon-capital-museum"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-joseon-capital-museum",
+                    "note": "Museumbodycapitalcontinuedtodynastyend; intervalbefore1897imperialframework.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1864",
+                    "until": "1896"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c02-joseon-gojong",
+                "category": "leadership",
+                "value": "Gojong",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1864",
+                  "until": "1896"
+                },
+                "entityId": "korea-joseon-framework",
+                "geographicScope": {
+                  "description": "Entity-level office, seat or monetary denomination; no geometry-based territorial or identity inference.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-gojong-museum-seal"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-gojong-museum-seal",
+                    "note": "Collectionbody26thJoseonking,reign1863–1907; royalofficeclipbeforeimperialtitle.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1864",
+                    "until": "1896"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "King of Joseon"
+              }
+            ],
+            "sources": [
+              {
+                "id": "c02-joseon-capital-museum",
+                "url": "https://museum.seoul.go.kr/eng/exhibition/permanent/permExhibit/permExhibit1.jsp",
+                "title": "The Joseon Capital: Hanyang",
+                "institution": "Seoul Museum of History",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Fullsubstantivebody saysHanyangremainedcapitaltodynastyend; periodheader1392–1863isdisplaylayout."
+              },
+              {
+                "id": "c02-gojong-museum-seal",
+                "url": "https://vcm.museum.go.kr/CHN/contents/M0502000000.do?relicId=8292&schM=view",
+                "title": "Gojong imperial seal: museum collection description",
+                "institution": "National Museum of Korea",
+                "kind": "institutional-historical",
+                "accessed": "2026-10-01",
+                "usage": "Koreanbody identifies26thJoseonkingGojong1863–1907; imperialtitlelater.1900objectnotbackdated."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Currencyobjectsattestindividualissues, no continuousMun/Yangsystem inferred.",
+              "MOISflaghistorybody https://www.mois.go.kr/eng/sub/a03/nationalSymbol/screen.do read:1883-03-06proclamation butdesignsvaried; no1949standardizedassetbackprojection.",
+              "Governmentrecords preserved."
+            ],
+            "reviewNotes": [
+              "Isolated worker research; independent source-body review and coordinator validation required."
+            ]
+          },
+          "packageHash": "41f220681ecf379d6aebf4ba9ff1f64c637d72967b0a206882aa903b38547453",
+          "receipt": null,
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "41f220681ecf379d6aebf4ba9ff1f64c637d72967b0a206882aa903b38547453"
+          },
+          "at": "2026-10-01T21:28:34.046Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
       "validation": {
         "valid": true,
         "errors": [],
@@ -963,7 +1424,34 @@
           "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
         ],
         "status": "historical-review",
-        "packageHash": "41f220681ecf379d6aebf4ba9ff1f64c637d72967b0a206882aa903b38547453"
+        "packageHash": "c1001a2fdc0721d4edc045530ed107433096b880aa667d9e586f1db53ddda1fb"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c02-5af44daa00e00e6681068216",
+        "packageHash": "c1001a2fdc0721d4edc045530ed107433096b880aa667d9e586f1db53ddda1fb",
+        "productionFingerprint": "da7e37d18093eac3976c53540f3358374cf213f8f6b83a37b1ac98f2ad2711c0",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-02-coordinator"
+        },
+        "rationale": "Independently read Seoul Museum substantive Hanyang body: capital from 1394 through dynasty end; exhibition heading 1392–1863 does not override body continuity. National Museum seal body identifies Gojong as 26th Joseon king, reign 1863–1907, and distinguishes 1897 imperial proclamation from royal title. Period 1864–1896 excludes imperial title and does not backdate the 1900 seal object. Currency and historical flag gaps explicit, no modern flag or sole-currency inference. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T21:28:34.126Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c02-5af44daa00e00e6681068216",
+        "packageHash": "c1001a2fdc0721d4edc045530ed107433096b880aa667d9e586f1db53ddda1fb",
+        "beforeFingerprint": "da7e37d18093eac3976c53540f3358374cf213f8f6b83a37b1ac98f2ad2711c0",
+        "afterFingerprint": "e804be2d939cd6393ea02fcee2e9dc2f5b8c035545494c7e7a0436cff09b9762",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
       }
     },
     {
@@ -1078,7 +1566,7 @@
         "No modern flag fallback; preserve actual national/ensign/office/royal type and asset license."
       ],
       "gapOpportunities": 141,
-      "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+      "productionFingerprint": "e804be2d939cd6393ea02fcee2e9dc2f5b8c035545494c7e7a0436cff09b9762",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -1094,7 +1582,7 @@
       },
       "scopeId": "scope-26efcd53d61f94774819cd38",
       "id": "c02-2b09fa4308a7f91b164b9c9f",
-      "status": "historical-review",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -1114,6 +1602,30 @@
           "at": "2026-10-01T21:13:57.370Z",
           "actor": "campaign-02-coordinator",
           "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T21:28:36.354Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T21:28:36.453Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T21:28:36.517Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Independently read Iranica Capital Cities Qajar/Pahlavi section: Tehran chosen 1786, continued capital and Nasir-al-Din expansion. Read relevant Qajar coinage narrative: qeran principal silver denomination from 1825–26, machine-struck transition 1877–79, continued qeran denomination with gold toman coexistence. Qualified value names silver denomination and toman coexistence, not sole legal tender or constant exchange/metal content. Existing leadership/political records preserved; flag unresolved. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T21:28:38.936Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign2-selection",
@@ -1126,7 +1638,7 @@
           "id": "campaign2-selection",
           "specialism": "entity-core"
         },
-        "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "productionFingerprint": "e804be2d939cd6393ea02fcee2e9dc2f5b8c035545494c7e7a0436cff09b9762",
         "entityId": "qajar-preconstitutional-framework",
         "mapIds": [
           "entity-persia"
@@ -1225,8 +1737,135 @@
           "Isolated worker research; independent source-body review and coordinator validation required."
         ]
       },
-      "packageHash": "b8e3237a1c8c3e3ec9c964eaf7cabb34e28c71e779c489eec97b9d17f0a58448",
+      "packageHash": "1e50b9fcaec56933fbac4680126bc3b5b16075f89f3685d9a1ca6889c8cfaffe",
       "submittedAt": "2026-10-01T21:13:57.307Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+          "package": {
+            "schemaVersion": 1,
+            "id": "campaign02-qajar-preconstitutional-framework",
+            "jobId": "c02-2b09fa4308a7f91b164b9c9f",
+            "worker": {
+              "id": "campaign2-selection",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+            "entityId": "qajar-preconstitutional-framework",
+            "mapIds": [
+              "entity-persia"
+            ],
+            "period": {
+              "from": "1849",
+              "until": "1895"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency",
+              "historical-flag"
+            ],
+            "claims": [
+              {
+                "id": "c02-qajar-tehran",
+                "category": "capital",
+                "value": "Tehran",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1849",
+                  "until": "1895"
+                },
+                "entityId": "qajar-preconstitutional-framework",
+                "geographicScope": {
+                  "description": "Entity-level office, seat or monetary denomination; no geometry-based territorial or identity inference.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-iran-capital-cities"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-iran-capital-cities",
+                    "note": "ExistingacademicsourceQajar/PahlavisectionTehrancapital andNasiralDinexpansion; periodclipped.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1849",
+                    "until": "1895"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c02-qajar-qeran",
+                "category": "currency",
+                "value": "Qeran (silver denomination; toman also used)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1849",
+                  "until": "1895"
+                },
+                "entityId": "qajar-preconstitutional-framework",
+                "geographicScope": {
+                  "description": "Entity-level office, seat or monetary denomination; no geometry-based territorial or identity inference.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-iran-coins"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-iran-coins",
+                    "note": "Qajarsectionqeranprincipal silverunit1825–26 andlatermachinemintcontinuation; goldtoman coexisted. No fixedvalue/solecirculationclaim.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1849",
+                    "until": "1895"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c02-iran-coins",
+                "url": "https://www.iranicaonline.org/articles/coins-and-coinage/",
+                "title": "Coins and Coinage: Qajar monetary history",
+                "institution": "Encyclopaedia Iranica",
+                "kind": "academic",
+                "accessed": "2026-10-01",
+                "usage": "Qajarsectionbody1825–26qeranstandard and1877machineminttransition, coexistingtoman."
+              }
+            ],
+            "absenceOfEvidence": [
+              "ExistingNaser-al-DinShahleadership covers1849–1895; no duplicate.",
+              "No adequate1849–1895flagasset chronology established; IranicaFLAGSrenderedbodyinsufficientforfullperiod, gap retained.",
+              "Politicalrecords preserved."
+            ],
+            "reviewNotes": [
+              "Isolated worker research; independent source-body review and coordinator validation required."
+            ]
+          },
+          "packageHash": "b8e3237a1c8c3e3ec9c964eaf7cabb34e28c71e779c489eec97b9d17f0a58448",
+          "receipt": null,
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "b8e3237a1c8c3e3ec9c964eaf7cabb34e28c71e779c489eec97b9d17f0a58448"
+          },
+          "at": "2026-10-01T21:28:36.354Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
       "validation": {
         "valid": true,
         "errors": [],
@@ -1236,7 +1875,34 @@
           "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
         ],
         "status": "historical-review",
-        "packageHash": "b8e3237a1c8c3e3ec9c964eaf7cabb34e28c71e779c489eec97b9d17f0a58448"
+        "packageHash": "1e50b9fcaec56933fbac4680126bc3b5b16075f89f3685d9a1ca6889c8cfaffe"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c02-2b09fa4308a7f91b164b9c9f",
+        "packageHash": "1e50b9fcaec56933fbac4680126bc3b5b16075f89f3685d9a1ca6889c8cfaffe",
+        "productionFingerprint": "e804be2d939cd6393ea02fcee2e9dc2f5b8c035545494c7e7a0436cff09b9762",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-02-coordinator"
+        },
+        "rationale": "Independently read Iranica Capital Cities Qajar/Pahlavi section: Tehran chosen 1786, continued capital and Nasir-al-Din expansion. Read relevant Qajar coinage narrative: qeran principal silver denomination from 1825–26, machine-struck transition 1877–79, continued qeran denomination with gold toman coexistence. Qualified value names silver denomination and toman coexistence, not sole legal tender or constant exchange/metal content. Existing leadership/political records preserved; flag unresolved. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T21:28:36.517Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c02-2b09fa4308a7f91b164b9c9f",
+        "packageHash": "1e50b9fcaec56933fbac4680126bc3b5b16075f89f3685d9a1ca6889c8cfaffe",
+        "beforeFingerprint": "e804be2d939cd6393ea02fcee2e9dc2f5b8c035545494c7e7a0436cff09b9762",
+        "afterFingerprint": "1e569f7c7735b74ab11361c0a4991bbdf0ca069cf7f573f60d9936d80bf413ac",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
       }
     },
     {
@@ -1348,7 +2014,7 @@
         "No modern flag fallback; preserve actual national/ensign/office/royal type and asset license."
       ],
       "gapOpportunities": 24,
-      "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+      "productionFingerprint": "1e569f7c7735b74ab11361c0a4991bbdf0ca069cf7f573f60d9936d80bf413ac",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -1364,7 +2030,7 @@
       },
       "scopeId": "scope-a25318664db856e9b7bf31f3",
       "id": "c02-fdfd8be202cc0dcd2440376a",
-      "status": "historical-review",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -1384,6 +2050,30 @@
           "at": "2026-10-01T21:13:57.650Z",
           "actor": "campaign-02-coordinator",
           "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T21:28:39.063Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T21:28:39.092Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T21:28:39.127Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Independently read the complete relevant1947–1959 historical parliamentary table. Three ministries and exact supported dates match;1957-01-01 is explicit research clipping, not Bandaranaike departure. Malformed Dudley2026endpoints correctly excluded. No territorialcontrol inference. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T21:28:40.878Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign02-coordinator-research",
@@ -1396,7 +2086,7 @@
           "id": "campaign02-coordinator-research",
           "specialism": "entity-core"
         },
-        "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "productionFingerprint": "1e569f7c7735b74ab11361c0a4991bbdf0ca069cf7f573f60d9936d80bf413ac",
         "entityId": "ceylon-independent-parliamentary-framework",
         "mapIds": [
           "entity-ceylon",
@@ -1528,8 +2218,168 @@
           "Full relevant bodies read; independent evidence review required before acceptance."
         ]
       },
-      "packageHash": "2517924e050f39c5b28634fe5fa00e002ce509ee1df490e815db6c8d0ac84c01",
+      "packageHash": "53d04fdbc2d0ec95068beaeb3d86cbbda4a45f8ea202985fe8271ad6fa67d54a",
       "submittedAt": "2026-10-01T21:13:57.583Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c02-fdfd8be202cc0dcd2440376a",
+            "jobId": "c02-fdfd8be202cc0dcd2440376a",
+            "worker": {
+              "id": "campaign02-coordinator-research",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+            "entityId": "ceylon-independent-parliamentary-framework",
+            "mapIds": [
+              "entity-ceylon",
+              "entity-sri-lanka"
+            ],
+            "period": {
+              "from": "1949",
+              "until": "1956"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency",
+              "historical-flag"
+            ],
+            "claims": [
+              {
+                "id": "c02-ceylon-ds",
+                "category": "leadership",
+                "value": "D. S. Senanayake",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1949-01-01",
+                  "until": "1952-03-22"
+                },
+                "entityId": "ceylon-independent-parliamentary-framework",
+                "geographicScope": {
+                  "description": "Ceylon — independent parliamentary framework; institution/office or issuing monetary unit, not a claim of uniform polygon control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-ceylon-parliament-pms"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-ceylon-parliament-pms",
+                    "note": "Office dates explicitly supported; start clipped to1949 research bound, death endpoint retained.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1949-01-01",
+                    "until": "1952-03-22"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c02-ceylon-john",
+                "category": "leadership",
+                "value": "John Kotelawala",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1953-10-12",
+                  "until": "1956-04-12"
+                },
+                "entityId": "ceylon-independent-parliamentary-framework",
+                "geographicScope": {
+                  "description": "Ceylon — independent parliamentary framework; institution/office or issuing monetary unit, not a claim of uniform polygon control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-ceylon-parliament-pms"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-ceylon-parliament-pms",
+                    "note": "Official parliamentary list explicitly dates this ministry.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1953-10-12",
+                    "until": "1956-04-12"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c02-ceylon-solomon",
+                "category": "leadership",
+                "value": "S. W. R. D. Bandaranaike",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1956-04-12",
+                  "until": "1957-01-01"
+                },
+                "entityId": "ceylon-independent-parliamentary-framework",
+                "geographicScope": {
+                  "description": "Ceylon — independent parliamentary framework; institution/office or issuing monetary unit, not a claim of uniform polygon control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-ceylon-parliament-pms"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-ceylon-parliament-pms",
+                    "note": "Official list dates appointment12April1956 and office departure26September1959; end clipped to exclusive1957-01-01research boundary, not actual departure.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1956-04-12",
+                    "until": "1957-01-01"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              }
+            ],
+            "sources": [
+              {
+                "id": "c02-ceylon-parliament-pms",
+                "title": "Historical prime ministers",
+                "institution": "Parliament of Sri Lanka",
+                "url": "https://www.parliament.lk/en/learn/handbook-of-parliament/prime-ministers",
+                "accessed": "2026-10-01",
+                "usage": "Body read at historical House of Representatives sections: D.S.24September1947–22March1952; Kotelawala12October1953–12April1956; Bandaranaike12April1956–26September1959. Malformed Dudley end dates pointing at2026 expressly excluded.",
+                "kind": "institutional"
+              }
+            ],
+            "absenceOfEvidence": [
+              "Dudley Senanayake entries have malformed modern endpoints and are not accepted.",
+              "Currency and historical flag require further independent evidence; existing parliamentary seat preserved."
+            ],
+            "reviewNotes": [
+              "Full relevant bodies read; independent evidence review required before acceptance."
+            ]
+          },
+          "packageHash": "2517924e050f39c5b28634fe5fa00e002ce509ee1df490e815db6c8d0ac84c01",
+          "receipt": null,
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "2517924e050f39c5b28634fe5fa00e002ce509ee1df490e815db6c8d0ac84c01"
+          },
+          "at": "2026-10-01T21:28:39.063Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
       "validation": {
         "valid": true,
         "errors": [],
@@ -1539,7 +2389,34 @@
           "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
         ],
         "status": "historical-review",
-        "packageHash": "2517924e050f39c5b28634fe5fa00e002ce509ee1df490e815db6c8d0ac84c01"
+        "packageHash": "53d04fdbc2d0ec95068beaeb3d86cbbda4a45f8ea202985fe8271ad6fa67d54a"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c02-fdfd8be202cc0dcd2440376a",
+        "packageHash": "53d04fdbc2d0ec95068beaeb3d86cbbda4a45f8ea202985fe8271ad6fa67d54a",
+        "productionFingerprint": "1e569f7c7735b74ab11361c0a4991bbdf0ca069cf7f573f60d9936d80bf413ac",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-02-coordinator"
+        },
+        "rationale": "Independently read the complete relevant1947–1959 historical parliamentary table. Three ministries and exact supported dates match;1957-01-01 is explicit research clipping, not Bandaranaike departure. Malformed Dudley2026endpoints correctly excluded. No territorialcontrol inference. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T21:28:39.127Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c02-fdfd8be202cc0dcd2440376a",
+        "packageHash": "53d04fdbc2d0ec95068beaeb3d86cbbda4a45f8ea202985fe8271ad6fa67d54a",
+        "beforeFingerprint": "1e569f7c7735b74ab11361c0a4991bbdf0ca069cf7f573f60d9936d80bf413ac",
+        "afterFingerprint": "eecc076e8222e2b898a5574233f0d0bbc0f201816d76adfd023872cc42de82b9",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
       }
     },
     {
@@ -1645,7 +2522,7 @@
         "No modern flag fallback; preserve actual national/ensign/office/royal type and asset license."
       ],
       "gapOpportunities": 18,
-      "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+      "productionFingerprint": "eecc076e8222e2b898a5574233f0d0bbc0f201816d76adfd023872cc42de82b9",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -1661,7 +2538,7 @@
       },
       "scopeId": "scope-50d9152dc5d604ce0702cc8c",
       "id": "c02-88673eb43bbeaa83111c1709",
-      "status": "historical-review",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -1681,6 +2558,30 @@
           "at": "2026-10-01T21:13:57.854Z",
           "actor": "campaign-02-coordinator",
           "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T21:28:40.992Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T21:28:41.075Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T21:28:41.312Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Independently fetched HTTP200 and read complete National Assembly PM table; independently read parliamentary-history body, full SBP currency-history body, individual Commons description/history/license. Liaquat,Nazimuddin,Bogra office dates and research clipping supported. Flag adopted1947 and individual design dated1947; PD provenance and transformed local asset hash checked. Monetary denomination for historical Dominion, not modern borders or Republic identity. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T21:28:42.874Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign02-coordinator-research",
@@ -1693,7 +2594,7 @@
           "id": "campaign02-coordinator-research",
           "specialism": "entity-core"
         },
-        "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "productionFingerprint": "eecc076e8222e2b898a5574233f0d0bbc0f201816d76adfd023872cc42de82b9",
         "entityId": "pakistan-dominion-constituent-framework",
         "mapIds": [
           "entity-pakistan"
@@ -1933,8 +2834,276 @@
           "Full relevant bodies read; independent evidence review required before acceptance."
         ]
       },
-      "packageHash": "f611bac98a35cc43eb6b642ab1b716213b7db8a225b342766fbd6e9702d3d804",
+      "packageHash": "186b0462dab71f37059620a632abf1e38a13062a5d40b9c636f89ac018cae988",
       "submittedAt": "2026-10-01T21:13:57.832Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c02-88673eb43bbeaa83111c1709",
+            "jobId": "c02-88673eb43bbeaa83111c1709",
+            "worker": {
+              "id": "campaign02-coordinator-research",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+            "entityId": "pakistan-dominion-constituent-framework",
+            "mapIds": [
+              "entity-pakistan"
+            ],
+            "period": {
+              "from": "1948",
+              "until": "1953"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency",
+              "historical-flag"
+            ],
+            "claims": [
+              {
+                "id": "c02-pakistan-liaquat",
+                "category": "leadership",
+                "value": "Liaquat Ali Khan",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1948-01-01",
+                  "until": "1951-10-16"
+                },
+                "entityId": "pakistan-dominion-constituent-framework",
+                "geographicScope": {
+                  "description": "Pakistan — Dominion constituent framework; institution/office or issuing monetary unit, not a claim of uniform polygon control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b07-pakistan-constitutional-history",
+                  "c02-pakistan-parliament-pms"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b07-pakistan-constitutional-history",
+                    "note": "First prime minister killed16October1951. Institutional source explicitly describes office and death; earlier1947 appointment evidenced, start clipped to1948.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1948-01-01",
+                    "until": "1951-10-16"
+                  },
+                  {
+                    "sourceId": "c02-pakistan-parliament-pms",
+                    "note": "Official full body retrieved HTTP200: Liaqat15August1947–16October1951; Nazimuddin17October1951–17April1953; Bogra17April1953–11August1955. Clip to requested1948–1953framework; preserve one-day1951interregnum.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1948-01-01",
+                    "until": "1951-10-16"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              },
+              {
+                "id": "c02-pakistan-rupee",
+                "category": "currency",
+                "value": "Pakistani rupee",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1949",
+                  "until": "1953"
+                },
+                "entityId": "pakistan-dominion-constituent-framework",
+                "geographicScope": {
+                  "description": "Pakistan — Dominion constituent framework; institution/office or issuing monetary unit, not a claim of uniform polygon control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-sbp-museum-currency"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-sbp-museum-currency",
+                    "note": "Museum dates own rupee issues1948,1949,1951and1953; interior1949–1953 excludes provisional1948changeover. Issuance for thenPakistan including easternwing, not presentborderfallback.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1949",
+                    "until": "1953"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c02-pakistan-state-flag",
+                "category": "historical-flag",
+                "value": "Pakistan state flag (1947 design)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1948",
+                  "until": "1953"
+                },
+                "entityId": "pakistan-dominion-constituent-framework",
+                "geographicScope": {
+                  "description": "Pakistan — Dominion constituent framework; institution/office or issuing monetary unit, not a claim of uniform polygon control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b07-pakistan-constitutional-history",
+                  "c02-pakistan-flag-asset"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b07-pakistan-constitutional-history",
+                    "note": "ConstituentAssembly adoption11August1947 independently confirmed; individualPDasset dated1947 and explicitly stateflag1947-present. Selected1948–1953 applies to Dominion, not a Republic inferredbackward.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1948",
+                    "until": "1953"
+                  },
+                  {
+                    "sourceId": "c02-pakistan-flag-asset",
+                    "note": "ConstituentAssembly adoption11August1947 independently confirmed; individualPDasset dated1947 and explicitly stateflag1947-present. Selected1948–1953 applies to Dominion, not a Republic inferredbackward.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1948",
+                    "until": "1953"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "flag": {
+                  "asset": "./assets/flags/pk-1947.svg",
+                  "type": "state flag",
+                  "alt": "White crescent and star on green with a white hoist stripe; Pakistan state flag",
+                  "license": "Public domain",
+                  "attribution": "Wikimedia Commons contributors (Zscout370; public-domain flag design)",
+                  "assetSourceIds": [
+                    "c02-pakistan-flag-asset"
+                  ],
+                  "sha256": "fe59a156d9b8730e0d9cc4f29754092752d04690e2b4178473d8cc2e16bcc814"
+                }
+              },
+              {
+                "id": "c02-pakistan-nazimuddin",
+                "category": "leadership",
+                "value": "Khawaja Nazimuddin",
+                "role": "Prime Minister",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1951-10-17",
+                  "until": "1953-04-17"
+                },
+                "entityId": "pakistan-dominion-constituent-framework",
+                "geographicScope": {
+                  "description": "Office of Prime Minister of the then Dominion; no present-border or uniform-control inference.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-pakistan-parliament-pms"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-pakistan-parliament-pms",
+                    "note": "Official full body retrieved HTTP200: Liaqat15August1947–16October1951; Nazimuddin17October1951–17April1953; Bogra17April1953–11August1955. Clip to requested1948–1953framework; preserve one-day1951interregnum. Bogra end clipped to existing framework research bound, not actual office departure.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1951-10-17",
+                    "until": "1953-04-17"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c02-pakistan-bogra",
+                "category": "leadership",
+                "value": "Muhammad Ali Bogra",
+                "role": "Prime Minister",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1953-04-17",
+                  "until": "1954-01-01"
+                },
+                "entityId": "pakistan-dominion-constituent-framework",
+                "geographicScope": {
+                  "description": "Office of Prime Minister of the then Dominion; no present-border or uniform-control inference.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-pakistan-parliament-pms"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-pakistan-parliament-pms",
+                    "note": "Official full body retrieved HTTP200: Liaqat15August1947–16October1951; Nazimuddin17October1951–17April1953; Bogra17April1953–11August1955. Clip to requested1948–1953framework; preserve one-day1951interregnum. Bogra end clipped to existing framework research bound, not actual office departure.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1953-04-17",
+                    "until": "1954-01-01"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c02-sbp-museum-currency",
+                "title": "Pakistani currency history",
+                "institution": "State Bank of Pakistan Museum and Art Gallery",
+                "url": "https://archive.sbp.org.pk/Museum/crncy_pakistan.htm",
+                "accessed": "2026-10-01",
+                "usage": "Full museum body read: emergency rupee issue1October1948, 1/2rupees1March1949, subsequent rupee issues1951and1953. Claim monetary denomination only; no modern exchange-value equivalence.",
+                "kind": "institutional"
+              },
+              {
+                "id": "c02-pakistan-flag-asset",
+                "title": "Flag of Pakistan — individual SVG provenance and licensing",
+                "institution": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Pakistan.svg",
+                "accessed": "2026-10-01",
+                "usage": "Individual page read: date11August1947, stateflag1947-present, geometricdrawingandPD-Pakistan/PD-ineligible declarations. Historical adoption independently sourced by PakistaniNationalAssembly; no Republictitle backprojection.",
+                "license": "Public domain",
+                "attribution": "Wikimedia Commons contributors (Zscout370; public-domain flag design)",
+                "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg",
+                "kind": "reference"
+              },
+              {
+                "id": "c02-pakistan-parliament-pms",
+                "title": "Prime Ministers — historical dated list",
+                "institution": "National Assembly of Pakistan",
+                "url": "https://na.gov.pk/en/priminister_list.php",
+                "accessed": "2026-10-01",
+                "usage": "Official full body retrieved HTTP200: Liaqat15August1947–16October1951; Nazimuddin17October1951–17April1953; Bogra17April1953–11August1955. Clip to requested1948–1953framework; preserve one-day1951interregnum.",
+                "kind": "institutional"
+              }
+            ],
+            "absenceOfEvidence": [
+              "Other Governor-General offices remain unresearched; existing Jinnah fact preserved. One-day1951interregnum remains absent; no sovereignty/existence amendment."
+            ],
+            "reviewNotes": [
+              "Full relevant bodies read; independent evidence review required before acceptance."
+            ]
+          },
+          "packageHash": "f611bac98a35cc43eb6b642ab1b716213b7db8a225b342766fbd6e9702d3d804",
+          "receipt": null,
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "f611bac98a35cc43eb6b642ab1b716213b7db8a225b342766fbd6e9702d3d804"
+          },
+          "at": "2026-10-01T21:28:40.992Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
       "validation": {
         "valid": true,
         "errors": [],
@@ -1944,7 +3113,34 @@
           "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
         ],
         "status": "historical-review",
-        "packageHash": "f611bac98a35cc43eb6b642ab1b716213b7db8a225b342766fbd6e9702d3d804"
+        "packageHash": "186b0462dab71f37059620a632abf1e38a13062a5d40b9c636f89ac018cae988"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c02-88673eb43bbeaa83111c1709",
+        "packageHash": "186b0462dab71f37059620a632abf1e38a13062a5d40b9c636f89ac018cae988",
+        "productionFingerprint": "eecc076e8222e2b898a5574233f0d0bbc0f201816d76adfd023872cc42de82b9",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-02-coordinator"
+        },
+        "rationale": "Independently fetched HTTP200 and read complete National Assembly PM table; independently read parliamentary-history body, full SBP currency-history body, individual Commons description/history/license. Liaquat,Nazimuddin,Bogra office dates and research clipping supported. Flag adopted1947 and individual design dated1947; PD provenance and transformed local asset hash checked. Monetary denomination for historical Dominion, not modern borders or Republic identity. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T21:28:41.312Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c02-88673eb43bbeaa83111c1709",
+        "packageHash": "186b0462dab71f37059620a632abf1e38a13062a5d40b9c636f89ac018cae988",
+        "beforeFingerprint": "eecc076e8222e2b898a5574233f0d0bbc0f201816d76adfd023872cc42de82b9",
+        "afterFingerprint": "ae6fbb08e55e26579ee7226e8bbf5d24e97dcdcb17b62e5ba662a79334dc3990",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
       }
     },
     {
@@ -2033,7 +3229,7 @@
         "No modern flag fallback; preserve actual national/ensign/office/royal type and asset license."
       ],
       "gapOpportunities": 36,
-      "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+      "productionFingerprint": "ae6fbb08e55e26579ee7226e8bbf5d24e97dcdcb17b62e5ba662a79334dc3990",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -2049,7 +3245,7 @@
       },
       "scopeId": "scope-6b3f3cb5f859b843b387136a",
       "id": "c02-fe2d95f2fa026e8938e59f4b",
-      "status": "historical-review",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -2069,6 +3265,30 @@
           "at": "2026-10-01T21:13:58.163Z",
           "actor": "campaign-02-coordinator",
           "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T21:28:43.025Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T21:28:43.152Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T21:28:43.274Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Independently fetched HTTP200 and read complete substantive Treccani2010biography.1948–1956 first premiership supports only interior1949–1955;1956/1957transition deliberately left absent. No exact unsupporteddays or title projection. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T21:28:44.717Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign02-coordinator-research",
@@ -2081,7 +3301,7 @@
           "id": "campaign02-coordinator-research",
           "specialism": "entity-core"
         },
-        "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "productionFingerprint": "ae6fbb08e55e26579ee7226e8bbf5d24e97dcdcb17b62e5ba662a79334dc3990",
         "entityId": "b13-burma-afpfl",
         "mapIds": [
           "entity-burma"
@@ -2150,8 +3370,105 @@
           "Full relevant bodies read; independent evidence review required before acceptance."
         ]
       },
-      "packageHash": "a3929082ef640dd7b68598b7c3245ddf9fef8285655cccf06a27f23db0510c96",
+      "packageHash": "fcfee5cf04f21b7642bb33e13072ef2a6bd36b9067338e6b9ca4ab5c004dce08",
       "submittedAt": "2026-10-01T21:13:58.141Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c02-fe2d95f2fa026e8938e59f4b",
+            "jobId": "c02-fe2d95f2fa026e8938e59f4b",
+            "worker": {
+              "id": "campaign02-coordinator-research",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+            "entityId": "b13-burma-afpfl",
+            "mapIds": [
+              "entity-burma"
+            ],
+            "period": {
+              "from": "1949",
+              "until": "1957"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency",
+              "historical-flag"
+            ],
+            "claims": [
+              {
+                "id": "c02-burma-nu",
+                "category": "leadership",
+                "value": "U Nu",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1949",
+                  "until": "1955"
+                },
+                "entityId": "b13-burma-afpfl",
+                "geographicScope": {
+                  "description": "Union of Burma — AFPFL government; institution/office or issuing monetary unit, not a claim of uniform polygon control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-treccani-u-nu"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-treccani-u-nu",
+                    "note": "Treccani biography explicitly dates prime ministry1948–1956;1949–1955 is an interior interval,1956temporaryreplacement and1957return deliberately not bridged.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1949",
+                    "until": "1955"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              }
+            ],
+            "sources": [
+              {
+                "id": "c02-treccani-u-nu",
+                "title": "Nu, U — Dizionario di Storia",
+                "institution": "Istituto della Enciclopedia Italiana Treccani",
+                "url": "https://www.treccani.it/enciclopedia/u-nu_(Dizionario-di-Storia)/",
+                "accessed": "2026-10-01",
+                "usage": "Full biographical body fetched HTTP200 and read: prime minister1948–1956,1957–1958; first interior1949–1955 supported,1956/1957 boundaries left absent.",
+                "kind": "secondary"
+              }
+            ],
+            "absenceOfEvidence": [
+              "1956–1957 leadership turnover not projected as continuous U Nu.",
+              "No sufficiently reviewed capital/currency/flag claims; modern Myanmarflag not substituted."
+            ],
+            "reviewNotes": [
+              "Full relevant bodies read; independent evidence review required before acceptance."
+            ]
+          },
+          "packageHash": "a3929082ef640dd7b68598b7c3245ddf9fef8285655cccf06a27f23db0510c96",
+          "receipt": null,
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "a3929082ef640dd7b68598b7c3245ddf9fef8285655cccf06a27f23db0510c96"
+          },
+          "at": "2026-10-01T21:28:43.025Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
       "validation": {
         "valid": true,
         "errors": [],
@@ -2161,7 +3478,34 @@
           "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
         ],
         "status": "historical-review",
-        "packageHash": "a3929082ef640dd7b68598b7c3245ddf9fef8285655cccf06a27f23db0510c96"
+        "packageHash": "fcfee5cf04f21b7642bb33e13072ef2a6bd36b9067338e6b9ca4ab5c004dce08"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c02-fe2d95f2fa026e8938e59f4b",
+        "packageHash": "fcfee5cf04f21b7642bb33e13072ef2a6bd36b9067338e6b9ca4ab5c004dce08",
+        "productionFingerprint": "ae6fbb08e55e26579ee7226e8bbf5d24e97dcdcb17b62e5ba662a79334dc3990",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-02-coordinator"
+        },
+        "rationale": "Independently fetched HTTP200 and read complete substantive Treccani2010biography.1948–1956 first premiership supports only interior1949–1955;1956/1957transition deliberately left absent. No exact unsupporteddays or title projection. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T21:28:43.274Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c02-fe2d95f2fa026e8938e59f4b",
+        "packageHash": "fcfee5cf04f21b7642bb33e13072ef2a6bd36b9067338e6b9ca4ab5c004dce08",
+        "beforeFingerprint": "ae6fbb08e55e26579ee7226e8bbf5d24e97dcdcb17b62e5ba662a79334dc3990",
+        "afterFingerprint": "dc57aae27dde2ab3c00eb1231255e7faf579a0c2036902034b2dbdf18ae879c5",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
       }
     },
     {
@@ -2245,7 +3589,7 @@
         "No modern flag fallback; preserve actual national/ensign/office/royal type and asset license."
       ],
       "gapOpportunities": 52,
-      "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+      "productionFingerprint": "dc57aae27dde2ab3c00eb1231255e7faf579a0c2036902034b2dbdf18ae879c5",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -2261,7 +3605,7 @@
       },
       "scopeId": "scope-b967436a5092d4490edd2de7",
       "id": "c02-b62f920e9662b1c95389a406",
-      "status": "historical-review",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -2281,6 +3625,30 @@
           "at": "2026-10-01T21:13:58.399Z",
           "actor": "campaign-02-coordinator",
           "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T21:28:44.865Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T21:28:44.944Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T21:28:45.586Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Independently read complete relevant CBRT museum Series2 section and contextual narrative: five-lira first series issued15October1937 and withdrawn10November1952. Interior1938–1950 denomination claim is supported. No exchangevalue, portrait-derived presidential tenure or modernredenomination assumption. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T21:28:47.751Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign02-coordinator-research",
@@ -2293,7 +3661,7 @@
           "id": "campaign02-coordinator-research",
           "specialism": "entity-core"
         },
-        "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "productionFingerprint": "dc57aae27dde2ab3c00eb1231255e7faf579a0c2036902034b2dbdf18ae879c5",
         "entityId": "turkey-1937-constitutional-framework",
         "mapIds": [
           "entity-turkey"
@@ -2361,8 +3729,105 @@
           "Full relevant bodies read; independent evidence review required before acceptance."
         ]
       },
-      "packageHash": "060dc07517add8b2349212e4c9e13c64ff8cbb9d3cbd123d3c6950b84a706485",
+      "packageHash": "6114580b5ceba67d66d1bb88d7ea9b6a82a5cd3a0ef6495d8be9e46907efc25a",
       "submittedAt": "2026-10-01T21:13:58.376Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c02-b62f920e9662b1c95389a406",
+            "jobId": "c02-b62f920e9662b1c95389a406",
+            "worker": {
+              "id": "campaign02-coordinator-research",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+            "entityId": "turkey-1937-constitutional-framework",
+            "mapIds": [
+              "entity-turkey"
+            ],
+            "period": {
+              "from": "1938",
+              "until": "1950"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency",
+              "historical-flag"
+            ],
+            "claims": [
+              {
+                "id": "c02-turkey-lira",
+                "category": "currency",
+                "value": "Turkish lira",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1938",
+                  "until": "1950"
+                },
+                "entityId": "turkey-1937-constitutional-framework",
+                "geographicScope": {
+                  "description": "Turkey — 1937 constitutional principles; institution/office or issuing monetary unit, not a claim of uniform polygon control.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-tcmb-banknote-series"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-tcmb-banknote-series",
+                    "note": "CBRT museum dates five-lira issue15October1937 throughwithdrawal10November1952; bounded1938–1950 is inside documentedcirculation. Monetaryunit only, not exchangevalue or modernredenomination.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1938",
+                    "until": "1950"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c02-tcmb-banknote-series",
+                "title": "Banknote Series — virtual museum",
+                "institution": "Central Bank of the Republic of Türkiye",
+                "url": "https://sanalmuze.tcmb.gov.tr/wps/wcm/connect/sanalmuze/en/main%2Bmenu/Banknote%2BSeries/Series/",
+                "accessed": "2026-10-01",
+                "usage": "Series2 fiveTurkishlira issue15October1937 withdrawal10November1952 supports1938–1950monetaryunit; museum explicitly identifies Ankara as newcapital. No portrait-as-president inference or modernredenominationbackprojection.",
+                "kind": "institutional"
+              }
+            ],
+            "absenceOfEvidence": [
+              "Presidential source could not be retrieved; no leadershiptitle inferred from banknoteportraits.",
+              "Capital/flag need dedicated historical interval review. Existing constitutional description preserved."
+            ],
+            "reviewNotes": [
+              "Full relevant bodies read; independent evidence review required before acceptance."
+            ]
+          },
+          "packageHash": "060dc07517add8b2349212e4c9e13c64ff8cbb9d3cbd123d3c6950b84a706485",
+          "receipt": null,
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Source c02-tcmb-banknote-series: confirm full body reading and claim support",
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "060dc07517add8b2349212e4c9e13c64ff8cbb9d3cbd123d3c6950b84a706485"
+          },
+          "at": "2026-10-01T21:28:44.865Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
       "validation": {
         "valid": true,
         "errors": [],
@@ -2373,7 +3838,35 @@
           "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
         ],
         "status": "historical-review",
-        "packageHash": "060dc07517add8b2349212e4c9e13c64ff8cbb9d3cbd123d3c6950b84a706485"
+        "packageHash": "6114580b5ceba67d66d1bb88d7ea9b6a82a5cd3a0ef6495d8be9e46907efc25a"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c02-b62f920e9662b1c95389a406",
+        "packageHash": "6114580b5ceba67d66d1bb88d7ea9b6a82a5cd3a0ef6495d8be9e46907efc25a",
+        "productionFingerprint": "dc57aae27dde2ab3c00eb1231255e7faf579a0c2036902034b2dbdf18ae879c5",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-02-coordinator"
+        },
+        "rationale": "Independently read complete relevant CBRT museum Series2 section and contextual narrative: five-lira first series issued15October1937 and withdrawn10November1952. Interior1938–1950 denomination claim is supported. No exchangevalue, portrait-derived presidential tenure or modernredenomination assumption. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Source c02-tcmb-banknote-series: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T21:28:45.586Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c02-b62f920e9662b1c95389a406",
+        "packageHash": "6114580b5ceba67d66d1bb88d7ea9b6a82a5cd3a0ef6495d8be9e46907efc25a",
+        "beforeFingerprint": "dc57aae27dde2ab3c00eb1231255e7faf579a0c2036902034b2dbdf18ae879c5",
+        "afterFingerprint": "9c2c78e785b9f905381b3dc946b9b5ee3e10f3cb1e91a283bd4244d4d3ec2fb4",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
       }
     },
     {
@@ -2462,7 +3955,7 @@
         "No modern flag fallback; preserve actual national/ensign/office/royal type and asset license."
       ],
       "gapOpportunities": 120,
-      "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+      "productionFingerprint": "9c2c78e785b9f905381b3dc946b9b5ee3e10f3cb1e91a283bd4244d4d3ec2fb4",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -2478,7 +3971,7 @@
       },
       "scopeId": "scope-4b81692fabb8946800a7ffdb",
       "id": "c02-3166a3012e6f8b6ff9354132",
-      "status": "historical-review",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -2498,6 +3991,30 @@
           "at": "2026-10-01T21:18:50.522Z",
           "actor": "campaign-02-coordinator",
           "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T21:28:47.926Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T21:28:48.121Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T21:28:48.406Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Independently read complete relevant FRUS1951 despatch chronology, Senate Nimba historical paragraph and CBL workingpaper history section. Election/term narrative supports Barclay1932–1942 interior; explicit Tubman1944–1971 administration supports1945–1960. CBLdates1913–1942BritishWestAfricanpound and1943–1962USdollar periods; clipsretaintransitiongaps. Colonial racial generalizations and modernstats excluded. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T21:28:49.949Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign2_flags",
@@ -2510,7 +4027,7 @@
           "id": "campaign2_flags",
           "specialism": "entity-core"
         },
-        "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "productionFingerprint": "9c2c78e785b9f905381b3dc946b9b5ee3e10f3cb1e91a283bd4244d4d3ec2fb4",
         "entityId": "liberia-presidential-constitutional-core",
         "mapIds": [
           "entity-liberia"
@@ -2686,8 +4203,212 @@
         ],
         "reviewNotes": []
       },
-      "packageHash": "7db8b72f91e8aa66089be9222494438d827e1f8f397aa7c5f8c7a462c2f9894e",
+      "packageHash": "69dee2021662c73c78444b2127c2a3eb66ef08d0365d9831cc3fba9189808040",
       "submittedAt": "2026-10-01T21:18:50.488Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+          "package": {
+            "schemaVersion": 1,
+            "id": "c02-package-liberia-presidential-constitutional-core",
+            "jobId": "c02-3166a3012e6f8b6ff9354132",
+            "worker": {
+              "id": "campaign2_flags",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+            "entityId": "liberia-presidential-constitutional-core",
+            "mapIds": [
+              "entity-liberia"
+            ],
+            "period": {
+              "from": "1931",
+              "until": "1960"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency",
+              "historical-flag"
+            ],
+            "claims": [
+              {
+                "id": "c02-liberia-presidential-constitutional-core-leadership-0",
+                "category": "leadership",
+                "value": "Edwin Barclay",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1932",
+                  "until": "1942"
+                },
+                "entityId": "liberia-presidential-constitutional-core",
+                "geographicScope": {
+                  "description": "Assigned historical entity liberia-presidential-constitutional-core; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-liberia-frus-1951"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-liberia-frus-1951",
+                    "note": "Contemporarydespatchtraces1931election,1935reelectionandsucceeding1943election;interiorclipavoids1931/1944transitionprecision.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1932",
+                    "until": "1942"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "President"
+              },
+              {
+                "id": "c02-liberia-presidential-constitutional-core-leadership-1",
+                "category": "leadership",
+                "value": "William V. S. Tubman",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1945",
+                  "until": "1960"
+                },
+                "entityId": "liberia-presidential-constitutional-core",
+                "geographicScope": {
+                  "description": "Assigned historical entity liberia-presidential-constitutional-core; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-liberia-tubman-senate"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-liberia-tubman-senate",
+                    "note": "SenatehistoricalbodydatesTubmanadministration1944–1971;boundedinteriorperiodonly.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1945",
+                    "until": "1960"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "President"
+              },
+              {
+                "id": "c02-liberia-presidential-constitutional-core-currency-2",
+                "category": "currency",
+                "value": "British West African pound",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1931",
+                  "until": "1941"
+                },
+                "entityId": "liberia-presidential-constitutional-core",
+                "geographicScope": {
+                  "description": "Assigned historical entity liberia-presidential-constitutional-core; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-liberia-cbl-currency-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-liberia-cbl-currency-history",
+                    "note": "CBLhistoricalsectiondatesadoption1913–1942;excludeendpointtransitionyears.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1931",
+                    "until": "1941"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c02-liberia-presidential-constitutional-core-currency-3",
+                "category": "currency",
+                "value": "United States dollar",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1944",
+                  "until": "1960"
+                },
+                "entityId": "liberia-presidential-constitutional-core",
+                "geographicScope": {
+                  "description": "Assigned historical entity liberia-presidential-constitutional-core; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-liberia-cbl-currency-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-liberia-cbl-currency-history",
+                    "note": "CBLhistoricalsectiondatesofficialUSdollarperiod1943–1962;exclude1943uncertainadoptionyear.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1944",
+                    "until": "1960"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c02-liberia-frus-1951",
+                "url": "https://history.state.gov/historicaldocuments/frus1951v05/d722",
+                "title": "Political parties and the Liberian general election, 1951 — despatch722",
+                "institution": "US Department of State Office of the Historian",
+                "accessed": "2026-10-01",
+                "usage": "Full historical source body/section read: pp1296–1300, Barclay1931election/1935reelection,1943Tubmanselection; colonial/electoral stereotypes not adopted.",
+                "kind": "institutional"
+              },
+              {
+                "id": "c02-liberia-tubman-senate",
+                "url": "https://senate.gov.lr/nimba-county/",
+                "title": "Nimba County — historical Tubman administration",
+                "institution": "Senate of Liberia",
+                "accessed": "2026-10-01",
+                "usage": "Full historical source body/section read: Historical paragraph explicitly dates administration1944–1971; moderncounty/statistics excluded.",
+                "kind": "institutional"
+              },
+              {
+                "id": "c02-liberia-cbl-currency-history",
+                "url": "https://www.cbl.org.lr/sites/default/files/documents/CBL%20Working%20Paper%20Series_%20No_01_2016.pdf",
+                "title": "History of Liberia’s dual currency regime, working paper1/2016",
+                "institution": "Central Bank of Liberia",
+                "accessed": "2026-10-01",
+                "usage": "Full historical source body/section read: PDFhistorysection:1913–1942BritishWestAfricanpound;1943–1962USdollarofficiallegal tender. Moderndualregime not projected backward.",
+                "kind": "institutional"
+              }
+            ],
+            "absenceOfEvidence": [
+              "CapitalintervalandlicensedhistoricalflagnotacceptedfrommodernLiberiaheaders. Politicalframeworkalreadysourced;noautomaticfranchiseextension.",
+              "1942–1943currencytransitionand1944presidentialtransitionremainexplicit."
+            ],
+            "reviewNotes": []
+          },
+          "packageHash": "7db8b72f91e8aa66089be9222494438d827e1f8f397aa7c5f8c7a462c2f9894e",
+          "receipt": null,
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "7db8b72f91e8aa66089be9222494438d827e1f8f397aa7c5f8c7a462c2f9894e"
+          },
+          "at": "2026-10-01T21:28:47.926Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
       "validation": {
         "valid": true,
         "errors": [],
@@ -2697,7 +4418,34 @@
           "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
         ],
         "status": "historical-review",
-        "packageHash": "7db8b72f91e8aa66089be9222494438d827e1f8f397aa7c5f8c7a462c2f9894e"
+        "packageHash": "69dee2021662c73c78444b2127c2a3eb66ef08d0365d9831cc3fba9189808040"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c02-3166a3012e6f8b6ff9354132",
+        "packageHash": "69dee2021662c73c78444b2127c2a3eb66ef08d0365d9831cc3fba9189808040",
+        "productionFingerprint": "9c2c78e785b9f905381b3dc946b9b5ee3e10f3cb1e91a283bd4244d4d3ec2fb4",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-02-coordinator"
+        },
+        "rationale": "Independently read complete relevant FRUS1951 despatch chronology, Senate Nimba historical paragraph and CBL workingpaper history section. Election/term narrative supports Barclay1932–1942 interior; explicit Tubman1944–1971 administration supports1945–1960. CBLdates1913–1942BritishWestAfricanpound and1943–1962USdollar periods; clipsretaintransitiongaps. Colonial racial generalizations and modernstats excluded. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T21:28:48.406Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c02-3166a3012e6f8b6ff9354132",
+        "packageHash": "69dee2021662c73c78444b2127c2a3eb66ef08d0365d9831cc3fba9189808040",
+        "beforeFingerprint": "9c2c78e785b9f905381b3dc946b9b5ee3e10f3cb1e91a283bd4244d4d3ec2fb4",
+        "afterFingerprint": "f7bfa0ec769dfa4bdfd14e92adf2410c6b795159f29860aee62f0df593e63962",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
       }
     },
     {
@@ -2792,7 +4540,7 @@
         "No modern flag fallback; preserve actual national/ensign/office/royal type and asset license."
       ],
       "gapOpportunities": 96,
-      "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+      "productionFingerprint": "f7bfa0ec769dfa4bdfd14e92adf2410c6b795159f29860aee62f0df593e63962",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -2808,7 +4556,7 @@
       },
       "scopeId": "scope-823cd8a11b993364296a3a7f",
       "id": "c02-11e4235d7015f74914192263",
-      "status": "historical-review",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -2828,6 +4576,30 @@
           "at": "2026-10-01T21:18:50.778Z",
           "actor": "campaign-02-coordinator",
           "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T21:28:50.244Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T21:28:50.375Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T21:28:50.513Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Independently read Museum publication footnote8 (PDFpage27): Boma before administrative transfer1923 toLeopoldville. Narrow1915–1922 and1927–1938 retain1923–1926 implementation disagreement. Central administrative seats only; no governance/sovereignty or modernDRCflag inferred. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T21:28:51.897Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign2_flags",
@@ -2840,7 +4612,7 @@
           "id": "campaign2_flags",
           "specialism": "entity-core"
         },
-        "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "productionFingerprint": "f7bfa0ec769dfa4bdfd14e92adf2410c6b795159f29860aee62f0df593e63962",
         "entityId": "b17-belgian-congo-colonial",
         "mapIds": [
           "entity-belgian-congo",
@@ -2937,8 +4709,133 @@
         ],
         "reviewNotes": []
       },
-      "packageHash": "550ce110f17e7eded7c50b5d34de363a81b00b35eb4428d8fb4d0412b62b1a89",
+      "packageHash": "dfbaf5693a592c73d24b1cdb62f3f602b1942443b4f27d34de50b69fd53ad5ec",
       "submittedAt": "2026-10-01T21:18:50.755Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+          "package": {
+            "schemaVersion": 1,
+            "id": "c02-package-b17-belgian-congo-colonial",
+            "jobId": "c02-11e4235d7015f74914192263",
+            "worker": {
+              "id": "campaign2_flags",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+            "entityId": "b17-belgian-congo-colonial",
+            "mapIds": [
+              "entity-belgian-congo",
+              "entity-zaire-belgium"
+            ],
+            "period": {
+              "from": "1915",
+              "until": "1938"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency",
+              "historical-flag"
+            ],
+            "claims": [
+              {
+                "id": "c02-b17-belgian-congo-colonial-capital-0",
+                "category": "capital",
+                "value": "Boma",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1915",
+                  "until": "1922"
+                },
+                "entityId": "b17-belgian-congo-colonial",
+                "geographicScope": {
+                  "description": "Assigned historical entity b17-belgian-congo-colonial; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-congo-capital-museum"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-congo-capital-museum",
+                    "note": "Museumfootnote8callsBomaformercolonialcapitalbefore1923move. Retain1923–1926administrativetransition ambiguity.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1915",
+                    "until": "1922"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c02-b17-belgian-congo-colonial-capital-1",
+                "category": "capital",
+                "value": "Léopoldville",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1927",
+                  "until": "1938"
+                },
+                "entityId": "b17-belgian-congo-colonial",
+                "geographicScope": {
+                  "description": "Assigned historical entity b17-belgian-congo-colonial; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-congo-capital-museum"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-congo-capital-museum",
+                    "note": "Museumfootnote8statestransfer1923; conservativepost1926interiorclipavoidconflictingadministrativeimplementationchronology.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1927",
+                    "until": "1938"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c02-congo-capital-museum",
+                "url": "https://www.africamuseum.be/publication_docs/Musee%20Leopold%20II.pdf",
+                "title": "History of Congolese museums — administrative capital note8",
+                "institution": "Royal Museum for Central Africa",
+                "accessed": "2026-10-01",
+                "usage": "Full historical source body/section read: PDFfootnote8 states Boma capitalbefore1923transfertoLéopoldville. Retain1923–1926transitionambiguity ratherthanassertpreciseday.",
+                "kind": "institutional"
+              }
+            ],
+            "absenceOfEvidence": [
+              "1923–1926transferintervalnotfilled. Exactgovernor-generaltenures,currencyandappropriatelicensedcolonialflagremainunaccepted.",
+              "Do notinferroyalsovereigntyormodernDRCflagfromcolonyframework."
+            ],
+            "reviewNotes": []
+          },
+          "packageHash": "550ce110f17e7eded7c50b5d34de363a81b00b35eb4428d8fb4d0412b62b1a89",
+          "receipt": null,
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "550ce110f17e7eded7c50b5d34de363a81b00b35eb4428d8fb4d0412b62b1a89"
+          },
+          "at": "2026-10-01T21:28:50.244Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
       "validation": {
         "valid": true,
         "errors": [],
@@ -2948,7 +4845,34 @@
           "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
         ],
         "status": "historical-review",
-        "packageHash": "550ce110f17e7eded7c50b5d34de363a81b00b35eb4428d8fb4d0412b62b1a89"
+        "packageHash": "dfbaf5693a592c73d24b1cdb62f3f602b1942443b4f27d34de50b69fd53ad5ec"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c02-11e4235d7015f74914192263",
+        "packageHash": "dfbaf5693a592c73d24b1cdb62f3f602b1942443b4f27d34de50b69fd53ad5ec",
+        "productionFingerprint": "f7bfa0ec769dfa4bdfd14e92adf2410c6b795159f29860aee62f0df593e63962",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-02-coordinator"
+        },
+        "rationale": "Independently read Museum publication footnote8 (PDFpage27): Boma before administrative transfer1923 toLeopoldville. Narrow1915–1922 and1927–1938 retain1923–1926 implementation disagreement. Central administrative seats only; no governance/sovereignty or modernDRCflag inferred. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T21:28:50.513Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c02-11e4235d7015f74914192263",
+        "packageHash": "dfbaf5693a592c73d24b1cdb62f3f602b1942443b4f27d34de50b69fd53ad5ec",
+        "beforeFingerprint": "f7bfa0ec769dfa4bdfd14e92adf2410c6b795159f29860aee62f0df593e63962",
+        "afterFingerprint": "f1cce051ff6a4e2e5d02af88e372a1ca4ee36eab47eb7117de6fb587cbcc9c7c",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
       }
     },
     {
@@ -3037,7 +4961,7 @@
         "No modern flag fallback; preserve actual national/ensign/office/royal type and asset license."
       ],
       "gapOpportunities": 232,
-      "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+      "productionFingerprint": "f1cce051ff6a4e2e5d02af88e372a1ca4ee36eab47eb7117de6fb587cbcc9c7c",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -3053,7 +4977,7 @@
       },
       "scopeId": "scope-900dc1c3e4dcc0fcffc6aa7f",
       "id": "c02-4b23e213b53e71d709ae345e",
-      "status": "historical-review",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -3073,6 +4997,30 @@
           "at": "2026-10-01T21:18:51.002Z",
           "actor": "campaign-02-coordinator",
           "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T21:28:52.090Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T21:28:52.174Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T21:28:52.216Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Independently read NRB complete historicalpound chronology, contemporaryTeAoHou1964fullarticle, Constitutionclause47andamendmentnotes, individualCommonsdescription/history/public-domain declarations and originalstagedSVG. Reignsince1918 supports1919–1959; article1964franchise/customs excluded. Nationalflag distinguished fromRoyalEnsign; immutableconstitutionalflag plus1875assetchronology supportselectedinterval. Monetaryunit/governmentissue intervals avoid1921and1936transitions; Revised1922–1935labelplainTonganpoundgovernmentnotes; printedSterlingwordexpresslydated1933. SafeSVGhash/licenseprovenance verified. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T21:28:54.217Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign2_flags",
@@ -3085,7 +5033,7 @@
           "id": "campaign2_flags",
           "specialism": "entity-core"
         },
-        "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "productionFingerprint": "f1cce051ff6a4e2e5d02af88e372a1ca4ee36eab47eb7117de6fb587cbcc9c7c",
         "entityId": "tonga-british-protected-core",
         "mapIds": [
           "entity-tonga"
@@ -3324,8 +5272,275 @@
           "Printed sterling wording is only explicitly documented under1933. Removed the potentially misleading sterling-denominated qualifier from the1922–1935value; pound monetary unit and interval unchanged."
         ]
       },
-      "packageHash": "1b7abd0ca62c43b1ff07c41fc4fa12d231664820236cf4f5464352ef511cd62b",
+      "packageHash": "d55695ca966cbaf2c71af37de57c3037f0e9f4a85b12d14fb240a24c08b07a55",
       "submittedAt": "2026-10-01T21:18:50.979Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+          "package": {
+            "schemaVersion": 1,
+            "id": "c02-package-tonga-british-protected-core",
+            "jobId": "c02-4b23e213b53e71d709ae345e",
+            "worker": {
+              "id": "campaign2_flags",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+            "entityId": "tonga-british-protected-core",
+            "mapIds": [
+              "entity-tonga"
+            ],
+            "period": {
+              "from": "1902",
+              "until": "1959"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency",
+              "historical-flag"
+            ],
+            "claims": [
+              {
+                "id": "c02-tonga-british-protected-core-leadership-0",
+                "category": "leadership",
+                "value": "Sālote Tupou III",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1919",
+                  "until": "1959"
+                },
+                "entityId": "tonga-british-protected-core",
+                "geographicScope": {
+                  "description": "Assigned historical entity tonga-british-protected-core; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-tonga-salote-contemporary"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-tonga-salote-contemporary",
+                    "note": "Contemporary1964articleexplicitlysaysQueenSalotereignedsince1918;retrospectiveintervalclipped1919–1959withoutmodernofficeprojection.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1919",
+                    "until": "1959"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Queen"
+              },
+              {
+                "id": "c02-tonga-british-protected-core-currency-1",
+                "category": "currency",
+                "value": "British pound currency",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1902",
+                  "until": "1920"
+                },
+                "entityId": "tonga-british-protected-core",
+                "geographicScope": {
+                  "description": "Assigned historical entity tonga-british-protected-core; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-tonga-pound-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-tonga-pound-history",
+                    "note": "NRBhistoricalbodydescribesinitialBritishcurrencyand1921TonganGovernmentnotes;clippre1921periodwithoutassuminglaterpa’anga.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1902",
+                    "until": "1920"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c02-tonga-british-protected-core-currency-2",
+                "category": "currency",
+                "value": "Tongan pound (government notes)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1922",
+                  "until": "1935"
+                },
+                "entityId": "tonga-british-protected-core",
+                "geographicScope": {
+                  "description": "Assigned historical entity tonga-british-protected-core; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-tonga-pound-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-tonga-pound-history",
+                    "note": "NRB body dates Tongan government notes to1921 and explicitly describes sterling markings under1933. This1922–1935claim identifies the pound monetary unit/government note issue; it does not assert that pre1933notes bore the printed word Sterling. Selected interior interval ends before1936devaluation.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1922",
+                    "until": "1935"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c02-tonga-british-protected-core-currency-3",
+                "category": "currency",
+                "value": "Tongan pound (parity with Australian pound)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1937",
+                  "until": "1959"
+                },
+                "entityId": "tonga-british-protected-core",
+                "geographicScope": {
+                  "description": "Assigned historical entity tonga-british-protected-core; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-tonga-pound-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-tonga-pound-history",
+                    "note": "NRBbodydatesdevaluation1936,Australianpoundparity,andcontinuedpoundissuesuntil1966;exclude1936transitionyear.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1937",
+                    "until": "1959"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c02-tonga-british-protected-core-historical-flag-4",
+                "category": "historical-flag",
+                "value": "Tongan national flag (1875 design)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1902",
+                  "until": "1959"
+                },
+                "entityId": "tonga-british-protected-core",
+                "geographicScope": {
+                  "description": "Assigned historical entity tonga-british-protected-core; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-tonga-historical-flag-asset",
+                  "c02-tonga-flag-constitution"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-tonga-historical-flag-asset",
+                    "note": "Individualassetdescriptiondateshistoricaldesign;licensedunchangedSVG;boundedselectedperiodclip,notmodernflagfallback.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1902",
+                    "until": "1959"
+                  },
+                  {
+                    "sourceId": "c02-tonga-flag-constitution",
+                    "note": "Individualassetdescriptiondateshistoricaldesign;licensedunchangedSVG;boundedselectedperiodclip,notmodernflagfallback.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1902",
+                    "until": "1959"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "flag": {
+                  "asset": "./assets/flags/tonga-asset.svg",
+                  "type": "national flag",
+                  "alt": "Historical Tongan national flag",
+                  "license": "Public domain",
+                  "attribution": "Uelingatoni Ngu Tupoumalohi; Wikimedia Commons contributors",
+                  "assetSourceIds": [
+                    "c02-tonga-historical-flag-asset"
+                  ],
+                  "sha256": "8fce8b8085e903b92c76e015169d9a599df6a9d0a4d9542fd9e2dcdaed52c9d7"
+                }
+              }
+            ],
+            "sources": [
+              {
+                "id": "c02-tonga-salote-contemporary",
+                "url": "https://paperspast.natlib.govt.nz/periodicals/TAH196412.2.5.2",
+                "title": "A Kava Ceremony, Te Ao Hou November1964 p6",
+                "institution": "National Library of New Zealand / Te Ao Hou",
+                "accessed": "2026-10-01",
+                "usage": "Full historical source body/section read: Read complete article: QueenSalote reignedsince1918; selectedclaimonly1919–1959. Other customs, modernidentity and1964franchise not backprojected.",
+                "kind": "primary"
+              },
+              {
+                "id": "c02-tonga-pound-history",
+                "url": "https://www.reservebank.to/index.php/banknotes/history-of-the-tongan-paanga",
+                "title": "History of the Tongan pa’anga — pound chronology",
+                "institution": "National Reserve Bank of Tonga",
+                "accessed": "2026-10-01",
+                "usage": "Full historical source body/section read: Britishcurrency before1967, governmentnotes1921;sterlingnotes1933;1936TonganpounddevaluationtoAustralian parity. No pa’anga before1967.",
+                "kind": "institutional"
+              },
+              {
+                "id": "c02-tonga-historical-flag-asset",
+                "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Tonga.svg",
+                "title": "Flag of Tonga,1875 historical design",
+                "institution": "Wikimedia Commons",
+                "accessed": "2026-10-01",
+                "usage": "Full historical source body/section read: Readindividualassetdescription,historicaldate/design,filehistoryandpublic-domain licensing; exactarchiveversiondownloadedunchanged.",
+                "kind": "institutional",
+                "license": "Public domain",
+                "attribution": "Uelingatoni Ngu Tupoumalohi; Wikimedia Commons contributors",
+                "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/archive/9/9a/20151013195502%21Flag_of_Tonga.svg"
+              },
+              {
+                "id": "c02-tonga-flag-constitution",
+                "url": "https://ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+                "title": "Constitution of Tonga — national flag clause47",
+                "institution": "Attorney General’s Office, Tonga",
+                "accessed": "2026-10-01",
+                "usage": "Full historical source body/section read: Readclause47andamendmentendnotes:KingGeorgeflagunalterable,distinctRoyalEnsign. Flagtype not royalstandard;modernministerial clausesnotbackprojected.",
+                "kind": "primary"
+              }
+            ],
+            "absenceOfEvidence": [
+              "Nuku’alofa historicalcapitalintervalnotacceptedfrommodernembassysummary. GeorgeTupouIIclaimheldbecausefullbiographicalbodiesblockedandindexedtablealoneinsufficient.",
+              "1921noteintroductionand1936devaluationtransitionyearskeptpartial;protectedstatusnotrewrittenassovereigncolonialannexation."
+            ],
+            "reviewNotes": [
+              "Printed sterling wording is only explicitly documented under1933. Removed the potentially misleading sterling-denominated qualifier from the1922–1935value; pound monetary unit and interval unchanged."
+            ]
+          },
+          "packageHash": "1b7abd0ca62c43b1ff07c41fc4fa12d231664820236cf4f5464352ef511cd62b",
+          "receipt": null,
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "1b7abd0ca62c43b1ff07c41fc4fa12d231664820236cf4f5464352ef511cd62b"
+          },
+          "at": "2026-10-01T21:28:52.090Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
       "validation": {
         "valid": true,
         "errors": [],
@@ -3335,7 +5550,34 @@
           "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
         ],
         "status": "historical-review",
-        "packageHash": "1b7abd0ca62c43b1ff07c41fc4fa12d231664820236cf4f5464352ef511cd62b"
+        "packageHash": "d55695ca966cbaf2c71af37de57c3037f0e9f4a85b12d14fb240a24c08b07a55"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c02-4b23e213b53e71d709ae345e",
+        "packageHash": "d55695ca966cbaf2c71af37de57c3037f0e9f4a85b12d14fb240a24c08b07a55",
+        "productionFingerprint": "f1cce051ff6a4e2e5d02af88e372a1ca4ee36eab47eb7117de6fb587cbcc9c7c",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-02-coordinator"
+        },
+        "rationale": "Independently read NRB complete historicalpound chronology, contemporaryTeAoHou1964fullarticle, Constitutionclause47andamendmentnotes, individualCommonsdescription/history/public-domain declarations and originalstagedSVG. Reignsince1918 supports1919–1959; article1964franchise/customs excluded. Nationalflag distinguished fromRoyalEnsign; immutableconstitutionalflag plus1875assetchronology supportselectedinterval. Monetaryunit/governmentissue intervals avoid1921and1936transitions; Revised1922–1935labelplainTonganpoundgovernmentnotes; printedSterlingwordexpresslydated1933. SafeSVGhash/licenseprovenance verified. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T21:28:52.216Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c02-4b23e213b53e71d709ae345e",
+        "packageHash": "d55695ca966cbaf2c71af37de57c3037f0e9f4a85b12d14fb240a24c08b07a55",
+        "beforeFingerprint": "f1cce051ff6a4e2e5d02af88e372a1ca4ee36eab47eb7117de6fb587cbcc9c7c",
+        "afterFingerprint": "2f1e8042621758ce396d648ff3f65a33c3d903c38f4fc42ae44523f14f13ad03",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
       }
     },
     {
@@ -3430,7 +5672,7 @@
         "No modern flag fallback; preserve actual national/ensign/office/royal type and asset license."
       ],
       "gapOpportunities": 148,
-      "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+      "productionFingerprint": "2f1e8042621758ce396d648ff3f65a33c3d903c38f4fc42ae44523f14f13ad03",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -3446,7 +5688,7 @@
       },
       "scopeId": "scope-00606132975dd3dcb42f6ca9",
       "id": "c02-ed61991aef85d48002bc57fc",
-      "status": "historical-review",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -3466,6 +5708,30 @@
           "at": "2026-10-01T21:18:51.339Z",
           "actor": "campaign-02-coordinator",
           "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T21:28:54.367Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T21:28:54.447Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T21:28:54.612Z",
+          "actor": "campaign-02-coordinator",
+          "reason": "Independently read full NationalLibrarycapital-history body and existing1891constitutionArticle2; centralbank monetarytable; officialPrudente biography (1894accession,Nov1896medicalleave,March1897return). Whole1895clipretainsactinggap. IndividualCommonsassetlicense/historychecked; original21-starSVGmatchedhash. Independentfullprimary1889decreeArt1specifies21stars and1960decreepreambleconfirmsretentionunder1942law until22staraddition21April1960. Bounded1893–1929flag ishistorical21-star nationaldesign, notmodern27-star fallback. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T21:28:56.293Z",
+          "actor": "campaign-02-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign2_flags",
@@ -3478,7 +5744,7 @@
           "id": "campaign2_flags",
           "specialism": "entity-core"
         },
-        "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "productionFingerprint": "2f1e8042621758ce396d648ff3f65a33c3d903c38f4fc42ae44523f14f13ad03",
         "entityId": "brazil-early-federal-republic-framework",
         "mapIds": [
           "entity-brazil",
@@ -3724,8 +5990,282 @@
           "Coordinator review requested primary statutory confirmation for the21-star flag. Two complete decree bodies independently read; existing flag value, temporal interval, entity scope and asset bytes preserved."
         ]
       },
-      "packageHash": "c2d1f3255cf4dcb2820b66e7fdea19c2e83416b7d07ce728d131f10ef24f81ac",
+      "packageHash": "9d0fe33701d1a122cbcdc7e955148050d518b74d34874668ed5b25a96c9217e7",
       "submittedAt": "2026-10-01T21:18:51.249Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+          "package": {
+            "schemaVersion": 1,
+            "id": "c02-package-brazil-early-federal-republic-framework",
+            "jobId": "c02-ed61991aef85d48002bc57fc",
+            "worker": {
+              "id": "campaign2_flags",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+            "entityId": "brazil-early-federal-republic-framework",
+            "mapIds": [
+              "entity-brazil",
+              "entity-kingdom-of-brazil"
+            ],
+            "period": {
+              "from": "1893",
+              "until": "1929"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency",
+              "historical-flag"
+            ],
+            "claims": [
+              {
+                "id": "c02-brazil-early-federal-republic-framework-capital-0",
+                "category": "capital",
+                "value": "Rio de Janeiro",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1893",
+                  "until": "1929"
+                },
+                "entityId": "brazil-early-federal-republic-framework",
+                "geographicScope": {
+                  "description": "Assigned historical entity brazil-early-federal-republic-framework; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b09-brazil-1891",
+                  "c02-brazil-rio-capital-bn"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b09-brazil-1891",
+                    "note": "1891Article2continuesexistingFederalDistrictascapital;NationalLibraryhistoricaldossieridentifiesRioandcapitalcontinuityuntil1960.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1893",
+                    "until": "1929"
+                  },
+                  {
+                    "sourceId": "c02-brazil-rio-capital-bn",
+                    "note": "1891Article2continuesexistingFederalDistrictascapital;NationalLibraryhistoricaldossieridentifiesRioandcapitalcontinuityuntil1960.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1893",
+                    "until": "1929"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c02-brazil-early-federal-republic-framework-currency-1",
+                "category": "currency",
+                "value": "Réis (mil-réis monetary unit)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1893",
+                  "until": "1929"
+                },
+                "entityId": "brazil-early-federal-republic-framework",
+                "geographicScope": {
+                  "description": "Assigned historical entity brazil-early-federal-republic-framework; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-brazil-monetary-standards"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-brazil-monetary-standards",
+                    "note": "CentralBankhistoricaltabledefines1000réismonetaryunitandpre1942validity;boundedearlyrepublicperiodonly.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1893",
+                    "until": "1929"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c02-brazil-early-federal-republic-framework-leadership-2",
+                "category": "leadership",
+                "value": "Prudente de Moraes",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1895-01-01",
+                  "until": "1896-01-01"
+                },
+                "entityId": "brazil-early-federal-republic-framework",
+                "geographicScope": {
+                  "description": "Assigned historical entity brazil-early-federal-republic-framework; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-brazil-prudente-presidency"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-brazil-prudente-presidency",
+                    "note": "Officialfullbiographydatesassumption15November1894andmedicalleaveNovember1896;full1895calendarclip,notinventedaccession/resignationdate;lateractingpresidencyexcluded.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1895-01-01",
+                    "until": "1896-01-01"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "President"
+              },
+              {
+                "id": "c02-brazil-early-federal-republic-framework-historical-flag-3",
+                "category": "historical-flag",
+                "value": "Brazilian national flag (1889–1960,21-star design)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1893",
+                  "until": "1929"
+                },
+                "entityId": "brazil-early-federal-republic-framework",
+                "geographicScope": {
+                  "description": "Assigned historical entity brazil-early-federal-republic-framework; central administration/office only, no polygon-derived territorial claim",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c02-brazil-historical-flag-asset",
+                  "c02-brazil-flag-decree-1889",
+                  "c02-brazil-flag-decree-1960"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c02-brazil-historical-flag-asset",
+                    "note": "Individualassetdescriptiondateshistoricaldesign;licensedunchangedSVG;boundedselectedperiodclip,notmodernflagfallback.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1893",
+                    "until": "1929"
+                  },
+                  {
+                    "sourceId": "c02-brazil-flag-decree-1889",
+                    "note": "Article1 of19November1889 decree defines21-star national flag. Read with1960decree confirming continuity through1942; supports selected1893–1929historicaldesign, not a modern27-star fallback.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1889-11-19",
+                    "until": "1960-04-21"
+                  },
+                  {
+                    "sourceId": "c02-brazil-flag-decree-1960",
+                    "note": "1960preamble confirms21-star1889design preserved by1942legislation; Article2makes22-star replacement effective21April1960. Supports retrospective continuity of selected1893–1929design.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1889-11-19",
+                    "until": "1960-04-21"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "flag": {
+                  "asset": "./assets/flags/brazil-asset.svg",
+                  "type": "national flag",
+                  "alt": "Brazilian21-starhistoricalnationalflag",
+                  "license": "Public domain",
+                  "attribution": "Raimundo Teixeira Mendes; Wikimedia Commons contributors",
+                  "assetSourceIds": [
+                    "c02-brazil-historical-flag-asset"
+                  ],
+                  "sha256": "669fd11eb95c1d4237f3c92cefdd059f0026d1e730100039e294df92858a5e35"
+                }
+              }
+            ],
+            "sources": [
+              {
+                "id": "c02-brazil-rio-capital-bn",
+                "url": "https://bndigital.bn.gov.br/artigos/bicentenario-da-independencia-1763-transferencia-da-capital-do-vice-reino-do-brasil-para-o-rio-de-janeiro/",
+                "title": "Rio de Janeiro’s capital chronology,1763–1960 archival dossier",
+                "institution": "National Library of Brazil",
+                "accessed": "2026-10-01",
+                "usage": "Full historical source body/section read: Read fullarticle38–48 viaweb:1763capitaltransfer andcontinuouscapitality,1960capitalretrospectives; combinedwith1891Article2capitalcontinuation.",
+                "kind": "institutional"
+              },
+              {
+                "id": "c02-brazil-monetary-standards",
+                "url": "https://www.bcb.gov.br/ingles/museu-espacos/ASynthesisBrazilianMonetaryStandards.pdf",
+                "title": "A Synthesis of Brazilian Monetary Standards",
+                "institution": "Central Bank of Brazil",
+                "accessed": "2026-10-01",
+                "usage": "Full historical source body/section read: Read Réis row:1000réis monetaryunit,validuntilOctober30,1942. No presentrealorprice/purchasingpowerconversion.",
+                "kind": "institutional"
+              },
+              {
+                "id": "c02-brazil-prudente-presidency",
+                "url": "https://www.gov.br/secretariageral/pt-br/centrais-de-conteudo/biblioteca-da-pr/galeria-dos-ex-presidentes/prudente/biografia-completa",
+                "title": "Prudente de Moraes — complete presidential biography",
+                "institution": "Presidency of Brazil / National Archives",
+                "accessed": "2026-10-01",
+                "usage": "Full historical source body/section read: Readfullbody:15November1894assumption,leaveNovember1896,return4March1897;cliponlywhole1895ratherthanignoreactingManuelVitorino.",
+                "kind": "institutional"
+              },
+              {
+                "id": "c02-brazil-historical-flag-asset",
+                "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Brazil_(1889%E2%80%931960).svg",
+                "title": "Brazil1889–1960,21-star historical flag",
+                "institution": "Wikimedia Commons",
+                "accessed": "2026-10-01",
+                "usage": "Full historical source body/section read: Readindividualassetdescription,historicaldate/design,filehistoryandpublic-domain licensing; exactarchiveversiondownloadedunchanged.",
+                "kind": "institutional",
+                "license": "Public domain",
+                "attribution": "Raimundo Teixeira Mendes; Wikimedia Commons contributors",
+                "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/archive/9/92/20241118201020%21Flag_of_Brazil_%281889%E2%80%931960%29.svg"
+              },
+              {
+                "id": "c02-brazil-flag-decree-1889",
+                "url": "https://www.presidencia.gov.br/ccivil_03/decreto/1851-1899/d0004.htm",
+                "title": "Decree4 of19November1889 — national flag design",
+                "institution": "Presidency of Brazil, constitutional and legislative archive",
+                "accessed": "2026-10-01",
+                "usage": "Read complete primary decree body, especially Article1: national flag has green field, yellow lozenge, blue celestial sphere, white motto band and21stars. Historical design evidence, independent of the Commons SVG rendering.",
+                "kind": "primary"
+              },
+              {
+                "id": "c02-brazil-flag-decree-1960",
+                "url": "https://www.presidencia.gov.br/ccivil_03/decreto/antigos/d48124.htm",
+                "title": "Decree48124 of16April1960 — twenty-second flag star",
+                "institution": "Presidency of Brazil, constitutional and legislative archive",
+                "accessed": "2026-10-01",
+                "usage": "Read complete primary decree body: preamble confirms1889twenty-one-star design retained by1942law; Articles1–2addtwenty-second star effective21April1960. Used to establish continued historical21-star design through selected1893–1929interval, not to display the1960design earlier.",
+                "kind": "primary"
+              }
+            ],
+            "absenceOfEvidence": [
+              "Remainingpresidentlistheld:Fundajfullbodycouldnotbefetched;indexedsummaryisnotacceptedsoleevidence. Prudente1896–97medicalleavenotcovered.",
+              "Noaddedpoliticalclaimsbecausethe1891frameworkisalreadydocumented;sourceamendmentsnotprojectedbackwards."
+            ],
+            "reviewNotes": [
+              "Coordinator review requested primary statutory confirmation for the21-star flag. Two complete decree bodies independently read; existing flag value, temporal interval, entity scope and asset bytes preserved."
+            ]
+          },
+          "packageHash": "c2d1f3255cf4dcb2820b66e7fdea19c2e83416b7d07ce728d131f10ef24f81ac",
+          "receipt": null,
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "c2d1f3255cf4dcb2820b66e7fdea19c2e83416b7d07ce728d131f10ef24f81ac"
+          },
+          "at": "2026-10-01T21:28:54.367Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
       "validation": {
         "valid": true,
         "errors": [],
@@ -3735,7 +6275,34 @@
           "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
         ],
         "status": "historical-review",
-        "packageHash": "c2d1f3255cf4dcb2820b66e7fdea19c2e83416b7d07ce728d131f10ef24f81ac"
+        "packageHash": "9d0fe33701d1a122cbcdc7e955148050d518b74d34874668ed5b25a96c9217e7"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c02-ed61991aef85d48002bc57fc",
+        "packageHash": "9d0fe33701d1a122cbcdc7e955148050d518b74d34874668ed5b25a96c9217e7",
+        "productionFingerprint": "2f1e8042621758ce396d648ff3f65a33c3d903c38f4fc42ae44523f14f13ad03",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-02-coordinator"
+        },
+        "rationale": "Independently read full NationalLibrarycapital-history body and existing1891constitutionArticle2; centralbank monetarytable; officialPrudente biography (1894accession,Nov1896medicalleave,March1897return). Whole1895clipretainsactinggap. IndividualCommonsassetlicense/historychecked; original21-starSVGmatchedhash. Independentfullprimary1889decreeArt1specifies21stars and1960decreepreambleconfirmsretentionunder1942law until22staraddition21April1960. Bounded1893–1929flag ishistorical21-star nationaldesign, notmodern27-star fallback. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T21:28:54.612Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c02-ed61991aef85d48002bc57fc",
+        "packageHash": "9d0fe33701d1a122cbcdc7e955148050d518b74d34874668ed5b25a96c9217e7",
+        "beforeFingerprint": "2f1e8042621758ce396d648ff3f65a33c3d903c38f4fc42ae44523f14f13ad03",
+        "afterFingerprint": "4a2f3bf005d7adf08bdddcd8432c85cb313f715bb88a20c45f0880deb4a15367",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
       }
     },
     {
