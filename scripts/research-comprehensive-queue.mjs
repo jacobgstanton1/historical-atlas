@@ -1,0 +1,30 @@
+import fs from 'node:fs';import path from 'node:path';
+import {readJSON,saveJSON,digest,root,isCLI,readContext} from './research-common.mjs';
+import {withLock,atomicWrite} from './research-queue.mjs';
+import {validateDossier,acceptDossier,integrateDossier,fingerprint,sourceIndex,lookupSources,ingestCandidates} from './research-comprehensive.mjs';
+const requireState=(ok,msg)=>{if(!ok)throw Error(msg);};
+export function initializeDossierQueue(file,jobs,{concurrency=2}={}){return withLock(file,()=>{requireState(!fs.existsSync(file),'Existing research state must be preserved');requireState(Number.isInteger(concurrency)&&concurrency>=1&&concurrency<=3,'Pilot concurrency must be1–3');requireState(new Set(jobs.map(j=>j.id)).size===jobs.length,'Duplicate assignment');const q={schemaVersion:2,revision:0,concurrency,integrationConcurrency:1,jobs:jobs.map(j=>({...structuredClone(j),status:'queued',history:[]}))};atomicWrite(file,q);return q;});}
+export function transitionDossierQueue(q,action,args,context){
+ const next=structuredClone(q),j=next.jobs.find(j=>j.id===args.jobId);requireState(j,'Unknown bounded assignment');const owner=()=>requireState(j.owner===args.workerId&&args.workerId,'Worker ownership required'),coordinator=()=>requireState(args.actor?.role==='coordinator'&&args.actor.id,'Coordinator identity required');
+ if(action==='claim'){requireState(j.status==='queued'&&args.workerId,'Queued assignment and worker required');requireState(!next.jobs.some(x=>x.status==='researching'&&x.owner===args.workerId),'Worker already owns an assignment');requireState(next.jobs.filter(x=>x.status==='researching').length<next.concurrency,'Concurrency reached');j.owner=args.workerId;j.status='researching';}
+ else if(action==='submit'){owner();requireState(j.status==='researching'&&args.package?.worker.id===j.owner&&args.package.jobId===j.id,'Exact owner submission');j.package=structuredClone(args.package);j.packageHash=digest(j.package);j.status='submitted';}
+ else if(action==='validate'){coordinator();requireState(j.status==='submitted','Submitted package required');j.validation=validateDossier(j.package,j,context);j.status=j.validation.status;}
+ else if(action==='review'){coordinator();requireState(['validated','historical-review'].includes(j.status)&&j.validation.valid,'Validated evidence required');j.acceptance=acceptDossier(j.package,j,context,args.review);j.status=j.acceptance.acceptedClaimIds.length?'accepted':Object.values(args.review.decisions).every(d=>d==='rejected')?'rejected':'historical-review';}
+ else if(action==='recover'){coordinator();requireState(j.status==='researching'&&args.interrupted===true&&args.reason?.trim(),'Explicit interrupted-worker recovery required');j.status='queued';delete j.owner;}
+ else if(action==='recontextualize'){coordinator();requireState(['submitted','validated','historical-review','accepted'].includes(j.status)&&args.reason?.trim(),'Retained package and context rationale required');requireState(digest(j.package)===j.packageHash&&args.expectedPackageHash===j.packageHash,'Preserved evidence changed');j.contextRevisions??=[];j.contextRevisions.push({package:structuredClone(j.package),acceptance:j.acceptance||null,reason:args.reason});j.productionFingerprint=fingerprint(context.directory||root);j.package.productionFingerprint=j.productionFingerprint;j.packageHash=digest(j.package);delete j.acceptance;delete j.validation;j.status='submitted';}
+ else throw Error('Unsupported state transition');
+ j.history.push({action,actor:args.actor?.id||args.workerId,reason:args.reason||null,packageHash:j.packageHash||null});next.revision++;return next;
+}
+export function updateDossierQueue(file,action,args,context){return withLock(file,()=>{const q=transitionDossierQueue(readJSON(file),action,args,context);atomicWrite(file,q);return q;});}
+export function integrateQueuedDossier(file,jobId,context,actor){return withLock(file,()=>{requireState(actor?.role==='coordinator'&&actor.id,'Coordinator required');const q=readJSON(file),j=q.jobs.find(x=>x.id===jobId);requireState(j?.status==='accepted','Accepted exact package required');const journal=path.join(context.directory||root,'research/comprehensive/integration-journal.json');let result;
+ if(fs.existsSync(journal)){const saved=readJSON(journal);if(saved.status==='completed'&&saved.packageHash===j.packageHash){requireState(saved.afterFingerprint===fingerprint(context.directory||root),'Production changed after durable integration');result={applied:true,acceptedClaims:j.acceptance.acceptedClaimIds.length,afterFingerprint:saved.afterFingerprint,recoveredQueueReceipt:true};}}
+ result??=integrateDossier(j.package,j,context,j.acceptance,{apply:true});j.status='integrated';j.integration=result;j.history.push({action:'integrated',actor:actor.id});q.revision++;atomicWrite(file,q);return result;});}
+// CLI actions are offline and read-only except explicit report/index/candidate output paths.
+if(isCLI(import.meta.url)){
+ const [command,input,output]=process.argv.slice(2),context=readContext();
+ if(command==='source-index'){const preserved=fs.readdirSync(path.join(root,'research/campaign-02/packages')).filter(f=>f.endsWith('.json')).map(f=>readJSON(path.join(root,'research/campaign-02/packages',f)));saveJSON(input,sourceIndex(context,preserved));}
+ else if(command==='source-search'){const index=readJSON(input);requireState(index.productionFingerprint===fingerprint(),'Stale source index: rebuild once for new fingerprint');console.log(JSON.stringify(lookupSources(index,output).slice(0,15),null,2));}
+ else if(command==='validate'){const pkg=readJSON(input),job=readJSON(output);const result=validateDossier(pkg,job,context);console.log(JSON.stringify(result,null,2));if(!result.valid)process.exitCode=1;}
+ else if(command==='ingest'){const bundle=readJSON(input);saveJSON(output,ingestCandidates(bundle.records,bundle.provider,context));}
+ else throw Error('Usage: research-comprehensive-queue.mjs source-index output | source-search index query | validate package job | ingest bundle output');
+}

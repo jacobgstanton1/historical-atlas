@@ -16,6 +16,8 @@ export function readJSON(file) {return JSON.parse(fs.readFileSync(file,'utf8').r
 export function saveJSON(file, value) {fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(value,null,2)+'\n');}
 export function productionFingerprint(directory=root) {
   const hashes=Object.fromEntries(productionFiles.map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(directory,file))).digest('hex')]));
+  const comprehensive=path.join(directory,'data/comprehensive-dossiers.json');
+  if(fs.existsSync(comprehensive))hashes['data/comprehensive-dossiers.json']=crypto.createHash('sha256').update(fs.readFileSync(comprehensive)).digest('hex');
   const db=readJSON(path.join(directory,'data/historical-entities.json'));
   for(const e of db.entities||[])for(const f of e.flags||[])if(f.researchProvenance){
     if(!/^\.\/assets\/flags\/[a-zA-Z0-9_-]+\.svg$/.test(f.asset||''))throw Error('Unsafe production flag asset');
