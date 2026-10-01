@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "package-c01-3fabcad60b78aa93e8732f4b",
+  "jobId": "c01-3fabcad60b78aa93e8732f4b",
+  "worker": {
+    "id": "campaign-research",
+    "specialism": "entity-core"
+  },
+  "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+  "entityId": "qing-imperial-framework",
+  "mapIds": [
+    "entity-manchu-empire",
+    "entity-qing-empire"
+  ],
+  "period": {
+    "from": "1862",
+    "until": "1908"
+  },
+  "category": "core-state",
+  "categories": [
+    "capital",
+    "leadership",
+    "political-institutional",
+    "currency"
+  ],
+  "claims": [
+    {
+      "id": "c01-qing-tongzhi",
+      "category": "leadership",
+      "value": "Tongzhi Emperor",
+      "role": "Emperor",
+      "temporal": {
+        "kind": "interval",
+        "from": "1862",
+        "until": "1874"
+      },
+      "entityId": "qing-imperial-framework",
+      "geographicScope": {
+        "description": "Historical office or central institution of Qing Empire; not an assertion of uniform control of every map polygon",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "c01-palace-tongzhi"
+      ],
+      "evidence": [
+        {
+          "sourceId": "c01-palace-tongzhi",
+          "note": "Official Palace Museum biography body describes Zaichun as Tongzhi emperor and distinguishes minority and dowager governance from holding the imperial office. Published heading1862–1874 is an era-year label; chosenyears are conservative. No Gregorian conversion of lunar death day.",
+          "supportedPrecision": "year",
+          "supportsClaim": true,
+          "from": "1862",
+          "until": "1874"
+        }
+      ],
+      "reviewStatus": "clear",
+      "cautions": []
+    },
+    {
+      "id": "c01-qing-guangxu",
+      "category": "leadership",
+      "value": "Guangxu Emperor",
+      "role": "Emperor",
+      "temporal": {
+        "kind": "interval",
+        "from": "1876",
+        "until": "1908"
+      },
+      "entityId": "qing-imperial-framework",
+      "geographicScope": {
+        "description": "Historical office or central institution of Qing Empire; not an assertion of uniform control of every map polygon",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "c01-palace-guangxu"
+      ],
+      "evidence": [
+        {
+          "sourceId": "c01-palace-guangxu",
+          "note": "Official Palace Museum body names Zaitian as Guangxu emperor, notes minority, later confinement and continued reign title;1875–1908 heading. Selected start1876 omits uncertain1875 transition; titular office does not assert personal executive control.",
+          "supportedPrecision": "year",
+          "supportsClaim": true,
+          "from": "1876",
+          "until": "1908"
+        }
+      ],
+      "reviewStatus": "clear",
+      "cautions": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "c01-palace-tongzhi",
+      "title": "Tongzhi Emperor",
+      "institution": "Palace Museum, Beijing",
+      "url": "https://www.dpm.org.cn/court/lineage/226248.html",
+      "usage": "Read full museum biography body; imperial office and regency distinction; lunar dates not converted.",
+      "kind": "institutional",
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "c01-palace-guangxu",
+      "title": "Guangxu Emperor",
+      "institution": "Palace Museum, Beijing",
+      "url": "https://www.dpm.org.cn/court/lineage/226254.html",
+      "usage": "Read full museum biography body through PowerShell HTTP200 after browser fetch timeout; title chronology, regency and confinement; no invented lunar calendar conversion.",
+      "kind": "institutional",
+      "accessed": "2026-10-01"
+    }
+  ],
+  "absenceOfEvidence": [
+    "Currency not established by the leadership source."
+  ],
+  "reviewNotes": [
+    "Capital and generic imperial government already curated, omitted to avoid duplication.",
+    "1875 imperial succession remains uncovered by these conservative year-precision additions. Source headings are era-year labels; exact dates not imported.",
+    "Imperial title is not evidence of uninterrupted personal authority; dowagers and regents exercised practical power."
+  ]
+}

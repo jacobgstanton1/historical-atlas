@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 3,
+  "revision": 46,
   "concurrency": 3,
   "jobs": [
     {
@@ -125,7 +125,7 @@
       },
       "scopeId": "scope-51444937ff7ab78b3bfd9c6d",
       "id": "c01-3fabcad60b78aa93e8732f4b",
-      "status": "researching",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -133,10 +133,192 @@
           "at": "2026-10-01T19:30:24.755Z",
           "actor": "campaign-research",
           "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:35:42.869Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:35:42.965Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:35:42.998Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read official Palace Museum Tongzhi body and Guangxu HTTP200 body. Imperial title is distinct from personal control; source era/year precision retained; 1875 gap remains. No conversion of lunar dates or government/succession inference. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:36:30.241Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign-research",
-      "claimedAt": "2026-10-01T19:30:24.755Z"
+      "claimedAt": "2026-10-01T19:30:24.755Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-3fabcad60b78aa93e8732f4b",
+        "jobId": "c01-3fabcad60b78aa93e8732f4b",
+        "worker": {
+          "id": "campaign-research",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "entityId": "qing-imperial-framework",
+        "mapIds": [
+          "entity-manchu-empire",
+          "entity-qing-empire"
+        ],
+        "period": {
+          "from": "1862",
+          "until": "1908"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-qing-tongzhi",
+            "category": "leadership",
+            "value": "Tongzhi Emperor",
+            "role": "Emperor",
+            "temporal": {
+              "kind": "interval",
+              "from": "1862",
+              "until": "1874"
+            },
+            "entityId": "qing-imperial-framework",
+            "geographicScope": {
+              "description": "Historical office or central institution of Qing Empire; not an assertion of uniform control of every map polygon",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-palace-tongzhi"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-palace-tongzhi",
+                "note": "Official Palace Museum biography body describes Zaichun as Tongzhi emperor and distinguishes minority and dowager governance from holding the imperial office. Published heading1862–1874 is an era-year label; chosenyears are conservative. No Gregorian conversion of lunar death day.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1862",
+                "until": "1874"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-qing-guangxu",
+            "category": "leadership",
+            "value": "Guangxu Emperor",
+            "role": "Emperor",
+            "temporal": {
+              "kind": "interval",
+              "from": "1876",
+              "until": "1908"
+            },
+            "entityId": "qing-imperial-framework",
+            "geographicScope": {
+              "description": "Historical office or central institution of Qing Empire; not an assertion of uniform control of every map polygon",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-palace-guangxu"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-palace-guangxu",
+                "note": "Official Palace Museum body names Zaitian as Guangxu emperor, notes minority, later confinement and continued reign title;1875–1908 heading. Selected start1876 omits uncertain1875 transition; titular office does not assert personal executive control.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1876",
+                "until": "1908"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-palace-tongzhi",
+            "title": "Tongzhi Emperor",
+            "institution": "Palace Museum, Beijing",
+            "url": "https://www.dpm.org.cn/court/lineage/226248.html",
+            "usage": "Read full museum biography body; imperial office and regency distinction; lunar dates not converted.",
+            "kind": "institutional",
+            "accessed": "2026-10-01"
+          },
+          {
+            "id": "c01-palace-guangxu",
+            "title": "Guangxu Emperor",
+            "institution": "Palace Museum, Beijing",
+            "url": "https://www.dpm.org.cn/court/lineage/226254.html",
+            "usage": "Read full museum biography body through PowerShell HTTP200 after browser fetch timeout; title chronology, regency and confinement; no invented lunar calendar conversion.",
+            "kind": "institutional",
+            "accessed": "2026-10-01"
+          }
+        ],
+        "absenceOfEvidence": [
+          "Currency not established by the leadership source."
+        ],
+        "reviewNotes": [
+          "Capital and generic imperial government already curated, omitted to avoid duplication.",
+          "1875 imperial succession remains uncovered by these conservative year-precision additions. Source headings are era-year labels; exact dates not imported.",
+          "Imperial title is not evidence of uninterrupted personal authority; dowagers and regents exercised practical power."
+        ]
+      },
+      "packageHash": "fa06c0acc2fe9c10fa45aad7a89ed3fa7edb3e3def7761ed958c0a805843ca06",
+      "submittedAt": "2026-10-01T19:35:42.869Z",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "fa06c0acc2fe9c10fa45aad7a89ed3fa7edb3e3def7761ed958c0a805843ca06"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-3fabcad60b78aa93e8732f4b",
+        "packageHash": "fa06c0acc2fe9c10fa45aad7a89ed3fa7edb3e3def7761ed958c0a805843ca06",
+        "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read official Palace Museum Tongzhi body and Guangxu HTTP200 body. Imperial title is distinct from personal control; source era/year precision retained; 1875 gap remains. No conversion of lunar dates or government/succession inference. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:35:42.998Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-3fabcad60b78aa93e8732f4b",
+        "packageHash": "fa06c0acc2fe9c10fa45aad7a89ed3fa7edb3e3def7761ed958c0a805843ca06",
+        "beforeFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+        "afterFingerprint": "f7f614f145b30a0eb2bedf8d04bae3496aef3a104e09f94919aaec9e782f2ae9",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "b13-siam-absolute",
@@ -245,7 +427,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 123,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "f7f614f145b30a0eb2bedf8d04bae3496aef3a104e09f94919aaec9e782f2ae9",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -261,9 +443,294 @@
       },
       "scopeId": "scope-cfca35231b14ac0ad463a661",
       "id": "c01-4093e4923efde98a16e11a33",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:35:43.018Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:35:59.290Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:35:59.388Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:35:59.440Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read complete LOC Chulalongkorn chapter. Reign1868–1910 supports bounded1870–1910 title; regency does not imply personal control. Capital/currency omissions remain explicit. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:36:30.424Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:36:30.613Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:36:30.730Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read complete LOC Chulalongkorn chapter. Reign1868–1910 supports bounded1870–1910 title; regency does not imply personal control. Capital/currency omissions remain explicit. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:36:33.804Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-research",
+      "claimedAt": "2026-10-01T19:35:43.018Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-4093e4923efde98a16e11a33",
+        "jobId": "c01-4093e4923efde98a16e11a33",
+        "worker": {
+          "id": "campaign-research",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "f7f614f145b30a0eb2bedf8d04bae3496aef3a104e09f94919aaec9e782f2ae9",
+        "entityId": "b13-siam-absolute",
+        "mapIds": [
+          "entity-rattanakosin-kingdom",
+          "entity-siam"
+        ],
+        "period": {
+          "from": "1870",
+          "until": "1910"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-siam-rama-v",
+            "category": "leadership",
+            "value": "Chulalongkorn (Rama V)",
+            "role": "King",
+            "temporal": {
+              "kind": "interval",
+              "from": "1870",
+              "until": "1910"
+            },
+            "entityId": "b13-siam-absolute",
+            "geographicScope": {
+              "description": "Historical office or central institution of Siam — Chakkri monarchy; not an assertion of uniform control of every map polygon",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-loc-chulalongkorn"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-loc-chulalongkorn",
+                "note": "LOC historical chapter full body names Chulalongkorn reign1868–1910; minority and regency precede1873coronation. Bounded1870–1910 titleKing does not claim he exercised full personal control as a minor.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1870",
+                "until": "1910"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-loc-chulalongkorn",
+            "title": "Thailand: Chulalongkorn's Reforms",
+            "institution": "Library of Congress, Federal Research Division (public chapter mirror)",
+            "url": "https://countrystudies.us/thailand/16.htm",
+            "usage": "Read entire chapter body:1868–1910king, regency and1873coronation, gradualcentralization.",
+            "kind": "institutional",
+            "accessed": "2026-10-01"
+          }
+        ],
+        "absenceOfEvidence": [
+          "Bangkok capital continuity across the entire interval requires stronger dedicated documentation before adding a capital fact.",
+          "Currency deliberately left missing; no exclusive monetary standard inferred from reform narrative."
+        ],
+        "reviewNotes": [
+          "Existingabsolute monarchy and genericgovernment preserved.",
+          "Year1910 endpoint remains imprecise; no precise death day invented."
+        ]
+      },
+      "packageHash": "8a26744ab1c4e3a8db533f395b4582ff763944a01a3ecd9cc9073fb788c57358",
+      "submittedAt": "2026-10-01T19:35:59.290Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-4093e4923efde98a16e11a33",
+            "jobId": "c01-4093e4923efde98a16e11a33",
+            "worker": {
+              "id": "campaign-research",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "b13-siam-absolute",
+            "mapIds": [
+              "entity-rattanakosin-kingdom",
+              "entity-siam"
+            ],
+            "period": {
+              "from": "1870",
+              "until": "1910"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-siam-rama-v",
+                "category": "leadership",
+                "value": "Chulalongkorn (Rama V)",
+                "role": "King",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1870",
+                  "until": "1910"
+                },
+                "entityId": "b13-siam-absolute",
+                "geographicScope": {
+                  "description": "Historical office or central institution of Siam — Chakkri monarchy; not an assertion of uniform control of every map polygon",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-loc-chulalongkorn"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-loc-chulalongkorn",
+                    "note": "LOC historical chapter full body names Chulalongkorn reign1868–1910; minority and regency precede1873coronation. Bounded1870–1910 titleKing does not claim he exercised full personal control as a minor.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1870",
+                    "until": "1910"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-loc-chulalongkorn",
+                "title": "Thailand: Chulalongkorn's Reforms",
+                "institution": "Library of Congress, Federal Research Division (public chapter mirror)",
+                "url": "https://countrystudies.us/thailand/16.htm",
+                "usage": "Read entire chapter body:1868–1910king, regency and1873coronation, gradualcentralization.",
+                "kind": "institutional",
+                "accessed": "2026-10-01"
+              }
+            ],
+            "absenceOfEvidence": [
+              "Bangkok capital continuity across the entire interval requires stronger dedicated documentation before adding a capital fact.",
+              "Currency deliberately left missing; no exclusive monetary standard inferred from reform narrative."
+            ],
+            "reviewNotes": [
+              "Existingabsolute monarchy and genericgovernment preserved.",
+              "Year1910 endpoint remains imprecise; no precise death day invented."
+            ]
+          },
+          "packageHash": "b8e5c0f81514715225101b9660221c6ff55670f09b88b244e1b621b4a89d9044",
+          "receipt": {
+            "schemaVersion": 1,
+            "status": "accepted",
+            "jobId": "c01-4093e4923efde98a16e11a33",
+            "packageHash": "b8e5c0f81514715225101b9660221c6ff55670f09b88b244e1b621b4a89d9044",
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "coordinator": {
+              "role": "coordinator",
+              "id": "campaign-01-coordinator"
+            },
+            "rationale": "Independently read complete LOC Chulalongkorn chapter. Reign1868–1910 supports bounded1870–1910 title; regency does not imply personal control. Capital/currency omissions remain explicit. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+            "reviewResolved": true,
+            "reviewedIssues": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "acceptedAt": "2026-10-01T19:35:59.440Z"
+          },
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "b8e5c0f81514715225101b9660221c6ff55670f09b88b244e1b621b4a89d9044"
+          },
+          "at": "2026-10-01T19:36:30.424Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "8a26744ab1c4e3a8db533f395b4582ff763944a01a3ecd9cc9073fb788c57358"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-4093e4923efde98a16e11a33",
+        "packageHash": "8a26744ab1c4e3a8db533f395b4582ff763944a01a3ecd9cc9073fb788c57358",
+        "productionFingerprint": "f7f614f145b30a0eb2bedf8d04bae3496aef3a104e09f94919aaec9e782f2ae9",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read complete LOC Chulalongkorn chapter. Reign1868–1910 supports bounded1870–1910 title; regency does not imply personal control. Capital/currency omissions remain explicit. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:36:30.730Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-4093e4923efde98a16e11a33",
+        "packageHash": "8a26744ab1c4e3a8db533f395b4582ff763944a01a3ecd9cc9073fb788c57358",
+        "beforeFingerprint": "f7f614f145b30a0eb2bedf8d04bae3496aef3a104e09f94919aaec9e782f2ae9",
+        "afterFingerprint": "87b674a7a8a3c78163867eace44d6ed085a2286871ee91450de567f78c6ad453",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "brazil-pedro-ii-imperial-framework",
@@ -359,7 +826,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 96,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "87b674a7a8a3c78163867eace44d6ed085a2286871ee91450de567f78c6ad453",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -375,9 +842,358 @@
       },
       "scopeId": "scope-51c4e6717104a2e9363f6e45",
       "id": "c01-57652bd57c0f5cca2c91757d",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:35:59.463Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:35:59.498Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:35:59.601Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:35:59.630Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read municipal MultiRio historical body (continuous capital1763–1960) and complete official BCB monetary standards PDF (old reis to1942). Imperial interval clip supported; old currency distinct from modern real and exclusive physical circulation not asserted. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:36:33.952Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:36:33.968Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:36:34.074Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read municipal MultiRio historical body (continuous capital1763–1960) and complete official BCB monetary standards PDF (old reis to1942). Imperial interval clip supported; old currency distinct from modern real and exclusive physical circulation not asserted. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:36:36.716Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-research",
+      "claimedAt": "2026-10-01T19:35:59.463Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-57652bd57c0f5cca2c91757d",
+        "jobId": "c01-57652bd57c0f5cca2c91757d",
+        "worker": {
+          "id": "campaign-research",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "87b674a7a8a3c78163867eace44d6ed085a2286871ee91450de567f78c6ad453",
+        "entityId": "brazil-pedro-ii-imperial-framework",
+        "mapIds": [
+          "entity-kingdom-of-brazil"
+        ],
+        "period": {
+          "from": "1841",
+          "until": "1888"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-brazil-rio",
+            "category": "capital",
+            "value": "Rio de Janeiro",
+            "temporal": {
+              "kind": "interval",
+              "from": "1841",
+              "until": "1888"
+            },
+            "entityId": "brazil-pedro-ii-imperial-framework",
+            "geographicScope": {
+              "description": "Historical office or central institution of Empire of Brazil — late constitutional monarchy; not an assertion of uniform control of every map polygon",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-multirio-capital"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-multirio-capital",
+                "note": "Municipal educational history body statesRio capital from1763until1960; coherent imperial interval1841–1888 lies strictlywithinthat span. Different Brazilian frameworks are not merged.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1841",
+                "until": "1888"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-brazil-reis",
+            "category": "currency",
+            "value": "Real (plural: réis)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1841",
+              "until": "1888"
+            },
+            "entityId": "brazil-pedro-ii-imperial-framework",
+            "geographicScope": {
+              "description": "Historical office or central institution of Empire of Brazil — late constitutional monarchy; not an assertion of uniform control of every map polygon",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-bcb-monetary-standards"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-bcb-monetary-standards",
+                "note": "Read one-page officialCentralBank monetary chronology: réis fromcolonialperiod toOctober1942; chosen1841–1888period is withinthat sourcedcurrency span. Oldreal distinctfrom1994currency; does notassertuniformexclusivephysicalcirculation.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1841",
+                "until": "1888"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-multirio-capital",
+            "title": "Rio de Janeiro, city capital: Introduction",
+            "institution": "MultiRio, municipal educational media institution",
+            "url": "https://multi.rio/index.php/historia-do-brasil/rio-de-janeiro/3351",
+            "usage": "Read full educational body paragraphs265and274: Rio nationalcapital1763–1960, boundedimperialuseonly.",
+            "kind": "institutional",
+            "accessed": "2026-10-01"
+          },
+          {
+            "id": "c01-bcb-monetary-standards",
+            "title": "Síntese dos Padrões Monetários Brasileiros",
+            "institution": "Banco Central do Brasil, Museu de Valores",
+            "url": "https://www.bcb.gov.br/content/acessoinformacao/museudocs/pub/SintesePadroesMonetariosBrasileiros.pdf",
+            "usage": "Read entire one-page primary official monetary standards chronology. Réis predates1841andcontinuesuntil1942; historicalcurrencyname only.",
+            "kind": "primary-document",
+            "accessed": "2026-10-01"
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": [
+          "Pedro II leadership and constitutional framework already sourced and unchanged.",
+          "Interval1841–1888 deliberately stops before1889transition; no dayprecisionclaimfromyearprecisioncapitalhistory."
+        ]
+      },
+      "packageHash": "016a7f6a7bf6761efc308fcc167bd3ae8b38c69de8f0d26ed3051fad445240cc",
+      "submittedAt": "2026-10-01T19:35:59.498Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-57652bd57c0f5cca2c91757d",
+            "jobId": "c01-57652bd57c0f5cca2c91757d",
+            "worker": {
+              "id": "campaign-research",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "brazil-pedro-ii-imperial-framework",
+            "mapIds": [
+              "entity-kingdom-of-brazil"
+            ],
+            "period": {
+              "from": "1841",
+              "until": "1888"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-brazil-rio",
+                "category": "capital",
+                "value": "Rio de Janeiro",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1841",
+                  "until": "1888"
+                },
+                "entityId": "brazil-pedro-ii-imperial-framework",
+                "geographicScope": {
+                  "description": "Historical office or central institution of Empire of Brazil — late constitutional monarchy; not an assertion of uniform control of every map polygon",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-multirio-capital"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-multirio-capital",
+                    "note": "Municipal educational history body statesRio capital from1763until1960; coherent imperial interval1841–1888 lies strictlywithinthat span. Different Brazilian frameworks are not merged.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1841",
+                    "until": "1888"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-brazil-reis",
+                "category": "currency",
+                "value": "Real (plural: réis)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1841",
+                  "until": "1888"
+                },
+                "entityId": "brazil-pedro-ii-imperial-framework",
+                "geographicScope": {
+                  "description": "Historical office or central institution of Empire of Brazil — late constitutional monarchy; not an assertion of uniform control of every map polygon",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-bcb-monetary-standards"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-bcb-monetary-standards",
+                    "note": "Read one-page officialCentralBank monetary chronology: réis fromcolonialperiod toOctober1942; chosen1841–1888period is withinthat sourcedcurrency span. Oldreal distinctfrom1994currency; does notassertuniformexclusivephysicalcirculation.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1841",
+                    "until": "1888"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-multirio-capital",
+                "title": "Rio de Janeiro, city capital: Introduction",
+                "institution": "MultiRio, municipal educational media institution",
+                "url": "https://multi.rio/index.php/historia-do-brasil/rio-de-janeiro/3351",
+                "usage": "Read full educational body paragraphs265and274: Rio nationalcapital1763–1960, boundedimperialuseonly.",
+                "kind": "institutional",
+                "accessed": "2026-10-01"
+              },
+              {
+                "id": "c01-bcb-monetary-standards",
+                "title": "Síntese dos Padrões Monetários Brasileiros",
+                "institution": "Banco Central do Brasil, Museu de Valores",
+                "url": "https://www.bcb.gov.br/content/acessoinformacao/museudocs/pub/SintesePadroesMonetariosBrasileiros.pdf",
+                "usage": "Read entire one-page primary official monetary standards chronology. Réis predates1841andcontinuesuntil1942; historicalcurrencyname only.",
+                "kind": "primary-document",
+                "accessed": "2026-10-01"
+              }
+            ],
+            "absenceOfEvidence": [],
+            "reviewNotes": [
+              "Pedro II leadership and constitutional framework already sourced and unchanged.",
+              "Interval1841–1888 deliberately stops before1889transition; no dayprecisionclaimfromyearprecisioncapitalhistory."
+            ]
+          },
+          "packageHash": "f2aac779805fb174ec3a998eb299e9f4827efb70ac511716d558a32e45339ee6",
+          "receipt": {
+            "schemaVersion": 1,
+            "status": "accepted",
+            "jobId": "c01-57652bd57c0f5cca2c91757d",
+            "packageHash": "f2aac779805fb174ec3a998eb299e9f4827efb70ac511716d558a32e45339ee6",
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "coordinator": {
+              "role": "coordinator",
+              "id": "campaign-01-coordinator"
+            },
+            "rationale": "Independently read municipal MultiRio historical body (continuous capital1763–1960) and complete official BCB monetary standards PDF (old reis to1942). Imperial interval clip supported; old currency distinct from modern real and exclusive physical circulation not asserted. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+            "reviewResolved": true,
+            "reviewedIssues": [
+              "Coordinator job cautions require historical review",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "acceptedAt": "2026-10-01T19:35:59.630Z"
+          },
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "f2aac779805fb174ec3a998eb299e9f4827efb70ac511716d558a32e45339ee6"
+          },
+          "at": "2026-10-01T19:36:33.952Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "016a7f6a7bf6761efc308fcc167bd3ae8b38c69de8f0d26ed3051fad445240cc"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-57652bd57c0f5cca2c91757d",
+        "packageHash": "016a7f6a7bf6761efc308fcc167bd3ae8b38c69de8f0d26ed3051fad445240cc",
+        "productionFingerprint": "87b674a7a8a3c78163867eace44d6ed085a2286871ee91450de567f78c6ad453",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read municipal MultiRio historical body (continuous capital1763–1960) and complete official BCB monetary standards PDF (old reis to1942). Imperial interval clip supported; old currency distinct from modern real and exclusive physical circulation not asserted. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:36:34.074Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-57652bd57c0f5cca2c91757d",
+        "packageHash": "016a7f6a7bf6761efc308fcc167bd3ae8b38c69de8f0d26ed3051fad445240cc",
+        "beforeFingerprint": "87b674a7a8a3c78163867eace44d6ed085a2286871ee91450de567f78c6ad453",
+        "afterFingerprint": "80e0192325db58d7fb4bec615d8e769f4f2ed48df72fb9e4e72f0da0ae0d151b",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "iran-early-pahlavi-framework",
@@ -468,7 +1284,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 14,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "80e0192325db58d7fb4bec615d8e769f4f2ed48df72fb9e4e72f0da0ae0d151b",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -484,7 +1300,7 @@
       },
       "scopeId": "scope-9b75f9902e39daca13d1acf4",
       "id": "c01-5a7c0879d7be0be7ce2a4a09",
-      "status": "researching",
+      "status": "integrated",
       "attempt": 1,
       "history": [
         {
@@ -492,10 +1308,280 @@
           "at": "2026-10-01T19:30:24.771Z",
           "actor": "campaign-design",
           "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:35:59.662Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:35:59.769Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:35:59.800Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read Iranica Capital Cities Qajar/Pahlavi section through twentieth-century continuity. Tehran1926–1932 is a historical interval clip, not modern fallback or accession. Existing Reza Shah facts unchanged. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:36:36.817Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:36:36.916Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:36:36.986Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read Iranica Capital Cities Qajar/Pahlavi section through twentieth-century continuity. Tehran1926–1932 is a historical interval clip, not modern fallback or accession. Existing Reza Shah facts unchanged. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:36:39.291Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
         }
       ],
       "owner": "campaign-design",
-      "claimedAt": "2026-10-01T19:30:24.771Z"
+      "claimedAt": "2026-10-01T19:30:24.771Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-5a7c0879d7be0be7ce2a4a09",
+        "jobId": "c01-5a7c0879d7be0be7ce2a4a09",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "80e0192325db58d7fb4bec615d8e769f4f2ed48df72fb9e4e72f0da0ae0d151b",
+        "entityId": "iran-early-pahlavi-framework",
+        "mapIds": [
+          "entity-iran"
+        ],
+        "period": {
+          "from": "1926",
+          "until": "1932"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-iran-early-pahlavi-tehran",
+            "category": "capital",
+            "value": "Tehran",
+            "temporal": {
+              "kind": "interval",
+              "from": "1926",
+              "until": "1932"
+            },
+            "entityId": "iran-early-pahlavi-framework",
+            "geographicScope": {
+              "description": "Iran — early Pahlavi constitutional framework within its existing editorial historical interval; office/capital is an institution of that entity, not evidence about every mapped polygon.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-iran-capital-cities"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-iran-capital-cities",
+                "note": "Iranica explicitly discusses Tehran as capital under the Qajars and Pahlavis, including twentieth-century continuity. Claim is clipped to 1926–1932, not an accession or founding date.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1926",
+                "until": "1932"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-iran-capital-cities",
+            "title": "Capital Cities — Under the Qajars and Pahlavis",
+            "institution": "Encyclopaedia Iranica; C. E. Bosworth",
+            "url": "https://www.iranicaonline.org/articles/capital-cities/",
+            "accessed": "2026-10-01",
+            "kind": "academic-institutional",
+            "usage": "Read full body of Islamic-period section, especially Under the Qajars and Pahlavis: Tehran capital adoption 1786 and continued twentieth-century role. Supports only capital; no modern identity fallback or regime continuity inference."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Existing Reza Shah leadership, political status and government framework already cover this assignment and are preserved.",
+          "Currency transition was not researched sufficiently for acceptance; no continuity assumed."
+        ],
+        "reviewNotes": [
+          "Full source bodies read independently from the preliminary candidate ledger. Every claim remains subject to coordinator evidence review before integration."
+        ]
+      },
+      "packageHash": "dde2d4af3147c4e032729b5859425e50a1c3ac5de7b0823a5647a2e5312053a9",
+      "submittedAt": "2026-10-01T19:35:59.662Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-5a7c0879d7be0be7ce2a4a09",
+            "jobId": "c01-5a7c0879d7be0be7ce2a4a09",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "iran-early-pahlavi-framework",
+            "mapIds": [
+              "entity-iran"
+            ],
+            "period": {
+              "from": "1926",
+              "until": "1932"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-iran-early-pahlavi-tehran",
+                "category": "capital",
+                "value": "Tehran",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1926",
+                  "until": "1932"
+                },
+                "entityId": "iran-early-pahlavi-framework",
+                "geographicScope": {
+                  "description": "Iran — early Pahlavi constitutional framework within its existing editorial historical interval; office/capital is an institution of that entity, not evidence about every mapped polygon.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-iran-capital-cities"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-iran-capital-cities",
+                    "note": "Iranica explicitly discusses Tehran as capital under the Qajars and Pahlavis, including twentieth-century continuity. Claim is clipped to 1926–1932, not an accession or founding date.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1926",
+                    "until": "1932"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-iran-capital-cities",
+                "title": "Capital Cities — Under the Qajars and Pahlavis",
+                "institution": "Encyclopaedia Iranica; C. E. Bosworth",
+                "url": "https://www.iranicaonline.org/articles/capital-cities/",
+                "accessed": "2026-10-01",
+                "kind": "academic-institutional",
+                "usage": "Read full body of Islamic-period section, especially Under the Qajars and Pahlavis: Tehran capital adoption 1786 and continued twentieth-century role. Supports only capital; no modern identity fallback or regime continuity inference."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Existing Reza Shah leadership, political status and government framework already cover this assignment and are preserved.",
+              "Currency transition was not researched sufficiently for acceptance; no continuity assumed."
+            ],
+            "reviewNotes": [
+              "Full source bodies read independently from the preliminary candidate ledger. Every claim remains subject to coordinator evidence review before integration."
+            ]
+          },
+          "packageHash": "e9fe7d4877880777c4351023394d4c0addc24e3a909eed1e61784a74f5e9a482",
+          "receipt": {
+            "schemaVersion": 1,
+            "status": "accepted",
+            "jobId": "c01-5a7c0879d7be0be7ce2a4a09",
+            "packageHash": "e9fe7d4877880777c4351023394d4c0addc24e3a909eed1e61784a74f5e9a482",
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "coordinator": {
+              "role": "coordinator",
+              "id": "campaign-01-coordinator"
+            },
+            "rationale": "Independently read Iranica Capital Cities Qajar/Pahlavi section through twentieth-century continuity. Tehran1926–1932 is a historical interval clip, not modern fallback or accession. Existing Reza Shah facts unchanged. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+            "reviewResolved": true,
+            "reviewedIssues": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "acceptedAt": "2026-10-01T19:35:59.800Z"
+          },
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "e9fe7d4877880777c4351023394d4c0addc24e3a909eed1e61784a74f5e9a482"
+          },
+          "at": "2026-10-01T19:36:36.817Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "dde2d4af3147c4e032729b5859425e50a1c3ac5de7b0823a5647a2e5312053a9"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-5a7c0879d7be0be7ce2a4a09",
+        "packageHash": "dde2d4af3147c4e032729b5859425e50a1c3ac5de7b0823a5647a2e5312053a9",
+        "productionFingerprint": "80e0192325db58d7fb4bec615d8e769f4f2ed48df72fb9e4e72f0da0ae0d151b",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read Iranica Capital Cities Qajar/Pahlavi section through twentieth-century continuity. Tehran1926–1932 is a historical interval clip, not modern fallback or accession. Existing Reza Shah facts unchanged. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:36:36.986Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-5a7c0879d7be0be7ce2a4a09",
+        "packageHash": "dde2d4af3147c4e032729b5859425e50a1c3ac5de7b0823a5647a2e5312053a9",
+        "beforeFingerprint": "80e0192325db58d7fb4bec615d8e769f4f2ed48df72fb9e4e72f0da0ae0d151b",
+        "afterFingerprint": "3b7129ef2bd0c0aa0d840f265679563ffdd9aec55970e57e4f93683299246ed7",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "ethiopia-zawditu-regency-core",
@@ -580,7 +1666,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 39,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "3b7129ef2bd0c0aa0d840f265679563ffdd9aec55970e57e4f93683299246ed7",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -596,9 +1682,348 @@
       },
       "scopeId": "scope-81d0969953acdbb88fb8b056",
       "id": "c01-61c1a5db8a1b0d2063279896",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:35:59.830Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:35:59.845Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:35:59.929Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:35:59.968Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read LOC interregnum and prewar bodies. Distinct concurrent empress and regent/heir offices supported; 1917–1929 excludes1930 change. Tafari imperial title not back-projected; sole effective authority not claimed. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:36:39.386Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:36:39.407Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:36:39.437Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read LOC interregnum and prewar bodies. Distinct concurrent empress and regent/heir offices supported; 1917–1929 excludes1930 change. Tafari imperial title not back-projected; sole effective authority not claimed. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:36:42.988Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T19:35:59.830Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-61c1a5db8a1b0d2063279896",
+        "jobId": "c01-61c1a5db8a1b0d2063279896",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "3b7129ef2bd0c0aa0d840f265679563ffdd9aec55970e57e4f93683299246ed7",
+        "entityId": "ethiopia-zawditu-regency-core",
+        "mapIds": [
+          "entity-ethiopia"
+        ],
+        "period": {
+          "from": "1917",
+          "until": "1929"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-ethiopia-zawditu-empress",
+            "category": "leadership",
+            "value": "Zawditu",
+            "temporal": {
+              "kind": "interval",
+              "from": "1917",
+              "until": "1929"
+            },
+            "entityId": "ethiopia-zawditu-regency-core",
+            "geographicScope": {
+              "description": "Ethiopia — Zawditu and Tafari regency within its existing editorial historical interval; office/capital is an institution of that entity, not evidence about every mapped polygon.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "b18-ethiopia-interregnum",
+              "b18-ethiopia-prewar"
+            ],
+            "evidence": [
+              {
+                "sourceId": "b18-ethiopia-interregnum",
+                "note": "LOC body describes Zawditu as empress after Iyasu deposition and dates her death to April 1930. The 1917–1929 bounded interval excludes accession/death uncertainty and makes no claim about sole effective authority.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1917",
+                "until": "1929"
+              },
+              {
+                "sourceId": "b18-ethiopia-prewar",
+                "note": "LOC body describes Zawditu as empress after Iyasu deposition and dates her death to April 1930. The 1917–1929 bounded interval excludes accession/death uncertainty and makes no claim about sole effective authority.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1917",
+                "until": "1929"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Empress"
+          },
+          {
+            "id": "c01-ethiopia-tafari-regent",
+            "category": "leadership",
+            "value": "Tafari Mekonnen",
+            "temporal": {
+              "kind": "interval",
+              "from": "1917",
+              "until": "1929"
+            },
+            "entityId": "ethiopia-zawditu-regency-core",
+            "geographicScope": {
+              "description": "Ethiopia — Zawditu and Tafari regency within its existing editorial historical interval; office/capital is an institution of that entity, not evidence about every mapped polygon.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "b18-ethiopia-interregnum"
+            ],
+            "evidence": [
+              {
+                "sourceId": "b18-ethiopia-interregnum",
+                "note": "LOC body identifies Tafari as regent and heir, distinct from the empress; discusses continuing regency, influence of Habte Giorgis until 1926, and the 1928 negus title. Emperor Haile Selassie title is not projected before 1930.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1917",
+                "until": "1929"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Regent and heir"
+          }
+        ],
+        "sources": [],
+        "absenceOfEvidence": [
+          "Institutional framework already sourced and retained. Capital and currency intervals require dedicated evidence; neither is inferred from modern Ethiopia."
+        ],
+        "reviewNotes": [
+          "Full source bodies read independently from the preliminary candidate ledger. Every claim remains subject to coordinator evidence review before integration."
+        ]
+      },
+      "packageHash": "466db9d6d2ed15b63afd0b3bb222b0fe4e1b377884a8ed8887e0a6603ab6d4ed",
+      "submittedAt": "2026-10-01T19:35:59.845Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-61c1a5db8a1b0d2063279896",
+            "jobId": "c01-61c1a5db8a1b0d2063279896",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "ethiopia-zawditu-regency-core",
+            "mapIds": [
+              "entity-ethiopia"
+            ],
+            "period": {
+              "from": "1917",
+              "until": "1929"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-ethiopia-zawditu-empress",
+                "category": "leadership",
+                "value": "Zawditu",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1917",
+                  "until": "1929"
+                },
+                "entityId": "ethiopia-zawditu-regency-core",
+                "geographicScope": {
+                  "description": "Ethiopia — Zawditu and Tafari regency within its existing editorial historical interval; office/capital is an institution of that entity, not evidence about every mapped polygon.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b18-ethiopia-interregnum",
+                  "b18-ethiopia-prewar"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b18-ethiopia-interregnum",
+                    "note": "LOC body describes Zawditu as empress after Iyasu deposition and dates her death to April 1930. The 1917–1929 bounded interval excludes accession/death uncertainty and makes no claim about sole effective authority.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1917",
+                    "until": "1929"
+                  },
+                  {
+                    "sourceId": "b18-ethiopia-prewar",
+                    "note": "LOC body describes Zawditu as empress after Iyasu deposition and dates her death to April 1930. The 1917–1929 bounded interval excludes accession/death uncertainty and makes no claim about sole effective authority.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1917",
+                    "until": "1929"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Empress"
+              },
+              {
+                "id": "c01-ethiopia-tafari-regent",
+                "category": "leadership",
+                "value": "Tafari Mekonnen",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1917",
+                  "until": "1929"
+                },
+                "entityId": "ethiopia-zawditu-regency-core",
+                "geographicScope": {
+                  "description": "Ethiopia — Zawditu and Tafari regency within its existing editorial historical interval; office/capital is an institution of that entity, not evidence about every mapped polygon.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b18-ethiopia-interregnum"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b18-ethiopia-interregnum",
+                    "note": "LOC body identifies Tafari as regent and heir, distinct from the empress; discusses continuing regency, influence of Habte Giorgis until 1926, and the 1928 negus title. Emperor Haile Selassie title is not projected before 1930.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1917",
+                    "until": "1929"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Regent and heir"
+              }
+            ],
+            "sources": [],
+            "absenceOfEvidence": [
+              "Institutional framework already sourced and retained. Capital and currency intervals require dedicated evidence; neither is inferred from modern Ethiopia."
+            ],
+            "reviewNotes": [
+              "Full source bodies read independently from the preliminary candidate ledger. Every claim remains subject to coordinator evidence review before integration."
+            ]
+          },
+          "packageHash": "5f4b29720d787b02fc18e05dee8a3eb8dd9a18246ba22d3ce48d3b113d5973f9",
+          "receipt": {
+            "schemaVersion": 1,
+            "status": "accepted",
+            "jobId": "c01-61c1a5db8a1b0d2063279896",
+            "packageHash": "5f4b29720d787b02fc18e05dee8a3eb8dd9a18246ba22d3ce48d3b113d5973f9",
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "coordinator": {
+              "role": "coordinator",
+              "id": "campaign-01-coordinator"
+            },
+            "rationale": "Independently read LOC interregnum and prewar bodies. Distinct concurrent empress and regent/heir offices supported; 1917–1929 excludes1930 change. Tafari imperial title not back-projected; sole effective authority not claimed. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+            "reviewResolved": true,
+            "reviewedIssues": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "acceptedAt": "2026-10-01T19:35:59.968Z"
+          },
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "5f4b29720d787b02fc18e05dee8a3eb8dd9a18246ba22d3ce48d3b113d5973f9"
+          },
+          "at": "2026-10-01T19:36:39.386Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "466db9d6d2ed15b63afd0b3bb222b0fe4e1b377884a8ed8887e0a6603ab6d4ed"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-61c1a5db8a1b0d2063279896",
+        "packageHash": "466db9d6d2ed15b63afd0b3bb222b0fe4e1b377884a8ed8887e0a6603ab6d4ed",
+        "productionFingerprint": "3b7129ef2bd0c0aa0d840f265679563ffdd9aec55970e57e4f93683299246ed7",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read LOC interregnum and prewar bodies. Distinct concurrent empress and regent/heir offices supported; 1917–1929 excludes1930 change. Tafari imperial title not back-projected; sole effective authority not claimed. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:36:39.437Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-61c1a5db8a1b0d2063279896",
+        "packageHash": "466db9d6d2ed15b63afd0b3bb222b0fe4e1b377884a8ed8887e0a6603ab6d4ed",
+        "beforeFingerprint": "3b7129ef2bd0c0aa0d840f265679563ffdd9aec55970e57e4f93683299246ed7",
+        "afterFingerprint": "9caa4f84c2fe53a10d88106f1a09227a3fd5104ca5bb17b273776a9596ce6f06",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "ottoman-abdulhamid-adjourned-framework",
@@ -683,7 +2108,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 87,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "9caa4f84c2fe53a10d88106f1a09227a3fd5104ca5bb17b273776a9596ce6f06",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -699,9 +2124,366 @@
       },
       "scopeId": "scope-c608962cf12c4daadbf38537",
       "id": "c01-fc5e932bb3da5d2c876e91e4",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:36:00.010Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:36:00.076Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:36:00.156Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:36:00.190Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read TDV AbdulhamidII scholarly reign body and Istanbul Ottoman capital administrative history, including loss of capital status in Republic. Bounded1879–1907 offices supported, existing adjournment date controversy untouched. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:36:43.397Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:36:43.469Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:36:43.593Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read TDV AbdulhamidII scholarly reign body and Istanbul Ottoman capital administrative history, including loss of capital status in Republic. Bounded1879–1907 offices supported, existing adjournment date controversy untouched. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:36:46.464Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T19:36:00.010Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-fc5e932bb3da5d2c876e91e4",
+        "jobId": "c01-fc5e932bb3da5d2c876e91e4",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "9caa4f84c2fe53a10d88106f1a09227a3fd5104ca5bb17b273776a9596ce6f06",
+        "entityId": "ottoman-abdulhamid-adjourned-framework",
+        "mapIds": [
+          "entity-ottoman-empire"
+        ],
+        "period": {
+          "from": "1879",
+          "until": "1907"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-ottoman-abdulhamid-sultan",
+            "category": "leadership",
+            "value": "Abdülhamid II",
+            "temporal": {
+              "kind": "interval",
+              "from": "1879",
+              "until": "1907"
+            },
+            "entityId": "ottoman-abdulhamid-adjourned-framework",
+            "geographicScope": {
+              "description": "Ottoman Empire — adjourned parliamentary order within its existing editorial historical interval; office/capital is an institution of that entity, not evidence about every mapped polygon.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-ottoman-abdulhamid-ii"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-ottoman-abdulhamid-ii",
+                "note": "TDV scholarly body identifies Ottoman sultan reign 1876–1909; the assigned 1879–1907 interval is internal to that sourced tenure. Conflicting February 1878 parliamentary adjournment dates remain untouched.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1879",
+                "until": "1907"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Sultan"
+          },
+          {
+            "id": "c01-ottoman-istanbul-capital",
+            "category": "capital",
+            "value": "Istanbul (Constantinople)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1879",
+              "until": "1907"
+            },
+            "entityId": "ottoman-abdulhamid-adjourned-framework",
+            "geographicScope": {
+              "description": "Ottoman Empire — adjourned parliamentary order within its existing editorial historical interval; office/capital is an institution of that entity, not evidence about every mapped polygon.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-ottoman-istanbul-capital"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-ottoman-istanbul-capital",
+                "note": "TDV historical body describes Istanbul as the Ottoman capital after conquest with special administrative status until imperial dissolution, and subsequent loss of capital role under the Republic. Bounded 1879–1907 interval lies within the explicitly described Ottoman period; alternate historical city name is retained.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1879",
+                "until": "1907"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-ottoman-abdulhamid-ii",
+            "title": "Abdülhamid II",
+            "institution": "TDV İslâm Araştırmaları Merkezi; Cevdet Küçük",
+            "url": "https://islamansiklopedisi.org.tr/abdulhamid-ii",
+            "accessed": "2026-10-01",
+            "kind": "academic-institutional",
+            "usage": "Read full scholarly article body including 31 August 1876 accession and 1876–1909 reign. Extract only dated office tenure; evaluative political rhetoric excluded."
+          },
+          {
+            "id": "c01-ottoman-istanbul-capital",
+            "title": "İstanbul — Turkish period and administration",
+            "institution": "TDV İslâm Araştırmaları Merkezi; İstanbul historical article contributors",
+            "url": "https://islamansiklopedisi.org.tr/istanbul",
+            "accessed": "2026-10-01",
+            "kind": "academic-institutional",
+            "usage": "Read Turkish-period and administrative history body: capital after conquest with administrative status through imperial dissolution; loss of capital role under Republic. Bounded 1879–1907 claim does not rely on modern naming."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Existing parliamentary-adjournment framework remains unchanged; February 1878 exact-date dispute is not resolved. Currency requires independent denomination/continuity evidence and remains a gap."
+        ],
+        "reviewNotes": [
+          "Full source bodies read independently from the preliminary candidate ledger. Every claim remains subject to coordinator evidence review before integration."
+        ]
+      },
+      "packageHash": "30181a645f01cfc698128889eff43f1f837b12a58277c5405ce9a3557b954293",
+      "submittedAt": "2026-10-01T19:36:00.076Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-fc5e932bb3da5d2c876e91e4",
+            "jobId": "c01-fc5e932bb3da5d2c876e91e4",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "ottoman-abdulhamid-adjourned-framework",
+            "mapIds": [
+              "entity-ottoman-empire"
+            ],
+            "period": {
+              "from": "1879",
+              "until": "1907"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-ottoman-abdulhamid-sultan",
+                "category": "leadership",
+                "value": "Abdülhamid II",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1879",
+                  "until": "1907"
+                },
+                "entityId": "ottoman-abdulhamid-adjourned-framework",
+                "geographicScope": {
+                  "description": "Ottoman Empire — adjourned parliamentary order within its existing editorial historical interval; office/capital is an institution of that entity, not evidence about every mapped polygon.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-ottoman-abdulhamid-ii"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-ottoman-abdulhamid-ii",
+                    "note": "TDV scholarly body identifies Ottoman sultan reign 1876–1909; the assigned 1879–1907 interval is internal to that sourced tenure. Conflicting February 1878 parliamentary adjournment dates remain untouched.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1879",
+                    "until": "1907"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Sultan"
+              },
+              {
+                "id": "c01-ottoman-istanbul-capital",
+                "category": "capital",
+                "value": "Istanbul (Constantinople)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1879",
+                  "until": "1907"
+                },
+                "entityId": "ottoman-abdulhamid-adjourned-framework",
+                "geographicScope": {
+                  "description": "Ottoman Empire — adjourned parliamentary order within its existing editorial historical interval; office/capital is an institution of that entity, not evidence about every mapped polygon.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-ottoman-istanbul-capital"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-ottoman-istanbul-capital",
+                    "note": "TDV historical body describes Istanbul as the Ottoman capital after conquest with special administrative status until imperial dissolution, and subsequent loss of capital role under the Republic. Bounded 1879–1907 interval lies within the explicitly described Ottoman period; alternate historical city name is retained.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1879",
+                    "until": "1907"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-ottoman-abdulhamid-ii",
+                "title": "Abdülhamid II",
+                "institution": "TDV İslâm Araştırmaları Merkezi; Cevdet Küçük",
+                "url": "https://islamansiklopedisi.org.tr/abdulhamid-ii",
+                "accessed": "2026-10-01",
+                "kind": "academic-institutional",
+                "usage": "Read full scholarly article body including 31 August 1876 accession and 1876–1909 reign. Extract only dated office tenure; evaluative political rhetoric excluded."
+              },
+              {
+                "id": "c01-ottoman-istanbul-capital",
+                "title": "İstanbul — Turkish period and administration",
+                "institution": "TDV İslâm Araştırmaları Merkezi; İstanbul historical article contributors",
+                "url": "https://islamansiklopedisi.org.tr/istanbul",
+                "accessed": "2026-10-01",
+                "kind": "academic-institutional",
+                "usage": "Read Turkish-period and administrative history body: capital after conquest with administrative status through imperial dissolution; loss of capital role under Republic. Bounded 1879–1907 claim does not rely on modern naming."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Existing parliamentary-adjournment framework remains unchanged; February 1878 exact-date dispute is not resolved. Currency requires independent denomination/continuity evidence and remains a gap."
+            ],
+            "reviewNotes": [
+              "Full source bodies read independently from the preliminary candidate ledger. Every claim remains subject to coordinator evidence review before integration."
+            ]
+          },
+          "packageHash": "e239439e9b2c7a222ac5a37af98012ce2885ca11f8da2f85e65ff3e3db4168c9",
+          "receipt": {
+            "schemaVersion": 1,
+            "status": "accepted",
+            "jobId": "c01-fc5e932bb3da5d2c876e91e4",
+            "packageHash": "e239439e9b2c7a222ac5a37af98012ce2885ca11f8da2f85e65ff3e3db4168c9",
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "coordinator": {
+              "role": "coordinator",
+              "id": "campaign-01-coordinator"
+            },
+            "rationale": "Independently read TDV AbdulhamidII scholarly reign body and Istanbul Ottoman capital administrative history, including loss of capital status in Republic. Bounded1879–1907 offices supported, existing adjournment date controversy untouched. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+            "reviewResolved": true,
+            "reviewedIssues": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "acceptedAt": "2026-10-01T19:36:00.190Z"
+          },
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "review": [
+              "Coordinator job cautions require historical review",
+              "Absence of evidence is not evidence of absence; review omissions",
+              "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+            ],
+            "status": "historical-review",
+            "packageHash": "e239439e9b2c7a222ac5a37af98012ce2885ca11f8da2f85e65ff3e3db4168c9"
+          },
+          "at": "2026-10-01T19:36:43.397Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "30181a645f01cfc698128889eff43f1f837b12a58277c5405ce9a3557b954293"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-fc5e932bb3da5d2c876e91e4",
+        "packageHash": "30181a645f01cfc698128889eff43f1f837b12a58277c5405ce9a3557b954293",
+        "productionFingerprint": "9caa4f84c2fe53a10d88106f1a09227a3fd5104ca5bb17b273776a9596ce6f06",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read TDV AbdulhamidII scholarly reign body and Istanbul Ottoman capital administrative history, including loss of capital status in Republic. Bounded1879–1907 offices supported, existing adjournment date controversy untouched. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:36:43.593Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-fc5e932bb3da5d2c876e91e4",
+        "packageHash": "30181a645f01cfc698128889eff43f1f837b12a58277c5405ce9a3557b954293",
+        "beforeFingerprint": "9caa4f84c2fe53a10d88106f1a09227a3fd5104ca5bb17b273776a9596ce6f06",
+        "afterFingerprint": "12ff0f2cbe16fb167e4635c022b6ed4bf18f5b35c54662dca82194b6499a42f1",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "germany-imperial-framework",
