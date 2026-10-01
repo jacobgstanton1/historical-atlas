@@ -39,7 +39,9 @@ test('coverage uses dated runtime mappings, not merely mapping/name presence',()
  assert.equal(byId('entity-japan').snapshotCoverage.find(c=>c.year===1960).receivesCuratedDossier,true);
  assert.equal(byId('entity-germany').snapshotCoverage.find(c=>c.year===1930).receivesCuratedDossier,true);
  assert.equal(byId('entity-germany').snapshotCoverage.find(c=>c.year===1938).receivesCuratedDossier,true);
- assert.ok(manifest.questions.some(q=>q.id==='existence-entity-soviet-union-1920'));
+ assert.ok(!manifest.questions.some(q=>q.id==='existence-entity-soviet-union-1920'));
+ assert.equal(byId('entity-soviet-union').snapshotCoverage.find(c=>c.year===1920).receivesCuratedDossier,false);
+ assert.equal(byId('entity-soviet-union').researchStatus,'mapping-review');
  assert.ok(manifest.identities.some(r=>r.stableMapId==='entity-imperial-japan'&&r.currentlyResolvesToDossier));
  assert.equal(byId('entity-manchu-empire').snapshotCoverage.find(c=>c.year===1914).receivesCuratedDossier,false);
 });

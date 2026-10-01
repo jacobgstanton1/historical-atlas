@@ -4,18 +4,18 @@
   "coverageDefinition": "Covered means the existing production resolver returns a curated entity in at least one snapshot where this map ID is selectable. It does not mean core completeness or coverage throughout 1800–1960. All other IDs still have map-derived fallback panels.",
   "summary": {
     "totalIdentities": 880,
-    "curatedMetadataEntities": 119,
-    "mappedIdentities": 93,
-    "coveredIdentities": 92,
-    "uncoveredIdentities": 788,
-    "percentage": 10.45,
+    "curatedMetadataEntities": 151,
+    "mappedIdentities": 109,
+    "coveredIdentities": 108,
+    "uncoveredIdentities": 772,
+    "percentage": 12.27,
     "multipleSnapshotIdentities": 519,
     "singleSnapshotIdentities": 361,
-    "unresolvedQuestions": 261,
+    "unresolvedQuestions": 260,
     "identitiesWithQuestions": 818,
     "brokenMappings": 0,
     "orphanMetadataEntities": 0,
-    "ambiguousMappingYearPairs": 21
+    "ambiguousMappingYearPairs": 24
   },
   "bySnapshot": [
     {
@@ -28,58 +28,58 @@
     {
       "year": 1815,
       "selectableIdentities": 313,
-      "covered": 44,
-      "uncovered": 269,
-      "percentage": 14.06
+      "covered": 45,
+      "uncovered": 268,
+      "percentage": 14.38
     },
     {
       "year": 1878,
       "selectableIdentities": 173,
-      "covered": 23,
-      "uncovered": 150,
-      "percentage": 13.29
+      "covered": 28,
+      "uncovered": 145,
+      "percentage": 16.18
     },
     {
       "year": 1880,
       "selectableIdentities": 170,
-      "covered": 23,
-      "uncovered": 147,
-      "percentage": 13.53
+      "covered": 27,
+      "uncovered": 143,
+      "percentage": 15.88
     },
     {
       "year": 1900,
       "selectableIdentities": 166,
-      "covered": 22,
-      "uncovered": 144,
-      "percentage": 13.25
+      "covered": 23,
+      "uncovered": 143,
+      "percentage": 13.86
     },
     {
       "year": 1914,
       "selectableIdentities": 143,
-      "covered": 23,
-      "uncovered": 120,
-      "percentage": 16.08
+      "covered": 25,
+      "uncovered": 118,
+      "percentage": 17.48
     },
     {
       "year": 1920,
       "selectableIdentities": 164,
-      "covered": 25,
-      "uncovered": 139,
-      "percentage": 15.24
+      "covered": 32,
+      "uncovered": 132,
+      "percentage": 19.51
     },
     {
       "year": 1930,
       "selectableIdentities": 164,
-      "covered": 26,
-      "uncovered": 138,
-      "percentage": 15.85
+      "covered": 34,
+      "uncovered": 130,
+      "percentage": 20.73
     },
     {
       "year": 1938,
       "selectableIdentities": 172,
-      "covered": 24,
-      "uncovered": 148,
-      "percentage": 13.95
+      "covered": 28,
+      "uncovered": 144,
+      "percentage": 16.28
     },
     {
       "year": 1945,
@@ -91,9 +91,9 @@
     {
       "year": 1960,
       "selectableIdentities": 157,
-      "covered": 31,
-      "uncovered": 126,
-      "percentage": 19.75
+      "covered": 34,
+      "uncovered": 123,
+      "percentage": 21.66
     }
   ],
   "brokenMappings": [],
@@ -140,6 +140,10 @@
       "requestedYear": 1946
     },
     {
+      "mapId": "entity-romania",
+      "requestedYear": 1938
+    },
+    {
       "mapId": "entity-iceland",
       "requestedYear": 1918
     },
@@ -174,6 +178,14 @@
     {
       "mapId": "entity-austria",
       "requestedYear": 1933
+    },
+    {
+      "mapId": "entity-latvia",
+      "requestedYear": 1922
+    },
+    {
+      "mapId": "entity-latvia",
+      "requestedYear": 1934
     },
     {
       "mapId": "entity-china",
@@ -5781,33 +5793,6 @@
       "evidenceStatus": "heuristic-or-scope-review"
     },
     {
-      "id": "existence-entity-soviet-union-1920",
-      "type": "mapping-date-review",
-      "state": "unresolved",
-      "mapIds": [
-        "entity-soviet-union"
-      ],
-      "question": "Runtime mapping resolves outside the sourced existence interval. Review the source label and mapping before extending facts.",
-      "evidence": {
-        "snapshot": 1920,
-        "entityId": "soviet-union",
-        "existence": {
-          "validFrom": "1922-12-30",
-          "validUntil": "1991-12",
-          "sourceIds": [
-            "ussr-formation",
-            "ussr-dissolution"
-          ],
-          "note": "Treaty formation and dissolution; dissolution is retained at month precision, not an inferred day."
-        }
-      },
-      "linkedBatchIds": [
-        "batch-06"
-      ],
-      "reviewScope": "identity-specific-review",
-      "evidenceStatus": "observed-runtime-date-mismatch"
-    },
-    {
       "id": "scope-entity-chinese-warlords",
       "type": "identity-scope",
       "state": "unresolved",
@@ -8672,8 +8657,8 @@
         "entity-greece"
       ],
       "totalIdentities": 12,
-      "uncuratedIdentities": 11,
-      "existingProfilesToReview": 1,
+      "uncuratedIdentities": 5,
+      "existingProfilesToReview": 7,
       "requiresHistoricalResearch": 12,
       "sourceStrategy": "National archives and constitutional treaties; occupation, federation and regime continuity require separate evidence.",
       "questionIds": [
@@ -8683,7 +8668,6 @@
         "authority-entity-georgia",
         "authority-entity-armenia",
         "gap-entity-soviet-union",
-        "existence-entity-soviet-union-1920",
         "authority-entity-dodecanese-islands",
         "repeated-name-continuity"
       ],
@@ -8691,10 +8675,6 @@
         {
           "id": "family-russian",
           "question": "Source USSR appears in 1920 although the curated Union formation is dated 1922. Review civil-war source labels and republic/union relationships without inventing continuity."
-        },
-        {
-          "id": "existence-entity-soviet-union-1920",
-          "question": "Runtime mapping resolves outside the sourced existence interval. Review the source label and mapping before extending facts."
         }
       ],
       "continuityPolicy": "Keep candidate families together across linked batches; share institutional discovery, never unsupported facts. Phase 2 approval required."
@@ -8717,8 +8697,8 @@
         "entity-finnmark"
       ],
       "totalIdentities": 11,
-      "uncuratedIdentities": 11,
-      "existingProfilesToReview": 0,
+      "uncuratedIdentities": 1,
+      "existingProfilesToReview": 10,
       "requiresHistoricalResearch": 11,
       "sourceStrategy": "National archives and constitutional treaties; occupation, federation and regime continuity require separate evidence.",
       "questionIds": [
@@ -11973,8 +11953,43 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-albania",
+          "entityId": "albanian-national-council-1920-framework",
+          "validFrom": "1920-03-27",
+          "validUntil": "1920-12-20",
+          "sourceIds": [
+            "b06-albanian-parliament-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-albania",
+          "entityId": "albanian-royal-statute-framework",
+          "validFrom": "1929-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b06-albanian-parliament-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-albania",
+          "entityId": "albanian-postwar-peoples-parliament-framework",
+          "validFrom": "1947-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b06-albanian-parliament-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "albanian-national-council-1920-framework",
+        "albanian-postwar-peoples-parliament-framework",
+        "albanian-royal-statute-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
@@ -11994,50 +12009,53 @@
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "albanian-national-council-1920-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "albanian-royal-statute-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "albanian-royal-statute-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
@@ -12058,33 +12076,100 @@
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "albanian-postwar-peoples-parliament-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-albanian-parliament-history"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1920-03-27",
+            "validUntil": "1920-12-20",
+            "sourceIds": [
+              "b06-albanian-parliament-history"
+            ],
+            "entityId": "albanian-national-council-1920-framework"
+          },
+          {
+            "validFrom": "1929-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b06-albanian-parliament-history"
+            ],
+            "entityId": "albanian-royal-statute-framework"
+          },
+          {
+            "validFrom": "1947-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b06-albanian-parliament-history"
+            ],
+            "entityId": "albanian-postwar-peoples-parliament-framework"
+          }
+        ]
+      },
       "planningRegion": "east-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1920-03-27",
+            "validUntil": "1920-12-20",
+            "sourceIds": [
+              "b06-albanian-parliament-history"
+            ],
+            "entityId": "albanian-national-council-1920-framework"
+          },
+          {
+            "validFrom": "1929-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b06-albanian-parliament-history"
+            ],
+            "entityId": "albanian-royal-statute-framework"
+          },
+          {
+            "validFrom": "1947-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b06-albanian-parliament-history"
+            ],
+            "entityId": "albanian-postwar-peoples-parliament-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-07",
       "classification": {
@@ -17281,8 +17366,22 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1938,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-armenia",
+          "entityId": "armenian-first-republic-parliamentary-framework",
+          "validFrom": "1918-08-01",
+          "validUntil": "1920-12-02",
+          "sourceIds": [
+            "b06-armenian-parliament",
+            "b06-armenia-recognition"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "armenian-first-republic-parliamentary-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
@@ -17302,18 +17401,19 @@
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "armenian-first-republic-parliamentary-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
@@ -17349,10 +17449,33 @@
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-armenian-parliament",
+          "b06-armenia-recognition"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1918-08-01",
+            "validUntil": "1920-12-02",
+            "sourceIds": [
+              "b06-armenian-parliament",
+              "b06-armenia-recognition"
+            ],
+            "entityId": "armenian-first-republic-parliamentary-framework"
+          }
+        ]
+      },
       "planningFamily": "russian",
       "planningRegion": "east-europe",
       "questionIds": [
@@ -17361,7 +17484,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-azerbaijan",
           "entity-far-eastern-ssr",
@@ -17372,7 +17495,21 @@
           "entity-ukraine",
           "entity-white-russia"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1918-08-01",
+            "validUntil": "1920-12-02",
+            "sourceIds": [
+              "b06-armenian-parliament",
+              "b06-armenia-recognition"
+            ],
+            "entityId": "armenian-first-republic-parliamentary-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-06",
       "classification": {
@@ -19761,8 +19898,21 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1930,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-azerbaijan",
+          "entityId": "azerbaijan-first-republic-parliamentary-framework",
+          "validFrom": "1918-12-07",
+          "validUntil": "1920-04-28",
+          "sourceIds": [
+            "b06-azerbaijan-parliament"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "azerbaijan-first-republic-parliamentary-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
@@ -19782,18 +19932,19 @@
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "azerbaijan-first-republic-parliamentary-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         },
         {
@@ -19813,10 +19964,31 @@
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-azerbaijan-parliament"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1918-12-07",
+            "validUntil": "1920-04-28",
+            "sourceIds": [
+              "b06-azerbaijan-parliament"
+            ],
+            "entityId": "azerbaijan-first-republic-parliamentary-framework"
+          }
+        ]
+      },
       "planningFamily": "russian",
       "planningRegion": "east-europe",
       "questionIds": [
@@ -19825,7 +19997,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-armenia",
           "entity-far-eastern-ssr",
@@ -19836,7 +20008,20 @@
           "entity-ukraine",
           "entity-white-russia"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1918-12-07",
+            "validUntil": "1920-04-28",
+            "sourceIds": [
+              "b06-azerbaijan-parliament"
+            ],
+            "entityId": "azerbaijan-first-republic-parliamentary-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-06",
       "classification": {
@@ -30076,39 +30261,66 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-bulgaria",
+          "entityId": "bulgarian-berlin-settlement-framework",
+          "validFrom": "1878-07-13",
+          "validUntil": "1879-01-01",
+          "sourceIds": [
+            "b06-berlin-treaty"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-bulgaria",
+          "entityId": "bulgarian-tarnovo-1880-framework",
+          "validFrom": "1880-01-01",
+          "validUntil": "1881-01-01",
+          "sourceIds": [
+            "b06-berlin-treaty",
+            "b06-tarnovo-constitution"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "bulgarian-berlin-settlement-framework",
+        "bulgarian-tarnovo-1880-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "bulgarian-berlin-settlement-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "bulgarian-tarnovo-1880-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
@@ -30224,18 +30436,71 @@
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-berlin-treaty",
+          "b06-tarnovo-constitution"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1878-07-13",
+            "validUntil": "1879-01-01",
+            "sourceIds": [
+              "b06-berlin-treaty"
+            ],
+            "entityId": "bulgarian-berlin-settlement-framework"
+          },
+          {
+            "validFrom": "1880-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b06-berlin-treaty",
+              "b06-tarnovo-constitution"
+            ],
+            "entityId": "bulgarian-tarnovo-1880-framework"
+          }
+        ]
+      },
       "planningRegion": "east-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1878-07-13",
+            "validUntil": "1879-01-01",
+            "sourceIds": [
+              "b06-berlin-treaty"
+            ],
+            "entityId": "bulgarian-berlin-settlement-framework"
+          },
+          {
+            "validFrom": "1880-01-01",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b06-berlin-treaty",
+              "b06-tarnovo-constitution"
+            ],
+            "entityId": "bulgarian-tarnovo-1880-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-07",
       "classification": {
@@ -40296,38 +40561,86 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1930,
       "lastAvailableSnapshot": 1930,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-dodecanese-islands",
+          "entityId": "italian-dodecanese-lausanne-framework",
+          "validFrom": "1925-01-01",
+          "validUntil": "1931-01-01",
+          "sourceIds": [
+            "b06-lausanne-treaty"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "italian-dodecanese-lausanne-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "italian-dodecanese-lausanne-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
+            "descriptions"
+          ],
+          "missingCoreFields": [
             "capitals",
             "governments",
             "leaders",
-            "currencies",
-            "descriptions"
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-lausanne-treaty"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1925-01-01",
+            "validUntil": "1931-01-01",
+            "sourceIds": [
+              "b06-lausanne-treaty"
+            ],
+            "entityId": "italian-dodecanese-lausanne-framework"
+          }
+        ]
+      },
       "planningRegion": "east-europe",
       "questionIds": [
         "authority-entity-dodecanese-islands"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1925-01-01",
+            "validUntil": "1931-01-01",
+            "sourceIds": [
+              "b06-lausanne-treaty"
+            ],
+            "entityId": "italian-dodecanese-lausanne-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-06",
       "classification": {
@@ -45075,70 +45388,176 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1938,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-estonia",
+          "entityId": "estonian-constituent-framework",
+          "validFrom": "1919-07-04",
+          "validUntil": "1920-12-20",
+          "sourceIds": [
+            "b06-estonian-constituent"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-estonia",
+          "entityId": "estonian-fourth-parliament-framework",
+          "validFrom": "1929-06-15",
+          "validUntil": "1932-06-15",
+          "sourceIds": [
+            "b06-estonian-fourth-riigikogu"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-estonia",
+          "entityId": "estonian-1938-presidential-framework",
+          "validFrom": "1938-04-07",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b06-estonian-sixth-riigikogu"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "estonian-1938-presidential-framework",
+        "estonian-constituent-framework",
+        "estonian-fourth-parliament-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "estonian-constituent-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "estonian-fourth-parliament-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "estonian-1938-presidential-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-estonian-constituent",
+          "b06-estonian-fourth-riigikogu",
+          "b06-estonian-sixth-riigikogu"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1919-07-04",
+            "validUntil": "1920-12-20",
+            "sourceIds": [
+              "b06-estonian-constituent"
+            ],
+            "entityId": "estonian-constituent-framework"
+          },
+          {
+            "validFrom": "1929-06-15",
+            "validUntil": "1932-06-15",
+            "sourceIds": [
+              "b06-estonian-fourth-riigikogu"
+            ],
+            "entityId": "estonian-fourth-parliament-framework"
+          },
+          {
+            "validFrom": "1938-04-07",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b06-estonian-sixth-riigikogu"
+            ],
+            "entityId": "estonian-1938-presidential-framework"
+          }
+        ]
+      },
       "planningRegion": "east-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1919-07-04",
+            "validUntil": "1920-12-20",
+            "sourceIds": [
+              "b06-estonian-constituent"
+            ],
+            "entityId": "estonian-constituent-framework"
+          },
+          {
+            "validFrom": "1929-06-15",
+            "validUntil": "1932-06-15",
+            "sourceIds": [
+              "b06-estonian-fourth-riigikogu"
+            ],
+            "entityId": "estonian-fourth-parliament-framework"
+          },
+          {
+            "validFrom": "1938-04-07",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b06-estonian-sixth-riigikogu"
+            ],
+            "entityId": "estonian-1938-presidential-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-07",
       "classification": {
@@ -51489,8 +51908,21 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1914,
       "lastAvailableSnapshot": 1930,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-georgia",
+          "entityId": "georgian-constituent-republic-framework",
+          "validFrom": "1919-04-01",
+          "validUntil": "1921-02-21",
+          "sourceIds": [
+            "b06-georgian-constitution"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "georgian-constituent-republic-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1914,
@@ -51510,18 +51942,19 @@
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "georgian-constituent-republic-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
@@ -51541,10 +51974,31 @@
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-georgian-constitution"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1919-04-01",
+            "validUntil": "1921-02-21",
+            "sourceIds": [
+              "b06-georgian-constitution"
+            ],
+            "entityId": "georgian-constituent-republic-framework"
+          }
+        ]
+      },
       "planningFamily": "russian",
       "planningRegion": "east-europe",
       "questionIds": [
@@ -51553,7 +52007,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-armenia",
           "entity-azerbaijan",
@@ -51564,7 +52018,20 @@
           "entity-ukraine",
           "entity-white-russia"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1919-04-01",
+            "validUntil": "1921-02-21",
+            "sourceIds": [
+              "b06-georgian-constitution"
+            ],
+            "entityId": "georgian-constituent-republic-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-06",
       "classification": {
@@ -54445,55 +54912,93 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-greece",
+          "entityId": "greek-1864-crowned-framework",
+          "validFrom": "1878-01-01",
+          "validUntil": "1909-01-01",
+          "sourceIds": [
+            "b06-greek-constitutional-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-greece",
+          "entityId": "greek-1927-republican-framework",
+          "validFrom": "1928-01-01",
+          "validUntil": "1933-01-01",
+          "sourceIds": [
+            "b06-greek-constitutional-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-greece",
+          "entityId": "greek-1952-crowned-framework",
+          "validFrom": "1953-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b06-greek-constitutional-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "greek-1864-crowned-framework",
+        "greek-1927-republican-framework",
+        "greek-1952-crowned-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "greek-1864-crowned-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "greek-1864-crowned-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "greek-1864-crowned-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
@@ -54530,18 +55035,19 @@
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "greek-1927-republican-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
@@ -54578,33 +55084,100 @@
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "greek-1952-crowned-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-greek-constitutional-history"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1878-01-01",
+            "validUntil": "1909-01-01",
+            "sourceIds": [
+              "b06-greek-constitutional-history"
+            ],
+            "entityId": "greek-1864-crowned-framework"
+          },
+          {
+            "validFrom": "1928-01-01",
+            "validUntil": "1933-01-01",
+            "sourceIds": [
+              "b06-greek-constitutional-history"
+            ],
+            "entityId": "greek-1927-republican-framework"
+          },
+          {
+            "validFrom": "1953-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b06-greek-constitutional-history"
+            ],
+            "entityId": "greek-1952-crowned-framework"
+          }
+        ]
+      },
       "planningRegion": "east-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1878-01-01",
+            "validUntil": "1909-01-01",
+            "sourceIds": [
+              "b06-greek-constitutional-history"
+            ],
+            "entityId": "greek-1864-crowned-framework"
+          },
+          {
+            "validFrom": "1928-01-01",
+            "validUntil": "1933-01-01",
+            "sourceIds": [
+              "b06-greek-constitutional-history"
+            ],
+            "entityId": "greek-1927-republican-framework"
+          },
+          {
+            "validFrom": "1953-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b06-greek-constitutional-history"
+            ],
+            "entityId": "greek-1952-crowned-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-06",
       "classification": {
@@ -76834,70 +77407,174 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1938,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-latvia",
+          "entityId": "latvian-constituent-framework",
+          "validFrom": "1920-06-01",
+          "validUntil": "1922-11-07",
+          "sourceIds": [
+            "b06-latvian-legislature"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-latvia",
+          "entityId": "latvian-saeima-framework",
+          "validFrom": "1922-11-07",
+          "validUntil": "1934-05-15",
+          "sourceIds": [
+            "b06-latvian-legislature"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-latvia",
+          "entityId": "latvian-cabinet-legislative-framework",
+          "validFrom": "1934-05-15",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b06-latvian-legislature"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "latvian-cabinet-legislative-framework",
+        "latvian-constituent-framework",
+        "latvian-saeima-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "latvian-constituent-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "latvian-saeima-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "latvian-cabinet-legislative-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-latvian-legislature"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1920-06-01",
+            "validUntil": "1922-11-07",
+            "sourceIds": [
+              "b06-latvian-legislature"
+            ],
+            "entityId": "latvian-constituent-framework"
+          },
+          {
+            "validFrom": "1922-11-07",
+            "validUntil": "1934-05-15",
+            "sourceIds": [
+              "b06-latvian-legislature"
+            ],
+            "entityId": "latvian-saeima-framework"
+          },
+          {
+            "validFrom": "1934-05-15",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b06-latvian-legislature"
+            ],
+            "entityId": "latvian-cabinet-legislative-framework"
+          }
+        ]
+      },
       "planningRegion": "east-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1920-06-01",
+            "validUntil": "1922-11-07",
+            "sourceIds": [
+              "b06-latvian-legislature"
+            ],
+            "entityId": "latvian-constituent-framework"
+          },
+          {
+            "validFrom": "1922-11-07",
+            "validUntil": "1934-05-15",
+            "sourceIds": [
+              "b06-latvian-legislature"
+            ],
+            "entityId": "latvian-saeima-framework"
+          },
+          {
+            "validFrom": "1934-05-15",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b06-latvian-legislature"
+            ],
+            "entityId": "latvian-cabinet-legislative-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-07",
       "classification": {
@@ -78444,39 +79121,65 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1938,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-lithuania",
+          "entityId": "lithuanian-constituent-seimas-framework",
+          "validFrom": "1920-05-15",
+          "validUntil": "1922-01-01",
+          "sourceIds": [
+            "b06-lithuanian-elections"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-lithuania",
+          "entityId": "lithuanian-no-seimas-framework",
+          "validFrom": "1928-01-01",
+          "validUntil": "1936-01-01",
+          "sourceIds": [
+            "b06-lithuanian-elections"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "lithuanian-constituent-seimas-framework",
+        "lithuanian-no-seimas-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "lithuanian-constituent-seimas-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "lithuanian-no-seimas-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
@@ -78496,18 +79199,68 @@
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-lithuanian-elections"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1920-05-15",
+            "validUntil": "1922-01-01",
+            "sourceIds": [
+              "b06-lithuanian-elections"
+            ],
+            "entityId": "lithuanian-constituent-seimas-framework"
+          },
+          {
+            "validFrom": "1928-01-01",
+            "validUntil": "1936-01-01",
+            "sourceIds": [
+              "b06-lithuanian-elections"
+            ],
+            "entityId": "lithuanian-no-seimas-framework"
+          }
+        ]
+      },
       "planningRegion": "east-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1920-05-15",
+            "validUntil": "1922-01-01",
+            "sourceIds": [
+              "b06-lithuanian-elections"
+            ],
+            "entityId": "lithuanian-constituent-seimas-framework"
+          },
+          {
+            "validFrom": "1928-01-01",
+            "validUntil": "1936-01-01",
+            "sourceIds": [
+              "b06-lithuanian-elections"
+            ],
+            "entityId": "lithuanian-no-seimas-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-07",
       "classification": {
@@ -89977,23 +90730,37 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1914,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-montenegro",
+          "entityId": "montenegrin-berlin-recognition-framework",
+          "validFrom": "1878-07-13",
+          "validUntil": "1879-01-01",
+          "sourceIds": [
+            "b06-berlin-treaty"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "montenegrin-berlin-recognition-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "montenegrin-berlin-recognition-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
+            "descriptions"
+          ],
+          "missingCoreFields": [
             "capitals",
             "governments",
             "leaders",
-            "currencies",
-            "descriptions"
+            "currencies"
           ]
         },
         {
@@ -90045,18 +90812,52 @@
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-berlin-treaty"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1878-07-13",
+            "validUntil": "1879-01-01",
+            "sourceIds": [
+              "b06-berlin-treaty"
+            ],
+            "entityId": "montenegrin-berlin-recognition-framework"
+          }
+        ]
+      },
       "planningRegion": "east-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1878-07-13",
+            "validUntil": "1879-01-01",
+            "sourceIds": [
+              "b06-berlin-treaty"
+            ],
+            "entityId": "montenegrin-berlin-recognition-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-07",
       "classification": {
@@ -110137,55 +110938,104 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-poland",
+          "entityId": "polish-small-constitution-framework",
+          "validFrom": "1919-03-01",
+          "validUntil": "1921-01-01",
+          "sourceIds": [
+            "b06-polish-parliament-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-poland",
+          "entityId": "polish-amended-march-framework",
+          "validFrom": "1927-01-01",
+          "validUntil": "1935-01-01",
+          "sourceIds": [
+            "b06-polish-parliament-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-poland",
+          "entityId": "polish-april-presidential-framework",
+          "validFrom": "1936-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b06-polish-parliament-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-poland",
+          "entityId": "polish-peoples-republic-1952-framework",
+          "validFrom": "1953-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b06-polish-parliament-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "polish-amended-march-framework",
+        "polish-april-presidential-framework",
+        "polish-peoples-republic-1952-framework",
+        "polish-small-constitution-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "polish-small-constitution-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "polish-amended-march-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "polish-april-presidential-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
@@ -110206,33 +111056,116 @@
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "polish-peoples-republic-1952-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-polish-parliament-history"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1919-03-01",
+            "validUntil": "1921-01-01",
+            "sourceIds": [
+              "b06-polish-parliament-history"
+            ],
+            "entityId": "polish-small-constitution-framework"
+          },
+          {
+            "validFrom": "1927-01-01",
+            "validUntil": "1935-01-01",
+            "sourceIds": [
+              "b06-polish-parliament-history"
+            ],
+            "entityId": "polish-amended-march-framework"
+          },
+          {
+            "validFrom": "1936-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b06-polish-parliament-history"
+            ],
+            "entityId": "polish-april-presidential-framework"
+          },
+          {
+            "validFrom": "1953-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b06-polish-parliament-history"
+            ],
+            "entityId": "polish-peoples-republic-1952-framework"
+          }
+        ]
+      },
       "planningRegion": "east-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1919-03-01",
+            "validUntil": "1921-01-01",
+            "sourceIds": [
+              "b06-polish-parliament-history"
+            ],
+            "entityId": "polish-small-constitution-framework"
+          },
+          {
+            "validFrom": "1927-01-01",
+            "validUntil": "1935-01-01",
+            "sourceIds": [
+              "b06-polish-parliament-history"
+            ],
+            "entityId": "polish-amended-march-framework"
+          },
+          {
+            "validFrom": "1936-01-01",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b06-polish-parliament-history"
+            ],
+            "entityId": "polish-april-presidential-framework"
+          },
+          {
+            "validFrom": "1953-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b06-polish-parliament-history"
+            ],
+            "entityId": "polish-peoples-republic-1952-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-07",
       "classification": {
@@ -114119,36 +115052,88 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-republic-of-krakow",
+          "entityId": "krakow-free-city-framework",
+          "validFrom": "1815",
+          "validUntil": "1818-01-01",
+          "sourceIds": [
+            "b06-krakow-free-city",
+            "b06-polish-parliament-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "krakow-free-city-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "krakow-free-city-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
+      "currentlyResolvesToDossier": true,
       "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-krakow-free-city",
+          "b06-polish-parliament-history"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815",
+            "validUntil": "1818-01-01",
+            "sourceIds": [
+              "b06-krakow-free-city",
+              "b06-polish-parliament-history"
+            ],
+            "entityId": "krakow-free-city-framework"
+          }
+        ]
+      },
       "planningRegion": "east-europe",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1815",
+            "validUntil": "1818-01-01",
+            "sourceIds": [
+              "b06-krakow-free-city",
+              "b06-polish-parliament-history"
+            ],
+            "entityId": "krakow-free-city-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-07",
       "classification": {
@@ -114929,39 +115914,77 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-romania",
+          "entityId": "romanian-independent-principality-framework",
+          "validFrom": "1878-07-13",
+          "validUntil": "1881-01-01",
+          "sourceIds": [
+            "b06-berlin-treaty",
+            "b06-romanian-parliament-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-romania",
+          "entityId": "romanian-1923-monarchical-framework",
+          "validFrom": "1924-01-01",
+          "validUntil": "1938-02-10",
+          "sourceIds": [
+            "b06-romanian-parliament-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-romania",
+          "entityId": "romanian-1938-royal-authoritarian-framework",
+          "validFrom": "1938-02-10",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b06-romanian-parliament-history"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "romanian-1923-monarchical-framework",
+        "romanian-1938-royal-authoritarian-framework",
+        "romanian-independent-principality-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "romanian-independent-principality-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "romanian-independent-principality-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
@@ -115014,24 +116037,25 @@
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "romanian-1923-monarchical-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1938,
           "receivesCuratedDossier": false,
-          "ambiguous": false,
+          "ambiguous": true,
           "entityId": null,
           "availableFields": [],
           "missingCoreFields": [
@@ -115077,18 +116101,87 @@
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-berlin-treaty",
+          "b06-romanian-parliament-history"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1878-07-13",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b06-berlin-treaty",
+              "b06-romanian-parliament-history"
+            ],
+            "entityId": "romanian-independent-principality-framework"
+          },
+          {
+            "validFrom": "1924-01-01",
+            "validUntil": "1938-02-10",
+            "sourceIds": [
+              "b06-romanian-parliament-history"
+            ],
+            "entityId": "romanian-1923-monarchical-framework"
+          },
+          {
+            "validFrom": "1938-02-10",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b06-romanian-parliament-history"
+            ],
+            "entityId": "romanian-1938-royal-authoritarian-framework"
+          }
+        ]
+      },
       "planningRegion": "east-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1878-07-13",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b06-berlin-treaty",
+              "b06-romanian-parliament-history"
+            ],
+            "entityId": "romanian-independent-principality-framework"
+          },
+          {
+            "validFrom": "1924-01-01",
+            "validUntil": "1938-02-10",
+            "sourceIds": [
+              "b06-romanian-parliament-history"
+            ],
+            "entityId": "romanian-1923-monarchical-framework"
+          },
+          {
+            "validFrom": "1938-02-10",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b06-romanian-parliament-history"
+            ],
+            "entityId": "romanian-1938-royal-authoritarian-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-07",
       "classification": {
@@ -115424,8 +116517,21 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1914,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-russian-empire",
+          "entityId": "russian-imperial-fundamental-laws-framework",
+          "validFrom": "1907-01-01",
+          "validUntil": "1915-01-01",
+          "sourceIds": [
+            "b06-russian-fundamental-laws"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "russian-imperial-fundamental-laws-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
@@ -115509,25 +116615,47 @@
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "russian-imperial-fundamental-laws-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-russian-fundamental-laws"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1907-01-01",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b06-russian-fundamental-laws"
+            ],
+            "entityId": "russian-imperial-fundamental-laws-framework"
+          }
+        ]
+      },
       "planningFamily": "russian",
       "planningRegion": "east-europe",
       "questionIds": [
@@ -115536,7 +116664,7 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-armenia",
           "entity-azerbaijan",
@@ -115547,7 +116675,20 @@
           "entity-ukraine",
           "entity-white-russia"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1907-01-01",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b06-russian-fundamental-laws"
+            ],
+            "entityId": "russian-imperial-fundamental-laws-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-06",
       "classification": {
@@ -120017,39 +121158,66 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1914,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-serbia",
+          "entityId": "serbian-independent-principality-framework",
+          "validFrom": "1878-07-13",
+          "validUntil": "1881-01-01",
+          "sourceIds": [
+            "b06-berlin-treaty",
+            "b06-serbian-1869-parliament"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-serbia",
+          "entityId": "serbian-1903-royal-parliamentary-framework",
+          "validFrom": "1904-01-01",
+          "validUntil": "1915-01-01",
+          "sourceIds": [
+            "b06-serbian-1903-parliament"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "serbian-1903-royal-parliamentary-framework",
+        "serbian-independent-principality-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "serbian-independent-principality-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "serbian-independent-principality-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
@@ -120070,33 +121238,88 @@
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "serbian-1903-royal-parliamentary-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Independently sourced partial dated framework; other chronology and fields remain uncurated. See BATCH-06.md.",
+        "identityResolution": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "sourceIds": [
+          "b06-berlin-treaty",
+          "b06-serbian-1869-parliament",
+          "b06-serbian-1903-parliament"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1878-07-13",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b06-berlin-treaty",
+              "b06-serbian-1869-parliament"
+            ],
+            "entityId": "serbian-independent-principality-framework"
+          },
+          {
+            "validFrom": "1904-01-01",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b06-serbian-1903-parliament"
+            ],
+            "entityId": "serbian-1903-royal-parliamentary-framework"
+          }
+        ]
+      },
       "planningRegion": "east-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct dated state or constitutional/administrative framework, without inferred succession.",
+        "intervals": [
+          {
+            "validFrom": "1878-07-13",
+            "validUntil": "1881-01-01",
+            "sourceIds": [
+              "b06-berlin-treaty",
+              "b06-serbian-1869-parliament"
+            ],
+            "entityId": "serbian-independent-principality-framework"
+          },
+          {
+            "validFrom": "1904-01-01",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b06-serbian-1903-parliament"
+            ],
+            "entityId": "serbian-1903-royal-parliamentary-framework"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-07",
       "classification": {
@@ -122520,7 +123743,14 @@
       "mappings": [
         {
           "mapId": "entity-soviet-union",
-          "entityId": "soviet-union"
+          "entityId": "soviet-union",
+          "validFrom": "1922-12-30",
+          "validUntil": "1991-12",
+          "sourceIds": [
+            "b06-union-formation-treaty",
+            "ussr-dissolution"
+          ],
+          "note": "Batch 06 correction: Union formation bounds match independently sourced existence; the unresolved 1920 source label is not assigned to a guessed predecessor."
         }
       ],
       "curatedEntityIds": [
@@ -122529,13 +123759,12 @@
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": true,
+          "receivesCuratedDossier": false,
           "ambiguous": false,
-          "entityId": "soviet-union",
-          "availableFields": [
-            "names"
-          ],
+          "entityId": null,
+          "availableFields": [],
           "missingCoreFields": [
+            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -122595,18 +123824,48 @@
       ],
       "currentlyResolvesToDossier": true,
       "researchStatus": "mapping-review",
-      "coverageTier": "existing-enriched",
-      "researchDecision": null,
+      "coverageTier": "none",
+      "researchDecision": {
+        "status": "mapping-review",
+        "tier": "none",
+        "reviewerNote": "Unresolved 1920 raw referent; do not choose a civil-war predecessor. Later Union coverage, where applicable, retained.",
+        "identityResolution": "Civil-war source label requires independent referent evidence.",
+        "sourceIds": [
+          "b06-union-formation-treaty",
+          "ussr-dissolution"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1920",
+            "validUntil": "1921-01-01",
+            "sourceIds": [
+              "b06-union-formation-treaty"
+            ],
+            "note": "Review interval only; exact raw referent unresolved, no mapping asserted."
+          },
+          {
+            "validFrom": "1922-12-30",
+            "validUntil": "1991-12",
+            "sourceIds": [
+              "b06-union-formation-treaty",
+              "ussr-dissolution"
+            ],
+            "entityId": "soviet-union"
+          }
+        ]
+      },
       "planningFamily": "russian",
       "planningRegion": "east-europe",
       "questionIds": [
         "family-russian",
         "gap-entity-soviet-union",
-        "existence-entity-soviet-union-1920",
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-armenia",
           "entity-azerbaijan",
@@ -122617,7 +123876,29 @@
           "entity-ukraine",
           "entity-white-russia"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Civil-war source label requires independent referent evidence.",
+        "intervals": [
+          {
+            "validFrom": "1920",
+            "validUntil": "1921-01-01",
+            "sourceIds": [
+              "b06-union-formation-treaty"
+            ],
+            "note": "Review interval only; exact raw referent unresolved, no mapping asserted."
+          },
+          {
+            "validFrom": "1922-12-30",
+            "validUntil": "1991-12",
+            "sourceIds": [
+              "b06-union-formation-treaty",
+              "ussr-dissolution"
+            ],
+            "entityId": "soviet-union"
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-06",
       "classification": {
@@ -133406,16 +134687,38 @@
         }
       ],
       "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "researchStatus": "mapping-review",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "mapping-review",
+        "tier": "none",
+        "reviewerNote": "Unresolved 1920 raw referent; do not choose a civil-war predecessor. Later Union coverage, where applicable, retained.",
+        "identityResolution": "Civil-war source label requires independent referent evidence.",
+        "sourceIds": [
+          "b06-ukrainian-1920-review",
+          "b06-union-formation-treaty"
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1920",
+            "validUntil": "1921-01-01",
+            "sourceIds": [
+              "b06-ukrainian-1920-review"
+            ],
+            "note": "Review interval only; exact raw referent unresolved, no mapping asserted."
+          }
+        ]
+      },
       "planningFamily": "russian",
       "planningRegion": "east-europe",
       "questionIds": [
         "family-russian"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [
           "entity-armenia",
           "entity-azerbaijan",
@@ -133426,7 +134729,20 @@
           "entity-soviet-union",
           "entity-white-russia"
         ],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Civil-war source label requires independent referent evidence.",
+        "intervals": [
+          {
+            "validFrom": "1920",
+            "validUntil": "1921-01-01",
+            "sourceIds": [
+              "b06-ukrainian-1920-review"
+            ],
+            "note": "Review interval only; exact raw referent unresolved, no mapping asserted."
+          }
+        ],
+        "omissions": [
+          "All new entities remain partial: editorial coverage limits are not complete lifetimes; unsupported offices, currencies, statistics, flags, seats and succession omitted."
+        ]
       },
       "batchId": "batch-06",
       "classification": {
@@ -152122,9 +153438,9 @@
     },
     "politicalCoverage": {
       "candidates": 401,
-      "covered": 91,
-      "uncovered": 310,
-      "percentage": 22.69
+      "covered": 107,
+      "uncovered": 294,
+      "percentage": 26.68
     },
     "nonStateTemplateIdentities": 400,
     "bySnapshot": [
@@ -152156,9 +153472,9 @@
           "unresolved": 24
         },
         "politicalCandidates": 124,
-        "politicalCovered": 44,
-        "politicalUncovered": 80,
-        "politicalPercentage": 35.48
+        "politicalCovered": 45,
+        "politicalUncovered": 79,
+        "politicalPercentage": 36.29
       },
       {
         "year": 1878,
@@ -152172,9 +153488,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 142,
-        "politicalCovered": 22,
-        "politicalUncovered": 120,
-        "politicalPercentage": 15.49
+        "politicalCovered": 27,
+        "politicalUncovered": 115,
+        "politicalPercentage": 19.01
       },
       {
         "year": 1880,
@@ -152188,9 +153504,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 143,
-        "politicalCovered": 22,
-        "politicalUncovered": 121,
-        "politicalPercentage": 15.38
+        "politicalCovered": 26,
+        "politicalUncovered": 117,
+        "politicalPercentage": 18.18
       },
       {
         "year": 1900,
@@ -152204,9 +153520,9 @@
           "unresolved": 21
         },
         "politicalCandidates": 139,
-        "politicalCovered": 21,
-        "politicalUncovered": 118,
-        "politicalPercentage": 15.11
+        "politicalCovered": 22,
+        "politicalUncovered": 117,
+        "politicalPercentage": 15.83
       },
       {
         "year": 1914,
@@ -152220,9 +153536,9 @@
           "unresolved": 5
         },
         "politicalCandidates": 136,
-        "politicalCovered": 23,
-        "politicalUncovered": 113,
-        "politicalPercentage": 16.91
+        "politicalCovered": 25,
+        "politicalUncovered": 111,
+        "politicalPercentage": 18.38
       },
       {
         "year": 1920,
@@ -152236,9 +153552,9 @@
           "unresolved": 11
         },
         "politicalCandidates": 150,
-        "politicalCovered": 25,
-        "politicalUncovered": 125,
-        "politicalPercentage": 16.67
+        "politicalCovered": 32,
+        "politicalUncovered": 118,
+        "politicalPercentage": 21.33
       },
       {
         "year": 1930,
@@ -152252,9 +153568,9 @@
           "unresolved": 10
         },
         "politicalCandidates": 151,
-        "politicalCovered": 26,
-        "politicalUncovered": 125,
-        "politicalPercentage": 17.22
+        "politicalCovered": 34,
+        "politicalUncovered": 117,
+        "politicalPercentage": 22.52
       },
       {
         "year": 1938,
@@ -152268,9 +153584,9 @@
           "unresolved": 6
         },
         "politicalCandidates": 162,
-        "politicalCovered": 24,
-        "politicalUncovered": 138,
-        "politicalPercentage": 14.81
+        "politicalCovered": 28,
+        "politicalUncovered": 134,
+        "politicalPercentage": 17.28
       },
       {
         "year": 1945,
@@ -152300,13 +153616,13 @@
           "unresolved": 8
         },
         "politicalCandidates": 147,
-        "politicalCovered": 31,
-        "politicalUncovered": 116,
-        "politicalPercentage": 21.09
+        "politicalCovered": 34,
+        "politicalUncovered": 113,
+        "politicalPercentage": 23.13
       }
     ],
     "questionAudit": {
-      "legacyRecords": 261,
+      "legacyRecords": 260,
       "legacyAffectedMapIds": 818,
       "scopes": {
         "family-level-review": {
@@ -152568,7 +153884,7 @@
           ]
         },
         "identity-specific-review": {
-          "records": 10,
+          "records": 9,
           "questionIds": [
             "scope-entity-unnamed-territory",
             "scope-entity-central-asian-khanates",
@@ -152577,7 +153893,6 @@
             "scope-entity-australian-aboriginal-hunter-gatherers",
             "scope-entity-africa",
             "scope-entity-british-protectorate",
-            "existence-entity-soviet-union-1920",
             "scope-entity-chinese-warlords",
             "scope-entity-saar-protectorate"
           ]
@@ -153482,7 +154797,6 @@
         "entity-rift-valley-states",
         "entity-sikhs",
         "entity-south-russia",
-        "entity-soviet-union",
         "entity-sultinate-of-zanzibar",
         "entity-swabia",
         "entity-tanzania-united-republic-of",
@@ -153501,7 +154815,7 @@
         "entity-zaire",
         "entity-zulu"
       ],
-      "specificUnresolvedIdentityCount": 83,
+      "specificUnresolvedIdentityCount": 82,
       "definition": "Specific unresolved cases are unresolved/variant classification decisions, explicit occupation-label repairs and the observed runtime existence-date mismatch, deduplicated by raw ID. These are bounded review tasks, not proven historical mysteries. Gap/authority/repeated-name warnings do not independently establish classification uncertainty."
     },
     "reviewQueue": [
@@ -155625,8 +156939,8 @@
       "totalIdentities": 18,
       "politicalCandidates": 18,
       "nameReviews": 0,
-      "uncoveredPoliticalCandidates": 17,
-      "coveredPoliticalCandidates": 1,
+      "uncoveredPoliticalCandidates": 1,
+      "coveredPoliticalCandidates": 17,
       "sourceStrategy": "National archives and constitutional treaties; occupation, federation and regime continuity require separate evidence.",
       "priorityRationale": "Early source-family batches prioritise long snapshot presence, broad period potential and national archival/constitutional collections. Source availability is a planning expectation, not an entity-by-entity research finding. Families remain indivisible; no periods are researched now.",
       "highValueMapIds": [
@@ -155648,13 +156962,9 @@
         {
           "id": "family-russian",
           "question": "Source USSR appears in 1920 although the curated Union formation is dated 1922. Review civil-war source labels and republic/union relationships without inventing continuity."
-        },
-        {
-          "id": "existence-entity-soviet-union-1920",
-          "question": "Runtime mapping resolves outside the sourced existence interval. Review the source label and mapping before extending facts."
         }
       ],
-      "state": "proposed-not-authorised"
+      "state": "researched-with-partial-coverage"
     },
     {
       "id": "political-batch-07",
@@ -156509,10 +157819,10 @@
       }
     ],
     "pipelineSha256": "3c1cd4c196d1b7c52e603ad810a8b5cfb6b8c74b49afd099b9807a1e3781a53b",
-    "resolverSha256": "ff22876248c60e1d8bc5a9c35f89758cee92c1b69a977e2a6f94208c9a67ae48",
-    "metadataSha256": "b1b223e779724bb8a8e1b9eed3ed3966bf54253d61ecfe9854f8c80e7beaa799",
-    "sourcesSha256": "613e41a58fca1b1e10473c8c4e7f304c0187082f762bdfd23ea4e2e9c10236d4",
-    "planSha256": "bf2dce683a5198551b7e0241372da5406270125c9745609da913793b2f6462d5",
+    "resolverSha256": "fa1e4858603bb80623642f6383eb6e85abbcfe4b8e838f7626e7ec0635ff623f",
+    "metadataSha256": "0a4a021f621947b5c9bb4405ecbcbb2c5867e251a7b09093dac7aaeaa7d88907",
+    "sourcesSha256": "627b293d56bf633b2b1abb04d3e5578c06e4fbc351c5ab6830276e683fcee692",
+    "planSha256": "723bb959b96fda043bf3fdfd4655c7f65d3e414b6da4ca6c1bf84c246a468ebd",
     "classificationPlanSha256": "260036271b0aaec99acf6f41da9b8d82c0c018988744ab2cb655ed85104198fc",
     "classificationModuleSha256": "bfa1973c868b7a645de8552553ee015e2ce9c5778026b70450cfa9daacb63314"
   }

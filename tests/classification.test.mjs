@@ -75,7 +75,8 @@ test('occupation zones are administrative candidates with no automatic later-sta
 });
 test('heuristic warnings and explicit classification review cases have distinct auditable meanings',()=>{
  const a=m.classification.questionAudit;
- assert.equal(a.legacyRecords,261);assert.equal(a.legacyAffectedMapIds,818);
+ assert.equal(a.legacyRecords,260); // Batch 06 removes the corrected outside-existence Soviet warning.
+ assert.equal(a.legacyAffectedMapIds,818);
  assert.equal(Object.values(a.scopes).reduce((n,s)=>n+s.records,0),m.questions.length);
  const cases=new Set([...m.identities.filter(r=>['unresolved','name-variant-or-duplicate'].includes(r.classification.classification)||r.classification.candidateCanonicalIdentity).map(r=>r.stableMapId),...m.questions.filter(q=>q.type==='mapping-date-review').flatMap(q=>q.mapIds)]);
  assert.deepEqual([...cases].sort(),a.specificUnresolvedMapIds);

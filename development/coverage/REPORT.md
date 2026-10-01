@@ -4,9 +4,9 @@ Development-only classification overlay. Visible site remains v0.6.1. Phase 2 Ba
 
 ## Two denominators
 
-Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **92 (10.45%)**; raw fallback-only IDs: **788**. The original identity/source/presence/mapping inventory remains intact.
+Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **108 (12.27%)**; raw fallback-only IDs: **772**. The original identity/source/presence/mapping inventory remains intact.
 
-Political dossier candidates: **401**; currently covered: **91 (22.69%)**; uncovered political candidates: **310**. Existing curated metadata entities: **119**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
+Political dossier candidates: **401**; currently covered: **107 (26.68%)**; uncovered political candidates: **294**. Existing curated metadata entities: **151**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
 
 | Classification | Raw IDs |
 | --- | ---: |
@@ -32,33 +32,33 @@ The [upstream documentation](https://github.com/aourednik/historical-basemaps) d
 | Year | Raw | Polity | Dependent | Community | Geographic/composite | Variant | Unresolved | Political candidates | Covered | Uncovered | Coverage |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | 1800 | 547 | 90 | 31 | 392 | 2 | 1 | 31 | 121 | 18 | 103 | 14.88% |
-| 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 44 | 80 | 35.48% |
-| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 22 | 120 | 15.49% |
-| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 22 | 121 | 15.38% |
-| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 21 | 118 | 15.11% |
-| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 23 | 113 | 16.91% |
-| 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 25 | 125 | 16.67% |
-| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 26 | 125 | 17.22% |
-| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 24 | 138 | 14.81% |
+| 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 45 | 79 | 36.29% |
+| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 27 | 115 | 19.01% |
+| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 26 | 117 | 18.18% |
+| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 22 | 117 | 15.83% |
+| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 25 | 111 | 18.38% |
+| 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 32 | 118 | 21.33% |
+| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 34 | 117 | 22.52% |
+| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 28 | 134 | 17.28% |
 | 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 31 | 138 | 18.34% |
-| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 31 | 116 | 21.09% |
+| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 34 | 113 | 23.13% |
 
 The 1800 denominator is explained by its classification table, not modern-country assumptions. Of the 377 explicitly recorded Australian community cohort IDs, 377 appear in 1800. None is counted as an uncovered political dossier or assigned a political research batch. All remain selectable in production. They are deferred to a separately designed, community-appropriate profile project; this says nothing about political significance or organisation.
 
 ## What the Phase 1 questions actually mean
 
-The original **261 records / 818 affected IDs** remain traceable; they do not represent that many independently discovered historical mysteries.
+The original **260 records / 818 affected IDs** remain traceable; they do not represent that many independently discovered historical mysteries.
 
 | Review scope | Legacy records |
 | --- | ---: |
 | family-level-review | 19 |
 | identity-attached-source-caution | 229 |
-| identity-specific-review | 10 |
+| identity-specific-review | 9 |
 | source-wide-caution | 3 |
 
 Identity-attached source cautions are automated gaps/authority-field observations. Source-wide cautions cover repeated names, normalization and the community cohort. Family questions are shared continuity tasks; identity-specific legacy scope flags are also review prompts, not proven classification failures.
 
-There are **72 unresolved classifications**, **7 variant reviews**, **3 occupation-label spelling reviews**, and the existing runtime mapping-date mismatch. After deduplicating raw IDs, **83 identity-specific unresolved review cases** remain. Specific unresolved cases are unresolved/variant classification decisions, explicit occupation-label repairs and the observed runtime existence-date mismatch, deduplicated by raw ID. These are bounded review tasks, not proven historical mysteries. Gap/authority/repeated-name warnings do not independently establish classification uncertainty.
+There are **72 unresolved classifications**, **7 variant reviews**, **3 occupation-label spelling reviews**, and the existing runtime mapping-date mismatch. After deduplicating raw IDs, **82 identity-specific unresolved review cases** remain. Specific unresolved cases are unresolved/variant classification decisions, explicit occupation-label repairs and the observed runtime existence-date mismatch, deduplicated by raw ID. These are bounded review tasks, not proven historical mysteries. Gap/authority/repeated-name warnings do not independently establish classification uncertainty.
 
 ## Canonical-name candidates (no merges)
 
@@ -169,7 +169,7 @@ Families and candidate canonical pairs are indivisible. Batch sizes aim for 15�
 | 3 | Central Europe and German/Italian source families | 17 | 16 | 0 | 1 |
 | 4 | Central Europe and German/Italian source families | 21 | 21 | 3 | 0 |
 | 5 | Central Europe and German/Italian source families | 15 | 15 | 0 | 0 |
-| 6 | Eastern Europe, Russian/Soviet and Balkan source families | 18 | 18 | 17 | 0 |
+| 6 | Eastern Europe, Russian/Soviet and Balkan source families | 18 | 18 | 1 | 0 |
 | 7 | South/Central Asia | 26 | 26 | 25 | 0 |
 | 8 | North America | 10 | 9 | 8 | 1 |
 | 9 | South America | 20 | 20 | 20 | 0 |
@@ -243,13 +243,13 @@ Shared source discovery: Regional/state archives and constitutional collections;
 
 ### political-batch-06 — Eastern Europe, Russian/Soviet and Balkan source families
 
-State: proposed-not-authorised. Included: Armenia (entity-armenia); Azerbaijan (entity-azerbaijan); Georgia (entity-georgia); Russian Empire (entity-russian-empire); USSR (entity-soviet-union); Ukraine (entity-ukraine); Bulgaria (entity-bulgaria); Greece (entity-greece); Romania (entity-romania); Albania (entity-albania); Poland (entity-poland); Montenegro (entity-montenegro); Serbia (entity-serbia); Estonia (entity-estonia); Latvia (entity-latvia); Lithuania (entity-lithuania); Dodecanese Islands (entity-dodecanese-islands); Republic of Kraków (entity-republic-of-krakow).
+State: researched-with-partial-coverage. Included: Armenia (entity-armenia); Azerbaijan (entity-azerbaijan); Georgia (entity-georgia); Russian Empire (entity-russian-empire); USSR (entity-soviet-union); Ukraine (entity-ukraine); Bulgaria (entity-bulgaria); Greece (entity-greece); Romania (entity-romania); Albania (entity-albania); Poland (entity-poland); Montenegro (entity-montenegro); Serbia (entity-serbia); Estonia (entity-estonia); Latvia (entity-latvia); Lithuania (entity-lithuania); Dodecanese Islands (entity-dodecanese-islands); Republic of Kraków (entity-republic-of-krakow).
 
 High-value continuing/source-family candidates: Russian Empire (entity-russian-empire); USSR (entity-soviet-union); Bulgaria (entity-bulgaria); Greece (entity-greece); Romania (entity-romania).
 
 Shared source discovery: National archives and constitutional treaties; occupation, federation and regime continuity require separate evidence.
 
-Difficult continuity cases: Source USSR appears in 1920 although the curated Union formation is dated 1922. Review civil-war source labels and republic/union relationships without inventing continuity. Runtime mapping resolves outside the sourced existence interval. Review the source label and mapping before extending facts.
+Difficult continuity cases: Source USSR appears in 1920 although the curated Union formation is dated 1922. Review civil-war source labels and republic/union relationships without inventing continuity.
 
 Classification prerequisites (excluded from this batch denominator): Far Eastern SSR (entity-far-eastern-ssr); South Russia (entity-south-russia); White Russia (entity-white-russia).
 
@@ -439,18 +439,18 @@ Covered means the existing production resolver returns a curated entity in at le
 | Measure | Count |
 | --- | ---: |
 | totalIdentities | 880 |
-| curatedMetadataEntities | 119 |
-| mappedIdentities | 93 |
-| coveredIdentities | 92 |
-| uncoveredIdentities | 788 |
-| percentage | 10.45 |
+| curatedMetadataEntities | 151 |
+| mappedIdentities | 109 |
+| coveredIdentities | 108 |
+| uncoveredIdentities | 772 |
+| percentage | 12.27 |
 | multipleSnapshotIdentities | 519 |
 | singleSnapshotIdentities | 361 |
-| unresolvedQuestions | 261 |
+| unresolvedQuestions | 260 |
 | identitiesWithQuestions | 818 |
 | brokenMappings | 0 |
 | orphanMetadataEntities | 0 |
-| ambiguousMappingYearPairs | 21 |
+| ambiguousMappingYearPairs | 24 |
 
 The denominator includes selectable unlabeled/composite/community identities, not just countries or visible labels. “First/last snapshot” are observations of source presence, never existence dates. Source geometry, metadata and requested-year resolution remain separate.
 
@@ -459,16 +459,16 @@ The denominator includes selectable unlabeled/composite/community identities, no
 | Snapshot | Selectable IDs | Curated dossier | Fallback only | Coverage |
 | --- | ---: | ---: | ---: | ---: |
 | 1800 | 547 | 18 | 529 | 3.29% |
-| 1815 | 313 | 44 | 269 | 14.06% |
-| 1878 | 173 | 23 | 150 | 13.29% |
-| 1880 | 170 | 23 | 147 | 13.53% |
-| 1900 | 166 | 22 | 144 | 13.25% |
-| 1914 | 143 | 23 | 120 | 16.08% |
-| 1920 | 164 | 25 | 139 | 15.24% |
-| 1930 | 164 | 26 | 138 | 15.85% |
-| 1938 | 172 | 24 | 148 | 13.95% |
+| 1815 | 313 | 45 | 268 | 14.38% |
+| 1878 | 173 | 28 | 145 | 16.18% |
+| 1880 | 170 | 27 | 143 | 15.88% |
+| 1900 | 166 | 23 | 143 | 13.86% |
+| 1914 | 143 | 25 | 118 | 17.48% |
+| 1920 | 164 | 32 | 132 | 19.51% |
+| 1930 | 164 | 34 | 130 | 20.73% |
+| 1938 | 172 | 28 | 144 | 16.28% |
 | 1945 | 183 | 31 | 152 | 16.94% |
-| 1960 | 157 | 31 | 126 | 19.75% |
+| 1960 | 157 | 34 | 123 | 21.66% |
 
 ## Persistent and briefly represented identities
 
@@ -845,7 +845,7 @@ The denominator includes selectable unlabeled/composite/community identities, no
 
 ## Unresolved identity and mapping questions
 
-261 explicitly unresolved question records affect 818 identities. Shared methodological questions may cover many IDs; this is a tracked checklist count, not a count of proven historical errors. Automated flags are discovery cues, not historical conclusions.
+260 explicitly unresolved question records affect 818 identities. Shared methodological questions may cover many IDs; this is a tracked checklist count, not a count of proven historical errors. Automated flags are discovery cues, not historical conclusions.
 
 - **family-britain**: Review British and Irish name/state/union continuity. Do not extend the current UK profile backward simply because an ID repeats. Source IDs: entity-ireland, entity-kingdom-of-ireland, entity-united-kingdom, entity-united-kingdom-of-great-britain-and-ireland. Linked batches: batch-02.
 - **family-scandinavian**: Review Scandinavian union labels and constituent governments without assuming that a source-name change establishes state succession. Source IDs: entity-denmark, entity-denmark-norway, entity-norway, entity-sweden, entity-sweden-norway. Linked batches: batch-02.
@@ -873,7 +873,6 @@ The denominator includes selectable unlabeled/composite/community identities, no
 - **scope-entity-australian-aboriginal-hunter-gatherers**: Does this source label represent one political entity, several communities, an administrative area or merely a cartographic grouping? Establish scope before assigning national institutions. Source IDs: entity-australian-aboriginal-hunter-gatherers. Linked batches: batch-36.
 - **scope-entity-africa**: Does this source label represent one political entity, several communities, an administrative area or merely a cartographic grouping? Establish scope before assigning national institutions. Source IDs: entity-africa. Linked batches: batch-01.
 - **scope-entity-british-protectorate**: Does this source label represent one political entity, several communities, an administrative area or merely a cartographic grouping? Establish scope before assigning national institutions. Source IDs: entity-british-protectorate. Linked batches: batch-22.
-- **existence-entity-soviet-union-1920**: Runtime mapping resolves outside the sourced existence interval. Review the source label and mapping before extending facts. Source IDs: entity-soviet-union. Linked batches: batch-06.
 - **scope-entity-chinese-warlords**: Does this source label represent one political entity, several communities, an administrative area or merely a cartographic grouping? Establish scope before assigning national institutions. Source IDs: entity-chinese-warlords. Linked batches: batch-26.
 - **scope-entity-saar-protectorate**: Does this source label represent one political entity, several communities, an administrative area or merely a cartographic grouping? Establish scope before assigning national institutions. Source IDs: entity-saar-protectorate. Linked batches: batch-03.
 
@@ -881,7 +880,7 @@ Other questions track source-presence gaps, changing authority/grouping, normali
 
 ## Archived Phase 1 raw audit batches — superseded for political research
 
-Batches partition all 880 IDs once. Uncurated counts sum to 788; existing profiles may still require additional periods/identity review. Counts measure map IDs, not a claim that each is one state. A compound label may require several historical records. Geography is a planning hint from the largest prepared feature; manual overrides/candidate families improve it, but it is not historical evidence. Australian community batches are smaller and have a distinct institutional review approach.
+Batches partition all 880 IDs once. Uncurated counts sum to 772; existing profiles may still require additional periods/identity review. Counts measure map IDs, not a claim that each is one state. A compound label may require several historical records. Geography is a planning hint from the largest prepared feature; manual overrides/candidate families improve it, but it is not historical evidence. Australian community batches are smaller and have a distinct institutional review approach.
 
 ### batch-01 — Unidentified/composite source labels · 1/1
 
@@ -943,19 +942,19 @@ Continuity: Keep candidate families together across linked batches; share instit
 
 ### batch-06 — Eastern Europe, Russian/Soviet and Balkan source families · 1/2
 
-12 identities; 11 uncurated; 1 already mapped. 12 require some research/review before acceptance.
+12 identities; 5 uncurated; 7 already mapped. 12 require some research/review before acceptance.
 
 National archives and constitutional treaties; occupation, federation and regime continuity require separate evidence.
 
 Included: Armenia (entity-armenia); Azerbaijan (entity-azerbaijan); Georgia (entity-georgia); South Russia (entity-south-russia); Ukraine (entity-ukraine); Far Eastern SSR (entity-far-eastern-ssr); Russian Empire (entity-russian-empire); USSR (entity-soviet-union); White Russia (entity-white-russia); Cyprus (entity-cyprus); Dodecanese Islands (entity-dodecanese-islands); Greece (entity-greece).
 
-Difficult cases: Runtime mapping resolves outside the sourced existence interval. Review the source label and mapping before extending facts. Source USSR appears in 1920 although the curated Union formation is dated 1922. Review civil-war source labels and republic/union relationships without inventing continuity.
+Difficult cases: Source USSR appears in 1920 although the curated Union formation is dated 1922. Review civil-war source labels and republic/union relationships without inventing continuity.
 
-Continuity: Keep candidate families together across linked batches; share institutional discovery, never unsupported facts. Phase 2 approval required. 9 tracked questions touch this batch; complete links are in manifest.json.
+Continuity: Keep candidate families together across linked batches; share institutional discovery, never unsupported facts. Phase 2 approval required. 8 tracked questions touch this batch; complete links are in manifest.json.
 
 ### batch-07 — Eastern Europe, Russian/Soviet and Balkan source families · 2/2
 
-11 identities; 11 uncurated; 0 already mapped. 11 require some research/review before acceptance.
+11 identities; 1 uncurated; 10 already mapped. 11 require some research/review before acceptance.
 
 National archives and constitutional treaties; occupation, federation and regime continuity require separate evidence.
 
