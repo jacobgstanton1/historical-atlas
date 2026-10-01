@@ -72,6 +72,14 @@ export function transitionQueue(input, action, args = {}, options = {}) {
     requireCondition(['validation-failed','historical-review','accepted'].includes(job.validation.status),'Invalid validator status');
     requireCondition(!job.validation.packageHash || job.validation.packageHash===job.packageHash,'Validator package hash mismatch');
     job.status=job.validation.status==='accepted'?'validated':job.validation.status;
+  } else if (action === 'recontextualize') {
+    coordinator();requireCondition(['submitted','historical-review','accepted'].includes(job.status),'Only retained unintegrated submissions can receive a fresh context');
+    requireCondition(args.reason?.trim()&&args.expectedPackageHash===job.packageHash,'Explicit context revision rationale and expected package hash required');
+    requireCondition(job.packageHash===packageDigest(job.package),'Retained package hash changed');
+    requireCondition(options.context?.productionFingerprint&&args.productionFingerprint===options.context.productionFingerprint&&args.productionFingerprint!==job.productionFingerprint,'Verified new production context required');
+    job.contextRevisions??=[];job.contextRevisions.push({productionFingerprint:job.productionFingerprint,package:clone(job.package),packageHash:job.packageHash,receipt:clone(job.receipt??null),validation:clone(job.validation??null),at:now,reason:args.reason});
+    job.productionFingerprint=args.productionFingerprint;job.package.productionFingerprint=args.productionFingerprint;job.packageHash=packageDigest(job.package);
+    delete job.receipt;delete job.validation;job.status='submitted';
   } else if (action === 'accept') {
     coordinator();requireCondition(['validated','historical-review'].includes(job.status),'Job is not eligible for acceptance');
     requireCondition(args.productionFingerprint===job.productionFingerprint,'Stale acceptance fingerprint');

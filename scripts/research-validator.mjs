@@ -56,6 +56,16 @@ export function validatePackage(pkg, job, context={}) {
   checkSchema(pkg,schema,'package',errors);
   if (errors.length) return {valid:false,errors,review,status:'validation-failed',packageHash};
   if (!plain(job)) errors.push('Missing coordinator job');
+  // Entity-centric work is a bounded assignment, not permission to mix arbitrary specialists.
+  const coreState=pkg.category==='core-state';
+  const coreCategories=['capital','leadership','political-institutional','currency'];
+  if(coreState) {
+    if(!Array.isArray(pkg.categories)||!Array.isArray(job?.categories)||!pkg.categories.length||!job.categories.length||
+      job.categories.some(c=>!coreCategories.includes(c))||new Set(job.categories).size!==job.categories.length||
+      JSON.stringify([...(pkg.categories||[])].sort())!==JSON.stringify([...(job?.categories||[])].sort()))
+      errors.push('Core-state requires matching explicit bounded claim categories');
+    if(pkg.worker.specialism!=='entity-core')errors.push('Core-state requires entity-core worker');
+  } else if(pkg.categories!==undefined||job?.categories!==undefined)errors.push('Ordinary specialist jobs cannot declare multiple categories');
   const fingerprint=context.productionFingerprint;
   if (typeof fingerprint!=='string'||!fingerprint || pkg.productionFingerprint!==fingerprint || job?.productionFingerprint!==fingerprint) errors.push('Production fingerprint mismatch or unavailable');
   for (const key of ['jobId','entityId','category']) if (pkg[key] !== job?.[key==='jobId'?'id':key]) errors.push(`Job ${key} mismatch`);
@@ -76,7 +86,7 @@ export function validatePackage(pkg, job, context={}) {
   collectIds(context.manifest);
   for (const id of pkg.mapIds) if (reviewOnly?!manifestIds.has(id):!mappings.some(m=>m.mapId===id&&m.entityId===pkg.entityId)) errors.push(`Unknown entity/map identity relationship: ${id}`);
   if(reviewOnly) review.push('REVIEW-ONLY: Unmapped identity research cannot create or integrate an entity automatically');
-  if (!categories.includes(pkg.category)) errors.push('Unknown category');
+  if (!categories.includes(pkg.category)&&!coreState) errors.push('Unknown category');
   if (!config.specialists[pkg.worker.specialism]?.includes(pkg.category)) errors.push('Worker specialism unsuitable for assigned category');
   const existingSources=records(context.registry,'sources'), sourceMap=new Map(existingSources.map(s=>[s.id,s]));
   if(new Set(existingSources.map(x=>x.id)).size!==existingSources.length)errors.push('Corrupt production context: duplicate source IDs');
@@ -98,7 +108,10 @@ export function validatePackage(pkg, job, context={}) {
   for (const c of pkg.claims) {
     if (claimIds.has(c.id)) errors.push(`Duplicate claim id: ${c.id}`);claimIds.add(c.id);
     if (c.entityId!==pkg.entityId) errors.push(`Claim ${c.id}: entity mismatch`);
-    if (c.category!==pkg.category) errors.push(`Claim ${c.id}: category mismatch`);
+    if (coreState?!pkg.categories?.includes(c.category):c.category!==pkg.category) errors.push(`Claim ${c.id}: category mismatch`);
+    if(coreState&&c.figure)errors.push(`Claim ${c.id}: Important Figures are outside core-state assignments`);
+    if(coreState&&c.temporal.kind!=='interval')errors.push(`Claim ${c.id}: core-state requires a sourced validity interval`);
+    if(coreState&&!c.evidence.some(e=>e.supportsClaim&&e.from&&e.until))errors.push(`Claim ${c.id}: core-state requires explicit source-supported interval endpoints`);
     const range=c.temporal.kind==='observation'?dateRange(c.temporal.observationDate):bounds(c.temporal.from,c.temporal.until);
     if (!range) errors.push(`Claim ${c.id}: invalid calendar date or interval`);
     if (range&&period&&(range.lo<period.lo||range.hi>period.hi)) errors.push(`Claim ${c.id}: outside assigned period`);
