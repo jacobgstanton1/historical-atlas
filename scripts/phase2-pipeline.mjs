@@ -47,6 +47,12 @@ export function planIntegration(input,current){
  for(const e of normalized.entities){assert.ok(!c.db.entities.some(x=>x.id===e.id),'Entity collision '+e.id);assert.ok(e.names?.length&&e.politicalStatus?.length&&e.descriptions?.length&&e.existence,'Incomplete political core '+e.id);c.db.entities.push(e);newEntities.push(e.id);}
  for(const extension of normalized.extensions){
   const e=c.db.entities.find(x=>x.id===extension.entityId);assert.ok(e,'Missing extension entity');assert.equal(hash(e),extension.expectedHash,'Stale extension');
+  if(extension.existence){
+   const previous=intervalBounds(e.existence),expanded=intervalBounds(extension.existence);
+   assert.ok(expanded[0]<=previous[0]&&expanded[1]>=previous[1],'Extension cannot shrink researched existence');
+   assert.ok(e.existence.sourceIds.every(id=>extension.existence.sourceIds?.includes(id)),'Extension must retain existing existence sources');
+   e.existence=extension.existence;
+  }
   for(const [field,facts]of Object.entries(extension.append)){assert.ok(Array.isArray(e[field])&&Array.isArray(facts),'Only append extensions supported');e[field].push(...facts);}
  }
  const sourceIds=new Set(c.registry.sources.map(s=>s.id));
@@ -56,6 +62,7 @@ export function planIntegration(input,current){
   if(r.validFrom&&r.validUntil)assert.ok(intervalBounds(r)[0]<intervalBounds(r)[1],'Invalid interval '+label);
  };
  for(const e of normalized.entities){auditRecord(e.existence,e.id);for(const [k,values]of Object.entries(e))if(Array.isArray(values))for(const r of values)auditRecord(r,e.id+' '+k);}
+ for(const extension of normalized.extensions){if(extension.existence)auditRecord(extension.existence,extension.entityId+' existence extension');for(const [k,values]of Object.entries(extension.append))for(const r of values)auditRecord(r,extension.entityId+' '+k+' extension');}
  const warnings=[];
  for(const mapping of normalized.mappings){
   assert.ok(scope.mapIds.includes(mapping.mapId),'Out-of-scope mapping');assert.ok(c.db.entities.some(e=>e.id===mapping.entityId),'Unknown entity');assert.ok(mapping.validFrom&&mapping.validUntil,'Undated mapping');auditRecord(mapping,mapping.mapId);

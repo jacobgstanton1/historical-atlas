@@ -30,3 +30,12 @@ test('source-ID conflicts, entity collisions and stale extensions cannot silentl
 test('resolver availability alone cannot promote new partial research to enriched',()=>{
  const p=fixture(9),raw=p.assignedRawIdentities[0];p.decisions[raw].status='existing-enriched';p.decisions[raw].tier='existing-enriched';assert.throws(()=>planIntegration(p,baseline),/existing-enriched/);
 });
+test('sourced existence expansion preserves earlier facts and rejects shrinkage or missing references',()=>{
+ const p=fixture(9),old=baseline.db.entities.find(e=>e.id==='british-guiana-court-policy-framework');
+ const extension={entityId:old.id,expectedHash:hash(old),existence:{...old.existence,validFrom:'1832-01-01',sourceIds:[...old.existence.sourceIds,p.sources[0].id]},append:{descriptions:[{value:'Synthetic earlier evidence',validFrom:'1832-01-01',validUntil:'1914-01-01',sourceIds:[p.sources[0].id]}]}};
+ p.extensions=[extension];const integrated=planIntegration(p,baseline),updated=integrated.db.entities.find(e=>e.id===old.id);
+ assert.equal(updated.existence.validFrom,'1832-01-01');assert.deepEqual(updated.descriptions.slice(0,old.descriptions.length),old.descriptions);assert.deepEqual(baseline.db.entities.find(e=>e.id===old.id),old);
+ extension.existence.validFrom='1920-01-01';assert.throws(()=>planIntegration(p,baseline),/shrink/);extension.existence.validFrom='1832-01-01';extension.existence.sourceIds=[];assert.throws(()=>planIntegration(p,baseline),/retain/);
+ extension.existence.sourceIds=[...old.existence.sourceIds,'missing-source'];assert.throws(()=>planIntegration(p,baseline),/Missing source/);
+ extension.existence.sourceIds=[...old.existence.sourceIds,p.sources[0].id];extension.append.descriptions[0].sourceIds=[];assert.throws(()=>planIntegration(p,baseline),/Unsourced/);
+});
