@@ -156,3 +156,7 @@ Only read source bodies support accepted facts. Worker body-reading cautions and
 No full regression is scheduled at this batch; next scheduled checkpoints remain 09, 13, 17 and 21.
 
 Next authorised batch: political-batch-13. Push and clean-main verification precede further integration.
+
+## Coordinator follow-up during Batch13
+
+Source/calendar precision corrected during Batch13; original entity/mapping/decision records retained in research-batch-13.priorBatchCorrections.beforeRecords. February1878 remains an explicit gap;1909 reform begins Gregorian21August. Full Batch13 regression validates the corrected live registry. No Batch01–07 historical records modified.

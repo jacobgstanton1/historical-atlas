@@ -107,9 +107,11 @@ try {
  check('Curated alias search resolves real entity',(await text()).includes('entity-british-raj'));
  await page.locator('#close-inspector').click();
  check('Keyboard-accessible close hides inert panel',await page.locator('#inspector').evaluate(e=>e.inert&&e.getAttribute('aria-hidden')==='true'));
- await page.locator('#reset-view').click(); await page.waitForTimeout(900);
+ await page.locator('#reset-view').click();
+ await page.waitForFunction(()=>{const map=window.__atlas.map;return !map.isMoving()&&map.queryRenderedFeatures(map.project([-100,38]),{layers:['territories-fill']}).some(f=>f.properties._stableId==='entity-united-states');},{},{timeout:10000});
  const p=await page.evaluate(()=>window.__atlas.map.project([-100,38]));
  await page.mouse.click(p.x,p.y);
+ await page.waitForFunction(()=>document.querySelector('#inspector.is-open')&&document.querySelector('#dossier-content')?.textContent.includes('entity-united-states'),{},{timeout:10000});
  check('Real map click opens US dossier',(await text()).includes('entity-united-states'));
  await page.locator('#labels-toggle').click();
  check('Labels off',await page.evaluate(()=>window.__atlas.map.getLayoutProperty('territory-labels','visibility')==='none'));
