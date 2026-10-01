@@ -3,7 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {digest,readContext,productionFingerprint,productionFiles,dateRange,periodBounds,overlap,isCLI,root as defaultRoot} from './research-common.mjs';
 import {validatePackage} from './research-validator.mjs';
-import {withLock,atomicWrite} from './research-queue.mjs';
+import {withLock,atomicWrite,atomicRename} from './research-queue.mjs';
 
 const targets={'leadership':'leaders','capital':'capitals','population-statistics':'population','area-statistics':'area','currency':'currencies','economy':'economy','events-context':'events','relationships':'relationships'};
 const writeFiles=['data/historical-entities.json','data/historical-sources.json'];
@@ -99,7 +99,7 @@ export function planIntegration(pkg,job,context,receipt){
 function journalPaths(directory){return {file:path.join(directory,'research','.integration-journal.json'),lock:path.join(directory,'research','.integration-state')};}
 function rawWrite(file,text){
   const temporary=file+'.'+crypto.randomUUID()+'.tmp';let fd;
-  try{fd=fs.openSync(temporary,'wx');fs.writeFileSync(fd,text);fs.fsyncSync(fd);fs.closeSync(fd);fd=undefined;fs.renameSync(temporary,file);}finally{if(fd!==undefined)fs.closeSync(fd);if(fs.existsSync(temporary))fs.unlinkSync(temporary);}
+  try{fd=fs.openSync(temporary,'wx');fs.writeFileSync(fd,text);fs.fsyncSync(fd);fs.closeSync(fd);fd=undefined;atomicRename(temporary,file);}finally{if(fd!==undefined)fs.closeSync(fd);if(fs.existsSync(temporary))fs.unlinkSync(temporary);}
 }
 function journalCheck(directory,journal){
   check(journal.schemaVersion===1&&journal.root===path.resolve(directory),'Invalid integration journal root/schema');

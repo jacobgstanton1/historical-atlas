@@ -33,13 +33,19 @@ export function recoverLock(file,{actor,reason,expectedOwner}={}) {
   requireCondition(dead,'Lock owner remains alive; no automatic stealing');
   requireCondition(digest(inspectLock(file))===digest(owner),'Lock owner changed during recovery');fs.unlinkSync(file+'.lock');return {recovered:true,owner,actor,reason};
 }
+export function atomicRename(from,to,{rename=fs.renameSync,pause=ms=>Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,ms)}={}) {
+  for(let attempt=0;;attempt++)try{return rename(from,to);}catch(error){
+    if(!['EPERM','EACCES','EBUSY'].includes(error.code)||attempt>=6)throw error;
+    pause(25*2**attempt);
+  }
+}
 export function atomicWrite(file, value) {
   const temporary = file + '.' + crypto.randomUUID() + '.tmp';
   let handle;
   try {
     handle = fs.openSync(temporary, 'wx');
     fs.writeFileSync(handle, JSON.stringify(value,null,2)+'\n'); fs.fsyncSync(handle); fs.closeSync(handle); handle = undefined;
-    fs.renameSync(temporary,file);
+    atomicRename(temporary,file);
   } finally { if (handle !== undefined) fs.closeSync(handle); if (fs.existsSync(temporary)) fs.unlinkSync(temporary); }
 }
 export function createQueue(jobs, {concurrency = 3} = {}) {
