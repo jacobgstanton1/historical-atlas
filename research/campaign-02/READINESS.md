@@ -35,3 +35,7 @@ See `reports/preintegration-validation.json`, `reports/tooling-validation.json`,
 ## Authorization resumed
 
 The user directly authorized Campaign 2 production integration, commits to main and pushes to origin on resumption. The earlier authorization block is historical. Preparation commit `26196bb37ba3a8385804885ed5f55a7aae0268b1` was pushed successfully. First12 independently reviewed packages were accepted against fresh contexts and integrated serially:37 facts,30 new sources,4 existing sources reused,3 flag assets. Checkpoint1 passed721 integrity checks,8050 claim/map/year checks and18 browser checks. Prior222/46/10 suites and624 baseline checks were not repeated.
+
+## Intentional strategic stop supersedes the earlier continuation plan
+
+See STRATEGIC-STOP.md. Campaign2 is retired after pushed checkpoint1. No further research or integration is authorized until a new phase is explicitly requested.
