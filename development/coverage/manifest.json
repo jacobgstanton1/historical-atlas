@@ -4,96 +4,96 @@
   "coverageDefinition": "Covered means the existing production resolver returns a curated entity in at least one snapshot where this map ID is selectable. It does not mean core completeness or coverage throughout 1800–1960. All other IDs still have map-derived fallback panels.",
   "summary": {
     "totalIdentities": 880,
-    "curatedMetadataEntities": 189,
-    "mappedIdentities": 130,
-    "coveredIdentities": 128,
-    "uncoveredIdentities": 752,
-    "percentage": 14.55,
+    "curatedMetadataEntities": 201,
+    "mappedIdentities": 137,
+    "coveredIdentities": 135,
+    "uncoveredIdentities": 745,
+    "percentage": 15.34,
     "multipleSnapshotIdentities": 519,
     "singleSnapshotIdentities": 361,
     "unresolvedQuestions": 260,
     "identitiesWithQuestions": 818,
     "brokenMappings": 0,
     "orphanMetadataEntities": 0,
-    "ambiguousMappingYearPairs": 28
+    "ambiguousMappingYearPairs": 30
   },
   "bySnapshot": [
     {
       "year": 1800,
       "selectableIdentities": 547,
-      "covered": 27,
-      "uncovered": 520,
-      "percentage": 4.94
+      "covered": 30,
+      "uncovered": 517,
+      "percentage": 5.48
     },
     {
       "year": 1815,
       "selectableIdentities": 313,
-      "covered": 49,
-      "uncovered": 264,
-      "percentage": 15.65
+      "covered": 50,
+      "uncovered": 263,
+      "percentage": 15.97
     },
     {
       "year": 1878,
       "selectableIdentities": 173,
-      "covered": 32,
-      "uncovered": 141,
-      "percentage": 18.5
+      "covered": 35,
+      "uncovered": 138,
+      "percentage": 20.23
     },
     {
       "year": 1880,
       "selectableIdentities": 170,
-      "covered": 31,
-      "uncovered": 139,
-      "percentage": 18.24
+      "covered": 34,
+      "uncovered": 136,
+      "percentage": 20
     },
     {
       "year": 1900,
       "selectableIdentities": 166,
-      "covered": 27,
-      "uncovered": 139,
-      "percentage": 16.27
+      "covered": 30,
+      "uncovered": 136,
+      "percentage": 18.07
     },
     {
       "year": 1914,
       "selectableIdentities": 143,
-      "covered": 29,
-      "uncovered": 114,
-      "percentage": 20.28
+      "covered": 30,
+      "uncovered": 113,
+      "percentage": 20.98
     },
     {
       "year": 1920,
       "selectableIdentities": 164,
-      "covered": 37,
-      "uncovered": 127,
-      "percentage": 22.56
+      "covered": 40,
+      "uncovered": 124,
+      "percentage": 24.39
     },
     {
       "year": 1930,
       "selectableIdentities": 164,
-      "covered": 38,
-      "uncovered": 126,
-      "percentage": 23.17
+      "covered": 41,
+      "uncovered": 123,
+      "percentage": 25
     },
     {
       "year": 1938,
       "selectableIdentities": 172,
-      "covered": 33,
-      "uncovered": 139,
-      "percentage": 19.19
+      "covered": 36,
+      "uncovered": 136,
+      "percentage": 20.93
     },
     {
       "year": 1945,
       "selectableIdentities": 183,
-      "covered": 36,
-      "uncovered": 147,
-      "percentage": 19.67
+      "covered": 38,
+      "uncovered": 145,
+      "percentage": 20.77
     },
     {
       "year": 1960,
       "selectableIdentities": 157,
-      "covered": 40,
-      "uncovered": 117,
-      "percentage": 25.48
+      "covered": 43,
+      "uncovered": 114,
+      "percentage": 27.39
     }
   ],
   "brokenMappings": [],
@@ -126,6 +126,10 @@
     {
       "mapId": "entity-lucca",
       "requestedYear": 1817
+    },
+    {
+      "mapId": "entity-canada",
+      "requestedYear": 1931
     },
     {
       "mapId": "entity-ceylon",
@@ -174,6 +178,10 @@
     {
       "mapId": "entity-iran",
       "requestedYear": 1933
+    },
+    {
+      "mapId": "entity-dominion-of-newfoundland",
+      "requestedYear": 1934
     },
     {
       "mapId": "entity-yugoslavia",
@@ -8747,8 +8755,8 @@
         "entity-greenland"
       ],
       "totalIdentities": 16,
-      "uncuratedIdentities": 15,
-      "existingProfilesToReview": 1,
+      "uncuratedIdentities": 8,
+      "existingProfilesToReview": 8,
       "requiresHistoricalResearch": 16,
       "sourceStrategy": "National/provincial archives; colonial charters and Indigenous institutional sources require distinct treatment.",
       "questionIds": [
@@ -10760,15 +10768,49 @@
         }
       ],
       "currentlyResolvesToDossier": false,
-      "researchStatus": "needs-research",
+      "researchStatus": "mapping-review",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "mapping-review",
+        "tier": "none",
+        "reviewerNote": "Maritime colonies had separate British governors, councils and elected assemblies; Acadian Peninsula is a geographical label rather than a securely identified whole colonial government.",
+        "identityResolution": "Cannot identify Nova Scotia, New Brunswick or a combined administration from this label alone.",
+        "sourceIds": [
+          "b08-canada-institutions"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated.",
+          "No colonial administration assigned by geography or ethnic community."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b08-canada-institutions"
+            ]
+          }
+        ]
+      },
       "planningRegion": "north-america",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Cannot identify Nova Scotia, New Brunswick or a combined administration from this label alone.",
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b08-canada-institutions"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated.",
+          "No colonial administration assigned by geography or ethnic community."
+        ]
       },
       "batchId": "batch-08",
       "classification": {
@@ -32955,8 +32997,34 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-canada",
+          "entityId": "canada-1867-federal-framework",
+          "validFrom": "1867-07-01",
+          "validUntil": "1931-12-11",
+          "sourceIds": [
+            "b08-canada-1867-act",
+            "b08-canada-institutions"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        },
+        {
+          "mapId": "entity-canada",
+          "entityId": "canada-westminster-federal-framework",
+          "validFrom": "1931-12-11",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b08-canada-1867-act",
+            "b08-westminster-1931"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        }
+      ],
+      "curatedEntityIds": [
+        "canada-1867-federal-framework",
+        "canada-westminster-federal-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
@@ -32976,161 +33044,228 @@
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "canada-1867-federal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "canada-1867-federal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "canada-1867-federal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "canada-1867-federal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "canada-1867-federal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "canada-1867-federal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "canada-westminster-federal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "canada-westminster-federal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "canada-westminster-federal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "mapping-review",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "mapping-review",
+        "tier": "none",
+        "reviewerNote": "1867 onward has defensible federal mappings; 1815 raw Canada does not identify a single established federal administration.",
+        "identityResolution": "Separate Upper and Lower Canada existed in 1815; generic raw Canada is not assigned to one or both without referent evidence.",
+        "sourceIds": [
+          "b08-canada-1867-act",
+          "b08-canada-institutions",
+          "b08-westminster-1931"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated.",
+          "Canada 1815 remains unmapped; no 1867 Dominion fallback."
+        ],
+        "intervals": [
+          {
+            "entityId": "canada-1867-federal-framework",
+            "validFrom": "1867-07-01",
+            "validUntil": "1931-12-11",
+            "sourceIds": [
+              "b08-canada-1867-act",
+              "b08-canada-institutions"
+            ]
+          },
+          {
+            "entityId": "canada-westminster-federal-framework",
+            "validFrom": "1931-12-11",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b08-canada-1867-act",
+              "b08-westminster-1931"
+            ]
+          }
+        ]
+      },
       "planningRegion": "north-america",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Separate Upper and Lower Canada existed in 1815; generic raw Canada is not assigned to one or both without referent evidence.",
+        "intervals": [
+          {
+            "entityId": "canada-1867-federal-framework",
+            "validFrom": "1867-07-01",
+            "validUntil": "1931-12-11",
+            "sourceIds": [
+              "b08-canada-1867-act",
+              "b08-canada-institutions"
+            ]
+          },
+          {
+            "entityId": "canada-westminster-federal-framework",
+            "validFrom": "1931-12-11",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b08-canada-1867-act",
+              "b08-westminster-1931"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated.",
+          "Canada 1815 remains unmapped; no 1867 Dominion fallback."
+        ]
       },
       "batchId": "batch-08",
       "classification": {
@@ -42275,71 +42410,164 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1938,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-dominion-of-newfoundland",
+          "entityId": "newfoundland-responsible-dominion-framework",
+          "validFrom": "1908-01-01",
+          "validUntil": "1934-02-16",
+          "sourceIds": [
+            "b08-newfoundland-responsible",
+            "b08-dominion-1907",
+            "b08-canada-institutions",
+            "b08-westminster-1931"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        },
+        {
+          "mapId": "entity-dominion-of-newfoundland",
+          "entityId": "newfoundland-commission-framework",
+          "validFrom": "1934-02-16",
+          "validUntil": "1949-03-31",
+          "sourceIds": [
+            "b08-newfoundland-commission",
+            "b08-canada-institutions"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        }
+      ],
+      "curatedEntityIds": [
+        "newfoundland-commission-framework",
+        "newfoundland-responsible-dominion-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "newfoundland-responsible-dominion-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "newfoundland-responsible-dominion-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "newfoundland-commission-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial editorial intervals only; no complete lifetime or exhaustive history claim.",
+        "identityResolution": "Independently sourced partial framework; unresearched years remain missing.",
+        "sourceIds": [
+          "b08-newfoundland-responsible",
+          "b08-dominion-1907",
+          "b08-canada-institutions",
+          "b08-westminster-1931",
+          "b08-newfoundland-commission"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "newfoundland-responsible-dominion-framework",
+            "validFrom": "1908-01-01",
+            "validUntil": "1934-02-16",
+            "sourceIds": [
+              "b08-newfoundland-responsible",
+              "b08-dominion-1907",
+              "b08-canada-institutions",
+              "b08-westminster-1931"
+            ]
+          },
+          {
+            "entityId": "newfoundland-commission-framework",
+            "validFrom": "1934-02-16",
+            "validUntil": "1949-03-31",
+            "sourceIds": [
+              "b08-newfoundland-commission",
+              "b08-canada-institutions"
+            ]
+          }
+        ]
+      },
       "planningRegion": "north-america",
       "questionIds": [
         "authority-entity-dominion-of-newfoundland",
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced partial framework; unresearched years remain missing.",
+        "intervals": [
+          {
+            "entityId": "newfoundland-responsible-dominion-framework",
+            "validFrom": "1908-01-01",
+            "validUntil": "1934-02-16",
+            "sourceIds": [
+              "b08-newfoundland-responsible",
+              "b08-dominion-1907",
+              "b08-canada-institutions",
+              "b08-westminster-1931"
+            ]
+          },
+          {
+            "entityId": "newfoundland-commission-framework",
+            "validFrom": "1934-02-16",
+            "validUntil": "1949-03-31",
+            "sourceIds": [
+              "b08-newfoundland-commission",
+              "b08-canada-institutions"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated."
+        ]
       },
       "batchId": "batch-08",
       "classification": {
@@ -56062,78 +56290,139 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-greenland",
+          "entityId": "greenland-late-colonial-framework",
+          "validFrom": "1878-01-01",
+          "validUntil": "1901-01-01",
+          "sourceIds": [
+            "b08-greenland-history"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        },
+        {
+          "mapId": "entity-greenland",
+          "entityId": "greenland-post-1953-integration-framework",
+          "validFrom": "1954-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b08-greenland-history",
+            "b08-greenland-un-history"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        }
+      ],
+      "curatedEntityIds": [
+        "greenland-late-colonial-framework",
+        "greenland-post-1953-integration-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "greenland-late-colonial-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
+            "descriptions"
+          ],
+          "missingCoreFields": [
             "capitals",
             "governments",
             "leaders",
-            "currencies",
-            "descriptions"
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "greenland-late-colonial-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
+            "descriptions"
+          ],
+          "missingCoreFields": [
             "capitals",
             "governments",
             "leaders",
-            "currencies",
-            "descriptions"
+            "currencies"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "greenland-late-colonial-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
+            "descriptions"
+          ],
+          "missingCoreFields": [
             "capitals",
             "governments",
             "leaders",
-            "currencies",
-            "descriptions"
+            "currencies"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "greenland-post-1953-integration-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
+            "descriptions"
+          ],
+          "missingCoreFields": [
             "capitals",
             "governments",
             "leaders",
-            "currencies",
-            "descriptions"
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial editorial intervals only; no complete lifetime or exhaustive history claim.",
+        "identityResolution": "Independently sourced partial framework; unresearched years remain missing.",
+        "sourceIds": [
+          "b08-greenland-history",
+          "b08-greenland-un-history"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated.",
+          "1901–1953 council/wartime changes and exact 1953 transition are uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "greenland-late-colonial-framework",
+            "validFrom": "1878-01-01",
+            "validUntil": "1901-01-01",
+            "sourceIds": [
+              "b08-greenland-history"
+            ]
+          },
+          {
+            "entityId": "greenland-post-1953-integration-framework",
+            "validFrom": "1954-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b08-greenland-history",
+              "b08-greenland-un-history"
+            ]
+          }
+        ]
+      },
       "planningRegion": "north-america",
       "questionIds": [
         "gap-entity-greenland",
@@ -56141,9 +56430,32 @@
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced partial framework; unresearched years remain missing.",
+        "intervals": [
+          {
+            "entityId": "greenland-late-colonial-framework",
+            "validFrom": "1878-01-01",
+            "validUntil": "1901-01-01",
+            "sourceIds": [
+              "b08-greenland-history"
+            ]
+          },
+          {
+            "entityId": "greenland-post-1953-integration-framework",
+            "validFrom": "1954-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b08-greenland-history",
+              "b08-greenland-un-history"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated.",
+          "1901–1953 council/wartime changes and exact 1953 transition are uncurated."
+        ]
       },
       "batchId": "batch-08",
       "classification": {
@@ -81374,38 +81686,92 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1800,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-luisiana",
+          "entityId": "louisiana-pre-retrocession-framework",
+          "validFrom": "1800-01-01",
+          "validUntil": "1800-10-01",
+          "sourceIds": [
+            "b08-louisiana-primary-treaty",
+            "b08-louisiana-transfer"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        }
+      ],
+      "curatedEntityIds": [
+        "louisiana-pre-retrocession-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "louisiana-pre-retrocession-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial editorial intervals only; no complete lifetime or exhaustive history claim.",
+        "identityResolution": "Independently sourced partial framework; unresearched years remain missing.",
+        "sourceIds": [
+          "b08-louisiana-primary-treaty",
+          "b08-louisiana-transfer"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated.",
+          "October 1800 and subsequent treaty/possession phases uncurated; source classification unchanged."
+        ],
+        "intervals": [
+          {
+            "entityId": "louisiana-pre-retrocession-framework",
+            "validFrom": "1800-01-01",
+            "validUntil": "1800-10-01",
+            "sourceIds": [
+              "b08-louisiana-primary-treaty",
+              "b08-louisiana-transfer"
+            ]
+          }
+        ]
+      },
       "planningRegion": "north-america",
       "questionIds": [
         "authority-entity-luisiana"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced partial framework; unresearched years remain missing.",
+        "intervals": [
+          {
+            "entityId": "louisiana-pre-retrocession-framework",
+            "validFrom": "1800-01-01",
+            "validUntil": "1800-10-01",
+            "sourceIds": [
+              "b08-louisiana-primary-treaty",
+              "b08-louisiana-transfer"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated.",
+          "October 1800 and subsequent treaty/possession phases uncurated; source classification unchanged."
+        ]
       },
       "batchId": "batch-08",
       "classification": {
@@ -90186,55 +90552,84 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1878,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-mexico",
+          "entityId": "mexico-porfirian-framework",
+          "validFrom": "1878-01-01",
+          "validUntil": "1910-01-01",
+          "sourceIds": [
+            "b08-mexico-loc-study",
+            "b08-mexico-porfiriato"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        },
+        {
+          "mapId": "entity-mexico",
+          "entityId": "mexico-1917-constitutional-framework",
+          "validFrom": "1918-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b08-mexico-1917-exhibit",
+            "b08-mexico-loc-study"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        }
+      ],
+      "curatedEntityIds": [
+        "mexico-1917-constitutional-framework",
+        "mexico-porfirian-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "mexico-porfirian-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "mexico-porfirian-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "mexico-porfirian-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
@@ -90255,97 +90650,160 @@
         },
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "mexico-1917-constitutional-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "mexico-1917-constitutional-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "mexico-1917-constitutional-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "mexico-1917-constitutional-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "mexico-1917-constitutional-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial editorial intervals only; no complete lifetime or exhaustive history claim.",
+        "identityResolution": "Independently sourced partial framework; unresearched years remain missing.",
+        "sourceIds": [
+          "b08-mexico-loc-study",
+          "b08-mexico-porfiriato",
+          "b08-mexico-1917-exhibit"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated.",
+          "1914 competing revolutionary authorities remain outside curated mappings; 1917 legal framework is not retrojected."
+        ],
+        "intervals": [
+          {
+            "entityId": "mexico-porfirian-framework",
+            "validFrom": "1878-01-01",
+            "validUntil": "1910-01-01",
+            "sourceIds": [
+              "b08-mexico-loc-study",
+              "b08-mexico-porfiriato"
+            ]
+          },
+          {
+            "entityId": "mexico-1917-constitutional-framework",
+            "validFrom": "1918-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b08-mexico-1917-exhibit",
+              "b08-mexico-loc-study"
+            ]
+          }
+        ]
+      },
       "planningRegion": "north-america",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced partial framework; unresearched years remain missing.",
+        "intervals": [
+          {
+            "entityId": "mexico-porfirian-framework",
+            "validFrom": "1878-01-01",
+            "validUntil": "1910-01-01",
+            "sourceIds": [
+              "b08-mexico-loc-study",
+              "b08-mexico-porfiriato"
+            ]
+          },
+          {
+            "entityId": "mexico-1917-constitutional-framework",
+            "validFrom": "1918-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b08-mexico-1917-exhibit",
+              "b08-mexico-loc-study"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated.",
+          "1914 competing revolutionary authorities remain outside curated mappings; 1917 legal framework is not retrojected."
+        ]
       },
       "batchId": "batch-08",
       "classification": {
@@ -115394,17 +115852,51 @@
         }
       ],
       "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "researchStatus": "mapping-review",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "mapping-review",
+        "tier": "none",
+        "reviewerNote": "Province of Quebec split into Upper and Lower Canada in 1791; 1800 Quebec could mean Lower Canada, its city or an outdated composite.",
+        "identityResolution": "Raw referent is insufficient to identify one 1800 administration. No guessed mapping.",
+        "sourceIds": [
+          "b08-canada-institutions"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated.",
+          "No modern Quebec province or pre-1791 constitutional fallback."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b08-canada-institutions"
+            ]
+          }
+        ]
+      },
       "planningRegion": "north-america",
       "questionIds": [
         "authority-entity-quebec"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Raw referent is insufficient to identify one 1800 administration. No guessed mapping.",
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b08-canada-institutions"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated.",
+          "No modern Quebec province or pre-1791 constitutional fallback."
+        ]
       },
       "batchId": "batch-08",
       "classification": {
@@ -117921,36 +118413,84 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1800,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-rupert-s-land",
+          "entityId": "ruperts-land-chartered-framework",
+          "validFrom": "1800-01-01",
+          "validUntil": "1801-01-01",
+          "sourceIds": [
+            "b08-ruperts-charter"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        }
+      ],
+      "curatedEntityIds": [
+        "ruperts-land-chartered-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "ruperts-land-chartered-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
+      "currentlyResolvesToDossier": true,
       "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial editorial intervals only; no complete lifetime or exhaustive history claim.",
+        "identityResolution": "Independently sourced partial framework; unresearched years remain missing.",
+        "sourceIds": [
+          "b08-ruperts-charter"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "ruperts-land-chartered-framework",
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b08-ruperts-charter"
+            ]
+          }
+        ]
+      },
       "planningRegion": "north-america",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced partial framework; unresearched years remain missing.",
+        "intervals": [
+          {
+            "entityId": "ruperts-land-chartered-framework",
+            "validFrom": "1800-01-01",
+            "validUntil": "1801-01-01",
+            "sourceIds": [
+              "b08-ruperts-charter"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated."
+        ]
       },
       "batchId": "batch-08",
       "classification": {
@@ -138718,7 +139258,30 @@
       "currentlyResolvesToDossier": true,
       "researchStatus": "existing-enriched",
       "coverageTier": "existing-enriched",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "existing-enriched",
+        "tier": "existing-enriched",
+        "reviewerNote": "No new facts, mappings or duplicate source entries; prior temporal/core data preserved.",
+        "identityResolution": "Existing enriched United States constitutional dossier reused unchanged.",
+        "sourceIds": [
+          "us-constitution",
+          "us-constitutional-start"
+        ],
+        "omissions": [
+          "Existing enriched facts preserved; no new exhaustive enrichment."
+        ],
+        "intervals": [
+          {
+            "entityId": "united-states",
+            "validFrom": "1800-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ]
+          }
+        ]
+      },
       "planningRegion": "north-america",
       "questionIds": [
         "authority-entity-united-states",
@@ -138726,9 +139289,23 @@
         "source-name-normalization"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Existing enriched United States constitutional dossier reused unchanged.",
+        "intervals": [
+          {
+            "entityId": "united-states",
+            "validFrom": "1800-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ]
+          }
+        ],
+        "omissions": [
+          "Existing enriched facts preserved; no new exhaustive enrichment."
+        ]
       },
       "batchId": "batch-08",
       "classification": {
@@ -140844,55 +141421,135 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-viceroyalty-of-new-spain",
+          "entityId": "new-spain-pre-crisis-framework",
+          "validFrom": "1800-01-01",
+          "validUntil": "1808-01-01",
+          "sourceIds": [
+            "b08-mexico-loc-study"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        },
+        {
+          "mapId": "entity-viceroyalty-of-new-spain",
+          "entityId": "new-spain-1815-royalist-framework",
+          "validFrom": "1815-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b08-mexico-loc-study",
+            "b08-new-spain-1815-bando"
+          ],
+          "note": "Independent institutional/primary historical evidence; editorial partial interval, no polygon-derived sovereignty."
+        }
+      ],
+      "curatedEntityIds": [
+        "new-spain-1815-royalist-framework",
+        "new-spain-pre-crisis-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "new-spain-pre-crisis-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "new-spain-1815-royalist-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Partial editorial intervals only; no complete lifetime or exhaustive history claim.",
+        "identityResolution": "Independently sourced partial framework; unresearched years remain missing.",
+        "sourceIds": [
+          "b08-mexico-loc-study",
+          "b08-new-spain-1815-bando"
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated."
+        ],
+        "intervals": [
+          {
+            "entityId": "new-spain-pre-crisis-framework",
+            "validFrom": "1800-01-01",
+            "validUntil": "1808-01-01",
+            "sourceIds": [
+              "b08-mexico-loc-study"
+            ]
+          },
+          {
+            "entityId": "new-spain-1815-royalist-framework",
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b08-mexico-loc-study",
+              "b08-new-spain-1815-bando"
+            ]
+          }
+        ]
+      },
       "planningRegion": "north-america",
       "questionIds": [
         "authority-entity-viceroyalty-of-new-spain",
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Independently sourced partial framework; unresearched years remain missing.",
+        "intervals": [
+          {
+            "entityId": "new-spain-pre-crisis-framework",
+            "validFrom": "1800-01-01",
+            "validUntil": "1808-01-01",
+            "sourceIds": [
+              "b08-mexico-loc-study"
+            ]
+          },
+          {
+            "entityId": "new-spain-1815-royalist-framework",
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b08-mexico-loc-study",
+              "b08-new-spain-1815-bando"
+            ]
+          }
+        ],
+        "omissions": [
+          "Population, GDP, area, flags, exhaustive officeholders and succession are uncurated."
+        ]
       },
       "batchId": "batch-08",
       "classification": {
@@ -155272,9 +155929,9 @@
     },
     "politicalCoverage": {
       "candidates": 401,
-      "covered": 127,
-      "uncovered": 274,
-      "percentage": 31.67
+      "covered": 133,
+      "uncovered": 268,
+      "percentage": 33.17
     },
     "nonStateTemplateIdentities": 400,
     "bySnapshot": [
@@ -155290,9 +155947,9 @@
           "unresolved": 31
         },
         "politicalCandidates": 121,
-        "politicalCovered": 27,
-        "politicalUncovered": 94,
-        "politicalPercentage": 22.31
+        "politicalCovered": 29,
+        "politicalUncovered": 92,
+        "politicalPercentage": 23.97
       },
       {
         "year": 1815,
@@ -155306,9 +155963,9 @@
           "unresolved": 24
         },
         "politicalCandidates": 124,
-        "politicalCovered": 49,
-        "politicalUncovered": 75,
-        "politicalPercentage": 39.52
+        "politicalCovered": 50,
+        "politicalUncovered": 74,
+        "politicalPercentage": 40.32
       },
       {
         "year": 1878,
@@ -155322,9 +155979,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 142,
-        "politicalCovered": 31,
-        "politicalUncovered": 111,
-        "politicalPercentage": 21.83
+        "politicalCovered": 34,
+        "politicalUncovered": 108,
+        "politicalPercentage": 23.94
       },
       {
         "year": 1880,
@@ -155338,9 +155995,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 143,
-        "politicalCovered": 30,
-        "politicalUncovered": 113,
-        "politicalPercentage": 20.98
+        "politicalCovered": 33,
+        "politicalUncovered": 110,
+        "politicalPercentage": 23.08
       },
       {
         "year": 1900,
@@ -155354,9 +156011,9 @@
           "unresolved": 21
         },
         "politicalCandidates": 139,
-        "politicalCovered": 26,
-        "politicalUncovered": 113,
-        "politicalPercentage": 18.71
+        "politicalCovered": 29,
+        "politicalUncovered": 110,
+        "politicalPercentage": 20.86
       },
       {
         "year": 1914,
@@ -155370,9 +156027,9 @@
           "unresolved": 5
         },
         "politicalCandidates": 136,
-        "politicalCovered": 29,
-        "politicalUncovered": 107,
-        "politicalPercentage": 21.32
+        "politicalCovered": 30,
+        "politicalUncovered": 106,
+        "politicalPercentage": 22.06
       },
       {
         "year": 1920,
@@ -155386,9 +156043,9 @@
           "unresolved": 11
         },
         "politicalCandidates": 150,
-        "politicalCovered": 37,
-        "politicalUncovered": 113,
-        "politicalPercentage": 24.67
+        "politicalCovered": 40,
+        "politicalUncovered": 110,
+        "politicalPercentage": 26.67
       },
       {
         "year": 1930,
@@ -155402,9 +156059,9 @@
           "unresolved": 10
         },
         "politicalCandidates": 151,
-        "politicalCovered": 38,
-        "politicalUncovered": 113,
-        "politicalPercentage": 25.17
+        "politicalCovered": 41,
+        "politicalUncovered": 110,
+        "politicalPercentage": 27.15
       },
       {
         "year": 1938,
@@ -155418,9 +156075,9 @@
           "unresolved": 6
         },
         "politicalCandidates": 162,
-        "politicalCovered": 33,
-        "politicalUncovered": 129,
-        "politicalPercentage": 20.37
+        "politicalCovered": 36,
+        "politicalUncovered": 126,
+        "politicalPercentage": 22.22
       },
       {
         "year": 1945,
@@ -155434,9 +156091,9 @@
           "unresolved": 12
         },
         "politicalCandidates": 169,
-        "politicalCovered": 36,
-        "politicalUncovered": 133,
-        "politicalPercentage": 21.3
+        "politicalCovered": 38,
+        "politicalUncovered": 131,
+        "politicalPercentage": 22.49
       },
       {
         "year": 1960,
@@ -155450,9 +156107,9 @@
           "unresolved": 8
         },
         "politicalCandidates": 147,
-        "politicalCovered": 40,
-        "politicalUncovered": 107,
-        "politicalPercentage": 27.21
+        "politicalCovered": 43,
+        "politicalUncovered": 104,
+        "politicalPercentage": 29.25
       }
     ],
     "questionAudit": {
@@ -158890,8 +159547,8 @@
       "totalIdentities": 10,
       "politicalCandidates": 9,
       "nameReviews": 1,
-      "uncoveredPoliticalCandidates": 8,
-      "coveredPoliticalCandidates": 1,
+      "uncoveredPoliticalCandidates": 2,
+      "coveredPoliticalCandidates": 7,
       "sourceStrategy": "National/provincial archives; colonial charters and Indigenous institutional sources require distinct treatment.",
       "priorityRationale": "Early source-family batches prioritise long snapshot presence, broad period potential and national archival/constitutional collections. Source availability is a planning expectation, not an entity-by-entity research finding. Families remain indivisible; no periods are researched now.",
       "highValueMapIds": [
@@ -158902,7 +159559,7 @@
       "familyQuestionIds": [],
       "classificationPrerequisites": [],
       "difficultCases": [],
-      "state": "proposed-not-authorised"
+      "state": "researched-with-partial-coverage"
     },
     {
       "id": "political-batch-09",
@@ -159653,10 +160310,10 @@
       }
     ],
     "pipelineSha256": "3c1cd4c196d1b7c52e603ad810a8b5cfb6b8c74b49afd099b9807a1e3781a53b",
-    "resolverSha256": "67eb96471f1a5904d6e034770c41bec38347f961ea048f4904531dd6fa6f1086",
-    "metadataSha256": "e35640726fed1067ceb7c4f52d4f34d08388534c020782918832034fe853c7bc",
-    "sourcesSha256": "c0173ac1b989e06c77fa1fa6862c0caa7f1bf99d5896ab349ff69e1e4fa87f01",
-    "planSha256": "ac4ff5bc48ad0495a9fdc8ad79ef515a586f9b724c3d1b1040f7b72e4218a897",
+    "resolverSha256": "f4718fa757c1d062815f18333f640257160ff23f1d98007f6184185d5297b3ef",
+    "metadataSha256": "63e888a8a0ee83422393b3be914e0aead15374e4cec39f46d62e803df90b5bd9",
+    "sourcesSha256": "992f150a85b80adbf9e24f5cd49aa19378dcc3e1277fbc1082a7cf8fd60eabab",
+    "planSha256": "4a9266d62de714c07a0a312e749d35e97b9dc1cf1df3f03ba5166e24bb0eceab",
     "classificationPlanSha256": "260036271b0aaec99acf6f41da9b8d82c0c018988744ab2cb655ed85104198fc",
     "classificationModuleSha256": "bfa1973c868b7a645de8552553ee015e2ce9c5778026b70450cfa9daacb63314"
   }
