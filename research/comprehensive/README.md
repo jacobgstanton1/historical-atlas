@@ -26,7 +26,7 @@ Build a source index once for a production fingerprint using `node scripts/resea
 
 `validateDossier` checks strict schema, job/period/fingerprint, source and map references, category investigation, date ordering, entity envelopes, evidence precision, observations, statistical methods, duplicate claims, conflicting slots, derived dependencies, figures and flag assets. Flags reuse the existing SVG safety/license/provenance validator. Known prohibited inferences fail; ambiguity and source conflicts remain review. The actual registry existence envelope is checked. Conflicting existing sourced capital/currency/office records remain held, even when packages use different scope labels. Numeric/schema correctness does not prove historical truth.
 
-Independent review must bind the exact package hash, actual body review, rationale, every validator issue and a disposition for every claim: accepted, held or rejected. Worker and reviewer IDs must differ. Unresolved, disputed, mismatched-scope, flagged and contradictory claims cannot be automatically accepted. Original claims and rejected/held dispositions are retained. Source IDs reuse existing registry records; duplicate URLs under new IDs fail rather than creating redundant source records.
+Independent review must bind the exact package hash, actual body review, rationale, every validator issue and a disposition for every claim: accepted, held or rejected. Worker and reviewer IDs must differ. Unresolved, disputed, mismatched-scope, flagged and contradictory claims cannot be automatically accepted. Original claims and rejected/held dispositions are retained. Source lookup/validation also reuse source records in previously integrated rich packages, refusing overwritten IDs or duplicate URL aliases. Source IDs reuse existing registry records; duplicate URLs under new IDs fail rather than creating redundant source records.
 
 ## Queue and integration
 
@@ -47,3 +47,7 @@ Run `node scripts/research-comprehensive-report.mjs` after all eight exact-hash 
 ## Current limitations
 
 Ancient chronology is an explicit research convention, not a conversion engine for regnal/non-Gregorian dates. Approximate/disputed claims remain held; future reviewed uncertainty-display adapters are needed. Legacy string source conflicts hold whole packages conservatively; structured conflicts bind explicit affected claim IDs and preserve unrelated safe evidence. Bulk ingestion requires normalized inputs; provider-specific APIs, large-stream ingestion and entity reconciliation are not implemented. The rich store has no frontend reader yet. Source body truth still needs historical judgment; provenance alone does not verify it. This is an architecture prototype pending a measured, independently reviewed pilot, not evidence of orders-of-magnitude throughput improvement.
+
+## Completed pilot
+
+The independently reviewed eight-entity pilot is preserved in `pilot/COMPLETION.md` and `pilot/completion-report.json`. Production remains unchanged; accepted queue receipts and integration previews are saved. The report separates new evidence, reused claims, registered sources and previously researched unregistered sources. Inspect the report before authorizing any larger campaign.

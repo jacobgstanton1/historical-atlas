@@ -35,7 +35,11 @@ export function dateBounds(value){
 }
 export function temporalBounds(t){if(t.kind==='observation'||t.kind==='event')return dateBounds(t.observationDate||t.date);const a=dateBounds(t.from),b=dateBounds(t.until),hi=b.precision==='day'?b.lo:b.hi;required(a.lo<hi,'Reversed or empty interval');return{lo:a.lo,hi,precision:a.precision};}
 const intersect=(a,b)=>a.lo<b.hi&&b.lo<a.hi;
-const sourcesOf=context=>context.registry?.sources||[];
+const sourcesOf=context=>{
+ const file=path.join(context.directory||root,'data/comprehensive-dossiers.json');
+ const rich=fs.existsSync(file)?readJSON(file).packages.flatMap(p=>p.sources):[];
+ return [...(context.registry?.sources||[]),...rich];
+};
 export function sourceIndex(context,preserved=[]){
  const sources=sourcesOf(context);return {schemaVersion:1,productionFingerprint:fingerprint(context.directory||root),sources:sources.map(s=>({...s,search:[s.id,s.title,s.institution,s.url].filter(Boolean).join(' ').normalize('NFKD').toLowerCase()})),preserved:preserved.map(p=>({id:p.id,entityId:p.entityId,period:p.period,packageHash:digest(p),sourceIds:[...new Set(p.claims.flatMap(c=>c.sourceIds))]}))};
 }
