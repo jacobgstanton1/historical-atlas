@@ -4,33 +4,33 @@
   "coverageDefinition": "Covered means the existing production resolver returns a curated entity in at least one snapshot where this map ID is selectable. It does not mean core completeness or coverage throughout 1800–1960. All other IDs still have map-derived fallback panels.",
   "summary": {
     "totalIdentities": 880,
-    "curatedMetadataEntities": 98,
-    "mappedIdentities": 78,
-    "coveredIdentities": 77,
-    "uncoveredIdentities": 803,
-    "percentage": 8.75,
+    "curatedMetadataEntities": 119,
+    "mappedIdentities": 93,
+    "coveredIdentities": 92,
+    "uncoveredIdentities": 788,
+    "percentage": 10.45,
     "multipleSnapshotIdentities": 519,
     "singleSnapshotIdentities": 361,
     "unresolvedQuestions": 261,
     "identitiesWithQuestions": 818,
     "brokenMappings": 0,
     "orphanMetadataEntities": 0,
-    "ambiguousMappingYearPairs": 17
+    "ambiguousMappingYearPairs": 21
   },
   "bySnapshot": [
     {
       "year": 1800,
       "selectableIdentities": 547,
-      "covered": 17,
-      "uncovered": 530,
-      "percentage": 3.11
+      "covered": 18,
+      "uncovered": 529,
+      "percentage": 3.29
     },
     {
       "year": 1815,
       "selectableIdentities": 313,
-      "covered": 31,
-      "uncovered": 282,
-      "percentage": 9.9
+      "covered": 44,
+      "uncovered": 269,
+      "percentage": 14.06
     },
     {
       "year": 1878,
@@ -63,23 +63,23 @@
     {
       "year": 1920,
       "selectableIdentities": 164,
-      "covered": 24,
-      "uncovered": 140,
-      "percentage": 14.63
+      "covered": 25,
+      "uncovered": 139,
+      "percentage": 15.24
     },
     {
       "year": 1930,
       "selectableIdentities": 164,
-      "covered": 24,
-      "uncovered": 140,
-      "percentage": 14.63
+      "covered": 26,
+      "uncovered": 138,
+      "percentage": 15.85
     },
     {
       "year": 1938,
       "selectableIdentities": 172,
-      "covered": 23,
-      "uncovered": 149,
-      "percentage": 13.37
+      "covered": 24,
+      "uncovered": 148,
+      "percentage": 13.95
     },
     {
       "year": 1945,
@@ -91,9 +91,9 @@
     {
       "year": 1960,
       "selectableIdentities": 157,
-      "covered": 30,
-      "uncovered": 127,
-      "percentage": 19.11
+      "covered": 31,
+      "uncovered": 126,
+      "percentage": 19.75
     }
   ],
   "brokenMappings": [],
@@ -114,6 +114,10 @@
     {
       "mapId": "entity-korea",
       "requestedYear": 1897
+    },
+    {
+      "mapId": "entity-wurttemberg",
+      "requestedYear": 1803
     },
     {
       "mapId": "entity-lucca",
@@ -154,6 +158,18 @@
     {
       "mapId": "entity-finland",
       "requestedYear": 1917
+    },
+    {
+      "mapId": "entity-yugoslavia",
+      "requestedYear": 1921
+    },
+    {
+      "mapId": "entity-yugoslavia",
+      "requestedYear": 1929
+    },
+    {
+      "mapId": "entity-yugoslavia",
+      "requestedYear": 1945
     },
     {
       "mapId": "entity-austria",
@@ -8576,8 +8592,8 @@
         "entity-nassau"
       ],
       "totalIdentities": 20,
-      "uncuratedIdentities": 10,
-      "existingProfilesToReview": 10,
+      "uncuratedIdentities": 6,
+      "existingProfilesToReview": 14,
       "requiresHistoricalResearch": 20,
       "sourceStrategy": "Regional/state archives and constitutional collections; establish small-state and imperial scope before statistics.",
       "questionIds": [
@@ -8625,8 +8641,8 @@
         "entity-schleswig"
       ],
       "totalIdentities": 20,
-      "uncuratedIdentities": 15,
-      "existingProfilesToReview": 5,
+      "uncuratedIdentities": 4,
+      "existingProfilesToReview": 16,
       "requiresHistoricalResearch": 20,
       "sourceStrategy": "Regional/state archives and constitutional collections; establish small-state and imperial scope before statistics.",
       "questionIds": [
@@ -38048,36 +38064,84 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1930,
       "lastAvailableSnapshot": 1930,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-danzig",
+          "entityId": "danzig-league-guaranteed-framework",
+          "validFrom": "1921-01-01",
+          "validUntil": "1933-06-20",
+          "sourceIds": [
+            "b05-danzig-treaties"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "danzig-league-guaranteed-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "danzig-league-guaranteed-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
+      "currentlyResolvesToDossier": true,
       "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-danzig-treaties"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1921-01-01",
+            "validUntil": "1933-06-20",
+            "sourceIds": [
+              "b05-danzig-treaties"
+            ],
+            "entityId": "danzig-league-guaranteed-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1921-01-01",
+            "validUntil": "1933-06-20",
+            "sourceIds": [
+              "b05-danzig-treaties"
+            ],
+            "entityId": "danzig-league-guaranteed-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-05",
       "classification": {
@@ -43663,36 +43727,84 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-electoral-hesse",
+          "entityId": "hesse-kassel-restored-electoral-framework",
+          "validFrom": "1815-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b05-hessen-kassel"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "hesse-kassel-restored-electoral-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "hesse-kassel-restored-electoral-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
+      "currentlyResolvesToDossier": true,
       "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-hessen-kassel"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-hessen-kassel"
+            ],
+            "entityId": "hesse-kassel-restored-electoral-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-hessen-kassel"
+            ],
+            "entityId": "hesse-kassel-restored-electoral-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-05",
       "classification": {
@@ -54034,36 +54146,84 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-grand-duchy-of-hesse",
+          "entityId": "hesse-darmstadt-1815-framework",
+          "validFrom": "1815-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b05-hessen-darmstadt"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "hesse-darmstadt-1815-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "hesse-darmstadt-1815-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
+      "currentlyResolvesToDossier": true,
       "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-hessen-darmstadt"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-hessen-darmstadt"
+            ],
+            "entityId": "hesse-darmstadt-1815-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-hessen-darmstadt"
+            ],
+            "entityId": "hesse-darmstadt-1815-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-04",
       "classification": {
@@ -78090,8 +78250,21 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-lippe-detmold",
+          "entityId": "lippe-pauline-regency",
+          "validFrom": "1815-01-01",
+          "validUntil": "1819-01-01",
+          "sourceIds": [
+            "b05-lippe-detmold"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "lippe-pauline-regency"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
@@ -78111,11 +78284,10 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "lippe-pauline-regency",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -78123,21 +78295,56 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-lippe-detmold"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1819-01-01",
+            "sourceIds": [
+              "b05-lippe-detmold"
+            ],
+            "entityId": "lippe-pauline-regency"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1819-01-01",
+            "sourceIds": [
+              "b05-lippe-detmold"
+            ],
+            "entityId": "lippe-pauline-regency"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-05",
       "classification": {
@@ -79011,8 +79218,22 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-lubeck",
+          "entityId": "lubeck-restored-civic-framework",
+          "validFrom": "1815-06-08",
+          "validUntil": "1818-01-01",
+          "sourceIds": [
+            "b05-luebeck",
+            "b04-hamburg-restoration"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "lubeck-restored-civic-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
@@ -79032,33 +79253,71 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "lubeck-restored-civic-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "leaders"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-luebeck",
+          "b04-hamburg-restoration"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-06-08",
+            "validUntil": "1818-01-01",
+            "sourceIds": [
+              "b05-luebeck",
+              "b04-hamburg-restoration"
+            ],
+            "entityId": "lubeck-restored-civic-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1815-06-08",
+            "validUntil": "1818-01-01",
+            "sourceIds": [
+              "b05-luebeck",
+              "b04-hamburg-restoration"
+            ],
+            "entityId": "lubeck-restored-civic-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-05",
       "classification": {
@@ -87149,8 +87408,21 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-mecklenburg-schwerin",
+          "entityId": "mecklenburg-schwerin-1815-framework",
+          "validFrom": "1815-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b05-mecklenburg-schwerin"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "mecklenburg-schwerin-1815-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
@@ -87170,11 +87442,10 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "mecklenburg-schwerin-1815-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -87182,21 +87453,56 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-mecklenburg-schwerin"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-mecklenburg-schwerin"
+            ],
+            "entityId": "mecklenburg-schwerin-1815-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-mecklenburg-schwerin"
+            ],
+            "entityId": "mecklenburg-schwerin-1815-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-05",
       "classification": {
@@ -87274,8 +87580,21 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-mecklenburg-strelitz",
+          "entityId": "mecklenburg-strelitz-1815-framework",
+          "validFrom": "1815-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b05-mecklenburg-strelitz"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "mecklenburg-strelitz-1815-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
@@ -87295,11 +87614,10 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "mecklenburg-strelitz-1815-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -87307,22 +87625,57 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-mecklenburg-strelitz"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-mecklenburg-strelitz"
+            ],
+            "entityId": "mecklenburg-strelitz-1815-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [
         "authority-entity-mecklenburg-strelitz",
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-mecklenburg-strelitz"
+            ],
+            "entityId": "mecklenburg-strelitz-1815-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-05",
       "classification": {
@@ -92894,36 +93247,84 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-nassau",
+          "entityId": "nassau-1815-constitutional-framework",
+          "validFrom": "1815-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b05-nassau"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "nassau-1815-constitutional-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "nassau-1815-constitutional-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
+      "currentlyResolvesToDossier": true,
       "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-nassau"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-nassau"
+            ],
+            "entityId": "nassau-1815-constitutional-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-nassau"
+            ],
+            "entityId": "nassau-1815-constitutional-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-04",
       "classification": {
@@ -103320,8 +103721,21 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-oldenburg",
+          "entityId": "oldenburg-1815-dynastic-framework",
+          "validFrom": "1815-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b05-oldenburg"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "oldenburg-1815-dynastic-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
@@ -103341,11 +103755,10 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "oldenburg-1815-dynastic-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -103353,21 +103766,56 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-oldenburg"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-oldenburg"
+            ],
+            "entityId": "oldenburg-1815-dynastic-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-oldenburg"
+            ],
+            "entityId": "oldenburg-1815-dynastic-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-05",
       "classification": {
@@ -118507,8 +118955,22 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-saxony",
+          "entityId": "saxony-restored-royal-framework",
+          "validFrom": "1815-06-07",
+          "validUntil": "1818-01-01",
+          "sourceIds": [
+            "b05-sachsen",
+            "b05-saxony-restoration"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "saxony-restored-royal-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
@@ -118528,11 +118990,10 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "saxony-restored-royal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -118540,21 +119001,59 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-sachsen",
+          "b05-saxony-restoration"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-06-07",
+            "validUntil": "1818-01-01",
+            "sourceIds": [
+              "b05-sachsen",
+              "b05-saxony-restoration"
+            ],
+            "entityId": "saxony-restored-royal-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1815-06-07",
+            "validUntil": "1818-01-01",
+            "sourceIds": [
+              "b05-sachsen",
+              "b05-saxony-restoration"
+            ],
+            "entityId": "saxony-restored-royal-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-05",
       "classification": {
@@ -118632,8 +119131,21 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-schaumburg-lippe",
+          "entityId": "schaumburg-lippe-early-princely-framework",
+          "validFrom": "1815-01-01",
+          "validUntil": "1818-01-01",
+          "sourceIds": [
+            "b05-schaumburg-lippe"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "schaumburg-lippe-early-princely-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
@@ -118653,11 +119165,10 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "schaumburg-lippe-early-princely-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
@@ -118665,21 +119176,56 @@
             "leaders",
             "currencies",
             "descriptions"
-          ]
+          ],
+          "missingCoreFields": []
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-schaumburg-lippe"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1818-01-01",
+            "sourceIds": [
+              "b05-schaumburg-lippe"
+            ],
+            "entityId": "schaumburg-lippe-early-princely-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1818-01-01",
+            "sourceIds": [
+              "b05-schaumburg-lippe"
+            ],
+            "entityId": "schaumburg-lippe-early-princely-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-05",
       "classification": {
@@ -118735,36 +119281,84 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1815,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-schleswig",
+          "entityId": "schleswig-danish-ducal-framework",
+          "validFrom": "1815-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b05-schleswig"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "schleswig-danish-ducal-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "schleswig-danish-ducal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
+      "currentlyResolvesToDossier": true,
       "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-schleswig"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-schleswig"
+            ],
+            "entityId": "schleswig-danish-ducal-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-schleswig"
+            ],
+            "entityId": "schleswig-danish-ducal-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-05",
       "classification": {
@@ -139062,8 +139656,21 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-waldeck",
+          "entityId": "waldeck-early-constitutional-framework",
+          "validFrom": "1815-01-01",
+          "validUntil": "1818-01-01",
+          "sourceIds": [
+            "b05-waldeck"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "waldeck-early-constitutional-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
@@ -139083,33 +139690,68 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "waldeck-early-constitutional-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
             "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-waldeck"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1818-01-01",
+            "sourceIds": [
+              "b05-waldeck"
+            ],
+            "entityId": "waldeck-early-constitutional-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1815-01-01",
+            "validUntil": "1818-01-01",
+            "sourceIds": [
+              "b05-waldeck"
+            ],
+            "entityId": "waldeck-early-constitutional-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-05",
       "classification": {
@@ -144891,54 +145533,167 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-wurttemberg",
+          "entityId": "wurttemberg-ducal-framework",
+          "validFrom": "1800-01-01",
+          "validUntil": "1803-02-25",
+          "sourceIds": [
+            "b05-wuerttemberg",
+            "b05-wurttemberg-courts"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-wurttemberg",
+          "entityId": "wurttemberg-electoral-framework",
+          "validFrom": "1803-02-25",
+          "validUntil": "1806-01-01",
+          "sourceIds": [
+            "b05-wuerttemberg",
+            "b05-wurttemberg-courts"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-wurttemberg",
+          "entityId": "wurttemberg-early-royal-framework",
+          "validFrom": "1806-01-01",
+          "validUntil": "1816-01-01",
+          "sourceIds": [
+            "b05-wuerttemberg",
+            "b05-wurttemberg-courts"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "wurttemberg-ducal-framework",
+        "wurttemberg-early-royal-framework",
+        "wurttemberg-electoral-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "wurttemberg-ducal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "wurttemberg-early-royal-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
             "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-wuerttemberg",
+          "b05-wurttemberg-courts"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1803-02-25",
+            "sourceIds": [
+              "b05-wuerttemberg",
+              "b05-wurttemberg-courts"
+            ],
+            "entityId": "wurttemberg-ducal-framework"
+          },
+          {
+            "validFrom": "1803-02-25",
+            "validUntil": "1806-01-01",
+            "sourceIds": [
+              "b05-wuerttemberg",
+              "b05-wurttemberg-courts"
+            ],
+            "entityId": "wurttemberg-electoral-framework"
+          },
+          {
+            "validFrom": "1806-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-wuerttemberg",
+              "b05-wurttemberg-courts"
+            ],
+            "entityId": "wurttemberg-early-royal-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1800-01-01",
+            "validUntil": "1803-02-25",
+            "sourceIds": [
+              "b05-wuerttemberg",
+              "b05-wurttemberg-courts"
+            ],
+            "entityId": "wurttemberg-ducal-framework"
+          },
+          {
+            "validFrom": "1803-02-25",
+            "validUntil": "1806-01-01",
+            "sourceIds": [
+              "b05-wuerttemberg",
+              "b05-wurttemberg-courts"
+            ],
+            "entityId": "wurttemberg-electoral-framework"
+          },
+          {
+            "validFrom": "1806-01-01",
+            "validUntil": "1816-01-01",
+            "sourceIds": [
+              "b05-wuerttemberg",
+              "b05-wurttemberg-courts"
+            ],
+            "entityId": "wurttemberg-early-royal-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-04",
       "classification": {
@@ -149418,61 +150173,122 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1960,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-yugoslavia",
+          "entityId": "yugoslav-provisional-monarchical-framework",
+          "validFrom": "1919-03-01",
+          "validUntil": "1921-06-28",
+          "sourceIds": [
+            "b05-yugoslav-acts"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-yugoslavia",
+          "entityId": "yugoslav-vidovdan-framework",
+          "validFrom": "1921-06-28",
+          "validUntil": "1929-01-06",
+          "sourceIds": [
+            "b05-yugoslav-acts"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-yugoslavia",
+          "entityId": "yugoslav-royal-authoritarian-framework",
+          "validFrom": "1929-01-06",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b05-yugoslav-acts",
+            "b05-yugoslav-timeline"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-yugoslavia",
+          "entityId": "yugoslav-provisional-federal-1945-framework",
+          "validFrom": "1945-03-07",
+          "validUntil": "1945-11-29",
+          "sourceIds": [
+            "b05-yugoslav-acts"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-yugoslavia",
+          "entityId": "yugoslav-federal-peoples-republic-framework",
+          "validFrom": "1945-11-29",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b05-yugoslav-acts"
+          ],
+          "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        }
+      ],
+      "curatedEntityIds": [
+        "yugoslav-federal-peoples-republic-framework",
+        "yugoslav-provisional-federal-1945-framework",
+        "yugoslav-provisional-monarchical-framework",
+        "yugoslav-royal-authoritarian-framework",
+        "yugoslav-vidovdan-framework"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "yugoslav-provisional-monarchical-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "yugoslav-royal-authoritarian-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "yugoslav-royal-authoritarian-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
-            "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "leaders",
+            "currencies"
           ]
         },
         {
           "year": 1945,
           "receivesCuratedDossier": false,
-          "ambiguous": false,
+          "ambiguous": true,
           "entityId": null,
           "availableFields": [],
           "missingCoreFields": [
@@ -149487,33 +150303,135 @@
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "yugoslav-federal-peoples-republic-framework",
+          "availableFields": [
             "names",
             "politicalStatus",
-            "capitals",
             "governments",
             "leaders",
-            "currencies",
             "descriptions"
+          ],
+          "missingCoreFields": [
+            "capitals",
+            "currencies"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "needs-research",
       "coverageTier": "none",
-      "researchDecision": null,
+      "researchDecision": {
+        "status": "needs-research",
+        "tier": "none",
+        "reviewerNote": "Accepted independently sourced partial framework; remaining chronology and fields uncurated. See BATCH-05.md.",
+        "identityResolution": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "sourceIds": [
+          "b05-yugoslav-acts",
+          "b05-yugoslav-timeline"
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ],
+        "intervals": [
+          {
+            "validFrom": "1919-03-01",
+            "validUntil": "1921-06-28",
+            "sourceIds": [
+              "b05-yugoslav-acts"
+            ],
+            "entityId": "yugoslav-provisional-monarchical-framework"
+          },
+          {
+            "validFrom": "1921-06-28",
+            "validUntil": "1929-01-06",
+            "sourceIds": [
+              "b05-yugoslav-acts"
+            ],
+            "entityId": "yugoslav-vidovdan-framework"
+          },
+          {
+            "validFrom": "1929-01-06",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b05-yugoslav-acts",
+              "b05-yugoslav-timeline"
+            ],
+            "entityId": "yugoslav-royal-authoritarian-framework"
+          },
+          {
+            "validFrom": "1945-03-07",
+            "validUntil": "1945-11-29",
+            "sourceIds": [
+              "b05-yugoslav-acts"
+            ],
+            "entityId": "yugoslav-provisional-federal-1945-framework"
+          },
+          {
+            "validFrom": "1945-11-29",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b05-yugoslav-acts"
+            ],
+            "entityId": "yugoslav-federal-peoples-republic-framework"
+          }
+        ]
+      },
       "planningRegion": "central-europe",
       "questionIds": [
         "repeated-name-continuity"
       ],
       "continuity": {
-        "state": "unresolved",
+        "state": "reviewed-with-dated-decisions",
         "candidateMapIds": [],
-        "note": "Planning candidates only; no continuation or succession has been established by this audit."
+        "note": "Distinct historical state or administration within independently sourced dated intervals; no automatic succession.",
+        "intervals": [
+          {
+            "validFrom": "1919-03-01",
+            "validUntil": "1921-06-28",
+            "sourceIds": [
+              "b05-yugoslav-acts"
+            ],
+            "entityId": "yugoslav-provisional-monarchical-framework"
+          },
+          {
+            "validFrom": "1921-06-28",
+            "validUntil": "1929-01-06",
+            "sourceIds": [
+              "b05-yugoslav-acts"
+            ],
+            "entityId": "yugoslav-vidovdan-framework"
+          },
+          {
+            "validFrom": "1929-01-06",
+            "validUntil": "1939-01-01",
+            "sourceIds": [
+              "b05-yugoslav-acts",
+              "b05-yugoslav-timeline"
+            ],
+            "entityId": "yugoslav-royal-authoritarian-framework"
+          },
+          {
+            "validFrom": "1945-03-07",
+            "validUntil": "1945-11-29",
+            "sourceIds": [
+              "b05-yugoslav-acts"
+            ],
+            "entityId": "yugoslav-provisional-federal-1945-framework"
+          },
+          {
+            "validFrom": "1945-11-29",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b05-yugoslav-acts"
+            ],
+            "entityId": "yugoslav-federal-peoples-republic-framework"
+          }
+        ],
+        "omissions": [
+          "All dossiers remain partial; bounds indicate researched coverage, not complete state lifetimes. No unsupported currency, statistics, flags, seats or succession links."
+        ]
       },
       "batchId": "batch-04",
       "classification": {
@@ -151204,9 +152122,9 @@
     },
     "politicalCoverage": {
       "candidates": 401,
-      "covered": 76,
-      "uncovered": 325,
-      "percentage": 18.95
+      "covered": 91,
+      "uncovered": 310,
+      "percentage": 22.69
     },
     "nonStateTemplateIdentities": 400,
     "bySnapshot": [
@@ -151222,9 +152140,9 @@
           "unresolved": 31
         },
         "politicalCandidates": 121,
-        "politicalCovered": 17,
-        "politicalUncovered": 104,
-        "politicalPercentage": 14.05
+        "politicalCovered": 18,
+        "politicalUncovered": 103,
+        "politicalPercentage": 14.88
       },
       {
         "year": 1815,
@@ -151238,9 +152156,9 @@
           "unresolved": 24
         },
         "politicalCandidates": 124,
-        "politicalCovered": 31,
-        "politicalUncovered": 93,
-        "politicalPercentage": 25
+        "politicalCovered": 44,
+        "politicalUncovered": 80,
+        "politicalPercentage": 35.48
       },
       {
         "year": 1878,
@@ -151318,9 +152236,9 @@
           "unresolved": 11
         },
         "politicalCandidates": 150,
-        "politicalCovered": 24,
-        "politicalUncovered": 126,
-        "politicalPercentage": 16
+        "politicalCovered": 25,
+        "politicalUncovered": 125,
+        "politicalPercentage": 16.67
       },
       {
         "year": 1930,
@@ -151334,9 +152252,9 @@
           "unresolved": 10
         },
         "politicalCandidates": 151,
-        "politicalCovered": 24,
-        "politicalUncovered": 127,
-        "politicalPercentage": 15.89
+        "politicalCovered": 26,
+        "politicalUncovered": 125,
+        "politicalPercentage": 17.22
       },
       {
         "year": 1938,
@@ -151350,9 +152268,9 @@
           "unresolved": 6
         },
         "politicalCandidates": 162,
-        "politicalCovered": 23,
-        "politicalUncovered": 139,
-        "politicalPercentage": 14.2
+        "politicalCovered": 24,
+        "politicalUncovered": 138,
+        "politicalPercentage": 14.81
       },
       {
         "year": 1945,
@@ -151382,9 +152300,9 @@
           "unresolved": 8
         },
         "politicalCandidates": 147,
-        "politicalCovered": 30,
-        "politicalUncovered": 117,
-        "politicalPercentage": 20.41
+        "politicalCovered": 31,
+        "politicalUncovered": 116,
+        "politicalPercentage": 21.09
       }
     ],
     "questionAudit": {
@@ -154669,15 +155587,15 @@
       "totalIdentities": 15,
       "politicalCandidates": 15,
       "nameReviews": 0,
-      "uncoveredPoliticalCandidates": 15,
-      "coveredPoliticalCandidates": 0,
+      "uncoveredPoliticalCandidates": 0,
+      "coveredPoliticalCandidates": 15,
       "sourceStrategy": "Regional/state archives and constitutional collections; establish small-state and imperial scope before statistics.",
       "priorityRationale": "Early source-family batches prioritise long snapshot presence, broad period potential and national archival/constitutional collections. Source availability is a planning expectation, not an entity-by-entity research finding. Families remain indivisible; no periods are researched now.",
       "highValueMapIds": [],
       "familyQuestionIds": [],
       "classificationPrerequisites": [],
       "difficultCases": [],
-      "state": "proposed-not-authorised"
+      "state": "researched-with-partial-coverage"
     },
     {
       "id": "political-batch-06",
@@ -155591,10 +156509,10 @@
       }
     ],
     "pipelineSha256": "3c1cd4c196d1b7c52e603ad810a8b5cfb6b8c74b49afd099b9807a1e3781a53b",
-    "resolverSha256": "43f6eac87abe73ef9cf4c3777ce8c15be3e6db6c13210df2faec0333448aaf32",
-    "metadataSha256": "10f892c93f24cc45d9e97fba0936504ac0f764193ae552356927385fc11a8089",
-    "sourcesSha256": "249d57ed31db1ac5224d685d07dc8bede8125995fd53f3eb51a7fedac9ade3a1",
-    "planSha256": "ebea4c770ced3109cd2b0235222ba62293907469b06b32e7ce3709caee15c961",
+    "resolverSha256": "ff22876248c60e1d8bc5a9c35f89758cee92c1b69a977e2a6f94208c9a67ae48",
+    "metadataSha256": "b1b223e779724bb8a8e1b9eed3ed3966bf54253d61ecfe9854f8c80e7beaa799",
+    "sourcesSha256": "613e41a58fca1b1e10473c8c4e7f304c0187082f762bdfd23ea4e2e9c10236d4",
+    "planSha256": "bf2dce683a5198551b7e0241372da5406270125c9745609da913793b2f6462d5",
     "classificationPlanSha256": "260036271b0aaec99acf6f41da9b8d82c0c018988744ab2cb655ed85104198fc",
     "classificationModuleSha256": "bfa1973c868b7a645de8552553ee015e2ce9c5778026b70450cfa9daacb63314"
   }
