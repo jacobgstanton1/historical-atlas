@@ -4,9 +4,9 @@ Development-only classification overlay. Visible site remains v0.6.1. Phase 2 Ba
 
 ## Two denominators
 
-Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **108 (12.27%)**; raw fallback-only IDs: **772**. The original identity/source/presence/mapping inventory remains intact.
+Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **128 (14.55%)**; raw fallback-only IDs: **752**. The original identity/source/presence/mapping inventory remains intact.
 
-Political dossier candidates: **401**; currently covered: **107 (26.68%)**; uncovered political candidates: **294**. Existing curated metadata entities: **151**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
+Political dossier candidates: **401**; currently covered: **127 (31.67%)**; uncovered political candidates: **274**. Existing curated metadata entities: **189**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
 
 | Classification | Raw IDs |
 | --- | ---: |
@@ -31,17 +31,17 @@ The [upstream documentation](https://github.com/aourednik/historical-basemaps) d
 
 | Year | Raw | Polity | Dependent | Community | Geographic/composite | Variant | Unresolved | Political candidates | Covered | Uncovered | Coverage |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 1800 | 547 | 90 | 31 | 392 | 2 | 1 | 31 | 121 | 18 | 103 | 14.88% |
-| 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 45 | 79 | 36.29% |
-| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 27 | 115 | 19.01% |
-| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 26 | 117 | 18.18% |
-| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 22 | 117 | 15.83% |
-| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 25 | 111 | 18.38% |
-| 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 32 | 118 | 21.33% |
-| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 34 | 117 | 22.52% |
-| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 28 | 134 | 17.28% |
-| 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 31 | 138 | 18.34% |
-| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 34 | 113 | 23.13% |
+| 1800 | 547 | 90 | 31 | 392 | 2 | 1 | 31 | 121 | 27 | 94 | 22.31% |
+| 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 49 | 75 | 39.52% |
+| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 31 | 111 | 21.83% |
+| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 30 | 113 | 20.98% |
+| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 26 | 113 | 18.71% |
+| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 29 | 107 | 21.32% |
+| 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 37 | 113 | 24.67% |
+| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 38 | 113 | 25.17% |
+| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 33 | 129 | 20.37% |
+| 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 36 | 133 | 21.3% |
+| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 40 | 107 | 27.21% |
 
 The 1800 denominator is explained by its classification table, not modern-country assumptions. Of the 377 explicitly recorded Australian community cohort IDs, 377 appear in 1800. None is counted as an uncovered political dossier or assigned a political research batch. All remain selectable in production. They are deferred to a separately designed, community-appropriate profile project; this says nothing about political significance or organisation.
 
@@ -170,7 +170,7 @@ Families and candidate canonical pairs are indivisible. Batch sizes aim for 15�
 | 4 | Central Europe and German/Italian source families | 21 | 21 | 3 | 0 |
 | 5 | Central Europe and German/Italian source families | 15 | 15 | 0 | 0 |
 | 6 | Eastern Europe, Russian/Soviet and Balkan source families | 18 | 18 | 1 | 0 |
-| 7 | South/Central Asia | 26 | 26 | 25 | 0 |
+| 7 | South/Central Asia | 26 | 26 | 5 | 0 |
 | 8 | North America | 10 | 9 | 8 | 1 |
 | 9 | South America | 20 | 20 | 20 | 0 |
 | 10 | Caribbean and Central America | 18 | 18 | 18 | 0 |
@@ -256,7 +256,7 @@ Classification prerequisites (excluded from this batch denominator): Far Eastern
 
 ### political-batch-07 — South/Central Asia
 
-State: proposed-not-authorised. Included: British East India Company (entity-british-east-india-company); British Raj (entity-british-raj); Ceylon (entity-ceylon); Ceylon (Dutch) (entity-ceylon-dutch); India (entity-india); Mysore (entity-mysore); Mysore (Indian princely state) (entity-mysore-indian-princely-state); Pakistan (entity-pakistan); Sikkim (Indian princely state) (entity-sikkim-indian-princely-state); Sri Lanka (entity-sri-lanka); Bokhara Khanate (entity-bokhara-khanate); Iran (entity-iran); Persia (entity-persia); Afghanistan (entity-afghanistan); Bhutan (entity-bhutan); Nepal (entity-nepal); Goa (entity-goa); Maratha Confederacy (entity-maratha-confederacy); Oudh (entity-oudh); Travancore (entity-travancore); Bahawalpur (entity-bahawalpur); Cochin (entity-cochin); Kandy (entity-kandy); Madras (entity-madras); Nizam's Dominions (entity-nizam-s-dominions); Sindh (entity-sindh).
+State: researched-with-partial-coverage. Included: British East India Company (entity-british-east-india-company); British Raj (entity-british-raj); Ceylon (entity-ceylon); Ceylon (Dutch) (entity-ceylon-dutch); India (entity-india); Mysore (entity-mysore); Mysore (Indian princely state) (entity-mysore-indian-princely-state); Pakistan (entity-pakistan); Sikkim (Indian princely state) (entity-sikkim-indian-princely-state); Sri Lanka (entity-sri-lanka); Bokhara Khanate (entity-bokhara-khanate); Iran (entity-iran); Persia (entity-persia); Afghanistan (entity-afghanistan); Bhutan (entity-bhutan); Nepal (entity-nepal); Goa (entity-goa); Maratha Confederacy (entity-maratha-confederacy); Oudh (entity-oudh); Travancore (entity-travancore); Bahawalpur (entity-bahawalpur); Cochin (entity-cochin); Kandy (entity-kandy); Madras (entity-madras); Nizam's Dominions (entity-nizam-s-dominions); Sindh (entity-sindh).
 
 High-value continuing/source-family candidates: British Raj (entity-british-raj); India (entity-india); Iran (entity-iran); Persia (entity-persia); Afghanistan (entity-afghanistan); Bhutan (entity-bhutan); Nepal (entity-nepal).
 
@@ -439,18 +439,18 @@ Covered means the existing production resolver returns a curated entity in at le
 | Measure | Count |
 | --- | ---: |
 | totalIdentities | 880 |
-| curatedMetadataEntities | 151 |
-| mappedIdentities | 109 |
-| coveredIdentities | 108 |
-| uncoveredIdentities | 772 |
-| percentage | 12.27 |
+| curatedMetadataEntities | 189 |
+| mappedIdentities | 130 |
+| coveredIdentities | 128 |
+| uncoveredIdentities | 752 |
+| percentage | 14.55 |
 | multipleSnapshotIdentities | 519 |
 | singleSnapshotIdentities | 361 |
 | unresolvedQuestions | 260 |
 | identitiesWithQuestions | 818 |
 | brokenMappings | 0 |
 | orphanMetadataEntities | 0 |
-| ambiguousMappingYearPairs | 24 |
+| ambiguousMappingYearPairs | 28 |
 
 The denominator includes selectable unlabeled/composite/community identities, not just countries or visible labels. “First/last snapshot” are observations of source presence, never existence dates. Source geometry, metadata and requested-year resolution remain separate.
 
@@ -458,17 +458,17 @@ The denominator includes selectable unlabeled/composite/community identities, no
 
 | Snapshot | Selectable IDs | Curated dossier | Fallback only | Coverage |
 | --- | ---: | ---: | ---: | ---: |
-| 1800 | 547 | 18 | 529 | 3.29% |
-| 1815 | 313 | 45 | 268 | 14.38% |
-| 1878 | 173 | 28 | 145 | 16.18% |
-| 1880 | 170 | 27 | 143 | 15.88% |
-| 1900 | 166 | 23 | 143 | 13.86% |
-| 1914 | 143 | 25 | 118 | 17.48% |
-| 1920 | 164 | 32 | 132 | 19.51% |
-| 1930 | 164 | 34 | 130 | 20.73% |
-| 1938 | 172 | 28 | 144 | 16.28% |
-| 1945 | 183 | 31 | 152 | 16.94% |
-| 1960 | 157 | 34 | 123 | 21.66% |
+| 1800 | 547 | 27 | 520 | 4.94% |
+| 1815 | 313 | 49 | 264 | 15.65% |
+| 1878 | 173 | 32 | 141 | 18.5% |
+| 1880 | 170 | 31 | 139 | 18.24% |
+| 1900 | 166 | 27 | 139 | 16.27% |
+| 1914 | 143 | 29 | 114 | 20.28% |
+| 1920 | 164 | 37 | 127 | 22.56% |
+| 1930 | 164 | 38 | 126 | 23.17% |
+| 1938 | 172 | 33 | 139 | 19.19% |
+| 1945 | 183 | 36 | 147 | 19.67% |
+| 1960 | 157 | 40 | 117 | 25.48% |
 
 ## Persistent and briefly represented identities
 
@@ -880,7 +880,7 @@ Other questions track source-presence gaps, changing authority/grouping, normali
 
 ## Archived Phase 1 raw audit batches — superseded for political research
 
-Batches partition all 880 IDs once. Uncurated counts sum to 772; existing profiles may still require additional periods/identity review. Counts measure map IDs, not a claim that each is one state. A compound label may require several historical records. Geography is a planning hint from the largest prepared feature; manual overrides/candidate families improve it, but it is not historical evidence. Australian community batches are smaller and have a distinct institutional review approach.
+Batches partition all 880 IDs once. Uncurated counts sum to 752; existing profiles may still require additional periods/identity review. Counts measure map IDs, not a claim that each is one state. A compound label may require several historical records. Geography is a planning hint from the largest prepared feature; manual overrides/candidate families improve it, but it is not historical evidence. Australian community batches are smaller and have a distinct institutional review approach.
 
 ### batch-01 — Unidentified/composite source labels · 1/1
 
@@ -1138,7 +1138,7 @@ Continuity: Keep candidate families together across linked batches; share instit
 
 ### batch-24 — South/Central Asia · 1/2
 
-20 identities; 19 uncurated; 1 already mapped. 20 require some research/review before acceptance.
+20 identities; 6 uncurated; 14 already mapped. 20 require some research/review before acceptance.
 
 India Office/Parliament, local archives and regional scholarship; princely states, Company rule, Raj and partition need separate identities.
 
@@ -1150,7 +1150,7 @@ Continuity: Keep candidate families together across linked batches; share instit
 
 ### batch-25 — South/Central Asia · 2/2
 
-20 identities; 20 uncurated; 0 already mapped. 20 require some research/review before acceptance.
+20 identities; 13 uncurated; 7 already mapped. 20 require some research/review before acceptance.
 
 India Office/Parliament, local archives and regional scholarship; princely states, Company rule, Raj and partition need separate identities.
 
