@@ -1,8 +1,8 @@
 # Historical Atlas research gap report
 
-Range: 1800–1960. Production fingerprint: 505c817c76bc267a7c95442a3fe122fc345633696990b44b5b08d4cf5bc93804.
+Range: 1800–1960. Production fingerprint: 825180ebb8fadea0bc9cd7c6bcd0071b539f64e0f9cf0729993d0ac326aa46a7.
 
-Entities scanned: 617; entity/year pairs: 11872; category/year gaps: 102608.
+Entities scanned: 617; entity/year pairs: 11872; category/year gaps: 102523.
 
 Political raw denominator: 401; unresolved classifications: 72; mapping-review identities: 62.
 
@@ -15,7 +15,7 @@ Political raw denominator: 401; unresolved classifications: 72; mapping-review i
 | events-context | 11781 | 617 | 376 | 0 |
 | identity-review | 168 | 0 | 72 | 0 |
 | important-figures | 11872 | 617 | 376 | 0 |
-| leadership | 9035 | 571 | 352 | 0 |
+| leadership | 8950 | 571 | 352 | 0 |
 | mapping-review | 1091 | 243 | 230 | 0 |
 | political-institutional | 2288 | 271 | 196 | 0 |
 | population-statistics | 11857 | 617 | 376 | 0 |
@@ -34,7 +34,7 @@ Resolver availability: 362/401 eligible raw IDs. Political candidates investigat
 | economy | 11872 | 0 | 0 | 0 | 11872 |
 | events-context | 11872 | 91 | 0 | 0 | 11781 |
 | important-figures | 11872 | 0 | 0 | 0 | 11872 |
-| leadership | 11872 | 2837 | 231 | 0 | 8804 |
+| leadership | 11872 | 2922 | 257 | 0 | 8693 |
 | political-institutional | 11872 | 9584 | 1577 | 0 | 711 |
 | population-statistics | 11872 | 15 | 0 | 15 | 11857 |
 | relationships | 11872 | 460 | 12 | 0 | 11400 |
@@ -45,14 +45,14 @@ Jobs: 30; stale fingerprints: 30.
 - accepted: 0
 - awaiting-review: 0
 - historical-review: 0
-- integrated: 12
-- queued: 18
+- integrated: 18
+- queued: 12
 - rejected: 0
 - researching: 0
 - submitted: 0
 - validation-failed: 0
 
-Submitted research packages: 12; accepted outside production: 0.
+Submitted research packages: 18; accepted outside production: 0.
 
 
 Accepted research is separate from production field coverage.

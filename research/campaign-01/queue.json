@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 81,
+  "revision": 117,
   "concurrency": 3,
   "jobs": [
     {
@@ -6893,7 +6893,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 24,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "505c817c76bc267a7c95442a3fe122fc345633696990b44b5b08d4cf5bc93804",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -6909,9 +6909,246 @@
       },
       "scopeId": "scope-d0354128e0340f0a8cbe389c",
       "id": "c01-c99cf250d348d1b5f6d23804",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:55:04.498Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:55:04.535Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:55:04.697Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:55:04.745Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:55:04.794Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read Imperial Household Agency chronology1867 accession and1912 death; requested1869–1889 lies wholly inside dated reign. Year precision avoids pre1873 calendar conversion. No1890 constitutional framework projected; existing Tokyo/yen facts unchanged. SourceURL absent from production catalogue; new source proposal justified. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:55:06.067Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-research",
+      "claimedAt": "2026-10-01T19:55:04.498Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-c99cf250d348d1b5f6d23804",
+        "jobId": "c01-c99cf250d348d1b5f6d23804",
+        "worker": {
+          "id": "campaign-research",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "505c817c76bc267a7c95442a3fe122fc345633696990b44b5b08d4cf5bc93804",
+        "entityId": "japan-restoration-framework",
+        "mapIds": [
+          "entity-imperial-japan",
+          "entity-japan"
+        ],
+        "period": {
+          "from": "1869",
+          "until": "1889"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-japan-meiji",
+            "category": "leadership",
+            "value": "Emperor Meiji",
+            "role": "Emperor",
+            "temporal": {
+              "kind": "interval",
+              "from": "1869",
+              "until": "1889"
+            },
+            "entityId": "japan-restoration-framework",
+            "geographicScope": {
+              "description": "Historical central office of Japan under the early Meiji government; no inference of uniform territorial authority",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-iha-chronology"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-iha-chronology",
+                "note": "Official agency chronological body records Mutsuhito accession1867, subsequent Meiji chronology and death1912; bounded1869–1889doesnotprojectlaterconstitution.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1867",
+                "until": "1912"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-iha-chronology",
+            "title": "Imperial Household Agency chronology from1867",
+            "institution": "Imperial Household Agency, Japan",
+            "url": "https://www.kunaicho.go.jp/kunaicho/kunaicho/kunaicho-nenpyo.html",
+            "usage": "Read official body1867–1912 succession entries; pre1873calendar daynotconverted.",
+            "kind": "institutional",
+            "accessed": "2026-10-01"
+          }
+        ],
+        "absenceOfEvidence": [],
+        "reviewNotes": [
+          "ExistingTokyo and1871yen preserved; no duplicatefacts.",
+          "No exactGregorianaccessionday inferred frompre1873Japanesechronology."
+        ]
+      },
+      "packageHash": "112c79c4e9839c155fdb469a8634c4009693be80df7b2893cafed9ee1feaf4ca",
+      "submittedAt": "2026-10-01T19:55:04.535Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-c99cf250d348d1b5f6d23804",
+            "jobId": "c01-c99cf250d348d1b5f6d23804",
+            "worker": {
+              "id": "campaign-research",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "japan-restoration-framework",
+            "mapIds": [
+              "entity-imperial-japan",
+              "entity-japan"
+            ],
+            "period": {
+              "from": "1869",
+              "until": "1889"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-japan-meiji",
+                "category": "leadership",
+                "value": "Emperor Meiji",
+                "role": "Emperor",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1869",
+                  "until": "1889"
+                },
+                "entityId": "japan-restoration-framework",
+                "geographicScope": {
+                  "description": "Historical central office of Japan under the early Meiji government; no inference of uniform territorial authority",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-iha-chronology"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-iha-chronology",
+                    "note": "Official agency chronological body records Mutsuhito accession1867, subsequent Meiji chronology and death1912; bounded1869–1889doesnotprojectlaterconstitution.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1867",
+                    "until": "1912"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-iha-chronology",
+                "title": "Imperial Household Agency chronology from1867",
+                "institution": "Imperial Household Agency, Japan",
+                "url": "https://www.kunaicho.go.jp/kunaicho/kunaicho/kunaicho-nenpyo.html",
+                "usage": "Read official body1867–1912 succession entries; pre1873calendar daynotconverted.",
+                "kind": "institutional",
+                "accessed": "2026-10-01"
+              }
+            ],
+            "absenceOfEvidence": [],
+            "reviewNotes": [
+              "ExistingTokyo and1871yen preserved; no duplicatefacts.",
+              "No exactGregorianaccessionday inferred frompre1873Japanesechronology."
+            ]
+          },
+          "packageHash": "50b24e8e92e365cc50544e53713a12e4bdd2c98d4d8a39483e3b98d4cf908bdf",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:55:04.697Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "112c79c4e9839c155fdb469a8634c4009693be80df7b2893cafed9ee1feaf4ca"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-c99cf250d348d1b5f6d23804",
+        "packageHash": "112c79c4e9839c155fdb469a8634c4009693be80df7b2893cafed9ee1feaf4ca",
+        "productionFingerprint": "505c817c76bc267a7c95442a3fe122fc345633696990b44b5b08d4cf5bc93804",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read Imperial Household Agency chronology1867 accession and1912 death; requested1869–1889 lies wholly inside dated reign. Year precision avoids pre1873 calendar conversion. No1890 constitutional framework projected; existing Tokyo/yen facts unchanged. SourceURL absent from production catalogue; new source proposal justified. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:55:04.794Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-c99cf250d348d1b5f6d23804",
+        "packageHash": "112c79c4e9839c155fdb469a8634c4009693be80df7b2893cafed9ee1feaf4ca",
+        "beforeFingerprint": "505c817c76bc267a7c95442a3fe122fc345633696990b44b5b08d4cf5bc93804",
+        "afterFingerprint": "26f7fdba84be49f88f54bd0869c6eb7eee172d0502e108529b0d23223693c80e",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "mexico-1917-constitutional-framework",
@@ -7015,7 +7252,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 34,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "26f7fdba84be49f88f54bd0869c6eb7eee172d0502e108529b0d23223693c80e",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -7031,9 +7268,378 @@
       },
       "scopeId": "scope-b1606e80a0ae7dc407d659b0",
       "id": "c01-4bb110167b1d9a963dfc04de",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:55:06.126Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:55:06.149Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:55:06.349Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:55:06.405Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:55:06.441Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read INEHRM/UNAM historical monograph pp60–65 and71: Obregón1December1920–30November1924, Calles1December1924–30November1928, PortesGil1December1928–4February1930. Inclusivefinaldays safely represented by next exclusive day. NoMaximato office extension. Omitted1918–1920/1930–1934 and contradictoryRodríguez1932 header retained; no capital/currency assumptions. Existing leader arrays empty, no same-office overlaps. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:55:07.483Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-research",
+      "claimedAt": "2026-10-01T19:55:06.126Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-4bb110167b1d9a963dfc04de",
+        "jobId": "c01-4bb110167b1d9a963dfc04de",
+        "worker": {
+          "id": "campaign-research",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "26f7fdba84be49f88f54bd0869c6eb7eee172d0502e108529b0d23223693c80e",
+        "entityId": "mexico-1917-constitutional-framework",
+        "mapIds": [
+          "entity-mexico"
+        ],
+        "period": {
+          "from": "1918",
+          "until": "1934"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-mexico-obregon",
+            "category": "leadership",
+            "value": "Álvaro Obregón",
+            "role": "President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-12-01",
+              "until": "1924-12-01"
+            },
+            "entityId": "mexico-1917-constitutional-framework",
+            "geographicScope": {
+              "description": "Historical central office of Mexico — 1917 constitutional framework; no inference of uniform territorial authority",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-inehrm-gobierno"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-inehrm-gobierno",
+                "note": "Monograph pp60–61 explicitly gives1December1920–30November1924. Inclusivefinalday represented by exclusive1December1924.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1920-12-01",
+                "until": "1924-12-01"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-mexico-calles",
+            "category": "leadership",
+            "value": "Plutarco Elías Calles",
+            "role": "President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1924-12-01",
+              "until": "1928-12-01"
+            },
+            "entityId": "mexico-1917-constitutional-framework",
+            "geographicScope": {
+              "description": "Historical central office of Mexico — 1917 constitutional framework; no inference of uniform territorial authority",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-inehrm-gobierno"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-inehrm-gobierno",
+                "note": "Monograph p65 explicitly gives1December1924–30November1928. LaterMaximatoinfluenceisnotpresidentialoffice.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1924-12-01",
+                "until": "1928-12-01"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-mexico-portes",
+            "category": "leadership",
+            "value": "Emilio Portes Gil",
+            "role": "Provisional President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1928-12-01",
+              "until": "1930-02-05"
+            },
+            "entityId": "mexico-1917-constitutional-framework",
+            "geographicScope": {
+              "description": "Historical central office of Mexico — 1917 constitutional framework; no inference of uniform territorial authority",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-inehrm-gobierno"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-inehrm-gobierno",
+                "note": "Monograph p71 dates provisionalpresidency1December1928–4February1930; exclusiveend5February1930.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1928-12-01",
+                "until": "1930-02-05"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-inehrm-gobierno",
+            "title": "Gobierno: México y la Constitución de1917",
+            "institution": "INEHRM, Senate of Mexico and UNAM; Alejandro Carrillo Castro",
+            "url": "https://www.inehrm.gob.mx/recursos/Libros/Gobierno.pdf",
+            "usage": "Read monograph bodypp60–65and71–73; selected office chronology only; conflictingRodríguez1932monthnotimported.",
+            "kind": "academic",
+            "accessed": "2026-10-01"
+          }
+        ],
+        "absenceOfEvidence": [
+          "1918–1920 and1930–1934leadershipnotcompleted; no substitute guessedofficeholders.",
+          "Currency not sourced by the office chronology."
+        ],
+        "reviewNotes": [
+          "Existingcapital andconstitutionalcore unchanged.",
+          "Provisional andconstitutionalpresidentialrolesretained; no claim thatCallesremainedPresidentthroughMaximato.",
+          "RodríguezheaderNovember1932 versus usualSeptember requiresindependentreview; omitted ratherthanimported."
+        ]
+      },
+      "packageHash": "86941007c0481d0f407f474ec6ed43900a81ef0d51ea729338d871c56be8ec57",
+      "submittedAt": "2026-10-01T19:55:06.149Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-4bb110167b1d9a963dfc04de",
+            "jobId": "c01-4bb110167b1d9a963dfc04de",
+            "worker": {
+              "id": "campaign-research",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "mexico-1917-constitutional-framework",
+            "mapIds": [
+              "entity-mexico"
+            ],
+            "period": {
+              "from": "1918",
+              "until": "1934"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-mexico-obregon",
+                "category": "leadership",
+                "value": "Álvaro Obregón",
+                "role": "President",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1920-12-01",
+                  "until": "1924-12-01"
+                },
+                "entityId": "mexico-1917-constitutional-framework",
+                "geographicScope": {
+                  "description": "Historical central office of Mexico — 1917 constitutional framework; no inference of uniform territorial authority",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-inehrm-gobierno"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-inehrm-gobierno",
+                    "note": "Monograph pp60–61 explicitly gives1December1920–30November1924. Inclusivefinalday represented by exclusive1December1924.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1920-12-01",
+                    "until": "1924-12-01"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-mexico-calles",
+                "category": "leadership",
+                "value": "Plutarco Elías Calles",
+                "role": "President",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1924-12-01",
+                  "until": "1928-12-01"
+                },
+                "entityId": "mexico-1917-constitutional-framework",
+                "geographicScope": {
+                  "description": "Historical central office of Mexico — 1917 constitutional framework; no inference of uniform territorial authority",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-inehrm-gobierno"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-inehrm-gobierno",
+                    "note": "Monograph p65 explicitly gives1December1924–30November1928. LaterMaximatoinfluenceisnotpresidentialoffice.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1924-12-01",
+                    "until": "1928-12-01"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-mexico-portes",
+                "category": "leadership",
+                "value": "Emilio Portes Gil",
+                "role": "Provisional President",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1928-12-01",
+                  "until": "1930-02-05"
+                },
+                "entityId": "mexico-1917-constitutional-framework",
+                "geographicScope": {
+                  "description": "Historical central office of Mexico — 1917 constitutional framework; no inference of uniform territorial authority",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-inehrm-gobierno"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-inehrm-gobierno",
+                    "note": "Monograph p71 dates provisionalpresidency1December1928–4February1930; exclusiveend5February1930.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1928-12-01",
+                    "until": "1930-02-05"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-inehrm-gobierno",
+                "title": "Gobierno: México y la Constitución de1917",
+                "institution": "INEHRM, Senate of Mexico and UNAM; Alejandro Carrillo Castro",
+                "url": "https://www.inehrm.gob.mx/recursos/Libros/Gobierno.pdf",
+                "usage": "Read monograph bodypp60–65and71–73; selected office chronology only; conflictingRodríguez1932monthnotimported.",
+                "kind": "academic",
+                "accessed": "2026-10-01"
+              }
+            ],
+            "absenceOfEvidence": [
+              "1918–1920 and1930–1934leadershipnotcompleted; no substitute guessedofficeholders.",
+              "Currency not sourced by the office chronology."
+            ],
+            "reviewNotes": [
+              "Existingcapital andconstitutionalcore unchanged.",
+              "Provisional andconstitutionalpresidentialrolesretained; no claim thatCallesremainedPresidentthroughMaximato.",
+              "RodríguezheaderNovember1932 versus usualSeptember requiresindependentreview; omitted ratherthanimported."
+            ]
+          },
+          "packageHash": "084a623e54b163b81c0ff0cfba097c57863106ee01a321431af2e273addf66fa",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:55:06.349Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "86941007c0481d0f407f474ec6ed43900a81ef0d51ea729338d871c56be8ec57"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-4bb110167b1d9a963dfc04de",
+        "packageHash": "86941007c0481d0f407f474ec6ed43900a81ef0d51ea729338d871c56be8ec57",
+        "productionFingerprint": "26f7fdba84be49f88f54bd0869c6eb7eee172d0502e108529b0d23223693c80e",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read INEHRM/UNAM historical monograph pp60–65 and71: Obregón1December1920–30November1924, Calles1December1924–30November1928, PortesGil1December1928–4February1930. Inclusivefinaldays safely represented by next exclusive day. NoMaximato office extension. Omitted1918–1920/1930–1934 and contradictoryRodríguez1932 header retained; no capital/currency assumptions. Existing leader arrays empty, no same-office overlaps. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:55:06.441Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-4bb110167b1d9a963dfc04de",
+        "packageHash": "86941007c0481d0f407f474ec6ed43900a81ef0d51ea729338d871c56be8ec57",
+        "beforeFingerprint": "26f7fdba84be49f88f54bd0869c6eb7eee172d0502e108529b0d23223693c80e",
+        "afterFingerprint": "58276bde2210aa5d87cb6330adecd88b9b34c6b77824d76f272e917deb1a85dc",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "chile-restored-presidential-framework",
@@ -7113,7 +7719,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 60,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "58276bde2210aa5d87cb6330adecd88b9b34c6b77824d76f272e917deb1a85dc",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -7129,9 +7735,414 @@
       },
       "scopeId": "scope-ffb58debde04ac7feaca7dbc",
       "id": "c01-0e39da57777747632a561c20",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:55:07.530Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:55:07.725Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:55:07.853Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:55:07.947Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:55:07.979Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read Chilean parliamentary history body: Alessandri 1932–1938; Aguirre Cerda 1938–1941; Ríos 1942–1946; González Videla 1946–1952. Package deliberately uses complete interior years and preserves handover/interim gaps. Existing b09 source reused, not rediscovered; no existing leaders overlap. Political rights and authoritarian episodes are not flattened into blanket democracy. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:55:09.430Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-research",
+      "claimedAt": "2026-10-01T19:55:07.530Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-0e39da57777747632a561c20",
+        "jobId": "c01-0e39da57777747632a561c20",
+        "worker": {
+          "id": "campaign-research",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "58276bde2210aa5d87cb6330adecd88b9b34c6b77824d76f272e917deb1a85dc",
+        "entityId": "chile-restored-presidential-framework",
+        "mapIds": [
+          "entity-chile"
+        ],
+        "period": {
+          "from": "1933",
+          "until": "1952"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-chile-alessandri",
+            "category": "leadership",
+            "value": "Arturo Alessandri Palma",
+            "role": "President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1933",
+              "until": "1937"
+            },
+            "entityId": "chile-restored-presidential-framework",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "b09-chile-1925"
+            ],
+            "evidence": [
+              {
+                "sourceId": "b09-chile-1925",
+                "note": "Read parliamentary historical account: presidential terms are stated at year precision. Claim uses only interior complete years; transition years and interim arrangements remain explicit gaps.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1932",
+                "until": "1938"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-chile-aguirre",
+            "category": "leadership",
+            "value": "Pedro Aguirre Cerda",
+            "role": "President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1939",
+              "until": "1940"
+            },
+            "entityId": "chile-restored-presidential-framework",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "b09-chile-1925"
+            ],
+            "evidence": [
+              {
+                "sourceId": "b09-chile-1925",
+                "note": "Read parliamentary historical account: presidential terms are stated at year precision. Claim uses only interior complete years; transition years and interim arrangements remain explicit gaps.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1938",
+                "until": "1941"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-chile-rios",
+            "category": "leadership",
+            "value": "Juan Antonio Ríos",
+            "role": "President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1943",
+              "until": "1945"
+            },
+            "entityId": "chile-restored-presidential-framework",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "b09-chile-1925"
+            ],
+            "evidence": [
+              {
+                "sourceId": "b09-chile-1925",
+                "note": "Read parliamentary historical account: presidential terms are stated at year precision. Claim uses only interior complete years; transition years and interim arrangements remain explicit gaps.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1942",
+                "until": "1946"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-chile-gonzalez",
+            "category": "leadership",
+            "value": "Gabriel González Videla",
+            "role": "President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1947",
+              "until": "1951"
+            },
+            "entityId": "chile-restored-presidential-framework",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "b09-chile-1925"
+            ],
+            "evidence": [
+              {
+                "sourceId": "b09-chile-1925",
+                "note": "Read parliamentary historical account: presidential terms are stated at year precision. Claim uses only interior complete years; transition years and interim arrangements remain explicit gaps.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1946",
+                "until": "1952"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [],
+        "absenceOfEvidence": [
+          "No sufficiently reviewed period-specific capital or currency package prepared."
+        ],
+        "reviewNotes": [
+          "Existing constitutional facts preserved. Transition years 1938, 1941–1942, 1946 and 1952 intentionally unfilled; year-only evidence is not converted to an exact inauguration date."
+        ]
+      },
+      "packageHash": "034e162008d16c2ef8206de570b0156c4631bdb6003fe23c11bf4562e5540195",
+      "submittedAt": "2026-10-01T19:55:07.725Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-0e39da57777747632a561c20",
+            "jobId": "c01-0e39da57777747632a561c20",
+            "worker": {
+              "id": "campaign-research",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "chile-restored-presidential-framework",
+            "mapIds": [
+              "entity-chile"
+            ],
+            "period": {
+              "from": "1933",
+              "until": "1952"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-chile-alessandri",
+                "category": "leadership",
+                "value": "Arturo Alessandri Palma",
+                "role": "President",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1933",
+                  "until": "1937"
+                },
+                "entityId": "chile-restored-presidential-framework",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b09-chile-1925"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b09-chile-1925",
+                    "note": "Read parliamentary historical account: presidential terms are stated at year precision. Claim uses only interior complete years; transition years and interim arrangements remain explicit gaps.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1932",
+                    "until": "1938"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-chile-aguirre",
+                "category": "leadership",
+                "value": "Pedro Aguirre Cerda",
+                "role": "President",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1939",
+                  "until": "1940"
+                },
+                "entityId": "chile-restored-presidential-framework",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b09-chile-1925"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b09-chile-1925",
+                    "note": "Read parliamentary historical account: presidential terms are stated at year precision. Claim uses only interior complete years; transition years and interim arrangements remain explicit gaps.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1938",
+                    "until": "1941"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-chile-rios",
+                "category": "leadership",
+                "value": "Juan Antonio Ríos",
+                "role": "President",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1943",
+                  "until": "1945"
+                },
+                "entityId": "chile-restored-presidential-framework",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b09-chile-1925"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b09-chile-1925",
+                    "note": "Read parliamentary historical account: presidential terms are stated at year precision. Claim uses only interior complete years; transition years and interim arrangements remain explicit gaps.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1942",
+                    "until": "1946"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-chile-gonzalez",
+                "category": "leadership",
+                "value": "Gabriel González Videla",
+                "role": "President",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1947",
+                  "until": "1951"
+                },
+                "entityId": "chile-restored-presidential-framework",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b09-chile-1925"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b09-chile-1925",
+                    "note": "Read parliamentary historical account: presidential terms are stated at year precision. Claim uses only interior complete years; transition years and interim arrangements remain explicit gaps.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1946",
+                    "until": "1952"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [],
+            "absenceOfEvidence": [
+              "No sufficiently reviewed period-specific capital or currency package prepared."
+            ],
+            "reviewNotes": [
+              "Existing constitutional facts preserved. Transition years 1938, 1941–1942, 1946 and 1952 intentionally unfilled; year-only evidence is not converted to an exact inauguration date."
+            ]
+          },
+          "packageHash": "28b515af91ae2ce1e426f290fa763ca395ed25bf486eac52f05c1c2225b4effe",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:55:07.853Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "034e162008d16c2ef8206de570b0156c4631bdb6003fe23c11bf4562e5540195"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-0e39da57777747632a561c20",
+        "packageHash": "034e162008d16c2ef8206de570b0156c4631bdb6003fe23c11bf4562e5540195",
+        "productionFingerprint": "58276bde2210aa5d87cb6330adecd88b9b34c6b77824d76f272e917deb1a85dc",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read Chilean parliamentary history body: Alessandri 1932–1938; Aguirre Cerda 1938–1941; Ríos 1942–1946; González Videla 1946–1952. Package deliberately uses complete interior years and preserves handover/interim gaps. Existing b09 source reused, not rediscovered; no existing leaders overlap. Political rights and authoritarian episodes are not flattened into blanket democracy. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:55:07.979Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-0e39da57777747632a561c20",
+        "packageHash": "034e162008d16c2ef8206de570b0156c4631bdb6003fe23c11bf4562e5540195",
+        "beforeFingerprint": "58276bde2210aa5d87cb6330adecd88b9b34c6b77824d76f272e917deb1a85dc",
+        "afterFingerprint": "1d51dbf3a9bd628f8c6ac1f8d155dd38436c62057fc4f7d5fbdf358136020994",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "argentina-pre-1930-federal-framework",
@@ -7211,7 +8222,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 54,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "1d51dbf3a9bd628f8c6ac1f8d155dd38436c62057fc4f7d5fbdf358136020994",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -7227,9 +8238,568 @@
       },
       "scopeId": "scope-e36b5d4bf36eab587428c932",
       "id": "c01-d9bbd6a1762c49beddb32c34",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:55:09.482Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:55:09.503Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:55:09.638Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:55:09.678Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:55:25.361Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read all five Casa Rosada presidential biographies, including explicit Período entries: Roca second term 12 October 1898–12 October 1904; Quintana to 12 March 1906 death; Figueroa Alcorta to 12 October 1910; Sáenz Peña to 9 August 1914 death; Plaza to 12 October 1916. Successor entries confirm handover/death boundaries; precise end dates are exclusive. Roca clipped at assigned 1899 and remaining 1916 succession is not fabricated. Formal presidency claims do not assert uninterrupted exercise during illness or absence. Unrelated erroneous spouse/cabinet details in source are not imported. Existing leaders empty and source URLs have no catalogue duplicates. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:55:27.205Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-research",
+      "claimedAt": "2026-10-01T19:55:09.482Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-d9bbd6a1762c49beddb32c34",
+        "jobId": "c01-d9bbd6a1762c49beddb32c34",
+        "worker": {
+          "id": "campaign-research",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "1d51dbf3a9bd628f8c6ac1f8d155dd38436c62057fc4f7d5fbdf358136020994",
+        "entityId": "argentina-pre-1930-federal-framework",
+        "mapIds": [
+          "entity-argentina"
+        ],
+        "period": {
+          "from": "1899",
+          "until": "1916"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-argentina-roca",
+            "category": "leadership",
+            "value": "Julio Argentino Roca",
+            "role": "President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1899",
+              "until": "1904-10-12"
+            },
+            "entityId": "argentina-pre-1930-federal-framework",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-casarosada-roca"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-casarosada-roca",
+                "note": "Official presidential biography explicitly gives both term dates. End is treated as the exclusive handover/death boundary; successor biography confirms the same boundary. Roca start clipped to job 1899.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1898-10-12",
+                "until": "1904-10-12"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-argentina-quintana",
+            "category": "leadership",
+            "value": "Manuel Quintana",
+            "role": "President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1904-10-12",
+              "until": "1906-03-12"
+            },
+            "entityId": "argentina-pre-1930-federal-framework",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-casarosada-quintana"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-casarosada-quintana",
+                "note": "Official presidential biography explicitly gives both term dates. End is treated as the exclusive handover/death boundary; successor biography confirms the same boundary. Roca start clipped to job 1899.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1904-10-12",
+                "until": "1906-03-12"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-argentina-figueroa",
+            "category": "leadership",
+            "value": "José Figueroa Alcorta",
+            "role": "President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1906-03-12",
+              "until": "1910-10-12"
+            },
+            "entityId": "argentina-pre-1930-federal-framework",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-casarosada-figueroa"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-casarosada-figueroa",
+                "note": "Official presidential biography explicitly gives both term dates. End is treated as the exclusive handover/death boundary; successor biography confirms the same boundary. Roca start clipped to job 1899.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1906-03-12",
+                "until": "1910-10-12"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-argentina-saenz",
+            "category": "leadership",
+            "value": "Roque Sáenz Peña",
+            "role": "President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1910-10-12",
+              "until": "1914-08-09"
+            },
+            "entityId": "argentina-pre-1930-federal-framework",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-casarosada-saenz"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-casarosada-saenz",
+                "note": "Official presidential biography explicitly gives both term dates. End is treated as the exclusive handover/death boundary; successor biography confirms the same boundary. Roca start clipped to job 1899.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1910-10-12",
+                "until": "1914-08-09"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-argentina-plaza",
+            "category": "leadership",
+            "value": "Victorino de la Plaza",
+            "role": "President",
+            "temporal": {
+              "kind": "interval",
+              "from": "1914-08-09",
+              "until": "1916-10-12"
+            },
+            "entityId": "argentina-pre-1930-federal-framework",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-casarosada-plaza"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-casarosada-plaza",
+                "note": "Official presidential biography explicitly gives both term dates. End is treated as the exclusive handover/death boundary; successor biography confirms the same boundary. Roca start clipped to job 1899.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1914-08-09",
+                "until": "1916-10-12"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-casarosada-roca",
+            "title": "Official presidential archive: Julio Argentino Roca",
+            "institution": "Presidency of Argentina / Casa Rosada",
+            "url": "https://www.casarosada.gob.ar/nuestro-pais/presidentes/47113-julio-argentino-roca-1898-1904",
+            "usage": "Read presidential biography body, Período entry; imported office tenure only, unrelated biographical or cabinet errors not copied.",
+            "kind": "institutional",
+            "accessed": "2026-10-01"
+          },
+          {
+            "id": "c01-casarosada-quintana",
+            "title": "Official presidential archive: Manuel Quintana",
+            "institution": "Presidency of Argentina / Casa Rosada",
+            "url": "https://www.casarosada.gob.ar/nuestro-pais/presidentes/47112-manuel-quintana-1904-1906",
+            "usage": "Read presidential biography body, Período entry; imported office tenure only, unrelated biographical or cabinet errors not copied.",
+            "kind": "institutional",
+            "accessed": "2026-10-01"
+          },
+          {
+            "id": "c01-casarosada-figueroa",
+            "title": "Official presidential archive: José Figueroa Alcorta",
+            "institution": "Presidency of Argentina / Casa Rosada",
+            "url": "https://www.casarosada.gob.ar/nuestro-pais/presidentes/47111-jose-figueroa-alcorta-1906-1910",
+            "usage": "Read presidential biography body, Período entry; imported office tenure only, unrelated biographical or cabinet errors not copied.",
+            "kind": "institutional",
+            "accessed": "2026-10-01"
+          },
+          {
+            "id": "c01-casarosada-saenz",
+            "title": "Official presidential archive: Roque Sáenz Peña",
+            "institution": "Presidency of Argentina / Casa Rosada",
+            "url": "https://www.casarosada.gob.ar/nuestro-pais/presidentes/47110-roque-saenz-pena-1910-1914",
+            "usage": "Read presidential biography body, Período entry; imported office tenure only, unrelated biographical or cabinet errors not copied.",
+            "kind": "institutional",
+            "accessed": "2026-10-01"
+          },
+          {
+            "id": "c01-casarosada-plaza",
+            "title": "Official presidential archive: Victorino de la Plaza",
+            "institution": "Presidency of Argentina / Casa Rosada",
+            "url": "https://www.casarosada.gob.ar/nuestro-pais/presidentes/47109-victorino-de-la-plaza-1914-1916",
+            "usage": "Read presidential biography body, Período entry; imported office tenure only, unrelated biographical or cabinet errors not copied.",
+            "kind": "institutional",
+            "accessed": "2026-10-01"
+          }
+        ],
+        "absenceOfEvidence": [
+          "Leadership after the 1916 handover, capital continuity and historical currency remain unresearched in this package."
+        ],
+        "reviewNotes": [
+          "Actual office dates retained; no invented precision. Nominal presidency does not claim personal practical control during illness or acting arrangements. Existing constitutional framework preserved."
+        ]
+      },
+      "packageHash": "4ff7f12096833c2952a5fe586e6656ab52ea12d44c02ce2bc46ef3d7608f4374",
+      "submittedAt": "2026-10-01T19:55:09.503Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-d9bbd6a1762c49beddb32c34",
+            "jobId": "c01-d9bbd6a1762c49beddb32c34",
+            "worker": {
+              "id": "campaign-research",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "argentina-pre-1930-federal-framework",
+            "mapIds": [
+              "entity-argentina"
+            ],
+            "period": {
+              "from": "1899",
+              "until": "1916"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-argentina-roca",
+                "category": "leadership",
+                "value": "Julio Argentino Roca",
+                "role": "President",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1899",
+                  "until": "1904-10-12"
+                },
+                "entityId": "argentina-pre-1930-federal-framework",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-casarosada-roca"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-casarosada-roca",
+                    "note": "Official presidential biography explicitly gives both term dates. End is treated as the exclusive handover/death boundary; successor biography confirms the same boundary. Roca start clipped to job 1899.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1898-10-12",
+                    "until": "1904-10-12"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-argentina-quintana",
+                "category": "leadership",
+                "value": "Manuel Quintana",
+                "role": "President",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1904-10-12",
+                  "until": "1906-03-12"
+                },
+                "entityId": "argentina-pre-1930-federal-framework",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-casarosada-quintana"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-casarosada-quintana",
+                    "note": "Official presidential biography explicitly gives both term dates. End is treated as the exclusive handover/death boundary; successor biography confirms the same boundary. Roca start clipped to job 1899.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1904-10-12",
+                    "until": "1906-03-12"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-argentina-figueroa",
+                "category": "leadership",
+                "value": "José Figueroa Alcorta",
+                "role": "President",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1906-03-12",
+                  "until": "1910-10-12"
+                },
+                "entityId": "argentina-pre-1930-federal-framework",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-casarosada-figueroa"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-casarosada-figueroa",
+                    "note": "Official presidential biography explicitly gives both term dates. End is treated as the exclusive handover/death boundary; successor biography confirms the same boundary. Roca start clipped to job 1899.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1906-03-12",
+                    "until": "1910-10-12"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-argentina-saenz",
+                "category": "leadership",
+                "value": "Roque Sáenz Peña",
+                "role": "President",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1910-10-12",
+                  "until": "1914-08-09"
+                },
+                "entityId": "argentina-pre-1930-federal-framework",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-casarosada-saenz"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-casarosada-saenz",
+                    "note": "Official presidential biography explicitly gives both term dates. End is treated as the exclusive handover/death boundary; successor biography confirms the same boundary. Roca start clipped to job 1899.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1910-10-12",
+                    "until": "1914-08-09"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-argentina-plaza",
+                "category": "leadership",
+                "value": "Victorino de la Plaza",
+                "role": "President",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1914-08-09",
+                  "until": "1916-10-12"
+                },
+                "entityId": "argentina-pre-1930-federal-framework",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-casarosada-plaza"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-casarosada-plaza",
+                    "note": "Official presidential biography explicitly gives both term dates. End is treated as the exclusive handover/death boundary; successor biography confirms the same boundary. Roca start clipped to job 1899.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1914-08-09",
+                    "until": "1916-10-12"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-casarosada-roca",
+                "title": "Official presidential archive: Julio Argentino Roca",
+                "institution": "Presidency of Argentina / Casa Rosada",
+                "url": "https://www.casarosada.gob.ar/nuestro-pais/presidentes/47113-julio-argentino-roca-1898-1904",
+                "usage": "Read presidential biography body, Período entry; imported office tenure only, unrelated biographical or cabinet errors not copied.",
+                "kind": "institutional",
+                "accessed": "2026-10-01"
+              },
+              {
+                "id": "c01-casarosada-quintana",
+                "title": "Official presidential archive: Manuel Quintana",
+                "institution": "Presidency of Argentina / Casa Rosada",
+                "url": "https://www.casarosada.gob.ar/nuestro-pais/presidentes/47112-manuel-quintana-1904-1906",
+                "usage": "Read presidential biography body, Período entry; imported office tenure only, unrelated biographical or cabinet errors not copied.",
+                "kind": "institutional",
+                "accessed": "2026-10-01"
+              },
+              {
+                "id": "c01-casarosada-figueroa",
+                "title": "Official presidential archive: José Figueroa Alcorta",
+                "institution": "Presidency of Argentina / Casa Rosada",
+                "url": "https://www.casarosada.gob.ar/nuestro-pais/presidentes/47111-jose-figueroa-alcorta-1906-1910",
+                "usage": "Read presidential biography body, Período entry; imported office tenure only, unrelated biographical or cabinet errors not copied.",
+                "kind": "institutional",
+                "accessed": "2026-10-01"
+              },
+              {
+                "id": "c01-casarosada-saenz",
+                "title": "Official presidential archive: Roque Sáenz Peña",
+                "institution": "Presidency of Argentina / Casa Rosada",
+                "url": "https://www.casarosada.gob.ar/nuestro-pais/presidentes/47110-roque-saenz-pena-1910-1914",
+                "usage": "Read presidential biography body, Período entry; imported office tenure only, unrelated biographical or cabinet errors not copied.",
+                "kind": "institutional",
+                "accessed": "2026-10-01"
+              },
+              {
+                "id": "c01-casarosada-plaza",
+                "title": "Official presidential archive: Victorino de la Plaza",
+                "institution": "Presidency of Argentina / Casa Rosada",
+                "url": "https://www.casarosada.gob.ar/nuestro-pais/presidentes/47109-victorino-de-la-plaza-1914-1916",
+                "usage": "Read presidential biography body, Período entry; imported office tenure only, unrelated biographical or cabinet errors not copied.",
+                "kind": "institutional",
+                "accessed": "2026-10-01"
+              }
+            ],
+            "absenceOfEvidence": [
+              "Leadership after the 1916 handover, capital continuity and historical currency remain unresearched in this package."
+            ],
+            "reviewNotes": [
+              "Actual office dates retained; no invented precision. Nominal presidency does not claim personal practical control during illness or acting arrangements. Existing constitutional framework preserved."
+            ]
+          },
+          "packageHash": "3c371a80454dca36f72a5837af220a4b664403d6d0fb9a281736ba61dcc2d341",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:55:09.638Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "4ff7f12096833c2952a5fe586e6656ab52ea12d44c02ce2bc46ef3d7608f4374"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-d9bbd6a1762c49beddb32c34",
+        "packageHash": "4ff7f12096833c2952a5fe586e6656ab52ea12d44c02ce2bc46ef3d7608f4374",
+        "productionFingerprint": "1d51dbf3a9bd628f8c6ac1f8d155dd38436c62057fc4f7d5fbdf358136020994",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read all five Casa Rosada presidential biographies, including explicit Período entries: Roca second term 12 October 1898–12 October 1904; Quintana to 12 March 1906 death; Figueroa Alcorta to 12 October 1910; Sáenz Peña to 9 August 1914 death; Plaza to 12 October 1916. Successor entries confirm handover/death boundaries; precise end dates are exclusive. Roca clipped at assigned 1899 and remaining 1916 succession is not fabricated. Formal presidency claims do not assert uninterrupted exercise during illness or absence. Unrelated erroneous spouse/cabinet details in source are not imported. Existing leaders empty and source URLs have no catalogue duplicates. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:55:25.361Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-d9bbd6a1762c49beddb32c34",
+        "packageHash": "4ff7f12096833c2952a5fe586e6656ab52ea12d44c02ce2bc46ef3d7608f4374",
+        "beforeFingerprint": "1d51dbf3a9bd628f8c6ac1f8d155dd38436c62057fc4f7d5fbdf358136020994",
+        "afterFingerprint": "13673f20a25b0152bac595d360408f61ffc5e121df72020f16d08a9bc631935f",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "b19-south-africa-early-union",
@@ -7326,7 +8896,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 60,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "13673f20a25b0152bac595d360408f61ffc5e121df72020f16d08a9bc631935f",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -7342,9 +8912,394 @@
       },
       "scopeId": "scope-20eee26a7189193e98e208b1",
       "id": "c01-3ef6b3410ec0dfdb15fc77be",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:55:27.286Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:55:27.346Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:55:27.456Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:55:27.515Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:55:27.553Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read both SAHO historical bodies: Botha formal premiership 1910–1919; Smuts succeeded on death in 1919 and lost 1924 election; Hertzog Pact government 1924 with 1929 reelection and retained premiership 1934. Interior-year claims avoid exact-day precision and stop at job 1930. Narrow office facts are compatible with existing racially restricted Dominion framework and do not imply universal consent or uniform control. Existing leaders empty and no catalogue URL duplicates. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:55:29.725Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-research",
+      "claimedAt": "2026-10-01T19:55:27.286Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-3ef6b3410ec0dfdb15fc77be",
+        "jobId": "c01-3ef6b3410ec0dfdb15fc77be",
+        "worker": {
+          "id": "campaign-research",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "13673f20a25b0152bac595d360408f61ffc5e121df72020f16d08a9bc631935f",
+        "entityId": "b19-south-africa-early-union",
+        "mapIds": [
+          "entity-south-africa",
+          "entity-union-of-south-africa"
+        ],
+        "period": {
+          "from": "1911",
+          "until": "1930"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-sa-botha",
+            "category": "leadership",
+            "value": "Louis Botha",
+            "role": "Prime Minister",
+            "temporal": {
+              "kind": "interval",
+              "from": "1911",
+              "until": "1918"
+            },
+            "entityId": "b19-south-africa-early-union",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-saho-botha"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-saho-botha",
+                "note": "Body states 1910–1919 premiership. Only complete interior years accepted; no exact accession date inferred.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1910",
+                "until": "1919"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-sa-smuts",
+            "category": "leadership",
+            "value": "Jan Smuts",
+            "role": "Prime Minister",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920",
+              "until": "1923"
+            },
+            "entityId": "b19-south-africa-early-union",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-saho-pact"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-saho-pact",
+                "note": "Body explicitly gives succession after Botha death in 1919 and defeat in 1924. Interior complete years retained.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1919",
+                "until": "1924"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-sa-hertzog",
+            "category": "leadership",
+            "value": "J. B. M. Hertzog",
+            "role": "Prime Minister",
+            "temporal": {
+              "kind": "interval",
+              "from": "1925",
+              "until": "1930"
+            },
+            "entityId": "b19-south-africa-early-union",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-saho-pact"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-saho-pact",
+                "note": "Body describes Hertzog Pact government after 1924 election, 1929 victory and retained premiership in 1934. Clip to early Union job ending 1930.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1924",
+                "until": "1934"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-saho-botha",
+            "title": "General Louis Botha wins elections",
+            "institution": "South African History Online",
+            "url": "https://sahistory.org.za/dated-event/general-louis-botha-wins-elections",
+            "usage": "Body identifies Botha as first Union prime minister, 1910–1919. Inauguration date wording is not imported.",
+            "kind": "academic",
+            "accessed": "2026-10-01"
+          },
+          {
+            "id": "c01-saho-pact",
+            "title": "State policies and social protest, 1924–1939",
+            "institution": "South African History Online",
+            "url": "https://sahistory.org.za/article/state-policies-and-social-protest-1924-1939",
+            "usage": "Read body: Smuts succeeded Botha in 1919; Pact government replaced Smuts in 1924; Hertzog won 1929 and remained prime minister in 1934.",
+            "kind": "academic",
+            "accessed": "2026-10-01"
+          }
+        ],
+        "absenceOfEvidence": [
+          "Executive and legislative seats require primary Act body verification; inaccessible statute mirror not used as full-body evidence.",
+          "Historical currency not researched."
+        ],
+        "reviewNotes": [
+          "1919 and 1924 transition years remain explicit gaps. Office titles do not remove existing exclusionary franchise qualifications or treat all residents as represented. Presidency history list of Smuts 1939–1948 was not back-projected to his earlier term."
+        ]
+      },
+      "packageHash": "9161ee2bb856fb894f9c8c53a99cbf7d9118a622f0d29bae206abb89ce5c5262",
+      "submittedAt": "2026-10-01T19:55:27.346Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-3ef6b3410ec0dfdb15fc77be",
+            "jobId": "c01-3ef6b3410ec0dfdb15fc77be",
+            "worker": {
+              "id": "campaign-research",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "b19-south-africa-early-union",
+            "mapIds": [
+              "entity-south-africa",
+              "entity-union-of-south-africa"
+            ],
+            "period": {
+              "from": "1911",
+              "until": "1930"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-sa-botha",
+                "category": "leadership",
+                "value": "Louis Botha",
+                "role": "Prime Minister",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1911",
+                  "until": "1918"
+                },
+                "entityId": "b19-south-africa-early-union",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-saho-botha"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-saho-botha",
+                    "note": "Body states 1910–1919 premiership. Only complete interior years accepted; no exact accession date inferred.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1910",
+                    "until": "1919"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-sa-smuts",
+                "category": "leadership",
+                "value": "Jan Smuts",
+                "role": "Prime Minister",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1920",
+                  "until": "1923"
+                },
+                "entityId": "b19-south-africa-early-union",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-saho-pact"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-saho-pact",
+                    "note": "Body explicitly gives succession after Botha death in 1919 and defeat in 1924. Interior complete years retained.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1919",
+                    "until": "1924"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-sa-hertzog",
+                "category": "leadership",
+                "value": "J. B. M. Hertzog",
+                "role": "Prime Minister",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1925",
+                  "until": "1930"
+                },
+                "entityId": "b19-south-africa-early-union",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-saho-pact"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-saho-pact",
+                    "note": "Body describes Hertzog Pact government after 1924 election, 1929 victory and retained premiership in 1934. Clip to early Union job ending 1930.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1924",
+                    "until": "1934"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-saho-botha",
+                "title": "General Louis Botha wins elections",
+                "institution": "South African History Online",
+                "url": "https://sahistory.org.za/dated-event/general-louis-botha-wins-elections",
+                "usage": "Body identifies Botha as first Union prime minister, 1910–1919. Inauguration date wording is not imported.",
+                "kind": "academic",
+                "accessed": "2026-10-01"
+              },
+              {
+                "id": "c01-saho-pact",
+                "title": "State policies and social protest, 1924–1939",
+                "institution": "South African History Online",
+                "url": "https://sahistory.org.za/article/state-policies-and-social-protest-1924-1939",
+                "usage": "Read body: Smuts succeeded Botha in 1919; Pact government replaced Smuts in 1924; Hertzog won 1929 and remained prime minister in 1934.",
+                "kind": "academic",
+                "accessed": "2026-10-01"
+              }
+            ],
+            "absenceOfEvidence": [
+              "Executive and legislative seats require primary Act body verification; inaccessible statute mirror not used as full-body evidence.",
+              "Historical currency not researched."
+            ],
+            "reviewNotes": [
+              "1919 and 1924 transition years remain explicit gaps. Office titles do not remove existing exclusionary franchise qualifications or treat all residents as represented. Presidency history list of Smuts 1939–1948 was not back-projected to his earlier term."
+            ]
+          },
+          "packageHash": "999692d2ae723ee1c8315d9409882cb3e68aa564287ade982743b023cfe532b7",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:55:27.456Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "9161ee2bb856fb894f9c8c53a99cbf7d9118a622f0d29bae206abb89ce5c5262"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-3ef6b3410ec0dfdb15fc77be",
+        "packageHash": "9161ee2bb856fb894f9c8c53a99cbf7d9118a622f0d29bae206abb89ce5c5262",
+        "productionFingerprint": "13673f20a25b0152bac595d360408f61ffc5e121df72020f16d08a9bc631935f",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read both SAHO historical bodies: Botha formal premiership 1910–1919; Smuts succeeded on death in 1919 and lost 1924 election; Hertzog Pact government 1924 with 1929 reelection and retained premiership 1934. Interior-year claims avoid exact-day precision and stop at job 1930. Narrow office facts are compatible with existing racially restricted Dominion framework and do not imply universal consent or uniform control. Existing leaders empty and no catalogue URL duplicates. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:55:27.553Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-3ef6b3410ec0dfdb15fc77be",
+        "packageHash": "9161ee2bb856fb894f9c8c53a99cbf7d9118a622f0d29bae206abb89ce5c5262",
+        "beforeFingerprint": "13673f20a25b0152bac595d360408f61ffc5e121df72020f16d08a9bc631935f",
+        "afterFingerprint": "006b970c4d065c92805ddff8e59d1ac9bcc71b62dd805ab08c20547f4504c26c",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "egypt-british-occupied-khedivate-framework",
@@ -7429,7 +9384,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 93,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "006b970c4d065c92805ddff8e59d1ac9bcc71b62dd805ab08c20547f4504c26c",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -7445,9 +9400,354 @@
       },
       "scopeId": "scope-60a4c0bd9fc64c09b22f68ad",
       "id": "c01-740e7b47473140f2ea1c31e9",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:55:29.865Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:55:29.888Z",
+          "actor": "campaign-research",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:55:30.033Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:55:30.081Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:55:30.216Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read Library of Congress Country Study occupation chapter full body: Cromer 1883–1907; Gorst 1907–1911; Kitchener 1911–1914, specifically British Agent and Consul General roles. Interior-year claims deliberately avoid title confusion with Khedive or Ottoman Sultan and transition years remain gaps. Existing b14 source reused; its erroneous protectorate date is not imported. Existing leaders empty. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:55:32.433Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-research",
+      "claimedAt": "2026-10-01T19:55:29.865Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-740e7b47473140f2ea1c31e9",
+        "jobId": "c01-740e7b47473140f2ea1c31e9",
+        "worker": {
+          "id": "campaign-research",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "006b970c4d065c92805ddff8e59d1ac9bcc71b62dd805ab08c20547f4504c26c",
+        "entityId": "egypt-british-occupied-khedivate-framework",
+        "mapIds": [
+          "entity-egypt"
+        ],
+        "period": {
+          "from": "1883",
+          "until": "1913"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-egypt-cromer",
+            "category": "leadership",
+            "value": "Lord Cromer",
+            "role": "British Agent and Consul General",
+            "temporal": {
+              "kind": "interval",
+              "from": "1884",
+              "until": "1906"
+            },
+            "entityId": "egypt-british-occupied-khedivate-framework",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "b14-egypt-occupation"
+            ],
+            "evidence": [
+              {
+                "sourceId": "b14-egypt-occupation",
+                "note": "Read country-study occupation chapter body: dated British agent/consul-general tenures. Interior complete years retained, distinct from Khedive or Ottoman Sultan offices.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1883",
+                "until": "1907"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-egypt-gorst",
+            "category": "leadership",
+            "value": "Sir John Eldon Gorst",
+            "role": "British Agent and Consul General",
+            "temporal": {
+              "kind": "interval",
+              "from": "1908",
+              "until": "1910"
+            },
+            "entityId": "egypt-british-occupied-khedivate-framework",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "b14-egypt-occupation"
+            ],
+            "evidence": [
+              {
+                "sourceId": "b14-egypt-occupation",
+                "note": "Read country-study occupation chapter body: dated British agent/consul-general tenures. Interior complete years retained, distinct from Khedive or Ottoman Sultan offices.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1907",
+                "until": "1911"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-egypt-kitchener",
+            "category": "leadership",
+            "value": "Lord Herbert Kitchener",
+            "role": "British Agent and Consul General",
+            "temporal": {
+              "kind": "interval",
+              "from": "1912",
+              "until": "1913"
+            },
+            "entityId": "egypt-british-occupied-khedivate-framework",
+            "geographicScope": {
+              "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "b14-egypt-occupation"
+            ],
+            "evidence": [
+              {
+                "sourceId": "b14-egypt-occupation",
+                "note": "Read country-study occupation chapter body: dated British agent/consul-general tenures. Interior complete years retained, distinct from Khedive or Ottoman Sultan offices.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1911",
+                "until": "1914"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [],
+        "absenceOfEvidence": [
+          "Khedive tenure chronology, Cairo period continuity and currency require additional reviewed evidence.",
+          "Central Bank of Egypt banknote history search result could not be verified in full body; no pound claim imported."
+        ],
+        "reviewNotes": [
+          "1883, 1907 and 1911 transition years intentionally remain gaps. Occupation is not converted into formal colonial annexation, British sovereignty or dynastic succession. Existing 18 December 1914 protectorate boundary is preserved."
+        ]
+      },
+      "packageHash": "52b60d670dc500ecdb044aa01b5004ea0a3e5e024974b813c84cc777cf3647cb",
+      "submittedAt": "2026-10-01T19:55:29.888Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-740e7b47473140f2ea1c31e9",
+            "jobId": "c01-740e7b47473140f2ea1c31e9",
+            "worker": {
+              "id": "campaign-research",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "egypt-british-occupied-khedivate-framework",
+            "mapIds": [
+              "entity-egypt"
+            ],
+            "period": {
+              "from": "1883",
+              "until": "1913"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-egypt-cromer",
+                "category": "leadership",
+                "value": "Lord Cromer",
+                "role": "British Agent and Consul General",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1884",
+                  "until": "1906"
+                },
+                "entityId": "egypt-british-occupied-khedivate-framework",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b14-egypt-occupation"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b14-egypt-occupation",
+                    "note": "Read country-study occupation chapter body: dated British agent/consul-general tenures. Interior complete years retained, distinct from Khedive or Ottoman Sultan offices.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1883",
+                    "until": "1907"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-egypt-gorst",
+                "category": "leadership",
+                "value": "Sir John Eldon Gorst",
+                "role": "British Agent and Consul General",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1908",
+                  "until": "1910"
+                },
+                "entityId": "egypt-british-occupied-khedivate-framework",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b14-egypt-occupation"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b14-egypt-occupation",
+                    "note": "Read country-study occupation chapter body: dated British agent/consul-general tenures. Interior complete years retained, distinct from Khedive or Ottoman Sultan offices.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1907",
+                    "until": "1911"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-egypt-kitchener",
+                "category": "leadership",
+                "value": "Lord Herbert Kitchener",
+                "role": "British Agent and Consul General",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1912",
+                  "until": "1913"
+                },
+                "entityId": "egypt-british-occupied-khedivate-framework",
+                "geographicScope": {
+                  "description": "Historical central office associated with this framework; not proof of uniform authority over map geometry",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "b14-egypt-occupation"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "b14-egypt-occupation",
+                    "note": "Read country-study occupation chapter body: dated British agent/consul-general tenures. Interior complete years retained, distinct from Khedive or Ottoman Sultan offices.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1911",
+                    "until": "1914"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [],
+            "absenceOfEvidence": [
+              "Khedive tenure chronology, Cairo period continuity and currency require additional reviewed evidence.",
+              "Central Bank of Egypt banknote history search result could not be verified in full body; no pound claim imported."
+            ],
+            "reviewNotes": [
+              "1883, 1907 and 1911 transition years intentionally remain gaps. Occupation is not converted into formal colonial annexation, British sovereignty or dynastic succession. Existing 18 December 1914 protectorate boundary is preserved."
+            ]
+          },
+          "packageHash": "1308fa6b038c8c8ec730aaa85eb71b62c1859cb2983f3f01342d611a4337047a",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:55:30.033Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "52b60d670dc500ecdb044aa01b5004ea0a3e5e024974b813c84cc777cf3647cb"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-740e7b47473140f2ea1c31e9",
+        "packageHash": "52b60d670dc500ecdb044aa01b5004ea0a3e5e024974b813c84cc777cf3647cb",
+        "productionFingerprint": "006b970c4d065c92805ddff8e59d1ac9bcc71b62dd805ab08c20547f4504c26c",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read Library of Congress Country Study occupation chapter full body: Cromer 1883–1907; Gorst 1907–1911; Kitchener 1911–1914, specifically British Agent and Consul General roles. Interior-year claims deliberately avoid title confusion with Khedive or Ottoman Sultan and transition years remain gaps. Existing b14 source reused; its erroneous protectorate date is not imported. Existing leaders empty. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:55:30.216Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-740e7b47473140f2ea1c31e9",
+        "packageHash": "52b60d670dc500ecdb044aa01b5004ea0a3e5e024974b813c84cc777cf3647cb",
+        "beforeFingerprint": "006b970c4d065c92805ddff8e59d1ac9bcc71b62dd805ab08c20547f4504c26c",
+        "afterFingerprint": "825180ebb8fadea0bc9cd7c6bcd0071b539f64e0f9cf0729993d0ac326aa46a7",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "fiji-british-colonial-core",

@@ -1,12 +1,12 @@
 # Campaign 1 checkpoint report
 
-Selected 30; integrated 12; claims 41; sources added 23, reused 3.
-Fingerprint: 505c817c76bc267a7c95442a3fe122fc345633696990b44b5b08d4cf5bc93804.
+Selected 30; integrated 18; claims 60; sources added 32, reused 5.
+Fingerprint: 825180ebb8fadea0bc9cd7c6bcd0071b539f64e0f9cf0729993d0ac326aa46a7.
 
 | Field | Eligible entity/years | Supported before | Supported after | Partial before | Partial after |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | capital | 868 | 230 | 384 | 0 | 14 |
-| leadership | 868 | 76 | 354 | 1 | 27 |
+| leadership | 868 | 76 | 439 | 1 | 53 |
 | political-institutional | 868 | 744 | 744 | 107 | 107 |
 | currency | 868 | 66 | 183 | 2 | 6 |
 
