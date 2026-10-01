@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 117,
+  "revision": 153,
   "concurrency": 3,
   "jobs": [
     {
@@ -9832,7 +9832,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 69,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "825180ebb8fadea0bc9cd7c6bcd0071b539f64e0f9cf0729993d0ac326aa46a7",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -9848,9 +9848,308 @@
       },
       "scopeId": "scope-226ec9f69373c73ec37e20c6",
       "id": "c01-c01fece893a33f4e15995336",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:58:22.079Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:58:22.249Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:58:22.526Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:58:22.700Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:58:22.987Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read UNESCO OutstandingUniversalValue historicalbody: Levuka colonialcapital after1874cession, transferSuva1882. Conservative1878–1881/1883–1900 omit1882andretainyearprecision. Capital administration doesnotprove indigenousconsensus/sovereignty. No existingcapitaloverlaps/sourceURLduplicate. Source URL reuse audit: [] Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:58:27.200Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T19:58:22.079Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-c01fece893a33f4e15995336",
+        "jobId": "c01-c01fece893a33f4e15995336",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "825180ebb8fadea0bc9cd7c6bcd0071b539f64e0f9cf0729993d0ac326aa46a7",
+        "entityId": "fiji-british-colonial-core",
+        "mapIds": [
+          "entity-fiji"
+        ],
+        "period": {
+          "from": "1878",
+          "until": "1900"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-fiji-levuka-capital",
+            "category": "capital",
+            "value": "Levuka",
+            "temporal": {
+              "kind": "interval",
+              "from": "1878",
+              "until": "1881"
+            },
+            "entityId": "fiji-british-colonial-core",
+            "geographicScope": {
+              "description": "Fiji — British colonial framework; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-fiji-levuka-unesco"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-fiji-levuka-unesco",
+                "note": "UNESCO body identifies Levuka colonial capital and transfer to Suva in 1882. Claim stops before the transfer year.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1878",
+                "until": "1881"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-fiji-suva-capital",
+            "category": "capital",
+            "value": "Suva",
+            "temporal": {
+              "kind": "interval",
+              "from": "1883",
+              "until": "1900"
+            },
+            "entityId": "fiji-british-colonial-core",
+            "geographicScope": {
+              "description": "Fiji — British colonial framework; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-fiji-levuka-unesco"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-fiji-levuka-unesco",
+                "note": "UNESCO body dates removal of capital to Suva in 1882; claim begins after that year without inventing its day.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1883",
+                "until": "1900"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-fiji-levuka-unesco",
+            "title": "Levuka Historical Port Town — Outstanding Universal Value",
+            "institution": "UNESCO World Heritage Centre",
+            "url": "https://whc.unesco.org/en/list/1399/",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read full Outstanding Universal Value body: colonial capital at Levuka following 1874 cession and removal to Suva in 1882. Colonial descriptions are not evidence of consensual indigenous sovereignty."
+          }
+        ],
+        "absenceOfEvidence": [
+          "1882 capital transfer retains a gap because a precise transfer date is not established.",
+          "Governor chronology and currency were not sufficiently researched; existing colonial institutions remain sourced and unchanged."
+        ],
+        "reviewNotes": [
+          "Independent body evidence reviewed. Package uses original assigned context; coordinator must revalidate against current production before integration."
+        ]
+      },
+      "packageHash": "8ecace2c5f8f3cc7c57f584772c4b50aec501075e8248e5c62291edf5ab659d8",
+      "submittedAt": "2026-10-01T19:58:22.249Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-c01fece893a33f4e15995336",
+            "jobId": "c01-c01fece893a33f4e15995336",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "fiji-british-colonial-core",
+            "mapIds": [
+              "entity-fiji"
+            ],
+            "period": {
+              "from": "1878",
+              "until": "1900"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-fiji-levuka-capital",
+                "category": "capital",
+                "value": "Levuka",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1878",
+                  "until": "1881"
+                },
+                "entityId": "fiji-british-colonial-core",
+                "geographicScope": {
+                  "description": "Fiji — British colonial framework; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-fiji-levuka-unesco"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-fiji-levuka-unesco",
+                    "note": "UNESCO body identifies Levuka colonial capital and transfer to Suva in 1882. Claim stops before the transfer year.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1878",
+                    "until": "1881"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-fiji-suva-capital",
+                "category": "capital",
+                "value": "Suva",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1883",
+                  "until": "1900"
+                },
+                "entityId": "fiji-british-colonial-core",
+                "geographicScope": {
+                  "description": "Fiji — British colonial framework; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-fiji-levuka-unesco"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-fiji-levuka-unesco",
+                    "note": "UNESCO body dates removal of capital to Suva in 1882; claim begins after that year without inventing its day.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1883",
+                    "until": "1900"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-fiji-levuka-unesco",
+                "title": "Levuka Historical Port Town — Outstanding Universal Value",
+                "institution": "UNESCO World Heritage Centre",
+                "url": "https://whc.unesco.org/en/list/1399/",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read full Outstanding Universal Value body: colonial capital at Levuka following 1874 cession and removal to Suva in 1882. Colonial descriptions are not evidence of consensual indigenous sovereignty."
+              }
+            ],
+            "absenceOfEvidence": [
+              "1882 capital transfer retains a gap because a precise transfer date is not established.",
+              "Governor chronology and currency were not sufficiently researched; existing colonial institutions remain sourced and unchanged."
+            ],
+            "reviewNotes": [
+              "Independent body evidence reviewed. Package uses original assigned context; coordinator must revalidate against current production before integration."
+            ]
+          },
+          "packageHash": "e635d2bca53caf53db2df57528da681ee9eca2242b8ffa352afc5450252156c4",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:58:22.526Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "8ecace2c5f8f3cc7c57f584772c4b50aec501075e8248e5c62291edf5ab659d8"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-c01fece893a33f4e15995336",
+        "packageHash": "8ecace2c5f8f3cc7c57f584772c4b50aec501075e8248e5c62291edf5ab659d8",
+        "productionFingerprint": "825180ebb8fadea0bc9cd7c6bcd0071b539f64e0f9cf0729993d0ac326aa46a7",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read UNESCO OutstandingUniversalValue historicalbody: Levuka colonialcapital after1874cession, transferSuva1882. Conservative1878–1881/1883–1900 omit1882andretainyearprecision. Capital administration doesnotprove indigenousconsensus/sovereignty. No existingcapitaloverlaps/sourceURLduplicate. Source URL reuse audit: [] Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:58:22.987Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-c01fece893a33f4e15995336",
+        "packageHash": "8ecace2c5f8f3cc7c57f584772c4b50aec501075e8248e5c62291edf5ab659d8",
+        "beforeFingerprint": "825180ebb8fadea0bc9cd7c6bcd0071b539f64e0f9cf0729993d0ac326aa46a7",
+        "afterFingerprint": "92e47ee1be8454610dbcd1f0676abfa4344a540b3be048ebebb9d434f8ee329c",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "new-zealand-preadoption-dominion-core",
@@ -9940,7 +10239,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 99,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "92e47ee1be8454610dbcd1f0676abfa4344a540b3be048ebebb9d434f8ee329c",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -9956,9 +10255,328 @@
       },
       "scopeId": "scope-5f7afaa06d73ec541b47b284",
       "id": "c01-4e407087e1e1f404faaa0003",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:58:27.360Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:58:27.564Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:58:27.766Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:58:27.801Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:58:27.945Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read revised NZHistory Capital 150 full body: Wellington became permanent capital in 1865, central government seat ever since, Parliament remained at same city site; explicitly contextualized 1907 Dominion and 1914/1938 events corroborate continuity. Independently read Massey official biography tenure table: 10 July 1912–10 May 1925; bounded formal premiership starts assigned 1914 and exact death endpoint exclusive. No claim of sole executive activity during absences; existing institutions preserved. Later leadership and currency remain explicit gaps. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:58:31.968Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T19:58:27.360Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-4e407087e1e1f404faaa0003",
+        "jobId": "c01-4e407087e1e1f404faaa0003",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "92e47ee1be8454610dbcd1f0676abfa4344a540b3be048ebebb9d434f8ee329c",
+        "entityId": "new-zealand-preadoption-dominion-core",
+        "mapIds": [
+          "entity-new-zealand"
+        ],
+        "period": {
+          "from": "1914",
+          "until": "1946"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-nz-wellington-capital",
+            "category": "capital",
+            "value": "Wellington",
+            "temporal": {
+              "kind": "interval",
+              "from": "1914",
+              "until": "1946"
+            },
+            "entityId": "new-zealand-preadoption-dominion-core",
+            "geographicScope": {
+              "description": "New Zealand — Dominion parliamentary framework; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-nz-wellington-history"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-nz-wellington-history",
+                "note": "Official historical body identifies Wellington as central-government seat ever since 1865. Bounded Dominion interval 1914–1946 does not back-project later constitutional independence.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1914",
+                "until": "1946"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-nz-massey-pm",
+            "category": "leadership",
+            "value": "William Ferguson Massey",
+            "temporal": {
+              "kind": "interval",
+              "from": "1914",
+              "until": "1925-05-10"
+            },
+            "entityId": "new-zealand-preadoption-dominion-core",
+            "geographicScope": {
+              "description": "New Zealand — Dominion parliamentary framework; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-nz-massey-tenure"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-nz-massey-tenure",
+                "note": "Official tenure table dates Massey prime minister 10 July 1912–10 May 1925. Claim begins at assigned 1914 boundary and ends at death; office tenure does not imply sole or continuously present executive authority.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1914",
+                "until": "1925-05-10"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Prime Minister"
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-nz-wellington-history",
+            "title": "Capital150 — Introduction and Becoming the capital",
+            "institution": "Manatū Taonga — Ministry for Culture and Heritage, NZHistory",
+            "url": "https://nzhistory.govt.nz/page/capital-150-0",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read full article by Neill Atkinson: explicitly ever since1865 Wellington seat of central government, historical relocation narrative and1907/1914/1938institutional events. Article supports bounded1914–1946capital; replaces intermittently inaccessible keyword index with the underlying historical article."
+          },
+          {
+            "id": "c01-nz-massey-tenure",
+            "title": "William Massey — prime minister tenure",
+            "institution": "Manatū Taonga — Ministry for Culture and Heritage, NZHistory",
+            "url": "https://nzhistory.govt.nz/keyword/william-massey",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read body and tenure table: prime minister 10 July 1912–10 May 1925. Formal tenure does not claim uninterrupted physical presence or exclude acting ministers during absences."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Later prime ministers and currency remain gaps; existing Dominion institutions preserved."
+        ],
+        "reviewNotes": [
+          "Independent body evidence reviewed. Package uses original assigned context; coordinator must revalidate against current production before integration."
+        ]
+      },
+      "packageHash": "b587954f153a9d15c570f52eac7b8435a2330c19d887ca37766de118f38e677d",
+      "submittedAt": "2026-10-01T19:58:27.564Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-4e407087e1e1f404faaa0003",
+            "jobId": "c01-4e407087e1e1f404faaa0003",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "new-zealand-preadoption-dominion-core",
+            "mapIds": [
+              "entity-new-zealand"
+            ],
+            "period": {
+              "from": "1914",
+              "until": "1946"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-nz-wellington-capital",
+                "category": "capital",
+                "value": "Wellington",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1914",
+                  "until": "1946"
+                },
+                "entityId": "new-zealand-preadoption-dominion-core",
+                "geographicScope": {
+                  "description": "New Zealand — Dominion parliamentary framework; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-nz-wellington-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-nz-wellington-history",
+                    "note": "Official historical body identifies Wellington as central-government seat ever since 1865. Bounded Dominion interval 1914–1946 does not back-project later constitutional independence.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1914",
+                    "until": "1946"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-nz-massey-pm",
+                "category": "leadership",
+                "value": "William Ferguson Massey",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1914",
+                  "until": "1925-05-10"
+                },
+                "entityId": "new-zealand-preadoption-dominion-core",
+                "geographicScope": {
+                  "description": "New Zealand — Dominion parliamentary framework; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-nz-massey-tenure"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-nz-massey-tenure",
+                    "note": "Official tenure table dates Massey prime minister 10 July 1912–10 May 1925. Claim begins at assigned 1914 boundary and ends at death; office tenure does not imply sole or continuously present executive authority.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1914",
+                    "until": "1925-05-10"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Prime Minister"
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-nz-wellington-history",
+                "title": "Capital150 — Introduction and Becoming the capital",
+                "institution": "Manatū Taonga — Ministry for Culture and Heritage, NZHistory",
+                "url": "https://nzhistory.govt.nz/page/capital-150-0",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read full article by Neill Atkinson: explicitly ever since1865 Wellington seat of central government, historical relocation narrative and1907/1914/1938institutional events. Article supports bounded1914–1946capital; replaces intermittently inaccessible keyword index with the underlying historical article."
+              },
+              {
+                "id": "c01-nz-massey-tenure",
+                "title": "William Massey — prime minister tenure",
+                "institution": "Manatū Taonga — Ministry for Culture and Heritage, NZHistory",
+                "url": "https://nzhistory.govt.nz/keyword/william-massey",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read body and tenure table: prime minister 10 July 1912–10 May 1925. Formal tenure does not claim uninterrupted physical presence or exclude acting ministers during absences."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Later prime ministers and currency remain gaps; existing Dominion institutions preserved."
+            ],
+            "reviewNotes": [
+              "Independent body evidence reviewed. Package uses original assigned context; coordinator must revalidate against current production before integration."
+            ]
+          },
+          "packageHash": "de1ec504ab3820f8a36c909e92fe5129007cfbd96998ee8742adbfe947812c72",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:58:27.766Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Source c01-nz-wellington-history: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "b587954f153a9d15c570f52eac7b8435a2330c19d887ca37766de118f38e677d"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-4e407087e1e1f404faaa0003",
+        "packageHash": "b587954f153a9d15c570f52eac7b8435a2330c19d887ca37766de118f38e677d",
+        "productionFingerprint": "92e47ee1be8454610dbcd1f0676abfa4344a540b3be048ebebb9d434f8ee329c",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read revised NZHistory Capital 150 full body: Wellington became permanent capital in 1865, central government seat ever since, Parliament remained at same city site; explicitly contextualized 1907 Dominion and 1914/1938 events corroborate continuity. Independently read Massey official biography tenure table: 10 July 1912–10 May 1925; bounded formal premiership starts assigned 1914 and exact death endpoint exclusive. No claim of sole executive activity during absences; existing institutions preserved. Later leadership and currency remain explicit gaps. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Source c01-nz-wellington-history: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:58:27.945Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-4e407087e1e1f404faaa0003",
+        "packageHash": "b587954f153a9d15c570f52eac7b8435a2330c19d887ca37766de118f38e677d",
+        "beforeFingerprint": "92e47ee1be8454610dbcd1f0676abfa4344a540b3be048ebebb9d434f8ee329c",
+        "afterFingerprint": "dcf3b9ff1904134cf850f4c7bb45886aa35fa3aee1dcb51101f94be556196b9d",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "taiwan-japanese-administration",
@@ -10042,7 +10660,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 93,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "dcf3b9ff1904134cf850f4c7bb45886aa35fa3aee1dcb51101f94be556196b9d",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -10058,9 +10676,326 @@
       },
       "scopeId": "scope-7e1e33000dc3cee01ef7d734",
       "id": "c01-914808469bf7be4bf86d92c1",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:58:32.089Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:58:32.301Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:58:32.476Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:58:32.543Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:58:32.718Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read PresidentialOfficebuildinghistory andNCLChineseKodamabiography. Government seatTaipei14June1895,1905fire/1919buildingmovedidnotchangecity;officeactivitiescontinue1936. NCLexplicitlygovernor1898–11April1906 andmostlyabroadafter1900;formalGovernor-Generalonlynotexclusivepersonalexecutiveauthority. Bounded1900–1930seat,1900–1906office;latergovernors/moneyomitted. Source URL reuse audit: [] Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:58:36.015Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T19:58:32.089Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-914808469bf7be4bf86d92c1",
+        "jobId": "c01-914808469bf7be4bf86d92c1",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "dcf3b9ff1904134cf850f4c7bb45886aa35fa3aee1dcb51101f94be556196b9d",
+        "entityId": "taiwan-japanese-administration",
+        "mapIds": [
+          "entity-taiwan"
+        ],
+        "period": {
+          "from": "1900",
+          "until": "1930"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-taiwan-taipei-seat",
+            "category": "capital",
+            "value": "Taipei (colonial administrative seat)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900",
+              "until": "1930"
+            },
+            "entityId": "taiwan-japanese-administration",
+            "geographicScope": {
+              "description": "Taiwan under Japanese colonial administration; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-taiwan-governor-seat"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-taiwan-governor-seat",
+                "note": "Official building history locates government seat in Taipei from 1895 and narrates old/new office continuity through 1936; 1905 fire and 1919 building move did not change city. Claim bounded to 1900–1930.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1900",
+                "until": "1930"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-taiwan-kodama-governor",
+            "category": "leadership",
+            "value": "Kodama Gentarō",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900",
+              "until": "1906-04-11"
+            },
+            "entityId": "taiwan-japanese-administration",
+            "geographicScope": {
+              "description": "Taiwan under Japanese colonial administration; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-taiwan-kodama-ncl"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-taiwan-kodama-ncl",
+                "note": "NCL Chinese body dates governor tenure from 1898 through 11 April 1906. Claim clipped to 1900; colonial office is not an independent Taiwanese national head of state.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1900",
+                "until": "1906-04-11"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Governor-General"
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-taiwan-governor-seat",
+            "title": "History of the Presidential Office Building",
+            "institution": "Office of the President, Republic of China (Taiwan)",
+            "url": "https://english.president.gov.tw/Page/45",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read historical body: governor-general moved government seat to Taipei 14 June 1895; old office fire 1905; new Taipei building completed and offices moved 1919; continued governor office activities 1936. Building change is not capital-city change."
+          },
+          {
+            "id": "c01-taiwan-kodama-ncl",
+            "title": "Kodama Gentarō — historical biographical entry",
+            "institution": "National Central Library, Taiwan Memory",
+            "url": "https://tm.ncl.edu.tw/article?lang=chn&u=016_002_0000293684",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read full Chinese descriptive body: Taiwan governor tenure begins February 1898 and ends 11 April 1906. Biographical dates outside the office claim are not copied or used; no portrait reproduced."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Later governor chronology and colonial currency remain gaps. The accepted Stage 1 Nakagawa package was not duplicated or retrospectively integrated."
+        ],
+        "reviewNotes": [
+          "Independent body evidence reviewed. Package uses original assigned context; coordinator must revalidate against current production before integration."
+        ]
+      },
+      "packageHash": "8092be27649388d9ec2159dd3cd2a0601450c05d5422c428ec260848a07850bf",
+      "submittedAt": "2026-10-01T19:58:32.301Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-914808469bf7be4bf86d92c1",
+            "jobId": "c01-914808469bf7be4bf86d92c1",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "taiwan-japanese-administration",
+            "mapIds": [
+              "entity-taiwan"
+            ],
+            "period": {
+              "from": "1900",
+              "until": "1930"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-taiwan-taipei-seat",
+                "category": "capital",
+                "value": "Taipei (colonial administrative seat)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1900",
+                  "until": "1930"
+                },
+                "entityId": "taiwan-japanese-administration",
+                "geographicScope": {
+                  "description": "Taiwan under Japanese colonial administration; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-taiwan-governor-seat"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-taiwan-governor-seat",
+                    "note": "Official building history locates government seat in Taipei from 1895 and narrates old/new office continuity through 1936; 1905 fire and 1919 building move did not change city. Claim bounded to 1900–1930.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1900",
+                    "until": "1930"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-taiwan-kodama-governor",
+                "category": "leadership",
+                "value": "Kodama Gentarō",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1900",
+                  "until": "1906-04-11"
+                },
+                "entityId": "taiwan-japanese-administration",
+                "geographicScope": {
+                  "description": "Taiwan under Japanese colonial administration; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-taiwan-kodama-ncl"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-taiwan-kodama-ncl",
+                    "note": "NCL Chinese body dates governor tenure from 1898 through 11 April 1906. Claim clipped to 1900; colonial office is not an independent Taiwanese national head of state.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1900",
+                    "until": "1906-04-11"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Governor-General"
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-taiwan-governor-seat",
+                "title": "History of the Presidential Office Building",
+                "institution": "Office of the President, Republic of China (Taiwan)",
+                "url": "https://english.president.gov.tw/Page/45",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read historical body: governor-general moved government seat to Taipei 14 June 1895; old office fire 1905; new Taipei building completed and offices moved 1919; continued governor office activities 1936. Building change is not capital-city change."
+              },
+              {
+                "id": "c01-taiwan-kodama-ncl",
+                "title": "Kodama Gentarō — historical biographical entry",
+                "institution": "National Central Library, Taiwan Memory",
+                "url": "https://tm.ncl.edu.tw/article?lang=chn&u=016_002_0000293684",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read full Chinese descriptive body: Taiwan governor tenure begins February 1898 and ends 11 April 1906. Biographical dates outside the office claim are not copied or used; no portrait reproduced."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Later governor chronology and colonial currency remain gaps. The accepted Stage 1 Nakagawa package was not duplicated or retrospectively integrated."
+            ],
+            "reviewNotes": [
+              "Independent body evidence reviewed. Package uses original assigned context; coordinator must revalidate against current production before integration."
+            ]
+          },
+          "packageHash": "efb4f2d5077f3ba2709c2380eee18918e42edace781153f640c3e16125010813",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:58:32.476Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "8092be27649388d9ec2159dd3cd2a0601450c05d5422c428ec260848a07850bf"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-914808469bf7be4bf86d92c1",
+        "packageHash": "8092be27649388d9ec2159dd3cd2a0601450c05d5422c428ec260848a07850bf",
+        "productionFingerprint": "dcf3b9ff1904134cf850f4c7bb45886aa35fa3aee1dcb51101f94be556196b9d",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read PresidentialOfficebuildinghistory andNCLChineseKodamabiography. Government seatTaipei14June1895,1905fire/1919buildingmovedidnotchangecity;officeactivitiescontinue1936. NCLexplicitlygovernor1898–11April1906 andmostlyabroadafter1900;formalGovernor-Generalonlynotexclusivepersonalexecutiveauthority. Bounded1900–1930seat,1900–1906office;latergovernors/moneyomitted. Source URL reuse audit: [] Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:58:32.718Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-914808469bf7be4bf86d92c1",
+        "packageHash": "8092be27649388d9ec2159dd3cd2a0601450c05d5422c428ec260848a07850bf",
+        "beforeFingerprint": "dcf3b9ff1904134cf850f4c7bb45886aa35fa3aee1dcb51101f94be556196b9d",
+        "afterFingerprint": "daf4c28c77dd4275705c75369c3bde4cd9d85ba617306e54e61299aba6d82c5c",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "british-raj",
@@ -10242,7 +11177,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 156,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "daf4c28c77dd4275705c75369c3bde4cd9d85ba617306e54e61299aba6d82c5c",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -10258,9 +11193,304 @@
       },
       "scopeId": "scope-9228420945124d4b8c4897a7",
       "id": "c01-5d876ff18ab3793109c1b93f",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:58:36.360Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:58:37.014Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:58:37.802Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:58:38.295Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:58:38.699Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read revised source bodies: Kolkata municipal history states capital elevation in 1773 with subsequent nineteenth-century administrative chronology; municipal statistics introduction explicitly identifies British Raj capital lasting until 1911. Read NDMC transition history previously: decision moved capital from Calcutta to Delhi in 1911. Joint evidence now supports bounded 1859–1910 Calcutta central seat; original NDMC single-event extrapolation concern resolved through additional historical bodies. Seasonal Simla seat and geographic-control limitations retained; no modern urban statistics imported. Existing capital gaps only, no catalogue URL duplication. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:58:41.506Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T19:58:36.360Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-5d876ff18ab3793109c1b93f",
+        "jobId": "c01-5d876ff18ab3793109c1b93f",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "daf4c28c77dd4275705c75369c3bde4cd9d85ba617306e54e61299aba6d82c5c",
+        "entityId": "british-raj",
+        "mapIds": [
+          "entity-british-raj"
+        ],
+        "period": {
+          "from": "1859",
+          "until": "1910"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-raj-calcutta-capital",
+            "category": "capital",
+            "value": "Calcutta (central colonial administrative capital)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1859",
+              "until": "1910"
+            },
+            "entityId": "british-raj",
+            "geographicScope": {
+              "description": "British Raj; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "raj-capital",
+              "c01-raj-kmc-capital-history",
+              "c01-raj-kmc-capital-end"
+            ],
+            "evidence": [
+              {
+                "sourceId": "raj-capital",
+                "note": "Joint chronological evidence: KMC municipal history establishes capital status1773 before assigned1859start; KMC historical introduction explicitly says British Raj capital until1911; NDMC describes1911transfer. Together support bounded1859–1910; NDMC alone is not proof of1859start. No modern statistics, foundation-date precision or uniform direct administration claim.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1859",
+                "until": "1910"
+              },
+              {
+                "sourceId": "c01-raj-kmc-capital-history",
+                "note": "Joint chronological evidence: KMC municipal history establishes capital status1773 before assigned1859start; KMC historical introduction explicitly says British Raj capital until1911; NDMC describes1911transfer. Together support bounded1859–1910; NDMC alone is not proof of1859start. No modern statistics, foundation-date precision or uniform direct administration claim.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1859",
+                "until": "1910"
+              },
+              {
+                "sourceId": "c01-raj-kmc-capital-end",
+                "note": "Joint chronological evidence: KMC municipal history establishes capital status1773 before assigned1859start; KMC historical introduction explicitly says British Raj capital until1911; NDMC describes1911transfer. Together support bounded1859–1910; NDMC alone is not proof of1859start. No modern statistics, foundation-date precision or uniform direct administration claim.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1859",
+                "until": "1910"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-raj-kmc-capital-history",
+            "title": "About Kolkata — municipal history",
+            "institution": "Kolkata Municipal Corporation",
+            "url": "https://www.kmcgov.in/KMCPortal/jsp/KMCAboutKolkataHome.jsp",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read municipal historical body: capital elevation1773 and nineteenth-century administrative chronology; combined with municipal1911endstatement, not a new foundation-date claim."
+          },
+          {
+            "id": "c01-raj-kmc-capital-end",
+            "title": "Basic Statistics of Kolkata — historical capital introduction",
+            "institution": "Kolkata Municipal Corporation",
+            "url": "https://www.kmcgov.in/KMCPortal/jsp/KolkataStatistics.jsp",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read introductory historical statement identifying Calcutta as British Raj capital until1911. Modern2001statistics excluded."
+          }
+        ],
+        "absenceOfEvidence": [
+          "The complete viceroy chronology and pre-1935 currency validity need dedicated evidence; existing later-year facts are preserved."
+        ],
+        "reviewNotes": [
+          "Independent body evidence reviewed. Package uses original assigned context; coordinator must revalidate against current production before integration.",
+          "Repaired after review using two independently read municipal capital-history bodies; original package archived in preliminary/revisions."
+        ]
+      },
+      "packageHash": "95f8a2d57b5a4510efe2250290316d883357e9150a0644b0919ceb2caa86f1a7",
+      "submittedAt": "2026-10-01T19:58:37.014Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-5d876ff18ab3793109c1b93f",
+            "jobId": "c01-5d876ff18ab3793109c1b93f",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "british-raj",
+            "mapIds": [
+              "entity-british-raj"
+            ],
+            "period": {
+              "from": "1859",
+              "until": "1910"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-raj-calcutta-capital",
+                "category": "capital",
+                "value": "Calcutta (central colonial administrative capital)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1859",
+                  "until": "1910"
+                },
+                "entityId": "british-raj",
+                "geographicScope": {
+                  "description": "British Raj; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "raj-capital",
+                  "c01-raj-kmc-capital-history",
+                  "c01-raj-kmc-capital-end"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "raj-capital",
+                    "note": "Joint chronological evidence: KMC municipal history establishes capital status1773 before assigned1859start; KMC historical introduction explicitly says British Raj capital until1911; NDMC describes1911transfer. Together support bounded1859–1910; NDMC alone is not proof of1859start. No modern statistics, foundation-date precision or uniform direct administration claim.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1859",
+                    "until": "1910"
+                  },
+                  {
+                    "sourceId": "c01-raj-kmc-capital-history",
+                    "note": "Joint chronological evidence: KMC municipal history establishes capital status1773 before assigned1859start; KMC historical introduction explicitly says British Raj capital until1911; NDMC describes1911transfer. Together support bounded1859–1910; NDMC alone is not proof of1859start. No modern statistics, foundation-date precision or uniform direct administration claim.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1859",
+                    "until": "1910"
+                  },
+                  {
+                    "sourceId": "c01-raj-kmc-capital-end",
+                    "note": "Joint chronological evidence: KMC municipal history establishes capital status1773 before assigned1859start; KMC historical introduction explicitly says British Raj capital until1911; NDMC describes1911transfer. Together support bounded1859–1910; NDMC alone is not proof of1859start. No modern statistics, foundation-date precision or uniform direct administration claim.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1859",
+                    "until": "1910"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-raj-kmc-capital-history",
+                "title": "About Kolkata — municipal history",
+                "institution": "Kolkata Municipal Corporation",
+                "url": "https://www.kmcgov.in/KMCPortal/jsp/KMCAboutKolkataHome.jsp",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read municipal historical body: capital elevation1773 and nineteenth-century administrative chronology; combined with municipal1911endstatement, not a new foundation-date claim."
+              },
+              {
+                "id": "c01-raj-kmc-capital-end",
+                "title": "Basic Statistics of Kolkata — historical capital introduction",
+                "institution": "Kolkata Municipal Corporation",
+                "url": "https://www.kmcgov.in/KMCPortal/jsp/KolkataStatistics.jsp",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read introductory historical statement identifying Calcutta as British Raj capital until1911. Modern2001statistics excluded."
+              }
+            ],
+            "absenceOfEvidence": [
+              "The complete viceroy chronology and pre-1935 currency validity need dedicated evidence; existing later-year facts are preserved."
+            ],
+            "reviewNotes": [
+              "Independent body evidence reviewed. Package uses original assigned context; coordinator must revalidate against current production before integration.",
+              "Repaired after review using two independently read municipal capital-history bodies; original package archived in preliminary/revisions."
+            ]
+          },
+          "packageHash": "08155da4d1061e93272cb10ae27ef6e518c29fd17fe63e7e1af91da305ccb123",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:58:37.802Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Source c01-raj-kmc-capital-end: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "95f8a2d57b5a4510efe2250290316d883357e9150a0644b0919ceb2caa86f1a7"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-5d876ff18ab3793109c1b93f",
+        "packageHash": "95f8a2d57b5a4510efe2250290316d883357e9150a0644b0919ceb2caa86f1a7",
+        "productionFingerprint": "daf4c28c77dd4275705c75369c3bde4cd9d85ba617306e54e61299aba6d82c5c",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read revised source bodies: Kolkata municipal history states capital elevation in 1773 with subsequent nineteenth-century administrative chronology; municipal statistics introduction explicitly identifies British Raj capital lasting until 1911. Read NDMC transition history previously: decision moved capital from Calcutta to Delhi in 1911. Joint evidence now supports bounded 1859–1910 Calcutta central seat; original NDMC single-event extrapolation concern resolved through additional historical bodies. Seasonal Simla seat and geographic-control limitations retained; no modern urban statistics imported. Existing capital gaps only, no catalogue URL duplication. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Source c01-raj-kmc-capital-end: confirm full body reading and claim support",
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:58:38.699Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-5d876ff18ab3793109c1b93f",
+        "packageHash": "95f8a2d57b5a4510efe2250290316d883357e9150a0644b0919ceb2caa86f1a7",
+        "beforeFingerprint": "daf4c28c77dd4275705c75369c3bde4cd9d85ba617306e54e61299aba6d82c5c",
+        "afterFingerprint": "0441d82cf566e076d46fad12274a8b48cc82193ae892dff568533d85fd770bde",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "finland-grand-duchy",
@@ -10371,7 +11601,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 153,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "0441d82cf566e076d46fad12274a8b48cc82193ae892dff568533d85fd770bde",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -10387,9 +11617,246 @@
       },
       "scopeId": "scope-2d240188239573fa7250b88e",
       "id": "c01-23dc2f35a25e4a5c55811017",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:58:41.793Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:58:41.958Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:58:42.096Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:58:42.137Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:58:42.233Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read BankofFinlandspeechFinnishcurrencyarrangementssection611–619:Russianroubles andSwedishriksdalers inearlydecadesafter1809,roubledominatedbeforeCrimeanWarandmarkka1860. Interior1820–1859circulationnotexclusivelegalcurrency,nostandardinterpolation. Existingmarkka/Helsinkirecordspreserved. Source URL reuse audit: [] Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T19:58:44.093Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T19:58:41.793Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-23dc2f35a25e4a5c55811017",
+        "jobId": "c01-23dc2f35a25e4a5c55811017",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "0441d82cf566e076d46fad12274a8b48cc82193ae892dff568533d85fd770bde",
+        "entityId": "finland-grand-duchy",
+        "mapIds": [
+          "entity-finland"
+        ],
+        "period": {
+          "from": "1820",
+          "until": "1890"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-finland-rouble-currency",
+            "category": "currency",
+            "value": "Russian rouble (not necessarily the only circulating currency)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1820",
+              "until": "1859"
+            },
+            "entityId": "finland-grand-duchy",
+            "geographicScope": {
+              "description": "Grand Duchy of Finland; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-finland-rouble-history"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-finland-rouble-history",
+                "note": "Bank of Finland body identifies Russian roubles in circulation after 1809, initially with Swedish riksdalers, before the 1860 markka. The assigned 1820–1859 claim is about rouble circulation, not exclusive legal tender or a single monetary standard.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1820",
+                "until": "1859"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-finland-rouble-history",
+            "title": "Money and the Monetary System — Case Finland, 1811–2030",
+            "institution": "Bank of Finland",
+            "url": "https://www.suomenpankki.fi/fi/ajankohtaista/puheet-ja-haastattelut/2025/money-and-the-monetary-system--case-finland-18112030/",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read historical currency-arrangement section: roubles and Swedish riksdalers circulated in first decades after 1809; rouble dominance later and instability 1853–1856; markka introduced 1860. Does not assert exclusive currency."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Helsinki and markka already have sourced coverage and are not duplicated. Imperial leadership chronology was not sufficiently established for acceptance."
+        ],
+        "reviewNotes": [
+          "Independent body evidence reviewed. Package uses original assigned context; coordinator must revalidate against current production before integration."
+        ]
+      },
+      "packageHash": "692a59d4a3fca9968f793fa0cbaa3cae749fb2fd6c93481a6e446fc592acd3b7",
+      "submittedAt": "2026-10-01T19:58:41.958Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-23dc2f35a25e4a5c55811017",
+            "jobId": "c01-23dc2f35a25e4a5c55811017",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "finland-grand-duchy",
+            "mapIds": [
+              "entity-finland"
+            ],
+            "period": {
+              "from": "1820",
+              "until": "1890"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-finland-rouble-currency",
+                "category": "currency",
+                "value": "Russian rouble (not necessarily the only circulating currency)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1820",
+                  "until": "1859"
+                },
+                "entityId": "finland-grand-duchy",
+                "geographicScope": {
+                  "description": "Grand Duchy of Finland; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-finland-rouble-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-finland-rouble-history",
+                    "note": "Bank of Finland body identifies Russian roubles in circulation after 1809, initially with Swedish riksdalers, before the 1860 markka. The assigned 1820–1859 claim is about rouble circulation, not exclusive legal tender or a single monetary standard.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1820",
+                    "until": "1859"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-finland-rouble-history",
+                "title": "Money and the Monetary System — Case Finland, 1811–2030",
+                "institution": "Bank of Finland",
+                "url": "https://www.suomenpankki.fi/fi/ajankohtaista/puheet-ja-haastattelut/2025/money-and-the-monetary-system--case-finland-18112030/",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read historical currency-arrangement section: roubles and Swedish riksdalers circulated in first decades after 1809; rouble dominance later and instability 1853–1856; markka introduced 1860. Does not assert exclusive currency."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Helsinki and markka already have sourced coverage and are not duplicated. Imperial leadership chronology was not sufficiently established for acceptance."
+            ],
+            "reviewNotes": [
+              "Independent body evidence reviewed. Package uses original assigned context; coordinator must revalidate against current production before integration."
+            ]
+          },
+          "packageHash": "773381d6eec27658c789a934497833caac1c82dd7e3d2b7e846df46e2692e855",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:58:42.096Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "692a59d4a3fca9968f793fa0cbaa3cae749fb2fd6c93481a6e446fc592acd3b7"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-23dc2f35a25e4a5c55811017",
+        "packageHash": "692a59d4a3fca9968f793fa0cbaa3cae749fb2fd6c93481a6e446fc592acd3b7",
+        "productionFingerprint": "0441d82cf566e076d46fad12274a8b48cc82193ae892dff568533d85fd770bde",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read BankofFinlandspeechFinnishcurrencyarrangementssection611–619:Russianroubles andSwedishriksdalers inearlydecadesafter1809,roubledominatedbeforeCrimeanWarandmarkka1860. Interior1820–1859circulationnotexclusivelegalcurrency,nostandardinterpolation. Existingmarkka/Helsinkirecordspreserved. Source URL reuse audit: [] Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:58:42.233Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-23dc2f35a25e4a5c55811017",
+        "packageHash": "692a59d4a3fca9968f793fa0cbaa3cae749fb2fd6c93481a6e446fc592acd3b7",
+        "beforeFingerprint": "0441d82cf566e076d46fad12274a8b48cc82193ae892dff568533d85fd770bde",
+        "afterFingerprint": "cd61de0677f26e433e1a661423bfd292de603eac194c9c80315629e87af3a862",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "austria-first-republic-framework",
@@ -10499,7 +11966,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 43,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "cd61de0677f26e433e1a661423bfd292de603eac194c9c80315629e87af3a862",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -10515,9 +11982,452 @@
       },
       "scopeId": "scope-5ab98420708b9aa9dc816e6a",
       "id": "c01-483121e436d21666af58db07",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T19:58:44.174Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T19:58:44.221Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T19:58:44.309Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T19:58:44.353Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T19:58:44.389Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read Presidential Chancellery introductory First Republic paragraphs: Seitz head of state through 9 December 1920; Hainisch two consecutive terms 9 December 1920 to 10 December 1928; Miklas from 10 December 1928 through March 1938. Head-of-state and federal-president roles remain distinct; package clipped at 1932 excludes later authoritarian framework. Independently retrieved full current OeNB history via direct HTTP after web-tool failures: Schilling Conversion Act 20 December 1924 provided introduction 1 January 1925; schilling replaced crown and remained currency to 1938. Conservative 1926 start excludes January/March 1925 commencement ambiguity; no stability or economic statistic imported. No existing overlapping leadership or currency facts. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T20:00:14.820Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T19:58:44.174Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-483121e436d21666af58db07",
+        "jobId": "c01-483121e436d21666af58db07",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "cd61de0677f26e433e1a661423bfd292de603eac194c9c80315629e87af3a862",
+        "entityId": "austria-first-republic-framework",
+        "mapIds": [
+          "entity-austria"
+        ],
+        "period": {
+          "from": "1919",
+          "until": "1932"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-austria-seitz-head",
+            "category": "leadership",
+            "value": "Karl Seitz",
+            "temporal": {
+              "kind": "interval",
+              "from": "1919",
+              "until": "1920-12-09"
+            },
+            "entityId": "austria-first-republic-framework",
+            "geographicScope": {
+              "description": "Austria — First Republic; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-austria-presidents-history"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-austria-presidents-history",
+                "note": "Presidential Chancellery describes Seitz as head of state through 9 December 1920; he is not called federal president. Claim begins in assigned 1919.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1919",
+                "until": "1920-12-09"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Head of state"
+          },
+          {
+            "id": "c01-austria-hainisch-president",
+            "category": "leadership",
+            "value": "Michael Hainisch",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-12-09",
+              "until": "1928-12-10"
+            },
+            "entityId": "austria-first-republic-framework",
+            "geographicScope": {
+              "description": "Austria — First Republic; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-austria-presidents-history"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-austria-presidents-history",
+                "note": "Official body gives two successive presidential terms from 9 December 1920 through 10 December 1928.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1920-12-09",
+                "until": "1928-12-10"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Federal President"
+          },
+          {
+            "id": "c01-austria-miklas-president",
+            "category": "leadership",
+            "value": "Wilhelm Miklas",
+            "temporal": {
+              "kind": "interval",
+              "from": "1928-12-10",
+              "until": "1932"
+            },
+            "entityId": "austria-first-republic-framework",
+            "geographicScope": {
+              "description": "Austria — First Republic; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-austria-presidents-history"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-austria-presidents-history",
+                "note": "Official body dates Miklas presidency from 10 December 1928 to March 1938; claim stops at assigned 1932 bound and does not merge later authoritarian framework.",
+                "supportedPrecision": "day",
+                "supportsClaim": true,
+                "from": "1928-12-10",
+                "until": "1932"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "Federal President"
+          },
+          {
+            "id": "c01-austria-schilling-currency",
+            "category": "currency",
+            "value": "Austrian schilling",
+            "temporal": {
+              "kind": "interval",
+              "from": "1926",
+              "until": "1932"
+            },
+            "entityId": "austria-first-republic-framework",
+            "geographicScope": {
+              "description": "Austria — First Republic; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-austria-oenb-schilling-history"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-austria-oenb-schilling-history",
+                "note": "OeNB body states schilling replaced crown in 1925 and remained currency through 1938. Claim begins in 1926 to exclude conflicting January/March 1925 legal/operational commencement accounts.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1926",
+                "until": "1932"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-austria-presidents-history",
+            "title": "Kennen Sie die bisherigen Amtsinhaber? — First Republic",
+            "institution": "Austrian Presidential Chancellery",
+            "url": "https://www.bundespraesident.at/aktuelles/detail/bisherige-amtsinhaber",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read First Republic body: Seitz head of state through 9 December 1920; Hainisch president 9 December 1920–10 December 1928; Miklas 10 December 1928–13 March 1938. Different institutional titles preserved."
+          },
+          {
+            "id": "c01-austria-oenb-schilling-history",
+            "title": "OeNB history — First Republic currency and crisis management",
+            "institution": "Oesterreichische Nationalbank",
+            "url": "https://www.oenb.at/en/die-oenb/geschichte-der-oenb/unternehmensgeschichte.html",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read currency reform and crisis-management body: schilling replaced crown in 1925 and remained stable up to 1938. Conflicting official January/March 1925 commencement dates omitted by starting safely in 1926."
+          }
+        ],
+        "absenceOfEvidence": [
+          "1925 currency commencement details require review: official OeNB history says January; anniversary releases say March. No precise contested transition claim integrated.",
+          "Capital interval not researched adequately; existing constitutional facts are preserved."
+        ],
+        "reviewNotes": [
+          "Independent body evidence reviewed. Package uses original assigned context; coordinator must revalidate against current production before integration."
+        ]
+      },
+      "packageHash": "8934857d7f03c2436391f01c9147c614e8749731d486f4ad4df181536d4f0bec",
+      "submittedAt": "2026-10-01T19:58:44.221Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-483121e436d21666af58db07",
+            "jobId": "c01-483121e436d21666af58db07",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "austria-first-republic-framework",
+            "mapIds": [
+              "entity-austria"
+            ],
+            "period": {
+              "from": "1919",
+              "until": "1932"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-austria-seitz-head",
+                "category": "leadership",
+                "value": "Karl Seitz",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1919",
+                  "until": "1920-12-09"
+                },
+                "entityId": "austria-first-republic-framework",
+                "geographicScope": {
+                  "description": "Austria — First Republic; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-austria-presidents-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-austria-presidents-history",
+                    "note": "Presidential Chancellery describes Seitz as head of state through 9 December 1920; he is not called federal president. Claim begins in assigned 1919.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1919",
+                    "until": "1920-12-09"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Head of state"
+              },
+              {
+                "id": "c01-austria-hainisch-president",
+                "category": "leadership",
+                "value": "Michael Hainisch",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1920-12-09",
+                  "until": "1928-12-10"
+                },
+                "entityId": "austria-first-republic-framework",
+                "geographicScope": {
+                  "description": "Austria — First Republic; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-austria-presidents-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-austria-presidents-history",
+                    "note": "Official body gives two successive presidential terms from 9 December 1920 through 10 December 1928.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1920-12-09",
+                    "until": "1928-12-10"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Federal President"
+              },
+              {
+                "id": "c01-austria-miklas-president",
+                "category": "leadership",
+                "value": "Wilhelm Miklas",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1928-12-10",
+                  "until": "1932"
+                },
+                "entityId": "austria-first-republic-framework",
+                "geographicScope": {
+                  "description": "Austria — First Republic; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-austria-presidents-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-austria-presidents-history",
+                    "note": "Official body dates Miklas presidency from 10 December 1928 to March 1938; claim stops at assigned 1932 bound and does not merge later authoritarian framework.",
+                    "supportedPrecision": "day",
+                    "supportsClaim": true,
+                    "from": "1928-12-10",
+                    "until": "1932"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "Federal President"
+              },
+              {
+                "id": "c01-austria-schilling-currency",
+                "category": "currency",
+                "value": "Austrian schilling",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1926",
+                  "until": "1932"
+                },
+                "entityId": "austria-first-republic-framework",
+                "geographicScope": {
+                  "description": "Austria — First Republic; institutional office or administrative seat, not a claim of uniform sovereignty or direct control over all polygon territory.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-austria-oenb-schilling-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-austria-oenb-schilling-history",
+                    "note": "OeNB body states schilling replaced crown in 1925 and remained currency through 1938. Claim begins in 1926 to exclude conflicting January/March 1925 legal/operational commencement accounts.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1926",
+                    "until": "1932"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-austria-presidents-history",
+                "title": "Kennen Sie die bisherigen Amtsinhaber? — First Republic",
+                "institution": "Austrian Presidential Chancellery",
+                "url": "https://www.bundespraesident.at/aktuelles/detail/bisherige-amtsinhaber",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read First Republic body: Seitz head of state through 9 December 1920; Hainisch president 9 December 1920–10 December 1928; Miklas 10 December 1928–13 March 1938. Different institutional titles preserved."
+              },
+              {
+                "id": "c01-austria-oenb-schilling-history",
+                "title": "OeNB history — First Republic currency and crisis management",
+                "institution": "Oesterreichische Nationalbank",
+                "url": "https://www.oenb.at/en/die-oenb/geschichte-der-oenb/unternehmensgeschichte.html",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read currency reform and crisis-management body: schilling replaced crown in 1925 and remained stable up to 1938. Conflicting official January/March 1925 commencement dates omitted by starting safely in 1926."
+              }
+            ],
+            "absenceOfEvidence": [
+              "1925 currency commencement details require review: official OeNB history says January; anniversary releases say March. No precise contested transition claim integrated.",
+              "Capital interval not researched adequately; existing constitutional facts are preserved."
+            ],
+            "reviewNotes": [
+              "Independent body evidence reviewed. Package uses original assigned context; coordinator must revalidate against current production before integration."
+            ]
+          },
+          "packageHash": "346053f92d0c84a7ba2667c52cd9593e98a6cd330e5a061592d1d506f18531e6",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T19:58:44.309Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "8934857d7f03c2436391f01c9147c614e8749731d486f4ad4df181536d4f0bec"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-483121e436d21666af58db07",
+        "packageHash": "8934857d7f03c2436391f01c9147c614e8749731d486f4ad4df181536d4f0bec",
+        "productionFingerprint": "cd61de0677f26e433e1a661423bfd292de603eac194c9c80315629e87af3a862",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read Presidential Chancellery introductory First Republic paragraphs: Seitz head of state through 9 December 1920; Hainisch two consecutive terms 9 December 1920 to 10 December 1928; Miklas from 10 December 1928 through March 1938. Head-of-state and federal-president roles remain distinct; package clipped at 1932 excludes later authoritarian framework. Independently retrieved full current OeNB history via direct HTTP after web-tool failures: Schilling Conversion Act 20 December 1924 provided introduction 1 January 1925; schilling replaced crown and remained currency to 1938. Conservative 1926 start excludes January/March 1925 commencement ambiguity; no stability or economic statistic imported. No existing overlapping leadership or currency facts. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T19:58:44.389Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-483121e436d21666af58db07",
+        "packageHash": "8934857d7f03c2436391f01c9147c614e8749731d486f4ad4df181536d4f0bec",
+        "beforeFingerprint": "cd61de0677f26e433e1a661423bfd292de603eac194c9c80315629e87af3a862",
+        "afterFingerprint": "75d21ef0c450034eff4af5b88b5f67c36d5766e307f0c00e78edf1bac6b86b49",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "germany-federal-1949-framework",

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "issue": "Windows EPERM during atomic target replacement",
+  "queueRetry": "Argentina acceptance retried without changing claims or production",
+  "productionRecovery": {
+    "entityId": "austria-first-republic-framework",
+    "journalRecovery": "Explicit verified rollback before reapply",
+    "beforeFingerprint": "cd61de0677f26e433e1a661423bfd292de603eac194c9c80315629e87af3a862",
+    "completedFingerprint": "75d21ef0c450034eff4af5b88b5f67c36d5766e307f0c00e78edf1bac6b86b49"
+  },
+  "fix": "Bounded same-path atomic rename retries for EPERM/EACCES/EBUSY; no target deletion, no weakened locks/journal/hash guards; unrelated errors fail immediately."
+}
