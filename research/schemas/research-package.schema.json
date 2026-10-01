@@ -252,6 +252,22 @@
               "supportsClaim": {
                 "type": "boolean",
                 "const": true
+              },
+              "observationDate": {
+                "type": "string",
+                "pattern": "^\\d{4}(?:-\\d{2}(?:-\\d{2})?)?$"
+              },
+              "from": {
+                "type": "string",
+                "pattern": "^\\d{4}(?:-\\d{2}(?:-\\d{2})?)?$"
+              },
+              "until": {
+                "type": "string",
+                "pattern": "^\\d{4}(?:-\\d{2}(?:-\\d{2})?)?$"
+              },
+              "roleValidFrom": {
+                "type": "string",
+                "pattern": "^\\d{4}(?:-\\d{2}(?:-\\d{2})?)?$"
               }
             },
             "required": [
@@ -372,6 +388,23 @@
             "contribution"
           ],
           "additionalProperties": false
+        },
+        "riskFlags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "geometry-succession",
+              "subjecto-succession",
+              "modern-nationality",
+              "contested-sovereignty",
+              "scope-mismatch",
+              "source-conflict",
+              "partial-support",
+              "unsupported-precision",
+              "chronology-conflict"
+            ]
+          }
         }
       },
       "required": [
