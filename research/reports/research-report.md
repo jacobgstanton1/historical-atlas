@@ -1,21 +1,21 @@
 # Historical Atlas research gap report
 
-Range: 1800–1960. Production fingerprint: 75d21ef0c450034eff4af5b88b5f67c36d5766e307f0c00e78edf1bac6b86b49.
+Range: 1800–1960. Production fingerprint: 2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7.
 
-Entities scanned: 617; entity/year pairs: 11872; category/year gaps: 102325.
+Entities scanned: 617; entity/year pairs: 11872; category/year gaps: 102256.
 
 Political raw denominator: 401; unresolved classifications: 72; mapping-review identities: 62.
 
 | Category | Gaps | Distinct entities | Distinct raw IDs | Weak evidence gaps |
 | --- | ---: | ---: | ---: | ---: |
 | area-statistics | 11872 | 617 | 376 | 0 |
-| capital | 9083 | 596 | 364 | 0 |
-| currency | 9730 | 608 | 369 | 0 |
+| capital | 9056 | 596 | 364 | 0 |
+| currency | 9692 | 608 | 369 | 0 |
 | economy | 11872 | 617 | 376 | 0 |
 | events-context | 11781 | 617 | 376 | 0 |
 | identity-review | 168 | 0 | 72 | 0 |
 | important-figures | 11872 | 617 | 376 | 0 |
-| leadership | 8923 | 571 | 352 | 0 |
+| leadership | 8919 | 571 | 352 | 0 |
 | mapping-review | 1091 | 243 | 230 | 0 |
 | political-institutional | 2288 | 271 | 196 | 0 |
 | population-statistics | 11857 | 617 | 376 | 0 |
@@ -29,12 +29,12 @@ Resolver availability: 362/401 eligible raw IDs. Political candidates investigat
 | Field category | Eligible entity/years | Supported | Partial | Observed | Missing |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | area-statistics | 11872 | 0 | 0 | 0 | 11872 |
-| capital | 11872 | 2789 | 105 | 0 | 8978 |
-| currency | 11872 | 2142 | 57 | 0 | 9673 |
+| capital | 11872 | 2816 | 109 | 0 | 8947 |
+| currency | 11872 | 2180 | 67 | 0 | 9625 |
 | economy | 11872 | 0 | 0 | 0 | 11872 |
 | events-context | 11872 | 91 | 0 | 0 | 11781 |
 | important-figures | 11872 | 0 | 0 | 0 | 11872 |
-| leadership | 11872 | 2949 | 263 | 0 | 8660 |
+| leadership | 11872 | 2953 | 265 | 0 | 8654 |
 | political-institutional | 11872 | 9584 | 1577 | 0 | 711 |
 | population-statistics | 11872 | 15 | 0 | 15 | 11857 |
 | relationships | 11872 | 460 | 12 | 0 | 11400 |
@@ -45,14 +45,14 @@ Jobs: 30; stale fingerprints: 30.
 - accepted: 0
 - awaiting-review: 0
 - historical-review: 0
-- integrated: 24
-- queued: 6
+- integrated: 30
+- queued: 0
 - rejected: 0
 - researching: 0
 - submitted: 0
 - validation-failed: 0
 
-Submitted research packages: 24; accepted outside production: 0.
+Submitted research packages: 30; accepted outside production: 0.
 
 
 Accepted research is separate from production field coverage.

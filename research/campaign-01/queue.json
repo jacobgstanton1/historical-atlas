@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 153,
+  "revision": 189,
   "concurrency": 3,
   "jobs": [
     {
@@ -12547,7 +12547,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 11,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "75d21ef0c450034eff4af5b88b5f67c36d5766e307f0c00e78edf1bac6b86b49",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -12563,9 +12563,282 @@
       },
       "scopeId": "scope-c8a3f14a81f1d5a17ea324a7",
       "id": "c01-8b604357895906fef3ddba30",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T20:07:54.044Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T20:07:54.112Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T20:07:54.236Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T20:07:54.304Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T20:07:54.391Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read primary Military Government Law 61, article I, specifying Deutsche Mark from 21 June 1948 in enumerated western occupation lands, and federal DM termination law section 1 ending legal-tender status on 31 December 2001. These bracket the bounded 1950–1960 currency interval. This monetary-unit claim does not assert identical circulation in Saar or Berlin. Existing Bonn, Adenauer and constitutional facts remain untouched; no same-URL catalogue duplicates found. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T20:07:56.911Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T20:07:54.044Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-8b604357895906fef3ddba30",
+        "jobId": "c01-8b604357895906fef3ddba30",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "75d21ef0c450034eff4af5b88b5f67c36d5766e307f0c00e78edf1bac6b86b49",
+        "entityId": "germany-federal-1949-framework",
+        "mapIds": [
+          "entity-west-germany"
+        ],
+        "period": {
+          "from": "1950",
+          "until": "1960"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-frg-deutsche-mark",
+            "category": "currency",
+            "value": "Deutsche Mark",
+            "temporal": {
+              "kind": "interval",
+              "from": "1950",
+              "until": "1960"
+            },
+            "entityId": "germany-federal-1949-framework",
+            "geographicScope": {
+              "description": "Federal Republic of Germany; institutional capital/office or currency unit of that administration, not an assertion of uniform sovereignty or control over every mapped polygon.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-germany-dm-currency-law",
+              "c01-germany-dm-termination-law"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-germany-dm-currency-law",
+                "note": "Primary1948law establishesDMlegalunit; federal2001terminationlaw confirmsretainedDMcashstatus. Bounded1950–1960claimdoesnotdateFRGcreationorassertuniformapplicabilitytoSaarorBerlin.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1950",
+                "until": "1960"
+              },
+              {
+                "sourceId": "c01-germany-dm-termination-law",
+                "note": "Primary1948law establishesDMlegalunit; federal2001terminationlaw confirmsretainedDMcashstatus. Bounded1950–1960claimdoesnotdateFRGcreationorassertuniformapplicabilitytoSaarorBerlin.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1950",
+                "until": "1960"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-germany-dm-currency-law",
+            "title": "First Law for Monetary Reform — Military Government Law 61 (20 June 1948)",
+            "institution": "German Historical Institute, German History in Documents and Images; primary Military Government Gazette",
+            "url": "https://germanhistorydocs.org/en/occupation-and-the-emergence-of-two-states-1945-1961/extracts-from-the-british-military-government-law-no-61-first-law-for-monetary-reform-currency-law-june-20-1948",
+            "accessed": "2026-10-01",
+            "kind": "primary-document",
+            "usage": "Read primary document body: Deutsche Mark legal unit from 21 June 1948 in specified western occupation lands; this does not assert sovereignty or later federal borders."
+          },
+          {
+            "id": "c01-germany-dm-termination-law",
+            "title": "DM-Beendigungsgesetz, section 1",
+            "institution": "Federal Ministry of Justice / Federal Office of Justice",
+            "url": "https://www.gesetze-im-internet.de/dmbeendg/BJNR240210999.html",
+            "accessed": "2026-10-01",
+            "kind": "primary-document",
+            "usage": "Read full law body and section 1: federal DM notes and coins lose legal-tender status at end of 31 December 2001. Used together with primary introduction law, not to project modern government into 1950."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Existing Bonn and Adenauer facts preserved. Federal presidency not researched sufficiently for additional claims. Currency scope excludes any inference about changing Saar or Berlin legal arrangements."
+        ],
+        "reviewNotes": [
+          "Full relevant source bodies read. Original context retained; independent coordinator review and current-fingerprint revalidation required."
+        ]
+      },
+      "packageHash": "1f370d7a2cdc975a272a0f0b23d41a8c2a7fe626c2a5f0a8cf6d8cf9a647dae7",
+      "submittedAt": "2026-10-01T20:07:54.112Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-8b604357895906fef3ddba30",
+            "jobId": "c01-8b604357895906fef3ddba30",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "germany-federal-1949-framework",
+            "mapIds": [
+              "entity-west-germany"
+            ],
+            "period": {
+              "from": "1950",
+              "until": "1960"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-frg-deutsche-mark",
+                "category": "currency",
+                "value": "Deutsche Mark",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1950",
+                  "until": "1960"
+                },
+                "entityId": "germany-federal-1949-framework",
+                "geographicScope": {
+                  "description": "Federal Republic of Germany; institutional capital/office or currency unit of that administration, not an assertion of uniform sovereignty or control over every mapped polygon.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-germany-dm-currency-law",
+                  "c01-germany-dm-termination-law"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-germany-dm-currency-law",
+                    "note": "Primary1948law establishesDMlegalunit; federal2001terminationlaw confirmsretainedDMcashstatus. Bounded1950–1960claimdoesnotdateFRGcreationorassertuniformapplicabilitytoSaarorBerlin.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1950",
+                    "until": "1960"
+                  },
+                  {
+                    "sourceId": "c01-germany-dm-termination-law",
+                    "note": "Primary1948law establishesDMlegalunit; federal2001terminationlaw confirmsretainedDMcashstatus. Bounded1950–1960claimdoesnotdateFRGcreationorassertuniformapplicabilitytoSaarorBerlin.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1950",
+                    "until": "1960"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-germany-dm-currency-law",
+                "title": "First Law for Monetary Reform — Military Government Law 61 (20 June 1948)",
+                "institution": "German Historical Institute, German History in Documents and Images; primary Military Government Gazette",
+                "url": "https://germanhistorydocs.org/en/occupation-and-the-emergence-of-two-states-1945-1961/extracts-from-the-british-military-government-law-no-61-first-law-for-monetary-reform-currency-law-june-20-1948",
+                "accessed": "2026-10-01",
+                "kind": "primary-document",
+                "usage": "Read primary document body: Deutsche Mark legal unit from 21 June 1948 in specified western occupation lands; this does not assert sovereignty or later federal borders."
+              },
+              {
+                "id": "c01-germany-dm-termination-law",
+                "title": "DM-Beendigungsgesetz, section 1",
+                "institution": "Federal Ministry of Justice / Federal Office of Justice",
+                "url": "https://www.gesetze-im-internet.de/dmbeendg/BJNR240210999.html",
+                "accessed": "2026-10-01",
+                "kind": "primary-document",
+                "usage": "Read full law body and section 1: federal DM notes and coins lose legal-tender status at end of 31 December 2001. Used together with primary introduction law, not to project modern government into 1950."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Existing Bonn and Adenauer facts preserved. Federal presidency not researched sufficiently for additional claims. Currency scope excludes any inference about changing Saar or Berlin legal arrangements."
+            ],
+            "reviewNotes": [
+              "Full relevant source bodies read. Original context retained; independent coordinator review and current-fingerprint revalidation required."
+            ]
+          },
+          "packageHash": "b5ec1d38e9017501d8ae4efa8d296b9ce56086d8a7a4eaff376dfba6538c4913",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T20:07:54.236Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "1f370d7a2cdc975a272a0f0b23d41a8c2a7fe626c2a5f0a8cf6d8cf9a647dae7"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-8b604357895906fef3ddba30",
+        "packageHash": "1f370d7a2cdc975a272a0f0b23d41a8c2a7fe626c2a5f0a8cf6d8cf9a647dae7",
+        "productionFingerprint": "75d21ef0c450034eff4af5b88b5f67c36d5766e307f0c00e78edf1bac6b86b49",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read primary Military Government Law 61, article I, specifying Deutsche Mark from 21 June 1948 in enumerated western occupation lands, and federal DM termination law section 1 ending legal-tender status on 31 December 2001. These bracket the bounded 1950–1960 currency interval. This monetary-unit claim does not assert identical circulation in Saar or Berlin. Existing Bonn, Adenauer and constitutional facts remain untouched; no same-URL catalogue duplicates found. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T20:07:54.391Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-8b604357895906fef3ddba30",
+        "packageHash": "1f370d7a2cdc975a272a0f0b23d41a8c2a7fe626c2a5f0a8cf6d8cf9a647dae7",
+        "beforeFingerprint": "75d21ef0c450034eff4af5b88b5f67c36d5766e307f0c00e78edf1bac6b86b49",
+        "afterFingerprint": "98526cc888b42ac6c335400014ea60a743621c10f74424959978b488f2dfd103",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "china-prc-framework",
@@ -12645,7 +12918,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 30,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "98526cc888b42ac6c335400014ea60a743621c10f74424959978b488f2dfd103",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -12661,9 +12934,386 @@
       },
       "scopeId": "scope-8d8c4754740bf5545aed1807",
       "id": "c01-b4fdc4297faefc720cc19b0c",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T20:07:57.120Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T20:07:57.230Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T20:07:57.375Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T20:07:57.436Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T20:07:57.585Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read archival capital account, including 27 September 1949 resolution and reproduced 1954 constitution article 106; Beijing supports bounded 1950–1959. Independently read official RMB series history: first series from December 1948; second series 1 March 1955 and 10000:1 denomination conversion; third series 1962. The 1955 transition year is deliberately omitted. Taiwan exclusion and Tibetan circulation beginning 15 July 1957 are explicitly recorded; claim is monetary issuance, not polygon-wide circulation. Political rhetoric is not imported. Existing political framework is preserved and no source URL duplicates found. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T20:07:59.811Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T20:07:57.120Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-b4fdc4297faefc720cc19b0c",
+        "jobId": "c01-b4fdc4297faefc720cc19b0c",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "98526cc888b42ac6c335400014ea60a743621c10f74424959978b488f2dfd103",
+        "entityId": "china-prc-framework",
+        "mapIds": [
+          "entity-china"
+        ],
+        "period": {
+          "from": "1950",
+          "until": "1959"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-prc-beijing-capital",
+            "category": "capital",
+            "value": "Beijing",
+            "temporal": {
+              "kind": "interval",
+              "from": "1950",
+              "until": "1959"
+            },
+            "entityId": "china-prc-framework",
+            "geographicScope": {
+              "description": "People’s Republic of China; institutional capital/office or currency unit of that administration, not an assertion of uniform sovereignty or control over every mapped polygon.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-prc-beijing-capital-archives"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-prc-beijing-capital-archives",
+                "note": "Archivalhistoryrecords1949capitaldecision; explicitlyquotes1954constitutionarticle106confirmingBeijing. Assigned1950–1959intervaldoesnotrelabelpreOctober1949China.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1950",
+                "until": "1959"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-prc-rmb-first-units",
+            "category": "currency",
+            "value": "Renminbi (yuan; pre-1955 denomination)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1950",
+              "until": "1954"
+            },
+            "entityId": "china-prc-framework",
+            "geographicScope": {
+              "description": "PRC monetary issuance; circulation varied by territory, Taiwan excluded and Tibet formal adoption not until July1957. This is the issuing administration’s unit, not a statistic or polygon-wide currency claim.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-prc-rmb-historical-series"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-prc-rmb-historical-series",
+                "note": "Officialhistoricalseries datesfirstRMBfrom1948andsecondseriesredenomination1955. Claimbounded1950–1954retainsoldunit; notuniformcirculation: Tibetofficialadoptiondates1957andTaiwanexcluded.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1950",
+                "until": "1954"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          },
+          {
+            "id": "c01-prc-rmb-second-units",
+            "category": "currency",
+            "value": "Renminbi (yuan; 1955 denomination)",
+            "temporal": {
+              "kind": "interval",
+              "from": "1956",
+              "until": "1959"
+            },
+            "entityId": "china-prc-framework",
+            "geographicScope": {
+              "description": "PRC monetary issuance; Taiwan excluded and Tibet formal circulation began July1957. Monetary unit fact does not imply uniform territorial circulation.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-prc-rmb-historical-series"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-prc-rmb-historical-series",
+                "note": "Officialbody secondseries1955 throughthirdseries1962; 1newyuan=10000oldyuan. Bounded1956–1959; earlier1955withdrawaloverlapexcluded. TibetcirculationbeganJuly1957; Taiwanexcluded.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1956",
+                "until": "1959"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-prc-beijing-capital-archives",
+            "title": "1949年9月27日：北平改名为北京",
+            "institution": "People’s Political Consultative Daily; Zhu Yan and Yan Shujun, historical archival account hosted on CPC News",
+            "url": "https://cpc.people.com.cn/n1/2023/1008/c443712-40090557.html",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read historical body and reproduced archival deliberations: 1949 capital decision and 1954 constitution article106 confirms Beijing. Political rhetoric and contested assertions about other frameworks excluded."
+          },
+          {
+            "id": "c01-prc-rmb-historical-series",
+            "title": "Renminbi — historical first and second series",
+            "institution": "Central Government Liaison Office in Macao; Xinhua reference materials",
+            "url": "https://www.zlb.gov.cn/2014-01/10/c_125984388.htm",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read first/second/third-series body: first issued1948; second issued1955 and redenominated1newyuan=10000oldyuan; Tibet circulation from15July1957, Taiwanexcluded; thirdseries1962. No inference that national monetary unit circulated uniformly over every polygon."
+          }
+        ],
+        "absenceOfEvidence": [
+          "1955 old/new-note exchange interval retained as a gap rather than assuming a single denomination throughout the year.",
+          "State leadership titles changed in1954and1959; no undifferentiated Mao-as-president interval manufactured."
+        ],
+        "reviewNotes": [
+          "Full relevant source bodies read. Original context retained; independent coordinator review and current-fingerprint revalidation required."
+        ]
+      },
+      "packageHash": "7a22c40a55487e1c2727b84dfe7a8495d23280b7d983d4ee1dba51d32b3e1f40",
+      "submittedAt": "2026-10-01T20:07:57.230Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-b4fdc4297faefc720cc19b0c",
+            "jobId": "c01-b4fdc4297faefc720cc19b0c",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "china-prc-framework",
+            "mapIds": [
+              "entity-china"
+            ],
+            "period": {
+              "from": "1950",
+              "until": "1959"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-prc-beijing-capital",
+                "category": "capital",
+                "value": "Beijing",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1950",
+                  "until": "1959"
+                },
+                "entityId": "china-prc-framework",
+                "geographicScope": {
+                  "description": "People’s Republic of China; institutional capital/office or currency unit of that administration, not an assertion of uniform sovereignty or control over every mapped polygon.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-prc-beijing-capital-archives"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-prc-beijing-capital-archives",
+                    "note": "Archivalhistoryrecords1949capitaldecision; explicitlyquotes1954constitutionarticle106confirmingBeijing. Assigned1950–1959intervaldoesnotrelabelpreOctober1949China.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1950",
+                    "until": "1959"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-prc-rmb-first-units",
+                "category": "currency",
+                "value": "Renminbi (yuan; pre-1955 denomination)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1950",
+                  "until": "1954"
+                },
+                "entityId": "china-prc-framework",
+                "geographicScope": {
+                  "description": "PRC monetary issuance; circulation varied by territory, Taiwan excluded and Tibet formal adoption not until July1957. This is the issuing administration’s unit, not a statistic or polygon-wide currency claim.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-prc-rmb-historical-series"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-prc-rmb-historical-series",
+                    "note": "Officialhistoricalseries datesfirstRMBfrom1948andsecondseriesredenomination1955. Claimbounded1950–1954retainsoldunit; notuniformcirculation: Tibetofficialadoptiondates1957andTaiwanexcluded.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1950",
+                    "until": "1954"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              },
+              {
+                "id": "c01-prc-rmb-second-units",
+                "category": "currency",
+                "value": "Renminbi (yuan; 1955 denomination)",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1956",
+                  "until": "1959"
+                },
+                "entityId": "china-prc-framework",
+                "geographicScope": {
+                  "description": "PRC monetary issuance; Taiwan excluded and Tibet formal circulation began July1957. Monetary unit fact does not imply uniform territorial circulation.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-prc-rmb-historical-series"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-prc-rmb-historical-series",
+                    "note": "Officialbody secondseries1955 throughthirdseries1962; 1newyuan=10000oldyuan. Bounded1956–1959; earlier1955withdrawaloverlapexcluded. TibetcirculationbeganJuly1957; Taiwanexcluded.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1956",
+                    "until": "1959"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-prc-beijing-capital-archives",
+                "title": "1949年9月27日：北平改名为北京",
+                "institution": "People’s Political Consultative Daily; Zhu Yan and Yan Shujun, historical archival account hosted on CPC News",
+                "url": "https://cpc.people.com.cn/n1/2023/1008/c443712-40090557.html",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read historical body and reproduced archival deliberations: 1949 capital decision and 1954 constitution article106 confirms Beijing. Political rhetoric and contested assertions about other frameworks excluded."
+              },
+              {
+                "id": "c01-prc-rmb-historical-series",
+                "title": "Renminbi — historical first and second series",
+                "institution": "Central Government Liaison Office in Macao; Xinhua reference materials",
+                "url": "https://www.zlb.gov.cn/2014-01/10/c_125984388.htm",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read first/second/third-series body: first issued1948; second issued1955 and redenominated1newyuan=10000oldyuan; Tibet circulation from15July1957, Taiwanexcluded; thirdseries1962. No inference that national monetary unit circulated uniformly over every polygon."
+              }
+            ],
+            "absenceOfEvidence": [
+              "1955 old/new-note exchange interval retained as a gap rather than assuming a single denomination throughout the year.",
+              "State leadership titles changed in1954and1959; no undifferentiated Mao-as-president interval manufactured."
+            ],
+            "reviewNotes": [
+              "Full relevant source bodies read. Original context retained; independent coordinator review and current-fingerprint revalidation required."
+            ]
+          },
+          "packageHash": "edbc2f0d41eb71ae508e53a7586898f6194fde4a590df1c4a0ee965c657edf4e",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T20:07:57.375Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "7a22c40a55487e1c2727b84dfe7a8495d23280b7d983d4ee1dba51d32b3e1f40"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-b4fdc4297faefc720cc19b0c",
+        "packageHash": "7a22c40a55487e1c2727b84dfe7a8495d23280b7d983d4ee1dba51d32b3e1f40",
+        "productionFingerprint": "98526cc888b42ac6c335400014ea60a743621c10f74424959978b488f2dfd103",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read archival capital account, including 27 September 1949 resolution and reproduced 1954 constitution article 106; Beijing supports bounded 1950–1959. Independently read official RMB series history: first series from December 1948; second series 1 March 1955 and 10000:1 denomination conversion; third series 1962. The 1955 transition year is deliberately omitted. Taiwan exclusion and Tibetan circulation beginning 15 July 1957 are explicitly recorded; claim is monetary issuance, not polygon-wide circulation. Political rhetoric is not imported. Existing political framework is preserved and no source URL duplicates found. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T20:07:57.585Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-b4fdc4297faefc720cc19b0c",
+        "packageHash": "7a22c40a55487e1c2727b84dfe7a8495d23280b7d983d4ee1dba51d32b3e1f40",
+        "beforeFingerprint": "98526cc888b42ac6c335400014ea60a743621c10f74424959978b488f2dfd103",
+        "afterFingerprint": "7e314c29563072e1c9aa3d431b6d3b07800378323d3c1dc0a6bfd0bc24cdb19d",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "hong-kong-historical-administration",
@@ -12840,7 +13490,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 123,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "7e314c29563072e1c9aa3d431b6d3b07800378323d3c1dc0a6bfd0bc24cdb19d",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -12856,9 +13506,246 @@
       },
       "scopeId": "scope-1cddd7a3201cc82401f97850",
       "id": "c01-1c45298b819b0c2efa1d44c6",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T20:07:59.992Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T20:08:00.036Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T20:08:00.175Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T20:08:00.212Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T20:08:00.262Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read Museum Local History Unit full currency article: 1935 ordinance declared Hong Kong dollar local monetary unit; final currency unification in 1937; Japanese military notes during occupation. Bounded 1936–1940 unit claim does not assert exclusivity in 1936 and does not bridge the 1941 occupation. Existing colonial chronology preserved; empty currency field and no source URL duplicates. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T20:08:01.779Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T20:07:59.992Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-1c45298b819b0c2efa1d44c6",
+        "jobId": "c01-1c45298b819b0c2efa1d44c6",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "7e314c29563072e1c9aa3d431b6d3b07800378323d3c1dc0a6bfd0bc24cdb19d",
+        "entityId": "hong-kong-historical-administration",
+        "mapIds": [
+          "entity-hong-kong"
+        ],
+        "period": {
+          "from": "1900",
+          "until": "1940"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-hong-kong-dollar",
+            "category": "currency",
+            "value": "Hong Kong dollar",
+            "temporal": {
+              "kind": "interval",
+              "from": "1936",
+              "until": "1940"
+            },
+            "entityId": "hong-kong-historical-administration",
+            "geographicScope": {
+              "description": "Hong Kong — historical administrations; institutional capital/office or currency unit of that administration, not an assertion of uniform sovereignty or control over every mapped polygon.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-hk-museum-currency-history"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-hk-museum-currency-history",
+                "note": "Museumhistoricalbody dateslocalHongKongdollar1935, unification1937, andsubstitutionbyJapaneseoccupationcurrency. Bounded1936–1940doesnotbridgeoccupationorclaimexclusivecurrency1936.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1936",
+                "until": "1940"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-hk-museum-currency-history",
+            "title": "Hong Kong Currency",
+            "institution": "Hong Kong Museum of History, Local History Unit",
+            "url": "https://hk.history.museum/en/web/mh/publications/spa_pspecial_02_01.html",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read full body: mixedforeign/localcurrencies through1935; HongKongdollar declared localunit1935, currencyunified1937; Japanese militarynotes duringoccupation. Claimonly1936–1940localunit, notexclusivecurrencybefore1937."
+          }
+        ],
+        "absenceOfEvidence": [
+          "1900–1935 monetary mixtures, detailed governor chronology and capital terminology remain gaps. No wartime bridge or modern sole-currency fallback."
+        ],
+        "reviewNotes": [
+          "Full relevant source bodies read. Original context retained; independent coordinator review and current-fingerprint revalidation required."
+        ]
+      },
+      "packageHash": "cad3f3f12212d3ee35eb13a78963abe6318f77980c1bb3a580b2871b9b913270",
+      "submittedAt": "2026-10-01T20:08:00.036Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-1c45298b819b0c2efa1d44c6",
+            "jobId": "c01-1c45298b819b0c2efa1d44c6",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "hong-kong-historical-administration",
+            "mapIds": [
+              "entity-hong-kong"
+            ],
+            "period": {
+              "from": "1900",
+              "until": "1940"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-hong-kong-dollar",
+                "category": "currency",
+                "value": "Hong Kong dollar",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1936",
+                  "until": "1940"
+                },
+                "entityId": "hong-kong-historical-administration",
+                "geographicScope": {
+                  "description": "Hong Kong — historical administrations; institutional capital/office or currency unit of that administration, not an assertion of uniform sovereignty or control over every mapped polygon.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-hk-museum-currency-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-hk-museum-currency-history",
+                    "note": "Museumhistoricalbody dateslocalHongKongdollar1935, unification1937, andsubstitutionbyJapaneseoccupationcurrency. Bounded1936–1940doesnotbridgeoccupationorclaimexclusivecurrency1936.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1936",
+                    "until": "1940"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-hk-museum-currency-history",
+                "title": "Hong Kong Currency",
+                "institution": "Hong Kong Museum of History, Local History Unit",
+                "url": "https://hk.history.museum/en/web/mh/publications/spa_pspecial_02_01.html",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read full body: mixedforeign/localcurrencies through1935; HongKongdollar declared localunit1935, currencyunified1937; Japanese militarynotes duringoccupation. Claimonly1936–1940localunit, notexclusivecurrencybefore1937."
+              }
+            ],
+            "absenceOfEvidence": [
+              "1900–1935 monetary mixtures, detailed governor chronology and capital terminology remain gaps. No wartime bridge or modern sole-currency fallback."
+            ],
+            "reviewNotes": [
+              "Full relevant source bodies read. Original context retained; independent coordinator review and current-fingerprint revalidation required."
+            ]
+          },
+          "packageHash": "24d669988f2cc5f50ec09bced1b585c818c1605e9267bb234c2e14fcd297379a",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T20:08:00.175Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "cad3f3f12212d3ee35eb13a78963abe6318f77980c1bb3a580b2871b9b913270"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-1c45298b819b0c2efa1d44c6",
+        "packageHash": "cad3f3f12212d3ee35eb13a78963abe6318f77980c1bb3a580b2871b9b913270",
+        "productionFingerprint": "7e314c29563072e1c9aa3d431b6d3b07800378323d3c1dc0a6bfd0bc24cdb19d",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read Museum Local History Unit full currency article: 1935 ordinance declared Hong Kong dollar local monetary unit; final currency unification in 1937; Japanese military notes during occupation. Bounded 1936–1940 unit claim does not assert exclusivity in 1936 and does not bridge the 1941 occupation. Existing colonial chronology preserved; empty currency field and no source URL duplicates. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T20:08:00.262Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-1c45298b819b0c2efa1d44c6",
+        "packageHash": "cad3f3f12212d3ee35eb13a78963abe6318f77980c1bb3a580b2871b9b913270",
+        "beforeFingerprint": "7e314c29563072e1c9aa3d431b6d3b07800378323d3c1dc0a6bfd0bc24cdb19d",
+        "afterFingerprint": "6c7211945eab6fd6a6651d0918b980791dac6fa91550d4bb2fb5e0e5cd84def1",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "nigeria-clifford-framework-core",
@@ -12938,7 +13825,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 69,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "6c7211945eab6fd6a6651d0918b980791dac6fa91550d4bb2fb5e0e5cd84def1",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -12954,9 +13841,246 @@
       },
       "scopeId": "scope-e9af66993bb1587633d81915",
       "id": "c01-1416878b6db9fadd6090edc7",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T20:08:01.857Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T20:08:01.918Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T20:08:02.063Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T20:08:02.145Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T20:08:02.183Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read Central Bank of Nigeria historical body: WACB notes and coins issued 1912–1959 in Nigeria and three other colonies, highest note denomination one pound. Supports bounded 1923–1945 regional currency-board pound; no independent Nigerian monetary sovereignty or exclusive bank issuance asserted. Existing framework preserved; empty currency field and no duplicate source URL. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T20:08:03.620Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T20:08:01.857Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-1416878b6db9fadd6090edc7",
+        "jobId": "c01-1416878b6db9fadd6090edc7",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "6c7211945eab6fd6a6651d0918b980791dac6fa91550d4bb2fb5e0e5cd84def1",
+        "entityId": "nigeria-clifford-framework-core",
+        "mapIds": [
+          "entity-nigeria"
+        ],
+        "period": {
+          "from": "1923",
+          "until": "1945"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-nigeria-wacb-pound",
+            "category": "currency",
+            "value": "West African Currency Board pound",
+            "temporal": {
+              "kind": "interval",
+              "from": "1923",
+              "until": "1945"
+            },
+            "entityId": "nigeria-clifford-framework-core",
+            "geographicScope": {
+              "description": "Nigeria — Clifford constitutional framework; institutional capital/office or currency unit of that administration, not an assertion of uniform sovereignty or control over every mapped polygon.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-nigeria-cbn-currency-history"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-nigeria-cbn-currency-history",
+                "note": "CBNhistoricalbody describesWACBnotes/coins1912–1959andpoundbanknotesinNigeria. Bounded1923–1945issueisregionalcolonialcurrency, notindependentNigerianmonetarysovereignty.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1923",
+                "until": "1945"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-nigeria-cbn-currency-history",
+            "title": "History of Nigerian Currency",
+            "institution": "Central Bank of Nigeria",
+            "url": "https://www.cbn.gov.ng/Currency/historycur.html",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read full historical body: WACBnotes/coinsissued1912–1959inNigeriaandothercolonies; highestbanknotepound. Do not attribute currency-boardissue to anindependentNigerianstate."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Capital and governor chronology need independent bounded evidence; institutional council facts preserved."
+        ],
+        "reviewNotes": [
+          "Full relevant source bodies read. Original context retained; independent coordinator review and current-fingerprint revalidation required."
+        ]
+      },
+      "packageHash": "7ab7e8a8913724d487e4eb93e216b855a692f87c42e1a3357c2207e6e1dbbd56",
+      "submittedAt": "2026-10-01T20:08:01.918Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-1416878b6db9fadd6090edc7",
+            "jobId": "c01-1416878b6db9fadd6090edc7",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "nigeria-clifford-framework-core",
+            "mapIds": [
+              "entity-nigeria"
+            ],
+            "period": {
+              "from": "1923",
+              "until": "1945"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-nigeria-wacb-pound",
+                "category": "currency",
+                "value": "West African Currency Board pound",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1923",
+                  "until": "1945"
+                },
+                "entityId": "nigeria-clifford-framework-core",
+                "geographicScope": {
+                  "description": "Nigeria — Clifford constitutional framework; institutional capital/office or currency unit of that administration, not an assertion of uniform sovereignty or control over every mapped polygon.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-nigeria-cbn-currency-history"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-nigeria-cbn-currency-history",
+                    "note": "CBNhistoricalbody describesWACBnotes/coins1912–1959andpoundbanknotesinNigeria. Bounded1923–1945issueisregionalcolonialcurrency, notindependentNigerianmonetarysovereignty.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1923",
+                    "until": "1945"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-nigeria-cbn-currency-history",
+                "title": "History of Nigerian Currency",
+                "institution": "Central Bank of Nigeria",
+                "url": "https://www.cbn.gov.ng/Currency/historycur.html",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read full historical body: WACBnotes/coinsissued1912–1959inNigeriaandothercolonies; highestbanknotepound. Do not attribute currency-boardissue to anindependentNigerianstate."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Capital and governor chronology need independent bounded evidence; institutional council facts preserved."
+            ],
+            "reviewNotes": [
+              "Full relevant source bodies read. Original context retained; independent coordinator review and current-fingerprint revalidation required."
+            ]
+          },
+          "packageHash": "c9f99ac75efa9a5e12f25eef9de753be0b79c6a4abb5988321bae986be4a79e7",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T20:08:02.063Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "7ab7e8a8913724d487e4eb93e216b855a692f87c42e1a3357c2207e6e1dbbd56"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-1416878b6db9fadd6090edc7",
+        "packageHash": "7ab7e8a8913724d487e4eb93e216b855a692f87c42e1a3357c2207e6e1dbbd56",
+        "productionFingerprint": "6c7211945eab6fd6a6651d0918b980791dac6fa91550d4bb2fb5e0e5cd84def1",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read Central Bank of Nigeria historical body: WACB notes and coins issued 1912–1959 in Nigeria and three other colonies, highest note denomination one pound. Supports bounded 1923–1945 regional currency-board pound; no independent Nigerian monetary sovereignty or exclusive bank issuance asserted. Existing framework preserved; empty currency field and no duplicate source URL. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T20:08:02.183Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-1416878b6db9fadd6090edc7",
+        "packageHash": "7ab7e8a8913724d487e4eb93e216b855a692f87c42e1a3357c2207e6e1dbbd56",
+        "beforeFingerprint": "6c7211945eab6fd6a6651d0918b980791dac6fa91550d4bb2fb5e0e5cd84def1",
+        "afterFingerprint": "809c2523c85d610ba4dd3fcfb3e29a0adeb2f7696b668ee00cbbbfc330f99024",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "b13-indonesia-parliamentary",
@@ -13036,7 +14160,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 18,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "809c2523c85d610ba4dd3fcfb3e29a0adeb2f7696b668ee00cbbbfc330f99024",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -13052,9 +14176,248 @@
       },
       "scopeId": "scope-1806320f7c30496028fab0ef",
       "id": "c01-929d7f02713a4c8b01dd1ced",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T20:08:03.774Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T20:08:03.850Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T20:08:03.952Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T20:08:04.019Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T20:08:04.108Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read National Archives presidential guide body: Sukarno presidential archives cover 1945–1967, specifically Presidential Cabinet 1950–1959 alongside Prime Minister Secretariat 1950–1959. Supports head-of-state presidency during 1951–1956 without projecting later Guided Democracy powers. Existing parliamentary-government description is compatible and leaders empty; no source URL duplicates. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T20:08:05.794Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T20:08:03.774Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-929d7f02713a4c8b01dd1ced",
+        "jobId": "c01-929d7f02713a4c8b01dd1ced",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "809c2523c85d610ba4dd3fcfb3e29a0adeb2f7696b668ee00cbbbfc330f99024",
+        "entityId": "b13-indonesia-parliamentary",
+        "mapIds": [
+          "entity-indonesia"
+        ],
+        "period": {
+          "from": "1951",
+          "until": "1956"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-indonesia-sukarno-president",
+            "category": "leadership",
+            "value": "Sukarno",
+            "temporal": {
+              "kind": "interval",
+              "from": "1951",
+              "until": "1956"
+            },
+            "entityId": "b13-indonesia-parliamentary",
+            "geographicScope": {
+              "description": "Republic of Indonesia — parliamentary constitutional framework; institutional capital/office or currency unit of that administration, not an assertion of uniform sovereignty or control over every mapped polygon.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-indonesia-sukarno-archive-guide"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-indonesia-sukarno-archive-guide",
+                "note": "ANRIguide explicitly describesSukarnopresidency1945–1967andpresidentialcabinetarchives1950–1959, alongsideprimeministersecretariat. Bounded1951–1956presidentashead-of-state doesnotprojectGuidedDemocracyexecutivepowersbackward.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1951",
+                "until": "1956"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": [],
+            "role": "President (head of state)"
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-indonesia-sukarno-archive-guide",
+            "title": "Guide Arsip Presiden RI: Sukarno 1945–1967",
+            "institution": "Arsip Nasional Republik Indonesia, Presidential Archives Study Centre",
+            "url": "https://pusdipres.anri.go.id/arsip-kepresidenan/khazanah-arsip-kepresidenan/guide-arsip-presiden-ri-sukarno-1945-1967",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read body: archives of Sukarno presidency1945–1967 specifically include PresidentialCabinet1950–1959 and PrimeMinisterSecretariat1950–1959. Formalpresidencydoesnotmeanidenticalpowersacrosspoliticalframeworks."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Prime-minister turnover, Jakarta seat chronology and complicated currency arrangements remain gaps; no continuity inferred from present Indonesia."
+        ],
+        "reviewNotes": [
+          "Full relevant source bodies read. Original context retained; independent coordinator review and current-fingerprint revalidation required."
+        ]
+      },
+      "packageHash": "33175a4e80b74b4649d71b3025e57b0efce08a503789df099128632273184543",
+      "submittedAt": "2026-10-01T20:08:03.850Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-929d7f02713a4c8b01dd1ced",
+            "jobId": "c01-929d7f02713a4c8b01dd1ced",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "b13-indonesia-parliamentary",
+            "mapIds": [
+              "entity-indonesia"
+            ],
+            "period": {
+              "from": "1951",
+              "until": "1956"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-indonesia-sukarno-president",
+                "category": "leadership",
+                "value": "Sukarno",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1951",
+                  "until": "1956"
+                },
+                "entityId": "b13-indonesia-parliamentary",
+                "geographicScope": {
+                  "description": "Republic of Indonesia — parliamentary constitutional framework; institutional capital/office or currency unit of that administration, not an assertion of uniform sovereignty or control over every mapped polygon.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-indonesia-sukarno-archive-guide"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-indonesia-sukarno-archive-guide",
+                    "note": "ANRIguide explicitly describesSukarnopresidency1945–1967andpresidentialcabinetarchives1950–1959, alongsideprimeministersecretariat. Bounded1951–1956presidentashead-of-state doesnotprojectGuidedDemocracyexecutivepowersbackward.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1951",
+                    "until": "1956"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": [],
+                "role": "President (head of state)"
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-indonesia-sukarno-archive-guide",
+                "title": "Guide Arsip Presiden RI: Sukarno 1945–1967",
+                "institution": "Arsip Nasional Republik Indonesia, Presidential Archives Study Centre",
+                "url": "https://pusdipres.anri.go.id/arsip-kepresidenan/khazanah-arsip-kepresidenan/guide-arsip-presiden-ri-sukarno-1945-1967",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read body: archives of Sukarno presidency1945–1967 specifically include PresidentialCabinet1950–1959 and PrimeMinisterSecretariat1950–1959. Formalpresidencydoesnotmeanidenticalpowersacrosspoliticalframeworks."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Prime-minister turnover, Jakarta seat chronology and complicated currency arrangements remain gaps; no continuity inferred from present Indonesia."
+            ],
+            "reviewNotes": [
+              "Full relevant source bodies read. Original context retained; independent coordinator review and current-fingerprint revalidation required."
+            ]
+          },
+          "packageHash": "27d7f23b35b6a3d41fdd0ef0c8dc9cf17eae73371ce9ec450a7e64548116c795",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T20:08:03.952Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "33175a4e80b74b4649d71b3025e57b0efce08a503789df099128632273184543"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-929d7f02713a4c8b01dd1ced",
+        "packageHash": "33175a4e80b74b4649d71b3025e57b0efce08a503789df099128632273184543",
+        "productionFingerprint": "809c2523c85d610ba4dd3fcfb3e29a0adeb2f7696b668ee00cbbbfc330f99024",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read National Archives presidential guide body: Sukarno presidential archives cover 1945–1967, specifically Presidential Cabinet 1950–1959 alongside Prime Minister Secretariat 1950–1959. Supports head-of-state presidency during 1951–1956 without projecting later Guided Democracy powers. Existing parliamentary-government description is compatible and leaders empty; no source URL duplicates. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T20:08:04.108Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-929d7f02713a4c8b01dd1ced",
+        "packageHash": "33175a4e80b74b4649d71b3025e57b0efce08a503789df099128632273184543",
+        "beforeFingerprint": "809c2523c85d610ba4dd3fcfb3e29a0adeb2f7696b668ee00cbbbfc330f99024",
+        "afterFingerprint": "0d15dc3648b7ae8698085787d2b934ba40f4f66790e6377a66c8543d81050f59",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     },
     {
       "entityId": "san-marino-republic",
@@ -13133,7 +14496,7 @@
         "Preserve intra-year transitions and research gaps; do not fill a year merely because one dated record exists."
       ],
       "gapOpportunities": 63,
-      "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+      "productionFingerprint": "0d15dc3648b7ae8698085787d2b934ba40f4f66790e6377a66c8543d81050f59",
       "prohibitedAssumptions": [
         "No historical continuity, sovereignty or succession from geometry, names, SUBJECTO or PARTOF.",
         "No observation interpolation.",
@@ -13149,9 +14512,246 @@
       },
       "scopeId": "scope-597502f1a6d93abac0089c4e",
       "id": "c01-ce7f93298321dad62520ecac",
-      "status": "queued",
-      "attempt": 0,
-      "history": []
+      "status": "integrated",
+      "attempt": 1,
+      "history": [
+        {
+          "action": "claim",
+          "at": "2026-10-01T20:08:05.876Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "submit",
+          "at": "2026-10-01T20:08:05.945Z",
+          "actor": "campaign-design",
+          "reason": null
+        },
+        {
+          "action": "recontextualize",
+          "at": "2026-10-01T20:08:06.227Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        },
+        {
+          "action": "validate",
+          "at": "2026-10-01T20:08:06.274Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        },
+        {
+          "action": "accept",
+          "at": "2026-10-01T20:08:06.340Z",
+          "actor": "campaign-01-coordinator",
+          "reason": "Independently read UNESCO Outstanding Universal Value body, criterion iii, explicitly describing uninterrupted capital role since thirteenth century; authenticity section confirms continuing institutional function. Supports City of San Marino bounded 1830–1850 without modern fallback or legendary founding assumptions. No sovereign-control claim imported from heritage geometry. Existing dual-regency framework preserved; capital field empty and no source URL duplicates. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound."
+        },
+        {
+          "action": "integrated",
+          "at": "2026-10-01T20:08:08.164Z",
+          "actor": "campaign-01-coordinator",
+          "reason": null
+        }
+      ],
+      "owner": "campaign-design",
+      "claimedAt": "2026-10-01T20:08:05.876Z",
+      "package": {
+        "schemaVersion": 1,
+        "id": "package-c01-ce7f93298321dad62520ecac",
+        "jobId": "c01-ce7f93298321dad62520ecac",
+        "worker": {
+          "id": "campaign-design",
+          "specialism": "entity-core"
+        },
+        "productionFingerprint": "0d15dc3648b7ae8698085787d2b934ba40f4f66790e6377a66c8543d81050f59",
+        "entityId": "san-marino-republic",
+        "mapIds": [
+          "entity-san-marino"
+        ],
+        "period": {
+          "from": "1830",
+          "until": "1850"
+        },
+        "category": "core-state",
+        "categories": [
+          "capital",
+          "leadership",
+          "political-institutional",
+          "currency"
+        ],
+        "claims": [
+          {
+            "id": "c01-san-marino-capital",
+            "category": "capital",
+            "value": "City of San Marino",
+            "temporal": {
+              "kind": "interval",
+              "from": "1830",
+              "until": "1850"
+            },
+            "entityId": "san-marino-republic",
+            "geographicScope": {
+              "description": "San Marino; institutional capital/office or currency unit of that administration, not an assertion of uniform sovereignty or control over every mapped polygon.",
+              "relationship": "same"
+            },
+            "sourceIds": [
+              "c01-san-marino-unesco-capital"
+            ],
+            "evidence": [
+              {
+                "sourceId": "c01-san-marino-unesco-capital",
+                "note": "UNESCOCriterioniii explicitlydescribesuninterruptedcapitalcityrolesincethirteenthcentury; authenticitysectionconfirmsinstitutionalfunctioncontinuity. Bounded1830–1850claimdoesnotrelyonmoderncountryfallbackorlegendaryfoundationdate.",
+                "supportedPrecision": "year",
+                "supportsClaim": true,
+                "from": "1830",
+                "until": "1850"
+              }
+            ],
+            "reviewStatus": "clear",
+            "cautions": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "c01-san-marino-unesco-capital",
+            "title": "San Marino Historic Centre and Mount Titano — Outstanding Universal Value",
+            "institution": "UNESCO World Heritage Centre",
+            "url": "https://whc.unesco.org/en/list/1245/",
+            "accessed": "2026-10-01",
+            "kind": "official-institutional",
+            "usage": "Read full OutstandingUniversalValue body, Criterioniii andauthenticity: explicituninterruptedcapitalcityrole since13thcentury. No foundationallegend, geometry, or presentcountryfallback used."
+          }
+        ],
+        "absenceOfEvidence": [
+          "Rotating six-month Captains Regent were not converted into undated leaders; currency arrangements require dedicated evidence. Existing dual-magistracy fact preserved."
+        ],
+        "reviewNotes": [
+          "Full relevant source bodies read. Original context retained; independent coordinator review and current-fingerprint revalidation required."
+        ]
+      },
+      "packageHash": "b20cf1e2acd36cba0be812e460ad9b728cebb28aac8d6d6495882b3ffc1e98e5",
+      "submittedAt": "2026-10-01T20:08:05.945Z",
+      "contextRevisions": [
+        {
+          "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+          "package": {
+            "schemaVersion": 1,
+            "id": "package-c01-ce7f93298321dad62520ecac",
+            "jobId": "c01-ce7f93298321dad62520ecac",
+            "worker": {
+              "id": "campaign-design",
+              "specialism": "entity-core"
+            },
+            "productionFingerprint": "397c700dd6f26dab73bd12c6fce8525fa99588437175cf13e4679b67be235f66",
+            "entityId": "san-marino-republic",
+            "mapIds": [
+              "entity-san-marino"
+            ],
+            "period": {
+              "from": "1830",
+              "until": "1850"
+            },
+            "category": "core-state",
+            "categories": [
+              "capital",
+              "leadership",
+              "political-institutional",
+              "currency"
+            ],
+            "claims": [
+              {
+                "id": "c01-san-marino-capital",
+                "category": "capital",
+                "value": "City of San Marino",
+                "temporal": {
+                  "kind": "interval",
+                  "from": "1830",
+                  "until": "1850"
+                },
+                "entityId": "san-marino-republic",
+                "geographicScope": {
+                  "description": "San Marino; institutional capital/office or currency unit of that administration, not an assertion of uniform sovereignty or control over every mapped polygon.",
+                  "relationship": "same"
+                },
+                "sourceIds": [
+                  "c01-san-marino-unesco-capital"
+                ],
+                "evidence": [
+                  {
+                    "sourceId": "c01-san-marino-unesco-capital",
+                    "note": "UNESCOCriterioniii explicitlydescribesuninterruptedcapitalcityrolesincethirteenthcentury; authenticitysectionconfirmsinstitutionalfunctioncontinuity. Bounded1830–1850claimdoesnotrelyonmoderncountryfallbackorlegendaryfoundationdate.",
+                    "supportedPrecision": "year",
+                    "supportsClaim": true,
+                    "from": "1830",
+                    "until": "1850"
+                  }
+                ],
+                "reviewStatus": "clear",
+                "cautions": []
+              }
+            ],
+            "sources": [
+              {
+                "id": "c01-san-marino-unesco-capital",
+                "title": "San Marino Historic Centre and Mount Titano — Outstanding Universal Value",
+                "institution": "UNESCO World Heritage Centre",
+                "url": "https://whc.unesco.org/en/list/1245/",
+                "accessed": "2026-10-01",
+                "kind": "official-institutional",
+                "usage": "Read full OutstandingUniversalValue body, Criterioniii andauthenticity: explicituninterruptedcapitalcityrole since13thcentury. No foundationallegend, geometry, or presentcountryfallback used."
+              }
+            ],
+            "absenceOfEvidence": [
+              "Rotating six-month Captains Regent were not converted into undated leaders; currency arrangements require dedicated evidence. Existing dual-magistracy fact preserved."
+            ],
+            "reviewNotes": [
+              "Full relevant source bodies read. Original context retained; independent coordinator review and current-fingerprint revalidation required."
+            ]
+          },
+          "packageHash": "d43d9f8088f885afa96453306fe8b6c0c27fef53824e1d28fec76a47ece566e2",
+          "receipt": null,
+          "validation": null,
+          "at": "2026-10-01T20:08:06.227Z",
+          "reason": "Serial campaign integration changed production; original evidence retained and reviewed against current facts/mappings/sources."
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "review": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "status": "historical-review",
+        "packageHash": "b20cf1e2acd36cba0be812e460ad9b728cebb28aac8d6d6495882b3ffc1e98e5"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "status": "accepted",
+        "jobId": "c01-ce7f93298321dad62520ecac",
+        "packageHash": "b20cf1e2acd36cba0be812e460ad9b728cebb28aac8d6d6495882b3ffc1e98e5",
+        "productionFingerprint": "0d15dc3648b7ae8698085787d2b934ba40f4f66790e6377a66c8543d81050f59",
+        "coordinator": {
+          "role": "coordinator",
+          "id": "campaign-01-coordinator"
+        },
+        "rationale": "Independently read UNESCO Outstanding Universal Value body, criterion iii, explicitly describing uninterrupted capital role since thirteenth century; authenticity section confirms continuing institutional function. Supports City of San Marino bounded 1830–1850 without modern fallback or legendary founding assumptions. No sovereign-control claim imported from heritage geometry. Existing dual-regency framework preserved; capital field empty and no source URL duplicates. Fresh-context check: existing mappings/entity scope and appended facts/source definitions were validated; all current review issues below are bound.",
+        "reviewResolved": true,
+        "reviewedIssues": [
+          "Coordinator job cautions require historical review",
+          "Absence of evidence is not evidence of absence; review omissions",
+          "INDEPENDENT-REVIEW: Independent historical review required before any production integration"
+        ],
+        "acceptedAt": "2026-10-01T20:08:06.340Z"
+      },
+      "integrationReceipt": {
+        "applied": true,
+        "jobId": "c01-ce7f93298321dad62520ecac",
+        "packageHash": "b20cf1e2acd36cba0be812e460ad9b728cebb28aac8d6d6495882b3ffc1e98e5",
+        "beforeFingerprint": "0d15dc3648b7ae8698085787d2b934ba40f4f66790e6377a66c8543d81050f59",
+        "afterFingerprint": "2ccdb643e3c5b386e248043a33ccb5570bf2620cebf6aafe81acfec1231c6fa7",
+        "journal": "C:\\Users\\jacob\\Documents\\historical-atlas\\research\\.integration-journal.json"
+      }
     }
   ]
 }
