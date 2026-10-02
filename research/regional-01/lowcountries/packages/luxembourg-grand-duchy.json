@@ -1,0 +1,380 @@
+{
+  "job": {
+    "id": "dossier-5d8fc37d5e196ee8e6250db1",
+    "entityId": "luxembourg-grand-duchy",
+    "period": {
+      "from": "1923",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-luxembourg"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "d9e8aa72cd268f48978bbc70f4ad10439e43fe464edfc7c6f93636b471b1aa39",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "regional01-lowcountries-institutional-history-luxembourg-grand-duchy",
+    "jobId": "dossier-5d8fc37d5e196ee8e6250db1",
+    "entityId": "luxembourg-grand-duchy",
+    "mapIds": [
+      "entity-luxembourg"
+    ],
+    "worker": {
+      "id": "regional-lowcountries-worker",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "d9e8aa72cd268f48978bbc70f4ad10439e43fe464edfc7c6f93636b471b1aa39",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1923",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "r01-lowcountries-luxembourg-grand-duchy-bleu",
+        "entityId": "luxembourg-grand-duchy",
+        "category": "relationships",
+        "value": "Linked to the other state through the Belgium–Luxembourg Economic Union (BLEU).",
+        "temporal": {
+          "kind": "interval",
+          "from": "1923",
+          "until": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "luxembourg-grand-duchy-luxembourg-grand-duchy-bleu",
+          "description": "Named historical state or institutional/person association; no statistical or polygon-wide inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r01-luxembourg-bleu-history"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r01-luxembourg-bleu-history",
+            "locator": "The treaty of the Belgo-Luxembourg Economic Union – 1921",
+            "note": "Official history identifies the treaty and continuing economic and monetary ties. The conservative 1923 start avoids treating signature in 1921 as commencement in that year; no sovereign merger is implied.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1923",
+              "until": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Year precision retained. Bounded research interval is not an assertion that the historical institution or person began or ended at its research cutoff."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 01 original institutional source review",
+          "sourceIdentifier": "luxembourg-grand-duchy-bleu"
+        },
+        "relatedEntityIds": [
+          "belgium-kingdom"
+        ]
+      },
+      {
+        "id": "r01-lowcountries-luxembourg-grand-duchy-benelux-customs-agreement",
+        "entityId": "luxembourg-grand-duchy",
+        "category": "relationships",
+        "value": "Party to the signed 1944 Benelux Customs Agreement with the other two Benelux states; the customs union was not yet implemented during this interval.",
+        "temporal": {
+          "kind": "interval",
+          "from": "1944",
+          "until": "1947",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "luxembourg-grand-duchy-luxembourg-grand-duchy-benelux-customs-agreement",
+          "description": "Named historical state or institutional/person association; no statistical or polygon-wide inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r01-benelux-treaty-history"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r01-benelux-treaty-history",
+            "locator": "Timeline entries 1944 and 1948",
+            "note": "Signed agreement is distinguished from customs union implementation. No functioning customs union is projected into 1945.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1944",
+              "until": "1947",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Year precision retained. Bounded research interval is not an assertion that the historical institution or person began or ended at its research cutoff."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 01 original institutional source review",
+          "sourceIdentifier": "luxembourg-grand-duchy-benelux-customs-agreement"
+        },
+        "relatedEntityIds": [
+          "belgium-kingdom",
+          "netherlands-kingdom"
+        ]
+      },
+      {
+        "id": "r01-lowcountries-luxembourg-grand-duchy-benelux-1960",
+        "entityId": "luxembourg-grand-duchy",
+        "category": "events-context",
+        "value": "The Benelux Economic Union treaty was implemented in 1960.",
+        "temporal": {
+          "kind": "event",
+          "date": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "luxembourg-grand-duchy-luxembourg-grand-duchy-benelux-1960",
+          "description": "Named historical state or institutional/person association; no statistical or polygon-wide inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r01-benelux-treaty-history"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r01-benelux-treaty-history",
+            "locator": "Timeline entry 1960",
+            "note": "Year-only event date; does not pretend implementation was already complete on January 1 or before the event within 1960.",
+            "precision": "year",
+            "temporal": {
+              "kind": "event",
+              "date": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Year precision retained. Bounded research interval is not an assertion that the historical institution or person began or ended at its research cutoff."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 01 original institutional source review",
+          "sourceIdentifier": "luxembourg-grand-duchy-benelux-1960"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "r01-luxembourg-bleu-history",
+        "title": "Top 5: agreements that have shaped Luxembourg’s history",
+        "institution": "Government of Luxembourg",
+        "url": "https://luxembourg.public.lu/en/society-and-culture/history/top-5-agreements-luxembourg-history.html",
+        "accessed": "2026-10-02",
+        "kind": "official-government-history",
+        "usage": "Individual factual paraphrases with institutional attribution; no original images or full copyrighted pages redistributed."
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r01-luxembourg-bleu-history",
+          "r01-benelux-treaty-history"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r01-luxembourg-bleu-history",
+          "r01-benelux-treaty-history"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator independently checked original institutional source bodies and indexed originals. Review preserves dated institutional/residential association, distinct treaty signature and implementation, exact event dates and year precision. No modern nationality inference. Zeeman held when original interval verification failed; Aalto postwar work bounded after completed 1950s works, Bohr 1959–1960 institutional leadership documented continuously since1920; capital conflicts still fail closed.",
+      "preservedPackageHashes": [
+        "77ce3ddb575d295bca29a37c8113577e4c06dc4c4afc94d7602904881d938ce8",
+        "cdd99cd7ec8f02afff6508cc6b9fe3cc72ab32030da8e3e24e63bb24a4fe0c84"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "390a9bb08a43ee077fd1ef481a4f80db12ae2bddf1d3068c4f1e11781eeeb49f",
+    "productionFingerprint": "d9e8aa72cd268f48978bbc70f4ad10439e43fe464edfc7c6f93636b471b1aa39",
+    "jobId": "dossier-5d8fc37d5e196ee8e6250db1",
+    "review": {
+      "reviewer": "regional-coordinator-original-source-review",
+      "packageHash": "390a9bb08a43ee077fd1ef481a4f80db12ae2bddf1d3068c4f1e11781eeeb49f",
+      "bodyReviewed": true,
+      "rationale": "Coordinator independently checked original institutional source bodies and indexed originals. Review preserves dated institutional/residential association, distinct treaty signature and implementation, exact event dates and year precision. No modern nationality inference. Zeeman held when original interval verification failed; Aalto postwar work bounded after completed 1950s works, Bohr 1959–1960 institutional leadership documented continuously since1920; capital conflicts still fail closed.",
+      "reviewedIssues": [],
+      "decisions": {
+        "r01-lowcountries-luxembourg-grand-duchy-bleu": "accepted",
+        "r01-lowcountries-luxembourg-grand-duchy-benelux-customs-agreement": "accepted",
+        "r01-lowcountries-luxembourg-grand-duchy-benelux-1960": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "r01-lowcountries-luxembourg-grand-duchy-bleu",
+      "r01-lowcountries-luxembourg-grand-duchy-benelux-customs-agreement",
+      "r01-lowcountries-luxembourg-grand-duchy-benelux-1960"
+    ]
+  }
+}

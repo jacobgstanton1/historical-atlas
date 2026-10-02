@@ -1,0 +1,346 @@
+{
+  "job": {
+    "id": "dossier-335cfbf22dbb0864fad6642b",
+    "entityId": "swiss-federal-state",
+    "period": {
+      "from": "1866",
+      "until": "1924"
+    },
+    "mapIds": [
+      "entity-switzerland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "0df66e7a48c0f3cfcac3dd9aa89c74948143a39d412fd7ecd02b975589f424d3",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "regional01-lowcountries-institutional-history-swiss-federal-state",
+    "jobId": "dossier-335cfbf22dbb0864fad6642b",
+    "entityId": "swiss-federal-state",
+    "mapIds": [
+      "entity-switzerland"
+    ],
+    "worker": {
+      "id": "regional-lowcountries-worker",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "0df66e7a48c0f3cfcac3dd9aa89c74948143a39d412fd7ecd02b975589f424d3",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1866",
+      "until": "1924"
+    },
+    "claims": [
+      {
+        "id": "r01-lowcountries-swiss-federal-state-latin-monetary-union",
+        "entityId": "swiss-federal-state",
+        "category": "relationships",
+        "value": "Member of the Latin Monetary Union, whose participating states coordinated gold and silver coin standards.",
+        "temporal": {
+          "kind": "interval",
+          "from": "1866",
+          "until": "1924",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "swiss-federal-state-swiss-federal-state-latin-monetary-union",
+          "description": "Named historical state or institutional/person association; no statistical or polygon-wide inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "b01-belgian-franc"
+        ],
+        "evidence": [
+          {
+            "sourceId": "b01-belgian-franc",
+            "locator": "Latin Monetary Union (1865–1926)",
+            "note": "NBB explicitly identifies Belgium, Switzerland, France, Italy and Greece as participants. Conservative interior excludes founding and dissolution years; neither banknote union nor political federation is asserted.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1866",
+              "until": "1924",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Year precision retained. Bounded research interval is not an assertion that the historical institution or person began or ended at its research cutoff."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 01 original institutional source review",
+          "sourceIdentifier": "swiss-federal-state-latin-monetary-union"
+        },
+        "relatedEntityIds": [
+          "belgium-kingdom",
+          "france-political-frameworks"
+        ]
+      },
+      {
+        "id": "r01-lowcountries-carl-spitteler",
+        "entityId": "swiss-federal-state",
+        "category": "important-figures",
+        "value": "Carl Spitteler — Poet and writer working in Lucerne.",
+        "temporal": {
+          "kind": "interval",
+          "from": "1893",
+          "until": "1923",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "swiss-federal-state-carl-spitteler",
+          "description": "Named historical state or institutional/person association; no statistical or polygon-wide inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r01-spitteler-biography"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r01-spitteler-biography",
+            "locator": "Life: Lucerne residence 1892; Work: first poetry collection 1881; death 1924",
+            "note": "Nobel institutional facts distinguish Swiss residence from earlier work in Russia. No later Olympian Spring composition or prize projected into 1900.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1893",
+              "until": "1923",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Relevance follows documented work/residence, not birthplace or projected nationality. Later awards are significance corroboration, not claims that an award had occurred in an earlier snapshot. Conservative interior omits arrival/departure years."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 01 original institutional source review",
+          "sourceIdentifier": "carl-spitteler"
+        },
+        "figure": {
+          "personId": "carl-spitteler",
+          "name": "Carl Spitteler",
+          "categories": [
+            "literary"
+          ],
+          "lifespan": {
+            "from": "1845-04-24",
+            "until": "1924-12-29"
+          },
+          "relationship": "Writer resident in Lucerne from 1892.",
+          "activity": "Poet and writer working in Lucerne.",
+          "contribution": "Prometheus und Epimetheus, published in 1881, predates the relevance interval."
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "r01-spitteler-biography",
+        "title": "Carl Spitteler – Facts",
+        "institution": "Nobel Foundation / Nobel Prize Outreach",
+        "url": "https://www.nobelprize.org/prizes/literature/1919/spitteler/facts/",
+        "accessed": "2026-10-02",
+        "kind": "institutional-biographical-reference",
+        "usage": "Individual factual paraphrases with institutional attribution; no original images or full copyrighted pages redistributed."
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "b01-belgian-franc",
+          "r01-spitteler-biography"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "b01-belgian-franc",
+          "r01-spitteler-biography"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator independently checked original institutional source bodies and indexed originals. Review preserves dated institutional/residential association, distinct treaty signature and implementation, exact event dates and year precision. No modern nationality inference. Zeeman held when original interval verification failed; Aalto postwar work bounded after completed 1950s works, Bohr 1959–1960 institutional leadership documented continuously since1920; capital conflicts still fail closed.",
+      "preservedPackageHashes": [
+        "e6dd653ae493cc4206a4aa634fc970132c289a032a0baf6c6cb213566b243334",
+        "d9f933584e531feef5661d8108d2a06383824793539ca846287aaa77905e725b"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "092a8fdb104303ea8726af494a9cb8ed7b72c80c8880d5f08446db292b41ec60",
+    "productionFingerprint": "0df66e7a48c0f3cfcac3dd9aa89c74948143a39d412fd7ecd02b975589f424d3",
+    "jobId": "dossier-335cfbf22dbb0864fad6642b",
+    "review": {
+      "reviewer": "regional-coordinator-original-source-review",
+      "packageHash": "092a8fdb104303ea8726af494a9cb8ed7b72c80c8880d5f08446db292b41ec60",
+      "bodyReviewed": true,
+      "rationale": "Coordinator independently checked original institutional source bodies and indexed originals. Review preserves dated institutional/residential association, distinct treaty signature and implementation, exact event dates and year precision. No modern nationality inference. Zeeman held when original interval verification failed; Aalto postwar work bounded after completed 1950s works, Bohr 1959–1960 institutional leadership documented continuously since1920; capital conflicts still fail closed.",
+      "reviewedIssues": [],
+      "decisions": {
+        "r01-lowcountries-swiss-federal-state-latin-monetary-union": "accepted",
+        "r01-lowcountries-carl-spitteler": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "r01-lowcountries-swiss-federal-state-latin-monetary-union",
+      "r01-lowcountries-carl-spitteler"
+    ]
+  }
+}
