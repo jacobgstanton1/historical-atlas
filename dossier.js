@@ -1,229 +1,90 @@
-const node = (tag, text, className) => {
-  const element = document.createElement(tag);
-  if (text !== undefined && text !== null) element.textContent = String(text);
-  if (className) element.className = className;
-  return element;
-};
-export function period(fact) {
-  if (!fact.validFrom && !fact.validUntil) return '';
-  return (fact.validFrom || 'Start not curated') + ' – ' +
-    (fact.validUntil ? (fact.validUntil.length === 10 ? 'before ' : 'ends during ') + fact.validUntil : 'end not curated');
-}
-export function renderDossier(container, context) {
-  const {stableId, savedName, features, year, snapshotYear, metadata, presence,
-    selectRelated, goYear, findBoundaries, boundaryIndex, currentMapIds,
-    minYear, maxYear} = context;
-  const resolved = metadata?.resolve(stableId, year) || {};
-  const {entity} = resolved;
-  const used = new Map(), registry = metadata?.registry || new Map();
-  const content = node('div');
-  const markers = (element, sourceIds = []) => {
-    for (const id of sourceIds) {
-      if (!registry.has(id)) continue;
-      if (!used.has(id)) used.set(id, used.size + 1);
-      const link = node('a', '[' + used.get(id) + ']', 'fact-source');
-      link.href = '#dossier-source-' + id;
-      link.setAttribute('aria-label', 'Source ' + used.get(id) + ': ' + registry.get(id).title);
-      element.append(' ', link);
-    }
-    return element;
-  };
-  const section = title => {
-    const s = node('section', undefined, 'dossier-section');
-    s.append(node('h2', title)); content.append(s); return s;
-  };
-  const row = (list, label, value, facts = [], detail = '') => {
-    if (value === undefined || value === null || value === '') return;
-    const wrapper = node('div', undefined, 'dossier-row');
-    const dd = node('dd', value);
-    markers(dd, facts.flatMap(f => f.sourceIds || []));
-    if (detail) dd.append(node('small', detail, 'fact-context'));
-    wrapper.append(node('dt', label), dd); list.append(wrapper);
-  };
-  const listSection = title => { const s = section(title), dl = node('dl'); s.append(dl); return dl; };
-  const values = (field, label, dl) => {
-    for (const f of resolved[field] || []) row(dl, f.label || label, f.value, [f],
-      [period(f), f.note].filter(Boolean).join(' · '));
-  };
-  const primaryNames = (resolved.names || []).filter(f=>f.kind === 'primary');
-  const name = (primaryNames.length === 1 ? primaryNames[0].value : '') || savedName || stableId;
-  content.append(node('div', 'Historical Territory Dossier', 'inspector-kicker'));
-  const heading = node('h1', name); heading.id = 'territory-name';
-  markers(heading, primaryNames.length === 1 ? primaryNames[0].sourceIds : ['basemaps']);
-  content.append(heading);
-  for (const f of resolved.names || []) if (f.kind !== 'primary' || primaryNames.length > 1)
-    content.append(markers(node('p', [f.value, period(f)].filter(Boolean).join(' · '), 'dossier-alternate'), f.sourceIds));
-  const calendar = resolved.calendarYear || {};
-  const status = calendar.isTransition
-    ? calendar.kind === 'partial-framework'
-      ? 'Transition-year review — partial dated framework coverage'
-      : 'Transition year — multiple curated political frameworks'
-    : (resolved.politicalStatus || []).map(f => f.value).join('; ');
-  content.append(markers(node('p', (status ? status + ' · ' : '') + year + ' CE · selected year', 'dossier-year'),
-    (resolved.politicalStatus || []).flatMap(f => f.sourceIds || [])));
-  if (!features.length) {
-    content.append(node('p', 'This selected map identity is not present in the ' + snapshotYear +
-      ' boundary snapshot. No successor has been selected.', 'dossier-notice'));
-  }
-  if (calendar.isTransition) content.append(node('p', resolved.ambiguous
-    ? 'This calendar year spans more than one curated identity. Their dated records are shown separately; no single identity describes the whole year.'
-    : calendar.needsResearch
-      ? 'The dated records below cover only the documented frameworks or intervals. A complete chronology for this calendar year needs research; no partial-year framework is presented as the whole year.'
-      : 'Different dated political frameworks apply within this calendar year. Read each record with its applicability dates; none is selected as representative of the whole year.',
-    'dossier-notice'));
-  if (resolved.identityPeriods?.length) {
-    const s = section('Historical identities during the selected year');
-    for (const candidate of resolved.identityPeriods) {
-      const names = candidate.names.filter(f=>f.kind === 'primary');
-      const heading = markers(node('h3',names.map(f=>f.value).join(' / ') || candidate.entity.id),names.flatMap(f=>f.sourceIds||[]));
-      s.append(heading);
-      for (const mapping of candidate.mappings) s.append(node('small','Mapped applicability: '+period(mapping),'fact-context'));
-      const dl = node('dl');s.append(dl);
-      for (const [field,label] of [['names','Name'],['politicalStatus','Political status'],['governments','Government'],['leaders','Leadership'],['capitals','Capital / seat'],['currencies','Currency'],['descriptions','Overview']])
-        for (const f of candidate[field] || []) row(dl,f.role||f.label||label,f.value,[f],[period(f),f.note].filter(Boolean).join(' · '));
-    }
-  }
-  for (const flag of resolved.flags || []) {
-    const figure = node('figure', undefined, 'dossier-flag');
-    const img = node('img'); img.src = flag.asset; img.alt = flag.alt || flag.value;
-    img.addEventListener('error', () => figure.remove(), {once:true});
-    const caption = markers(node('figcaption', [flag.value, period(flag), flag.note, flag.license + ' · ' + flag.attribution].filter(Boolean).join(' · ')), flag.sourceIds);
-    figure.append(img, caption); content.append(figure);
-  }
-  const keyFields = ['politicalStatus','capitals','population','area','currencies'];
-  if (keyFields.some(k => resolved[k]?.length) || entity?.existence) {
-    const dl = listSection('Key Facts');
-    if (entity?.existence) row(dl, 'Existence', (entity.existence.validFrom || 'Start not curated') +
-      ' – ' + (entity.existence.validUntil || 'End not curated'), [entity.existence], entity.existence.note);
-    values('politicalStatus','Political status',dl); values('capitals','Capital',dl);
-    for (const f of [...(resolved.population || []), ...(resolved.area || [])]) row(dl,
-      f.metric || 'Area', typeof f.value === 'number' ? f.value.toLocaleString('en-US') + (f.unit ? ' ' + f.unit : '') : f.value,
-      [f], [f.asOf ? f.asOf + ' ' + (f.observationType || 'observation') : period(f), f.scope,
-        f.asOf && Number(f.asOf.slice(0,4)) !== year ? 'Earlier observation; no interpolation' : '',
-        f.note].filter(Boolean).join(' · '));
-    values('currencies','Currency',dl);
-  }
-  if (resolved.governments?.length || resolved.leaders?.length) {
-    const dl = listSection('Politics and Leadership');
-    values('governments','Government',dl);
-    for (const f of resolved.leaders || []) {
-      row(dl,f.role || 'Leadership',f.value,[f],[period(f),f.note].filter(Boolean).join(' · '));
-      if (f.party) row(dl,'Leader’s party',f.party,[f]);
-      if (f.dynasty) row(dl,'Dynasty',f.dynasty,[f]);
-      if (f.legislature) row(dl,'Legislature',f.legislature,[f]);
-    }
-  }
-  if (resolved.economy?.length) {
-    const dl = listSection('Population and Economy');
-    for (const f of resolved.economy) row(dl,f.metric,f.value + (f.unit ? ' ' + f.unit : ''),[f],
-      [f.asOf,f.observationType,f.scope,f.note,'No interpolation'].filter(Boolean).join(' · '));
-  }
-  const related = (target, parent) => {
-    const mapId = (target.mapIds || []).find(id => currentMapIds.has(id));
-    if (mapId) {
-      const button = node('button',target.value,'dossier-link'); button.type = 'button';
-      button.addEventListener('click',() => selectRelated(mapId)); parent.append(button);
-    } else parent.append(node('span',target.value),node('small','Not represented as this identity in the current snapshot','fact-context'));
-    markers(parent,target.sourceIds);
-    if (target.date) parent.append(node('small',target.date + (target.note ? ' · ' + target.note : ''),'fact-context'));
-    else if (target.note) parent.append(node('small',target.note,'fact-context'));
-  };
-  const rawRelations = [];
-  for (const feature of features) {
-    const p = feature.properties || {};
-    // The normalized authority may default to NAME; only original supplied
-    // fields are evidence of a relationship. Include self-references honestly.
-    for (const [field,label] of [['SUBJECTO','SUBJECTO (source authority)'],['PARTOF','PARTOF (source grouping)'],
-      ['authority','Authority (source)'],['part_of','Part of (source)']]) {
-      if (p[field] && !rawRelations.some(r => r.type === label && r.value === p[field]))
-        rawRelations.push({type:label,value:p[field],sourceIds:['basemaps'],mapIds:[]});
-    }
-  }
-  if (rawRelations.length || resolved.relationships?.length) {
-    const s = section('Relationships');
-    for (const f of [...(resolved.relationships || []),...rawRelations]) {
-      const p = node('p',undefined,'relationship-row'); p.append(node('strong',f.type + ': '));
-      // Only exact source names or explicitly curated aliases are eligible.
-      // Ambiguous aliases deliberately leave the relationship unavailable.
-      const candidates = [...new Set(context.allFeatures.filter(feature =>
-        feature.properties?._name === f.value ||
-        metadata?.searchTerms(feature.properties?._stableId, year).includes(f.value)
-      ).map(feature => feature.properties._stableId))];
-      const target = f.mapIds?.length ? f : {...f,mapIds:candidates.length === 1 ? candidates : []};
-      related(target,p); s.append(p);
-    }
-    s.append(node('p','Source authority and grouping are not assertions of sovereignty or constitutional status.','dossier-muted'));
-  }
-  if (resolved.descriptions?.length) {
-    const s = section('Overview');
-    for (const f of resolved.descriptions) {
-      s.append(markers(node('p',f.value),f.sourceIds),node('small',period(f),'fact-context'));
-    }
-  }
-  if (resolved.events?.length) {
-    const s = section('History / Timeline'), ol = node('ol',undefined,'dossier-events');
-    for (const e of [...resolved.events].sort((a,b) => a.date.localeCompare(b.date))) {
-      const eventYear = Number(e.date.slice(0,4)), li = node('li',undefined,eventYear === year ? 'is-selected-year' : '');
-      li.append(node('time',e.date),markers(node('strong',e.title),e.sourceIds));
-      if (e.note) li.append(node('small',e.note,'fact-context'));
-      if (eventYear > year) li.append(node('small','After selected year','fact-context'));
-      if (eventYear >= minYear && eventYear <= maxYear && eventYear !== year) {
-        const b = node('button','View in ' + eventYear,'dossier-link'); b.type='button';
-        b.addEventListener('click',() => goYear(eventYear)); li.append(b);
+import {historicalDate,historicalInterval,intersects,yearString,historicalYear,formatHistoricalPeriod} from './historical-chronology.js';
+const node=(tag,text,className)=>{const e=document.createElement(tag);if(text!==undefined&&text!==null)e.textContent=String(text);if(className)e.className=className;return e;};
+export const period=fact=>formatHistoricalPeriod({kind:'interval',from:fact.validFrom,until:fact.validUntil});
+const legacyFields={names:'identity',politicalStatus:'political-institutional',governments:'political-institutional',leaders:'leadership',capitals:'capital',currencies:'currency',flags:'historical-flag',population:'population-statistics',area:'area-statistics',economy:'economy',events:'events-context',relationships:'relationships',predecessors:'relationships',successors:'relationships',descriptions:'overview'};
+const safeFlag=flag=>flag?.license&&flag.attribution&&/^\.\/assets\/flags\/[\w-]+\.svg$/.test(flag.asset||'');
+export function resolveDossierRecords(resolved,rich,year,registry,{mappings=[]}={}){
+  const records=rich?.resolve(resolved.entity?.id,year,{registry,mappings})||[],selected=historicalDate(yearString(year));
+  for(const [field,category]of Object.entries(legacyFields))for(const f of resolved[field]||[]){
+    if(!f.sourceIds?.length||f.sourceIds.some(id=>!registry.has(id)))continue;
+    const value=f.value??(category==='events-context'?[f.title,f.note].filter(Boolean).join(' — '):undefined);
+    if(value===undefined||value===null||value==='')continue;
+    const temporal=f.asOf?{kind:'observation',observationDate:f.asOf}:f.date?{kind:'event',date:f.date}:{kind:'interval',from:f.validFrom,until:f.validUntil};
+    let mode='applicable';try{
+      if(temporal.kind==='interval'&&!temporal.from&&!temporal.until)continue;
+      const b=historicalInterval(temporal);
+      if(temporal.kind==='interval'&&!intersects(b,selected))continue;
+      if(temporal.kind!=='interval'){
+        const distance=year-historicalDate(temporal.observationDate||temporal.date).year;
+        if(distance<0||distance>(temporal.kind==='observation'?10:5))continue;
+        if(temporal.kind==='observation'&&!f.scope)continue;
+        if(distance>0)mode=temporal.kind==='observation'?'nearby-observation':'dated-context';
       }
-      ol.append(li);
-    }
-    s.append(ol);
+    }catch{continue;}
+    const flag=category==='historical-flag'?{asset:f.asset,type:f.flagType||f.type||f.value,alt:f.alt||f.value,license:f.license,attribution:f.attribution}:undefined;
+    if(flag&&!safeFlag(flag))continue;
+    records.push({category,value,role:f.role||f.label,sourceIds:f.sourceIds,temporal,actualTemporal:temporal,mode,
+      qualifications:[f.note,f.confidence&&!['high','documented'].includes(f.confidence)?'Evidence: '+f.confidence:''].filter(Boolean),scope:typeof f.scope==='string'?{description:f.scope}:f.scope,
+      unit:f.unit,metric:f.metric,flag,type:field==='predecessors'?'Preceded by':field==='successors'?'Succeeded by':f.type,mapIds:f.mapIds,legacyField:field});
   }
-  if (resolved.predecessors?.length || resolved.successors?.length) {
-    const s = section('Predecessors / Successors');
-    for (const [field,label] of [['predecessors','Preceded by'],['successors','Succeeded by']])
-      for (const f of resolved[field] || []) { const p=node('p'); p.append(node('strong',label + ': ')); related(f,p); s.append(p); }
-    s.append(node('p','Curated transitions; related links preserve the selected year.','dossier-muted'));
+  const merged=new Map();
+  for(const r of records){const t=r.temporal,key=JSON.stringify([r.category,r.value,r.role||null,r.type||null,t.kind,t.from||null,t.until||null,t.observationDate||t.date||null,r.flag?.asset||null]);
+    if(merged.has(key)){const old=merged.get(key);old.sourceIds=[...new Set([...old.sourceIds,...r.sourceIds])];old.qualifications=[...new Set([...old.qualifications,...r.qualifications])];}
+    else merged.set(key,{...r,sourceIds:[...r.sourceIds],qualifications:[...(r.qualifications||[])]});
   }
-  const boundary = section('Boundary History');
-  boundary.append(node('p','Changes between available mapped snapshots; these do not establish the date of a real historical border change.','dossier-muted'));
-  const navigation = node('div',undefined,'boundary-navigation');
-  navigation.append(node('p',features.length ? 'Checking available mapped snapshots…' : 'Unavailable while this identity is absent.'));
-  boundary.append(navigation);
-  const dl = listSection('Map Data');
-  row(dl,'Requested year',year);
-  row(dl,'Boundary snapshot',snapshotYear + (context.boundaryLoadFailed ? ' · retained snapshot; requested boundary file unavailable' : year === snapshotYear ? ' · exact snapshot year' : ' · nearest available snapshot'));
-  row(dl,'Source','Historical Basemaps',[{sourceIds:['basemaps']}]);
-  const precision = [...new Set(features.map(f => f.properties?._confidenceLabel || 'Unspecified'))];
-  row(dl,'Boundary precision',precision.length > 1 ? 'Mixed: ' + precision.join('; ') : precision[0] || 'No geometry in this snapshot',[{sourceIds:['basemaps']}]);
-  row(dl,'Available-map presence',presence,[{sourceIds:['basemaps']}]);
-  row(dl,'Map identity',stableId);
-  if (!entity && !resolved.ambiguous) content.append(node('p',context.metadataError ?
-    'Historical metadata could not be loaded. Map-derived information remains available.' :
-    'Additional historical metadata has not yet been curated for this identity and selected year.','dossier-muted'));
-  const sources = section('Sources'), ol = node('ol',undefined,'dossier-sources');
-  for (const [id,number] of used) {
-    const source = registry.get(id), li=node('li'); li.id='dossier-source-'+id; li.value=number;
-    const link=node('a',source.title); link.href=source.url; link.target='_blank'; link.rel='noopener noreferrer';
-    li.append(link,node('small',[source.institution,source.publicationDate,source.datasetVersion,
-      'Accessed '+source.accessed,source.license,source.attribution,source.usage].filter(Boolean).join(' · '),'fact-context'));
-    ol.append(li);
+  return [...merged.values()];
+}
+export function displayValue(record,{compact=false}={}){
+  const value=record.value;
+  if(typeof value==='number'){
+    if(compact&&record.category==='population-statistics'&&value>=1000000)return (value/1000000).toLocaleString('en-US',{maximumFractionDigits:1})+' million';
+    return value.toLocaleString('en-US',{maximumFractionDigits:3})+(record.unit?' '+record.unit:'');
   }
-  // The map source remains linked even if the separate metadata service fails.
-  if (!used.has('basemaps')) {
-    const li=node('li'),a=node('a','Historical Basemaps'); a.href='https://github.com/aourednik/historical-basemaps';
-    a.target='_blank'; a.rel='noopener noreferrer'; li.append(a); ol.append(li);
+  if(typeof value==='string')return value;
+  return value?.text||value?.description||value?.title||value?.name||'';
+}
+export function renderDossier(container,context){
+  const {stableId,savedName,year,snapshotYear,metadata,rich,features=[]}=context,resolved=metadata?.resolve(stableId,year)||{};
+  const registry=new Map([...(metadata?.registry||[]),...(rich?.registry||[])]),used=new Map(),assetCredits=new Map(),content=node('div',undefined,'territory-dossier');let sourceDetails;
+  if(!registry.has('basemaps'))registry.set('basemaps',{title:'Historical Basemaps',institution:'Historical Basemaps project',url:'https://github.com/aourednik/historical-basemaps'});
+  const markers=(element,ids=[])=>{for(const id of [...new Set(ids)]){const source=registry.get(id);if(!source||!/^https:\/\//.test(source.url||''))continue;if(!used.has(id))used.set(id,used.size+1);const a=node('a',String(used.get(id)),'fact-source');a.href='#dossier-source-'+id;a.setAttribute('aria-label','Source '+used.get(id)+': '+source.title);a.addEventListener('click',()=>{if(sourceDetails)sourceDetails.open=true;});element.append(' ',a);}return element;};
+  const section=(parent,title)=>{const s=node('section',undefined,'dossier-section');s.append(node('h2',title));parent.append(s);return s;};
+  const groupRecords=resolved.ambiguous?resolved.identityPeriods||[]:[resolved];
+  const nameFacts=resolved.names?.filter(f=>f.kind==='primary')||[],name=nameFacts.length===1?nameFacts[0].value:savedName||'Selected territory';
+  const header=node('header',undefined,'dossier-header'),heading=markers(node('h1',name),nameFacts.length===1?nameFacts[0].sourceIds:['basemaps']);heading.id='territory-name';header.append(node('div','Historical dossier','inspector-kicker'),heading);
+  const date=node('p',historicalYear(year),'dossier-snapshot');date.setAttribute('aria-label','Selected historical year '+historicalYear(year));header.append(date);
+  if(year!==snapshotYear||context.boundaryLoadFailed)header.append(node('p','Boundary map: '+historicalYear(snapshotYear)+(context.boundaryLoadFailed?' · requested boundaries unavailable':' · nearest available snapshot'),'dossier-boundary-note'));
+  content.append(header);
+  if(!features.length)content.append(node('p','This identity is absent from the displayed boundary snapshot. No successor has been substituted.','dossier-notice'));
+  if(resolved.calendarYear?.isTransition)content.append(node('p',resolved.ambiguous?'This year spans several historical identities. Each framework and its dated evidence are shown separately.':'A political transition or partial dated framework occurs during this year. Dates below qualify which part of the year each record describes.','dossier-notice'));
+  if(context.richError)content.append(node('p','Additional dossier records are temporarily unavailable. Available historical evidence is shown below.','dossier-notice'));
+  if(context.metadataError)content.append(node('p','Historical identity records are temporarily unavailable. The boundary map name is retained.','dossier-notice'));
+  const detail=r=>[formatHistoricalPeriod(r.temporal),r.mode==='dated-figure-context'?'Recent achievement context; association is dated to that period':r.mode==='nearby-observation'?'Earlier measurement; not a new estimate for '+historicalYear(year):'',['population-statistics','area-statistics','density','economy'].includes(r.category)?r.scope?.description:'',...r.qualifications].filter(Boolean).join(' · ');
+  const humanLabel=value=>value?value.replaceAll('-', ' ').replace(/^./,c=>c.toUpperCase()):'Historical record';
+  const fact=(parent,r,label)=>{const row=node('div',undefined,'dossier-row'),dd=markers(node('dd',displayValue(r)),r.sourceIds);if(detail(r))dd.append(node('small',detail(r),'fact-context'));row.append(node('dt',humanLabel(label||r.role||r.metric)),dd);parent.append(row);};
+  for(const framework of groupRecords){
+    if(!framework.entity)continue;
+    const parent=resolved.ambiguous?node('article',undefined,'dossier-framework'):content;if(resolved.ambiguous){parent.append(node('h2',framework.names?.find(f=>f.kind==='primary')?.value||savedName));for(const m of framework.mappings||[])parent.append(node('small',period(m),'fact-context'));content.append(parent);}
+    const records=resolveDossierRecords(framework,rich,year,registry,{mappings:framework.mappings||[]}),by=category=>records.filter(r=>r.category===category);
+    const identities=by('identity').filter(r=>!r.legacyField||displayValue(r)!==name);if(identities.length){const s=section(parent,'Historical identity'),dl=node('dl');for(const r of identities)fact(dl,r,r.role||'Name / designation');s.append(dl);}
+    const flags=by('historical-flag').filter(r=>safeFlag(r.flag));
+    if(flags.length){const strip=node('div',undefined,'dossier-flags');for(const r of flags){assetCredits.set(r.flag.asset,{value:displayValue(r),license:r.flag.license,attribution:r.flag.attribution});const figure=node('figure',undefined,'dossier-flag'),img=node('img');img.src=r.flag.asset;img.alt=r.flag.alt||displayValue(r);img.addEventListener('error',()=>figure.remove(),{once:true});figure.append(img,markers(node('figcaption',[r.flag.type,formatHistoricalPeriod(r.temporal)].filter(Boolean).join(' · ')),r.sourceIds));strip.append(figure);}parent.append(strip);}
+    const glance=node('dl',undefined,'dossier-glance');
+    for(const [category,label]of [['capital','Capital'],['population-statistics','Population'],['area-statistics','Area'],['density','Density'],['currency','Currency']]){const rows=by(category);if(rows.length===1){const r=rows[0],item=node('div'),dd=markers(node('dd',displayValue(r,{compact:true})),r.sourceIds);if(r.temporal.kind==='observation')dd.append(node('small',formatHistoricalPeriod(r.temporal),'fact-context'));item.append(node('dt',label),dd);glance.append(item);}}
+    const status=by('political-institutional').find(r=>r.legacyField==='politicalStatus');if(status){const item=node('div');item.append(node('dt','State / regime'),markers(node('dd',displayValue(status)),status.sourceIds));glance.append(item);}if(glance.childNodes.length)parent.append(glance);
+    if(by('overview').length){const s=section(parent,'Overview');for(const r of by('overview'))s.append(markers(node('p',displayValue(r)),r.sourceIds),node('small',[formatHistoricalPeriod(r.temporal),...r.qualifications].filter(Boolean).join(' · '),'fact-context'));}
+    if(by('political-institutional').length){const s=section(parent,'Government & Politics'),dl=node('dl');for(const r of by('political-institutional'))fact(dl,r,r.role||'Political framework');s.append(dl);}
+    if(by('leadership').length){const s=section(parent,'Leadership'),dl=node('dl');for(const r of by('leadership'))fact(dl,r,r.role||'Leader');s.append(dl);}
+    const territory=['population-statistics','area-statistics','density'].flatMap(by);if(territory.length){const s=section(parent,'Population & Territory'),dl=node('dl');for(const r of territory)fact(dl,r,{'population-statistics':'Population','area-statistics':'Area',density:'Density'}[r.category]);s.append(dl,node('p','Measurements retain their observation dates and statistical geography; they are not inferred from map polygons.','dossier-muted'));}
+    const economy=[...by('currency'),...by('economy')];if(economy.length){const s=section(parent,'Economy'),dl=node('dl');for(const r of economy)fact(dl,r,r.category==='currency'?'Currency':r.metric||'Economic evidence');s.append(dl);}
+    if(by('events-context').length){const s=section(parent,'Major Events'),ol=node('ol',undefined,'dossier-events');for(const r of by('events-context').sort((a,b)=>historicalInterval(a.temporal).lo-historicalInterval(b.temporal).lo)){const li=node('li');li.append(node('time',formatHistoricalPeriod(r.temporal)),markers(node('p',displayValue(r)),r.sourceIds));if(r.qualifications.length)li.append(node('small',r.qualifications.join(' · '),'fact-context'));ol.append(li);}if(ol.childNodes.length>8){const more=node('details',undefined,'dossier-more');more.append(node('summary','All '+ol.childNodes.length+' events'),ol);s.append(more);}else s.append(ol);}
+    if(by('important-figures').length){const s=section(parent,'Important Figures'),grid=node('div',undefined,'dossier-figures');for(const r of by('important-figures')){const f=r.figure,card=node('article',undefined,'dossier-figure-card');card.append(markers(node('h3',f.name),r.sourceIds),node('p',f.categories.join(' · '),'figure-category'),node('small',formatHistoricalPeriod({...f.lifespan,kind:'interval'}),'fact-context'),node('p',f.contribution),node('p',f.relationship,'figure-association'),node('small',formatHistoricalPeriod(r.temporal)+' · '+(r.mode==='dated-figure-context'?'Recent achievement context':'Period relevance'),'fact-context'),node('p',f.activity,'figure-activity'));if(r.qualifications.length)card.append(node('small',r.qualifications.join(' · '),'fact-context'));grid.append(card);}s.append(grid);}
+    if(by('relationships').length){const s=section(parent,'Historical Relationships'),dl=node('dl');for(const r of by('relationships'))fact(dl,r,r.type||r.role||'Historical relationship');s.append(dl);}
   }
-  sources.append(ol);
+  if(!resolved.entity&&!resolved.ambiguous&&!context.metadataError)content.append(node('p','A sourced historical dossier is not yet available for this identity and selected year.','dossier-muted'));
+  const boundary=node('details',undefined,'dossier-methodology');boundary.append(node('summary','Map & boundary context'));const dl=node('dl');fact(dl,{value:historicalYear(year),sourceIds:[],temporal:{kind:'interval'},qualifications:[]},'Selected year');fact(dl,{value:historicalYear(snapshotYear),sourceIds:['basemaps'],temporal:{kind:'interval'},qualifications:[]},'Boundary snapshot');boundary.append(dl,node('p','Boundary snapshots describe mapped geometry, not the precise dates of sovereignty or succession.','dossier-muted'));const navigation=node('div',undefined,'boundary-navigation');boundary.append(navigation);let checked=false;
+  boundary.addEventListener('toggle',()=>{if(!boundary.open||checked||!features.length||!context.findBoundaries)return;checked=true;navigation.append(node('p','Checking mapped snapshots…','dossier-muted'));context.findBoundaries(stableId,context.boundaryIndex).then(result=>{if(!navigation.isConnected)return;navigation.replaceChildren();for(const [key,label]of [['previous','Previous mapped change'],['next','Next mapped change']]){const c=result[key];if(c){const b=node('button',label+' · '+historicalYear(c.year),'dossier-link');b.type='button';b.addEventListener('click',()=>context.goYear(c.year));navigation.append(b);}}if(result.incomplete)navigation.append(node('p','Some boundary files are unavailable.','dossier-muted'));}).catch(()=>navigation.replaceChildren(node('p','Boundary history is temporarily unavailable.','dossier-muted')));});content.append(boundary);
+  sourceDetails=node('details',undefined,'dossier-methodology');sourceDetails.append(node('summary','Sources & Methodology · '+used.size+' sources'),node('p','Historical records are resolved for the selected year. Observation and event dates remain distinct. Nearby evidence is explicitly dated; political transition years retain their separate frameworks. Exact end dates mark applicability boundaries; year and month dates retain their source precision.','dossier-muted'));const sources=node('ol',undefined,'dossier-sources');for(const[id,number]of used){const s=registry.get(id),li=node('li');li.id='dossier-source-'+id;li.value=number;const a=node('a',s.title);a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';li.append(a,node('small',[s.institution,s.publicationDate,s.license,s.attribution].filter(Boolean).join(' · '),'fact-context'));sources.append(li);}sourceDetails.append(sources);content.append(sourceDetails);
+  if(assetCredits.size){sourceDetails.append(node('h3','Flag / symbol credits'));for(const credit of assetCredits.values())sourceDetails.append(node('p',[credit.value,credit.license,credit.attribution].join(' · '),'dossier-muted'));}
   container.replaceChildren(content);
-  if (features.length) findBoundaries(stableId,boundaryIndex).then(result => {
-    if (!navigation.isConnected) return;
-    navigation.replaceChildren();
-    if (result.absent) { navigation.append(node('p','No mapped geometry for this identity.')); return; }
-    for (const [key,label] of [['previous','Previous mapped change'],['next','Next mapped change']]) {
-      const change=result[key];
-      if (change) { const b=node('button',label+' · '+change.year,'dossier-link'); b.type='button';
-        b.addEventListener('click',() => goYear(change.year)); navigation.append(b); }
-      else navigation.append(node('p',label+': '+(result.incomplete?'not established':'none in available snapshots'),'dossier-muted'));
-    }
-    if (result.incomplete) navigation.append(node('p','Some snapshot files could not be checked.','dossier-muted'));
-  }).catch(() => {
-    if (navigation.isConnected) navigation.replaceChildren(node('p','Boundary history is temporarily unavailable.','dossier-muted'));
-  });
 }

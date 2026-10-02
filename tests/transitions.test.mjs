@@ -40,8 +40,8 @@ test('exact, month and year precision plus exclusive endpoints remain unchanged'
  assert.equal(validInYear({validUntil:'1900'},1900),true);
  assert.equal(validInYear({validUntil:'1900'},1901),false);
  assert.equal(intervalBounds({validUntil:'1900-06-01'})[1],Date.UTC(1900,5,1));
- assert.equal(period({validFrom:'1900-06',validUntil:'1901'}),'1900-06 – ends during 1901');
- assert.equal(period({validFrom:'1900-06-01',validUntil:'1901-01-01'}),'1900-06-01 – before 1901-01-01');
+ assert.equal(period({validFrom:'1900-06',validUntil:'1901'}),'Jun 1900 – 1901');
+ assert.equal(period({validFrom:'1900-06-01',validUntil:'1901-01-01'}),'1 Jun 1900 – 1 Jan 1901');
 });
 test('all pre-programme facts, mappings and source records are preserved as immutable prefixes',()=>{
  const baseline=read('tests/fixtures/programme-baseline.json'),hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');

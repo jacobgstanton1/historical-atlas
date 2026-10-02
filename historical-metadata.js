@@ -116,6 +116,7 @@ export function createMetadataIndex(database, sources) {
       const entity = entities.get(ids[0]);
       if (!entity) return { entity: null };
       const result = resolveEntity(entity, year);
+      result.mappings = matches;
       result.calendarYear = reviewCalendarYear(entity,result,matches,year);
       return result;
     },

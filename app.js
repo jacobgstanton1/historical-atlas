@@ -7,8 +7,9 @@ import {
   presenceSummary,
   clean,
 } from './data-pipeline.js?v=0.6.1';
-import { loadMetadata } from './historical-metadata.js?v=0.6.1&data=b21';
-import { renderDossier } from './dossier.js?v=0.6.1&review=transition1';
+import { loadMetadata } from './historical-metadata.js?v=territory2-1';
+import { renderDossier } from './dossier.js?v=territory2-1';
+import { loadRichDossiers } from './rich-dossier.js?v=territory2-1';
 import { createBoundaryHistory } from './boundary-history.js?v=0.6.1';
 
 const SNAPSHOTS = [
@@ -71,6 +72,8 @@ let worldViewActive = true;
 const snapshotCache = new Map();
 let metadata = null;
 let metadataError = false;
+let rich = null;
+let richError = false;
 let selectedName = '';
 let renderedDossierId = null;
 let displayedIndex = currentIndex;
@@ -83,6 +86,14 @@ loadMetadata().then(value => {
 }).catch(error => {
   metadataError = true;
   console.warn('Historical metadata unavailable', error);
+  if (selectedStableId) renderInspector(selectedStableId);
+});
+loadRichDossiers().then(value => {
+  rich = value;
+  if (selectedStableId) renderInspector(selectedStableId);
+}).catch(error => {
+  richError = true;
+  console.warn('Additional historical dossier data unavailable', error);
   if (selectedStableId) renderInspector(selectedStableId);
 });
 
@@ -491,7 +502,7 @@ function renderInspector(stableId) {
   renderDossier(body, {
     stableId, savedName: selectedName, features: matches, allFeatures: currentFeatures,
     year: requestedYear, snapshotYear: SNAPSHOTS[displayedIndex].year,
-    metadata, metadataError, boundaryLoadFailed, minYear: TEST_MIN_YEAR, maxYear: TEST_MAX_YEAR,
+    metadata, metadataError, rich, richError, boundaryLoadFailed, minYear: TEST_MIN_YEAR, maxYear: TEST_MAX_YEAR,
     presence: presenceReady ? presenceSummary(presenceRegistry, stableId, SNAPSHOTS.length) : 'Presence index loading…',
     currentMapIds: new Set(currentFeatures.map(f => f.properties._stableId)),
     selectRelated: id => selectFeature(id, { zoomTo: true }),
