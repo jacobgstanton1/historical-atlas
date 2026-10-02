@@ -1,0 +1,418 @@
+{
+  "job": {
+    "id": "dossier-d04def53c0c96e873c437999",
+    "entityId": "british-somaliland-prewar-core",
+    "period": {
+      "from": "1914",
+      "until": "1938"
+    },
+    "mapIds": [
+      "entity-british-somaliland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "ac3eef61699c7e0999894fc101ac52ce2bb8211105468a50b9a95bbccf5a638d",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-mapped-area-british-somaliland-prewar-core",
+    "jobId": "dossier-d04def53c0c96e873c437999",
+    "entityId": "british-somaliland-prewar-core",
+    "mapIds": [
+      "entity-british-somaliland"
+    ],
+    "worker": {
+      "id": "geodesic-area-deterministic-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "ac3eef61699c7e0999894fc101ac52ce2bb8211105468a50b9a95bbccf5a638d",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1914",
+      "until": "1938"
+    },
+    "claims": [
+      {
+        "id": "mapped-area-0ecf80a8eb101cdc7acc3bce",
+        "entityId": "british-somaliland-prewar-core",
+        "category": "area-statistics",
+        "value": 473000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1914",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "british-somaliland-prewar-core-mapped-1914-08649a6878f6",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-british-somaliland in the 1914 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1914.geojson; file SHA256 a99425f9486e2243835fdc75ad7d82e6ddf3c72fcef87a63429f3313d830cf19; geometry SHA256 08649a6878f66ba083823e64e71ba38f8b896feacf31d7d58585b19f52621a07; map IDs entity-british-somaliland",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 473426.6028861095 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1914.geojson:08649a6878f66ba083823e64e71ba38f8b896feacf31d7d58585b19f52621a07"
+        }
+      },
+      {
+        "id": "mapped-area-da86f466a212d57faeec8de3",
+        "entityId": "british-somaliland-prewar-core",
+        "category": "area-statistics",
+        "value": 164000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "british-somaliland-prewar-core-mapped-1920-dba214d0965b",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-british-somaliland in the 1920 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1920.geojson; file SHA256 fce1c97dc6a6095594cbb7eb896ccd5ce8b2d72254e73a24148c0a4ea200849f; geometry SHA256 dba214d0965bac319829d114ee47f1b40650def38e185e231f2a826aec7af628; map IDs entity-british-somaliland",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 163504.79599257815 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1920.geojson:dba214d0965bac319829d114ee47f1b40650def38e185e231f2a826aec7af628"
+        }
+      },
+      {
+        "id": "mapped-area-1f562f4b42f6836662a91e3d",
+        "entityId": "british-somaliland-prewar-core",
+        "category": "area-statistics",
+        "value": 164000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "british-somaliland-prewar-core-mapped-1930-19a9964cf40a",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-british-somaliland in the 1930 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1930.geojson; file SHA256 5666e451125ceb0193532338bfecf6f403e1a4d7ff62f54fd560cafb0b0b1b61; geometry SHA256 19a9964cf40a1902cb1af7ab5d1f0361482ffdca4c5eb10d810a8e559c73310d; map IDs entity-british-somaliland",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 163504.79599257835 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1930.geojson:19a9964cf40a1902cb1af7ab5d1f0361482ffdca4c5eb10d810a8e559c73310d"
+        }
+      },
+      {
+        "id": "mapped-area-a99082f323027b2c7fdb76ee",
+        "entityId": "british-somaliland-prewar-core",
+        "category": "area-statistics",
+        "value": 164000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1938",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "british-somaliland-prewar-core-mapped-1938-dba214d0965b",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-british-somaliland in the 1938 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1938.geojson; file SHA256 f2565926fed1b197227b7fe126934a43ed75b8fce007e38be72a7d21a415d813; geometry SHA256 dba214d0965bac319829d114ee47f1b40650def38e185e231f2a826aec7af628; map IDs entity-british-somaliland",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 163504.79599257815 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1938.geojson:dba214d0965bac319829d114ee47f1b40650def38e185e231f2a826aec7af628"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "basemaps"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator reviewed exact runtime source selection, source-file and geometry hashes, existing manifest identity grouping, validity-envelope and feature-count checks, no fallback or topology repair, WGS84 geodesic method, holes/duplicate union/antimeridian tests (8 passed), point-date semantics, mapped-only scope and explicit non-official qualifications. This acceptance concerns a reproducible geometric measurement, not newly researched sovereignty or official statistical territory.",
+      "preservedPackageHashes": [
+        "725847440e2e756b35bae6bb0fb9622121722cbf26003bbf3bb938d3e3aa4cc6",
+        "c8308c72753cbeb3e864c43c7f5ed01ec932fff27519341d5f369bae6b285273"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "3e4e571f6054bd173f8e4a5babf2a1c93c961fb77b6f4723e6f3c452dd649515",
+    "productionFingerprint": "ac3eef61699c7e0999894fc101ac52ce2bb8211105468a50b9a95bbccf5a638d",
+    "jobId": "dossier-d04def53c0c96e873c437999",
+    "review": {
+      "reviewer": "/root coordinator mathematical-method and source-association review",
+      "packageHash": "3e4e571f6054bd173f8e4a5babf2a1c93c961fb77b6f4723e6f3c452dd649515",
+      "bodyReviewed": true,
+      "rationale": "Coordinator reviewed exact runtime source selection, source-file and geometry hashes, existing manifest identity grouping, validity-envelope and feature-count checks, no fallback or topology repair, WGS84 geodesic method, holes/duplicate union/antimeridian tests (8 passed), point-date semantics, mapped-only scope and explicit non-official qualifications. This acceptance concerns a reproducible geometric measurement, not newly researched sovereignty or official statistical territory.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "mapped-area-0ecf80a8eb101cdc7acc3bce": "accepted",
+        "mapped-area-da86f466a212d57faeec8de3": "accepted",
+        "mapped-area-1f562f4b42f6836662a91e3d": "accepted",
+        "mapped-area-a99082f323027b2c7fdb76ee": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "mapped-area-0ecf80a8eb101cdc7acc3bce",
+      "mapped-area-da86f466a212d57faeec8de3",
+      "mapped-area-1f562f4b42f6836662a91e3d",
+      "mapped-area-a99082f323027b2c7fdb76ee"
+    ]
+  }
+}

@@ -1,0 +1,518 @@
+{
+  "job": {
+    "id": "dossier-30a0ca02fd5c7e697be21fd4",
+    "entityId": "portuguese-guinea-separate-colonial-core",
+    "period": {
+      "from": "1880",
+      "until": "1938"
+    },
+    "mapIds": [
+      "entity-guinea-bissau",
+      "entity-portuguese-guinea"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "2bf1cedf28003a9ec60ae5115755155495850ab1b3b436e7d5697e875bca4ff1",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-mapped-area-portuguese-guinea-separate-colonial-core",
+    "jobId": "dossier-30a0ca02fd5c7e697be21fd4",
+    "entityId": "portuguese-guinea-separate-colonial-core",
+    "mapIds": [
+      "entity-guinea-bissau",
+      "entity-portuguese-guinea"
+    ],
+    "worker": {
+      "id": "geodesic-area-deterministic-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "2bf1cedf28003a9ec60ae5115755155495850ab1b3b436e7d5697e875bca4ff1",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1880",
+      "until": "1938"
+    },
+    "claims": [
+      {
+        "id": "mapped-area-7cccb403de9eae90db6e3971",
+        "entityId": "portuguese-guinea-separate-colonial-core",
+        "category": "area-statistics",
+        "value": 13000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1880",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "portuguese-guinea-separate-colonial-core-mapped-1880-4b6993c94255",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-portuguese-guinea in the 1880 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1880.geojson; file SHA256 4751e30d881d60d31479f5d016ff4d9c1df47e9bb18efaa3a5086601f68f76dc; geometry SHA256 4b6993c94255c93786fe859590d0ad91bd3b8680c42bb3af4950e7518e04968e; map IDs entity-portuguese-guinea",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 12996.501451789236 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1880.geojson:4b6993c94255c93786fe859590d0ad91bd3b8680c42bb3af4950e7518e04968e"
+        }
+      },
+      {
+        "id": "mapped-area-5e7b3dce96489de10ffd63cd",
+        "entityId": "portuguese-guinea-separate-colonial-core",
+        "category": "area-statistics",
+        "value": 13000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1900",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "portuguese-guinea-separate-colonial-core-mapped-1900-4b6993c94255",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-portuguese-guinea in the 1900 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1900.geojson; file SHA256 9c9221c851eaba4948e11b2a0b078e89239231f8c74df0dc321750ae234f10b5; geometry SHA256 4b6993c94255c93786fe859590d0ad91bd3b8680c42bb3af4950e7518e04968e; map IDs entity-portuguese-guinea",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 12996.501451789236 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1900",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1900.geojson:4b6993c94255c93786fe859590d0ad91bd3b8680c42bb3af4950e7518e04968e"
+        }
+      },
+      {
+        "id": "mapped-area-f35f478275b31b5a85dc47b7",
+        "entityId": "portuguese-guinea-separate-colonial-core",
+        "category": "area-statistics",
+        "value": 28100,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1914",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "portuguese-guinea-separate-colonial-core-mapped-1914-bbdba26d48a0",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-portuguese-guinea in the 1914 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1914.geojson; file SHA256 a99425f9486e2243835fdc75ad7d82e6ddf3c72fcef87a63429f3313d830cf19; geometry SHA256 bbdba26d48a065d9025fc89599892d2f16a945c037bcd80002472bee1bbb3b78; map IDs entity-portuguese-guinea",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 28122.41433203594 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1914.geojson:bbdba26d48a065d9025fc89599892d2f16a945c037bcd80002472bee1bbb3b78"
+        }
+      },
+      {
+        "id": "mapped-area-0770c6acf14eecc3cf22a955",
+        "entityId": "portuguese-guinea-separate-colonial-core",
+        "category": "area-statistics",
+        "value": 28100,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "portuguese-guinea-separate-colonial-core-mapped-1920-bbdba26d48a0",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-guinea-bissau in the 1920 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1920.geojson; file SHA256 fce1c97dc6a6095594cbb7eb896ccd5ce8b2d72254e73a24148c0a4ea200849f; geometry SHA256 bbdba26d48a065d9025fc89599892d2f16a945c037bcd80002472bee1bbb3b78; map IDs entity-guinea-bissau",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 28122.41433203594 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1920.geojson:bbdba26d48a065d9025fc89599892d2f16a945c037bcd80002472bee1bbb3b78"
+        }
+      },
+      {
+        "id": "mapped-area-25d6774ef31792ed2a88f1b8",
+        "entityId": "portuguese-guinea-separate-colonial-core",
+        "category": "area-statistics",
+        "value": 28100,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "portuguese-guinea-separate-colonial-core-mapped-1930-58e5f86139d3",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-guinea-bissau in the 1930 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1930.geojson; file SHA256 5666e451125ceb0193532338bfecf6f403e1a4d7ff62f54fd560cafb0b0b1b61; geometry SHA256 58e5f86139d3ec78b941a172e3be2c5ed0b35ab4dd44716cc24398afe6e54ef6; map IDs entity-guinea-bissau",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 28122.414332035878 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1930.geojson:58e5f86139d3ec78b941a172e3be2c5ed0b35ab4dd44716cc24398afe6e54ef6"
+        }
+      },
+      {
+        "id": "mapped-area-d6ae23adf03a6665a74e83be",
+        "entityId": "portuguese-guinea-separate-colonial-core",
+        "category": "area-statistics",
+        "value": 28100,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1938",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "portuguese-guinea-separate-colonial-core-mapped-1938-bbdba26d48a0",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-guinea-bissau in the 1938 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1938.geojson; file SHA256 f2565926fed1b197227b7fe126934a43ed75b8fce007e38be72a7d21a415d813; geometry SHA256 bbdba26d48a065d9025fc89599892d2f16a945c037bcd80002472bee1bbb3b78; map IDs entity-guinea-bissau",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 28122.41433203594 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1938.geojson:bbdba26d48a065d9025fc89599892d2f16a945c037bcd80002472bee1bbb3b78"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "basemaps"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator reviewed exact runtime source selection, source-file and geometry hashes, existing manifest identity grouping, validity-envelope and feature-count checks, no fallback or topology repair, WGS84 geodesic method, holes/duplicate union/antimeridian tests (8 passed), point-date semantics, mapped-only scope and explicit non-official qualifications. This acceptance concerns a reproducible geometric measurement, not newly researched sovereignty or official statistical territory.",
+      "preservedPackageHashes": [
+        "725847440e2e756b35bae6bb0fb9622121722cbf26003bbf3bb938d3e3aa4cc6",
+        "c8308c72753cbeb3e864c43c7f5ed01ec932fff27519341d5f369bae6b285273"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "c3f29eb1faf7a67d21fefa9937076dfd54c445f0a93aa7b3611944e84339fd0b",
+    "productionFingerprint": "2bf1cedf28003a9ec60ae5115755155495850ab1b3b436e7d5697e875bca4ff1",
+    "jobId": "dossier-30a0ca02fd5c7e697be21fd4",
+    "review": {
+      "reviewer": "/root coordinator mathematical-method and source-association review",
+      "packageHash": "c3f29eb1faf7a67d21fefa9937076dfd54c445f0a93aa7b3611944e84339fd0b",
+      "bodyReviewed": true,
+      "rationale": "Coordinator reviewed exact runtime source selection, source-file and geometry hashes, existing manifest identity grouping, validity-envelope and feature-count checks, no fallback or topology repair, WGS84 geodesic method, holes/duplicate union/antimeridian tests (8 passed), point-date semantics, mapped-only scope and explicit non-official qualifications. This acceptance concerns a reproducible geometric measurement, not newly researched sovereignty or official statistical territory.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "mapped-area-7cccb403de9eae90db6e3971": "accepted",
+        "mapped-area-5e7b3dce96489de10ffd63cd": "accepted",
+        "mapped-area-f35f478275b31b5a85dc47b7": "accepted",
+        "mapped-area-0770c6acf14eecc3cf22a955": "accepted",
+        "mapped-area-25d6774ef31792ed2a88f1b8": "accepted",
+        "mapped-area-d6ae23adf03a6665a74e83be": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "mapped-area-7cccb403de9eae90db6e3971",
+      "mapped-area-5e7b3dce96489de10ffd63cd",
+      "mapped-area-f35f478275b31b5a85dc47b7",
+      "mapped-area-0770c6acf14eecc3cf22a955",
+      "mapped-area-25d6774ef31792ed2a88f1b8",
+      "mapped-area-d6ae23adf03a6665a74e83be"
+    ]
+  }
+}

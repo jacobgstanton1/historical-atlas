@@ -1,0 +1,565 @@
+{
+  "job": {
+    "id": "dossier-7a98fcb56e3faf757d83c3f5",
+    "entityId": "united-states",
+    "period": {
+      "from": "1800",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-united-states"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "0d8b5cad9c0c2c17055f090ce843f9e9aa88981fe89fafe054795560525731d9",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-mapped-area-united-states",
+    "jobId": "dossier-7a98fcb56e3faf757d83c3f5",
+    "entityId": "united-states",
+    "mapIds": [
+      "entity-united-states"
+    ],
+    "worker": {
+      "id": "geodesic-area-deterministic-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "0d8b5cad9c0c2c17055f090ce843f9e9aa88981fe89fafe054795560525731d9",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1800",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "mapped-area-72a20af909840f0ff964fc53",
+        "entityId": "united-states",
+        "category": "area-statistics",
+        "value": 2300000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1800",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-states-mapped-1800-9276f397bcdd",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-united-states in the 1800 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1800.geojson; file SHA256 51fcb6b1f1c361956a3fc24a9c646844ff88754842aa113780428fb4abcd5f2c; geometry SHA256 9276f397bcdd0bb467acfb0894a110d2ab197a513defe0317c084c47e8f0f894; map IDs entity-united-states",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 2300312.5891174013 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1800",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1800.geojson:9276f397bcdd0bb467acfb0894a110d2ab197a513defe0317c084c47e8f0f894"
+        }
+      },
+      {
+        "id": "mapped-area-3cef237e618a9074d762a3af",
+        "entityId": "united-states",
+        "category": "area-statistics",
+        "value": 5530000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1815",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-states-mapped-1815-a57c4f30b9f9",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-united-states in the 1815 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1815.geojson; file SHA256 fb654f734583f550904cfa45f361e395c1a488c4960050da2632cb2ac7d1cd1e; geometry SHA256 a57c4f30b9f9cce7d74e4522490e883d6c0a9afb42853f001192d37ba0318750; map IDs entity-united-states",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 5528504.057494427 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1815",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1815.geojson:a57c4f30b9f9cce7d74e4522490e883d6c0a9afb42853f001192d37ba0318750"
+        }
+      },
+      {
+        "id": "mapped-area-93a48a97b739c72d19e46944",
+        "entityId": "united-states",
+        "category": "area-statistics",
+        "value": 9270000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1914",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-states-mapped-1914-e46641a06657",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-united-states in the 1914 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1914.geojson; file SHA256 a99425f9486e2243835fdc75ad7d82e6ddf3c72fcef87a63429f3313d830cf19; geometry SHA256 e46641a066578afda516806c343142bf75f8e90bb8d556a6aac443d98adbe297; map IDs entity-united-states",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 9266204.350289784 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1914.geojson:e46641a066578afda516806c343142bf75f8e90bb8d556a6aac443d98adbe297"
+        }
+      },
+      {
+        "id": "mapped-area-2af83634585dc297d7364d0e",
+        "entityId": "united-states",
+        "category": "area-statistics",
+        "value": 9270000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-states-mapped-1920-e54d58870300",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-united-states in the 1920 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1920.geojson; file SHA256 fce1c97dc6a6095594cbb7eb896ccd5ce8b2d72254e73a24148c0a4ea200849f; geometry SHA256 e54d588703002a1195b5b29336100e1389e9d70e6d86abf908fac05a4665cda3; map IDs entity-united-states",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 9269881.267604178 km2; 2 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1920.geojson:e54d588703002a1195b5b29336100e1389e9d70e6d86abf908fac05a4665cda3"
+        }
+      },
+      {
+        "id": "mapped-area-cfc2b24e97c43a7cd986f37a",
+        "entityId": "united-states",
+        "category": "area-statistics",
+        "value": 9270000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-states-mapped-1930-42b437a93076",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-united-states in the 1930 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1930.geojson; file SHA256 5666e451125ceb0193532338bfecf6f403e1a4d7ff62f54fd560cafb0b0b1b61; geometry SHA256 42b437a93076f33e5bb755a0e77ff55b4cb2d19dd95073373e3a4fd663b3f923; map IDs entity-united-states",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 9269881.267604176 km2; 2 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1930.geojson:42b437a93076f33e5bb755a0e77ff55b4cb2d19dd95073373e3a4fd663b3f923"
+        }
+      },
+      {
+        "id": "mapped-area-fefbdb739e2826511d19436b",
+        "entityId": "united-states",
+        "category": "area-statistics",
+        "value": 9270000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1945",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-states-mapped-1945-0f3d4e69fb4a",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-united-states in the 1945 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1945.geojson; file SHA256 3005839db7bcc5256d511b3abb01f1140c0cce245189bc5c28e7d557a47bc775; geometry SHA256 0f3d4e69fb4a58320297f4807b83a6471ac4c6502e0ad9ced2adacc672231ad1; map IDs entity-united-states",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 9269881.267604178 km2; 2 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1945.geojson:0f3d4e69fb4a58320297f4807b83a6471ac4c6502e0ad9ced2adacc672231ad1"
+        }
+      },
+      {
+        "id": "mapped-area-b4192e0fa601c6576ccf83a3",
+        "entityId": "united-states",
+        "category": "area-statistics",
+        "value": 9270000,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-states-mapped-1960-c66c7373212d",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-united-states in the 1960 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1960.geojson; file SHA256 6067386755f8fc120a4fca44f198952a18da89cd062aa8013d5a0d08cbad8988; geometry SHA256 c66c7373212dc9cd86df1e331adb9b1147ac879a2a720cf756074b670bbc9160; map IDs entity-united-states",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 9269881.267604178 km2; 3 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1960.geojson:c66c7373212dc9cd86df1e331adb9b1147ac879a2a720cf756074b670bbc9160"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "basemaps"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator reviewed exact runtime source selection, source-file and geometry hashes, existing manifest identity grouping, validity-envelope and feature-count checks, no fallback or topology repair, WGS84 geodesic method, holes/duplicate union/antimeridian tests (8 passed), point-date semantics, mapped-only scope and explicit non-official qualifications. This acceptance concerns a reproducible geometric measurement, not newly researched sovereignty or official statistical territory.",
+      "preservedPackageHashes": [
+        "725847440e2e756b35bae6bb0fb9622121722cbf26003bbf3bb938d3e3aa4cc6",
+        "c8308c72753cbeb3e864c43c7f5ed01ec932fff27519341d5f369bae6b285273"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "0adbf45c187f3d67ec2d88846f8985a3ec1f9592a71c126528d26d4574f9791d",
+    "productionFingerprint": "0d8b5cad9c0c2c17055f090ce843f9e9aa88981fe89fafe054795560525731d9",
+    "jobId": "dossier-7a98fcb56e3faf757d83c3f5",
+    "review": {
+      "reviewer": "/root coordinator mathematical-method and source-association review",
+      "packageHash": "0adbf45c187f3d67ec2d88846f8985a3ec1f9592a71c126528d26d4574f9791d",
+      "bodyReviewed": true,
+      "rationale": "Coordinator reviewed exact runtime source selection, source-file and geometry hashes, existing manifest identity grouping, validity-envelope and feature-count checks, no fallback or topology repair, WGS84 geodesic method, holes/duplicate union/antimeridian tests (8 passed), point-date semantics, mapped-only scope and explicit non-official qualifications. This acceptance concerns a reproducible geometric measurement, not newly researched sovereignty or official statistical territory.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "mapped-area-72a20af909840f0ff964fc53": "accepted",
+        "mapped-area-3cef237e618a9074d762a3af": "accepted",
+        "mapped-area-93a48a97b739c72d19e46944": "accepted",
+        "mapped-area-2af83634585dc297d7364d0e": "accepted",
+        "mapped-area-cfc2b24e97c43a7cd986f37a": "accepted",
+        "mapped-area-fefbdb739e2826511d19436b": "accepted",
+        "mapped-area-b4192e0fa601c6576ccf83a3": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "mapped-area-72a20af909840f0ff964fc53",
+      "mapped-area-3cef237e618a9074d762a3af",
+      "mapped-area-93a48a97b739c72d19e46944",
+      "mapped-area-2af83634585dc297d7364d0e",
+      "mapped-area-cfc2b24e97c43a7cd986f37a",
+      "mapped-area-fefbdb739e2826511d19436b",
+      "mapped-area-b4192e0fa601c6576ccf83a3"
+    ]
+  }
+}

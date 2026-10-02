@@ -58,6 +58,7 @@ function match(c,year,options){
  const actual=t.observationDate||t.date,b=dateBounds(actual),distance=year-b.year;
  if(distance<0)return null; // No future statistics/events in a selected snapshot.
  if(overlaps(b,y))return{mode:t.kind==='observation'?'observation':'event',actualTemporal:t};
+ if(c.category==='area-statistics'&&c.metric==='Area (derived mapped geometry)')return null;
  const window=t.kind==='observation'?options.observationWindowYears:options.contextWindowYears;
  if(distance>window)return null;
  return{mode:t.kind==='observation'?'nearby-observation':'dated-context',actualTemporal:t};

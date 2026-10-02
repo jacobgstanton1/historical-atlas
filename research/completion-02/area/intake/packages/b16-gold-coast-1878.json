@@ -1,0 +1,320 @@
+{
+  "job": {
+    "id": "dossier-0169cab1a3b636293ac353d4",
+    "entityId": "b16-gold-coast-1878",
+    "period": {
+      "from": "1878",
+      "until": "1880"
+    },
+    "mapIds": [
+      "entity-gold-coast-gb"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "584bd63c1d8efd91d2cb7b1075fd19e62504333c7df6025ca26e2853b3a0c359",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-mapped-area-b16-gold-coast-1878",
+    "jobId": "dossier-0169cab1a3b636293ac353d4",
+    "entityId": "b16-gold-coast-1878",
+    "mapIds": [
+      "entity-gold-coast-gb"
+    ],
+    "worker": {
+      "id": "geodesic-area-deterministic-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "584bd63c1d8efd91d2cb7b1075fd19e62504333c7df6025ca26e2853b3a0c359",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1878",
+      "until": "1880"
+    },
+    "claims": [
+      {
+        "id": "mapped-area-4cb6883c0372f45f603e4e44",
+        "entityId": "b16-gold-coast-1878",
+        "category": "area-statistics",
+        "value": 24500,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1878",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "b16-gold-coast-1878-mapped-1878-23df3cb40447",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-gold-coast-gb in the 1878 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1878.geojson; file SHA256 e792520cd24cfb77b117d41533a59b0a5b82fc53a291fff1549ddc73e7f9a8b2; geometry SHA256 23df3cb404476979050e7e94450da75d7afbd43f180f552e5190face17f3d846; map IDs entity-gold-coast-gb",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 24541.78176963105 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1878.geojson:23df3cb404476979050e7e94450da75d7afbd43f180f552e5190face17f3d846"
+        }
+      },
+      {
+        "id": "mapped-area-91a45f4a7d1af1bbf0b1e1af",
+        "entityId": "b16-gold-coast-1878",
+        "category": "area-statistics",
+        "value": 24500,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1880",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "b16-gold-coast-1878-mapped-1880-a79f40157009",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-gold-coast-gb in the 1880 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1880.geojson; file SHA256 4751e30d881d60d31479f5d016ff4d9c1df47e9bb18efaa3a5086601f68f76dc; geometry SHA256 a79f401570090ccea95d3ff73fc0e42aecdd24fa4ee24be85de762ba5660c51f; map IDs entity-gold-coast-gb",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 24541.781769631085 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1880.geojson:a79f401570090ccea95d3ff73fc0e42aecdd24fa4ee24be85de762ba5660c51f"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "basemaps"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator reviewed exact runtime source selection, source-file and geometry hashes, existing manifest identity grouping, validity-envelope and feature-count checks, no fallback or topology repair, WGS84 geodesic method, holes/duplicate union/antimeridian tests (8 passed), point-date semantics, mapped-only scope and explicit non-official qualifications. This acceptance concerns a reproducible geometric measurement, not newly researched sovereignty or official statistical territory.",
+      "preservedPackageHashes": [
+        "725847440e2e756b35bae6bb0fb9622121722cbf26003bbf3bb938d3e3aa4cc6",
+        "c8308c72753cbeb3e864c43c7f5ed01ec932fff27519341d5f369bae6b285273"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "5daaf8a628d831b0736d38d283bf5392a6881eabd95f72d3cba01c54e17a5aec",
+    "productionFingerprint": "584bd63c1d8efd91d2cb7b1075fd19e62504333c7df6025ca26e2853b3a0c359",
+    "jobId": "dossier-0169cab1a3b636293ac353d4",
+    "review": {
+      "reviewer": "/root coordinator mathematical-method and source-association review",
+      "packageHash": "5daaf8a628d831b0736d38d283bf5392a6881eabd95f72d3cba01c54e17a5aec",
+      "bodyReviewed": true,
+      "rationale": "Coordinator reviewed exact runtime source selection, source-file and geometry hashes, existing manifest identity grouping, validity-envelope and feature-count checks, no fallback or topology repair, WGS84 geodesic method, holes/duplicate union/antimeridian tests (8 passed), point-date semantics, mapped-only scope and explicit non-official qualifications. This acceptance concerns a reproducible geometric measurement, not newly researched sovereignty or official statistical territory.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "mapped-area-4cb6883c0372f45f603e4e44": "accepted",
+        "mapped-area-91a45f4a7d1af1bbf0b1e1af": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "mapped-area-4cb6883c0372f45f603e4e44",
+      "mapped-area-91a45f4a7d1af1bbf0b1e1af"
+    ]
+  }
+}

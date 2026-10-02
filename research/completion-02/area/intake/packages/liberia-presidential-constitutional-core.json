@@ -1,0 +1,663 @@
+{
+  "job": {
+    "id": "dossier-c529d1b9781607e7c1d1bdd9",
+    "entityId": "liberia-presidential-constitutional-core",
+    "period": {
+      "from": "1878",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-liberia"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "ac7d8b19c95485b20a818af09c60453dbabe1c140f99d11abea152981bb38216",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-mapped-area-liberia-presidential-constitutional-core",
+    "jobId": "dossier-c529d1b9781607e7c1d1bdd9",
+    "entityId": "liberia-presidential-constitutional-core",
+    "mapIds": [
+      "entity-liberia"
+    ],
+    "worker": {
+      "id": "geodesic-area-deterministic-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "ac7d8b19c95485b20a818af09c60453dbabe1c140f99d11abea152981bb38216",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1878",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "mapped-area-8ccb38187b143352b8745722",
+        "entityId": "liberia-presidential-constitutional-core",
+        "category": "area-statistics",
+        "value": 43400,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1878",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-mapped-1878-e1a88cc7d35a",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-liberia in the 1878 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1878.geojson; file SHA256 e792520cd24cfb77b117d41533a59b0a5b82fc53a291fff1549ddc73e7f9a8b2; geometry SHA256 e1a88cc7d35a3fa5fce7fa3fb47ab6b839818f345c10ae18a66467628b0cb7dd; map IDs entity-liberia",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 43410.1741494916 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1878.geojson:e1a88cc7d35a3fa5fce7fa3fb47ab6b839818f345c10ae18a66467628b0cb7dd"
+        }
+      },
+      {
+        "id": "mapped-area-d3709fc2a3bff741aa36f9aa",
+        "entityId": "liberia-presidential-constitutional-core",
+        "category": "area-statistics",
+        "value": 43400,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1880",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-mapped-1880-01e5431e732b",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-liberia in the 1880 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1880.geojson; file SHA256 4751e30d881d60d31479f5d016ff4d9c1df47e9bb18efaa3a5086601f68f76dc; geometry SHA256 01e5431e732b803d5938b3aa911f83fa5ad51520eb935fe72c0cc78734a39216; map IDs entity-liberia",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 43410.17414949168 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1880.geojson:01e5431e732b803d5938b3aa911f83fa5ad51520eb935fe72c0cc78734a39216"
+        }
+      },
+      {
+        "id": "mapped-area-00d486316f58dd67b7fb9d1f",
+        "entityId": "liberia-presidential-constitutional-core",
+        "category": "area-statistics",
+        "value": 43400,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1900",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-mapped-1900-01e5431e732b",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-liberia in the 1900 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1900.geojson; file SHA256 9c9221c851eaba4948e11b2a0b078e89239231f8c74df0dc321750ae234f10b5; geometry SHA256 01e5431e732b803d5938b3aa911f83fa5ad51520eb935fe72c0cc78734a39216; map IDs entity-liberia",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 43410.17414949168 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1900",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1900.geojson:01e5431e732b803d5938b3aa911f83fa5ad51520eb935fe72c0cc78734a39216"
+        }
+      },
+      {
+        "id": "mapped-area-d9ccf80b5836c0eca4ebf3d8",
+        "entityId": "liberia-presidential-constitutional-core",
+        "category": "area-statistics",
+        "value": 90700,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1914",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-mapped-1914-1cb2d06a3c2f",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-liberia in the 1914 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1914.geojson; file SHA256 a99425f9486e2243835fdc75ad7d82e6ddf3c72fcef87a63429f3313d830cf19; geometry SHA256 1cb2d06a3c2fe3af3d08305551647570b123e62a8382434cd1790383ff74e331; map IDs entity-liberia",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 90654.61383693788 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1914.geojson:1cb2d06a3c2fe3af3d08305551647570b123e62a8382434cd1790383ff74e331"
+        }
+      },
+      {
+        "id": "mapped-area-f36da10adb2bb375f007aefa",
+        "entityId": "liberia-presidential-constitutional-core",
+        "category": "area-statistics",
+        "value": 90700,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-mapped-1920-1cb2d06a3c2f",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-liberia in the 1920 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1920.geojson; file SHA256 fce1c97dc6a6095594cbb7eb896ccd5ce8b2d72254e73a24148c0a4ea200849f; geometry SHA256 1cb2d06a3c2fe3af3d08305551647570b123e62a8382434cd1790383ff74e331; map IDs entity-liberia",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 90654.61383693788 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1920.geojson:1cb2d06a3c2fe3af3d08305551647570b123e62a8382434cd1790383ff74e331"
+        }
+      },
+      {
+        "id": "mapped-area-9ce9806fe5210665c4c725c1",
+        "entityId": "liberia-presidential-constitutional-core",
+        "category": "area-statistics",
+        "value": 90700,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-mapped-1930-3478f0c2cee4",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-liberia in the 1930 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1930.geojson; file SHA256 5666e451125ceb0193532338bfecf6f403e1a4d7ff62f54fd560cafb0b0b1b61; geometry SHA256 3478f0c2cee47ec7a7577ff4f2d8d64321cbe8b2fb10f425db076df2791b0026; map IDs entity-liberia",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 90654.61383693773 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1930.geojson:3478f0c2cee47ec7a7577ff4f2d8d64321cbe8b2fb10f425db076df2791b0026"
+        }
+      },
+      {
+        "id": "mapped-area-93217a146558d201abebd20f",
+        "entityId": "liberia-presidential-constitutional-core",
+        "category": "area-statistics",
+        "value": 90700,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1938",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-mapped-1938-1cb2d06a3c2f",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-liberia in the 1938 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1938.geojson; file SHA256 f2565926fed1b197227b7fe126934a43ed75b8fce007e38be72a7d21a415d813; geometry SHA256 1cb2d06a3c2fe3af3d08305551647570b123e62a8382434cd1790383ff74e331; map IDs entity-liberia",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 90654.61383693788 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1938.geojson:1cb2d06a3c2fe3af3d08305551647570b123e62a8382434cd1790383ff74e331"
+        }
+      },
+      {
+        "id": "mapped-area-dd43e45a7fb0a6461fd0547d",
+        "entityId": "liberia-presidential-constitutional-core",
+        "category": "area-statistics",
+        "value": 90700,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1945",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-mapped-1945-1cb2d06a3c2f",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-liberia in the 1945 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1945.geojson; file SHA256 3005839db7bcc5256d511b3abb01f1140c0cce245189bc5c28e7d557a47bc775; geometry SHA256 1cb2d06a3c2fe3af3d08305551647570b123e62a8382434cd1790383ff74e331; map IDs entity-liberia",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 90654.61383693788 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1945.geojson:1cb2d06a3c2fe3af3d08305551647570b123e62a8382434cd1790383ff74e331"
+        }
+      },
+      {
+        "id": "mapped-area-4042dfc02dde5b33cb3a8b93",
+        "entityId": "liberia-presidential-constitutional-core",
+        "category": "area-statistics",
+        "value": 90700,
+        "metric": "Area (derived mapped geometry)",
+        "unit": "km2",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-mapped-1960-1cb2d06a3c2f",
+          "description": "Mapped polygons associated through existing atlas map IDs entity-liberia in the 1960 boundary snapshot. This measures the displayed mapped extent, not an official contemporary statistic or all territory claimed by the polity.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "basemaps"
+        ],
+        "evidence": [
+          {
+            "sourceId": "basemaps",
+            "locator": "https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/world_1960.geojson; file SHA256 6067386755f8fc120a4fca44f198952a18da89cd062aa8013d5a0d08cbad8988; geometry SHA256 1cb2d06a3c2fe3af3d08305551647570b123e62a8382434cd1790383ff74e331; map IDs entity-liberia",
+            "note": "WGS84 ellipsoidal geodesic polygon area, holes subtracted, exact duplicate/overlap union, antimeridian longitude unwrapping, three significant digits. No geometry repair, historical ownership or official statistical assertion. Raw computed area 90654.61383693788 km2; 1 source features. pyproj 3.7.2; Shapely 2.1.2. Derived from the actual boundary snapshot, not a population statistical geography.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "derived"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Derived mapped/geometric area, not an official contemporary historical area statistic.",
+          "Approximate historical polygons; three significant digits. Holes subtracted and overlapping mapped pieces counted once.",
+          "Boundary snapshot year is the geometry observation date. No continuous territorial validity is inferred between snapshots."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "WGS84 ellipsoidal geodesic calculation of frozen actual atlas geometry",
+          "sourceIdentifier": "research/completion-02/area/cache/world_1960.geojson:1cb2d06a3c2fe3af3d08305551647570b123e62a8382434cd1790383ff74e331"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "basemaps"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator reviewed exact runtime source selection, source-file and geometry hashes, existing manifest identity grouping, validity-envelope and feature-count checks, no fallback or topology repair, WGS84 geodesic method, holes/duplicate union/antimeridian tests (8 passed), point-date semantics, mapped-only scope and explicit non-official qualifications. This acceptance concerns a reproducible geometric measurement, not newly researched sovereignty or official statistical territory.",
+      "preservedPackageHashes": [
+        "725847440e2e756b35bae6bb0fb9622121722cbf26003bbf3bb938d3e3aa4cc6",
+        "c8308c72753cbeb3e864c43c7f5ed01ec932fff27519341d5f369bae6b285273"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "b95d481d2a7c9f0513e31c87c73ecb0457e84ba22bd392959442f8d1f9b37778",
+    "productionFingerprint": "ac7d8b19c95485b20a818af09c60453dbabe1c140f99d11abea152981bb38216",
+    "jobId": "dossier-c529d1b9781607e7c1d1bdd9",
+    "review": {
+      "reviewer": "/root coordinator mathematical-method and source-association review",
+      "packageHash": "b95d481d2a7c9f0513e31c87c73ecb0457e84ba22bd392959442f8d1f9b37778",
+      "bodyReviewed": true,
+      "rationale": "Coordinator reviewed exact runtime source selection, source-file and geometry hashes, existing manifest identity grouping, validity-envelope and feature-count checks, no fallback or topology repair, WGS84 geodesic method, holes/duplicate union/antimeridian tests (8 passed), point-date semantics, mapped-only scope and explicit non-official qualifications. This acceptance concerns a reproducible geometric measurement, not newly researched sovereignty or official statistical territory.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "mapped-area-8ccb38187b143352b8745722": "accepted",
+        "mapped-area-d3709fc2a3bff741aa36f9aa": "accepted",
+        "mapped-area-00d486316f58dd67b7fb9d1f": "accepted",
+        "mapped-area-d9ccf80b5836c0eca4ebf3d8": "accepted",
+        "mapped-area-f36da10adb2bb375f007aefa": "accepted",
+        "mapped-area-9ce9806fe5210665c4c725c1": "accepted",
+        "mapped-area-93217a146558d201abebd20f": "accepted",
+        "mapped-area-dd43e45a7fb0a6461fd0547d": "accepted",
+        "mapped-area-4042dfc02dde5b33cb3a8b93": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "mapped-area-8ccb38187b143352b8745722",
+      "mapped-area-d3709fc2a3bff741aa36f9aa",
+      "mapped-area-00d486316f58dd67b7fb9d1f",
+      "mapped-area-d9ccf80b5836c0eca4ebf3d8",
+      "mapped-area-f36da10adb2bb375f007aefa",
+      "mapped-area-9ce9806fe5210665c4c725c1",
+      "mapped-area-93217a146558d201abebd20f",
+      "mapped-area-dd43e45a7fb0a6461fd0547d",
+      "mapped-area-4042dfc02dde5b33cb3a8b93"
+    ]
+  }
+}

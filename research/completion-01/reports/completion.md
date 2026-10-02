@@ -1,11 +1,11 @@
 # 1800–1960 dossier completion
 
-Evidence coverage: **36.32%** (5753/15840 applicable slots).
-Research resolution: **36.32%** (5753/15840 assessed slots).
-Dossiers: 1056; critically sparse: 56; completely unresolved: 52; core-supported: 225.
+Evidence coverage: **42.46%** (6725/15840 applicable slots).
+Research resolution: **42.46%** (6725/15840 assessed slots).
+Dossiers: 1056; critically sparse: 54; completely unresolved: 52; core-supported: 225.
 Unresolved raw identity/snapshot occurrences outside the resolved-entity denominator: 717. These remain open identity work, not resolved coverage.
-Prior 14-category metric: 4785/14784. The new status category changes the denominator.
-States: {"supported":5753,"partial":382,"missing":9402,"held":303,"uncertain":0,"known-unavailable":0,"not-applicable":0,"territorially-incompatible":0}.
+Prior 14-category metric: 5757/14784. The new status category changes the denominator.
+States: {"supported":6725,"partial":382,"missing":8359,"held":374,"uncertain":0,"known-unavailable":0,"not-applicable":0,"territorially-incompatible":0}.
 
 | Category | Supported | Partial | Missing | Held | Evidence % | Resolution % |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -16,7 +16,7 @@ States: {"supported":5753,"partial":382,"missing":9402,"held":303,"uncertain":0,
 | currency | 205 | 13 | 835 | 3 | 19.41 | 19.41 |
 | historical-flag | 64 | 10 | 982 | 0 | 6.06 | 6.06 |
 | population-statistics | 155 | 0 | 728 | 173 | 14.68 | 14.68 |
-| area-statistics | 13 | 0 | 1043 | 0 | 1.23 | 1.23 |
+| area-statistics | 985 | 0 | 0 | 71 | 93.28 | 93.28 |
 | density | 0 | 0 | 1056 | 0 | 0.00 | 0.00 |
 | economy | 73 | 0 | 983 | 0 | 6.91 | 6.91 |
 | events-context | 55 | 0 | 941 | 60 | 5.21 | 5.21 |
@@ -27,16 +27,16 @@ States: {"supported":5753,"partial":382,"missing":9402,"held":303,"uncertain":0,
 
 | Snapshot | Dossiers | Evidence % | Resolution % | Sparse |
 | --- | ---: | ---: | ---: | ---: |
-| 1800 | 57 | 29.24 | 29.24 | 2 |
-| 1815 | 79 | 28.10 | 28.10 | 12 |
-| 1878 | 93 | 32.40 | 32.40 | 8 |
-| 1880 | 93 | 34.19 | 34.19 | 4 |
-| 1900 | 83 | 38.15 | 38.15 | 3 |
-| 1914 | 98 | 40.61 | 40.61 | 0 |
-| 1920 | 111 | 36.52 | 36.52 | 8 |
-| 1930 | 110 | 40.55 | 40.55 | 0 |
-| 1938 | 122 | 40.22 | 40.22 | 1 |
-| 1945 | 110 | 33.94 | 33.94 | 14 |
-| 1960 | 100 | 39.73 | 39.73 | 4 |
+| 1800 | 57 | 35.67 | 35.67 | 2 |
+| 1815 | 79 | 33.84 | 33.84 | 11 |
+| 1878 | 93 | 38.42 | 38.42 | 8 |
+| 1880 | 93 | 40.43 | 40.43 | 4 |
+| 1900 | 83 | 44.34 | 44.34 | 3 |
+| 1914 | 98 | 46.33 | 46.33 | 0 |
+| 1920 | 111 | 42.64 | 42.64 | 8 |
+| 1930 | 110 | 46.97 | 46.97 | 0 |
+| 1938 | 122 | 46.67 | 46.67 | 1 |
+| 1945 | 110 | 39.76 | 39.76 | 13 |
+| 1960 | 100 | 46.07 | 46.07 | 4 |
 
 Partial evidence is not scored fractionally. Population observations retain actual dates and explicit scope. Not applicable requires existing sourced investigation or independently reviewed resolution. A territorially incompatible candidate remains held unless an evidence-backed assessment resolves the entire category question. Priority favours sparse dossiers, then core categories; source-wide yield should guide selection among ranked jobs. Detailed dossier slots, supporting records and unresolved identities are in completion.json; bounded entity/year/category jobs are in priority-queue.json.

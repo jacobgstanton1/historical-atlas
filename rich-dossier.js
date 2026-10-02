@@ -21,6 +21,8 @@ export function createRichDossierIndex(store) {
       let mode='applicable';
       if(!intersects(selected,b)){
         if(distance<0)continue;
+        // A mapped extent measures one boundary snapshot, not nearby statistical territory.
+        if(c.category==='area-statistics'&&c.metric==='Area (derived mapped geometry)')continue;
         if(t.kind==='observation'&&distance<=observationWindow&&c.scope?.relationship==='same')mode='nearby-observation';
         else if(t.kind==='event'&&distance<=contextWindow&&c.scope?.relationship==='same')mode='dated-context';
         else if(c.category==='important-figures'&&t.kind==='interval'&&t.from===t.until&&distance<=figureContextWindow&&c.scope?.relationship==='same')mode='dated-figure-context';
