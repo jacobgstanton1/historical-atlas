@@ -7,9 +7,9 @@ import {
   presenceSummary,
   clean,
 } from './data-pipeline.js?v=0.6.1';
-import { loadMetadata } from './historical-metadata.js?v=territory2-1';
-import { renderDossier } from './dossier.js?v=territory2-1';
-import { loadRichDossiers } from './rich-dossier.js?v=territory2-1';
+import { loadMetadata } from './historical-metadata.js?v=territory2-cleanup1';
+import { renderDossier } from './dossier.js?v=territory2-cleanup1';
+import { loadRichDossiers } from './rich-dossier.js?v=territory2-cleanup1';
 import { createBoundaryHistory } from './boundary-history.js?v=0.6.1';
 
 const SNAPSHOTS = [
@@ -572,7 +572,8 @@ function updateSearchResults() {
       seen.add(stableId);
       return true;
     })
-    .sort((a, b) => Number(b.properties?._priority || 0) - Number(a.properties?._priority || 0))
+    .sort((a, b) => Number(clean(b.properties?._name).toLowerCase() === query) - Number(clean(a.properties?._name).toLowerCase() === query)
+      || Number(b.properties?._priority || 0) - Number(a.properties?._priority || 0))
     .slice(0, 8);
 
   els.searchResults.innerHTML = '';

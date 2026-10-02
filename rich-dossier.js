@@ -39,4 +39,4 @@ export function createRichDossierIndex(store) {
   }};
 }
 let pending;
-export function loadRichDossiers(){return pending ||= fetch('./data/comprehensive-dossiers.json?v=territory2-1').then(r=>{if(!r.ok)throw Error('Rich dossier HTTP '+r.status);return r.json();}).then(createRichDossierIndex);}
+export function loadRichDossiers(){return pending ||= fetch('./data/comprehensive-dossiers.json?v=territory2-cleanup1').then(r=>{if(!r.ok)throw Error('Rich dossier HTTP '+r.status);return r.json();}).then(createRichDossierIndex);}

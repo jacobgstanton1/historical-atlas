@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {createMetadataIndex} from '../historical-metadata.js';
+import {entityTitle,splitPresentation,presentationPeriod,publicFigure,factLabel} from '../dossier-presentation.js';
+const read=f=>JSON.parse(fs.readFileSync(new URL('../data/'+f,import.meta.url)));
+const db=read('historical-entities.json'),index=createMetadataIndex(db,read('historical-sources.json'));
+test('Italy 1960 uses the historical state name, not its constitutional descriptor',()=>assert.equal(entityTitle(index.resolve('entity-italy',1960)).text,'Italian Republic'));
+test('formal dated identity precedes common shorthand',()=>assert.equal(entityTitle(index.resolve('entity-united-kingdom',1914)).text,'United Kingdom of Great Britain and Ireland'));
+test('government and other records cannot become identity names',()=>assert.equal(entityTitle({entity:{canonicalName:'Canonical polity'}},[{category:'leadership',value:'A ruler',sourceIds:['s']}],'Map label').text,'Canonical polity'));
+test('sparse dossiers retain mapped fallback',()=>assert.equal(entityTitle({},[],'Russian Empire').text,'Russian Empire'));
+test('overview historical narrative remains verbatim while coverage notes move',()=>{const r=splitPresentation('The republican constitution entered into effect on 1 January 1948. These bounds cover the researched constitutional framework through 1960, not the full lifetime of the republic. Office-holder coverage is partial and no current facts are substituted for historical gaps.');assert.equal(r.text,'The republican constitution entered into effect on 1 January 1948.');assert.equal(r.notes.length,2);});
+test('historical geography and genuine uncertainty remain beside claims',()=>{const text='Census covers 1937 territory rather than later annexations. This estimate is disputed.';assert.equal(splitPresentation(text).text,text);});
+test('explicit atlas coverage boundary is not presented as a historical end',()=>{const r=index.resolve('entity-italy',1960);const f=r.leaders.find(f=>f.value==='Giovanni Gronchi');assert.equal(presentationPeriod({temporal:{kind:'interval',from:f.validFrom,until:f.validUntil}},r.entity),'From 11 May 1955');});
+test('genuinely bounded periods and measurement dates remain distinct',()=>{assert.equal(presentationPeriod({temporal:{kind:'interval',from:'1959-01-08',until:'1960-01-08'}}),'8 January 1959 – 8 January 1960');assert.equal(presentationPeriod({temporal:{kind:'observation',observationDate:'1937'},observationType:'census'}),'1937 census');assert.equal(presentationPeriod({temporal:{kind:'event',date:'1960-01-01'}}),'1 January 1960');});
+test('an arbitrary 1961 end without cutoff evidence remains bounded',()=>assert.equal(presentationPeriod({temporal:{kind:'interval',from:'1948',until:'1961-01-01'}}),'1948 – 1 January 1961'));
+test('Daniel Bovet card keeps the award and dated association without ingestion jargon',()=>{const c=read('comprehensive-dossiers.json').packages.flatMap(p=>p.claims).find(c=>c.figure?.name==='Daniel Bovet');const f=publicFigure(c.figure,c.value);assert.equal(f.activity,'Nobel Prize in Physiology or Medicine, 1957');assert.match(f.relationship,/Affiliation in 1957/);assert.equal(f.contribution,c.figure.contribution);});
+test('fact labels use supported roles and categories',()=>{assert.equal(factLabel({legacyField:'governments'}),'Government');assert.equal(factLabel({metric:'constitutional-legislature'}),'Legislature');assert.equal(factLabel({role:'President of the Republic'}),'President of the Republic');});
