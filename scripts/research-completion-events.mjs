@@ -1,0 +1,19 @@
+import {readJSON,readContext,saveJSON,digest,isCLI} from './research-common.mjs';
+import {bytesHash,runTranche} from './research-bulk.mjs';
+export function eventsCompletionIntake(){
+ const base='research/completion-01/events/',raw=readJSON(base+'candidate-tranche.json'),review=readJSON(base+'independent-review.json'),context=readContext();
+ if(review.inputCanonicalDigest!==digest(raw)||!review.bodyReviewed||review.reviewer===review.worker)throw Error('Independent event review missing or stale');
+ for(const b of [...review.sourceBindings,...review.parserBindings])if(bytesHash(b.path)!==b.sha256)throw Error('Bound review input changed: '+b.path);
+ const source={...raw.sourceCatalogue.find(s=>s.id==='cow-interstate-war-v4'),accessed:'2026-10-02',parser:'independently-certified-completion-COW-endpoints/v2',kind:'academic-dated-event-table',usage:'Literal source-coded sustained-combat participant endpoints, with independently reviewed historical framework aliases. Not legal declarations, peace treaties, ongoing war or territorial sovereignty.'};
+ const mappings=[],rows=raw.candidates.map(r=>{
+  const receipt=review.rows.find(x=>x.eventId===r.id);if(!receipt||receipt.originalEventDigest!==digest(r))throw Error('Event/source review mismatch');
+  const accepted=receipt.decision==='source-date-mapping-approved',f=receipt.approvedMappedFields;
+  if(accepted){const e=context.db.entities.find(e=>e.id===f.entityId);if(!e||digest(e)!==receipt.mapping.entityRecordDigest)throw Error('Historical framework changed');mappings.push({sourceId:source.id,entityId:e.id,from:receipt.mapping.from,until:receipt.mapping.until,scope:f.scope,scopeId:e.id+'-coded-combat-participation',statisticalComparability:'not-a-statistic',rationale:receipt.mapping.reason});}
+  return{id:r.id,category:'events-context',value:f?.value||r.value,temporal:{kind:'event',date:f?.eventDate||r.eventDate,certainty:'exact'},precision:f?.eventPrecision||r.eventPrecision,sourceId:source.id,locator:f?.locator||r.locator,originalRow:JSON.stringify({original:r.originalRow,rowNumber:r.originalRowNumber,event:r.id,sourceDate:r.eventDate,participant:r.rawParticipant,sourceCountryCode:r.sourceCountryCode,independentReview:receipt}),qualifications:[f?.qualification||r.qualification,'Source dates remain actual event dates. Later snapshot context is explicitly past dated evidence within five calendar years, never ongoing-war or retimed-event evidence.'],entityIdsSuggested:accepted?[f.entityId]:[],evidenceCautions:accepted?[]:[receipt.reason],disposition:accepted?'candidate':'historical-review'};
+ });
+ const manifest={schemaVersion:1,worker:'completion-COW-endpoint-normalizer',sources:[source],rows,originalExtractionHash:digest(raw),independentReviewHash:digest(review)};
+ const parserPath=base+'build-tranche.mjs',bindings=[...review.parserBindings,{path:base+'candidate-tranche.json',sha256:bytesHash(base+'candidate-tranche.json')},{path:base+'independent-review.json',sha256:bytesHash(base+'independent-review.json')},{path:'scripts/research-completion-events.mjs',sha256:bytesHash('scripts/research-completion-events.mjs')}];
+ const contract={schemaVersion:1,id:'completion-cow-events-02',adapter:'dated-coded-combat-event/v2',tier:'B',reviewer:review.reviewer,manifestHash:digest(manifest),parserPath,parserSha256:bytesHash(parserPath),parserBindings:bindings,mappings,endpointNote:'Actual source-coded combat endpoint retained unchanged, never a declaration or peace treaty.',rationale:review.reviewScope};
+ saveJSON('research/bulk-01/'+contract.id+'-manifest.json',manifest);saveJSON('research/bulk-01/'+contract.id+'-contract.json',contract);return{manifest,contract};
+}
+if(isCLI(import.meta.url)){const{contract}=eventsCompletionIntake();console.log(JSON.stringify(runTranche('research/bulk-01/'+contract.id+'-manifest.json','research/bulk-01/'+contract.id+'-contract.json',{apply:process.argv.includes('--apply')}).metrics));}

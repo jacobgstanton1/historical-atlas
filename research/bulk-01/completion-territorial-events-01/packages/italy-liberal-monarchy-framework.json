@@ -1,0 +1,272 @@
+{
+  "job": {
+    "id": "dossier-9c327467346308d4d7ed9935",
+    "entityId": "italy-liberal-monarchy-framework",
+    "period": {
+      "from": "1897-12",
+      "until": "1897-12"
+    },
+    "mapIds": [
+      "entity-italy",
+      "entity-kingdom-of-italy"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "dd918028e9b8eaa7324c720b7d99e9c204c819bd644065de761f9b1640d06f49",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-territorial-events-01-italy-liberal-monarchy-framework",
+    "jobId": "dossier-9c327467346308d4d7ed9935",
+    "entityId": "italy-liberal-monarchy-framework",
+    "mapIds": [
+      "entity-italy",
+      "entity-kingdom-of-italy"
+    ],
+    "worker": {
+      "id": "bulk-parser/territorial-events/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "dd918028e9b8eaa7324c720b7d99e9c204c819bd644065de761f9b1640d06f49",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1897-12",
+      "until": "1897-12"
+    },
+    "claims": [
+      {
+        "id": "bulk-77a9b0f0c23cfcacf83b81ce-d458bfa6f8",
+        "category": "events-context",
+        "value": "COW territorial-change record361 codes Italy as the losing-side participant in a cession record concerning part of catalogue-labelled Sudan (Anglo-Egyptian), dated 1897-12.",
+        "entityId": "italy-liberal-monarchy-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1897-12",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "italy-liberal-monarchy-framework-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow321/change361",
+            "note": "{\"original\":{\"id\":\"cow-tc-361-loser-italy-liberal-monarchy-framework\",\"category\":\"events-context\",\"eventDate\":\"1897-12\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"italy-liberal-monarchy-framework\",\"side\":\"loser\",\"sourceChangeNumber\":\"361\",\"sourceCSVLine\":322,\"sourceRowIndex\":320,\"rawRow\":{\"year\":\"1897\",\"month\":\"12\",\"gainer\":\"200\",\"gaintype\":\"0\",\"procedur\":\"3\",\"entity\":\"625\",\"contgain\":\"0\",\"area\":\"1.00\",\"pop\":\".\",\"portion\":\"0\",\"loser\":\"325\",\"losetype\":\"0\",\"contlose\":\"0\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"361\",\"indep\":\"0\",\"conflict\":\"0\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow321/change361\",\"sourceProcedure\":\"cession\",\"sourceParticipantCode\":\"325\",\"rawCatalogueLines\":{\"participant\":[\"325 Italy/Sardini\",\"325 Italy/Sardinia 1943 1945 Occupied by 255\"],\"exchanged\":[\"625 Sudan (Anglo-Egyptian) 1882 1898 Became part of 6254\",\"625 Sudan (Anglo-Egyptian) 1898 1956 Became colony of 200\"],\"other\":[]},\"mappingProposals\":[{\"id\":\"archigos-ITA-italy-liberal-monarchy-framework-1875-01-01\",\"sourceCountryCode\":\"ITA\",\"entityId\":\"italy-liberal-monarchy-framework\",\"from\":\"1875-01-01\",\"until\":\"1922-01-01\",\"sourceCountryLocator\":\"Archigos v4.1 case descriptions, printed p.405 (PDF page 411)\",\"existingIdentity\":{\"name\":\"Kingdom of Italy — liberal monarchical framework\",\"validFrom\":\"1861-03-17\",\"validUntil\":\"1922-01-01\",\"sourceIds\":[\"b04-italian-unity\",\"b04-statuto\",\"b04-unification-framework\"]},\"rationale\":\"Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.\",\"qualifications\":[\"Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.\",\"Country coding is not evidence of sovereignty of every map polygon.\",\"Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.\",\"Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics.\"],\"role\":\"Effective political leader (Archigos coding)\",\"status\":\"approved-mapping-contract\",\"reviewer\":\"scale-flags-independent-archigos\",\"cowCode\":\"325\",\"origin\":\"Existing reviewed framework identity; NEW COW namespace bridge requires review\"}],\"prioritySlots\":[{\"entityId\":\"italy-liberal-monarchy-framework\",\"snapshotYear\":1900,\"status\":\"missing\",\"actualEventDate\":\"1897-12\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":3}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-361-loser-italy-liberal-monarchy-framework\",\"originalEventDigest\":\"8f2e02ae74ca189f99d646492ce6a923e9edbe9a1a66a220dfb84c4ed86f7138\",\"originalCsvRowDigest\":\"60ba910420ea41b2808c625a35350568b3a45a0862c1c93fcb3b111279238f62\",\"sourceDate\":\"1897-12\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"italy-liberal-monarchy-framework\",\"category\":\"events\",\"eventDate\":\"1897-12\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record361 codes Italy as the losing-side participant in a cession record concerning part of catalogue-labelled Sudan (Anglo-Egyptian), dated 1897-12.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow321/change361\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"361\",\"sourceParticipantCode\":\"325\",\"sourceSide\":\"loser\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"625\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"italy-liberal-monarchy-framework\",\"category\":\"events\",\"eventDate\":\"1897-12\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record361 codes Italy as the losing-side participant in a cession record concerning part of catalogue-labelled Sudan (Anglo-Egyptian), dated 1897-12.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow321/change361\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"361\",\"sourceParticipantCode\":\"325\",\"sourceSide\":\"loser\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"625\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-361-loser-italy-liberal-monarchy-framework\",\"sourceRowIndex\":320,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"87dfd18d4dbc9cce8591f3e5f87c1165c17be4305d601afa97d9287505ae8a9a\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"italy-liberal-monarchy-framework\",\"entityRecordDigest\":\"a8b098d23cec26113851a8a45b379de4085fd1875c68b204edf7a1acb842b3e2\",\"names\":[{\"value\":\"Kingdom of Italy — liberal monarchical framework\",\"validFrom\":\"1861-03-17\",\"validUntil\":\"1922-01-01\",\"sourceIds\":[\"b04-italian-unity\",\"b04-statuto\",\"b04-unification-framework\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existence\":{\"validFrom\":\"1861-03-17\",\"validUntil\":\"1922-01-01\",\"sourceIds\":[\"b04-italian-unity\",\"b04-statuto\",\"b04-unification-framework\"],\"note\":\"Bounds delimit researched dossier coverage, not the full lifetime of a state or administration.\"},\"participantCode\":\"325\",\"namespaceOriginalCatalogueLines\":[\"325 Italy/Sardini\",\"325 Italy/Sardinia 1943 1945 Occupied by 255\"],\"independentCowNamespaceLabels\":[\"Italy\",\"Sardinia/Piedmont\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[\"325 Italy/Sardini\",\"325 Italy/Sardinia 1943 1945 Occupied by 255\"],\"exchanged\":[\"625 Sudan (Anglo-Egyptian) 1882 1898 Became part of 6254\",\"625 Sudan (Anglo-Egyptian) 1898 1956 Became colony of 200\"],\"other\":[]},\"independentCatalogueCorrection\":null,\"snapshotContextReview\":[{\"entityId\":\"italy-liberal-monarchy-framework\",\"snapshotYear\":1900,\"status\":\"missing\",\"actualEventDate\":\"1897-12\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":3,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1897-12",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-77a9b0f0c23cfcacf83b81ce",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow321/change361"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:24:21.938Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "58672f0fffe3af975beeac60bc2a4ed02871100b2e8365e37044348cad54ede0",
+        "d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "449480e4fe97785046aea8e43465ab83a1ad964cf18d52ef2bdfc992d43ee819",
+    "productionFingerprint": "dd918028e9b8eaa7324c720b7d99e9c204c819bd644065de761f9b1640d06f49",
+    "jobId": "dossier-9c327467346308d4d7ed9935",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "449480e4fe97785046aea8e43465ab83a1ad964cf18d52ef2bdfc992d43ee819",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent of territorial-events extractor; contract d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2; adapter territorial-events/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-77a9b0f0c23cfcacf83b81ce-d458bfa6f8": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-77a9b0f0c23cfcacf83b81ce-d458bfa6f8"
+    ]
+  }
+}

@@ -1,0 +1,2661 @@
+{
+  "schemaVersion": 1,
+  "sourceBindings": [
+    {
+      "path": "research/bulk-02/events/cow-events-extracted.json",
+      "sha256": "21a0fc9646896777fe964ad6ea525bb5589813b9af88b7a16aa7666a980e8224"
+    },
+    {
+      "path": "research/bulk-02/events/independent-review.json",
+      "sha256": "f5236471b667a5ac9c2b600052368b3eb1cbadb4a4bf33dfeed156680065a1c3"
+    },
+    {
+      "path": "research/bulk-02/events/independent-original-csv-rows.json",
+      "sha256": "b2d5b973aa9f877585561706fa047a681087f2981d12b22919657ba804e2c66b"
+    },
+    {
+      "path": "research/bulk-02/events/cache/Inter-StateWarData_v4.0.csv",
+      "sha256": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731"
+    },
+    {
+      "path": "research/bulk-02/events/cache/Inter-StateWars_Codebook.pdf",
+      "sha256": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be"
+    },
+    {
+      "path": "research/bulk-02/events/cache/codebook-text.txt",
+      "sha256": "dee746c6d4a703d836bb28429cad352b14d3c54c5048b1643eb76bd621a280db"
+    },
+    {
+      "path": "research/bulk-02/events/extract-cow.py",
+      "sha256": "c66ca5f43ef66a6bfc415a2e165d68291a16678a7131b36484aaadb1dc436a2b"
+    },
+    {
+      "path": "research/bulk-02/events/independent-parse.py",
+      "sha256": "c01792e754869a4ac954930c89b4c7814b1e62872073358b2608cc5888bc16d9"
+    },
+    {
+      "path": "research/completion-01/reports/priority-queue.json",
+      "sha256": "7416e9223b61da8b2fdbb6af85e8fd5b4a4279f6a467b825344476c3fc30c923"
+    }
+  ],
+  "sourceCatalogue": [
+    {
+      "id": "cow-interstate-war-v4",
+      "title": "COW Inter-State War participant data, version4.0",
+      "institution": "Correlates of War Project; Meredith Reid Sarkees and Frank Wayman",
+      "url": "https://correlatesofwar.org/wp-content/uploads/Inter-StateWarData_v4.0.csv",
+      "cachePath": "research\\bulk-02\\events\\cache\\Inter-StateWarData_v4.0.csv",
+      "sha256": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "kind": "academic-historical-war-participation-dataset",
+      "citation": "Sarkees, Meredith Reid and Frank Wayman (2010). Resort to War:1816–2007. Washington DC:CQ Press."
+    },
+    {
+      "id": "cow-interstate-war-v4-codebook",
+      "title": "Inter-state Wars (Version4.0): Definitions and Variables",
+      "institution": "Correlates of War Project; Meredith Reid Sarkees",
+      "url": "https://correlatesofwar.org/wp-content/uploads/Inter-StateWars_Codebook.pdf",
+      "cachePath": "research\\bulk-02\\events\\cache\\Inter-StateWars_Codebook.pdf",
+      "sha256": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "kind": "academic-dataset-codebook"
+    }
+  ],
+  "definitionLocators": [
+    "Codebook PDF p.3 variables",
+    "Codebook PDF p.2 participation thresholds/transformations",
+    "Codebook PDF p.4 transformation/outcome/sentinel meanings"
+  ],
+  "codebookReview": "Cached full four-page codebook read. Exact literal participant combat endpoints retained. Ccode identifies source system member; participant alias is a separate unaccepted historical review contract. No legal declaration/peace/status/control/succession inferred.",
+  "policy": "No new downloads. Exclude45 original accepted events. Missing-slot targeting only, actual event date retained, max5calendar-year explicit past context. No framework-crossing carryover. All candidates await independent coordinator historical/source review.",
+  "contracts": [
+    {
+      "entityId": "b19-south-africa-later-union",
+      "labels": [
+        "South Africa"
+      ],
+      "codes": [
+        "560"
+      ],
+      "reason": "Literal South Africa state participant1945 proposed against existing1935–1948 Union framework. Do not attribute Union-wide combat to Natal/colonial subterritories.",
+      "id": "completion-cow-alias-10",
+      "from": "1935-01-01",
+      "until": "1948-06-04",
+      "existingIdentity": {
+        "name": "Union of South Africa — later constitutional monarchy",
+        "existence": {
+          "validFrom": "1935-01-01",
+          "validUntil": "1948-06-04",
+          "sourceIds": [
+            "b19-union-office-history",
+            "b19-south-africa-history"
+          ],
+          "note": "Editorial bounds delimit a partial source-supported dossier, not a complete state lifetime or universal territorial control."
+        },
+        "names": [
+          {
+            "value": "Union of South Africa — later constitutional monarchy",
+            "validFrom": "1935-01-01",
+            "validUntil": "1948-06-04",
+            "sourceIds": [
+              "b19-union-office-history",
+              "b19-south-africa-history"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "entityRecordDigest": "b68eb6572c04287c2517d5e28833d6c1dbfbf0fb9eb5385c019d6dd7e49f30d7",
+        "sourceIds": [
+          "b19-union-office-history",
+          "b19-south-africa-history"
+        ]
+      },
+      "disposition": "historical-review-required",
+      "candidateEventIds": [
+        "cow-v4-row191-w139-c560-s1-ep1-end"
+      ],
+      "missingSlots": [
+        "b19-south-africa-later-union:1945"
+      ]
+    },
+    {
+      "entityId": "china-prc-framework",
+      "labels": [
+        "China",
+        "China (PRC)"
+      ],
+      "codes": [
+        "710"
+      ],
+      "reason": "Literal China710 after existing1949-10-01 PRC framework start, and explicit China(PRC), proposed as source state-participant bridge. Coexisting ROC framework is not merged.",
+      "id": "completion-cow-alias-04",
+      "from": "1949-10-01",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "People’s Republic of China",
+        "existence": {
+          "validFrom": "1949-10-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b02-chinese-revolution-1949"
+          ],
+          "note": "Bounds describe sourced curated coverage, not necessarily the full lifetime or territorial reach of the state. Later facts are not inferred."
+        },
+        "names": [
+          {
+            "value": "People’s Republic of China",
+            "validFrom": "1949-10-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b02-chinese-revolution-1949"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "entityRecordDigest": "f9a20ae3693a70364ccfc9bbc45da12e5a74c5fdcb700b05461fd502a9c498f7",
+        "sourceIds": [
+          "b02-chinese-revolution-1949"
+        ]
+      },
+      "disposition": "historical-review-required",
+      "candidateEventIds": [
+        "cow-v4-row221-w153-c710-s1-ep1-end",
+        "cow-v4-row232-w159-c710-s1-ep1-start",
+        "cow-v4-row232-w159-c710-s1-ep1-end"
+      ],
+      "missingSlots": [
+        "china-prc-framework:1960"
+      ]
+    },
+    {
+      "entityId": "china-republic-nationalist-framework",
+      "labels": [
+        "China"
+      ],
+      "codes": [
+        "710"
+      ],
+      "until": "1949-10-01",
+      "reason": "Literal China710 in1945 is proposed against existing Republic of China Nationalist framework. Stop before PRC proclamation; no automatic transfer of earlier Republic events to PRC.",
+      "id": "completion-cow-alias-02",
+      "from": "1945-01-01",
+      "existingIdentity": {
+        "name": "Republic of China — Nationalist government",
+        "existence": {
+          "validFrom": "1945-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b02-chinese-revolution-1949"
+          ],
+          "note": "Bounds describe sourced curated coverage, not necessarily the full lifetime or territorial reach of the state. Later facts are not inferred."
+        },
+        "names": [
+          {
+            "value": "Republic of China — Nationalist government",
+            "validFrom": "1945-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b02-chinese-revolution-1949"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "entityRecordDigest": "ee2d6bc644eda6c2b554c9b07f33180fcc23b64ba289f6f96c5e547470ca139b",
+        "sourceIds": [
+          "b02-chinese-revolution-1949"
+        ]
+      },
+      "disposition": "historical-review-required",
+      "candidateEventIds": [
+        "cow-v4-row190-w139-c710-s1-ep1-end"
+      ],
+      "missingSlots": [
+        "china-republic-nationalist-framework:1945"
+      ]
+    },
+    {
+      "entityId": "china-republic-nationalist-framework",
+      "labels": [
+        "Taiwan",
+        "Taiwan (ROC)"
+      ],
+      "codes": [
+        "713"
+      ],
+      "from": "1949-10-01",
+      "reason": "Source participant713 Taiwan/ROC is proposed as Nationalist Republic of China government only; not independent evidence of island sovereignty or modern nationality. Existing1960raw identity is entity-taiwan.",
+      "id": "completion-cow-alias-03",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Republic of China — Nationalist government",
+        "existence": {
+          "validFrom": "1945-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b02-chinese-revolution-1949"
+          ],
+          "note": "Bounds describe sourced curated coverage, not necessarily the full lifetime or territorial reach of the state. Later facts are not inferred."
+        },
+        "names": [
+          {
+            "value": "Republic of China — Nationalist government",
+            "validFrom": "1945-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b02-chinese-revolution-1949"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "entityRecordDigest": "ee2d6bc644eda6c2b554c9b07f33180fcc23b64ba289f6f96c5e547470ca139b",
+        "sourceIds": [
+          "b02-chinese-revolution-1949"
+        ]
+      },
+      "disposition": "historical-review-required",
+      "candidateEventIds": [
+        "cow-v4-row222-w153-c713-s2-ep1-end",
+        "cow-v4-row233-w159-c713-s2-ep1-start",
+        "cow-v4-row233-w159-c713-s2-ep1-end"
+      ],
+      "missingSlots": [
+        "china-republic-nationalist-framework:1960"
+      ]
+    },
+    {
+      "entityId": "estonian-constituent-framework",
+      "labels": [
+        "Estonia"
+      ],
+      "codes": [
+        "366"
+      ],
+      "reason": "Literal Estonia participant intersects existing Republic constituent framework; pre-July1919 combat starts cannot be borrowed.",
+      "id": "completion-cow-alias-05",
+      "from": "1919-07-04",
+      "until": "1920-12-20",
+      "existingIdentity": {
+        "name": "Republic of Estonia — constituent framework",
+        "existence": {
+          "validFrom": "1919-07-04",
+          "validUntil": "1920-12-20",
+          "sourceIds": [
+            "b06-estonian-constituent"
+          ],
+          "note": "Bounds delimit researched dossier coverage, not the full lifetime of a state or administration."
+        },
+        "names": [
+          {
+            "value": "Republic of Estonia — constituent framework",
+            "validFrom": "1919-07-04",
+            "validUntil": "1920-12-20",
+            "sourceIds": [
+              "b06-estonian-constituent"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "entityRecordDigest": "3f6bb3e400ac6b18506d51086a7269fdfb81535458f00966f4a5232d20e29d98",
+        "sourceIds": [
+          "b06-estonian-constituent"
+        ]
+      },
+      "disposition": "historical-review-required",
+      "candidateEventIds": [
+        "cow-v4-row128-w107-c366-s1-ep1-end",
+        "cow-v4-row134-w108-c366-s1-ep1-end"
+      ],
+      "missingSlots": [
+        "estonian-constituent-framework:1920"
+      ]
+    },
+    {
+      "entityId": "lithuanian-constituent-seimas-framework",
+      "labels": [
+        "Lithuania"
+      ],
+      "codes": [
+        "368"
+      ],
+      "reason": "Literal Lithuania participant intersects existing constituent-Seimas framework; preserve exact combat dates and parliamentary bounds.",
+      "id": "completion-cow-alias-06",
+      "from": "1920-05-15",
+      "until": "1922-01-01",
+      "existingIdentity": {
+        "name": "Republic of Lithuania — constituent framework",
+        "existence": {
+          "validFrom": "1920-05-15",
+          "validUntil": "1922-01-01",
+          "sourceIds": [
+            "b06-lithuanian-elections"
+          ],
+          "note": "Bounds delimit researched dossier coverage, not the full lifetime of a state or administration."
+        },
+        "names": [
+          {
+            "value": "Republic of Lithuania — constituent framework",
+            "validFrom": "1920-05-15",
+            "validUntil": "1922-01-01",
+            "sourceIds": [
+              "b06-lithuanian-elections"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "entityRecordDigest": "51c920ecdf898fa2f9d5ee6c2fb4b8f48e4b55bd449c96fed4fa5f31116cd11a",
+        "sourceIds": [
+          "b06-lithuanian-elections"
+        ]
+      },
+      "disposition": "historical-review-required",
+      "candidateEventIds": [
+        "cow-v4-row145-w117-c368-s2-ep1-start",
+        "cow-v4-row145-w117-c368-s2-ep1-end"
+      ],
+      "missingSlots": [
+        "lithuanian-constituent-seimas-framework:1920"
+      ]
+    },
+    {
+      "entityId": "mongolia-peoples-republic-framework",
+      "labels": [
+        "Mongolia"
+      ],
+      "codes": [
+        "712"
+      ],
+      "reason": "Literal Mongolia participant is proposed against existing Mongolian Peoples Republic only; do not equate earlier Bogd/occupation frameworks.",
+      "id": "completion-cow-alias-08",
+      "from": "1924-12-01",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Mongolian People’s Republic",
+        "existence": {
+          "validFrom": "1924-11",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b02-mongolia-republic",
+            "b02-mongolia-consolidation",
+            "b02-mongolia-wartime",
+            "b02-mongolia-postwar"
+          ],
+          "note": "Bounds describe sourced curated coverage, not necessarily the full lifetime or territorial reach of the state. Later facts are not inferred."
+        },
+        "names": [
+          {
+            "value": "Mongolian People’s Republic",
+            "validFrom": "1924-11",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b02-mongolia-republic",
+              "b02-mongolia-consolidation",
+              "b02-mongolia-wartime",
+              "b02-mongolia-postwar"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "entityRecordDigest": "f0c7907b4101fcde92e1f71c376cc610c41ffcbecb12bbd7d85e1c18370bcb83",
+        "sourceIds": [
+          "b02-mongolia-republic",
+          "b02-mongolia-consolidation",
+          "b02-mongolia-wartime",
+          "b02-mongolia-postwar"
+        ]
+      },
+      "disposition": "historical-review-required",
+      "candidateEventIds": [
+        "cow-v4-row189-w139-c712-s1-ep1-start",
+        "cow-v4-row189-w139-c712-s1-ep1-end"
+      ],
+      "missingSlots": [
+        "mongolia-peoples-republic-framework:1945"
+      ]
+    },
+    {
+      "entityId": "polish-small-constitution-framework",
+      "labels": [
+        "Poland"
+      ],
+      "codes": [
+        "290"
+      ],
+      "reason": "Literal Poland participant intersects existing provisional parliamentary framework. Russo-Polish transformation-coded endpoints remain held.",
+      "id": "completion-cow-alias-07",
+      "from": "1919-03-01",
+      "until": "1921-01-01",
+      "existingIdentity": {
+        "name": "Republic of Poland — provisional parliamentary framework",
+        "existence": {
+          "validFrom": "1919-03-01",
+          "validUntil": "1921-01-01",
+          "sourceIds": [
+            "b06-polish-parliament-history"
+          ],
+          "note": "Bounds delimit researched dossier coverage, not the full lifetime of a state or administration."
+        },
+        "names": [
+          {
+            "value": "Republic of Poland — provisional parliamentary framework",
+            "validFrom": "1919-03-01",
+            "validUntil": "1921-01-01",
+            "sourceIds": [
+              "b06-polish-parliament-history"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "entityRecordDigest": "979e1950357005aadae7ab84dc50e136a5e84aa966e8a5f744683e3623cc4276",
+        "sourceIds": [
+          "b06-polish-parliament-history"
+        ]
+      },
+      "disposition": "historical-review-required",
+      "candidateEventIds": [
+        "cow-v4-row146-w117-c290-s1-ep1-start",
+        "cow-v4-row146-w117-c290-s1-ep1-end"
+      ],
+      "missingSlots": [
+        "polish-small-constitution-framework:1920"
+      ]
+    },
+    {
+      "entityId": "qing-imperial-framework",
+      "labels": [
+        "China"
+      ],
+      "codes": [
+        "710"
+      ],
+      "reason": "Literal China710 before1912 is proposed only against the existing Qing imperial framework, not a modern Chinese state or Taiwan administration.",
+      "id": "completion-cow-alias-01",
+      "from": "1800-01-01",
+      "until": "1912-02-12",
+      "existingIdentity": {
+        "name": "Qing Empire",
+        "existence": {
+          "validFrom": "1800-01-01",
+          "validUntil": "1912-02-12",
+          "sourceIds": [
+            "b02-chinese-revolution-1911",
+            "b02-china-recognition"
+          ],
+          "note": "Bounds describe sourced curated coverage, not necessarily the full lifetime or territorial reach of the state. Later facts are not inferred."
+        },
+        "names": [
+          {
+            "value": "Qing Empire",
+            "validFrom": "1800-01-01",
+            "validUntil": "1912-02-12",
+            "sourceIds": [
+              "b02-chinese-revolution-1911",
+              "b02-china-recognition"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "entityRecordDigest": "4ce8e6e53665be9373cad00794c6e03e7c9f3d5b2028f0e22d8e762c167ad1fd",
+        "sourceIds": [
+          "b02-chinese-revolution-1911",
+          "b02-china-recognition"
+        ]
+      },
+      "disposition": "historical-review-required",
+      "candidateEventIds": [
+        "cow-v4-row78-w73-c710-s2-ep1-end",
+        "cow-v4-row87-w82-c710-s2-ep1-start",
+        "cow-v4-row87-w82-c710-s2-ep1-end",
+        "cow-v4-row91-w83-c710-s2-ep1-start",
+        "cow-v4-row91-w83-c710-s2-ep1-end"
+      ],
+      "missingSlots": [
+        "qing-imperial-framework:1900"
+      ]
+    },
+    {
+      "entityId": "saudi-1932-monarchical-core",
+      "labels": [
+        "Saudi Arabia"
+      ],
+      "codes": [
+        "670"
+      ],
+      "reason": "Literal Saudi Arabia participant1934 intersects already sourced post1932 monarchic framework; no succession/warwide inference.",
+      "id": "completion-cow-alias-09",
+      "from": "1932-09-23",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Saudi Arabia — 1932 royal state",
+        "existence": {
+          "validFrom": "1932-09-23",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b12-saudi-unification-history"
+          ],
+          "note": "Editorial partial coverage bounds, not full lifetime or exhaustive institutional history."
+        },
+        "names": [
+          {
+            "value": "Saudi Arabia — 1932 royal state",
+            "validFrom": "1932-09-23",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b12-saudi-unification-history"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "entityRecordDigest": "3ec3ba2aa39c3e4c2d1f39f423d8859ccfabaab996f6978184410d7dceb4932a",
+        "sourceIds": [
+          "b12-saudi-unification-history"
+        ]
+      },
+      "disposition": "historical-review-required",
+      "candidateEventIds": [
+        "cow-v4-row153-w125-c670-s1-ep1-start",
+        "cow-v4-row153-w125-c670-s1-ep1-end"
+      ],
+      "missingSlots": [
+        "saudi-1932-monarchical-core:1938"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "cow-v4-row78-w73-c710-s2-ep1-end",
+      "category": "events",
+      "eventDate": "1895-03-30",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes China's sustained-combat episode in First Sino-Japanese as ended on 1895-03-30.",
+      "sourceWarId": "73",
+      "warName": "First Sino-Japanese",
+      "rawParticipant": "China",
+      "sourceCountryCode": "710",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1895",
+        "Month": "3",
+        "Day": "30"
+      },
+      "originalRowNumber": 78,
+      "originalRow": {
+        "WarNum": "73",
+        "WarName": "First Sino-Japanese",
+        "WarType": "1",
+        "ccode": "710",
+        "StateName": "China",
+        "Side": "2",
+        "StartMonth1": "7",
+        "StartDay1": "25",
+        "StartYear1": "1894",
+        "EndMonth1": "3",
+        "EndDay1": "30",
+        "EndYear1": "1895",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "2",
+        "Outcome": "2",
+        "TransTo": "-8",
+        "BatDeath": "10000",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row78; WarNum=73; ccode=710; Side=2; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "qing-imperial-framework",
+      "mappingContractId": "completion-cow-alias-01",
+      "originalEventDigest": "f97f62eda38b543d381d74cc515fdb36e86c53e459c261229e6ea2a80c8aecf0",
+      "originalCsvRowDigest": "72ad9195b7e0935c75ef8fc7c806fa89aa6572e2e024fc1be8da0340660223b8",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1900,
+          "entityId": "qing-imperial-framework",
+          "mapIds": [
+            "entity-manchu-empire"
+          ],
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1895-03-30",
+          "ageYears": 5,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row87-w82-c710-s2-ep1-start",
+      "category": "events",
+      "eventDate": "1900-06-17",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-began",
+      "value": "COW codes China's sustained-combat episode in Boxer Rebellion as began on 1900-06-17.",
+      "sourceWarId": "82",
+      "warName": "Boxer Rebellion",
+      "rawParticipant": "China",
+      "sourceCountryCode": "710",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1900",
+        "Month": "6",
+        "Day": "17"
+      },
+      "originalRowNumber": 87,
+      "originalRow": {
+        "WarNum": "82",
+        "WarName": "Boxer Rebellion",
+        "WarType": "1",
+        "ccode": "710",
+        "StateName": "China",
+        "Side": "2",
+        "StartMonth1": "6",
+        "StartDay1": "17",
+        "StartYear1": "1900",
+        "EndMonth1": "8",
+        "EndDay1": "14",
+        "EndYear1": "1900",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "2",
+        "Outcome": "2",
+        "TransTo": "-8",
+        "BatDeath": "2000",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row87; WarNum=82; ccode=710; Side=2; StartYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "qing-imperial-framework",
+      "mappingContractId": "completion-cow-alias-01",
+      "originalEventDigest": "dbd82d5b1a3a1ad905a6ba3cdf349987ae099fffcbdec64d886df31aefcd25d1",
+      "originalCsvRowDigest": "16b031a37511c7f1f3ef983dfeffacff61986f7d4ef11e5ec57d66c64408119d",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1900,
+          "entityId": "qing-imperial-framework",
+          "mapIds": [
+            "entity-manchu-empire"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1900-06-17",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row87-w82-c710-s2-ep1-end",
+      "category": "events",
+      "eventDate": "1900-08-14",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes China's sustained-combat episode in Boxer Rebellion as ended on 1900-08-14.",
+      "sourceWarId": "82",
+      "warName": "Boxer Rebellion",
+      "rawParticipant": "China",
+      "sourceCountryCode": "710",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1900",
+        "Month": "8",
+        "Day": "14"
+      },
+      "originalRowNumber": 87,
+      "originalRow": {
+        "WarNum": "82",
+        "WarName": "Boxer Rebellion",
+        "WarType": "1",
+        "ccode": "710",
+        "StateName": "China",
+        "Side": "2",
+        "StartMonth1": "6",
+        "StartDay1": "17",
+        "StartYear1": "1900",
+        "EndMonth1": "8",
+        "EndDay1": "14",
+        "EndYear1": "1900",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "2",
+        "Outcome": "2",
+        "TransTo": "-8",
+        "BatDeath": "2000",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row87; WarNum=82; ccode=710; Side=2; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "qing-imperial-framework",
+      "mappingContractId": "completion-cow-alias-01",
+      "originalEventDigest": "e0934362c610c25f4c3e3d292b8797fd1c326564325baa1367555f9fddaf34d7",
+      "originalCsvRowDigest": "16b031a37511c7f1f3ef983dfeffacff61986f7d4ef11e5ec57d66c64408119d",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1900,
+          "entityId": "qing-imperial-framework",
+          "mapIds": [
+            "entity-manchu-empire"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1900-08-14",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row91-w83-c710-s2-ep1-start",
+      "category": "events",
+      "eventDate": "1900-07-17",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-began",
+      "value": "COW codes China's sustained-combat episode in Sino-Russian as began on 1900-07-17.",
+      "sourceWarId": "83",
+      "warName": "Sino-Russian",
+      "rawParticipant": "China",
+      "sourceCountryCode": "710",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1900",
+        "Month": "7",
+        "Day": "17"
+      },
+      "originalRowNumber": 91,
+      "originalRow": {
+        "WarNum": "83",
+        "WarName": "Sino-Russian",
+        "WarType": "1",
+        "ccode": "710",
+        "StateName": "China",
+        "Side": "2",
+        "StartMonth1": "7",
+        "StartDay1": "17",
+        "StartYear1": "1900",
+        "EndMonth1": "10",
+        "EndDay1": "10",
+        "EndYear1": "1900",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "2",
+        "Outcome": "2",
+        "TransTo": "-8",
+        "BatDeath": "3758",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row91; WarNum=83; ccode=710; Side=2; StartYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "qing-imperial-framework",
+      "mappingContractId": "completion-cow-alias-01",
+      "originalEventDigest": "12e55efacdd8b0ff6c067321b47f6d03343065eb7c390c9c04dbcf1caa0fe93f",
+      "originalCsvRowDigest": "9b88c874f1a97b9c049c17e795f2e40c1119fefce0cf0b4ab9f0eb671867f7b8",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1900,
+          "entityId": "qing-imperial-framework",
+          "mapIds": [
+            "entity-manchu-empire"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1900-07-17",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row91-w83-c710-s2-ep1-end",
+      "category": "events",
+      "eventDate": "1900-10-10",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes China's sustained-combat episode in Sino-Russian as ended on 1900-10-10.",
+      "sourceWarId": "83",
+      "warName": "Sino-Russian",
+      "rawParticipant": "China",
+      "sourceCountryCode": "710",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1900",
+        "Month": "10",
+        "Day": "10"
+      },
+      "originalRowNumber": 91,
+      "originalRow": {
+        "WarNum": "83",
+        "WarName": "Sino-Russian",
+        "WarType": "1",
+        "ccode": "710",
+        "StateName": "China",
+        "Side": "2",
+        "StartMonth1": "7",
+        "StartDay1": "17",
+        "StartYear1": "1900",
+        "EndMonth1": "10",
+        "EndDay1": "10",
+        "EndYear1": "1900",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "2",
+        "Outcome": "2",
+        "TransTo": "-8",
+        "BatDeath": "3758",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row91; WarNum=83; ccode=710; Side=2; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "qing-imperial-framework",
+      "mappingContractId": "completion-cow-alias-01",
+      "originalEventDigest": "6b25ebcf0549f875d99330cacb8825a1c982f4435d3cffe52a5ba8da82bb586d",
+      "originalCsvRowDigest": "9b88c874f1a97b9c049c17e795f2e40c1119fefce0cf0b4ab9f0eb671867f7b8",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1900,
+          "entityId": "qing-imperial-framework",
+          "mapIds": [
+            "entity-manchu-empire"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1900-10-10",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row128-w107-c366-s1-ep1-end",
+      "category": "events",
+      "eventDate": "1920-01-03",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes Estonia's sustained-combat episode in Estonian Liberation as ended on 1920-01-03.",
+      "sourceWarId": "107",
+      "warName": "Estonian Liberation",
+      "rawParticipant": "Estonia",
+      "sourceCountryCode": "366",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1920",
+        "Month": "1",
+        "Day": "3"
+      },
+      "originalRowNumber": 128,
+      "originalRow": {
+        "WarNum": "107",
+        "WarName": "Estonian Liberation",
+        "WarType": "1",
+        "ccode": "366",
+        "StateName": "Estonia",
+        "Side": "1",
+        "StartMonth1": "11",
+        "StartDay1": "22",
+        "StartYear1": "1918",
+        "EndMonth1": "1",
+        "EndDay1": "3",
+        "EndYear1": "1920",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "2",
+        "Initiator": "2",
+        "Outcome": "1",
+        "TransTo": "-8",
+        "BatDeath": "3600",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row128; WarNum=107; ccode=366; Side=1; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "estonian-constituent-framework",
+      "mappingContractId": "completion-cow-alias-05",
+      "originalEventDigest": "25f32522828692b3bcc89b27ae26a9050a1a9456cd1422c8ce720eb8c3b4fc20",
+      "originalCsvRowDigest": "3749c5663505b7cdc68d502de372bc526cd781f3dc7ddb9cfa7a232a7dedf1e5",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1920,
+          "entityId": "estonian-constituent-framework",
+          "mapIds": [
+            "entity-estonia"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1920-01-03",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row134-w108-c366-s1-ep1-end",
+      "category": "events",
+      "eventDate": "1920-01-03",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes Estonia's sustained-combat episode in Latvian Liberation as ended on 1920-01-03.",
+      "sourceWarId": "108",
+      "warName": "Latvian Liberation",
+      "rawParticipant": "Estonia",
+      "sourceCountryCode": "366",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1920",
+        "Month": "1",
+        "Day": "3"
+      },
+      "originalRowNumber": 134,
+      "originalRow": {
+        "WarNum": "108",
+        "WarName": "Latvian Liberation",
+        "WarType": "1",
+        "ccode": "366",
+        "StateName": "Estonia",
+        "Side": "1",
+        "StartMonth1": "1",
+        "StartDay1": "1",
+        "StartYear1": "1919",
+        "EndMonth1": "1",
+        "EndDay1": "3",
+        "EndYear1": "1920",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "2",
+        "Initiator": "2",
+        "Outcome": "1",
+        "TransTo": "-8",
+        "BatDeath": "1000",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row134; WarNum=108; ccode=366; Side=1; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "estonian-constituent-framework",
+      "mappingContractId": "completion-cow-alias-05",
+      "originalEventDigest": "b4d9cde64b21238acf9690d4230d0108a8eb3922885ee8dc77bbd65785e2c406",
+      "originalCsvRowDigest": "042d99eca465c33bd0268673703d7c40017d07579c23fdb085ba72223aabdd6f",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1920,
+          "entityId": "estonian-constituent-framework",
+          "mapIds": [
+            "entity-estonia"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1920-01-03",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row145-w117-c368-s2-ep1-start",
+      "category": "events",
+      "eventDate": "1920-07-15",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-began",
+      "value": "COW codes Lithuania's sustained-combat episode in Lithuanian-Polish as began on 1920-07-15.",
+      "sourceWarId": "117",
+      "warName": "Lithuanian-Polish",
+      "rawParticipant": "Lithuania",
+      "sourceCountryCode": "368",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1920",
+        "Month": "7",
+        "Day": "15"
+      },
+      "originalRowNumber": 145,
+      "originalRow": {
+        "WarNum": "117",
+        "WarName": "Lithuanian-Polish",
+        "WarType": "1",
+        "ccode": "368",
+        "StateName": "Lithuania",
+        "Side": "2",
+        "StartMonth1": "7",
+        "StartDay1": "15",
+        "StartYear1": "1920",
+        "EndMonth1": "12",
+        "EndDay1": "1",
+        "EndYear1": "1920",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "2",
+        "Initiator": "2",
+        "Outcome": "2",
+        "TransTo": "-8",
+        "BatDeath": "500",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row145; WarNum=117; ccode=368; Side=2; StartYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "lithuanian-constituent-seimas-framework",
+      "mappingContractId": "completion-cow-alias-06",
+      "originalEventDigest": "89f0fd91deeacd619eed97ca4c5df7f8c2d58da4dfcc482b3941edf13a7f7e40",
+      "originalCsvRowDigest": "f96637d5674be423f2f22ad3dce133c33aa2ffbd5e0c9ae9a325713ab2f7ecfb",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1920,
+          "entityId": "lithuanian-constituent-seimas-framework",
+          "mapIds": [
+            "entity-lithuania"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1920-07-15",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row145-w117-c368-s2-ep1-end",
+      "category": "events",
+      "eventDate": "1920-12-01",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes Lithuania's sustained-combat episode in Lithuanian-Polish as ended on 1920-12-01.",
+      "sourceWarId": "117",
+      "warName": "Lithuanian-Polish",
+      "rawParticipant": "Lithuania",
+      "sourceCountryCode": "368",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1920",
+        "Month": "12",
+        "Day": "1"
+      },
+      "originalRowNumber": 145,
+      "originalRow": {
+        "WarNum": "117",
+        "WarName": "Lithuanian-Polish",
+        "WarType": "1",
+        "ccode": "368",
+        "StateName": "Lithuania",
+        "Side": "2",
+        "StartMonth1": "7",
+        "StartDay1": "15",
+        "StartYear1": "1920",
+        "EndMonth1": "12",
+        "EndDay1": "1",
+        "EndYear1": "1920",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "2",
+        "Initiator": "2",
+        "Outcome": "2",
+        "TransTo": "-8",
+        "BatDeath": "500",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row145; WarNum=117; ccode=368; Side=2; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "lithuanian-constituent-seimas-framework",
+      "mappingContractId": "completion-cow-alias-06",
+      "originalEventDigest": "57418a4537d250dc18c7fe437137e56806fc3e79a430fc73f38210d8fe7c3f5c",
+      "originalCsvRowDigest": "f96637d5674be423f2f22ad3dce133c33aa2ffbd5e0c9ae9a325713ab2f7ecfb",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1920,
+          "entityId": "lithuanian-constituent-seimas-framework",
+          "mapIds": [
+            "entity-lithuania"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1920-12-01",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row146-w117-c290-s1-ep1-start",
+      "category": "events",
+      "eventDate": "1920-07-15",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-began",
+      "value": "COW codes Poland's sustained-combat episode in Lithuanian-Polish as began on 1920-07-15.",
+      "sourceWarId": "117",
+      "warName": "Lithuanian-Polish",
+      "rawParticipant": "Poland",
+      "sourceCountryCode": "290",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1920",
+        "Month": "7",
+        "Day": "15"
+      },
+      "originalRowNumber": 146,
+      "originalRow": {
+        "WarNum": "117",
+        "WarName": "Lithuanian-Polish",
+        "WarType": "1",
+        "ccode": "290",
+        "StateName": "Poland",
+        "Side": "1",
+        "StartMonth1": "7",
+        "StartDay1": "15",
+        "StartYear1": "1920",
+        "EndMonth1": "12",
+        "EndDay1": "1",
+        "EndYear1": "1920",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "2",
+        "Initiator": "1",
+        "Outcome": "1",
+        "TransTo": "-8",
+        "BatDeath": "500",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row146; WarNum=117; ccode=290; Side=1; StartYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "polish-small-constitution-framework",
+      "mappingContractId": "completion-cow-alias-07",
+      "originalEventDigest": "818ed4d34f7a20100cbea9fe24bbf7c219ea5571f9958d9168aa42187419accb",
+      "originalCsvRowDigest": "898e1fe01421969df32a0ae231b01a36367039abee65ff65fb12f9d93d4458a7",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1920,
+          "entityId": "polish-small-constitution-framework",
+          "mapIds": [
+            "entity-poland"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1920-07-15",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row146-w117-c290-s1-ep1-end",
+      "category": "events",
+      "eventDate": "1920-12-01",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes Poland's sustained-combat episode in Lithuanian-Polish as ended on 1920-12-01.",
+      "sourceWarId": "117",
+      "warName": "Lithuanian-Polish",
+      "rawParticipant": "Poland",
+      "sourceCountryCode": "290",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1920",
+        "Month": "12",
+        "Day": "1"
+      },
+      "originalRowNumber": 146,
+      "originalRow": {
+        "WarNum": "117",
+        "WarName": "Lithuanian-Polish",
+        "WarType": "1",
+        "ccode": "290",
+        "StateName": "Poland",
+        "Side": "1",
+        "StartMonth1": "7",
+        "StartDay1": "15",
+        "StartYear1": "1920",
+        "EndMonth1": "12",
+        "EndDay1": "1",
+        "EndYear1": "1920",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "2",
+        "Initiator": "1",
+        "Outcome": "1",
+        "TransTo": "-8",
+        "BatDeath": "500",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row146; WarNum=117; ccode=290; Side=1; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "polish-small-constitution-framework",
+      "mappingContractId": "completion-cow-alias-07",
+      "originalEventDigest": "6624c5400391604a6b3b2efe7915e3dc514123932fe207785721bde3a81ea977",
+      "originalCsvRowDigest": "898e1fe01421969df32a0ae231b01a36367039abee65ff65fb12f9d93d4458a7",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1920,
+          "entityId": "polish-small-constitution-framework",
+          "mapIds": [
+            "entity-poland"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1920-12-01",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row153-w125-c670-s1-ep1-start",
+      "category": "events",
+      "eventDate": "1934-03-20",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-began",
+      "value": "COW codes Saudi Arabia's sustained-combat episode in Saudi-Yemeni as began on 1934-03-20.",
+      "sourceWarId": "125",
+      "warName": "Saudi-Yemeni",
+      "rawParticipant": "Saudi Arabia",
+      "sourceCountryCode": "670",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1934",
+        "Month": "3",
+        "Day": "20"
+      },
+      "originalRowNumber": 153,
+      "originalRow": {
+        "WarNum": "125",
+        "WarName": "Saudi-Yemeni",
+        "WarType": "1",
+        "ccode": "670",
+        "StateName": "Saudi Arabia",
+        "Side": "1",
+        "StartMonth1": "3",
+        "StartDay1": "20",
+        "StartYear1": "1934",
+        "EndMonth1": "5",
+        "EndDay1": "13",
+        "EndYear1": "1934",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "6",
+        "Initiator": "1",
+        "Outcome": "1",
+        "TransTo": "-8",
+        "BatDeath": "100",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row153; WarNum=125; ccode=670; Side=1; StartYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "saudi-1932-monarchical-core",
+      "mappingContractId": "completion-cow-alias-09",
+      "originalEventDigest": "adf5b10af8795237d955c87071902edee8f096aa9207cb3ffdcf53512acaaf42",
+      "originalCsvRowDigest": "926932e0a39feb7aec8c9ae8a09d130d30c9c9db56094855bf74d313d81eb4c4",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1938,
+          "entityId": "saudi-1932-monarchical-core",
+          "mapIds": [
+            "entity-saudi-arabia"
+          ],
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1934-03-20",
+          "ageYears": 4,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row153-w125-c670-s1-ep1-end",
+      "category": "events",
+      "eventDate": "1934-05-13",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes Saudi Arabia's sustained-combat episode in Saudi-Yemeni as ended on 1934-05-13.",
+      "sourceWarId": "125",
+      "warName": "Saudi-Yemeni",
+      "rawParticipant": "Saudi Arabia",
+      "sourceCountryCode": "670",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1934",
+        "Month": "5",
+        "Day": "13"
+      },
+      "originalRowNumber": 153,
+      "originalRow": {
+        "WarNum": "125",
+        "WarName": "Saudi-Yemeni",
+        "WarType": "1",
+        "ccode": "670",
+        "StateName": "Saudi Arabia",
+        "Side": "1",
+        "StartMonth1": "3",
+        "StartDay1": "20",
+        "StartYear1": "1934",
+        "EndMonth1": "5",
+        "EndDay1": "13",
+        "EndYear1": "1934",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "6",
+        "Initiator": "1",
+        "Outcome": "1",
+        "TransTo": "-8",
+        "BatDeath": "100",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row153; WarNum=125; ccode=670; Side=1; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "saudi-1932-monarchical-core",
+      "mappingContractId": "completion-cow-alias-09",
+      "originalEventDigest": "c0efe37b2fdf8358a727f4c16b3a16543ee3953abfe97ddd87fc7a4cf06fb34d",
+      "originalCsvRowDigest": "926932e0a39feb7aec8c9ae8a09d130d30c9c9db56094855bf74d313d81eb4c4",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1938,
+          "entityId": "saudi-1932-monarchical-core",
+          "mapIds": [
+            "entity-saudi-arabia"
+          ],
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1934-05-13",
+          "ageYears": 4,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row189-w139-c712-s1-ep1-start",
+      "category": "events",
+      "eventDate": "1945-08-10",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-began",
+      "value": "COW codes Mongolia's sustained-combat episode in World War II as began on 1945-08-10.",
+      "sourceWarId": "139",
+      "warName": "World War II",
+      "rawParticipant": "Mongolia",
+      "sourceCountryCode": "712",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1945",
+        "Month": "8",
+        "Day": "10"
+      },
+      "originalRowNumber": 189,
+      "originalRow": {
+        "WarNum": "139",
+        "WarName": "World War II",
+        "WarType": "1",
+        "ccode": "712",
+        "StateName": "Mongolia",
+        "Side": "1",
+        "StartMonth1": "8",
+        "StartDay1": "10",
+        "StartYear1": "1945",
+        "EndMonth1": "8",
+        "EndDay1": "14",
+        "EndYear1": "1945",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "2",
+        "Outcome": "1",
+        "TransTo": "-8",
+        "BatDeath": "3000",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row189; WarNum=139; ccode=712; Side=1; StartYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "mongolia-peoples-republic-framework",
+      "mappingContractId": "completion-cow-alias-08",
+      "originalEventDigest": "233236706ab76ec62ee8d6bf997fc285513a54bd91c09c10ea6d219b34f231b0",
+      "originalCsvRowDigest": "81699570ad3ef83d2a54b93b836b2763d5f0883c9365a741f8a95c470875b909",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1945,
+          "entityId": "mongolia-peoples-republic-framework",
+          "mapIds": [
+            "entity-mongolia"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1945-08-10",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row189-w139-c712-s1-ep1-end",
+      "category": "events",
+      "eventDate": "1945-08-14",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes Mongolia's sustained-combat episode in World War II as ended on 1945-08-14.",
+      "sourceWarId": "139",
+      "warName": "World War II",
+      "rawParticipant": "Mongolia",
+      "sourceCountryCode": "712",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1945",
+        "Month": "8",
+        "Day": "14"
+      },
+      "originalRowNumber": 189,
+      "originalRow": {
+        "WarNum": "139",
+        "WarName": "World War II",
+        "WarType": "1",
+        "ccode": "712",
+        "StateName": "Mongolia",
+        "Side": "1",
+        "StartMonth1": "8",
+        "StartDay1": "10",
+        "StartYear1": "1945",
+        "EndMonth1": "8",
+        "EndDay1": "14",
+        "EndYear1": "1945",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "2",
+        "Outcome": "1",
+        "TransTo": "-8",
+        "BatDeath": "3000",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row189; WarNum=139; ccode=712; Side=1; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "mongolia-peoples-republic-framework",
+      "mappingContractId": "completion-cow-alias-08",
+      "originalEventDigest": "6e6ec62e35543def6d1378031a6e6af68c1c485d684f95a5949801e683d4b53c",
+      "originalCsvRowDigest": "81699570ad3ef83d2a54b93b836b2763d5f0883c9365a741f8a95c470875b909",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1945,
+          "entityId": "mongolia-peoples-republic-framework",
+          "mapIds": [
+            "entity-mongolia"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1945-08-14",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row190-w139-c710-s1-ep1-end",
+      "category": "events",
+      "eventDate": "1945-08-14",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes China's sustained-combat episode in World War II as ended on 1945-08-14.",
+      "sourceWarId": "139",
+      "warName": "World War II",
+      "rawParticipant": "China",
+      "sourceCountryCode": "710",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1945",
+        "Month": "8",
+        "Day": "14"
+      },
+      "originalRowNumber": 190,
+      "originalRow": {
+        "WarNum": "139",
+        "WarName": "World War II",
+        "WarType": "1",
+        "ccode": "710",
+        "StateName": "China",
+        "Side": "1",
+        "StartMonth1": "12",
+        "StartDay1": "7",
+        "StartYear1": "1941",
+        "EndMonth1": "8",
+        "EndDay1": "14",
+        "EndYear1": "1945",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "2",
+        "Outcome": "1",
+        "TransTo": "-8",
+        "BatDeath": "1350000",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row190; WarNum=139; ccode=710; Side=1; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "china-republic-nationalist-framework",
+      "mappingContractId": "completion-cow-alias-02",
+      "originalEventDigest": "590978815f22567ca90624c939379899f3ff1289be0dc42ab94301b9cb8ae85d",
+      "originalCsvRowDigest": "1c43bd5572c5bb1b5a23499a476d7c23851a1bd0eb64410476d05b0a8401d3e2",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1945,
+          "entityId": "china-republic-nationalist-framework",
+          "mapIds": [
+            "entity-china"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1945-08-14",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row191-w139-c560-s1-ep1-end",
+      "category": "events",
+      "eventDate": "1945-08-14",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes South Africa's sustained-combat episode in World War II as ended on 1945-08-14.",
+      "sourceWarId": "139",
+      "warName": "World War II",
+      "rawParticipant": "South Africa",
+      "sourceCountryCode": "560",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1945",
+        "Month": "8",
+        "Day": "14"
+      },
+      "originalRowNumber": 191,
+      "originalRow": {
+        "WarNum": "139",
+        "WarName": "World War II",
+        "WarType": "1",
+        "ccode": "560",
+        "StateName": "South Africa",
+        "Side": "1",
+        "StartMonth1": "9",
+        "StartDay1": "6",
+        "StartYear1": "1939",
+        "EndMonth1": "8",
+        "EndDay1": "14",
+        "EndYear1": "1945",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "4",
+        "Initiator": "2",
+        "Outcome": "1",
+        "TransTo": "-8",
+        "BatDeath": "8700",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row191; WarNum=139; ccode=560; Side=1; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "b19-south-africa-later-union",
+      "mappingContractId": "completion-cow-alias-10",
+      "originalEventDigest": "15c95367b392704fb8d78962b01c15e9a5b84922b0e35af800ec6f2b4cf24883",
+      "originalCsvRowDigest": "048c4eaf544310077d477ba99b44671b1517893388c0ae6afbbd6c6ad6660c3c",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1945,
+          "entityId": "b19-south-africa-later-union",
+          "mapIds": [
+            "entity-south-africa"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1945-08-14",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row221-w153-c710-s1-ep1-end",
+      "category": "events",
+      "eventDate": "1955-04-23",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes China's sustained-combat episode in Off-shore Islands as ended on 1955-04-23.",
+      "sourceWarId": "153",
+      "warName": "Off-shore Islands",
+      "rawParticipant": "China",
+      "sourceCountryCode": "710",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1955",
+        "Month": "4",
+        "Day": "23"
+      },
+      "originalRowNumber": 221,
+      "originalRow": {
+        "WarNum": "153",
+        "WarName": "Off-shore Islands",
+        "WarType": "1",
+        "ccode": "710",
+        "StateName": "China",
+        "Side": "1",
+        "StartMonth1": "9",
+        "StartDay1": "3",
+        "StartYear1": "1954",
+        "EndMonth1": "4",
+        "EndDay1": "23",
+        "EndYear1": "1955",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "1",
+        "Outcome": "1",
+        "TransTo": "-8",
+        "BatDeath": "1003",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row221; WarNum=153; ccode=710; Side=1; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "china-prc-framework",
+      "mappingContractId": "completion-cow-alias-04",
+      "originalEventDigest": "32c68cef548dcb58e5b8c33fdca9ca348aa40a1d5bbdc508bbfe4bb97ff353a2",
+      "originalCsvRowDigest": "93a6f48f3f2fa93fff31fe4d2df375653b5ad1f448c0e73b2a84f9b82ead46ec",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1960,
+          "entityId": "china-prc-framework",
+          "mapIds": [
+            "entity-china"
+          ],
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1955-04-23",
+          "ageYears": 5,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row222-w153-c713-s2-ep1-end",
+      "category": "events",
+      "eventDate": "1955-04-23",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes Taiwan's sustained-combat episode in Off-shore Islands as ended on 1955-04-23.",
+      "sourceWarId": "153",
+      "warName": "Off-shore Islands",
+      "rawParticipant": "Taiwan",
+      "sourceCountryCode": "713",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1955",
+        "Month": "4",
+        "Day": "23"
+      },
+      "originalRowNumber": 222,
+      "originalRow": {
+        "WarNum": "153",
+        "WarName": "Off-shore Islands",
+        "WarType": "1",
+        "ccode": "713",
+        "StateName": "Taiwan",
+        "Side": "2",
+        "StartMonth1": "9",
+        "StartDay1": "3",
+        "StartYear1": "1954",
+        "EndMonth1": "4",
+        "EndDay1": "23",
+        "EndYear1": "1955",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "2",
+        "Outcome": "2",
+        "TransTo": "-8",
+        "BatDeath": "1367",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row222; WarNum=153; ccode=713; Side=2; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "china-republic-nationalist-framework",
+      "mappingContractId": "completion-cow-alias-03",
+      "originalEventDigest": "92bf170f69d6be0e4cfa574aa1eed6f3273a51e1ee6b2e54a20cb0ff91a4eaf0",
+      "originalCsvRowDigest": "bba30faeddad7bc3875253a00ded74270c6206b7edb687f2ee354dc6d13dc080",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1960,
+          "entityId": "china-republic-nationalist-framework",
+          "mapIds": [
+            "entity-taiwan"
+          ],
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1955-04-23",
+          "ageYears": 5,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row232-w159-c710-s1-ep1-start",
+      "category": "events",
+      "eventDate": "1958-08-23",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-began",
+      "value": "COW codes China (PRC)'s sustained-combat episode in Taiwan Straits as began on 1958-08-23.",
+      "sourceWarId": "159",
+      "warName": "Taiwan Straits",
+      "rawParticipant": "China (PRC)",
+      "sourceCountryCode": "710",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1958",
+        "Month": "8",
+        "Day": "23"
+      },
+      "originalRowNumber": 232,
+      "originalRow": {
+        "WarNum": "159",
+        "WarName": "Taiwan Straits",
+        "WarType": "1",
+        "ccode": "710",
+        "StateName": "China (PRC)",
+        "Side": "1",
+        "StartMonth1": "8",
+        "StartDay1": "23",
+        "StartYear1": "1958",
+        "EndMonth1": "11",
+        "EndDay1": "23",
+        "EndYear1": "1958",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "1",
+        "Outcome": "6",
+        "TransTo": "-8",
+        "BatDeath": "300",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row232; WarNum=159; ccode=710; Side=1; StartYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "china-prc-framework",
+      "mappingContractId": "completion-cow-alias-04",
+      "originalEventDigest": "2f1377eac173ed6a5e815ed47dc423850e67e6d71c7f47cc5c91f83f5e7ed110",
+      "originalCsvRowDigest": "0f646c3aa2122725f5afb542032db6a15d8d685004487dd9d708cff46434790f",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1960,
+          "entityId": "china-prc-framework",
+          "mapIds": [
+            "entity-china"
+          ],
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1958-08-23",
+          "ageYears": 2,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row232-w159-c710-s1-ep1-end",
+      "category": "events",
+      "eventDate": "1958-11-23",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes China (PRC)'s sustained-combat episode in Taiwan Straits as ended on 1958-11-23.",
+      "sourceWarId": "159",
+      "warName": "Taiwan Straits",
+      "rawParticipant": "China (PRC)",
+      "sourceCountryCode": "710",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1958",
+        "Month": "11",
+        "Day": "23"
+      },
+      "originalRowNumber": 232,
+      "originalRow": {
+        "WarNum": "159",
+        "WarName": "Taiwan Straits",
+        "WarType": "1",
+        "ccode": "710",
+        "StateName": "China (PRC)",
+        "Side": "1",
+        "StartMonth1": "8",
+        "StartDay1": "23",
+        "StartYear1": "1958",
+        "EndMonth1": "11",
+        "EndDay1": "23",
+        "EndYear1": "1958",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "1",
+        "Outcome": "6",
+        "TransTo": "-8",
+        "BatDeath": "300",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row232; WarNum=159; ccode=710; Side=1; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "china-prc-framework",
+      "mappingContractId": "completion-cow-alias-04",
+      "originalEventDigest": "1bd97d957a8f4e6fa45eab4905fb4bf0721ad250292ba8350c780b0926dfce7c",
+      "originalCsvRowDigest": "0f646c3aa2122725f5afb542032db6a15d8d685004487dd9d708cff46434790f",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1960,
+          "entityId": "china-prc-framework",
+          "mapIds": [
+            "entity-china"
+          ],
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1958-11-23",
+          "ageYears": 2,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row233-w159-c713-s2-ep1-start",
+      "category": "events",
+      "eventDate": "1958-08-23",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-began",
+      "value": "COW codes Taiwan (ROC)'s sustained-combat episode in Taiwan Straits as began on 1958-08-23.",
+      "sourceWarId": "159",
+      "warName": "Taiwan Straits",
+      "rawParticipant": "Taiwan (ROC)",
+      "sourceCountryCode": "713",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1958",
+        "Month": "8",
+        "Day": "23"
+      },
+      "originalRowNumber": 233,
+      "originalRow": {
+        "WarNum": "159",
+        "WarName": "Taiwan Straits",
+        "WarType": "1",
+        "ccode": "713",
+        "StateName": "Taiwan (ROC)",
+        "Side": "2",
+        "StartMonth1": "8",
+        "StartDay1": "23",
+        "StartYear1": "1958",
+        "EndMonth1": "11",
+        "EndDay1": "23",
+        "EndYear1": "1958",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "2",
+        "Outcome": "6",
+        "TransTo": "-8",
+        "BatDeath": "1500",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row233; WarNum=159; ccode=713; Side=2; StartYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "china-republic-nationalist-framework",
+      "mappingContractId": "completion-cow-alias-03",
+      "originalEventDigest": "6dc72a27218d33a5ad1e7e2cf8ba103fb9ed4cc87794f9d885bffda486513bac",
+      "originalCsvRowDigest": "450d97ba24511a1417315e50a52308b238ab4e1a7b1d89bb09f43564ebe1a811",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1960,
+          "entityId": "china-republic-nationalist-framework",
+          "mapIds": [
+            "entity-taiwan"
+          ],
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1958-08-23",
+          "ageYears": 2,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    },
+    {
+      "id": "cow-v4-row233-w159-c713-s2-ep1-end",
+      "category": "events",
+      "eventDate": "1958-11-23",
+      "eventPrecision": "day",
+      "eventKind": "coded-combat-ended",
+      "value": "COW codes Taiwan (ROC)'s sustained-combat episode in Taiwan Straits as ended on 1958-11-23.",
+      "sourceWarId": "159",
+      "warName": "Taiwan Straits",
+      "rawParticipant": "Taiwan (ROC)",
+      "sourceCountryCode": "713",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1958",
+        "Month": "11",
+        "Day": "23"
+      },
+      "originalRowNumber": 233,
+      "originalRow": {
+        "WarNum": "159",
+        "WarName": "Taiwan Straits",
+        "WarType": "1",
+        "ccode": "713",
+        "StateName": "Taiwan (ROC)",
+        "Side": "2",
+        "StartMonth1": "8",
+        "StartDay1": "23",
+        "StartYear1": "1958",
+        "EndMonth1": "11",
+        "EndDay1": "23",
+        "EndYear1": "1958",
+        "StartMonth2": "-8",
+        "StartDay2": "-8",
+        "StartYear2": "-8",
+        "EndMonth2": "-8",
+        "EndDay2": "-8",
+        "EndYear2": "-8",
+        "TransFrom": "-8",
+        "WhereFought": "7",
+        "Initiator": "2",
+        "Outcome": "6",
+        "TransTo": "-8",
+        "BatDeath": "1500",
+        "Version": "4"
+      },
+      "sourceId": "cow-interstate-war-v4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "locator": "Original CSV row233; WarNum=159; ccode=713; Side=2; EndYear/Month/Day1",
+      "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+      "qualification": "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+      "reviewIssues": [],
+      "status": "historical-review",
+      "entityId": "china-republic-nationalist-framework",
+      "mappingContractId": "completion-cow-alias-03",
+      "originalEventDigest": "4b0bea3d95e7ea3d879b23f4f78ac1c059c91eb8f85758ce25c5fa9594c95051",
+      "originalCsvRowDigest": "450d97ba24511a1417315e50a52308b238ab4e1a7b1d89bb09f43564ebe1a811",
+      "snapshotSlots": [
+        {
+          "snapshotYear": 1960,
+          "entityId": "china-republic-nationalist-framework",
+          "mapIds": [
+            "entity-taiwan"
+          ],
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1958-11-23",
+          "ageYears": 2,
+          "status": "missing"
+        }
+      ],
+      "sourceIdentityApproval": false
+    }
+  ],
+  "held": [
+    {
+      "eventId": "cow-v4-row75-w67-c710-s2-ep1-start",
+      "entityId": "qing-imperial-framework",
+      "reason": "Inherited source/date/episode review flags",
+      "reviewIssues": [
+        "War transformation coding; endpoint meaning/identity requires review before acceptance."
+      ],
+      "potentialMissingSlots": []
+    },
+    {
+      "eventId": "cow-v4-row75-w67-c710-s2-ep1-start",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row75-w67-c710-s2-ep1-start",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row75-w67-c710-s2-ep1-end",
+      "entityId": "qing-imperial-framework",
+      "reason": "Inherited source/date/episode review flags",
+      "reviewIssues": [
+        "War transformation coding; endpoint meaning/identity requires review before acceptance."
+      ],
+      "potentialMissingSlots": []
+    },
+    {
+      "eventId": "cow-v4-row75-w67-c710-s2-ep1-end",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row75-w67-c710-s2-ep1-end",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row78-w73-c710-s2-ep1-start",
+      "entityId": "qing-imperial-framework",
+      "reason": "No currently missing entity/snapshot event slot within five-year explicitly dated past-context policy."
+    },
+    {
+      "eventId": "cow-v4-row78-w73-c710-s2-ep1-start",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row78-w73-c710-s2-ep1-start",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row78-w73-c710-s2-ep1-end",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row78-w73-c710-s2-ep1-end",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row87-w82-c710-s2-ep1-start",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row87-w82-c710-s2-ep1-start",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row87-w82-c710-s2-ep1-end",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row87-w82-c710-s2-ep1-end",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row91-w83-c710-s2-ep1-start",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row91-w83-c710-s2-ep1-start",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row91-w83-c710-s2-ep1-end",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row91-w83-c710-s2-ep1-end",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row128-w107-c366-s1-ep1-start",
+      "entityId": "estonian-constituent-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row134-w108-c366-s1-ep1-start",
+      "entityId": "estonian-constituent-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row137-w109-c290-s1-ep1-start",
+      "entityId": "polish-small-constitution-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row137-w109-c290-s1-ep1-end",
+      "entityId": "polish-small-constitution-framework",
+      "reason": "Inherited source/date/episode review flags",
+      "reviewIssues": [
+        "War transformation coding; endpoint meaning/identity requires review before acceptance."
+      ],
+      "potentialMissingSlots": [
+        {
+          "snapshotYear": 1920,
+          "entityId": "polish-small-constitution-framework",
+          "mapIds": [
+            "entity-poland"
+          ],
+          "context": "event-in-selected-year",
+          "actualEventDate": "1920-10-18",
+          "ageYears": 0,
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row148-w118-c710-s2-ep1-start",
+      "entityId": "qing-imperial-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row148-w118-c710-s2-ep1-start",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row148-w118-c710-s2-ep1-start",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row148-w118-c710-s2-ep1-end",
+      "entityId": "qing-imperial-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row148-w118-c710-s2-ep1-end",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row148-w118-c710-s2-ep1-end",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row150-w121-c710-s2-ep1-start",
+      "entityId": "qing-imperial-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row150-w121-c710-s2-ep1-start",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row150-w121-c710-s2-ep1-start",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row150-w121-c710-s2-ep1-end",
+      "entityId": "qing-imperial-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row150-w121-c710-s2-ep1-end",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row150-w121-c710-s2-ep1-end",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row157-w130-c710-s2-ep1-start",
+      "entityId": "qing-imperial-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row157-w130-c710-s2-ep1-start",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row157-w130-c710-s2-ep1-start",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row157-w130-c710-s2-ep1-end",
+      "entityId": "qing-imperial-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row157-w130-c710-s2-ep1-end",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row157-w130-c710-s2-ep1-end",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row162-w136-c712-s1-ep1-start",
+      "entityId": "mongolia-peoples-republic-framework",
+      "reason": "No currently missing entity/snapshot event slot within five-year explicitly dated past-context policy."
+    },
+    {
+      "eventId": "cow-v4-row162-w136-c712-s1-ep1-end",
+      "entityId": "mongolia-peoples-republic-framework",
+      "reason": "No currently missing entity/snapshot event slot within five-year explicitly dated past-context policy."
+    },
+    {
+      "eventId": "cow-v4-row186-w139-c290-s1-ep1-start",
+      "entityId": "polish-small-constitution-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row186-w139-c290-s1-ep1-end",
+      "entityId": "polish-small-constitution-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row190-w139-c710-s1-ep1-start",
+      "entityId": "qing-imperial-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row190-w139-c710-s1-ep1-start",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row190-w139-c710-s1-ep1-start",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row190-w139-c710-s1-ep1-end",
+      "entityId": "qing-imperial-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row190-w139-c710-s1-ep1-end",
+      "entityId": "china-prc-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row191-w139-c560-s1-ep1-start",
+      "entityId": "b19-south-africa-later-union",
+      "reason": "No currently missing entity/snapshot event slot within five-year explicitly dated past-context policy."
+    },
+    {
+      "eventId": "cow-v4-row205-w151-c710-s2-ep1-start",
+      "entityId": "qing-imperial-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row205-w151-c710-s2-ep1-start",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row205-w151-c710-s2-ep1-start",
+      "entityId": "china-prc-framework",
+      "reason": "No currently missing entity/snapshot event slot within five-year explicitly dated past-context policy."
+    },
+    {
+      "eventId": "cow-v4-row205-w151-c710-s2-ep1-end",
+      "entityId": "qing-imperial-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row205-w151-c710-s2-ep1-end",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row205-w151-c710-s2-ep1-end",
+      "entityId": "china-prc-framework",
+      "reason": "No currently missing entity/snapshot event slot within five-year explicitly dated past-context policy."
+    },
+    {
+      "eventId": "cow-v4-row221-w153-c710-s1-ep1-start",
+      "entityId": "qing-imperial-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row221-w153-c710-s1-ep1-start",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row221-w153-c710-s1-ep1-start",
+      "entityId": "china-prc-framework",
+      "reason": "No currently missing entity/snapshot event slot within five-year explicitly dated past-context policy."
+    },
+    {
+      "eventId": "cow-v4-row221-w153-c710-s1-ep1-end",
+      "entityId": "qing-imperial-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row221-w153-c710-s1-ep1-end",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "Actual coded event outside bounded existing historical framework; do not transfer across regimes."
+    },
+    {
+      "eventId": "cow-v4-row222-w153-c713-s2-ep1-start",
+      "entityId": "china-republic-nationalist-framework",
+      "reason": "No currently missing entity/snapshot event slot within five-year explicitly dated past-context policy."
+    }
+  ],
+  "namespaceHolds": [
+    {
+      "literal": "Yugoslavia",
+      "period": "before1918",
+      "reason": "Anachronistic literal label requires independent COW345-to-Serbia namespace certification, never infer succession."
+    },
+    {
+      "literal": "Yemen Arab Republic",
+      "period": "1934",
+      "reason": "Anachronistic source label cannot be automatically normalized to Yahya monarchy; source namespace certification required."
+    },
+    {
+      "literal": "Russia",
+      "period": "1918–1920",
+      "reason": "Neither SovietUnion1922 nor imperial framework ending1915 may absorb revolutionary Russia combat endpoints."
+    },
+    {
+      "literal": "Ethiopia",
+      "period": "1935–1953",
+      "reason": "Occupation/restored1945/revised1955 framework gaps do not authorize borrowing earlier combat episodes."
+    }
+  ],
+  "summary": {
+    "candidateEvents": 23,
+    "missingSlots": 10,
+    "slots": [
+      "b19-south-africa-later-union:1945",
+      "china-prc-framework:1960",
+      "china-republic-nationalist-framework:1945",
+      "china-republic-nationalist-framework:1960",
+      "estonian-constituent-framework:1920",
+      "lithuanian-constituent-seimas-framework:1920",
+      "mongolia-peoples-republic-framework:1945",
+      "polish-small-constitution-framework:1920",
+      "qing-imperial-framework:1900",
+      "saudi-1932-monarchical-core:1938"
+    ],
+    "proposedContracts": 10,
+    "contractsWithUsefulMissingSlots": 10,
+    "heldMappedRows": 63,
+    "originalCsvRowComparisons": 453,
+    "priorAcceptedEventsExcluded": 45
+  },
+  "productionEdited": false,
+  "historicalAcceptance": false
+}

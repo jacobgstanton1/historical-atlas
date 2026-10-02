@@ -1,0 +1,414 @@
+{
+  "job": {
+    "id": "dossier-bbe2662d534d3984ae9ffe21",
+    "entityId": "belgium-kingdom",
+    "period": {
+      "from": "1910-06",
+      "until": "1956-09"
+    },
+    "mapIds": [
+      "entity-belgium"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "344394166b09469095b68223b3496190970abc2bf19ecff820c71c2d7517be6f",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-territorial-events-01-belgium-kingdom",
+    "jobId": "dossier-bbe2662d534d3984ae9ffe21",
+    "entityId": "belgium-kingdom",
+    "mapIds": [
+      "entity-belgium"
+    ],
+    "worker": {
+      "id": "bulk-parser/territorial-events/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "344394166b09469095b68223b3496190970abc2bf19ecff820c71c2d7517be6f",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1910-06",
+      "until": "1956-09"
+    },
+    "claims": [
+      {
+        "id": "bulk-05f51525677c93baae6b556b-1dfedb815b",
+        "category": "events-context",
+        "value": "COW territorial-change record429 codes Belgium as the losing-side participant in a cession record concerning part of catalogue-labelled Zaire (Kinshasa) (Belgian Congo), dated 1910-06.",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "event",
+          "date": "1910-06",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow387/change429",
+            "note": "{\"original\":{\"id\":\"cow-tc-429-loser-belgium-kingdom\",\"category\":\"events-context\",\"eventDate\":\"1910-06\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"belgium-kingdom\",\"side\":\"loser\",\"sourceChangeNumber\":\"429\",\"sourceCSVLine\":388,\"sourceRowIndex\":386,\"rawRow\":{\"year\":\"1910\",\"month\":\"6\",\"gainer\":\"200\",\"gaintype\":\"0\",\"procedur\":\"3\",\"entity\":\"490\",\"contgain\":\"0\",\"area\":\"38850.00\",\"pop\":\"250000\",\"portion\":\"0\",\"loser\":\"211\",\"losetype\":\"0\",\"contlose\":\"0\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"429\",\"indep\":\"0\",\"conflict\":\"0\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow387/change429\",\"sourceProcedure\":\"cession\",\"sourceParticipantCode\":\"211\",\"rawCatalogueLines\":{\"participant\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"exchanged\":[\"490 Zaire (Kinshasa) (Belgian Congo) 1885 1960 Became colony of 211\"],\"other\":[]},\"mappingProposals\":[{\"id\":\"archigos-BEL-belgium-kingdom-1875-01-01\",\"sourceCountryCode\":\"BEL\",\"entityId\":\"belgium-kingdom\",\"from\":\"1875-01-01\",\"until\":\"1914-01-01\",\"sourceCountryLocator\":\"Archigos v4.1 case descriptions, printed p.348 (PDF page 354)\",\"existingIdentity\":{\"name\":\"Belgium\",\"validFrom\":\"1830\",\"validUntil\":null,\"sourceIds\":[\"b01-belgian-monarchy\",\"b01-belgian-constitution-1831\"]},\"rationale\":\"Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.\",\"qualifications\":[\"Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.\",\"Country coding is not evidence of sovereignty of every map polygon.\",\"Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.\",\"Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics.\"],\"role\":\"Effective political leader (Archigos coding)\",\"status\":\"approved-mapping-contract\",\"reviewer\":\"scale-flags-independent-archigos\",\"cowCode\":\"211\",\"origin\":\"Existing reviewed framework identity; NEW COW namespace bridge requires review\"}],\"prioritySlots\":[{\"entityId\":\"belgium-kingdom\",\"snapshotYear\":1914,\"status\":\"missing\",\"actualEventDate\":\"1910-06\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":4}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-429-loser-belgium-kingdom\",\"originalEventDigest\":\"047f21940d320bebcbbffa8677d4bb6ad507ed6b8c6331994a302679a1b413e8\",\"originalCsvRowDigest\":\"296024b9ea6e3466c15c6ad9dd9d777e42aea69fd8300d3c17a1a97caaaf1a92\",\"sourceDate\":\"1910-06\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"belgium-kingdom\",\"category\":\"events\",\"eventDate\":\"1910-06\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record429 codes Belgium as the losing-side participant in a cession record concerning part of catalogue-labelled Zaire (Kinshasa) (Belgian Congo), dated 1910-06.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow387/change429\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"429\",\"sourceParticipantCode\":\"211\",\"sourceSide\":\"loser\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"490\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"belgium-kingdom\",\"category\":\"events\",\"eventDate\":\"1910-06\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record429 codes Belgium as the losing-side participant in a cession record concerning part of catalogue-labelled Zaire (Kinshasa) (Belgian Congo), dated 1910-06.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow387/change429\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"429\",\"sourceParticipantCode\":\"211\",\"sourceSide\":\"loser\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"490\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-429-loser-belgium-kingdom\",\"sourceRowIndex\":386,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"59ab38ea43fcd4928c224eda5f1811f1498748a492bfa96c062eeffca57328d5\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"belgium-kingdom\",\"entityRecordDigest\":\"b69b442efa88b2ca2e998fb952399eb4f07dc73104ad881949745a1786cd1657\",\"names\":[{\"value\":\"Belgium\",\"validFrom\":\"1830\",\"sourceIds\":[\"b01-belgian-monarchy\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existence\":{\"validFrom\":\"1830\",\"sourceIds\":[\"b01-belgian-monarchy\"],\"note\":\"Independent Belgian framework from 1830; constitutional monarchy from 1831. Independence, constitution and first royal oath are separate dates.\"},\"participantCode\":\"211\",\"namespaceOriginalCatalogueLines\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"independentCowNamespaceLabels\":[\"Belgium\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"exchanged\":[\"490 Zaire (Kinshasa) (Belgian Congo) 1885 1960 Became colony of 211\"],\"other\":[]},\"independentCatalogueCorrection\":null,\"snapshotContextReview\":[{\"entityId\":\"belgium-kingdom\",\"snapshotYear\":1914,\"status\":\"missing\",\"actualEventDate\":\"1910-06\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":4,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1910-06",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-05f51525677c93baae6b556b",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow387/change429"
+        }
+      },
+      {
+        "id": "bulk-515d337c233ac55131a8ba71-1dfedb815b",
+        "category": "events-context",
+        "value": "COW territorial-change record476 codes Belgium as the gaining-side participant in a cession record concerning part of catalogue-labelled Germany/Prussia, dated 1919-06.",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "event",
+          "date": "1919-06",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow434/change476",
+            "note": "{\"original\":{\"id\":\"cow-tc-476-gainer-belgium-kingdom\",\"category\":\"events-context\",\"eventDate\":\"1919-06\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"belgium-kingdom\",\"side\":\"gainer\",\"sourceChangeNumber\":\"476\",\"sourceCSVLine\":435,\"sourceRowIndex\":433,\"rawRow\":{\"year\":\"1919\",\"month\":\"6\",\"gainer\":\"211\",\"gaintype\":\"1\",\"procedur\":\"3\",\"entity\":\"255\",\"contgain\":\"1\",\"area\":\"1000.00\",\"pop\":\"61000\",\"portion\":\"0\",\"loser\":\"255\",\"losetype\":\"1\",\"contlose\":\"1\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"476\",\"indep\":\"0\",\"conflict\":\"1\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow434/change476\",\"sourceProcedure\":\"cession\",\"sourceParticipantCode\":\"211\",\"rawCatalogueLines\":{\"participant\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"exchanged\":[\"255 Germany/Prussia 1945 1990 Became part of 260\"],\"other\":[\"255 Germany/Prussia 1945 1990 Became part of 260\"]},\"mappingProposals\":[{\"id\":\"archigos-BEL-belgium-kingdom-1919-01-01\",\"sourceCountryCode\":\"BEL\",\"entityId\":\"belgium-kingdom\",\"from\":\"1919-01-01\",\"until\":\"1940-01-01\",\"sourceCountryLocator\":\"Archigos v4.1 case descriptions, printed p.348 (PDF page 354)\",\"existingIdentity\":{\"name\":\"Belgium\",\"validFrom\":\"1830\",\"validUntil\":null,\"sourceIds\":[\"b01-belgian-monarchy\",\"b01-belgian-constitution-1831\"]},\"rationale\":\"Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.\",\"qualifications\":[\"Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.\",\"Country coding is not evidence of sovereignty of every map polygon.\",\"Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.\",\"Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics.\"],\"role\":\"Effective political leader (Archigos coding)\",\"status\":\"approved-mapping-contract\",\"reviewer\":\"scale-flags-independent-archigos\",\"cowCode\":\"211\",\"origin\":\"Existing reviewed framework identity; NEW COW namespace bridge requires review\"}],\"prioritySlots\":[{\"entityId\":\"belgium-kingdom\",\"snapshotYear\":1920,\"status\":\"missing\",\"actualEventDate\":\"1919-06\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":1}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-476-gainer-belgium-kingdom\",\"originalEventDigest\":\"a5241a7f9cabb4e8481767a1498f9df314e4734504558a57b84a5a800803327a\",\"originalCsvRowDigest\":\"087650d7d1d09f6f1425b02c2962d78c07839daf6ffe9b6abfc62eccc8c4ebe9\",\"sourceDate\":\"1919-06\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"belgium-kingdom\",\"category\":\"events\",\"eventDate\":\"1919-06\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record476 codes Belgium as the gaining-side participant in a cession record concerning part of catalogue-labelled Germany/Prussia, dated 1919-06.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow434/change476\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"476\",\"sourceParticipantCode\":\"211\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"255\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"belgium-kingdom\",\"category\":\"events\",\"eventDate\":\"1919-06\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record476 codes Belgium as the gaining-side participant in a cession record concerning part of catalogue-labelled Germany/Prussia, dated 1919-06.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow434/change476\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"476\",\"sourceParticipantCode\":\"211\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"255\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-476-gainer-belgium-kingdom\",\"sourceRowIndex\":433,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"60a5d9bd8fedbda34d1fc4609ad5a6a6d519b2632759a0afff868bf1c7fc1e29\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"belgium-kingdom\",\"entityRecordDigest\":\"b69b442efa88b2ca2e998fb952399eb4f07dc73104ad881949745a1786cd1657\",\"names\":[{\"value\":\"Belgium\",\"validFrom\":\"1830\",\"sourceIds\":[\"b01-belgian-monarchy\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existence\":{\"validFrom\":\"1830\",\"sourceIds\":[\"b01-belgian-monarchy\"],\"note\":\"Independent Belgian framework from 1830; constitutional monarchy from 1831. Independence, constitution and first royal oath are separate dates.\"},\"participantCode\":\"211\",\"namespaceOriginalCatalogueLines\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"independentCowNamespaceLabels\":[\"Belgium\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"exchanged\":[\"255 Germany/Prussia 1945 1990 Became part of 260\"],\"other\":[\"255 Germany/Prussia 1945 1990 Became part of 260\"]},\"independentCatalogueCorrection\":null,\"snapshotContextReview\":[{\"entityId\":\"belgium-kingdom\",\"snapshotYear\":1920,\"status\":\"missing\",\"actualEventDate\":\"1919-06\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":1,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1919-06",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-515d337c233ac55131a8ba71",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow434/change476"
+        }
+      },
+      {
+        "id": "bulk-50b3c5be3148ef395804ae4f-1dfedb815b",
+        "category": "events-context",
+        "value": "COW territorial-change record552 codes Belgium as the gaining-side participant in a cession record concerning part of catalogue-labelled Angola (literal catalogue code540/name split across adjacent lines), dated 1927-07.",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "event",
+          "date": "1927-07",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow506/change552",
+            "note": "{\"original\":{\"id\":\"cow-tc-552-gainer-belgium-kingdom\",\"category\":\"events-context\",\"eventDate\":\"1927-07\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"belgium-kingdom\",\"side\":\"gainer\",\"sourceChangeNumber\":\"552\",\"sourceCSVLine\":507,\"sourceRowIndex\":505,\"rawRow\":{\"year\":\"1927\",\"month\":\"7\",\"gainer\":\"211\",\"gaintype\":\"0\",\"procedur\":\"3\",\"entity\":\"540\",\"contgain\":\"0\",\"area\":\"3.00\",\"pop\":\".\",\"portion\":\"0\",\"loser\":\"235\",\"losetype\":\"0\",\"contlose\":\"0\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"552\",\"indep\":\"0\",\"conflict\":\"0\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow506/change552\",\"sourceProcedure\":\"cession\",\"sourceParticipantCode\":\"211\",\"rawCatalogueLines\":{\"participant\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"exchanged\":[],\"other\":[]},\"mappingProposals\":[{\"id\":\"archigos-BEL-belgium-kingdom-1919-01-01\",\"sourceCountryCode\":\"BEL\",\"entityId\":\"belgium-kingdom\",\"from\":\"1919-01-01\",\"until\":\"1940-01-01\",\"sourceCountryLocator\":\"Archigos v4.1 case descriptions, printed p.348 (PDF page 354)\",\"existingIdentity\":{\"name\":\"Belgium\",\"validFrom\":\"1830\",\"validUntil\":null,\"sourceIds\":[\"b01-belgian-monarchy\",\"b01-belgian-constitution-1831\"]},\"rationale\":\"Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.\",\"qualifications\":[\"Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.\",\"Country coding is not evidence of sovereignty of every map polygon.\",\"Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.\",\"Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics.\"],\"role\":\"Effective political leader (Archigos coding)\",\"status\":\"approved-mapping-contract\",\"reviewer\":\"scale-flags-independent-archigos\",\"cowCode\":\"211\",\"origin\":\"Existing reviewed framework identity; NEW COW namespace bridge requires review\"}],\"prioritySlots\":[{\"entityId\":\"belgium-kingdom\",\"snapshotYear\":1930,\"status\":\"missing\",\"actualEventDate\":\"1927-07\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":3}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-552-gainer-belgium-kingdom\",\"originalEventDigest\":\"a58ee064281cc9697d7a57c2d10256c3e37680609818018b4eb78a9deb56b4db\",\"originalCsvRowDigest\":\"be225b74169a3c9f22e080f9ad710cd98f21a040ad3a91b0bbedcb94e5ac6b56\",\"sourceDate\":\"1927-07\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"belgium-kingdom\",\"category\":\"events\",\"eventDate\":\"1927-07\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record552 codes Belgium as the gaining-side participant in a cession record concerning part of catalogue-labelled Angola (literal catalogue code540/name split across adjacent lines), dated 1927-07.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow506/change552\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"552\",\"sourceParticipantCode\":\"211\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"540\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"belgium-kingdom\",\"category\":\"events\",\"eventDate\":\"1927-07\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record552 codes Belgium as the gaining-side participant in a cession record concerning part of catalogue-labelled Angola (literal catalogue code540/name split across adjacent lines), dated 1927-07.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow506/change552\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"552\",\"sourceParticipantCode\":\"211\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"540\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-552-gainer-belgium-kingdom\",\"sourceRowIndex\":505,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"8e190ebce006011a4792b65fa274d70ed732ef3bc1146990579784623ccc3208\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"belgium-kingdom\",\"entityRecordDigest\":\"b69b442efa88b2ca2e998fb952399eb4f07dc73104ad881949745a1786cd1657\",\"names\":[{\"value\":\"Belgium\",\"validFrom\":\"1830\",\"sourceIds\":[\"b01-belgian-monarchy\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existence\":{\"validFrom\":\"1830\",\"sourceIds\":[\"b01-belgian-monarchy\"],\"note\":\"Independent Belgian framework from 1830; constitutional monarchy from 1831. Independence, constitution and first royal oath are separate dates.\"},\"participantCode\":\"211\",\"namespaceOriginalCatalogueLines\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"independentCowNamespaceLabels\":[\"Belgium\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"exchanged\":[],\"other\":[]},\"independentCatalogueCorrection\":{\"code\":\"540\",\"literalName\":\"Angola\",\"note\":\"Original catalogue PDF has540 on one extracted line andAngola1816–1975 Became colonyof235 on next; intake lookup omitted this row due line wrap.\"},\"snapshotContextReview\":[{\"entityId\":\"belgium-kingdom\",\"snapshotYear\":1930,\"status\":\"missing\",\"actualEventDate\":\"1927-07\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":3,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1927-07",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-50b3c5be3148ef395804ae4f",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow506/change552"
+        }
+      },
+      {
+        "id": "bulk-3da7645760a8975357602d8c-1dfedb815b",
+        "category": "events-context",
+        "value": "COW territorial-change record669 codes Belgium as the losing-side participant in a cession record concerning part of catalogue-labelled Belgium, dated 1956-09.",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "event",
+          "date": "1956-09",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow620/change669",
+            "note": "{\"original\":{\"id\":\"cow-tc-669-loser-belgium-kingdom\",\"category\":\"events-context\",\"eventDate\":\"1956-09\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"belgium-kingdom\",\"side\":\"loser\",\"sourceChangeNumber\":\"669\",\"sourceCSVLine\":621,\"sourceRowIndex\":619,\"rawRow\":{\"year\":\"1956\",\"month\":\"9\",\"gainer\":\"260\",\"gaintype\":\"1\",\"procedur\":\"3\",\"entity\":\"211\",\"contgain\":\"1\",\"area\":\"1.00\",\"pop\":\"648\",\"portion\":\"0\",\"loser\":\"211\",\"losetype\":\"1\",\"contlose\":\"1\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"669\",\"indep\":\"0\",\"conflict\":\"0\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow620/change669\",\"sourceProcedure\":\"cession\",\"sourceParticipantCode\":\"211\",\"rawCatalogueLines\":{\"participant\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"exchanged\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"other\":[\"260 German Federal Republic 1871 1945 Became part of 255\",\"260 German Federal Republic 1945 1955 Occupied by 2\",\"260 German Federal Republic 1990 1993 Became part of 255\"]},\"mappingProposals\":[{\"id\":\"archigos-BEL-belgium-kingdom-1946-01-01\",\"sourceCountryCode\":\"BEL\",\"entityId\":\"belgium-kingdom\",\"from\":\"1946-01-01\",\"until\":\"1961-01-01\",\"sourceCountryLocator\":\"Archigos v4.1 case descriptions, printed p.348 (PDF page 354)\",\"existingIdentity\":{\"name\":\"Belgium\",\"validFrom\":\"1830\",\"validUntil\":null,\"sourceIds\":[\"b01-belgian-monarchy\",\"b01-belgian-constitution-1831\"]},\"rationale\":\"Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.\",\"qualifications\":[\"Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.\",\"Country coding is not evidence of sovereignty of every map polygon.\",\"Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.\",\"Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics.\"],\"role\":\"Effective political leader (Archigos coding)\",\"status\":\"approved-mapping-contract\",\"reviewer\":\"scale-flags-independent-archigos\",\"cowCode\":\"211\",\"origin\":\"Existing reviewed framework identity; NEW COW namespace bridge requires review\"}],\"prioritySlots\":[{\"entityId\":\"belgium-kingdom\",\"snapshotYear\":1960,\"status\":\"missing\",\"actualEventDate\":\"1956-09\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":4}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-669-loser-belgium-kingdom\",\"originalEventDigest\":\"0b5a7828067bb53f8192281b09766aa90c5253186801e5796eb9f9dac4aad397\",\"originalCsvRowDigest\":\"1a236463a235faef0e9f3bc7b0d8a82e882a84ed2c663d801320ae44ecdabc39\",\"sourceDate\":\"1956-09\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"belgium-kingdom\",\"category\":\"events\",\"eventDate\":\"1956-09\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record669 codes Belgium as the losing-side participant in a cession record concerning part of catalogue-labelled Belgium, dated 1956-09.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow620/change669\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"669\",\"sourceParticipantCode\":\"211\",\"sourceSide\":\"loser\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"211\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"belgium-kingdom\",\"category\":\"events\",\"eventDate\":\"1956-09\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record669 codes Belgium as the losing-side participant in a cession record concerning part of catalogue-labelled Belgium, dated 1956-09.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow620/change669\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"669\",\"sourceParticipantCode\":\"211\",\"sourceSide\":\"loser\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"211\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-669-loser-belgium-kingdom\",\"sourceRowIndex\":619,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"79a289790acdb7009d4a2af2b520e2403d98188b3716d6bd834eb1eb515dfaa6\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"belgium-kingdom\",\"entityRecordDigest\":\"b69b442efa88b2ca2e998fb952399eb4f07dc73104ad881949745a1786cd1657\",\"names\":[{\"value\":\"Belgium\",\"validFrom\":\"1830\",\"sourceIds\":[\"b01-belgian-monarchy\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existence\":{\"validFrom\":\"1830\",\"sourceIds\":[\"b01-belgian-monarchy\"],\"note\":\"Independent Belgian framework from 1830; constitutional monarchy from 1831. Independence, constitution and first royal oath are separate dates.\"},\"participantCode\":\"211\",\"namespaceOriginalCatalogueLines\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"independentCowNamespaceLabels\":[\"Belgium\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"exchanged\":[\"211 Belgium 1816 1830 Became part of 210\",\"211 Belgium 1914 1918 Occupied by 255\",\"211 Belgium 1940 1945 Occupied by 255\"],\"other\":[\"260 German Federal Republic 1871 1945 Became part of 255\",\"260 German Federal Republic 1945 1955 Occupied by 2\",\"260 German Federal Republic 1990 1993 Became part of 255\"]},\"independentCatalogueCorrection\":null,\"snapshotContextReview\":[{\"entityId\":\"belgium-kingdom\",\"snapshotYear\":1960,\"status\":\"missing\",\"actualEventDate\":\"1956-09\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":4,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1956-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-3da7645760a8975357602d8c",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow620/change669"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:24:33.951Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "58672f0fffe3af975beeac60bc2a4ed02871100b2e8365e37044348cad54ede0",
+        "d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "f72518f56f23f1ddb22982000195b3c5a6d32f0e063cec342fc1997bbfd76e39",
+    "productionFingerprint": "344394166b09469095b68223b3496190970abc2bf19ecff820c71c2d7517be6f",
+    "jobId": "dossier-bbe2662d534d3984ae9ffe21",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "f72518f56f23f1ddb22982000195b3c5a6d32f0e063cec342fc1997bbfd76e39",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent of territorial-events extractor; contract d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2; adapter territorial-events/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-05f51525677c93baae6b556b-1dfedb815b": "accepted",
+        "bulk-515d337c233ac55131a8ba71-1dfedb815b": "accepted",
+        "bulk-50b3c5be3148ef395804ae4f-1dfedb815b": "accepted",
+        "bulk-3da7645760a8975357602d8c-1dfedb815b": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-05f51525677c93baae6b556b-1dfedb815b",
+      "bulk-515d337c233ac55131a8ba71-1dfedb815b",
+      "bulk-50b3c5be3148ef395804ae4f-1dfedb815b",
+      "bulk-3da7645760a8975357602d8c-1dfedb815b"
+    ]
+  }
+}

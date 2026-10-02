@@ -1,0 +1,459 @@
+{
+  "job": {
+    "id": "dossier-ed5ccf070fb175c487b3c324",
+    "entityId": "qing-imperial-framework",
+    "period": {
+      "from": "1895-03-30",
+      "until": "1900-10-11"
+    },
+    "mapIds": [
+      "entity-manchu-empire",
+      "entity-qing-empire"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "0918f47cdace00fd7cae954c1b49987beed158254d247ece3f0e9259f6cedf35",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-cow-events-02-qing-imperial-framework",
+    "jobId": "dossier-ed5ccf070fb175c487b3c324",
+    "entityId": "qing-imperial-framework",
+    "mapIds": [
+      "entity-manchu-empire",
+      "entity-qing-empire"
+    ],
+    "worker": {
+      "id": "bulk-parser/dated-coded-combat-event/v2",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "0918f47cdace00fd7cae954c1b49987beed158254d247ece3f0e9259f6cedf35",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1895-03-30",
+      "until": "1900-10-11"
+    },
+    "claims": [
+      {
+        "id": "bulk-eedf4c3a2cde12e76c69da33-ace6b1d3d8",
+        "category": "events-context",
+        "value": "COW codes China's sustained-combat episode in First Sino-Japanese as ended on 1895-03-30.",
+        "entityId": "qing-imperial-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1895-03-30",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "qing-imperial-framework-coded-combat-participation",
+          "description": "Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row78; WarNum=73; ccode=710; Side=2; EndYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"73\",\"WarName\":\"First Sino-Japanese\",\"WarType\":\"1\",\"ccode\":\"710\",\"StateName\":\"China\",\"Side\":\"2\",\"StartMonth1\":\"7\",\"StartDay1\":\"25\",\"StartYear1\":\"1894\",\"EndMonth1\":\"3\",\"EndDay1\":\"30\",\"EndYear1\":\"1895\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"7\",\"Initiator\":\"2\",\"Outcome\":\"2\",\"TransTo\":\"-8\",\"BatDeath\":\"10000\",\"Version\":\"4\"},\"rowNumber\":78,\"event\":\"cow-v4-row78-w73-c710-s2-ep1-end\",\"sourceDate\":\"1895-03-30\",\"participant\":\"China\",\"sourceCountryCode\":\"710\",\"independentReview\":{\"eventId\":\"cow-v4-row78-w73-c710-s2-ep1-end\",\"originalEventDigest\":\"0c976f7c61847259961ec2c76b0ea6a0faa230ae475a2e83060830f6259d46b0\",\"decision\":\"source-date-mapping-approved\",\"approvedMappedFields\":{\"entityId\":\"qing-imperial-framework\",\"value\":\"COW codes China's sustained-combat episode in First Sino-Japanese as ended on 1895-03-30.\",\"eventDate\":\"1895-03-30\",\"eventPrecision\":\"day\",\"locator\":\"Original CSV row78; WarNum=73; ccode=710; Side=2; EndYear/Month/Day1\",\"scope\":\"Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion.\",\"qualification\":\"COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.\"},\"mapping\":{\"from\":\"1800-01-01\",\"until\":\"1912-02-12\",\"entityRecordDigest\":\"4ce8e6e53665be9373cad00794c6e03e7c9f3d5b2028f0e22d8e762c167ad1fd\",\"reason\":\"Literal China710 before1912 is proposed only against the existing Qing imperial framework, not a modern Chinese state or Taiwan administration. Coordinator independently compared original dated sourced identity/existence bounds, literal COW code/name and selected endpoint; no successor or territorial bridge inferred.\"}}}; Original cached four-page codebook read in full; original CSV independently extracted rows compared for all selected endpoints. Codebook defines Ccode as system-member identity and sustained-combat dates. Existing curated names/existence/source references independently inspected for Qing, Nationalist ROC versus PRC, Estonia/Lithuania/Poland constituent frames, Mongolia, Saudi1932 and Union of South Africa. Source-coded participants are not territorial sovereignty. Taiwan713 explicitly labels ROC in selected1958 row; same bounded Nationalist government mapping is used for1955 Taiwan713 with no island-sovereignty conclusion. Start/end are neither declarations nor peace treaties. Transformation, occupation, anachronistic Yugoslavia/Yemen and outside-framework cases remain held.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1895-03-30",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Source dates remain actual event dates. Later snapshot context is explicitly past dated evidence within five calendar years, never ongoing-war or retimed-event evidence.",
+          "Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-eedf4c3a2cde12e76c69da33",
+          "sourceIdentifier": "Original CSV row78; WarNum=73; ccode=710; Side=2; EndYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-f140a03fe3c025168f11d362-ace6b1d3d8",
+        "category": "events-context",
+        "value": "COW codes China's sustained-combat episode in Boxer Rebellion as began on 1900-06-17.",
+        "entityId": "qing-imperial-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1900-06-17",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "qing-imperial-framework-coded-combat-participation",
+          "description": "Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row87; WarNum=82; ccode=710; Side=2; StartYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"82\",\"WarName\":\"Boxer Rebellion\",\"WarType\":\"1\",\"ccode\":\"710\",\"StateName\":\"China\",\"Side\":\"2\",\"StartMonth1\":\"6\",\"StartDay1\":\"17\",\"StartYear1\":\"1900\",\"EndMonth1\":\"8\",\"EndDay1\":\"14\",\"EndYear1\":\"1900\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"7\",\"Initiator\":\"2\",\"Outcome\":\"2\",\"TransTo\":\"-8\",\"BatDeath\":\"2000\",\"Version\":\"4\"},\"rowNumber\":87,\"event\":\"cow-v4-row87-w82-c710-s2-ep1-start\",\"sourceDate\":\"1900-06-17\",\"participant\":\"China\",\"sourceCountryCode\":\"710\",\"independentReview\":{\"eventId\":\"cow-v4-row87-w82-c710-s2-ep1-start\",\"originalEventDigest\":\"da434e7d63838a16c9d75817218628122b0aa763ebae78c51a6dc8b11c9a5d3d\",\"decision\":\"source-date-mapping-approved\",\"approvedMappedFields\":{\"entityId\":\"qing-imperial-framework\",\"value\":\"COW codes China's sustained-combat episode in Boxer Rebellion as began on 1900-06-17.\",\"eventDate\":\"1900-06-17\",\"eventPrecision\":\"day\",\"locator\":\"Original CSV row87; WarNum=82; ccode=710; Side=2; StartYear/Month/Day1\",\"scope\":\"Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion.\",\"qualification\":\"COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.\"},\"mapping\":{\"from\":\"1800-01-01\",\"until\":\"1912-02-12\",\"entityRecordDigest\":\"4ce8e6e53665be9373cad00794c6e03e7c9f3d5b2028f0e22d8e762c167ad1fd\",\"reason\":\"Literal China710 before1912 is proposed only against the existing Qing imperial framework, not a modern Chinese state or Taiwan administration. Coordinator independently compared original dated sourced identity/existence bounds, literal COW code/name and selected endpoint; no successor or territorial bridge inferred.\"}}}; Original cached four-page codebook read in full; original CSV independently extracted rows compared for all selected endpoints. Codebook defines Ccode as system-member identity and sustained-combat dates. Existing curated names/existence/source references independently inspected for Qing, Nationalist ROC versus PRC, Estonia/Lithuania/Poland constituent frames, Mongolia, Saudi1932 and Union of South Africa. Source-coded participants are not territorial sovereignty. Taiwan713 explicitly labels ROC in selected1958 row; same bounded Nationalist government mapping is used for1955 Taiwan713 with no island-sovereignty conclusion. Start/end are neither declarations nor peace treaties. Transformation, occupation, anachronistic Yugoslavia/Yemen and outside-framework cases remain held.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1900-06-17",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Source dates remain actual event dates. Later snapshot context is explicitly past dated evidence within five calendar years, never ongoing-war or retimed-event evidence.",
+          "Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-f140a03fe3c025168f11d362",
+          "sourceIdentifier": "Original CSV row87; WarNum=82; ccode=710; Side=2; StartYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-9a673dce6c1681916bfd5ab2-ace6b1d3d8",
+        "category": "events-context",
+        "value": "COW codes China's sustained-combat episode in Boxer Rebellion as ended on 1900-08-14.",
+        "entityId": "qing-imperial-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1900-08-14",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "qing-imperial-framework-coded-combat-participation",
+          "description": "Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row87; WarNum=82; ccode=710; Side=2; EndYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"82\",\"WarName\":\"Boxer Rebellion\",\"WarType\":\"1\",\"ccode\":\"710\",\"StateName\":\"China\",\"Side\":\"2\",\"StartMonth1\":\"6\",\"StartDay1\":\"17\",\"StartYear1\":\"1900\",\"EndMonth1\":\"8\",\"EndDay1\":\"14\",\"EndYear1\":\"1900\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"7\",\"Initiator\":\"2\",\"Outcome\":\"2\",\"TransTo\":\"-8\",\"BatDeath\":\"2000\",\"Version\":\"4\"},\"rowNumber\":87,\"event\":\"cow-v4-row87-w82-c710-s2-ep1-end\",\"sourceDate\":\"1900-08-14\",\"participant\":\"China\",\"sourceCountryCode\":\"710\",\"independentReview\":{\"eventId\":\"cow-v4-row87-w82-c710-s2-ep1-end\",\"originalEventDigest\":\"3e2f568d1891eb7d614a295f8f4f6724018d448fdd35187334010a93998d1c02\",\"decision\":\"source-date-mapping-approved\",\"approvedMappedFields\":{\"entityId\":\"qing-imperial-framework\",\"value\":\"COW codes China's sustained-combat episode in Boxer Rebellion as ended on 1900-08-14.\",\"eventDate\":\"1900-08-14\",\"eventPrecision\":\"day\",\"locator\":\"Original CSV row87; WarNum=82; ccode=710; Side=2; EndYear/Month/Day1\",\"scope\":\"Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion.\",\"qualification\":\"COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.\"},\"mapping\":{\"from\":\"1800-01-01\",\"until\":\"1912-02-12\",\"entityRecordDigest\":\"4ce8e6e53665be9373cad00794c6e03e7c9f3d5b2028f0e22d8e762c167ad1fd\",\"reason\":\"Literal China710 before1912 is proposed only against the existing Qing imperial framework, not a modern Chinese state or Taiwan administration. Coordinator independently compared original dated sourced identity/existence bounds, literal COW code/name and selected endpoint; no successor or territorial bridge inferred.\"}}}; Original cached four-page codebook read in full; original CSV independently extracted rows compared for all selected endpoints. Codebook defines Ccode as system-member identity and sustained-combat dates. Existing curated names/existence/source references independently inspected for Qing, Nationalist ROC versus PRC, Estonia/Lithuania/Poland constituent frames, Mongolia, Saudi1932 and Union of South Africa. Source-coded participants are not territorial sovereignty. Taiwan713 explicitly labels ROC in selected1958 row; same bounded Nationalist government mapping is used for1955 Taiwan713 with no island-sovereignty conclusion. Start/end are neither declarations nor peace treaties. Transformation, occupation, anachronistic Yugoslavia/Yemen and outside-framework cases remain held.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1900-08-14",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Source dates remain actual event dates. Later snapshot context is explicitly past dated evidence within five calendar years, never ongoing-war or retimed-event evidence.",
+          "Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-9a673dce6c1681916bfd5ab2",
+          "sourceIdentifier": "Original CSV row87; WarNum=82; ccode=710; Side=2; EndYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-b30888fdef8d570f46f4913e-ace6b1d3d8",
+        "category": "events-context",
+        "value": "COW codes China's sustained-combat episode in Sino-Russian as began on 1900-07-17.",
+        "entityId": "qing-imperial-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1900-07-17",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "qing-imperial-framework-coded-combat-participation",
+          "description": "Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row91; WarNum=83; ccode=710; Side=2; StartYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"83\",\"WarName\":\"Sino-Russian\",\"WarType\":\"1\",\"ccode\":\"710\",\"StateName\":\"China\",\"Side\":\"2\",\"StartMonth1\":\"7\",\"StartDay1\":\"17\",\"StartYear1\":\"1900\",\"EndMonth1\":\"10\",\"EndDay1\":\"10\",\"EndYear1\":\"1900\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"7\",\"Initiator\":\"2\",\"Outcome\":\"2\",\"TransTo\":\"-8\",\"BatDeath\":\"3758\",\"Version\":\"4\"},\"rowNumber\":91,\"event\":\"cow-v4-row91-w83-c710-s2-ep1-start\",\"sourceDate\":\"1900-07-17\",\"participant\":\"China\",\"sourceCountryCode\":\"710\",\"independentReview\":{\"eventId\":\"cow-v4-row91-w83-c710-s2-ep1-start\",\"originalEventDigest\":\"1fa56e1e82c3e2a92b14c36fa1de7e591d2b811fd062e288de9e2e35d0a45249\",\"decision\":\"source-date-mapping-approved\",\"approvedMappedFields\":{\"entityId\":\"qing-imperial-framework\",\"value\":\"COW codes China's sustained-combat episode in Sino-Russian as began on 1900-07-17.\",\"eventDate\":\"1900-07-17\",\"eventPrecision\":\"day\",\"locator\":\"Original CSV row91; WarNum=83; ccode=710; Side=2; StartYear/Month/Day1\",\"scope\":\"Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion.\",\"qualification\":\"COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.\"},\"mapping\":{\"from\":\"1800-01-01\",\"until\":\"1912-02-12\",\"entityRecordDigest\":\"4ce8e6e53665be9373cad00794c6e03e7c9f3d5b2028f0e22d8e762c167ad1fd\",\"reason\":\"Literal China710 before1912 is proposed only against the existing Qing imperial framework, not a modern Chinese state or Taiwan administration. Coordinator independently compared original dated sourced identity/existence bounds, literal COW code/name and selected endpoint; no successor or territorial bridge inferred.\"}}}; Original cached four-page codebook read in full; original CSV independently extracted rows compared for all selected endpoints. Codebook defines Ccode as system-member identity and sustained-combat dates. Existing curated names/existence/source references independently inspected for Qing, Nationalist ROC versus PRC, Estonia/Lithuania/Poland constituent frames, Mongolia, Saudi1932 and Union of South Africa. Source-coded participants are not territorial sovereignty. Taiwan713 explicitly labels ROC in selected1958 row; same bounded Nationalist government mapping is used for1955 Taiwan713 with no island-sovereignty conclusion. Start/end are neither declarations nor peace treaties. Transformation, occupation, anachronistic Yugoslavia/Yemen and outside-framework cases remain held.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1900-07-17",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Source dates remain actual event dates. Later snapshot context is explicitly past dated evidence within five calendar years, never ongoing-war or retimed-event evidence.",
+          "Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-b30888fdef8d570f46f4913e",
+          "sourceIdentifier": "Original CSV row91; WarNum=83; ccode=710; Side=2; StartYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-8b4f7a99ba63f00884387b5a-ace6b1d3d8",
+        "category": "events-context",
+        "value": "COW codes China's sustained-combat episode in Sino-Russian as ended on 1900-10-10.",
+        "entityId": "qing-imperial-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1900-10-10",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "qing-imperial-framework-coded-combat-participation",
+          "description": "Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row91; WarNum=83; ccode=710; Side=2; EndYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"83\",\"WarName\":\"Sino-Russian\",\"WarType\":\"1\",\"ccode\":\"710\",\"StateName\":\"China\",\"Side\":\"2\",\"StartMonth1\":\"7\",\"StartDay1\":\"17\",\"StartYear1\":\"1900\",\"EndMonth1\":\"10\",\"EndDay1\":\"10\",\"EndYear1\":\"1900\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"7\",\"Initiator\":\"2\",\"Outcome\":\"2\",\"TransTo\":\"-8\",\"BatDeath\":\"3758\",\"Version\":\"4\"},\"rowNumber\":91,\"event\":\"cow-v4-row91-w83-c710-s2-ep1-end\",\"sourceDate\":\"1900-10-10\",\"participant\":\"China\",\"sourceCountryCode\":\"710\",\"independentReview\":{\"eventId\":\"cow-v4-row91-w83-c710-s2-ep1-end\",\"originalEventDigest\":\"e7c2bb9be35bd71d692e43a0d66a0f6db35ff0491aa2835f15886c5d4f5cf484\",\"decision\":\"source-date-mapping-approved\",\"approvedMappedFields\":{\"entityId\":\"qing-imperial-framework\",\"value\":\"COW codes China's sustained-combat episode in Sino-Russian as ended on 1900-10-10.\",\"eventDate\":\"1900-10-10\",\"eventPrecision\":\"day\",\"locator\":\"Original CSV row91; WarNum=83; ccode=710; Side=2; EndYear/Month/Day1\",\"scope\":\"Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion.\",\"qualification\":\"COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.\"},\"mapping\":{\"from\":\"1800-01-01\",\"until\":\"1912-02-12\",\"entityRecordDigest\":\"4ce8e6e53665be9373cad00794c6e03e7c9f3d5b2028f0e22d8e762c167ad1fd\",\"reason\":\"Literal China710 before1912 is proposed only against the existing Qing imperial framework, not a modern Chinese state or Taiwan administration. Coordinator independently compared original dated sourced identity/existence bounds, literal COW code/name and selected endpoint; no successor or territorial bridge inferred.\"}}}; Original cached four-page codebook read in full; original CSV independently extracted rows compared for all selected endpoints. Codebook defines Ccode as system-member identity and sustained-combat dates. Existing curated names/existence/source references independently inspected for Qing, Nationalist ROC versus PRC, Estonia/Lithuania/Poland constituent frames, Mongolia, Saudi1932 and Union of South Africa. Source-coded participants are not territorial sovereignty. Taiwan713 explicitly labels ROC in selected1958 row; same bounded Nationalist government mapping is used for1955 Taiwan713 with no island-sovereignty conclusion. Start/end are neither declarations nor peace treaties. Transformation, occupation, anachronistic Yugoslavia/Yemen and outside-framework cases remain held.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1900-10-10",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Source dates remain actual event dates. Later snapshot context is explicitly past dated evidence within five calendar years, never ongoing-war or retimed-event evidence.",
+          "Source-coded sustained-combat participation of Qing Empire; no polygon-wide authority or sovereignty assertion."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-8b4f7a99ba63f00884387b5a",
+          "sourceIdentifier": "Original CSV row91; WarNum=83; ccode=710; Side=2; EndYear/Month/Day1"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:05:35.740Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "3c47f1af322b182c4765328658094a19dd3b9b1680659428e6016d0b8457cb37",
+        "620d7c233cdf95be32b7a74af60f622a971ee368a8cb98ec1639c337005b4744"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "9c7bcfbab04ad8b9101ee543428f14ebcfd04b28ccaecb82cc77608411f0b128",
+    "productionFingerprint": "0918f47cdace00fd7cae954c1b49987beed158254d247ece3f0e9259f6cedf35",
+    "jobId": "dossier-ed5ccf070fb175c487b3c324",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "9c7bcfbab04ad8b9101ee543428f14ebcfd04b28ccaecb82cc77608411f0b128",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by coordinator-independent-COW-source-and-framework-review; contract 620d7c233cdf95be32b7a74af60f622a971ee368a8cb98ec1639c337005b4744; adapter dated-coded-combat-event/v2. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-eedf4c3a2cde12e76c69da33-ace6b1d3d8": "accepted",
+        "bulk-f140a03fe3c025168f11d362-ace6b1d3d8": "accepted",
+        "bulk-9a673dce6c1681916bfd5ab2-ace6b1d3d8": "accepted",
+        "bulk-b30888fdef8d570f46f4913e-ace6b1d3d8": "accepted",
+        "bulk-8b4f7a99ba63f00884387b5a-ace6b1d3d8": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-eedf4c3a2cde12e76c69da33-ace6b1d3d8",
+      "bulk-f140a03fe3c025168f11d362-ace6b1d3d8",
+      "bulk-9a673dce6c1681916bfd5ab2-ace6b1d3d8",
+      "bulk-b30888fdef8d570f46f4913e-ace6b1d3d8",
+      "bulk-8b4f7a99ba63f00884387b5a-ace6b1d3d8"
+    ]
+  }
+}

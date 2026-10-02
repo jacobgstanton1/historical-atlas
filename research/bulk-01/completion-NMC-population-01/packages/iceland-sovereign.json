@@ -1,0 +1,277 @@
+{
+  "job": {
+    "id": "dossier-ad1def4e149688358058ddba",
+    "entityId": "iceland-sovereign",
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-iceland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "c587157febcfd599f5bac274e87ffabf17adb80a1c923ecebe2e023144e3bdd3",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-NMC-population-01-iceland-sovereign",
+    "jobId": "dossier-ad1def4e149688358058ddba",
+    "entityId": "iceland-sovereign",
+    "mapIds": [
+      "entity-iceland"
+    ],
+    "worker": {
+      "id": "bulk-parser/nmc-population/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "c587157febcfd599f5bac274e87ffabf17adb80a1c923ecebe2e023144e3bdd3",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "bulk-bca7ec972ebd4411bfb3eae0-2569ce08e4",
+        "category": "population-statistics",
+        "value": 176000,
+        "entityId": "iceland-sovereign",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "iceland-sovereign-completion-NMC-population-01",
+          "description": "COW NMC source-coded civilian/home population of Iceland; De jure population.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-nmc7-total-population"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-nmc7-total-population",
+            "locator": "NMC70 supplementary CSV logical row9537, stateabb=ICE,ccode=395,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+            "note": "{\"original\":{\"id\":\"nmc7-tpop-395-1960-iceland-sovereign\",\"entityId\":\"iceland-sovereign\",\"rawStateName\":\"Iceland\",\"rawStateAbbreviation\":\"ICE\",\"rawStateCode\":\"395\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"value\":\"176000\",\"sourceValueThousands\":\"176\",\"sourceUnit\":\"thousands of persons; conversion multiplies by1000 without asserting additional precision\",\"category\":\"population-statistics\",\"observationType\":\"annual source-coded population figure; identified-source or publisher estimation per retained quality code, NOT asserted census\",\"qualityCode\":\"A\",\"qualityMeaning\":\"Value from identified source; not necessarily a census\",\"anomalyCode\":\"A\",\"anomalyMeaning\":\"No anomaly under2percent change\",\"sourceBibliographyLiteral\":\"United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"sourceScopeMethodNoteLiteral\":\"De jure population.\",\"geographicScope\":\"Source-coded historical state civilian/home population under COW NMC definitions; source geographic/statistical scope and exact notes retained. Not asserted equal to selected map polygon or inclusive of dependencies.\",\"territorialMatchApproval\":false,\"identityBridge\":{\"origin\":\"Existing independently reviewed Archigos identity contract used as bounded identity proposal ONLY, not population evidence.\",\"originalContractId\":\"archigos-ICE-iceland-sovereign-1945-01-01\",\"from\":\"1945-01-01\",\"until\":\"1961-01-01\",\"existingIdentity\":{\"name\":\"Iceland\",\"sourceIds\":[\"b01-iceland-sovereignty\",\"b01-sveinn-bjornsson\"],\"existence\":{\"validFrom\":\"1918-12-01\",\"sourceIds\":[\"b01-iceland-sovereignty\",\"b01-sveinn-bjornsson\"],\"note\":\"Sovereign kingdom in personal union with Denmark, followed by the republic in 1944; distinct from the dependent Danish administration.\"},\"entityRecordDigest\":\"99d62b6db9a2277b56146e0ea3d983c61583e9c136fe80724b8f4de922942231\"},\"reviewRequired\":true},\"snapshotSlots\":[{\"entityId\":\"iceland-sovereign\",\"snapshotYear\":1960,\"mapIds\":[\"entity-iceland\"],\"status\":\"missing\",\"actualObservationYear\":\"1960\"}],\"sourceLocator\":\"NMC70 supplementary CSV logical row9537, stateabb=ICE,ccode=395,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode\",\"originalRecordBytesSha256\":\"ef7cf6e99e251db0f92224462c85c7cd3cf841d997cd11ceeb9bf43aeff48cf7\",\"originalRow\":{\"statenme\":\"Iceland\",\"stateabb\":\"ICE\",\"ccode\":\"395\",\"year\":\"1960\",\"milex\":\"0\",\"milexsource\":\"\",\"milexnote\":\"\",\"milper\":\"0\",\"milpersource\":\"SYB 1960 p1107\",\"milpernote\":\"verified 6/21/2002. DLD\",\"irst\":\"0\",\"irstsource\":\"See note.\",\"irstnote\":\"No known production capability.\",\"irstqualitycode\":\"B\",\"irstanomalycode\":\"A\",\"pec\":\"65\",\"pecsource\":\"J. Darmstadter, Energy in the World Economy.\",\"pecnote\":\"Derived from production, export, and import values of coal, petroleum, natural gas, and electricity.\",\"pecqualitycode\":\"A\",\"pecanomalycode\":\"A\",\"tpop\":\"176\",\"tpopsource\":\"United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"tpopnote\":\"De jure population.\",\"tpopqualitycode\":\"A\",\"tpopanomalycode\":\"A\",\"upop\":\"0\",\"upopsource\":\"UN Demographic Yearbook 1970 p461\",\"upopnote\":\"\",\"upopqualitycode\":\"\",\"upopanomalycode\":\"\",\"upopgrowth\":\"2.3299999\",\"upopgrowthsource\":\"World Urbanization Prospects 2001, pp206-7\",\"cinc\":\".000012750727\",\"version\":\"2025\"},\"originalCsvPhysicalLineEnd\":9537,\"sourceMemberSha256\":\"b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18\",\"sourceCodebookSha256\":\"b89c5819bfe9facfb0c04ca8a3500869d7943bbcb0a090a1cd799c5914d129ca\",\"issues\":[],\"disposition\":\"source-quality-ready-territorial-review-required\",\"historicalAcceptance\":false},\"independentSourceReview\":{\"observationId\":\"nmc7-tpop-395-1960-iceland-sovereign\",\"originalObservationDigest\":\"d9f78cd9c47537fab1fb4522a662ead0c193df409d517e8a726ae12ef15b4cbe\",\"decision\":\"source-and-mapping-approved\",\"reason\":\"Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted.\",\"sourceValueDateVerified\":true,\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"approvedMappedFields\":{\"entityId\":\"iceland-sovereign\",\"category\":\"population\",\"value\":176000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"source-coded annual population estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"COW NMC source-coded civilian/home population of Iceland; De jure population.\",\"sourceId\":\"cow-nmc7-total-population\",\"locator\":\"NMC70 supplementary CSV logical row9537, stateabb=ICE,ccode=395,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode\",\"sourceBodyHash\":\"b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18\",\"qualifications\":[\"Annual source-coded population observation; never asserted census or exact date.\",\"Units originally thousands; multiply1000 without asserting additional headcount precision.\",\"QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.\",\"Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"Source note literally: De jure population.\",\"COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.\",\"Academic coding qualification; no inference from polygon geometry or state-code equality.\"]},\"verifiedSourceFields\":{\"entityId\":\"iceland-sovereign\",\"category\":\"population\",\"value\":176000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"source-coded annual population estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"COW NMC source-coded civilian/home population of Iceland; De jure population.\",\"sourceId\":\"cow-nmc7-total-population\",\"locator\":\"NMC70 supplementary CSV logical row9537, stateabb=ICE,ccode=395,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode\",\"sourceBodyHash\":\"b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18\",\"qualifications\":[\"Annual source-coded population observation; never asserted census or exact date.\",\"Units originally thousands; multiply1000 without asserting additional headcount precision.\",\"QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.\",\"Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"Source note literally: De jure population.\",\"COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.\",\"Academic coding qualification; no inference from polygon geometry or state-code equality.\"]},\"mappingReceipt\":{\"entityId\":\"iceland-sovereign\",\"entityRecordDigest\":\"99d62b6db9a2277b56146e0ea3d983c61583e9c136fe80724b8f4de922942231\",\"names\":[{\"value\":\"Iceland\",\"validFrom\":\"1918-12-01\",\"sourceIds\":[\"b01-iceland-sovereignty\",\"b01-sveinn-bjornsson\"],\"confidence\":\"documented\",\"kind\":\"primary\"},{\"value\":\"Kingdom of Iceland\",\"validFrom\":\"1918-12-01\",\"validUntil\":\"1944-06-17\",\"sourceIds\":[\"b01-iceland-sovereignty\"],\"confidence\":\"documented\",\"kind\":\"formal\"},{\"value\":\"Republic of Iceland\",\"validFrom\":\"1944-06-17\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"b01-sveinn-bjornsson\"],\"confidence\":\"documented\",\"kind\":\"formal\",\"note\":\"Curated facts stop at the atlas limit; this is not an asserted end of the state, institution, office or currency.\"}],\"existence\":{\"validFrom\":\"1918-12-01\",\"sourceIds\":[\"b01-iceland-sovereignty\",\"b01-sveinn-bjornsson\"],\"note\":\"Sovereign kingdom in personal union with Denmark, followed by the republic in 1944; distinct from the dependent Danish administration.\"},\"sourceYear\":\"1960\",\"identityBridgeUsedOnlyForIdentity\":true,\"territorialMatchApproval\":true,\"scopeRationale\":\"Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted.\"},\"sourceCheck\":{\"id\":\"nmc7-tpop-395-1960-iceland-sovereign\",\"logicalRow\":9537,\"originalRecordBytesSha256\":\"ef7cf6e99e251db0f92224462c85c7cd3cf841d997cd11ceeb9bf43aeff48cf7\",\"fullOriginalSupplementalRowVerified\":true,\"valueUnitDateSourceNoteQualityVerified\":true},\"sourceBibliographyLiteral\":\"United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"sourceScopeMethodNoteLiteral\":\"De jure population.\",\"duplicateNote\":null},\"sourceMemberCertification\":{\"codebookPath\":\"research\\\\completion-01\\\\nmc\\\\cache\\\\extracted\\\\NMCv7\\\\NMC_Documentation_v7.pdf\",\"codebookSha256\":\"b89c5819bfe9facfb0c04ca8a3500869d7943bbcb0a090a1cd799c5914d129ca\",\"supplementaryZipPath\":\"research\\\\completion-01\\\\nmc\\\\cache\\\\extracted\\\\NMCv7\\\\NMC-v7-supplemental.zip\",\"supplementaryZipSha256\":\"aef45b6b62c560b8c3f1e9a4634a9444cd5fb086d2cb50574319b686838ba043\",\"supplementaryCsvMember\":\"NMC-70-wsupplementary.csv\",\"supplementaryCsvSha256\":\"b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18\",\"all17121PopulationValuesMatchAbridged\":true,\"encoding\":\"UTF8 decoding failed; reversible ISO8859-1 byte decoding used without transliteration/repair. NonASCII source/provenance fields require review.\"}}; Independent original supplementary CSV full-row byte/value/source-note/quality validation and original PDF codebook printed4,31–35 reading; existing entity names and boundaries reviewed. Restrict to18 proposed quality-ready rows, not168 frozen held candidates. No new download or production edit.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: De jure population.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "COW NMC source-coded civilian/home population of Iceland; De jure population."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-bca7ec972ebd4411bfb3eae0",
+          "sourceIdentifier": "NMC70 supplementary CSV logical row9537, stateabb=ICE,ccode=395,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode"
+        },
+        "metric": "Population (published source estimate)",
+        "unit": "persons"
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-nmc7-total-population"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:19:01.880Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "857c9c9abb1c3f4d0026b7c4237386c19135324e663d1fc183673f99cd6b6d2d",
+        "8ca926f0b37c6072b15d35861b8bccdffec92cae491019c827a85da01c387268"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "c9e3869b0b3efb137bb2bf769597d312e2b68ec29e63497114d309a7e5055e74",
+    "productionFingerprint": "c587157febcfd599f5bac274e87ffabf17adb80a1c923ecebe2e023144e3bdd3",
+    "jobId": "dossier-ad1def4e149688358058ddba",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "c9e3869b0b3efb137bb2bf769597d312e2b68ec29e63497114d309a7e5055e74",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent of campaign2_flags NMC extractor; contract 8ca926f0b37c6072b15d35861b8bccdffec92cae491019c827a85da01c387268; adapter nmc-population/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-bca7ec972ebd4411bfb3eae0-2569ce08e4": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-bca7ec972ebd4411bfb3eae0-2569ce08e4"
+    ]
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "job": {
+    "id": "dossier-5f5faa24ba126181a69a49ea",
+    "entityId": "united-states",
+    "period": {
+      "from": "1928-04",
+      "until": "1928-04"
+    },
+    "mapIds": [
+      "entity-united-states"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "d9fe0abd530e28d470ba23aca4cc4a200ebf5e71584299f2a6ddd60c8ce43346",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-territorial-events-01-united-states",
+    "jobId": "dossier-5f5faa24ba126181a69a49ea",
+    "entityId": "united-states",
+    "mapIds": [
+      "entity-united-states"
+    ],
+    "worker": {
+      "id": "bulk-parser/territorial-events/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "d9fe0abd530e28d470ba23aca4cc4a200ebf5e71584299f2a6ddd60c8ce43346",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1928-04",
+      "until": "1928-04"
+    },
+    "claims": [
+      {
+        "id": "bulk-d4339b2cd09439837ddcf877-a0a8a98d8b",
+        "category": "events-context",
+        "value": "COW territorial-change record555 codes United States of America as the losing-side participant in a cession record concerning part of catalogue-labelled Indonesia (Dutch East Indies), dated 1928-04.",
+        "entityId": "united-states",
+        "temporal": {
+          "kind": "event",
+          "date": "1928-04",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-states-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow508/change555",
+            "note": "{\"original\":{\"id\":\"cow-tc-555-loser-united-states\",\"category\":\"events-context\",\"eventDate\":\"1928-04\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"united-states\",\"side\":\"loser\",\"sourceChangeNumber\":\"555\",\"sourceCSVLine\":509,\"sourceRowIndex\":507,\"rawRow\":{\"year\":\"1928\",\"month\":\"4\",\"gainer\":\"210\",\"gaintype\":\"0\",\"procedur\":\"3\",\"entity\":\"850\",\"contgain\":\"0\",\"area\":\"1.00\",\"pop\":\".\",\"portion\":\"0\",\"loser\":\"2\",\"losetype\":\"0\",\"contlose\":\"0\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"555\",\"indep\":\"0\",\"conflict\":\"0\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow508/change555\",\"sourceProcedure\":\"cession\",\"sourceParticipantCode\":\"2\",\"rawCatalogueLines\":{\"participant\":[],\"exchanged\":[\"850 Indonesia (Dutch East Indies) 1816 1816 Occupied by 200\",\"850 Indonesia (Dutch East Indies) 1816 1949 Became colony of 210\",\"850 Indonesia (Dutch East Indies) 1942 1945 Occupied by 740\"],\"other\":[\"210 Netherlands 1940 1945 Occupied by 255\"]},\"mappingProposals\":[{\"id\":\"archigos-USA-united-states-1875-01-01\",\"sourceCountryCode\":\"USA\",\"entityId\":\"united-states\",\"from\":\"1875-01-01\",\"until\":\"1961-01-01\",\"sourceCountryLocator\":\"Archigos v4.1 case descriptions, printed p.6 (PDF page 12)\",\"existingIdentity\":{\"name\":\"United States\",\"validFrom\":\"1776-07-04\",\"validUntil\":null,\"sourceIds\":[\"archives-independence\",\"basemaps\",\"us-constitution\",\"us-constitutional-start\"]},\"rationale\":\"Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.\",\"qualifications\":[\"Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.\",\"Country coding is not evidence of sovereignty of every map polygon.\",\"Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.\",\"Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics.\"],\"role\":\"Effective political leader (Archigos coding)\",\"status\":\"approved-mapping-contract\",\"reviewer\":\"scale-flags-independent-archigos\",\"cowCode\":\"2\",\"origin\":\"Existing reviewed framework identity; NEW COW namespace bridge requires review\"}],\"prioritySlots\":[{\"entityId\":\"united-states\",\"snapshotYear\":1930,\"status\":\"missing\",\"actualEventDate\":\"1928-04\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":2}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-555-loser-united-states\",\"originalEventDigest\":\"beae4035155debbff815774ec729ddbf8643dd186277107f1cdbfcde3f21b618\",\"originalCsvRowDigest\":\"e20aa21ce94fb708fe9f0c63395ff7b8d63c791c14bd23530bf174cf728edbe5\",\"sourceDate\":\"1928-04\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"united-states\",\"category\":\"events\",\"eventDate\":\"1928-04\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record555 codes United States of America as the losing-side participant in a cession record concerning part of catalogue-labelled Indonesia (Dutch East Indies), dated 1928-04.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow508/change555\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"555\",\"sourceParticipantCode\":\"2\",\"sourceSide\":\"loser\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"850\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"united-states\",\"category\":\"events\",\"eventDate\":\"1928-04\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record555 codes United States of America as the losing-side participant in a cession record concerning part of catalogue-labelled Indonesia (Dutch East Indies), dated 1928-04.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow508/change555\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"555\",\"sourceParticipantCode\":\"2\",\"sourceSide\":\"loser\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"850\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-555-loser-united-states\",\"sourceRowIndex\":507,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"2b6d12da88a3737dfbb61fc65ecae7877eed1cde1f7d8cb44c68cc0de5e12d34\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"united-states\",\"entityRecordDigest\":\"9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265\",\"names\":[{\"value\":\"United States\",\"sourceIds\":[\"basemaps\"],\"confidence\":\"documented\",\"kind\":\"primary\"},{\"value\":\"United States of America\",\"validFrom\":\"1789-03-04\",\"sourceIds\":[\"us-constitution\",\"us-constitutional-start\"],\"confidence\":\"documented\",\"kind\":\"formal\"}],\"existence\":{\"validFrom\":\"1776-07-04\",\"sourceIds\":[\"archives-independence\"],\"note\":\"Declaration of independence; the date of declaration is distinct from subsequent recognition.\"},\"participantCode\":\"2\",\"namespaceOriginalCatalogueLines\":[],\"independentCowNamespaceLabels\":[\"United States of America\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[],\"exchanged\":[\"850 Indonesia (Dutch East Indies) 1816 1816 Occupied by 200\",\"850 Indonesia (Dutch East Indies) 1816 1949 Became colony of 210\",\"850 Indonesia (Dutch East Indies) 1942 1945 Occupied by 740\"],\"other\":[\"210 Netherlands 1940 1945 Occupied by 255\"]},\"independentCatalogueCorrection\":null,\"snapshotContextReview\":[{\"entityId\":\"united-states\",\"snapshotYear\":1930,\"status\":\"missing\",\"actualEventDate\":\"1928-04\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":2,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1928-04",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-d4339b2cd09439837ddcf877",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow508/change555"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:24:56.425Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "58672f0fffe3af975beeac60bc2a4ed02871100b2e8365e37044348cad54ede0",
+        "d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "14d188032348600b56894cab91a673a5c337d0c2acdd0a2f29f96c7bd692ef6f",
+    "productionFingerprint": "d9fe0abd530e28d470ba23aca4cc4a200ebf5e71584299f2a6ddd60c8ce43346",
+    "jobId": "dossier-5f5faa24ba126181a69a49ea",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "14d188032348600b56894cab91a673a5c337d0c2acdd0a2f29f96c7bd692ef6f",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent of territorial-events extractor; contract d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2; adapter territorial-events/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-d4339b2cd09439837ddcf877-a0a8a98d8b": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-d4339b2cd09439837ddcf877-a0a8a98d8b"
+    ]
+  }
+}

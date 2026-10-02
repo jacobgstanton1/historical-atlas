@@ -1,0 +1,270 @@
+{
+  "job": {
+    "id": "dossier-d190155ea7bb9ee0179b5dd8",
+    "entityId": "portugal-political-frameworks",
+    "period": {
+      "from": "1875-07",
+      "until": "1875-07"
+    },
+    "mapIds": [
+      "entity-portugal"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "53407691ff1d73fcecba95c9020e505f6c2509255c21956924074436b22f5c69",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-territorial-events-01-portugal-political-frameworks",
+    "jobId": "dossier-d190155ea7bb9ee0179b5dd8",
+    "entityId": "portugal-political-frameworks",
+    "mapIds": [
+      "entity-portugal"
+    ],
+    "worker": {
+      "id": "bulk-parser/territorial-events/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "53407691ff1d73fcecba95c9020e505f6c2509255c21956924074436b22f5c69",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1875-07",
+      "until": "1875-07"
+    },
+    "claims": [
+      {
+        "id": "bulk-cb3da3c53e9e9446f866c557-33bed07d11",
+        "category": "events-context",
+        "value": "COW territorial-change record223 codes Portugal as the gaining-side participant in a cession record concerning part of catalogue-labelled Mozambique, dated 1875-07.",
+        "entityId": "portugal-political-frameworks",
+        "temporal": {
+          "kind": "event",
+          "date": "1875-07",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "portugal-political-frameworks-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow187/change223",
+            "note": "{\"original\":{\"id\":\"cow-tc-223-gainer-portugal-political-frameworks\",\"category\":\"events-context\",\"eventDate\":\"1875-07\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"portugal-political-frameworks\",\"side\":\"gainer\",\"sourceChangeNumber\":\"223\",\"sourceCSVLine\":188,\"sourceRowIndex\":186,\"rawRow\":{\"year\":\"1875\",\"month\":\"7\",\"gainer\":\"235\",\"gaintype\":\"0\",\"procedur\":\"3\",\"entity\":\"541\",\"contgain\":\"0\",\"area\":\"650.00\",\"pop\":\".\",\"portion\":\"0\",\"loser\":\"200\",\"losetype\":\"0\",\"contlose\":\"0\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"223\",\"indep\":\"0\",\"conflict\":\"0\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow187/change223\",\"sourceProcedure\":\"cession\",\"sourceParticipantCode\":\"235\",\"rawCatalogueLines\":{\"participant\":[],\"exchanged\":[\"541 Mozambique 1816 1975 Became colony of 235\"],\"other\":[]},\"mappingProposals\":[{\"id\":\"archigos-POR-portugal-political-frameworks-1875-01-01\",\"sourceCountryCode\":\"POR\",\"entityId\":\"portugal-political-frameworks\",\"from\":\"1875-01-01\",\"until\":\"1961-01-01\",\"sourceCountryLocator\":\"Archigos v4.1 case descriptions, printed p.372 (PDF page 378)\",\"existingIdentity\":{\"name\":\"Portugal\",\"validFrom\":\"1808\",\"validUntil\":null,\"sourceIds\":[\"b01-portugal-court-brazil\",\"b01-portugal-monarchy\",\"b01-portugal-first-republic\",\"b01-portugal-dictatorship\"]},\"rationale\":\"Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.\",\"qualifications\":[\"Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.\",\"Country coding is not evidence of sovereignty of every map polygon.\",\"Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.\",\"Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics.\"],\"role\":\"Effective political leader (Archigos coding)\",\"status\":\"approved-mapping-contract\",\"reviewer\":\"scale-flags-independent-archigos\",\"cowCode\":\"235\",\"origin\":\"Existing reviewed framework identity; NEW COW namespace bridge requires review\"}],\"prioritySlots\":[{\"entityId\":\"portugal-political-frameworks\",\"snapshotYear\":1878,\"status\":\"missing\",\"actualEventDate\":\"1875-07\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":3},{\"entityId\":\"portugal-political-frameworks\",\"snapshotYear\":1880,\"status\":\"missing\",\"actualEventDate\":\"1875-07\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":5}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-223-gainer-portugal-political-frameworks\",\"originalEventDigest\":\"98982084008ee5b19cdd3c2bfa421bf4d2e3cf94b48f9f8d536ec8020f1e0ead\",\"originalCsvRowDigest\":\"561a53c832d4be48f01aa029c609db132c9f5324559de4f44a95e342883a4f32\",\"sourceDate\":\"1875-07\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"portugal-political-frameworks\",\"category\":\"events\",\"eventDate\":\"1875-07\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record223 codes Portugal as the gaining-side participant in a cession record concerning part of catalogue-labelled Mozambique, dated 1875-07.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow187/change223\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"223\",\"sourceParticipantCode\":\"235\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"541\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"portugal-political-frameworks\",\"category\":\"events\",\"eventDate\":\"1875-07\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record223 codes Portugal as the gaining-side participant in a cession record concerning part of catalogue-labelled Mozambique, dated 1875-07.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow187/change223\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"223\",\"sourceParticipantCode\":\"235\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"541\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-223-gainer-portugal-political-frameworks\",\"sourceRowIndex\":186,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"15d98a70df8ece9fee1f7abf30519ba6dbac51eb58701158ffcc54bcbcd49d2e\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"portugal-political-frameworks\",\"entityRecordDigest\":\"eb0533e3dde536dce755ab84854f47768dc171504d583f04e54bf27f52b028f7\",\"names\":[{\"value\":\"Portugal\",\"validFrom\":\"1808\",\"sourceIds\":[\"b01-portugal-court-brazil\",\"b01-portugal-monarchy\",\"b01-portugal-first-republic\",\"b01-portugal-dictatorship\"],\"confidence\":\"documented\",\"kind\":\"primary\"},{\"value\":\"United Kingdom of Portugal, Brazil and the Algarves\",\"validFrom\":\"1815-12-16\",\"validUntil\":\"1816-01-01\",\"sourceIds\":[\"b01-portugal-court-brazil\"],\"confidence\":\"documented\",\"kind\":\"formal\",\"note\":\"Documented 1815 creation of the composite royal framework; its subsequent dissolution and title chronology are not fully curated in this batch.\"}],\"existence\":{\"validFrom\":\"1808\",\"sourceIds\":[\"b01-portugal-court-brazil\",\"b01-portugal-monarchy\",\"b01-portugal-first-republic\",\"b01-portugal-dictatorship\"],\"note\":\"Curated monarchy and later republican frameworks from 1808; not Portugal’s foundation. The Brazil-based court and composite royal framework are not silently given a Lisbon capital.\"},\"participantCode\":\"235\",\"namespaceOriginalCatalogueLines\":[],\"independentCowNamespaceLabels\":[\"Portugal\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[],\"exchanged\":[\"541 Mozambique 1816 1975 Became colony of 235\"],\"other\":[]},\"independentCatalogueCorrection\":null,\"snapshotContextReview\":[{\"entityId\":\"portugal-political-frameworks\",\"snapshotYear\":1878,\"status\":\"missing\",\"actualEventDate\":\"1875-07\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":3,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true},{\"entityId\":\"portugal-political-frameworks\",\"snapshotYear\":1880,\"status\":\"missing\",\"actualEventDate\":\"1875-07\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":5,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1875-07",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-cb3da3c53e9e9446f866c557",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow187/change223"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:24:16.927Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "58672f0fffe3af975beeac60bc2a4ed02871100b2e8365e37044348cad54ede0",
+        "d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "e59b4abe60faf3536604e5b109f4aac8cb1533fdfd412e53286ce7fa4dbc6046",
+    "productionFingerprint": "53407691ff1d73fcecba95c9020e505f6c2509255c21956924074436b22f5c69",
+    "jobId": "dossier-d190155ea7bb9ee0179b5dd8",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "e59b4abe60faf3536604e5b109f4aac8cb1533fdfd412e53286ce7fa4dbc6046",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent of territorial-events extractor; contract d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2; adapter territorial-events/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-cb3da3c53e9e9446f866c557-33bed07d11": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-cb3da3c53e9e9446f866c557-33bed07d11"
+    ]
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "job": {
+    "id": "dossier-1c4f4384a602cdc19b54ee50",
+    "entityId": "lithuanian-constituent-seimas-framework",
+    "period": {
+      "from": "1920-07-15",
+      "until": "1920-12-02"
+    },
+    "mapIds": [
+      "entity-lithuania"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "4f5b237c242378e75754f2f072ae187e17c12468897acacc877cfc86a47dc883",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-cow-events-02-lithuanian-constituent-seimas-framework",
+    "jobId": "dossier-1c4f4384a602cdc19b54ee50",
+    "entityId": "lithuanian-constituent-seimas-framework",
+    "mapIds": [
+      "entity-lithuania"
+    ],
+    "worker": {
+      "id": "bulk-parser/dated-coded-combat-event/v2",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "4f5b237c242378e75754f2f072ae187e17c12468897acacc877cfc86a47dc883",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1920-07-15",
+      "until": "1920-12-02"
+    },
+    "claims": [
+      {
+        "id": "bulk-cef75153a79ba33b8c182d8c-e48bf77830",
+        "category": "events-context",
+        "value": "COW codes Lithuania's sustained-combat episode in Lithuanian-Polish as began on 1920-07-15.",
+        "entityId": "lithuanian-constituent-seimas-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1920-07-15",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "lithuanian-constituent-seimas-framework-coded-combat-participation",
+          "description": "Source-coded sustained-combat participation of Republic of Lithuania — constituent framework; no polygon-wide authority or sovereignty assertion.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row145; WarNum=117; ccode=368; Side=2; StartYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"117\",\"WarName\":\"Lithuanian-Polish\",\"WarType\":\"1\",\"ccode\":\"368\",\"StateName\":\"Lithuania\",\"Side\":\"2\",\"StartMonth1\":\"7\",\"StartDay1\":\"15\",\"StartYear1\":\"1920\",\"EndMonth1\":\"12\",\"EndDay1\":\"1\",\"EndYear1\":\"1920\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"2\",\"Initiator\":\"2\",\"Outcome\":\"2\",\"TransTo\":\"-8\",\"BatDeath\":\"500\",\"Version\":\"4\"},\"rowNumber\":145,\"event\":\"cow-v4-row145-w117-c368-s2-ep1-start\",\"sourceDate\":\"1920-07-15\",\"participant\":\"Lithuania\",\"sourceCountryCode\":\"368\",\"independentReview\":{\"eventId\":\"cow-v4-row145-w117-c368-s2-ep1-start\",\"originalEventDigest\":\"dc4896ad66317781a423c63245938a0cc13aa523173f02f81693d7d115d814cc\",\"decision\":\"source-date-mapping-approved\",\"approvedMappedFields\":{\"entityId\":\"lithuanian-constituent-seimas-framework\",\"value\":\"COW codes Lithuania's sustained-combat episode in Lithuanian-Polish as began on 1920-07-15.\",\"eventDate\":\"1920-07-15\",\"eventPrecision\":\"day\",\"locator\":\"Original CSV row145; WarNum=117; ccode=368; Side=2; StartYear/Month/Day1\",\"scope\":\"Source-coded sustained-combat participation of Republic of Lithuania — constituent framework; no polygon-wide authority or sovereignty assertion.\",\"qualification\":\"COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.\"},\"mapping\":{\"from\":\"1920-05-15\",\"until\":\"1922-01-01\",\"entityRecordDigest\":\"51c920ecdf898fa2f9d5ee6c2fb4b8f48e4b55bd449c96fed4fa5f31116cd11a\",\"reason\":\"Literal Lithuania participant intersects existing constituent-Seimas framework; preserve exact combat dates and parliamentary bounds. Coordinator independently compared original dated sourced identity/existence bounds, literal COW code/name and selected endpoint; no successor or territorial bridge inferred.\"}}}; Original cached four-page codebook read in full; original CSV independently extracted rows compared for all selected endpoints. Codebook defines Ccode as system-member identity and sustained-combat dates. Existing curated names/existence/source references independently inspected for Qing, Nationalist ROC versus PRC, Estonia/Lithuania/Poland constituent frames, Mongolia, Saudi1932 and Union of South Africa. Source-coded participants are not territorial sovereignty. Taiwan713 explicitly labels ROC in selected1958 row; same bounded Nationalist government mapping is used for1955 Taiwan713 with no island-sovereignty conclusion. Start/end are neither declarations nor peace treaties. Transformation, occupation, anachronistic Yugoslavia/Yemen and outside-framework cases remain held.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1920-07-15",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded participant sustained-combat start, not legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Source dates remain actual event dates. Later snapshot context is explicitly past dated evidence within five calendar years, never ongoing-war or retimed-event evidence.",
+          "Source-coded sustained-combat participation of Republic of Lithuania — constituent framework; no polygon-wide authority or sovereignty assertion."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-cef75153a79ba33b8c182d8c",
+          "sourceIdentifier": "Original CSV row145; WarNum=117; ccode=368; Side=2; StartYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-32ca6e2cfa48f9c912489dc4-e48bf77830",
+        "category": "events-context",
+        "value": "COW codes Lithuania's sustained-combat episode in Lithuanian-Polish as ended on 1920-12-01.",
+        "entityId": "lithuanian-constituent-seimas-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1920-12-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "lithuanian-constituent-seimas-framework-coded-combat-participation",
+          "description": "Source-coded sustained-combat participation of Republic of Lithuania — constituent framework; no polygon-wide authority or sovereignty assertion.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row145; WarNum=117; ccode=368; Side=2; EndYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"117\",\"WarName\":\"Lithuanian-Polish\",\"WarType\":\"1\",\"ccode\":\"368\",\"StateName\":\"Lithuania\",\"Side\":\"2\",\"StartMonth1\":\"7\",\"StartDay1\":\"15\",\"StartYear1\":\"1920\",\"EndMonth1\":\"12\",\"EndDay1\":\"1\",\"EndYear1\":\"1920\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"2\",\"Initiator\":\"2\",\"Outcome\":\"2\",\"TransTo\":\"-8\",\"BatDeath\":\"500\",\"Version\":\"4\"},\"rowNumber\":145,\"event\":\"cow-v4-row145-w117-c368-s2-ep1-end\",\"sourceDate\":\"1920-12-01\",\"participant\":\"Lithuania\",\"sourceCountryCode\":\"368\",\"independentReview\":{\"eventId\":\"cow-v4-row145-w117-c368-s2-ep1-end\",\"originalEventDigest\":\"e84397a5fe467a3ae9c805538c65baf1a985090a424fad8ca3353870ecfe20af\",\"decision\":\"source-date-mapping-approved\",\"approvedMappedFields\":{\"entityId\":\"lithuanian-constituent-seimas-framework\",\"value\":\"COW codes Lithuania's sustained-combat episode in Lithuanian-Polish as ended on 1920-12-01.\",\"eventDate\":\"1920-12-01\",\"eventPrecision\":\"day\",\"locator\":\"Original CSV row145; WarNum=117; ccode=368; Side=2; EndYear/Month/Day1\",\"scope\":\"Source-coded sustained-combat participation of Republic of Lithuania — constituent framework; no polygon-wide authority or sovereignty assertion.\",\"qualification\":\"COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.\"},\"mapping\":{\"from\":\"1920-05-15\",\"until\":\"1922-01-01\",\"entityRecordDigest\":\"51c920ecdf898fa2f9d5ee6c2fb4b8f48e4b55bd449c96fed4fa5f31116cd11a\",\"reason\":\"Literal Lithuania participant intersects existing constituent-Seimas framework; preserve exact combat dates and parliamentary bounds. Coordinator independently compared original dated sourced identity/existence bounds, literal COW code/name and selected endpoint; no successor or territorial bridge inferred.\"}}}; Original cached four-page codebook read in full; original CSV independently extracted rows compared for all selected endpoints. Codebook defines Ccode as system-member identity and sustained-combat dates. Existing curated names/existence/source references independently inspected for Qing, Nationalist ROC versus PRC, Estonia/Lithuania/Poland constituent frames, Mongolia, Saudi1932 and Union of South Africa. Source-coded participants are not territorial sovereignty. Taiwan713 explicitly labels ROC in selected1958 row; same bounded Nationalist government mapping is used for1955 Taiwan713 with no island-sovereignty conclusion. Start/end are neither declarations nor peace treaties. Transformation, occupation, anachronistic Yugoslavia/Yemen and outside-framework cases remain held.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1920-12-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded participant sustained-combat endpoint, possibly day after last major engagement; not peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Source dates remain actual event dates. Later snapshot context is explicitly past dated evidence within five calendar years, never ongoing-war or retimed-event evidence.",
+          "Source-coded sustained-combat participation of Republic of Lithuania — constituent framework; no polygon-wide authority or sovereignty assertion."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-32ca6e2cfa48f9c912489dc4",
+          "sourceIdentifier": "Original CSV row145; WarNum=117; ccode=368; Side=2; EndYear/Month/Day1"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:05:43.889Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "3c47f1af322b182c4765328658094a19dd3b9b1680659428e6016d0b8457cb37",
+        "620d7c233cdf95be32b7a74af60f622a971ee368a8cb98ec1639c337005b4744"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "792cac61a91669e7517222eaf691b481cfe0ee5c42eb62cdad87bd42150f4f13",
+    "productionFingerprint": "4f5b237c242378e75754f2f072ae187e17c12468897acacc877cfc86a47dc883",
+    "jobId": "dossier-1c4f4384a602cdc19b54ee50",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "792cac61a91669e7517222eaf691b481cfe0ee5c42eb62cdad87bd42150f4f13",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by coordinator-independent-COW-source-and-framework-review; contract 620d7c233cdf95be32b7a74af60f622a971ee368a8cb98ec1639c337005b4744; adapter dated-coded-combat-event/v2. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-cef75153a79ba33b8c182d8c-e48bf77830": "accepted",
+        "bulk-32ca6e2cfa48f9c912489dc4-e48bf77830": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-cef75153a79ba33b8c182d8c-e48bf77830",
+      "bulk-32ca6e2cfa48f9c912489dc4-e48bf77830"
+    ]
+  }
+}

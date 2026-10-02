@@ -1,0 +1,287 @@
+{
+  "job": {
+    "id": "dossier-3d321c42628cdf149b8cd255",
+    "entityId": "mexico-1917-constitutional-framework",
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-mexico"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "915625e2802123489978ac52035e6e5e83bdf9e121f1d055e53f34eafe7eb558",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-NMC-population-01-mexico-1917-constitutional-framework",
+    "jobId": "dossier-3d321c42628cdf149b8cd255",
+    "entityId": "mexico-1917-constitutional-framework",
+    "mapIds": [
+      "entity-mexico"
+    ],
+    "worker": {
+      "id": "bulk-parser/nmc-population/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "915625e2802123489978ac52035e6e5e83bdf9e121f1d055e53f34eafe7eb558",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "bulk-f7f5afaa37436f844891c83d-cbfb7891c0",
+        "category": "population-statistics",
+        "value": 36322000,
+        "entityId": "mexico-1917-constitutional-framework",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mexico-1917-constitutional-framework-completion-NMC-population-01",
+          "description": "COW NMC source-coded civilian/home population of Mexico; De jure population.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-nmc7-total-population"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-nmc7-total-population",
+            "locator": "NMC70 supplementary CSV logical row1321, stateabb=MEX,ccode=70,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+            "note": "{\"original\":{\"id\":\"nmc7-tpop-70-1960-mexico-1917-constitutional-framework\",\"entityId\":\"mexico-1917-constitutional-framework\",\"rawStateName\":\"Mexico\",\"rawStateAbbreviation\":\"MEX\",\"rawStateCode\":\"70\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"value\":\"36322000\",\"sourceValueThousands\":\"36322\",\"sourceUnit\":\"thousands of persons; conversion multiplies by1000 without asserting additional precision\",\"category\":\"population-statistics\",\"observationType\":\"annual source-coded population figure; identified-source or publisher estimation per retained quality code, NOT asserted census\",\"qualityCode\":\"A\",\"qualityMeaning\":\"Value from identified source; not necessarily a census\",\"anomalyCode\":\"A\",\"anomalyMeaning\":\"No anomaly under2percent change\",\"sourceBibliographyLiteral\":\"United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"sourceScopeMethodNoteLiteral\":\"De jure population.\",\"geographicScope\":\"Source-coded historical state civilian/home population under COW NMC definitions; source geographic/statistical scope and exact notes retained. Not asserted equal to selected map polygon or inclusive of dependencies.\",\"territorialMatchApproval\":false,\"identityBridge\":{\"origin\":\"Existing independently reviewed Archigos identity contract used as bounded identity proposal ONLY, not population evidence.\",\"originalContractId\":\"archigos-MEX-mexico-1917-constitutional-framework-1918-01-01\",\"from\":\"1918-01-01\",\"until\":\"1961-01-01\",\"existingIdentity\":{\"name\":\"Mexico — 1917 constitutional framework\",\"sourceIds\":[\"b08-mexico-1917-exhibit\",\"b08-mexico-loc-study\"],\"existence\":{\"validFrom\":\"1918-01-01\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"b08-mexico-1917-exhibit\",\"b08-mexico-loc-study\"],\"note\":\"Bounds delimit researched partial dossier coverage, not the full lifetime or exhaustive constitutional history.\"},\"entityRecordDigest\":\"c220cd988617fe6a263e81d3e1472d93ce7c981e18109565d0791d137e1787ce\"},\"reviewRequired\":true},\"snapshotSlots\":[{\"entityId\":\"mexico-1917-constitutional-framework\",\"snapshotYear\":1960,\"mapIds\":[\"entity-mexico\"],\"status\":\"missing\",\"actualObservationYear\":\"1960\"}],\"sourceLocator\":\"NMC70 supplementary CSV logical row1321, stateabb=MEX,ccode=70,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode\",\"originalRecordBytesSha256\":\"fb7eca6ecb802f781002b832faf1f6313e8ed4a578ebc9a2156bcd1f598ce4b1\",\"originalRow\":{\"statenme\":\"Mexico\",\"stateabb\":\"MEX\",\"ccode\":\"70\",\"year\":\"1960\",\"milex\":\"81745\",\"milexsource\":\"SN 1 p278\",\"milexnote\":\"(15) 81700 is actual total in 0020.\",\"milper\":\"50\",\"milpersource\":\"Military Technology in Developing Countries p540\",\"milpernote\":\"verified 10/19/2001. DLD\",\"irst\":\"1500\",\"irstsource\":\" 4th ed., 1998, p. 362.\",\"irstnote\":\"\",\"irstqualitycode\":\"A\",\"irstanomalycode\":\"A\",\"pec\":\"34456\",\"pecsource\":\"United Nations Energy Statistics Database, 1950-97.\",\"pecnote\":\"All information present.\",\"pecqualitycode\":\"A\",\"pecanomalycode\":\"A\",\"tpop\":\"36322\",\"tpopsource\":\"United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"tpopnote\":\"De jure population.\",\"tpopqualitycode\":\"A\",\"tpopanomalycode\":\"A\",\"upop\":\"6647\",\"upopsource\":\"UN Demographic Yearbook 1960 pp291-2\",\"upopnote\":\"\",\"upopqualitycode\":\"\",\"upopanomalycode\":\"\",\"upopgrowth\":\"4.6900001\",\"upopgrowthsource\":\"World Urbanization Prospects 2001, pp208-9\",\"cinc\":\".0071328003\",\"version\":\"2025\"},\"originalCsvPhysicalLineEnd\":1321,\"sourceMemberSha256\":\"b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18\",\"sourceCodebookSha256\":\"b89c5819bfe9facfb0c04ca8a3500869d7943bbcb0a090a1cd799c5914d129ca\",\"issues\":[],\"disposition\":\"source-quality-ready-territorial-review-required\",\"historicalAcceptance\":false},\"independentSourceReview\":{\"observationId\":\"nmc7-tpop-70-1960-mexico-1917-constitutional-framework\",\"originalObservationDigest\":\"0363c2304d4fb78d03b864dfdc9f9b7721d91ea34452818523646122220b921f\",\"decision\":\"source-and-mapping-approved\",\"reason\":\"Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted.\",\"sourceValueDateVerified\":true,\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"approvedMappedFields\":{\"entityId\":\"mexico-1917-constitutional-framework\",\"category\":\"population\",\"value\":36322000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"source-coded annual population estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"COW NMC source-coded civilian/home population of Mexico; De jure population.\",\"sourceId\":\"cow-nmc7-total-population\",\"locator\":\"NMC70 supplementary CSV logical row1321, stateabb=MEX,ccode=70,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode\",\"sourceBodyHash\":\"b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18\",\"qualifications\":[\"Annual source-coded population observation; never asserted census or exact date.\",\"Units originally thousands; multiply1000 without asserting additional headcount precision.\",\"QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.\",\"Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"Source note literally: De jure population.\",\"COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.\",\"Academic coding qualification; no inference from polygon geometry or state-code equality.\"]},\"verifiedSourceFields\":{\"entityId\":\"mexico-1917-constitutional-framework\",\"category\":\"population\",\"value\":36322000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"source-coded annual population estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"COW NMC source-coded civilian/home population of Mexico; De jure population.\",\"sourceId\":\"cow-nmc7-total-population\",\"locator\":\"NMC70 supplementary CSV logical row1321, stateabb=MEX,ccode=70,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode\",\"sourceBodyHash\":\"b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18\",\"qualifications\":[\"Annual source-coded population observation; never asserted census or exact date.\",\"Units originally thousands; multiply1000 without asserting additional headcount precision.\",\"QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.\",\"Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"Source note literally: De jure population.\",\"COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.\",\"Academic coding qualification; no inference from polygon geometry or state-code equality.\"]},\"mappingReceipt\":{\"entityId\":\"mexico-1917-constitutional-framework\",\"entityRecordDigest\":\"c220cd988617fe6a263e81d3e1472d93ce7c981e18109565d0791d137e1787ce\",\"names\":[{\"value\":\"Mexico — 1917 constitutional framework\",\"validFrom\":\"1918-01-01\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"b08-mexico-1917-exhibit\",\"b08-mexico-loc-study\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existence\":{\"validFrom\":\"1918-01-01\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"b08-mexico-1917-exhibit\",\"b08-mexico-loc-study\"],\"note\":\"Bounds delimit researched partial dossier coverage, not the full lifetime or exhaustive constitutional history.\"},\"sourceYear\":\"1960\",\"identityBridgeUsedOnlyForIdentity\":true,\"territorialMatchApproval\":true,\"scopeRationale\":\"Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted.\"},\"sourceCheck\":{\"id\":\"nmc7-tpop-70-1960-mexico-1917-constitutional-framework\",\"logicalRow\":1321,\"originalRecordBytesSha256\":\"fb7eca6ecb802f781002b832faf1f6313e8ed4a578ebc9a2156bcd1f598ce4b1\",\"fullOriginalSupplementalRowVerified\":true,\"valueUnitDateSourceNoteQualityVerified\":true},\"sourceBibliographyLiteral\":\"United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"sourceScopeMethodNoteLiteral\":\"De jure population.\",\"duplicateNote\":null},\"sourceMemberCertification\":{\"codebookPath\":\"research\\\\completion-01\\\\nmc\\\\cache\\\\extracted\\\\NMCv7\\\\NMC_Documentation_v7.pdf\",\"codebookSha256\":\"b89c5819bfe9facfb0c04ca8a3500869d7943bbcb0a090a1cd799c5914d129ca\",\"supplementaryZipPath\":\"research\\\\completion-01\\\\nmc\\\\cache\\\\extracted\\\\NMCv7\\\\NMC-v7-supplemental.zip\",\"supplementaryZipSha256\":\"aef45b6b62c560b8c3f1e9a4634a9444cd5fb086d2cb50574319b686838ba043\",\"supplementaryCsvMember\":\"NMC-70-wsupplementary.csv\",\"supplementaryCsvSha256\":\"b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18\",\"all17121PopulationValuesMatchAbridged\":true,\"encoding\":\"UTF8 decoding failed; reversible ISO8859-1 byte decoding used without transliteration/repair. NonASCII source/provenance fields require review.\"}}; Independent original supplementary CSV full-row byte/value/source-note/quality validation and original PDF codebook printed4,31–35 reading; existing entity names and boundaries reviewed. Restrict to18 proposed quality-ready rows, not168 frozen held candidates. No new download or production edit.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: De jure population.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "COW NMC source-coded civilian/home population of Mexico; De jure population."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-f7f5afaa37436f844891c83d",
+          "sourceIdentifier": "NMC70 supplementary CSV logical row1321, stateabb=MEX,ccode=70,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode"
+        },
+        "metric": "Population (published source estimate)",
+        "unit": "persons"
+      }
+    ],
+    "sources": [
+      {
+        "id": "cow-nmc7-total-population",
+        "title": "Correlates of War National Material Capabilities v7, supplementary total population observations",
+        "institution": "Correlates of War Project",
+        "url": "https://correlatesofwar.org/wp-content/uploads/NMCv7.zip",
+        "accessed": "2026-10-02",
+        "usage": "Annual source-coded estimates, never asserted census; actual year, source definition, units, quality, anomaly and territorial notes retained. Modern-border and conflicting data remain held.",
+        "kind": "academic-historical-statistical-dataset"
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-nmc7-total-population"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:18:48.959Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "857c9c9abb1c3f4d0026b7c4237386c19135324e663d1fc183673f99cd6b6d2d",
+        "8ca926f0b37c6072b15d35861b8bccdffec92cae491019c827a85da01c387268"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "3ced725b11a892be11da3d76128870497806149fab344d2e29b06ffa894d5b6b",
+    "productionFingerprint": "915625e2802123489978ac52035e6e5e83bdf9e121f1d055e53f34eafe7eb558",
+    "jobId": "dossier-3d321c42628cdf149b8cd255",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "3ced725b11a892be11da3d76128870497806149fab344d2e29b06ffa894d5b6b",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent of campaign2_flags NMC extractor; contract 8ca926f0b37c6072b15d35861b8bccdffec92cae491019c827a85da01c387268; adapter nmc-population/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-f7f5afaa37436f844891c83d-cbfb7891c0": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-f7f5afaa37436f844891c83d-cbfb7891c0"
+    ]
+  }
+}

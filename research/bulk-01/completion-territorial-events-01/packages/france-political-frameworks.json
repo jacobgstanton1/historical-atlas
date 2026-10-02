@@ -1,0 +1,270 @@
+{
+  "job": {
+    "id": "dossier-acc0b6a53c85bc78061c7f76",
+    "entityId": "france-political-frameworks",
+    "period": {
+      "from": "1874-03",
+      "until": "1874-03"
+    },
+    "mapIds": [
+      "entity-france"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "5b48ae57bc0d86ffe2c9caa84351920e0a1150f1ff5e16f4a8fd89aabb37dc01",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-territorial-events-01-france-political-frameworks",
+    "jobId": "dossier-acc0b6a53c85bc78061c7f76",
+    "entityId": "france-political-frameworks",
+    "mapIds": [
+      "entity-france"
+    ],
+    "worker": {
+      "id": "bulk-parser/territorial-events/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "5b48ae57bc0d86ffe2c9caa84351920e0a1150f1ff5e16f4a8fd89aabb37dc01",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1874-03",
+      "until": "1874-03"
+    },
+    "claims": [
+      {
+        "id": "bulk-984cccbf9c67132403f4fb58-664972552c",
+        "category": "events-context",
+        "value": "COW territorial-change record220 codes France as the gaining-side participant in a conquest record concerning part of catalogue-labelled Cochin China, dated 1874-03.",
+        "entityId": "france-political-frameworks",
+        "temporal": {
+          "kind": "event",
+          "date": "1874-03",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "france-political-frameworks-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow185/change220",
+            "note": "{\"original\":{\"id\":\"cow-tc-220-gainer-france-political-frameworks\",\"category\":\"events-context\",\"eventDate\":\"1874-03\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"france-political-frameworks\",\"side\":\"gainer\",\"sourceChangeNumber\":\"220\",\"sourceCSVLine\":186,\"sourceRowIndex\":184,\"rawRow\":{\"year\":\"1874\",\"month\":\"3\",\"gainer\":\"220\",\"gaintype\":\"0\",\"procedur\":\"1\",\"entity\":\"8151\",\"contgain\":\"0\",\"area\":\"33864.00\",\"pop\":\"477000\",\"portion\":\"0\",\"loser\":\"815\",\"losetype\":\"1\",\"contlose\":\"1\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"220\",\"indep\":\"0\",\"conflict\":\"1\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow185/change220\",\"sourceProcedure\":\"conquest\",\"sourceParticipantCode\":\"220\",\"rawCatalogueLines\":{\"participant\":[\"220 France 1816 1818 Occupied by 200\",\"220 France 1871 1873 Occupied by 255\",\"220 France 1914 1918 Occupied by 255\",\"220 France 1942 1944 Occupied by 255\"],\"exchanged\":[\"8151 Cochin China 1816 1867 Became part of 815\",\"8151 Cochin China 1867 1887 Became colony of 220\",\"8151 Cochin China 1887 1949 Became part of 810\",\"8151 Cochin China 1949 1954 Became part of 815\",\"8151 Cochin China 1954 1975 Became part of 817\",\"8151 Cochin China 1975 1993 Became part of 816\"],\"other\":[\"815 Vietnam 1887 1949 Became part of 810\",\"815 Vietnam 1949 1954 Became colony of 220\",\"815 Vietnam 1954 1993 Became part of 816\",\"815 Vietnam 1954 1975 Became part of 817\"]},\"mappingProposals\":[{\"cowCode\":\"220\",\"entityId\":\"france-political-frameworks\",\"from\":\"1816\",\"until\":\"1875\",\"existingIdentity\":{\"validFrom\":\"1799-12-13\",\"sourceIds\":[\"b01-french-consulate\",\"b01-france-third-republic\",\"b01-france-republican-legality\"],\"note\":\"Curated successive French political frameworks, not an unchanged regime. Wartime competing authority and the 1944 restoration of republican legality remain explicit; this is not a claim of one constitution since 1799.\"},\"identityEvidenceIds\":[\"b01-french-consulate\",\"b01-france-third-republic\",\"b01-france-republican-legality\"],\"origin\":\"Existing registry sourced framework / explicit COW namespace proposal\",\"reviewRequired\":true}],\"prioritySlots\":[{\"entityId\":\"france-political-frameworks\",\"snapshotYear\":1878,\"status\":\"missing\",\"actualEventDate\":\"1874-03\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":4}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-220-gainer-france-political-frameworks\",\"originalEventDigest\":\"a47215b22384a339988f97c9f1212851560457807607831ae9882a20d114a506\",\"originalCsvRowDigest\":\"eae0ef6702af627ca0febb7a39f5dbd821edf31250e4f15120d3673c5b0d86fc\",\"sourceDate\":\"1874-03\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"france-political-frameworks\",\"category\":\"events\",\"eventDate\":\"1874-03\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record220 codes France as the gaining-side participant in a conquest record concerning part of catalogue-labelled Cochin China, dated 1874-03.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow185/change220\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"220\",\"sourceParticipantCode\":\"220\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"conquest\",\"sourceExchangedUnitCode\":\"8151\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"france-political-frameworks\",\"category\":\"events\",\"eventDate\":\"1874-03\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record220 codes France as the gaining-side participant in a conquest record concerning part of catalogue-labelled Cochin China, dated 1874-03.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow185/change220\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"220\",\"sourceParticipantCode\":\"220\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"conquest\",\"sourceExchangedUnitCode\":\"8151\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-220-gainer-france-political-frameworks\",\"sourceRowIndex\":184,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"9c9cce998b06513393b6107eb2c174b9556a25bf7fee09ae7c6a74e4f6f9ac24\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"france-political-frameworks\",\"entityRecordDigest\":\"6a3baf5bd54f537f10f348897d3e57405adb31a5aef073e48e90d3dd6e26df46\",\"names\":[{\"value\":\"France\",\"validFrom\":\"1799-12-13\",\"sourceIds\":[\"b01-french-consulate\",\"b01-france-third-republic\",\"b01-france-republican-legality\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existence\":{\"validFrom\":\"1799-12-13\",\"sourceIds\":[\"b01-french-consulate\",\"b01-france-third-republic\",\"b01-france-republican-legality\"],\"note\":\"Curated successive French political frameworks, not an unchanged regime. Wartime competing authority and the 1944 restoration of republican legality remain explicit; this is not a claim of one constitution since 1799.\"},\"participantCode\":\"220\",\"namespaceOriginalCatalogueLines\":[\"220 France 1816 1818 Occupied by 200\",\"220 France 1871 1873 Occupied by 255\",\"220 France 1914 1918 Occupied by 255\",\"220 France 1942 1944 Occupied by 255\"],\"independentCowNamespaceLabels\":[\"France\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[\"220 France 1816 1818 Occupied by 200\",\"220 France 1871 1873 Occupied by 255\",\"220 France 1914 1918 Occupied by 255\",\"220 France 1942 1944 Occupied by 255\"],\"exchanged\":[\"8151 Cochin China 1816 1867 Became part of 815\",\"8151 Cochin China 1867 1887 Became colony of 220\",\"8151 Cochin China 1887 1949 Became part of 810\",\"8151 Cochin China 1949 1954 Became part of 815\",\"8151 Cochin China 1954 1975 Became part of 817\",\"8151 Cochin China 1975 1993 Became part of 816\"],\"other\":[\"815 Vietnam 1887 1949 Became part of 810\",\"815 Vietnam 1949 1954 Became colony of 220\",\"815 Vietnam 1954 1993 Became part of 816\",\"815 Vietnam 1954 1975 Became part of 817\"]},\"independentCatalogueCorrection\":null,\"snapshotContextReview\":[{\"entityId\":\"france-political-frameworks\",\"snapshotYear\":1878,\"status\":\"missing\",\"actualEventDate\":\"1874-03\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":4,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1874-03",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-984cccbf9c67132403f4fb58",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow185/change220"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:24:11.346Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "58672f0fffe3af975beeac60bc2a4ed02871100b2e8365e37044348cad54ede0",
+        "d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "14658cc0020c1fda35175c578256abad63b894e5564f3b3b4ca0bdc731922f47",
+    "productionFingerprint": "5b48ae57bc0d86ffe2c9caa84351920e0a1150f1ff5e16f4a8fd89aabb37dc01",
+    "jobId": "dossier-acc0b6a53c85bc78061c7f76",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "14658cc0020c1fda35175c578256abad63b894e5564f3b3b4ca0bdc731922f47",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent of territorial-events extractor; contract d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2; adapter territorial-events/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-984cccbf9c67132403f4fb58-664972552c": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-984cccbf9c67132403f4fb58-664972552c"
+    ]
+  }
+}

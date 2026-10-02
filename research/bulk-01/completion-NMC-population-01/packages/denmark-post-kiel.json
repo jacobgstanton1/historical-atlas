@@ -1,0 +1,277 @@
+{
+  "job": {
+    "id": "dossier-b68b4699e9da7e3fc66cdbf0",
+    "entityId": "denmark-post-kiel",
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-denmark"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "46831df8f36191aa3ab7d92637d8b6c87fa946b63ca3d43db757603e04b67d87",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-NMC-population-01-denmark-post-kiel",
+    "jobId": "dossier-b68b4699e9da7e3fc66cdbf0",
+    "entityId": "denmark-post-kiel",
+    "mapIds": [
+      "entity-denmark"
+    ],
+    "worker": {
+      "id": "bulk-parser/nmc-population/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "46831df8f36191aa3ab7d92637d8b6c87fa946b63ca3d43db757603e04b67d87",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "bulk-4182dd304ff8743e21f90ce4-92b38a5868",
+        "category": "population-statistics",
+        "value": 4581000,
+        "entityId": "denmark-post-kiel",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "denmark-post-kiel-completion-NMC-population-01",
+          "description": "COW NMC source-coded civilian/home population of Denmark; Denmark core excluding Greenland/Faeroes. Excluding the Faeroe Islands and Greenland.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-nmc7-total-population"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-nmc7-total-population",
+            "locator": "NMC70 supplementary CSV logical row9458, stateabb=DEN,ccode=390,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+            "note": "{\"original\":{\"id\":\"nmc7-tpop-390-1960-denmark-post-kiel\",\"entityId\":\"denmark-post-kiel\",\"rawStateName\":\"Denmark\",\"rawStateAbbreviation\":\"DEN\",\"rawStateCode\":\"390\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"value\":\"4581000\",\"sourceValueThousands\":\"4581\",\"sourceUnit\":\"thousands of persons; conversion multiplies by1000 without asserting additional precision\",\"category\":\"population-statistics\",\"observationType\":\"annual source-coded population figure; identified-source or publisher estimation per retained quality code, NOT asserted census\",\"qualityCode\":\"A\",\"qualityMeaning\":\"Value from identified source; not necessarily a census\",\"anomalyCode\":\"A\",\"anomalyMeaning\":\"No anomaly under2percent change\",\"sourceBibliographyLiteral\":\"United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"sourceScopeMethodNoteLiteral\":\"Excluding the Faeroe Islands and Greenland.\",\"geographicScope\":\"Source-coded historical state civilian/home population under COW NMC definitions; source geographic/statistical scope and exact notes retained. Not asserted equal to selected map polygon or inclusive of dependencies.\",\"territorialMatchApproval\":false,\"identityBridge\":{\"origin\":\"Existing independently reviewed Archigos identity contract used as bounded identity proposal ONLY, not population evidence.\",\"originalContractId\":\"archigos-DEN-denmark-post-kiel-1946-01-01\",\"from\":\"1946-01-01\",\"until\":\"1961-01-01\",\"existingIdentity\":{\"name\":\"Denmark\",\"sourceIds\":[\"b01-norway-democracy\",\"b01-denmark-monarchy\"],\"existence\":{\"validFrom\":\"1814-01-14\",\"sourceIds\":[\"b01-norway-democracy\",\"b01-denmark-monarchy\"],\"note\":\"Curated Danish kingdom after separation of Norway, not the beginning of Denmark as a kingdom.\"},\"entityRecordDigest\":\"7df4e1699efec0983edf47a431fcf5bd60e2e9e797062f8f0416e799ac05b325\"},\"reviewRequired\":true},\"snapshotSlots\":[{\"entityId\":\"denmark-post-kiel\",\"snapshotYear\":1960,\"mapIds\":[\"entity-denmark\"],\"status\":\"missing\",\"actualObservationYear\":\"1960\"}],\"sourceLocator\":\"NMC70 supplementary CSV logical row9458, stateabb=DEN,ccode=390,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode\",\"originalRecordBytesSha256\":\"7ca9ae156627541ee32407f2e22fecf2a87b52fb4459eadba6edeb5f7edd7b2a\",\"originalRow\":{\"statenme\":\"Denmark\",\"stateabb\":\"DEN\",\"ccode\":\"390\",\"year\":\"1960\",\"milex\":\"161117\",\"milexsource\":\"SN 1 p267\",\"milexnote\":\"\",\"milper\":\"32\",\"milpersource\":\"\",\"milpernote\":\"\",\"irst\":\"317\",\"irstsource\":\" 4th ed., 1998, p. 468.\",\"irstnote\":\"\",\"irstqualitycode\":\"A\",\"irstanomalycode\":\"A\",\"pec\":\"4583\",\"pecsource\":\"United Nations Energy Statistics Database, 1950-97.\",\"pecnote\":\"All information present.\",\"pecqualitycode\":\"A\",\"pecanomalycode\":\"A\",\"tpop\":\"4581\",\"tpopsource\":\"United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"tpopnote\":\"Excluding the Faeroe Islands and Greenland.\",\"tpopqualitycode\":\"A\",\"tpopanomalycode\":\"A\",\"upop\":\"1038\",\"upopsource\":\"UN Demographic Yearbook 1963 p249\",\"upopnote\":\"\",\"upopqualitycode\":\"\",\"upopanomalycode\":\"\",\"upopgrowth\":\"1.65\",\"upopgrowthsource\":\"World Urbanization Prospects 2001, pp206-7\",\"cinc\":\".0014777641\",\"version\":\"2025\"},\"originalCsvPhysicalLineEnd\":9458,\"sourceMemberSha256\":\"b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18\",\"sourceCodebookSha256\":\"b89c5819bfe9facfb0c04ca8a3500869d7943bbcb0a090a1cd799c5914d129ca\",\"issues\":[],\"disposition\":\"source-quality-ready-territorial-review-required\",\"historicalAcceptance\":false},\"independentSourceReview\":{\"observationId\":\"nmc7-tpop-390-1960-denmark-post-kiel\",\"originalObservationDigest\":\"e5e37e79501425bc4d7c25268759fd60421ccfbc7aab08bbfe741aa803ad0117\",\"decision\":\"source-and-mapping-approved\",\"reason\":\"Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted.\",\"sourceValueDateVerified\":true,\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"approvedMappedFields\":{\"entityId\":\"denmark-post-kiel\",\"category\":\"population\",\"value\":4581000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"source-coded annual population estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"COW NMC source-coded civilian/home population of Denmark; Denmark core excluding Greenland/Faeroes. Excluding the Faeroe Islands and Greenland.\",\"sourceId\":\"cow-nmc7-total-population\",\"locator\":\"NMC70 supplementary CSV logical row9458, stateabb=DEN,ccode=390,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode\",\"sourceBodyHash\":\"b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18\",\"qualifications\":[\"Annual source-coded population observation; never asserted census or exact date.\",\"Units originally thousands; multiply1000 without asserting additional headcount precision.\",\"QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.\",\"Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"Source note literally: Excluding the Faeroe Islands and Greenland.\",\"COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.\",\"Academic coding qualification; no inference from polygon geometry or state-code equality.\"]},\"verifiedSourceFields\":{\"entityId\":\"denmark-post-kiel\",\"category\":\"population\",\"value\":4581000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"source-coded annual population estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"COW NMC source-coded civilian/home population of Denmark; Denmark core excluding Greenland/Faeroes. Excluding the Faeroe Islands and Greenland.\",\"sourceId\":\"cow-nmc7-total-population\",\"locator\":\"NMC70 supplementary CSV logical row9458, stateabb=DEN,ccode=390,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode\",\"sourceBodyHash\":\"b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18\",\"qualifications\":[\"Annual source-coded population observation; never asserted census or exact date.\",\"Units originally thousands; multiply1000 without asserting additional headcount precision.\",\"QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.\",\"Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"Source note literally: Excluding the Faeroe Islands and Greenland.\",\"COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.\",\"Academic coding qualification; no inference from polygon geometry or state-code equality.\"]},\"mappingReceipt\":{\"entityId\":\"denmark-post-kiel\",\"entityRecordDigest\":\"7df4e1699efec0983edf47a431fcf5bd60e2e9e797062f8f0416e799ac05b325\",\"names\":[{\"value\":\"Denmark\",\"validFrom\":\"1814-01-14\",\"sourceIds\":[\"b01-norway-democracy\",\"b01-denmark-monarchy\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existence\":{\"validFrom\":\"1814-01-14\",\"sourceIds\":[\"b01-norway-democracy\",\"b01-denmark-monarchy\"],\"note\":\"Curated Danish kingdom after separation of Norway, not the beginning of Denmark as a kingdom.\"},\"sourceYear\":\"1960\",\"identityBridgeUsedOnlyForIdentity\":true,\"territorialMatchApproval\":true,\"scopeRationale\":\"Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted.\"},\"sourceCheck\":{\"id\":\"nmc7-tpop-390-1960-denmark-post-kiel\",\"logicalRow\":9458,\"originalRecordBytesSha256\":\"7ca9ae156627541ee32407f2e22fecf2a87b52fb4459eadba6edeb5f7edd7b2a\",\"fullOriginalSupplementalRowVerified\":true,\"valueUnitDateSourceNoteQualityVerified\":true},\"sourceBibliographyLiteral\":\"United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.\",\"sourceScopeMethodNoteLiteral\":\"Excluding the Faeroe Islands and Greenland.\",\"duplicateNote\":null},\"sourceMemberCertification\":{\"codebookPath\":\"research\\\\completion-01\\\\nmc\\\\cache\\\\extracted\\\\NMCv7\\\\NMC_Documentation_v7.pdf\",\"codebookSha256\":\"b89c5819bfe9facfb0c04ca8a3500869d7943bbcb0a090a1cd799c5914d129ca\",\"supplementaryZipPath\":\"research\\\\completion-01\\\\nmc\\\\cache\\\\extracted\\\\NMCv7\\\\NMC-v7-supplemental.zip\",\"supplementaryZipSha256\":\"aef45b6b62c560b8c3f1e9a4634a9444cd5fb086d2cb50574319b686838ba043\",\"supplementaryCsvMember\":\"NMC-70-wsupplementary.csv\",\"supplementaryCsvSha256\":\"b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18\",\"all17121PopulationValuesMatchAbridged\":true,\"encoding\":\"UTF8 decoding failed; reversible ISO8859-1 byte decoding used without transliteration/repair. NonASCII source/provenance fields require review.\"}}; Independent original supplementary CSV full-row byte/value/source-note/quality validation and original PDF codebook printed4,31–35 reading; existing entity names and boundaries reviewed. Restrict to18 proposed quality-ready rows, not168 frozen held candidates. No new download or production edit.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: Excluding the Faeroe Islands and Greenland.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "COW NMC source-coded civilian/home population of Denmark; Denmark core excluding Greenland/Faeroes. Excluding the Faeroe Islands and Greenland."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-4182dd304ff8743e21f90ce4",
+          "sourceIdentifier": "NMC70 supplementary CSV logical row9458, stateabb=DEN,ccode=390,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode"
+        },
+        "metric": "Population (published source estimate)",
+        "unit": "persons"
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-nmc7-total-population"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:18:57.649Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "857c9c9abb1c3f4d0026b7c4237386c19135324e663d1fc183673f99cd6b6d2d",
+        "8ca926f0b37c6072b15d35861b8bccdffec92cae491019c827a85da01c387268"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "c76ab6ec99732795f337fcce37ef6c6ddf01aec8b04fb6378c3a3a175f1aba21",
+    "productionFingerprint": "46831df8f36191aa3ab7d92637d8b6c87fa946b63ca3d43db757603e04b67d87",
+    "jobId": "dossier-b68b4699e9da7e3fc66cdbf0",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "c76ab6ec99732795f337fcce37ef6c6ddf01aec8b04fb6378c3a3a175f1aba21",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent of campaign2_flags NMC extractor; contract 8ca926f0b37c6072b15d35861b8bccdffec92cae491019c827a85da01c387268; adapter nmc-population/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-4182dd304ff8743e21f90ce4-92b38a5868": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-4182dd304ff8743e21f90ce4-92b38a5868"
+    ]
+  }
+}

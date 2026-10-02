@@ -1,0 +1,270 @@
+{
+  "job": {
+    "id": "dossier-ed4a789e976dd54ed816e40d",
+    "entityId": "australia-prewestminster-federal-core",
+    "period": {
+      "from": "1919-07",
+      "until": "1919-07"
+    },
+    "mapIds": [
+      "entity-australia"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "896453e3496f52afb729e0d76d2b1633319d548524f00765a7ef65b6583f2abc",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-territorial-events-01-australia-prewestminster-federal-core",
+    "jobId": "dossier-ed4a789e976dd54ed816e40d",
+    "entityId": "australia-prewestminster-federal-core",
+    "mapIds": [
+      "entity-australia"
+    ],
+    "worker": {
+      "id": "bulk-parser/territorial-events/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "896453e3496f52afb729e0d76d2b1633319d548524f00765a7ef65b6583f2abc",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1919-07",
+      "until": "1919-07"
+    },
+    "claims": [
+      {
+        "id": "bulk-fd1d7d57c70abbd4337ad895-e6661b53d8",
+        "category": "events-context",
+        "value": "COW territorial-change record495 codes Australia as the gaining-side participant in a mandated territory record concerning catalogue-labelled Nauru, dated 1919-07.",
+        "entityId": "australia-prewestminster-federal-core",
+        "temporal": {
+          "kind": "event",
+          "date": "1919-07",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "australia-prewestminster-federal-core-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow453/change495",
+            "note": "{\"original\":{\"id\":\"cow-tc-495-gainer-australia-prewestminster-federal-core\",\"category\":\"events-context\",\"eventDate\":\"1919-07\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"australia-prewestminster-federal-core\",\"side\":\"gainer\",\"sourceChangeNumber\":\"495\",\"sourceCSVLine\":454,\"sourceRowIndex\":452,\"rawRow\":{\"year\":\"1919\",\"month\":\"7\",\"gainer\":\"900\",\"gaintype\":\"0\",\"procedur\":\"6\",\"entity\":\"970\",\"contgain\":\"0\",\"area\":\"21.00\",\"pop\":\"2120\",\"portion\":\"1\",\"loser\":\"255\",\"losetype\":\"0\",\"contlose\":\"0\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"495\",\"indep\":\"0\",\"conflict\":\"0\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow453/change495\",\"sourceProcedure\":\"mandated territory\",\"sourceParticipantCode\":\"900\",\"rawCatalogueLines\":{\"participant\":[\"900 Australia 1825 1901 Became part of 906\",\"900 Australia 1829 1901 Became part of 902\",\"900 Australia 1836 1901 Became part of 903\",\"900 Australia 1851 1901 Became part of 904\",\"900 Australia 1859 1901 Became part of 905\",\"900 Australia 1901 1919 Became colony of 200\"],\"exchanged\":[\"970 Nauru 1888 1914 Became part of 9830\",\"970 Nauru 1914 1919 Occupied by 900\",\"970 Nauru 1919 1942 Mandated to 900\",\"970 Nauru 1942 1945 Occupied by 740\",\"970 Nauru 1945 1968 Mandated to 900\"],\"other\":[\"255 Germany/Prussia 1945 1990 Became part of 260\"]},\"mappingProposals\":[{\"id\":\"archigos-AUL-australia-prewestminster-federal-core-1914-01-01\",\"sourceCountryCode\":\"AUL\",\"entityId\":\"australia-prewestminster-federal-core\",\"from\":\"1914-01-01\",\"until\":\"1939-01-01\",\"sourceCountryLocator\":\"Archigos v4.1 case descriptions, printed p.847 (PDF page 853)\",\"existingIdentity\":{\"name\":\"Commonwealth of Australia — pre-adoption federal framework\",\"validFrom\":\"1914-01-01\",\"validUntil\":\"1939-01-01\",\"sourceIds\":[\"b21-australian-federation\",\"b21-australian-first-parliament\",\"b21-australia-westminster-primary\"]},\"rationale\":\"Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.\",\"qualifications\":[\"Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.\",\"Country coding is not evidence of sovereignty of every map polygon.\",\"Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.\",\"Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics.\"],\"role\":\"Effective political leader (Archigos coding)\",\"status\":\"approved-mapping-contract\",\"reviewer\":\"scale-flags-independent-archigos\",\"cowCode\":\"900\",\"origin\":\"Existing reviewed framework identity; NEW COW namespace bridge requires review\"}],\"prioritySlots\":[{\"entityId\":\"australia-prewestminster-federal-core\",\"snapshotYear\":1920,\"status\":\"missing\",\"actualEventDate\":\"1919-07\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":1}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-495-gainer-australia-prewestminster-federal-core\",\"originalEventDigest\":\"352dbf55caeea2650c21f37c7131363a281313addbdda2ef481fcc49c637acdb\",\"originalCsvRowDigest\":\"871a2b73c4616bad54848091bebcbeedb2a09d04e6ea35e1a8806210b29ba3c9\",\"sourceDate\":\"1919-07\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"australia-prewestminster-federal-core\",\"category\":\"events\",\"eventDate\":\"1919-07\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record495 codes Australia as the gaining-side participant in a mandated territory record concerning catalogue-labelled Nauru, dated 1919-07.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow453/change495\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"495\",\"sourceParticipantCode\":\"900\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"mandated territory\",\"sourceExchangedUnitCode\":\"970\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"australia-prewestminster-federal-core\",\"category\":\"events\",\"eventDate\":\"1919-07\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record495 codes Australia as the gaining-side participant in a mandated territory record concerning catalogue-labelled Nauru, dated 1919-07.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow453/change495\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"495\",\"sourceParticipantCode\":\"900\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"mandated territory\",\"sourceExchangedUnitCode\":\"970\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-495-gainer-australia-prewestminster-federal-core\",\"sourceRowIndex\":452,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"b1fd7ee8e85b91e0a8bfcfb22aa0188843dd28193ec0748b6935bb9b71880432\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"australia-prewestminster-federal-core\",\"entityRecordDigest\":\"aa519a0e7a0d746f7e74d6385f2eb5961e3efced886b1724ca57ee19e3411e98\",\"names\":[{\"value\":\"Commonwealth of Australia — pre-adoption federal framework\",\"validFrom\":\"1914-01-01\",\"validUntil\":\"1939-01-01\",\"sourceIds\":[\"b21-australian-federation\",\"b21-australian-first-parliament\",\"b21-australia-westminster-primary\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existence\":{\"validFrom\":\"1914-01-01\",\"validUntil\":\"1939-01-01\",\"sourceIds\":[\"b21-australian-federation\",\"b21-australian-first-parliament\",\"b21-australia-westminster-primary\"],\"note\":\"Editorial partial coverage, not full political lifetime; exclusive endpoints are coverage bounds.\"},\"participantCode\":\"900\",\"namespaceOriginalCatalogueLines\":[\"900 Australia 1825 1901 Became part of 906\",\"900 Australia 1829 1901 Became part of 902\",\"900 Australia 1836 1901 Became part of 903\",\"900 Australia 1851 1901 Became part of 904\",\"900 Australia 1859 1901 Became part of 905\",\"900 Australia 1901 1919 Became colony of 200\"],\"independentCowNamespaceLabels\":[\"Australia\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[\"900 Australia 1825 1901 Became part of 906\",\"900 Australia 1829 1901 Became part of 902\",\"900 Australia 1836 1901 Became part of 903\",\"900 Australia 1851 1901 Became part of 904\",\"900 Australia 1859 1901 Became part of 905\",\"900 Australia 1901 1919 Became colony of 200\"],\"exchanged\":[\"970 Nauru 1888 1914 Became part of 9830\",\"970 Nauru 1914 1919 Occupied by 900\",\"970 Nauru 1919 1942 Mandated to 900\",\"970 Nauru 1942 1945 Occupied by 740\",\"970 Nauru 1945 1968 Mandated to 900\"],\"other\":[\"255 Germany/Prussia 1945 1990 Became part of 260\"]},\"independentCatalogueCorrection\":null,\"snapshotContextReview\":[{\"entityId\":\"australia-prewestminster-federal-core\",\"snapshotYear\":1920,\"status\":\"missing\",\"actualEventDate\":\"1919-07\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":1,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1919-07",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-fd1d7d57c70abbd4337ad895",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow453/change495"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:24:42.525Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "58672f0fffe3af975beeac60bc2a4ed02871100b2e8365e37044348cad54ede0",
+        "d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "27fcb57a5cd05fcc002063cee3dc82d06a0f3fcc47550ad1216dcdf801eb006e",
+    "productionFingerprint": "896453e3496f52afb729e0d76d2b1633319d548524f00765a7ef65b6583f2abc",
+    "jobId": "dossier-ed4a789e976dd54ed816e40d",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "27fcb57a5cd05fcc002063cee3dc82d06a0f3fcc47550ad1216dcdf801eb006e",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent of territorial-events extractor; contract d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2; adapter territorial-events/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-fd1d7d57c70abbd4337ad895-e6661b53d8": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-fd1d7d57c70abbd4337ad895-e6661b53d8"
+    ]
+  }
+}

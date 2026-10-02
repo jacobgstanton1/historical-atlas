@@ -1,0 +1,330 @@
+{
+  "job": {
+    "id": "dossier-8dbc40c00e80c959f002b934",
+    "entityId": "united-kingdom",
+    "period": {
+      "from": "1874-12",
+      "until": "1875-07"
+    },
+    "mapIds": [
+      "entity-united-kingdom",
+      "entity-united-kingdom-of-great-britain-and-ireland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "ed716ae281bad34521abd28ca7a8e82dd87f7225856f5b0ec1384ef91542f512",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-territorial-events-01-united-kingdom",
+    "jobId": "dossier-8dbc40c00e80c959f002b934",
+    "entityId": "united-kingdom",
+    "mapIds": [
+      "entity-united-kingdom",
+      "entity-united-kingdom-of-great-britain-and-ireland"
+    ],
+    "worker": {
+      "id": "bulk-parser/territorial-events/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "ed716ae281bad34521abd28ca7a8e82dd87f7225856f5b0ec1384ef91542f512",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1874-12",
+      "until": "1875-07"
+    },
+    "claims": [
+      {
+        "id": "bulk-410ff7a8aacc9a17c29b2d04-2fd3da0793",
+        "category": "events-context",
+        "value": "COW territorial-change record218 codes United Kingdom as the gaining-side participant in a annexation record concerning catalogue-labelled Fiji, dated 1874-12.",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "event",
+          "date": "1874-12",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow183/change218",
+            "note": "{\"original\":{\"id\":\"cow-tc-218-gainer-united-kingdom\",\"category\":\"events-context\",\"eventDate\":\"1874-12\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"united-kingdom\",\"side\":\"gainer\",\"sourceChangeNumber\":\"218\",\"sourceCSVLine\":184,\"sourceRowIndex\":182,\"rawRow\":{\"year\":\"1874\",\"month\":\"12\",\"gainer\":\"200\",\"gaintype\":\"0\",\"procedur\":\"2\",\"entity\":\"950\",\"contgain\":\"0\",\"area\":\"18272.00\",\"pop\":\"148040\",\"portion\":\"1\",\"loser\":\"950\",\"losetype\":\"1\",\"contlose\":\"-9\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"218\",\"indep\":\"0\",\"conflict\":\"0\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow183/change218\",\"sourceProcedure\":\"annexation\",\"sourceParticipantCode\":\"200\",\"rawCatalogueLines\":{\"participant\":[],\"exchanged\":[\"950 Fiji 1874 1970 Became colony of 200\"],\"other\":[\"950 Fiji 1874 1970 Became colony of 200\"]},\"mappingProposals\":[{\"cowCode\":\"200\",\"entityId\":\"united-kingdom\",\"from\":\"1816\",\"until\":\"1875\",\"existingIdentity\":{\"validFrom\":\"1801-01-01\",\"sourceIds\":[\"b01-uk-union-acts\",\"b01-uk-independence\"],\"note\":\"Union established in 1801; territorial change in 1922 and parliamentary/royal title legislation in 1927 are distinguished. No dissolution at the atlas limit is claimed.\"},\"identityEvidenceIds\":[\"b01-uk-union-acts\",\"b01-uk-independence\"],\"origin\":\"Existing registry sourced framework / explicit COW namespace proposal\",\"reviewRequired\":true}],\"prioritySlots\":[{\"entityId\":\"united-kingdom\",\"snapshotYear\":1878,\"status\":\"missing\",\"actualEventDate\":\"1874-12\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":4}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-218-gainer-united-kingdom\",\"originalEventDigest\":\"2725fb336e75f830f4eb956bcfa72c164ed7afa2e604b169827ffa501eb05c58\",\"originalCsvRowDigest\":\"93819c6f7486f590af8f61ea00dc57ed9edf409952f9aca65255a637cd878c02\",\"sourceDate\":\"1874-12\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"united-kingdom\",\"category\":\"events\",\"eventDate\":\"1874-12\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record218 codes United Kingdom as the gaining-side participant in a annexation record concerning catalogue-labelled Fiji, dated 1874-12.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow183/change218\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"218\",\"sourceParticipantCode\":\"200\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"annexation\",\"sourceExchangedUnitCode\":\"950\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"united-kingdom\",\"category\":\"events\",\"eventDate\":\"1874-12\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record218 codes United Kingdom as the gaining-side participant in a annexation record concerning catalogue-labelled Fiji, dated 1874-12.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow183/change218\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"218\",\"sourceParticipantCode\":\"200\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"annexation\",\"sourceExchangedUnitCode\":\"950\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-218-gainer-united-kingdom\",\"sourceRowIndex\":182,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"4ac41cd2b90743f29801b256a7ad5d10693cdedbe596343505259f6992046f36\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"united-kingdom\",\"entityRecordDigest\":\"982974decb9bbd590cf7fc4aaa55214b133c4d30b01ca0e753a294d23a0c720d\",\"names\":[{\"value\":\"United Kingdom\",\"sourceIds\":[\"basemaps\"],\"confidence\":\"documented\",\"kind\":\"primary\",\"validFrom\":\"1936-12\",\"validUntil\":\"1961-01-01\"},{\"value\":\"United Kingdom of Great Britain and Northern Ireland\",\"validFrom\":\"1936-12\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"uk-formal-name\"],\"confidence\":\"documented\",\"kind\":\"formal\",\"note\":\"Formal wording documented by the 1927 Act; the curated profile begins in 1936, not the state’s inception.\"},{\"value\":\"United Kingdom\",\"validFrom\":\"1801-01-01\",\"validUntil\":\"1936-12\",\"sourceIds\":[\"b01-uk-union-acts\",\"b01-uk-independence\"],\"confidence\":\"documented\",\"kind\":\"primary\"},{\"value\":\"United Kingdom of Great Britain and Ireland\",\"validFrom\":\"1801-01-01\",\"validUntil\":\"1927-04-12\",\"sourceIds\":[\"b01-uk-union-acts\",\"uk-formal-name\"],\"confidence\":\"documented\",\"kind\":\"formal\"},{\"value\":\"United Kingdom of Great Britain and Northern Ireland\",\"validFrom\":\"1927-04-12\",\"validUntil\":\"1936-12\",\"sourceIds\":[\"uk-formal-name\"],\"confidence\":\"documented\",\"kind\":\"formal\",\"note\":\"Formal title legislation followed the Irish territorial change; a later source label may retain the earlier name.\"}],\"existence\":{\"validFrom\":\"1801-01-01\",\"sourceIds\":[\"b01-uk-union-acts\",\"b01-uk-independence\"],\"note\":\"Union established in 1801; territorial change in 1922 and parliamentary/royal title legislation in 1927 are distinguished. No dissolution at the atlas limit is claimed.\"},\"participantCode\":\"200\",\"namespaceOriginalCatalogueLines\":[],\"independentCowNamespaceLabels\":[\"United Kingdom\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[],\"exchanged\":[\"950 Fiji 1874 1970 Became colony of 200\"],\"other\":[\"950 Fiji 1874 1970 Became colony of 200\"]},\"independentCatalogueCorrection\":null,\"snapshotContextReview\":[{\"entityId\":\"united-kingdom\",\"snapshotYear\":1878,\"status\":\"missing\",\"actualEventDate\":\"1874-12\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":4,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1874-12",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-410ff7a8aacc9a17c29b2d04",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow183/change218"
+        }
+      },
+      {
+        "id": "bulk-d55295d9bdbfabb38157254d-2fd3da0793",
+        "category": "events-context",
+        "value": "COW territorial-change record223 codes United Kingdom as the losing-side participant in a cession record concerning part of catalogue-labelled Mozambique, dated 1875-07.",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "event",
+          "date": "1875-07",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow187/change223",
+            "note": "{\"original\":{\"id\":\"cow-tc-223-loser-united-kingdom\",\"category\":\"events-context\",\"eventDate\":\"1875-07\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"united-kingdom\",\"side\":\"loser\",\"sourceChangeNumber\":\"223\",\"sourceCSVLine\":188,\"sourceRowIndex\":186,\"rawRow\":{\"year\":\"1875\",\"month\":\"7\",\"gainer\":\"235\",\"gaintype\":\"0\",\"procedur\":\"3\",\"entity\":\"541\",\"contgain\":\"0\",\"area\":\"650.00\",\"pop\":\".\",\"portion\":\"0\",\"loser\":\"200\",\"losetype\":\"0\",\"contlose\":\"0\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"223\",\"indep\":\"0\",\"conflict\":\"0\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow187/change223\",\"sourceProcedure\":\"cession\",\"sourceParticipantCode\":\"200\",\"rawCatalogueLines\":{\"participant\":[],\"exchanged\":[\"541 Mozambique 1816 1975 Became colony of 235\"],\"other\":[]},\"mappingProposals\":[{\"id\":\"archigos-UKG-united-kingdom-1875-01-01\",\"sourceCountryCode\":\"UKG\",\"entityId\":\"united-kingdom\",\"from\":\"1875-01-01\",\"until\":\"1961-01-01\",\"sourceCountryLocator\":\"Archigos v4.1 case descriptions, printed p.341 (PDF page 347)\",\"existingIdentity\":{\"name\":\"United Kingdom\",\"validFrom\":\"1801-01-01\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"b01-uk-union-acts\",\"b01-uk-independence\",\"basemaps\",\"george-vi\",\"elizabeth-ii\",\"uk-parliament\"]},\"rationale\":\"Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.\",\"qualifications\":[\"Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.\",\"Country coding is not evidence of sovereignty of every map polygon.\",\"Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.\",\"Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics.\"],\"role\":\"Effective political leader (Archigos coding)\",\"status\":\"approved-mapping-contract\",\"reviewer\":\"scale-flags-independent-archigos\",\"cowCode\":\"200\",\"origin\":\"Existing reviewed framework identity; NEW COW namespace bridge requires review\"}],\"prioritySlots\":[{\"entityId\":\"united-kingdom\",\"snapshotYear\":1878,\"status\":\"missing\",\"actualEventDate\":\"1875-07\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":3},{\"entityId\":\"united-kingdom\",\"snapshotYear\":1880,\"status\":\"missing\",\"actualEventDate\":\"1875-07\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":5}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-223-loser-united-kingdom\",\"originalEventDigest\":\"f51d9ec74e2f2845e6b89fdf8f5c54b1305406238ca392a74d1ae66762adcd30\",\"originalCsvRowDigest\":\"561a53c832d4be48f01aa029c609db132c9f5324559de4f44a95e342883a4f32\",\"sourceDate\":\"1875-07\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"united-kingdom\",\"category\":\"events\",\"eventDate\":\"1875-07\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record223 codes United Kingdom as the losing-side participant in a cession record concerning part of catalogue-labelled Mozambique, dated 1875-07.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow187/change223\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"223\",\"sourceParticipantCode\":\"200\",\"sourceSide\":\"loser\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"541\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"united-kingdom\",\"category\":\"events\",\"eventDate\":\"1875-07\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record223 codes United Kingdom as the losing-side participant in a cession record concerning part of catalogue-labelled Mozambique, dated 1875-07.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow187/change223\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"223\",\"sourceParticipantCode\":\"200\",\"sourceSide\":\"loser\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"541\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-223-loser-united-kingdom\",\"sourceRowIndex\":186,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"15d98a70df8ece9fee1f7abf30519ba6dbac51eb58701158ffcc54bcbcd49d2e\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"united-kingdom\",\"entityRecordDigest\":\"982974decb9bbd590cf7fc4aaa55214b133c4d30b01ca0e753a294d23a0c720d\",\"names\":[{\"value\":\"United Kingdom\",\"sourceIds\":[\"basemaps\"],\"confidence\":\"documented\",\"kind\":\"primary\",\"validFrom\":\"1936-12\",\"validUntil\":\"1961-01-01\"},{\"value\":\"United Kingdom of Great Britain and Northern Ireland\",\"validFrom\":\"1936-12\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"uk-formal-name\"],\"confidence\":\"documented\",\"kind\":\"formal\",\"note\":\"Formal wording documented by the 1927 Act; the curated profile begins in 1936, not the state’s inception.\"},{\"value\":\"United Kingdom\",\"validFrom\":\"1801-01-01\",\"validUntil\":\"1936-12\",\"sourceIds\":[\"b01-uk-union-acts\",\"b01-uk-independence\"],\"confidence\":\"documented\",\"kind\":\"primary\"},{\"value\":\"United Kingdom of Great Britain and Ireland\",\"validFrom\":\"1801-01-01\",\"validUntil\":\"1927-04-12\",\"sourceIds\":[\"b01-uk-union-acts\",\"uk-formal-name\"],\"confidence\":\"documented\",\"kind\":\"formal\"},{\"value\":\"United Kingdom of Great Britain and Northern Ireland\",\"validFrom\":\"1927-04-12\",\"validUntil\":\"1936-12\",\"sourceIds\":[\"uk-formal-name\"],\"confidence\":\"documented\",\"kind\":\"formal\",\"note\":\"Formal title legislation followed the Irish territorial change; a later source label may retain the earlier name.\"}],\"existence\":{\"validFrom\":\"1801-01-01\",\"sourceIds\":[\"b01-uk-union-acts\",\"b01-uk-independence\"],\"note\":\"Union established in 1801; territorial change in 1922 and parliamentary/royal title legislation in 1927 are distinguished. No dissolution at the atlas limit is claimed.\"},\"participantCode\":\"200\",\"namespaceOriginalCatalogueLines\":[],\"independentCowNamespaceLabels\":[\"United Kingdom\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[],\"exchanged\":[\"541 Mozambique 1816 1975 Became colony of 235\"],\"other\":[]},\"independentCatalogueCorrection\":null,\"snapshotContextReview\":[{\"entityId\":\"united-kingdom\",\"snapshotYear\":1878,\"status\":\"missing\",\"actualEventDate\":\"1875-07\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":3,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true},{\"entityId\":\"united-kingdom\",\"snapshotYear\":1880,\"status\":\"missing\",\"actualEventDate\":\"1875-07\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":5,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1875-07",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-d55295d9bdbfabb38157254d",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow187/change223"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cow-territorial-change-v6",
+        "title": "Correlates of War Territorial Change data, distributionv6/tc2018.csv",
+        "institution": "Correlates of War Project",
+        "url": "https://correlatesofwar.org/wp-content/uploads/terr-changes-v6.zip",
+        "accessed": "2026-10-02",
+        "usage": "Source-coded territorial participant events, not inferred sovereignty, successor relationships or polygon ownership; date proxies and precision retained. Archive/manual/CSV version mismatch explicitly qualified.",
+        "kind": "academic-coded-historical-dataset"
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:24:06.242Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "58672f0fffe3af975beeac60bc2a4ed02871100b2e8365e37044348cad54ede0",
+        "d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "5462767df7f4bed8e563a0e9a4c4f1daff74a8050176324c15998b7d280e8929",
+    "productionFingerprint": "ed716ae281bad34521abd28ca7a8e82dd87f7225856f5b0ec1384ef91542f512",
+    "jobId": "dossier-8dbc40c00e80c959f002b934",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "5462767df7f4bed8e563a0e9a4c4f1daff74a8050176324c15998b7d280e8929",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent of territorial-events extractor; contract d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2; adapter territorial-events/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-410ff7a8aacc9a17c29b2d04-2fd3da0793": "accepted",
+        "bulk-d55295d9bdbfabb38157254d-2fd3da0793": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-410ff7a8aacc9a17c29b2d04-2fd3da0793",
+      "bulk-d55295d9bdbfabb38157254d-2fd3da0793"
+    ]
+  }
+}

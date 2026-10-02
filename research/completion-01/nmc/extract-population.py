@@ -1,0 +1,13 @@
+from pathlib import Path
+import zipfile,csv,io,json,hashlib,collections,sys,decimal
+sys.stdout.reconfigure(encoding='utf8')
+b=Path('research/completion-01/nmc');p=b/'cache/extracted/NMCv7';sha=lambda raw:hashlib.sha256(raw).hexdigest();z=zipfile.ZipFile(p/'NMC-v7-supplemental.zip');data=z.read('NMC-70-wsupplementary.csv');text=data.decode('latin1');lines=data.splitlines(keepends=True);reader=csv.DictReader(io.StringIO(text,newline=''));rows=[];previous=1;allrows=[];snapshots={1878,1880,1900,1914,1920,1930,1938,1945,1960}
+for number,r in enumerate(reader,2):
+ last=reader.line_num;raw=b''.join(lines[previous:last]);previous=last;allrows.append(r)
+ if int(r['year']) in snapshots:rows.append({'sourceRowNumber':number,'csvPhysicalLineEnd':last,'originalRecordBytesSha256':sha(raw),'originalRow':r,'populationFields':{k:r[k] for k in ['statenme','stateabb','ccode','year','tpop','tpopsource','tpopnote','tpopqualitycode','tpopanomalycode','version']},'observationYear':r['year'],'originalValueThousands':r['tpop'],'valuePersons':None if decimal.Decimal(r['tpop'])<0 else str(decimal.Decimal(r['tpop'])*1000),'sourcePrecision':'year only; no census/date-of-observation precision invented'})
+a=zipfile.ZipFile(p/'NMC-v7-abridged.zip');abr=a.read('NMC-70-abridged.csv');ars=list(csv.DictReader(io.StringIO(abr.decode('latin1'),newline='')));index={(r['ccode'],r['year']):r for r in ars};mismatches=[]
+for r in allrows:
+ if decimal.Decimal(r['tpop'])!=decimal.Decimal(index[r['ccode'],r['year']]['tpop']):mismatches.append([r['ccode'],r['year']])
+assert not mismatches
+out={'schemaVersion':1,'originalZipPath':str(p/'NMC-v7-supplemental.zip'),'originalZipSha256':sha((p/'NMC-v7-supplemental.zip').read_bytes()),'memberName':'NMC-70-wsupplementary.csv','memberSha256':sha(data),'encoding':'UTF8 decoding failed; reversible ISO8859-1 byte decoding used without transliteration/repair. NonASCII source/provenance fields require review.','codebookPath':str(p/'NMC_Documentation_v7.pdf'),'codebookSha256':sha((p/'NMC_Documentation_v7.pdf').read_bytes()),'abridgedZipSha256':sha((p/'NMC-v7-abridged.zip').read_bytes()),'abridgedMemberSha256':sha(abr),'allSourceRows':len(allrows),'allTpopFieldsComparedToAbridged':len(allrows),'numericMismatches':mismatches,'configuredSnapshotRows':len(rows),'qualityCounts':dict(collections.Counter(r['populationFields']['tpopqualitycode'] for r in rows)),'anomalyCounts':dict(collections.Counter(r['populationFields']['tpopanomalycode'] for r in rows)),'rows':rows,'productionEdited':False}
+(b/'population-extracted.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf8');print({k:out[k] for k in ['allSourceRows','configuredSnapshotRows','qualityCounts','anomalyCounts','numericMismatches']})

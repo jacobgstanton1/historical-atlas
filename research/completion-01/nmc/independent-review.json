@@ -1,0 +1,1556 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "officeholder_sources independent of campaign2_flags NMC extractor",
+  "inputCanonicalDigest": "23789ecf5cfcccceac346a262468b4ad95481fa3a69d8101e7da0da1a6b8e178",
+  "inputFileSha256": "82e5de4deb9e17964bf05b917d45496ece15a818624547d91dbfa81ff8dcaa63",
+  "sourceCertification": {
+    "codebookPath": "research\\completion-01\\nmc\\cache\\extracted\\NMCv7\\NMC_Documentation_v7.pdf",
+    "codebookSha256": "b89c5819bfe9facfb0c04ca8a3500869d7943bbcb0a090a1cd799c5914d129ca",
+    "supplementaryZipPath": "research\\completion-01\\nmc\\cache\\extracted\\NMCv7\\NMC-v7-supplemental.zip",
+    "supplementaryZipSha256": "aef45b6b62c560b8c3f1e9a4634a9444cd5fb086d2cb50574319b686838ba043",
+    "supplementaryCsvMember": "NMC-70-wsupplementary.csv",
+    "supplementaryCsvSha256": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+    "all17121PopulationValuesMatchAbridged": true,
+    "encoding": "UTF8 decoding failed; reversible ISO8859-1 byte decoding used without transliteration/repair. NonASCII source/provenance fields require review."
+  },
+  "sourceBindings": [
+    {
+      "path": "research/completion-01/nmc/population-candidate-tranche.json",
+      "sha256": "82e5de4deb9e17964bf05b917d45496ece15a818624547d91dbfa81ff8dcaa63"
+    },
+    {
+      "path": "research/completion-01/nmc/build-population-tranche.mjs",
+      "sha256": "97f45d720734cd34351527e693a306aede2e9d9bbb9494fbcd7d2e4d7fef0885"
+    },
+    {
+      "path": "research/completion-01/nmc/extract-population.py",
+      "sha256": "b6e1b15304675467db7d49dbcbfd4d8e080625cc2da0bd8144dbd61d2ba5e6e6"
+    },
+    {
+      "path": "research/completion-01/nmc/independent-source-check.py",
+      "sha256": "89fb3d0d665b8d77616e8bdfe2ae278e9fb16a32108b105b2a86eda64254432c"
+    },
+    {
+      "path": "research/completion-01/nmc/independent-source-check.json",
+      "sha256": "38e1945784385270254c8936ca07a81b0d5e057a8f1937a4f5ebb42c8e827d3c"
+    },
+    {
+      "path": "research/completion-01/nmc/build-independent-review.mjs",
+      "sha256": "5963029f24c5a9df9ea0ddb8e85cb0aae395ca7c335eca228f28d8345b964a88"
+    },
+    {
+      "path": "research\\completion-01\\nmc\\cache\\extracted\\NMCv7\\NMC_Documentation_v7.pdf",
+      "sha256": "b89c5819bfe9facfb0c04ca8a3500869d7943bbcb0a090a1cd799c5914d129ca"
+    },
+    {
+      "path": "research\\completion-01\\nmc\\cache\\extracted\\NMCv7\\NMC-v7-supplemental.zip",
+      "sha256": "aef45b6b62c560b8c3f1e9a4634a9444cd5fb086d2cb50574319b686838ba043"
+    },
+    {
+      "path": "research/completion-01/nmc/cache/extracted/NMCv7/NMC-v7-abridged.zip",
+      "sha256": "bfec5dbd7ca003a34551d3337de11ed4d597cb733edd496d0ee25c8787b30c14"
+    }
+  ],
+  "entityRegistryCanonicalDigest": "588f1ee170d19370849d2a9663869f67d8cf34ade762205009615c7cc180f9f6",
+  "reviewMethod": "Independent original supplementary CSV full-row byte/value/source-note/quality validation and original PDF codebook printed4,31–35 reading; existing entity names and boundaries reviewed. Restrict to18 proposed quality-ready rows, not168 frozen held candidates. No new download or production edit.",
+  "schemaContract": {
+    "rows": "One receipt for every proposed candidate; exact digest binds original input row.",
+    "approvedMappedFields": "Only approved rows may integrate; holds retain literal evidence for review.",
+    "populationType": "Annual source-coded population estimate at year precision; identified bibliography does not make this a census.",
+    "scope": "Preserve source-defined civilian/home statistical scope and historical matching/approximately comparable/uncertain classification. No inferred exact observation day or temporal persistence."
+  },
+  "metrics": {
+    "reviewed": 18,
+    "approved": 6,
+    "held": 12
+  },
+  "rows": [
+    {
+      "observationId": "nmc7-tpop-2-1878-united-states",
+      "originalObservationDigest": "b373404f937eca117265c228d55e083bcb749770dfefe695bdbb07543e34dc27",
+      "decision": "held",
+      "reason": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "UNCERTAIN_SCOPE",
+      "approvedMappedFields": null,
+      "verifiedSourceFields": {
+        "entityId": "united-states",
+        "category": "population",
+        "value": 48174000,
+        "unit": "persons",
+        "observationDate": "1878",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "UNCERTAIN_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of United States of America; No additional geographic note in supplemental population fields.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row64, stateabb=USA,ccode=2,year=1878,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+          "Source note literally: (empty)",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "united-states",
+        "entityRecordDigest": "9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265",
+        "names": [
+          {
+            "value": "United States",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United States of America",
+            "validFrom": "1789-03-04",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "existence": {
+          "validFrom": "1776-07-04",
+          "sourceIds": [
+            "archives-independence"
+          ],
+          "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+        },
+        "sourceYear": "1878",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": false,
+        "scopeRationale": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-2-1878-united-states",
+        "logicalRow": 64,
+        "originalRecordBytesSha256": "4965458a6e7ec6e534996e4f64203a5c43bb42c61a3fc49a73d8e6730dd354d8",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+      "sourceScopeMethodNoteLiteral": "",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-2-1880-united-states",
+      "originalObservationDigest": "7847bc4d51c0db4f5cecd71787cee79d64c60652ce66eae8ade73fa9877e0d33",
+      "decision": "held",
+      "reason": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "UNCERTAIN_SCOPE",
+      "approvedMappedFields": null,
+      "verifiedSourceFields": {
+        "entityId": "united-states",
+        "category": "population",
+        "value": 50262000,
+        "unit": "persons",
+        "observationDate": "1880",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "UNCERTAIN_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of United States of America; No additional geographic note in supplemental population fields.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row66, stateabb=USA,ccode=2,year=1880,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+          "Source note literally: (empty)",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "united-states",
+        "entityRecordDigest": "9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265",
+        "names": [
+          {
+            "value": "United States",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United States of America",
+            "validFrom": "1789-03-04",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "existence": {
+          "validFrom": "1776-07-04",
+          "sourceIds": [
+            "archives-independence"
+          ],
+          "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+        },
+        "sourceYear": "1880",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": false,
+        "scopeRationale": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-2-1880-united-states",
+        "logicalRow": 66,
+        "originalRecordBytesSha256": "9125281c07595b52a18bbbbff4447c11318e211d5ca5c8c1b6b9bcbfa3b7b298",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+      "sourceScopeMethodNoteLiteral": "",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-2-1900-united-states",
+      "originalObservationDigest": "2d3b4080edf769745fd600538e9a0473962da7f76adf29029a38365f572fe095",
+      "decision": "held",
+      "reason": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "UNCERTAIN_SCOPE",
+      "approvedMappedFields": null,
+      "verifiedSourceFields": {
+        "entityId": "united-states",
+        "category": "population",
+        "value": 76094000,
+        "unit": "persons",
+        "observationDate": "1900",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "UNCERTAIN_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of United States of America; No additional geographic note in supplemental population fields.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row86, stateabb=USA,ccode=2,year=1900,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+          "Source note literally: (empty)",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "united-states",
+        "entityRecordDigest": "9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265",
+        "names": [
+          {
+            "value": "United States",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United States of America",
+            "validFrom": "1789-03-04",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "existence": {
+          "validFrom": "1776-07-04",
+          "sourceIds": [
+            "archives-independence"
+          ],
+          "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+        },
+        "sourceYear": "1900",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": false,
+        "scopeRationale": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-2-1900-united-states",
+        "logicalRow": 86,
+        "originalRecordBytesSha256": "29e9dc3a22eaaa3976816b1e8e9be45fa51ec434e351f6d32e448321c132ba77",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+      "sourceScopeMethodNoteLiteral": "",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-2-1914-united-states",
+      "originalObservationDigest": "9af179d281a28ff9ea3335e202e2994039e6842197c22da26baab2acd8b0b7d0",
+      "decision": "held",
+      "reason": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "UNCERTAIN_SCOPE",
+      "approvedMappedFields": null,
+      "verifiedSourceFields": {
+        "entityId": "united-states",
+        "category": "population",
+        "value": 99111000,
+        "unit": "persons",
+        "observationDate": "1914",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "UNCERTAIN_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of United States of America; No additional geographic note in supplemental population fields.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row100, stateabb=USA,ccode=2,year=1914,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+          "Source note literally: (empty)",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "united-states",
+        "entityRecordDigest": "9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265",
+        "names": [
+          {
+            "value": "United States",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United States of America",
+            "validFrom": "1789-03-04",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "existence": {
+          "validFrom": "1776-07-04",
+          "sourceIds": [
+            "archives-independence"
+          ],
+          "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+        },
+        "sourceYear": "1914",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": false,
+        "scopeRationale": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-2-1914-united-states",
+        "logicalRow": 100,
+        "originalRecordBytesSha256": "566dbd62012c26dc76025f3ea38bd3003d13358fb20b14210173ed61540301dc",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+      "sourceScopeMethodNoteLiteral": "",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-2-1920-united-states",
+      "originalObservationDigest": "d049d8f6dfd1fa199b0a06762ce376f67813a4fea60bfe2c677d806f8e3cfe91",
+      "decision": "held",
+      "reason": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "UNCERTAIN_SCOPE",
+      "approvedMappedFields": null,
+      "verifiedSourceFields": {
+        "entityId": "united-states",
+        "category": "population",
+        "value": 106461000,
+        "unit": "persons",
+        "observationDate": "1920",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "UNCERTAIN_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of United States of America; No additional geographic note in supplemental population fields.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row106, stateabb=USA,ccode=2,year=1920,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+          "Source note literally: (empty)",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "united-states",
+        "entityRecordDigest": "9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265",
+        "names": [
+          {
+            "value": "United States",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United States of America",
+            "validFrom": "1789-03-04",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "existence": {
+          "validFrom": "1776-07-04",
+          "sourceIds": [
+            "archives-independence"
+          ],
+          "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+        },
+        "sourceYear": "1920",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": false,
+        "scopeRationale": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-2-1920-united-states",
+        "logicalRow": 106,
+        "originalRecordBytesSha256": "1d0ba2978f3b3f27953f49a43ed131b8391839d1b07a20cc4fe694f84fd412da",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+      "sourceScopeMethodNoteLiteral": "",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-2-1938-united-states",
+      "originalObservationDigest": "d2b9b7297307b5c090da483db4cb37667689b68eebe490460a97a897dfc1034b",
+      "decision": "held",
+      "reason": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "UNCERTAIN_SCOPE",
+      "approvedMappedFields": null,
+      "verifiedSourceFields": {
+        "entityId": "united-states",
+        "category": "population",
+        "value": 129969000,
+        "unit": "persons",
+        "observationDate": "1938",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "UNCERTAIN_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of United States of America; No additional geographic note in supplemental population fields.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row124, stateabb=USA,ccode=2,year=1938,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+          "Source note literally: (empty)",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "united-states",
+        "entityRecordDigest": "9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265",
+        "names": [
+          {
+            "value": "United States",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United States of America",
+            "validFrom": "1789-03-04",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "existence": {
+          "validFrom": "1776-07-04",
+          "sourceIds": [
+            "archives-independence"
+          ],
+          "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+        },
+        "sourceYear": "1938",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": false,
+        "scopeRationale": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-2-1938-united-states",
+        "logicalRow": 124,
+        "originalRecordBytesSha256": "95d385f1a5836b9f1d4202e068a2d8c545cba9dacf2acc4e36e141036e1a044e",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+      "sourceScopeMethodNoteLiteral": "",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-2-1945-united-states",
+      "originalObservationDigest": "edb54190e5e5ef1c5829adcbd1b3e7635c6dcacf7d5fc9c822aa3499e0d3d28b",
+      "decision": "held",
+      "reason": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "UNCERTAIN_SCOPE",
+      "approvedMappedFields": null,
+      "verifiedSourceFields": {
+        "entityId": "united-states",
+        "category": "population",
+        "value": 139928000,
+        "unit": "persons",
+        "observationDate": "1945",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "UNCERTAIN_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of United States of America; No additional geographic note in supplemental population fields.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row131, stateabb=USA,ccode=2,year=1945,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+          "Source note literally: (empty)",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "united-states",
+        "entityRecordDigest": "9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265",
+        "names": [
+          {
+            "value": "United States",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United States of America",
+            "validFrom": "1789-03-04",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "existence": {
+          "validFrom": "1776-07-04",
+          "sourceIds": [
+            "archives-independence"
+          ],
+          "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+        },
+        "sourceYear": "1945",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": false,
+        "scopeRationale": "Historical Statistics Part1 page8 quoted figure lacks territorial qualifier; Alaska/Hawaii/incorporated versus home territory treatment is unresolved. COW code and identity contract do not establish source geography."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-2-1945-united-states",
+        "logicalRow": 131,
+        "originalRecordBytesSha256": "7d7a34dd37c1078f8f24ef2c60093e61f32d15347e9e5a5d93d9a6dfa51cebdc",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "Historical Statistics of the United States:  Colonial Times to 1970 Part 1, Page 8",
+      "sourceScopeMethodNoteLiteral": "",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-2-1960-united-states",
+      "originalObservationDigest": "12741036fbc561b9a43a117b18595d0448d9b2a05d2ccc191ee9d26e654475b4",
+      "decision": "held",
+      "reason": "Explicit exclusion of overseas armed forces and long-absent civilian citizens is approximately comparable scope; not automatically full historical population.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "APPROXIMATELY_COMPARABLE_SCOPE",
+      "approvedMappedFields": null,
+      "verifiedSourceFields": {
+        "entityId": "united-states",
+        "category": "population",
+        "value": 180671000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "APPROXIMATELY_COMPARABLE_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of United States of America; De jure population.   Excluding armed forces overseas and civilian citizens absent from country for an extended period of time.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row146, stateabb=USA,ccode=2,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: De jure population.   Excluding armed forces overseas and civilian citizens absent from country for an extended period of time.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "united-states",
+        "entityRecordDigest": "9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265",
+        "names": [
+          {
+            "value": "United States",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United States of America",
+            "validFrom": "1789-03-04",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "existence": {
+          "validFrom": "1776-07-04",
+          "sourceIds": [
+            "archives-independence"
+          ],
+          "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+        },
+        "sourceYear": "1960",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": false,
+        "scopeRationale": "Explicit exclusion of overseas armed forces and long-absent civilian citizens is approximately comparable scope; not automatically full historical population."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-2-1960-united-states",
+        "logicalRow": 146,
+        "originalRecordBytesSha256": "66e91e2de57011bd080cbd173fe0c1dea818d25d4eda1e0a20383fc3c183fadd",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+      "sourceScopeMethodNoteLiteral": "De jure population.   Excluding armed forces overseas and civilian citizens absent from country for an extended period of time.",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-70-1960-mexico-1917-constitutional-framework",
+      "originalObservationDigest": "0363c2304d4fb78d03b864dfdc9f9b7721d91ea34452818523646122220b921f",
+      "decision": "source-and-mapping-approved",
+      "reason": "Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+      "approvedMappedFields": {
+        "entityId": "mexico-1917-constitutional-framework",
+        "category": "population",
+        "value": 36322000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Mexico; De jure population.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row1321, stateabb=MEX,ccode=70,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: De jure population.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "verifiedSourceFields": {
+        "entityId": "mexico-1917-constitutional-framework",
+        "category": "population",
+        "value": 36322000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Mexico; De jure population.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row1321, stateabb=MEX,ccode=70,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: De jure population.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "mexico-1917-constitutional-framework",
+        "entityRecordDigest": "c220cd988617fe6a263e81d3e1472d93ce7c981e18109565d0791d137e1787ce",
+        "names": [
+          {
+            "value": "Mexico — 1917 constitutional framework",
+            "validFrom": "1918-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b08-mexico-1917-exhibit",
+              "b08-mexico-loc-study"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "existence": {
+          "validFrom": "1918-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b08-mexico-1917-exhibit",
+            "b08-mexico-loc-study"
+          ],
+          "note": "Bounds delimit researched partial dossier coverage, not the full lifetime or exhaustive constitutional history."
+        },
+        "sourceYear": "1960",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": true,
+        "scopeRationale": "Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-70-1960-mexico-1917-constitutional-framework",
+        "logicalRow": 1321,
+        "originalRecordBytesSha256": "fb7eca6ecb802f781002b832faf1f6313e8ed4a578ebc9a2156bcd1f598ce4b1",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+      "sourceScopeMethodNoteLiteral": "De jure population.",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-100-1960-colombia-national-front-framework",
+      "originalObservationDigest": "e72e1259ccc50d1adc33affa47276c8b35203370c575a7b0bc6fa0b4882e581e",
+      "decision": "held",
+      "reason": "Retrospective UN2000 figure15416000 competes with contemporaneous independently reviewed1960 figure14132000; birth/burial administrative note does not reconcile population definition.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "UNCERTAIN_SCOPE",
+      "approvedMappedFields": null,
+      "verifiedSourceFields": {
+        "entityId": "colombia-national-front-framework",
+        "category": "population",
+        "value": 15416000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "UNCERTAIN_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Colombia; Prior to 1972, births based on baptisms recorded in Roman Catholic Church registers.   Deaths based on burial permits.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row2328, stateabb=COL,ccode=100,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: Prior to 1972, births based on baptisms recorded in Roman Catholic Church registers.   Deaths based on burial permits.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "colombia-national-front-framework",
+        "entityRecordDigest": "2839eebf84ba15a9e589c0d96ae9330e57aec6a5a2b357fb4fa710fb664e556b",
+        "names": [
+          {
+            "value": "Colombia — early National Front government",
+            "validFrom": "1959-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b09-colombia-front",
+              "b09-colombia-history"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "existence": {
+          "validFrom": "1959-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b09-colombia-front",
+            "b09-colombia-history"
+          ],
+          "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+        },
+        "sourceYear": "1960",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": false,
+        "scopeRationale": "Retrospective UN2000 figure15416000 competes with contemporaneous independently reviewed1960 figure14132000; birth/burial administrative note does not reconcile population definition."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-100-1960-colombia-national-front-framework",
+        "logicalRow": 2328,
+        "originalRecordBytesSha256": "a997213fda5eb2e6a67c9ca0c8c4b4b5e198344396d039852f402b063f84886e",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+      "sourceScopeMethodNoteLiteral": "Prior to 1972, births based on baptisms recorded in Roman Catholic Church registers.   Deaths based on burial permits.",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-155-1960-chile-restored-presidential-framework",
+      "originalObservationDigest": "18e7fef323734645e44da425a6f974eaf5238953ae2af746ec194cc4c39d5e2f",
+      "decision": "held",
+      "reason": "Retrospective UN2000 figure7614000 differs from contemporaneous provisional1960 figure7627000; preserve competing evidence for source/definition review.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "UNCERTAIN_SCOPE",
+      "approvedMappedFields": null,
+      "verifiedSourceFields": {
+        "entityId": "chile-restored-presidential-framework",
+        "category": "population",
+        "value": 7614000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "UNCERTAIN_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Chile; No additional geographic note in supplemental population fields.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row3700, stateabb=CHL,ccode=155,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: (empty)",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "chile-restored-presidential-framework",
+        "entityRecordDigest": "38d16e500fa7746df96798d1b3c7c573ee688e37b1b9e62272c7e78a14a594e3",
+        "names": [
+          {
+            "value": "Chile — restored presidential constitutional government",
+            "validFrom": "1933-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b09-chile-1925"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "existence": {
+          "validFrom": "1933-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b09-chile-1925"
+          ],
+          "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+        },
+        "sourceYear": "1960",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": false,
+        "scopeRationale": "Retrospective UN2000 figure7614000 differs from contemporaneous provisional1960 figure7627000; preserve competing evidence for source/definition review."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-155-1960-chile-restored-presidential-framework",
+        "logicalRow": 3700,
+        "originalRecordBytesSha256": "3af48b8a51facbb689eb1d52edff4941131bb4a165367996bbe8a3b9aefdeefb",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+      "sourceScopeMethodNoteLiteral": "",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-210-1960-netherlands-kingdom",
+      "originalObservationDigest": "8ec1b74a05323a2b4c2c8cbf92692de19727c83f364aab59d542c9dcc7c7fa36",
+      "decision": "source-and-mapping-approved",
+      "reason": "Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+      "approvedMappedFields": {
+        "entityId": "netherlands-kingdom",
+        "category": "population",
+        "value": 11480000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Netherlands; Metropolitan Netherlands core, not overseas Kingdom aggregate. De jure population.   Including residents outside the country if listed in a Netherlands population register.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row4534, stateabb=NTH,ccode=210,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: De jure population.   Including residents outside the country if listed in a Netherlands population register.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "verifiedSourceFields": {
+        "entityId": "netherlands-kingdom",
+        "category": "population",
+        "value": 11480000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Netherlands; Metropolitan Netherlands core, not overseas Kingdom aggregate. De jure population.   Including residents outside the country if listed in a Netherlands population register.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row4534, stateabb=NTH,ccode=210,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: De jure population.   Including residents outside the country if listed in a Netherlands population register.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "netherlands-kingdom",
+        "entityRecordDigest": "a374b79296683e88195a6ef9b40c153ca125e84b5950335b8eb190c708759445",
+        "names": [
+          {
+            "value": "Netherlands",
+            "validFrom": "1815-03-16",
+            "sourceIds": [
+              "b01-netherlands-monarchy"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "Kingdom of the Netherlands",
+            "validFrom": "1815-03-16",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-netherlands-monarchy"
+            ],
+            "confidence": "documented",
+            "kind": "formal",
+            "note": "Curated facts stop at the atlas limit; this is not an asserted end of the state, institution, office or currency."
+          }
+        ],
+        "existence": {
+          "validFrom": "1815-03-16",
+          "sourceIds": [
+            "b01-netherlands-monarchy",
+            "b01-nl-king-willem-i-1772-1843"
+          ],
+          "note": "Kingdom from 1815, distinct from the Batavian Republic, Kingdom of Holland and French annexation. Territorial changes are not inferred from geometric overlap."
+        },
+        "sourceYear": "1960",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": true,
+        "scopeRationale": "Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-210-1960-netherlands-kingdom",
+        "logicalRow": 4534,
+        "originalRecordBytesSha256": "eb5eeaf875f360512f84308733d91bf28f0ad0a213f181bbb7e42d80e33ed886",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+      "sourceScopeMethodNoteLiteral": "De jure population.   Including residents outside the country if listed in a Netherlands population register.",
+      "duplicateNote": "Same11480000 value/date as separately independently approved contemporaryDYB; deduplicate source claims/category slots during serial coordinator integration."
+    },
+    {
+      "observationId": "nmc7-tpop-211-1960-belgium-kingdom",
+      "originalObservationDigest": "d600e22d5f629f83c7ffdf863a38d114bb00ba3ee3f91dfe81c65c66ce97153d",
+      "decision": "source-and-mapping-approved",
+      "reason": "Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+      "approvedMappedFields": {
+        "entityId": "belgium-kingdom",
+        "category": "population",
+        "value": 9153000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Belgium; Belgian home territory, not Belgian Congo or former dependencies. No additional geographic note in supplemental population fields.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row4723, stateabb=BEL,ccode=211,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: (empty)",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "verifiedSourceFields": {
+        "entityId": "belgium-kingdom",
+        "category": "population",
+        "value": 9153000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Belgium; Belgian home territory, not Belgian Congo or former dependencies. No additional geographic note in supplemental population fields.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row4723, stateabb=BEL,ccode=211,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: (empty)",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "belgium-kingdom",
+        "entityRecordDigest": "b69b442efa88b2ca2e998fb952399eb4f07dc73104ad881949745a1786cd1657",
+        "names": [
+          {
+            "value": "Belgium",
+            "validFrom": "1830",
+            "sourceIds": [
+              "b01-belgian-monarchy"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "existence": {
+          "validFrom": "1830",
+          "sourceIds": [
+            "b01-belgian-monarchy"
+          ],
+          "note": "Independent Belgian framework from 1830; constitutional monarchy from 1831. Independence, constitution and first royal oath are separate dates."
+        },
+        "sourceYear": "1960",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": true,
+        "scopeRationale": "Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-211-1960-belgium-kingdom",
+        "logicalRow": 4723,
+        "originalRecordBytesSha256": "08b17eaa6b7eefdc3e8f08198739726a51f2502fc62f66fa66438c74cafb9b7d",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+      "sourceScopeMethodNoteLiteral": "",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-390-1960-denmark-post-kiel",
+      "originalObservationDigest": "e5e37e79501425bc4d7c25268759fd60421ccfbc7aab08bbfe741aa803ad0117",
+      "decision": "source-and-mapping-approved",
+      "reason": "Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+      "approvedMappedFields": {
+        "entityId": "denmark-post-kiel",
+        "category": "population",
+        "value": 4581000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Denmark; Denmark core excluding Greenland/Faeroes. Excluding the Faeroe Islands and Greenland.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row9458, stateabb=DEN,ccode=390,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: Excluding the Faeroe Islands and Greenland.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "verifiedSourceFields": {
+        "entityId": "denmark-post-kiel",
+        "category": "population",
+        "value": 4581000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Denmark; Denmark core excluding Greenland/Faeroes. Excluding the Faeroe Islands and Greenland.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row9458, stateabb=DEN,ccode=390,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: Excluding the Faeroe Islands and Greenland.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "denmark-post-kiel",
+        "entityRecordDigest": "7df4e1699efec0983edf47a431fcf5bd60e2e9e797062f8f0416e799ac05b325",
+        "names": [
+          {
+            "value": "Denmark",
+            "validFrom": "1814-01-14",
+            "sourceIds": [
+              "b01-norway-democracy",
+              "b01-denmark-monarchy"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "existence": {
+          "validFrom": "1814-01-14",
+          "sourceIds": [
+            "b01-norway-democracy",
+            "b01-denmark-monarchy"
+          ],
+          "note": "Curated Danish kingdom after separation of Norway, not the beginning of Denmark as a kingdom."
+        },
+        "sourceYear": "1960",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": true,
+        "scopeRationale": "Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-390-1960-denmark-post-kiel",
+        "logicalRow": 9458,
+        "originalRecordBytesSha256": "7ca9ae156627541ee32407f2e22fecf2a87b52fb4459eadba6edeb5f7edd7b2a",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+      "sourceScopeMethodNoteLiteral": "Excluding the Faeroe Islands and Greenland.",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-395-1960-iceland-sovereign",
+      "originalObservationDigest": "d9f78cd9c47537fab1fb4522a662ead0c193df409d517e8a726ae12ef15b4cbe",
+      "decision": "source-and-mapping-approved",
+      "reason": "Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+      "approvedMappedFields": {
+        "entityId": "iceland-sovereign",
+        "category": "population",
+        "value": 176000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Iceland; De jure population.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row9537, stateabb=ICE,ccode=395,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: De jure population.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "verifiedSourceFields": {
+        "entityId": "iceland-sovereign",
+        "category": "population",
+        "value": 176000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Iceland; De jure population.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row9537, stateabb=ICE,ccode=395,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: De jure population.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "iceland-sovereign",
+        "entityRecordDigest": "99d62b6db9a2277b56146e0ea3d983c61583e9c136fe80724b8f4de922942231",
+        "names": [
+          {
+            "value": "Iceland",
+            "validFrom": "1918-12-01",
+            "sourceIds": [
+              "b01-iceland-sovereignty",
+              "b01-sveinn-bjornsson"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "Kingdom of Iceland",
+            "validFrom": "1918-12-01",
+            "validUntil": "1944-06-17",
+            "sourceIds": [
+              "b01-iceland-sovereignty"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          },
+          {
+            "value": "Republic of Iceland",
+            "validFrom": "1944-06-17",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b01-sveinn-bjornsson"
+            ],
+            "confidence": "documented",
+            "kind": "formal",
+            "note": "Curated facts stop at the atlas limit; this is not an asserted end of the state, institution, office or currency."
+          }
+        ],
+        "existence": {
+          "validFrom": "1918-12-01",
+          "sourceIds": [
+            "b01-iceland-sovereignty",
+            "b01-sveinn-bjornsson"
+          ],
+          "note": "Sovereign kingdom in personal union with Denmark, followed by the republic in 1944; distinct from the dependent Danish administration."
+        },
+        "sourceYear": "1960",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": true,
+        "scopeRationale": "Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-395-1960-iceland-sovereign",
+        "logicalRow": 9537,
+        "originalRecordBytesSha256": "ef7cf6e99e251db0f92224462c85c7cd3cf841d997cd11ceeb9bf43aeff48cf7",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+      "sourceScopeMethodNoteLiteral": "De jure population.",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-640-1938-turkey-1937-constitutional-framework",
+      "originalObservationDigest": "60d45ada201e2665101577b84e0f552906053488fc71d7e777922bead85225e5",
+      "decision": "held",
+      "reason": "1938 is before Hatay1939 territorial addition; vague Statistical Indicators1923–1991 bibliography and blank note do not establish whether figure uses actual1938 boundaries or later retrospective geography.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "UNCERTAIN_SCOPE",
+      "approvedMappedFields": null,
+      "verifiedSourceFields": {
+        "entityId": "turkey-1937-constitutional-framework",
+        "category": "population",
+        "value": 16926000,
+        "unit": "persons",
+        "observationDate": "1938",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "UNCERTAIN_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Turkey; No additional geographic note in supplemental population fields.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row13215, stateabb=TUR,ccode=640,year=1938,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: Part of the Statisitcal Indicators 1923-1991.",
+          "Source note literally: (empty)",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "turkey-1937-constitutional-framework",
+        "entityRecordDigest": "9c6e454b2311f403058b7d8d181f7df7e72e491dccef874eb22c27cb2e226b5b",
+        "names": [
+          {
+            "value": "Turkey — 1937 constitutional principles",
+            "validFrom": "1937-02-05",
+            "validUntil": "1960-05-27",
+            "sourceIds": [
+              "b12-turkish-parliament-history"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "existence": {
+          "validFrom": "1937-02-05",
+          "validUntil": "1960-05-27",
+          "sourceIds": [
+            "b12-turkish-parliament-history"
+          ],
+          "note": "Editorial partial coverage bounds, not full lifetime or exhaustive institutional history."
+        },
+        "sourceYear": "1938",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": false,
+        "scopeRationale": "1938 is before Hatay1939 territorial addition; vague Statistical Indicators1923–1991 bibliography and blank note do not establish whether figure uses actual1938 boundaries or later retrospective geography."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-640-1938-turkey-1937-constitutional-framework",
+        "logicalRow": 13215,
+        "originalRecordBytesSha256": "3c2b24198c9c66ae910fead7f4a23333f437d945389730fd12cc7ff958c347ba",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "Part of the Statisitcal Indicators 1923-1991.",
+      "sourceScopeMethodNoteLiteral": "",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-780-1960-ceylon-independent-parliamentary-framework",
+      "originalObservationDigest": "d2e199dd47814264f8089b208c334fab57d29855833325cb8d9b4c55d989c6d2",
+      "decision": "source-and-mapping-approved",
+      "reason": "Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+      "approvedMappedFields": {
+        "entityId": "ceylon-independent-parliamentary-framework",
+        "category": "population",
+        "value": 9889000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Sri Lanka; UN estimate.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row15568, stateabb=SRI,ccode=780,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: UN estimate.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "verifiedSourceFields": {
+        "entityId": "ceylon-independent-parliamentary-framework",
+        "category": "population",
+        "value": 9889000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "HISTORICALLY_MATCHING_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Sri Lanka; UN estimate.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row15568, stateabb=SRI,ccode=780,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: UN estimate.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "ceylon-independent-parliamentary-framework",
+        "entityRecordDigest": "a1d6abe770770c76dad7a3f8a8109fbf99a0b9c445774b120132d53fdba5d988",
+        "names": [
+          {
+            "value": "Ceylon — independent parliamentary framework",
+            "validFrom": "1948-02-04",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b07-ceylon-independence",
+              "b07-ceylon-parliament"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "existence": {
+          "validFrom": "1948-02-04",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b07-ceylon-independence",
+            "b07-ceylon-parliament"
+          ],
+          "note": "Bounds delimit researched dossier coverage, not the full lifetime of a state or administration."
+        },
+        "sourceYear": "1960",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": true,
+        "scopeRationale": "Contemporary1960 country-core identity matches existing historical framework; source-defined civilian/home population retained with exact note. No map polygon or empire aggregation asserted."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-780-1960-ceylon-independent-parliamentary-framework",
+        "logicalRow": 15568,
+        "originalRecordBytesSha256": "a53e0240ed40985ca2a2a78faec3321bab75cbb8cbd71217e4e509c315c046a2",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+      "sourceScopeMethodNoteLiteral": "UN estimate.",
+      "duplicateNote": null
+    },
+    {
+      "observationId": "nmc7-tpop-900-1960-australia-postadoption-federal-core",
+      "originalObservationDigest": "889139513a61ccb177ea361846cef3e1af0e9d6e3d0d88e2ccad4f779ce6c3ac",
+      "decision": "held",
+      "reason": "Explicit exclusion of full-blooded Aboriginal population makes scope approximately comparable; held.",
+      "sourceValueDateVerified": true,
+      "statisticalComparability": "APPROXIMATELY_COMPARABLE_SCOPE",
+      "approvedMappedFields": null,
+      "verifiedSourceFields": {
+        "entityId": "australia-postadoption-federal-core",
+        "category": "population",
+        "value": 10275000,
+        "unit": "persons",
+        "observationDate": "1960",
+        "observationPrecision": "year",
+        "observationType": "source-coded annual population estimate",
+        "statisticalComparability": "APPROXIMATELY_COMPARABLE_SCOPE",
+        "scope": "COW NMC source-coded civilian/home population of Australia; Prior to 1967, excluding full-blooded aborigines estimated at 40 081 in June 1961 and 49 036 in June 1966.",
+        "sourceId": "cow-nmc7-total-population",
+        "locator": "NMC70 supplementary CSV logical row16534, stateabb=AUL,ccode=900,year=1960,tpop/tpopsource/tpopnote/tpopqualitycode/tpopanomalycode",
+        "sourceBodyHash": "b42998f249c01c32c22fcdeb26d44022b6f18e5ffa8f286be9b8c8b4ef804b18",
+        "qualifications": [
+          "Annual source-coded population observation; never asserted census or exact date.",
+          "Units originally thousands; multiply1000 without asserting additional headcount precision.",
+          "QualityA: Value from identified source; not necessarily a census; anomalyA: No anomaly under2percent change.",
+          "Bibliography literally: United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+          "Source note literally: Prior to 1967, excluding full-blooded aborigines estimated at 40 081 in June 1961 and 49 036 in June 1966.",
+          "COW codebook printed31/33: civilian/home scope, de facto preferred but de jure also used; historical boundary corrections attempted and residual uncertainty acknowledged.",
+          "Academic coding qualification; no inference from polygon geometry or state-code equality."
+        ]
+      },
+      "mappingReceipt": {
+        "entityId": "australia-postadoption-federal-core",
+        "entityRecordDigest": "8409f253eff34a9cf84d2ba2c8e772857c471e000e1c3f255e3933b3ab368493",
+        "names": [
+          {
+            "value": "Australia — federal constitutional framework after Westminster adoption",
+            "validFrom": "1945-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b21-australian-federation",
+              "b21-australian-first-parliament",
+              "b21-australia-westminster-primary"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "existence": {
+          "validFrom": "1945-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b21-australian-federation",
+            "b21-australian-first-parliament",
+            "b21-australia-westminster-primary"
+          ],
+          "note": "Editorial partial coverage, not full political lifetime; exclusive endpoints are coverage bounds."
+        },
+        "sourceYear": "1960",
+        "identityBridgeUsedOnlyForIdentity": true,
+        "territorialMatchApproval": false,
+        "scopeRationale": "Explicit exclusion of full-blooded Aboriginal population makes scope approximately comparable; held."
+      },
+      "sourceCheck": {
+        "id": "nmc7-tpop-900-1960-australia-postadoption-federal-core",
+        "logicalRow": 16534,
+        "originalRecordBytesSha256": "f7eb0e364d770b6d11f1ff12c98d781cb7875cee237a8cf6bd60d9d1174e037c",
+        "fullOriginalSupplementalRowVerified": true,
+        "valueUnitDateSourceNoteQualityVerified": true
+      },
+      "sourceBibliographyLiteral": "United Nations, Demographic Yearbook, Historical Supplement computer file, 2000.",
+      "sourceScopeMethodNoteLiteral": "Prior to 1967, excluding full-blooded aborigines estimated at 40 081 in June 1961 and 49 036 in June 1966.",
+      "duplicateNote": null
+    }
+  ]
+}

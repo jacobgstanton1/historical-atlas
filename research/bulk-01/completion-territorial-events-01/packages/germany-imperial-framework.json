@@ -1,0 +1,272 @@
+{
+  "job": {
+    "id": "dossier-36768c0953557dbd13d3c51b",
+    "entityId": "germany-imperial-framework",
+    "period": {
+      "from": "1899-11",
+      "until": "1899-11"
+    },
+    "mapIds": [
+      "entity-german-empire",
+      "entity-germany"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "38cd6793e2a95fe253a753ce3625bfca50e319e08621183bab06a961a5f81a77",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-territorial-events-01-germany-imperial-framework",
+    "jobId": "dossier-36768c0953557dbd13d3c51b",
+    "entityId": "germany-imperial-framework",
+    "mapIds": [
+      "entity-german-empire",
+      "entity-germany"
+    ],
+    "worker": {
+      "id": "bulk-parser/territorial-events/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "38cd6793e2a95fe253a753ce3625bfca50e319e08621183bab06a961a5f81a77",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1899-11",
+      "until": "1899-11"
+    },
+    "claims": [
+      {
+        "id": "bulk-1693233f03155b5cd47f9b8e-d9539e1014",
+        "category": "events-context",
+        "value": "COW territorial-change record381 codes Germany as the losing-side participant in a cession record concerning part of catalogue-labelled German Togoland, dated 1899-11.",
+        "entityId": "germany-imperial-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1899-11",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "germany-imperial-framework-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow340/change381",
+            "note": "{\"original\":{\"id\":\"cow-tc-381-loser-germany-imperial-framework\",\"category\":\"events-context\",\"eventDate\":\"1899-11\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"germany-imperial-framework\",\"side\":\"loser\",\"sourceChangeNumber\":\"381\",\"sourceCSVLine\":341,\"sourceRowIndex\":339,\"rawRow\":{\"year\":\"1899\",\"month\":\"11\",\"gainer\":\"200\",\"gaintype\":\"0\",\"procedur\":\"3\",\"entity\":\"460\",\"contgain\":\"0\",\"area\":\"1.00\",\"pop\":\".\",\"portion\":\"0\",\"loser\":\"255\",\"losetype\":\"0\",\"contlose\":\"0\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"381\",\"indep\":\"0\",\"conflict\":\"0\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow340/change381\",\"sourceProcedure\":\"cession\",\"sourceParticipantCode\":\"255\",\"rawCatalogueLines\":{\"participant\":[\"255 Germany/Prussia 1945 1990 Became part of 260\"],\"exchanged\":[\"460 German Togoland 1884 1916 Became colony of 255\",\"460 German Togoland 1916 1922 Occupied by 200\",\"460 German Togoland 1922 1993 Became part of 461\",\"460 German Togoland 1922 1956 Became part of 462\"],\"other\":[]},\"mappingProposals\":[{\"id\":\"archigos-GMY-germany-imperial-framework-1875-01-01\",\"sourceCountryCode\":\"GMY\",\"entityId\":\"germany-imperial-framework\",\"from\":\"1875-01-01\",\"until\":\"1918-11-09\",\"sourceCountryLocator\":\"Archigos v4.1 case descriptions, printed p.377 (PDF page 383)\",\"existingIdentity\":{\"name\":\"German Empire\",\"validFrom\":\"1871\",\"validUntil\":\"1918-11-09\",\"sourceIds\":[\"b03-german-imperial\"]},\"rationale\":\"Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.\",\"qualifications\":[\"Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.\",\"Country coding is not evidence of sovereignty of every map polygon.\",\"Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.\",\"Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics.\"],\"role\":\"Effective political leader (Archigos coding)\",\"status\":\"approved-mapping-contract\",\"reviewer\":\"scale-flags-independent-archigos\",\"cowCode\":\"255\",\"origin\":\"Existing reviewed framework identity; NEW COW namespace bridge requires review\"}],\"prioritySlots\":[{\"entityId\":\"germany-imperial-framework\",\"snapshotYear\":1900,\"status\":\"missing\",\"actualEventDate\":\"1899-11\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":1}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-381-loser-germany-imperial-framework\",\"originalEventDigest\":\"ed04f742e6b238b8025ba69d1788098dc337341e5118a566e4c82c229f4de89b\",\"originalCsvRowDigest\":\"78f2aa3f4c49c223628f6ac1457fdbb7b1a15484d4be1a411198f6a5fbefee7d\",\"sourceDate\":\"1899-11\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"germany-imperial-framework\",\"category\":\"events\",\"eventDate\":\"1899-11\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record381 codes Germany as the losing-side participant in a cession record concerning part of catalogue-labelled German Togoland, dated 1899-11.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow340/change381\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"381\",\"sourceParticipantCode\":\"255\",\"sourceSide\":\"loser\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"460\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"germany-imperial-framework\",\"category\":\"events\",\"eventDate\":\"1899-11\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record381 codes Germany as the losing-side participant in a cession record concerning part of catalogue-labelled German Togoland, dated 1899-11.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow340/change381\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"381\",\"sourceParticipantCode\":\"255\",\"sourceSide\":\"loser\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"460\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-381-loser-germany-imperial-framework\",\"sourceRowIndex\":339,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"cba21eaedadccf99792b079c867bbf4ca45d1a2b3d9d0552f1de8195ea9048e8\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"germany-imperial-framework\",\"entityRecordDigest\":\"9573b4f6619f2199572b868d6977855b89d534346b226009be8df095940b76cf\",\"names\":[{\"value\":\"German Empire\",\"validFrom\":\"1871\",\"validUntil\":\"1918-11-09\",\"sourceIds\":[\"b03-german-imperial\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existence\":{\"validFrom\":\"1871\",\"validUntil\":\"1918-11-09\",\"sourceIds\":[\"b03-german-imperial\"],\"note\":\"Bounds delimit curated coverage; they do not by themselves establish the full lifetime of a state or administration.\"},\"participantCode\":\"255\",\"namespaceOriginalCatalogueLines\":[\"255 Germany/Prussia 1945 1990 Became part of 260\"],\"independentCowNamespaceLabels\":[\"Germany\",\"Prussia\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[\"255 Germany/Prussia 1945 1990 Became part of 260\"],\"exchanged\":[\"460 German Togoland 1884 1916 Became colony of 255\",\"460 German Togoland 1916 1922 Occupied by 200\",\"460 German Togoland 1922 1993 Became part of 461\",\"460 German Togoland 1922 1956 Became part of 462\"],\"other\":[]},\"independentCatalogueCorrection\":null,\"snapshotContextReview\":[{\"entityId\":\"germany-imperial-framework\",\"snapshotYear\":1900,\"status\":\"missing\",\"actualEventDate\":\"1899-11\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":1,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1899-11",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-1693233f03155b5cd47f9b8e",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow340/change381"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:24:30.157Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "58672f0fffe3af975beeac60bc2a4ed02871100b2e8365e37044348cad54ede0",
+        "d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "9b6a87e7829cb271685cf3d330abf67a1a9e69fcc7fdd0079c9500718aa338d6",
+    "productionFingerprint": "38cd6793e2a95fe253a753ce3625bfca50e319e08621183bab06a961a5f81a77",
+    "jobId": "dossier-36768c0953557dbd13d3c51b",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "9b6a87e7829cb271685cf3d330abf67a1a9e69fcc7fdd0079c9500718aa338d6",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent of territorial-events extractor; contract d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2; adapter territorial-events/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-1693233f03155b5cd47f9b8e-d9539e1014": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-1693233f03155b5cd47f9b8e-d9539e1014"
+    ]
+  }
+}

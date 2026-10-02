@@ -1,0 +1,270 @@
+{
+  "job": {
+    "id": "dossier-1e9a27a703b3df328710f116",
+    "entityId": "australia-postadoption-federal-core",
+    "period": {
+      "from": "1955-11",
+      "until": "1955-11"
+    },
+    "mapIds": [
+      "entity-australia"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "b3102c440574793f2a1066a86c8348be27f12f2eab77d645c6e18ac8c003c698",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-territorial-events-01-australia-postadoption-federal-core",
+    "jobId": "dossier-1e9a27a703b3df328710f116",
+    "entityId": "australia-postadoption-federal-core",
+    "mapIds": [
+      "entity-australia"
+    ],
+    "worker": {
+      "id": "bulk-parser/territorial-events/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "b3102c440574793f2a1066a86c8348be27f12f2eab77d645c6e18ac8c003c698",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1955-11",
+      "until": "1955-11"
+    },
+    "claims": [
+      {
+        "id": "bulk-c554329ceac32d4eeb125693-75bacbdb2b",
+        "category": "events-context",
+        "value": "COW territorial-change record668 codes Australia as the gaining-side participant in a cession record concerning catalogue-labelled Cocos (Keeling) Is., dated 1955-11.",
+        "entityId": "australia-postadoption-federal-core",
+        "temporal": {
+          "kind": "event",
+          "date": "1955-11",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "australia-postadoption-federal-core-completion-territorial-events-01",
+          "description": "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-territorial-change-v6",
+            "locator": "tc2018.csv/headerline1/datarow619/change668",
+            "note": "{\"original\":{\"id\":\"cow-tc-668-gainer-australia-postadoption-federal-core\",\"category\":\"events-context\",\"eventDate\":\"1955-11\",\"eventPrecision\":\"month\",\"entityIdSuggested\":\"australia-postadoption-federal-core\",\"side\":\"gainer\",\"sourceChangeNumber\":\"668\",\"sourceCSVLine\":620,\"sourceRowIndex\":618,\"rawRow\":{\"year\":\"1955\",\"month\":\"11\",\"gainer\":\"900\",\"gaintype\":\"0\",\"procedur\":\"3\",\"entity\":\"9002\",\"contgain\":\"0\",\"area\":\"14.00\",\"pop\":\"500\",\"portion\":\"1\",\"loser\":\"200\",\"losetype\":\"0\",\"contlose\":\"0\",\"entry\":\"0\",\"exit\":\"0\",\"number\":\"668\",\"indep\":\"0\",\"conflict\":\"0\",\"version\":\"5\"},\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceLocator\":\"tc2018.csv/headerline1/datarow619/change668\",\"sourceProcedure\":\"cession\",\"sourceParticipantCode\":\"900\",\"rawCatalogueLines\":{\"participant\":[\"900 Australia 1825 1901 Became part of 906\",\"900 Australia 1829 1901 Became part of 902\",\"900 Australia 1836 1901 Became part of 903\",\"900 Australia 1851 1901 Became part of 904\",\"900 Australia 1859 1901 Became part of 905\",\"900 Australia 1901 1919 Became colony of 200\"],\"exchanged\":[\"9002 Cocos (Keeling) Is. 1857 1878 Became possession of 200\",\"9002 Cocos (Keeling) Is. 1878 1882 Became part of 780\",\"9002 Cocos (Keeling) Is. 1882 1942 Became part of 827\",\"9002 Cocos (Keeling) Is. 1942 1946 Became part of 780\",\"9002 Cocos (Keeling) Is. 1946 1955 Became part of 830\",\"9002 Cocos (Keeling) Is. 1955 1993 Became possession of 900\"],\"other\":[]},\"mappingProposals\":[{\"id\":\"archigos-AUL-australia-postadoption-federal-core-1945-01-01\",\"sourceCountryCode\":\"AUL\",\"entityId\":\"australia-postadoption-federal-core\",\"from\":\"1945-01-01\",\"until\":\"1961-01-01\",\"sourceCountryLocator\":\"Archigos v4.1 case descriptions, printed p.847 (PDF page 853)\",\"existingIdentity\":{\"name\":\"Australia — federal constitutional framework after Westminster adoption\",\"validFrom\":\"1945-01-01\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"b21-australian-federation\",\"b21-australian-first-parliament\",\"b21-australia-westminster-primary\"]},\"rationale\":\"Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.\",\"qualifications\":[\"Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.\",\"Country coding is not evidence of sovereignty of every map polygon.\",\"Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.\",\"Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics.\"],\"role\":\"Effective political leader (Archigos coding)\",\"status\":\"approved-mapping-contract\",\"reviewer\":\"scale-flags-independent-archigos\",\"cowCode\":\"900\",\"origin\":\"Existing reviewed framework identity; NEW COW namespace bridge requires review\"}],\"prioritySlots\":[{\"entityId\":\"australia-postadoption-federal-core\",\"snapshotYear\":1960,\"status\":\"missing\",\"actualEventDate\":\"1955-11\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":5}],\"reviewIssues\":[],\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts.\",\"status\":\"historical-review\"},\"independentSourceReview\":{\"eventId\":\"cow-tc-668-gainer-australia-postadoption-federal-core\",\"originalEventDigest\":\"c9df351cf5f47d3e34d50d0f857eea9f64d89cba046d3c87cf8c6bacae3ef877\",\"originalCsvRowDigest\":\"87986fd252df1116aa9a87ae1b831391f2fd5c525d6c51c1e909e046a74a00b2\",\"sourceDate\":\"1955-11\",\"sourceDatePrecision\":\"month\",\"sourceValueDateProcedureApproved\":true,\"sourceIdentityApproval\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal original row/date/procedure and existing sourced bounded framework independently reviewed. Approval is limited to source-coded participant event with mandatory coding-proxy qualification.\",\"approvedMappedFields\":{\"entityId\":\"australia-postadoption-federal-core\",\"category\":\"events\",\"eventDate\":\"1955-11\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record668 codes Australia as the gaining-side participant in a cession record concerning catalogue-labelled Cocos (Keeling) Is., dated 1955-11.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow619/change668\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"668\",\"sourceParticipantCode\":\"900\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"9002\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"verifiedSourceFields\":{\"entityId\":\"australia-postadoption-federal-core\",\"category\":\"events\",\"eventDate\":\"1955-11\",\"eventPrecision\":\"month\",\"eventKind\":\"academic-coded-territorial-change\",\"value\":\"COW territorial-change record668 codes Australia as the gaining-side participant in a cession record concerning catalogue-labelled Cocos (Keeling) Is., dated 1955-11.\",\"sourceId\":\"cow-territorial-change-v6\",\"locator\":\"tc2018.csv/headerline1/datarow619/change668\",\"sourceBodyHash\":\"6ed3f92f2ad05122b3541f5dc8b34529d49d73bf563ef58d51045839472220a2\",\"sourceChangeNumber\":\"668\",\"sourceParticipantCode\":\"900\",\"sourceSide\":\"gainer\",\"sourceProcedure\":\"cession\",\"sourceExchangedUnitCode\":\"9002\",\"scope\":\"Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry.\",\"qualification\":\"Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.\"},\"sourceCheck\":{\"eventId\":\"cow-tc-668-gainer-australia-postadoption-federal-core\",\"sourceRowIndex\":618,\"fullOriginalRowVerified\":true,\"originalRowBytesSha256\":\"9bcb9ca129f100f13cd320a733dd88f1e8f515472751f2d6c107164bd5a45607\",\"datePrecisionVerified\":true,\"sideCodeVerified\":true},\"mapping\":{\"entityId\":\"australia-postadoption-federal-core\",\"entityRecordDigest\":\"8409f253eff34a9cf84d2ba2c8e772857c471e000e1c3f255e3933b3ab368493\",\"names\":[{\"value\":\"Australia — federal constitutional framework after Westminster adoption\",\"validFrom\":\"1945-01-01\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"b21-australian-federation\",\"b21-australian-first-parliament\",\"b21-australia-westminster-primary\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existence\":{\"validFrom\":\"1945-01-01\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"b21-australian-federation\",\"b21-australian-first-parliament\",\"b21-australia-westminster-primary\"],\"note\":\"Editorial partial coverage, not full political lifetime; exclusive endpoints are coverage bounds.\"},\"participantCode\":\"900\",\"namespaceOriginalCatalogueLines\":[\"900 Australia 1825 1901 Became part of 906\",\"900 Australia 1829 1901 Became part of 902\",\"900 Australia 1836 1901 Became part of 903\",\"900 Australia 1851 1901 Became part of 904\",\"900 Australia 1859 1901 Became part of 905\",\"900 Australia 1901 1919 Became colony of 200\"],\"independentCowNamespaceLabels\":[\"Australia\"],\"namespaceCrosscheckUse\":\"Previous independently reviewed COW original war CSV used only to corroborate COW code/name namespace, never as territorial event evidence.\",\"literalCountryFrameworkBounded\":true,\"noGeometryOrStatusSuccessionInference\":true},\"originalCatalogueEvidence\":{\"participant\":[\"900 Australia 1825 1901 Became part of 906\",\"900 Australia 1829 1901 Became part of 902\",\"900 Australia 1836 1901 Became part of 903\",\"900 Australia 1851 1901 Became part of 904\",\"900 Australia 1859 1901 Became part of 905\",\"900 Australia 1901 1919 Became colony of 200\"],\"exchanged\":[\"9002 Cocos (Keeling) Is. 1857 1878 Became possession of 200\",\"9002 Cocos (Keeling) Is. 1878 1882 Became part of 780\",\"9002 Cocos (Keeling) Is. 1882 1942 Became part of 827\",\"9002 Cocos (Keeling) Is. 1942 1946 Became part of 780\",\"9002 Cocos (Keeling) Is. 1946 1955 Became part of 830\",\"9002 Cocos (Keeling) Is. 1955 1993 Became possession of 900\"],\"other\":[]},\"independentCatalogueCorrection\":null,\"snapshotContextReview\":[{\"entityId\":\"australia-postadoption-federal-core\",\"snapshotYear\":1960,\"status\":\"missing\",\"actualEventDate\":\"1955-11\",\"context\":\"explicitly dated prior context\",\"contextAgeYears\":5,\"actualDatePreserved\":true,\"priorContextNotRetimed\":true}]}}; Original cached CSV independently parsed: all842 rows match extraction; all27 selected source rows, dates/precision, participant sides/procedures verified. Original manual PDFpp1–4/6–8 and entity catalogue examined. Framework names/existence reviewed; previous original COW namespace code/name evidence crosschecked only for identity. No production/source edit or new download.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1955-11",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Academic source-coded territorial-change record. Month/year retains original precision and coding conventions (treaty/proclamation/final campaign year). Does not establish legal sovereignty, predecessor/successor relationship or exactday. Exchanged area/population/geometry fields are provenance only and not proposed facts. Coding manualpp2–3: date may be treaty, cessation of action, plebiscite, annexation act, proclamation, or final campaign year. Catalogued names may be later composite labels, not asserted contemporary place names. Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Archive advertisedv6; literal CSV version column is5; accompanying manual describes1816–2008 and v4.01. Preserve this documentation mismatch.",
+          "Actual source date retained at reported precision, not rewritten as the selected snapshot date.",
+          "Academic source-coded participant/procedure/date only; country framework identity does not establish ownership of exchanged unit, sovereignty, succession or polygon geometry."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-c554329ceac32d4eeb125693",
+          "sourceIdentifier": "tc2018.csv/headerline1/datarow619/change668"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-territorial-change-v6"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:25:00.331Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "58672f0fffe3af975beeac60bc2a4ed02871100b2e8365e37044348cad54ede0",
+        "d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "72dc1ddbe658cfb424f047bf9a546c71996b94eb95771472c542b4e8c0609f73",
+    "productionFingerprint": "b3102c440574793f2a1066a86c8348be27f12f2eab77d645c6e18ac8c003c698",
+    "jobId": "dossier-1e9a27a703b3df328710f116",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "72dc1ddbe658cfb424f047bf9a546c71996b94eb95771472c542b4e8c0609f73",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent of territorial-events extractor; contract d03ee80fe64483f365b2d3512cfcbe05bb2a86d9e9140ebf2ef07e4b8e1a8ed2; adapter territorial-events/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-c554329ceac32d4eeb125693-75bacbdb2b": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-c554329ceac32d4eeb125693-75bacbdb2b"
+    ]
+  }
+}
