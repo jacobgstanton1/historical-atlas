@@ -1,0 +1,272 @@
+{
+  "job": {
+    "id": "dossier-5ba1ec793933d8ec1274e8e4",
+    "entityId": "swiss-federal-state",
+    "period": {
+      "from": "1960-12-01",
+      "until": "1960-12-02"
+    },
+    "mapIds": [
+      "entity-switzerland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "38bcc2d1169d32d8cebfa4940fcfdc57c0fb0b331a3664ada6dcf9d3e1030ae8",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "UN-population-1960-swiss-federal-state",
+    "jobId": "dossier-5ba1ec793933d8ec1274e8e4",
+    "entityId": "swiss-federal-state",
+    "mapIds": [
+      "entity-switzerland"
+    ],
+    "worker": {
+      "id": "bulk-parser/historical-scope-population-observation/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "38bcc2d1169d32d8cebfa4940fcfdc57c0fb0b331a3664ada6dcf9d3e1030ae8",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1960-12-01",
+      "until": "1960-12-02"
+    },
+    "claims": [
+      {
+        "id": "bulk-e978fc63d40785d01459f8fe-291130e172",
+        "category": "population-statistics",
+        "value": 5411000,
+        "entityId": "swiss-federal-state",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960-12-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "swiss-federal-state-UN-1960-population",
+          "description": "Second series de-jure population (footnote2); first series de-facto observations not mixed. Existing valid1960 mapping must be resolved before acceptance.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "un-demographic-yearbook1960-table4",
+            "locator": "Table6/printed281/Switzerland/1960-12-01",
+            "note": "{\"original\":{\"id\":\"dyb1960-t6-switzerland\",\"category\":\"population\",\"countryLabel\":\"Switzerland\",\"entityIdSuggested\":null,\"observationDate\":\"1960-12-01\",\"observationPrecision\":\"day\",\"observationType\":\"census\",\"value\":5411000,\"printedUnit\":\"persons\",\"unit\":\"persons\",\"scopeClassification\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Second series de-jure population (footnote2); first series de-facto observations not mixed. Existing valid1960 mapping must be resolved before acceptance.\",\"provisional\":true,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"table\":6,\"pdfPageIndex\":298,\"printedPage\":281,\"locator\":\"Table6/printed281/Switzerland/1960-12-01\",\"renderPath\":\"research/bulk-02/population/cache/table6-page-298.png\",\"reviewIssues\":[\"Independent exact row/source/footnote verification and historical mapping required.\"],\"status\":\"historical-review\"},\"verifiedSourceFields\":{\"entityId\":\"swiss-federal-state\",\"category\":\"population\",\"value\":5411000,\"unit\":\"persons\",\"observationDate\":\"1960-12-01\",\"observationPrecision\":\"day\",\"observationType\":\"census\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Second series de-jure population (footnote2); first series de-facto observations not mixed. Existing valid1960 mapping must be resolved before acceptance.\",\"provisional\":true,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"locator\":\"Table6/printed281/Switzerland/1960-12-01\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"qualifications\":[\"Printed281 secondseries de-jure footnote2; firstseries defacto57 separate. Existingnamedfederalstate from1848 matches1960; no succession inference.\",\"Source marks provisional.\"]},\"reviewReason\":\"Originalsourcevalue,date,type/footnotes and literalboundedentity scope reviewed; qualifiers mandatory.\",\"components\":null}; Independent facsimile review of original UN Tables4/6, definitions and every accepted cell/date/type/footnote; literal geography matched only to existing historical frameworks. Approximate/uncertain scopes, reversed exclusion notes and absent mappings remain held. Rounded/questionable/provisional estimates and computed component sums are explicitly qualified; source precision is not promoted to exact headcount.",
+            "precision": "day",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960-12-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Printed281 secondseries de-jure footnote2; firstseries defacto57 separate. Existingnamedfederalstate from1848 matches1960; no succession inference.",
+          "Source marks provisional.",
+          "Observation/census date is retained at supported precision; publication in1961 does not retime the observation. Scope concerns the contemporary historical statistical territory, not modern borders.",
+          "Second series de-jure population (footnote2); first series de-facto observations not mixed. Existing valid1960 mapping must be resolved before acceptance."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-e978fc63d40785d01459f8fe",
+          "sourceIdentifier": "Table6/printed281/Switzerland/1960-12-01"
+        },
+        "metric": "Population (census enumeration)",
+        "unit": "persons"
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T09:28:32.369Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "f49fb7bea6c95daabeb2c1b4d4662f1ae5a8a0003157ef3d4c7c8dc47d7bfcfb",
+        "98343ec11af3e8720ce3e25297e86520d937ec76d0bbe46d05b4d4df15097c08"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "0126a5bced5de6608e5f51f7e1dc7a3fd1b7d8308ceb5653937d880f611aa2b1",
+    "productionFingerprint": "38bcc2d1169d32d8cebfa4940fcfdc57c0fb0b331a3664ada6dcf9d3e1030ae8",
+    "jobId": "dossier-5ba1ec793933d8ec1274e8e4",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "0126a5bced5de6608e5f51f7e1dc7a3fd1b7d8308ceb5653937d880f611aa2b1",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by Independent capital worker, separate frompopulationextractionworker / coordinator-scope-gate; contract 98343ec11af3e8720ce3e25297e86520d937ec76d0bbe46d05b4d4df15097c08; adapter historical-scope-population-observation/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-e978fc63d40785d01459f8fe-291130e172": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-e978fc63d40785d01459f8fe-291130e172"
+    ]
+  }
+}

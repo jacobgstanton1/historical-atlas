@@ -1,0 +1,272 @@
+{
+  "job": {
+    "id": "dossier-bacde8004371c725cd52ccd9",
+    "entityId": "b10-costa-rica-post-1949",
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-costa-rica"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "bd62bc363d2b930863b0a8eb42a151613f291d741f85635b8043039178509f8d",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "UN-population-1960-b10-costa-rica-post-1949",
+    "jobId": "dossier-bacde8004371c725cd52ccd9",
+    "entityId": "b10-costa-rica-post-1949",
+    "mapIds": [
+      "entity-costa-rica"
+    ],
+    "worker": {
+      "id": "bulk-parser/historical-scope-population-observation/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "bd62bc363d2b930863b0a8eb42a151613f291d741f85635b8043039178509f8d",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "bulk-f62c62e33284a78ec1f455a9-7825a3c839",
+        "category": "population-statistics",
+        "value": 1171000,
+        "entityId": "b10-costa-rica-post-1949",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "b10-costa-rica-post-1949-UN-1960-population",
+          "description": "Country total under the source general present-in-area definition.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "un-demographic-yearbook1960-table4",
+            "locator": "Table4/printed135/PDF152/1960column/Costa Rica",
+            "note": "{\"original\":{\"id\":\"dyb1960-t4-b10-costa-rica-post-1949\",\"category\":\"population\",\"countryLabel\":\"Costa Rica\",\"rawTerritoryLabel\":\"Costa Rica\",\"entityIdSuggested\":\"b10-costa-rica-post-1949\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"estimate\",\"value\":1171000,\"printedValue\":1171,\"printedUnit\":\"thousands of persons\",\"unit\":\"persons\",\"precisionQualification\":\"Published rounded to thousands; not an exact headcount.\",\"dateQualification\":\"Contemporary1960 midyear estimate; default1July or mean of consecutive endyear estimates. Retain1960 year precision conservatively; no actual census date inferred from OCR.\",\"scopeClassification\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Country total under the source general present-in-area definition.\",\"provisional\":false,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"table\":4,\"pdfPageIndex\":152,\"printedPage\":135,\"locator\":\"Table4/printed135/PDF152/1960column/Costa Rica\",\"originalExtractionRecordId\":\"un-dyb1960-t4-p152-r7\",\"renderPath\":\"research/bulk-02/population/cache/table4-page-152.png\",\"reviewIssues\":[\"Independent printed-type/date/footnote verification required before acceptance.\",\"Suggested existing entity must pass mapping and scope review.\"],\"status\":\"historical-review\"},\"verifiedSourceFields\":{\"entityId\":\"b10-costa-rica-post-1949\",\"category\":\"population\",\"value\":1171000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Country total under the source general present-in-area definition.\",\"provisional\":false,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"locator\":\"Table4/printed135/PDF152/1960column/Costa Rica\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"qualifications\":[\"Published rounded to thousands; contemporary1960midyear estimate, retained atyearprecision.\",\"No row-specific qualification; Table4 general contemporary-country total, modified present-in-area.\"]},\"reviewReason\":\"Originalsourcevalue,date,type/footnotes and literalboundedentity scope reviewed; qualifiers mandatory.\",\"components\":null}; Independent facsimile review of original UN Tables4/6, definitions and every accepted cell/date/type/footnote; literal geography matched only to existing historical frameworks. Approximate/uncertain scopes, reversed exclusion notes and absent mappings remain held. Rounded/questionable/provisional estimates and computed component sums are explicitly qualified; source precision is not promoted to exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Published rounded to thousands; contemporary1960midyear estimate, retained atyearprecision.",
+          "No row-specific qualification; Table4 general contemporary-country total, modified present-in-area.",
+          "Observation/census date is retained at supported precision; publication in1961 does not retime the observation. Scope concerns the contemporary historical statistical territory, not modern borders.",
+          "Country total under the source general present-in-area definition."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-f62c62e33284a78ec1f455a9",
+          "sourceIdentifier": "Table4/printed135/PDF152/1960column/Costa Rica"
+        },
+        "metric": "Population (published midyear estimate)",
+        "unit": "persons"
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T09:27:32.277Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "f49fb7bea6c95daabeb2c1b4d4662f1ae5a8a0003157ef3d4c7c8dc47d7bfcfb",
+        "98343ec11af3e8720ce3e25297e86520d937ec76d0bbe46d05b4d4df15097c08"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "b4ecf303e6c5a2fd4d83336211e9eb0171dea666fd37f1722559837c30d0c1d8",
+    "productionFingerprint": "bd62bc363d2b930863b0a8eb42a151613f291d741f85635b8043039178509f8d",
+    "jobId": "dossier-bacde8004371c725cd52ccd9",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "b4ecf303e6c5a2fd4d83336211e9eb0171dea666fd37f1722559837c30d0c1d8",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by Independent capital worker, separate frompopulationextractionworker / coordinator-scope-gate; contract 98343ec11af3e8720ce3e25297e86520d937ec76d0bbe46d05b4d4df15097c08; adapter historical-scope-population-observation/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-f62c62e33284a78ec1f455a9-7825a3c839": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-f62c62e33284a78ec1f455a9-7825a3c839"
+    ]
+  }
+}

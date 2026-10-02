@@ -1,0 +1,271 @@
+{
+  "job": {
+    "id": "dossier-4ae8f54a9590345b2cf0b206",
+    "entityId": "turkey-1960-national-unity-framework",
+    "period": {
+      "from": "1960-10-23",
+      "until": "1960-10-24"
+    },
+    "mapIds": [
+      "entity-turkey"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "285d1efc8c05a77271e4313db6bf17e8cbb331babf340cf9d1a92a8c5b24c6a6",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "UN-population-1960-turkey-1960-national-unity-framework",
+    "jobId": "dossier-4ae8f54a9590345b2cf0b206",
+    "entityId": "turkey-1960-national-unity-framework",
+    "mapIds": [
+      "entity-turkey"
+    ],
+    "worker": {
+      "id": "bulk-parser/historical-scope-population-observation/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "285d1efc8c05a77271e4313db6bf17e8cbb331babf340cf9d1a92a8c5b24c6a6",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1960-10-23",
+      "until": "1960-10-24"
+    },
+    "claims": [
+      {
+        "id": "bulk-64d28931dcf3206c1828ab89-0dde782643",
+        "category": "population-statistics",
+        "value": 27829198,
+        "entityId": "turkey-1960-national-unity-framework",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960-10-23",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "turkey-1960-national-unity-framework-UN-1960-population",
+          "description": "Census23October, not20October estimate date from separate Table4 series note. Date follows27May framework transition.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "un-demographic-yearbook1960-table4",
+            "locator": "Table6/printed277/Turkey/1960-10-23",
+            "note": "{\"original\":{\"id\":\"dyb1960-t6-turkey\",\"category\":\"population\",\"countryLabel\":\"Turkey\",\"entityIdSuggested\":\"turkey-1960-national-unity-framework\",\"observationDate\":\"1960-10-23\",\"observationPrecision\":\"day\",\"observationType\":\"census\",\"value\":27829198,\"printedUnit\":\"persons\",\"unit\":\"persons\",\"scopeClassification\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Census23October, not20October estimate date from separate Table4 series note. Date follows27May framework transition.\",\"provisional\":false,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"table\":6,\"pdfPageIndex\":294,\"printedPage\":277,\"locator\":\"Table6/printed277/Turkey/1960-10-23\",\"renderPath\":\"research/bulk-02/population/cache/table6-page-294.png\",\"reviewIssues\":[\"Independent exact row/source/footnote verification and historical mapping required.\"],\"status\":\"historical-review\"},\"verifiedSourceFields\":{\"entityId\":\"turkey-1960-national-unity-framework\",\"category\":\"population\",\"value\":27829198,\"unit\":\"persons\",\"observationDate\":\"1960-10-23\",\"observationPrecision\":\"day\",\"observationType\":\"census\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Census23October, not20October estimate date from separate Table4 series note. Date follows27May framework transition.\",\"provisional\":false,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"locator\":\"Table6/printed277/Turkey/1960-10-23\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"qualifications\":[\"Printed277 actual census October23, not Table4 estimateOctober20; withinNationalUnityframework afterMay27.\"]},\"reviewReason\":\"Originalsourcevalue,date,type/footnotes and literalboundedentity scope reviewed; qualifiers mandatory.\",\"components\":null}; Independent facsimile review of original UN Tables4/6, definitions and every accepted cell/date/type/footnote; literal geography matched only to existing historical frameworks. Approximate/uncertain scopes, reversed exclusion notes and absent mappings remain held. Rounded/questionable/provisional estimates and computed component sums are explicitly qualified; source precision is not promoted to exact headcount.",
+            "precision": "day",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960-10-23",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Printed277 actual census October23, not Table4 estimateOctober20; withinNationalUnityframework afterMay27.",
+          "Observation/census date is retained at supported precision; publication in1961 does not retime the observation. Scope concerns the contemporary historical statistical territory, not modern borders.",
+          "Census23October, not20October estimate date from separate Table4 series note. Date follows27May framework transition."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-64d28931dcf3206c1828ab89",
+          "sourceIdentifier": "Table6/printed277/Turkey/1960-10-23"
+        },
+        "metric": "Population (census enumeration)",
+        "unit": "persons"
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T09:28:26.272Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "f49fb7bea6c95daabeb2c1b4d4662f1ae5a8a0003157ef3d4c7c8dc47d7bfcfb",
+        "98343ec11af3e8720ce3e25297e86520d937ec76d0bbe46d05b4d4df15097c08"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "f57b4f9ca5bc26c8320cf3782beac54a25e6ffbbf692df0edd92331b2c1baa11",
+    "productionFingerprint": "285d1efc8c05a77271e4313db6bf17e8cbb331babf340cf9d1a92a8c5b24c6a6",
+    "jobId": "dossier-4ae8f54a9590345b2cf0b206",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "f57b4f9ca5bc26c8320cf3782beac54a25e6ffbbf692df0edd92331b2c1baa11",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by Independent capital worker, separate frompopulationextractionworker / coordinator-scope-gate; contract 98343ec11af3e8720ce3e25297e86520d937ec76d0bbe46d05b4d4df15097c08; adapter historical-scope-population-observation/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-64d28931dcf3206c1828ab89-0dde782643": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-64d28931dcf3206c1828ab89-0dde782643"
+    ]
+  }
+}

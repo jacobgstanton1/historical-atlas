@@ -1,0 +1,272 @@
+{
+  "job": {
+    "id": "dossier-48d7e18565984a8ee06960f4",
+    "entityId": "finland-independent",
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-finland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "066b0fcfbcab0ca459813074c0c6365e375e4df20c09871b368739db7186e16e",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "UN-population-1960-finland-independent",
+    "jobId": "dossier-48d7e18565984a8ee06960f4",
+    "entityId": "finland-independent",
+    "mapIds": [
+      "entity-finland"
+    ],
+    "worker": {
+      "id": "bulk-parser/historical-scope-population-observation/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "066b0fcfbcab0ca459813074c0c6365e375e4df20c09871b368739db7186e16e",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "bulk-a0012ad4092b9ef2cff34cf4-46b1aea131",
+        "category": "population-statistics",
+        "value": 4456000,
+        "entityId": "finland-independent",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "finland-independent-UN-1960-population",
+          "description": "Present-in-area since1950, including Finnish nationals temporarily outside the country since1951 (footnote98).",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "un-demographic-yearbook1960-table4",
+            "locator": "Table4/printed147/PDF164/1960column/Finlande98",
+            "note": "{\"original\":{\"id\":\"dyb1960-t4-finland-independent\",\"category\":\"population\",\"countryLabel\":\"Finland\",\"rawTerritoryLabel\":\"Finlande98\",\"entityIdSuggested\":\"finland-independent\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"estimate\",\"value\":4456000,\"printedValue\":4456,\"printedUnit\":\"thousands of persons\",\"unit\":\"persons\",\"precisionQualification\":\"Published rounded to thousands; not an exact headcount.\",\"dateQualification\":\"Contemporary1960 midyear estimate; default1July or mean of consecutive endyear estimates. Retain1960 year precision conservatively; no actual census date inferred from OCR.\",\"scopeClassification\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Present-in-area since1950, including Finnish nationals temporarily outside the country since1951 (footnote98).\",\"provisional\":false,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"table\":4,\"pdfPageIndex\":164,\"printedPage\":147,\"locator\":\"Table4/printed147/PDF164/1960column/Finlande98\",\"originalExtractionRecordId\":\"un-dyb1960-t4-p164-r8\",\"renderPath\":\"research/bulk-02/population/cache/table4-page-164.png\",\"reviewIssues\":[\"Independent printed-type/date/footnote verification required before acceptance.\",\"Suggested existing entity must pass mapping and scope review.\"],\"status\":\"historical-review\"},\"verifiedSourceFields\":{\"entityId\":\"finland-independent\",\"category\":\"population\",\"value\":4456000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Present-in-area since1950, including Finnish nationals temporarily outside the country since1951 (footnote98).\",\"provisional\":false,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"locator\":\"Table4/printed147/PDF164/1960column/Finlande98\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"qualifications\":[\"Published rounded to thousands; contemporary1960midyear estimate, retained atyearprecision.\",\"Table4 footnote98/printed144:present-in-area since1950; includes Finnish nationals temporarily abroad since1951.\"]},\"reviewReason\":\"Originalsourcevalue,date,type/footnotes and literalboundedentity scope reviewed; qualifiers mandatory.\",\"components\":null}; Independent facsimile review of original UN Tables4/6, definitions and every accepted cell/date/type/footnote; literal geography matched only to existing historical frameworks. Approximate/uncertain scopes, reversed exclusion notes and absent mappings remain held. Rounded/questionable/provisional estimates and computed component sums are explicitly qualified; source precision is not promoted to exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Published rounded to thousands; contemporary1960midyear estimate, retained atyearprecision.",
+          "Table4 footnote98/printed144:present-in-area since1950; includes Finnish nationals temporarily abroad since1951.",
+          "Observation/census date is retained at supported precision; publication in1961 does not retime the observation. Scope concerns the contemporary historical statistical territory, not modern borders.",
+          "Present-in-area since1950, including Finnish nationals temporarily outside the country since1951 (footnote98)."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-a0012ad4092b9ef2cff34cf4",
+          "sourceIdentifier": "Table4/printed147/PDF164/1960column/Finlande98"
+        },
+        "metric": "Population (published midyear estimate)",
+        "unit": "persons"
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T09:27:43.536Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "f49fb7bea6c95daabeb2c1b4d4662f1ae5a8a0003157ef3d4c7c8dc47d7bfcfb",
+        "98343ec11af3e8720ce3e25297e86520d937ec76d0bbe46d05b4d4df15097c08"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "850f25e3cc90c4b86cf7f14d0716f21638149308953ce130c07a4c181565b13b",
+    "productionFingerprint": "066b0fcfbcab0ca459813074c0c6365e375e4df20c09871b368739db7186e16e",
+    "jobId": "dossier-48d7e18565984a8ee06960f4",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "850f25e3cc90c4b86cf7f14d0716f21638149308953ce130c07a4c181565b13b",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by Independent capital worker, separate frompopulationextractionworker / coordinator-scope-gate; contract 98343ec11af3e8720ce3e25297e86520d937ec76d0bbe46d05b4d4df15097c08; adapter historical-scope-population-observation/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-a0012ad4092b9ef2cff34cf4-46b1aea131": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-a0012ad4092b9ef2cff34cf4-46b1aea131"
+    ]
+  }
+}

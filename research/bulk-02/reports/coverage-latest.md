@@ -1,8 +1,8 @@
 # Snapshot dossier coverage
 
 Existing resolver availability: 362/401 (a separate metric).
-Snapshot/entity opportunities: 1056. Supported category slots: 3957 of 14784 applicable slots (14784 total).
-Unique dated records: 5270; supporting records: 3453; claim/snapshot applications: 6057; additional reused applications: 2604.
+Snapshot/entity opportunities: 1056. Supported category slots: 3979 of 14784 applicable slots (14784 total).
+Unique dated records: 5302; supporting records: 3481; claim/snapshot applications: 6087; additional reused applications: 2606.
 Raw identity cases awaiting review: 717.
 substantially-complete: 0.
 core-covered: 145.
@@ -17,15 +17,15 @@ historical-review: 117.
 | leadership | 293 | 97 | 663 | 3 | 0 |
 | capital | 341 | 23 | 683 | 9 | 0 |
 | currency | 199 | 13 | 841 | 3 | 0 |
-| historical-flag | 59 | 10 | 987 | 0 | 0 |
-| population-statistics | 4 | 0 | 1050 | 2 | 0 |
+| historical-flag | 63 | 11 | 982 | 0 | 0 |
+| population-statistics | 22 | 0 | 1032 | 2 | 0 |
 | area-statistics | 0 | 0 | 1056 | 0 | 0 |
 | density | 0 | 0 | 1056 | 0 | 0 |
 | economy | 73 | 0 | 983 | 0 | 0 |
 | events-context | 20 | 0 | 1005 | 31 | 0 |
 | relationships | 18 | 1 | 1036 | 1 | 0 |
 | overview | 986 | 59 | 11 | 0 | 0 |
-| important-figures | 3 | 15 | 1038 | 0 | 0 |
+| important-figures | 3 | 21 | 1032 | 0 | 0 |
 
 Observation and event dates remain actual dates. Nearby evidence is qualified context, never a rewritten selected-year observation. Core coverage and breadth are operational research metrics, not declarations of historical completeness.
 Persisted records are indexed by claim ID; snapshot slots reference them without duplicating facts.

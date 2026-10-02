@@ -1,0 +1,274 @@
+{
+  "job": {
+    "id": "dossier-70e05367b4a550285e2b3e9d",
+    "entityId": "hungary-post1956-framework",
+    "period": {
+      "from": "1960-01-01",
+      "until": "1960-01-02"
+    },
+    "mapIds": [
+      "entity-hungary"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "1a0b27c4677d7e713f40b601dee231c63b405372d5ccbba9ed563df3f43e04ef",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "UN-population-1960-hungary-post1956-framework",
+    "jobId": "dossier-70e05367b4a550285e2b3e9d",
+    "entityId": "hungary-post1956-framework",
+    "mapIds": [
+      "entity-hungary"
+    ],
+    "worker": {
+      "id": "bulk-parser/historical-scope-population-observation/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "1a0b27c4677d7e713f40b601dee231c63b405372d5ccbba9ed563df3f43e04ef",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1960-01-01",
+      "until": "1960-01-02"
+    },
+    "claims": [
+      {
+        "id": "bulk-d9bfe6e21a7071febc988a57-8660cde2c6",
+        "category": "population-statistics",
+        "value": 9976530,
+        "entityId": "hungary-post1956-framework",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "hungary-post1956-framework-UN-1960-population",
+          "description": "Male4815838 plus female5160692. January census differs from later midyear estimate10002thousand; observations must remain separately dated.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "un-demographic-yearbook1960-table4",
+            "locator": "Table6/printed279/Hungary/1960-01-01",
+            "note": "{\"original\":{\"id\":\"dyb1960-t6-hungary\",\"category\":\"population\",\"countryLabel\":\"Hungary\",\"entityIdSuggested\":\"hungary-post1956-framework\",\"observationDate\":\"1960-01-01\",\"observationPrecision\":\"day\",\"observationType\":\"census\",\"value\":9976530,\"printedUnit\":\"persons\",\"unit\":\"persons\",\"scopeClassification\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Male4815838 plus female5160692. January census differs from later midyear estimate10002thousand; observations must remain separately dated.\",\"provisional\":true,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"table\":6,\"pdfPageIndex\":296,\"printedPage\":279,\"locator\":\"Table6/printed279/Hungary/1960-01-01\",\"renderPath\":\"research/bulk-02/population/cache/table6-page-296.png\",\"reviewIssues\":[\"Independent exact row/source/footnote verification and historical mapping required.\"],\"status\":\"historical-review\"},\"verifiedSourceFields\":{\"entityId\":\"hungary-post1956-framework\",\"category\":\"population\",\"value\":9976530,\"unit\":\"persons\",\"observationDate\":\"1960-01-01\",\"observationPrecision\":\"day\",\"observationType\":\"census\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Male4815838 plus female5160692. January census differs from later midyear estimate10002thousand; observations must remain separately dated.\",\"provisional\":true,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"locator\":\"Table6/printed279/Hungary/1960-01-01\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"qualifications\":[\"Same-date reportedmale/female census sum; not midyearTable4 estimate10002thousand.\",\"Computed sum of reported male and female components. Table6 warns their sum can differ from final population total; this is not an independentlypublished total.\",\"Source marks provisional.\"]},\"reviewReason\":\"Originalsourcevalue,date,type/footnotes and literalboundedentity scope reviewed; qualifiers mandatory.\",\"components\":[4815838,5160692]}; Independent facsimile review of original UN Tables4/6, definitions and every accepted cell/date/type/footnote; literal geography matched only to existing historical frameworks. Approximate/uncertain scopes, reversed exclusion notes and absent mappings remain held. Rounded/questionable/provisional estimates and computed component sums are explicitly qualified; source precision is not promoted to exact headcount.",
+            "precision": "day",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Same-date reportedmale/female census sum; not midyearTable4 estimate10002thousand.",
+          "Computed sum of reported male and female components. Table6 warns their sum can differ from final population total; this is not an independentlypublished total.",
+          "Source marks provisional.",
+          "Observation/census date is retained at supported precision; publication in1961 does not retime the observation. Scope concerns the contemporary historical statistical territory, not modern borders.",
+          "Value is the arithmetic sum of separately reported male/female census components; the source warns it may differ from a subsequently revised final total.",
+          "Male4815838 plus female5160692. January census differs from later midyear estimate10002thousand; observations must remain separately dated."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-d9bfe6e21a7071febc988a57",
+          "sourceIdentifier": "Table6/printed279/Hungary/1960-01-01"
+        },
+        "metric": "Population (sum of reported census sex components)",
+        "unit": "persons"
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T09:28:29.356Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "f49fb7bea6c95daabeb2c1b4d4662f1ae5a8a0003157ef3d4c7c8dc47d7bfcfb",
+        "98343ec11af3e8720ce3e25297e86520d937ec76d0bbe46d05b4d4df15097c08"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "6af0a377d37710924a1ff45687e4f10c86ece4d639ede77b5c442111435d57e2",
+    "productionFingerprint": "1a0b27c4677d7e713f40b601dee231c63b405372d5ccbba9ed563df3f43e04ef",
+    "jobId": "dossier-70e05367b4a550285e2b3e9d",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "6af0a377d37710924a1ff45687e4f10c86ece4d639ede77b5c442111435d57e2",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by Independent capital worker, separate frompopulationextractionworker / coordinator-scope-gate; contract 98343ec11af3e8720ce3e25297e86520d937ec76d0bbe46d05b4d4df15097c08; adapter historical-scope-population-observation/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-d9bfe6e21a7071febc988a57-8660cde2c6": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-d9bfe6e21a7071febc988a57-8660cde2c6"
+    ]
+  }
+}

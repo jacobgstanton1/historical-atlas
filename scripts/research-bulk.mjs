@@ -75,11 +75,12 @@ export function prepareCandidates(manifest,contract,context){
   if(unresolved.length||r.disposition==='historical-review'){envelope.reason='Preserved source/date caution: '+unresolved.join('; ');candidates.push(envelope);continue;}
   const mappings=contract.mappings.filter(m=>m.sourceId===source.id&&(r.entityIdsSuggested||[]).includes(m.entityId));
   for(const m of mappings){
-   if(r.temporal?.kind==='observation'){
+   if(['observation','event'].includes(r.temporal?.kind)){
     const original=structuredClone(r.temporal),b=temporalBounds(original),window=temporalBounds({kind:'interval',from:m.from,until:m.until});
     if(b.lo<window.lo||b.hi>window.hi||b.lo<1800*372||b.hi>1961*372)continue;
-    requireThat(['capital','currency','economy','population-statistics','area-statistics'].includes(r.category),'Unsupported observation adapter category');
-    requireThat(r.precision&&r.qualifications?.length&&m.scope&&m.scopeId&&m.statisticalComparability==='historically-matching','Observation evidence/scope comparability incomplete');
+    const event=r.temporal.kind==='event';
+    requireThat(event?r.category==='events-context':['capital','currency','economy','population-statistics','area-statistics'].includes(r.category),'Unsupported point-evidence adapter category');
+    requireThat(r.precision&&r.qualifications?.length&&m.scope&&m.scopeId&&m.statisticalComparability===(event?'not-a-statistic':'historically-matching'),'Point evidence/scope comparability incomplete');
     const s=sourceRecord(source,context);
     const claim={id:envelope.id+'-'+digest(m.entityId).slice(0,10),category:r.category,value:r.value,entityId:m.entityId,temporal:original,scope:{id:m.scopeId,description:m.scope,relationship:'same'},sourceIds:[s.id],evidence:[{sourceId:s.id,locator:r.locator,note:r.originalRow+'; '+contract.rationale,precision:r.precision,temporal:original,interpretation:'direct'}],status:'supported',risks:[],qualifications:[...r.qualifications,m.qualification||m.scope],origin:{kind:'bulk-candidate',reference:envelope.id,sourceIdentifier:r.locator},...(r.metric?{metric:r.metric}:{}),...(r.unit?{unit:r.unit}:{})};
     const result=reconcile(claim,context,pending.filter(p=>p.entityId===m.entityId));
@@ -104,7 +105,7 @@ export function prepareCandidates(manifest,contract,context){
    if(result.status==='accepted-candidate')pending.push(claim);
   }
   if(envelope.claims.length){envelope.status=envelope.claims.some(c=>c.status==='accepted-candidate')?'accepted-candidate':envelope.claims.every(c=>c.status==='duplicate')?'duplicate':'historical-review';envelope.reason=envelope.claims.map(c=>c.reason).join('; ');}
-  envelope.targetSnapshots=snapshots.filter(year=>envelope.claims.some(p=>overlaps(temporalBounds(p.claim.temporal),{lo:year*372,hi:(year+1)*372})));
+  envelope.targetSnapshots=snapshots.filter(year=>envelope.claims.some(p=>{const t=p.claim.temporal;if(t.kind==='event'){const actual=Number(t.date.slice(0,4));return year>=actual&&year-actual<=5;}return overlaps(temporalBounds(t),{lo:year*372,hi:(year+1)*372});}));
   candidates.push(envelope);
  }
  const schema=readJSON('research/bulk-01/schemas/acquisition.schema.json');
@@ -112,6 +113,11 @@ export function prepareCandidates(manifest,contract,context){
  return candidates;
 }
 export const needsResume=(saved,packages,id)=>!!saved&&(saved.integrations.some(i=>i.applied)||packages.some(p=>p.id.startsWith(id+'-')));
+export function boundedResearchPeriod(claims){
+ const starts=claims.map(c=>c.temporal.from||c.temporal.observationDate||c.temporal.date).sort();
+ const ends=claims.map(c=>{const t=c.temporal;if(t.kind==='interval')return t.until;const point=t.observationDate||t.date;return /^\d{4}-\d{2}-\d{2}$/.test(point)?new Date(Date.parse(point+'T00:00:00Z')+86400000).toISOString().slice(0,10):point;}).sort();
+ return{from:starts[0],until:ends.at(-1)};
+}
 export function runTranche(manifestPath,contractPath,{apply=false}={}){
  const manifest=readJSON(manifestPath),contract=readJSON(contractPath),context=readContext();
  const output='research/bulk-01/'+contract.id;
@@ -129,7 +135,7 @@ export function runTranche(manifestPath,contractPath,{apply=false}={}){
  for(const [entityId,parts]of groups){
   const existing=readJSON('data/comprehensive-dossiers.json').packages.find(p=>p.id===contract.id+'-'+entityId);
   if(existing){requireThat(digest(existing.claims)===digest(parts.map(p=>p.claim))&&existing.provenance.preservedPackageHashes.includes(digest(contract)),'Existing package disagrees with preserved intake');if(!ledger.integrations.some(i=>i.packageId===existing.id&&i.applied)){ledger.integrations.push({entityId,packageId:existing.id,packageHash:existing.acceptance.packageHash,claims:existing.claims.length,applied:true,recovered:true});saveJSON(ledgerPath,ledger);}continue;}
-  const fresh=readContext(),claims=parts.map(p=>p.claim),period={from:claims.map(c=>c.temporal.from||c.temporal.observationDate).sort()[0],until:claims.map(c=>c.temporal.until||c.temporal.observationDate).sort().at(-1)},job=generateDossierJob(entityId,period,fresh);
+  const fresh=readContext(),claims=parts.map(p=>p.claim),period=boundedResearchPeriod(claims),job=generateDossierJob(entityId,period,fresh);
   const consulted=[...new Map(parts.map(p=>[p.source.id,p.source])).values()];
   // Existing registry sources are referenced by ID, never redefined to fit a
   // different schema. Preserve their original metadata exactly.

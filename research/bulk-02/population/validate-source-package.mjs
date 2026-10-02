@@ -1,0 +1,38 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {digest} from '../../../scripts/research-common.mjs';
+const b='research/bulk-02/population';
+const p=JSON.parse(fs.readFileSync(`${b}/verified-source-subset.json`));
+const raw=JSON.parse(fs.readFileSync(`${b}/dyb1960-population-extracted.json`));
+const sha=path=>crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex');
+assert.equal(sha(p.source.cachePath),p.source.sha256);
+assert.equal(p.originalExtractionHash,digest(raw));
+assert.equal(new Set(p.observations.map(o=>o.id)).size,p.observations.length);
+for(const o of p.observations){
+ assert.equal(o.status,'historical-review');
+ assert.equal(o.sourceBodyHash,p.source.sha256);
+ assert.ok(o.observationDate.startsWith('1960'));
+ assert.ok(Number.isInteger(o.value)&&o.value>0);
+ assert.ok(fs.existsSync(o.renderPath));
+ assert.ok(o.scope && o.locator && o.reviewIssues.length);
+ assert.notEqual(o.scopeClassification,'MODERN_BORDER_ESTIMATE');
+}
+assert.ok(raw.records.every(r=>r.value===null&&r.status==='historical-review'));
+const find=c=>p.observations.find(o=>o.countryLabel===c);
+assert.equal(find('Japan').observationDate,'1960-10-01');
+assert.equal(find('Turkey').observationDate,'1960-10-23');
+assert.equal(find('Morocco').observationPrecision,'month');
+assert.equal(find('Morocco').observationDate,'1960-06');
+assert.equal(find('Hungary').value,4815838+5160692);
+assert.equal(find('Thailand').value,12729018+12790947);
+assert.equal(find('Hong Kong').value,2981000);
+assert.equal(find('Australia').scopeClassification,'APPROXIMATELY_COMPARABLE_SCOPE');
+assert.match(find('Australia').scope,/excludes.*Aboriginal/);
+assert.equal(find('Ghana').entityIdSuggested,'ghana-1960-monarchical-core');
+assert.equal(find('Ghana').observationDate,'1960-03-20');
+assert.equal(p.productionEdited,false);
+const files=[p.source.cachePath,'research/bulk-02/population/extract-dyb1960.py','research/bulk-02/population/build-verified-subset.mjs',...p.observations.map(o=>o.renderPath)];
+const result={passed:['Original body hash','Frozen raw extraction binding','Stable unique observation IDs','Every observation source/date/scope/review/render reference','All raw OCR values withheld','Japan actual census date distinct from estimate year','Turkey23October census versus20October estimate note','Morocco month precision retained','Hungary and Thailand compatible same-census arithmetic only','Hong Kong enlarged facsimile2981 cross-check','Australia exclusion explicit approximate scope','Ghana pretransition historical framework suggestion','No modern-border automatic observations'],subsetHash:digest(p),rawExtractionHash:digest(raw),fileHashes:Object.fromEntries([...new Set(files)].map(f=>[f,sha(f)])),metrics:p.metrics,scopeCounts:Object.fromEntries(raw.scopeClasses.map(c=>[c,p.observations.filter(o=>o.scopeClassification===c).length])),productionEdited:false};
+fs.writeFileSync(`${b}/source-package-validation.json`,JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify({passed:result.passed.length,hash:result.subsetHash,metrics:result.metrics,scopes:result.scopeCounts}));

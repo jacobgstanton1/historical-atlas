@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readJSON,readContext} from '../scripts/research-common.mjs';
+import {checkSupplement,integrateSupplement} from '../scripts/research-bulk-package.mjs';
+const base='research/bulk-02/figures-flags/',name='b02-us-gap-flags',pkg=readJSON(base+'packages/'+name+'.json'),job=readJSON(base+'jobs/'+name+'.json'),review=readJSON(base+'review/'+name+'.json');
+test('flag supplement binds all original bodies, assets and exact independent review',()=>assert.equal(checkSupplement(pkg,job,review),true));
+test('self-review and changed historical intervals fail closed',()=>{assert.throws(()=>checkSupplement(pkg,job,{...review,reviewer:pkg.worker.id}));const altered=structuredClone(pkg);altered.claims[0].temporal.from='1795';assert.throws(()=>checkSupplement(altered,job,review));});
+test('source-body or asset unbinding cannot pass',()=>{const bad=structuredClone(review);bad.sourceBodyHashes[Object.keys(bad.sourceBodyHashes)[0]]='0'.repeat(64);assert.throws(()=>checkSupplement(pkg,job,bad));assert.throws(()=>checkSupplement(pkg,job,{...review,assets:[]}));});
+test('preview never installs production assets or metadata',()=>{const before=readContext().productionFingerprint;integrateSupplement(name);assert.equal(readContext().productionFingerprint,before);});
+test('Tagore is dated literary relevance beyond Nobel or lifetime projection',()=>{const p=readJSON(base+'packages/b02-tagore-bengali-snapshot-contexts.json');assert.equal(p.claims.length,7);assert.ok(p.claims.every(c=>c.temporal.from===c.temporal.until&&c.figure.categories.includes('writer')));assert.ok(p.claims.every(c=>c.qualifications.some(q=>q.includes('composition'))));assert.ok(p.claims.every(c=>c.figure.personId==='rabindranath-tagore'));});

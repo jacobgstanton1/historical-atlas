@@ -47,3 +47,6 @@ Continue highest-yield bulk categories after1960 while budget safely permits. Pr
 
 ## Capital checkpoint
 99 additional source-qualifiedcapitalclaims in81packages;production1872.153 netnewcapital slots, campaignnet180 slots.19737 integritychecks;17focusedtests pass. Sourceendpointuncertainties conservativelynarrowed; 514 heldsource/reconciliationrows and5duplicates preserved. OriginalAlmanac100allheld reviewed; no borrowed dates. Next:22independentlyapprovedpopulation observations,USflags andTagore packages; preserve ambiguity.
+
+## Population and supplementary checkpoint
+22 matching-scope UN1960 population observations, 3 source-bound illustrative US flags and 7 exact-year Tagore publication contexts integrated. Production1904; campaign365 newclaims,202 net supportedslots plus explicitpartial contexts.9 population holds preserve two reversed territorial footnotes. Next:45 independently reviewed COW combat endpoints; capitalcohort02 research remains isolated. No browserchecks or UIchanges.

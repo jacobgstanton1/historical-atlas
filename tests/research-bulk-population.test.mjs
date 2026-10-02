@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {populationIntake} from '../scripts/research-bulk-population.mjs';
+import {readJSON,readContext} from '../scripts/research-common.mjs';
+import {boundedResearchPeriod,prepareCandidates,verifyContract} from '../scripts/research-bulk.mjs';
+import {temporalBounds} from '../scripts/research-comprehensive.mjs';
+const {manifest,contract}=populationIntake();
+test('independent source receipt binds 31 source decisions and 9 geographic holds',()=>{assert.equal(manifest.rows.length,31);assert.equal(manifest.rows.filter(r=>r.disposition==='historical-review').length,9);assert.equal(verifyContract(contract,manifest),true);});
+test('reversed US and SouthAfrica exclusions cannot enter production',()=>{const raw=readJSON('research/bulk-02/population/verified-source-subset.json');for(const r of manifest.rows.filter(r=>/dyb1960-t6-(united-states|union-of-south-africa)/.test(r.id)))assert.equal(r.disposition,'historical-review');assert.ok(raw.observations.some(r=>/united-states/.test(r.id)));});
+test('contemporary estimates preserve year precision, quality and rounding',()=>{const kenya=manifest.rows.find(r=>r.id.includes('kenya'));assert.equal(kenya.temporal.observationDate,'1960');assert.equal(kenya.precision,'year');assert.ok(kenya.qualifications.some(q=>q.includes('questionable')));assert.ok(kenya.qualifications.some(q=>q.includes('rounded')));});
+test('exact census dates fit a nonempty research envelope without retiming',()=>{const census=manifest.rows.find(r=>r.id==='dyb1960-t6-ghana');assert.equal(census.temporal.observationDate,'1960-03-20');const period=boundedResearchPeriod([{temporal:census.temporal}]);const envelope=temporalBounds({...period,kind:'interval'}),point=temporalBounds(census.temporal);assert.ok(envelope.lo<=point.lo&&envelope.hi>=point.hi);assert.equal(census.temporal.observationDate,'1960-03-20');});
+test('no source review mutates production or promotes approximate scope',()=>{const context=readContext(),before=context.productionFingerprint;const candidates=prepareCandidates(manifest,contract,context);for(const r of candidates.filter(r=>r.status==='accepted-candidate'))assert.equal(r.statisticalComparability,'historically-matching');assert.equal(readContext().productionFingerprint,before);});
