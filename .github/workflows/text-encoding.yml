@@ -1,0 +1,10 @@
+name: Authored text encoding
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  utf8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/pages-safety.mjs

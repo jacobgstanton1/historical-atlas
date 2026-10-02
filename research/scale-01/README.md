@@ -1,6 +1,6 @@
 # High-throughput production campaign 01
 
-Authorized production scope: existing entities and1800–1960. Parallel acquisition/research; independent evidence review; serial integration. The frontend/timeline/version remain unchanged.
+Authorized production scope: existing entities and1800â€“1960. Parallel acquisition/research; independent evidence review; serial integration. The frontend/timeline/version remain unchanged.
 
 First checkpoint:60previously unpublished rich claims across8existing entities,54new-research and6reused-evidence claims. Existing production facts were excluded. The rich production source catalogue has804distinct source IDs (769legacy +35rich). The initial39focused tests passed; production audit passed2168deterministic checks. No browser checks.
 
