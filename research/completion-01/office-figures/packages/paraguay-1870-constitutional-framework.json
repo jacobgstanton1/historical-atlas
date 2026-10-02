@@ -1,0 +1,860 @@
+{
+  "job": {
+    "id": "dossier-484beb7c8bd60b183f082dd5",
+    "entityId": "paraguay-1870-constitutional-framework",
+    "period": {
+      "from": "1877-04-12",
+      "until": "1931-10-26"
+    },
+    "mapIds": [
+      "entity-paraguay"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "572833e13152c75c92f8d7d2194729e217548cc91a44dc8e78bfc5a3e73d4b5c",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-accepted-office-figures-paraguay-1870-constitutional-framework",
+    "jobId": "dossier-484beb7c8bd60b183f082dd5",
+    "entityId": "paraguay-1870-constitutional-framework",
+    "mapIds": [
+      "entity-paraguay"
+    ],
+    "worker": {
+      "id": "campaign2-flags",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "572833e13152c75c92f8d7d2194729e217548cc91a44dc8e78bfc5a3e73d4b5c",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1877-04-12",
+      "until": "1931-10-26"
+    },
+    "claims": [
+      {
+        "id": "office-figure-737e432ec663fba806d52546",
+        "category": "important-figures",
+        "value": "Uriarte",
+        "entityId": "paraguay-1870-constitutional-framework",
+        "temporal": {
+          "kind": "interval",
+          "from": "1877-04-12",
+          "until": "1878-11-25",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "paraguay-1870-constitutional-framework-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row PAR-1877; leadid 81fe84c1-1e42-11e4-b4cd-db5882bf8def; idacr PAR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"PAR-1877\",\"leadid\":\"81fe84c1-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"PAR\",\"leader\":\"Uriarte\",\"startdate\":\"1877-04-12\",\"enddate\":\"1878-11-25\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1877-04-12",
+              "until": "1878-11-25",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=PAR-1877; LEADID=81fe84c1-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"81fe84c1-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1843,\"yrdied\":1909,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1877-04-12",
+              "until": "1878-11-25",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1877-04-12 to 1878-11-25.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-81fe84c1-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Uriarte",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1843",
+            "until": "1909"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-6d3c97f78a4d16de5bbaf47a-5a868614ce",
+          "sourceIdentifier": "Archigos PAR-1877; leadid 81fe84c1-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA d5274a6743cc8ecac0ba661d9a618fb6548b40db7f85f6e72263e693ea0b0bca"
+        }
+      },
+      {
+        "id": "office-figure-aa408d5f79cb503103a01877",
+        "category": "important-figures",
+        "value": "Barreiro",
+        "entityId": "paraguay-1870-constitutional-framework",
+        "temporal": {
+          "kind": "interval",
+          "from": "1878-11-27",
+          "until": "1880-09-04",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "paraguay-1870-constitutional-framework-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row PAR-1878; leadid 81fe84c2-1e42-11e4-b4cd-db5882bf8def; idacr PAR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"PAR-1878\",\"leadid\":\"81fe84c2-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"PAR\",\"leader\":\"Barreiro\",\"startdate\":\"1878-11-27\",\"enddate\":\"1880-09-04\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1878-11-27",
+              "until": "1880-09-04",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=PAR-1878; LEADID=81fe84c2-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"81fe84c2-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1833,\"yrdied\":1880,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1878-11-27",
+              "until": "1880-09-04",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1878-11-27 to 1880-09-04.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-81fe84c2-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Barreiro",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1833",
+            "until": "1880"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-e4f1b31462055cf4abef5898-5a868614ce",
+          "sourceIdentifier": "Archigos PAR-1878; leadid 81fe84c2-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 3ffb7746a4991f76b783bcfd15f59fb6a2a4c87abafb355badbc208721bb7ed3"
+        }
+      },
+      {
+        "id": "office-figure-dc9ca321ac8ae2ef6e2ebd19",
+        "category": "important-figures",
+        "value": "Caballero",
+        "entityId": "paraguay-1870-constitutional-framework",
+        "temporal": {
+          "kind": "interval",
+          "from": "1880-09-04",
+          "until": "1886-11-25",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "paraguay-1870-constitutional-framework-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row PAR-1880; leadid 81fe84c3-1e42-11e4-b4cd-db5882bf8def; idacr PAR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"PAR-1880\",\"leadid\":\"81fe84c3-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"PAR\",\"leader\":\"Caballero\",\"startdate\":\"1880-09-04\",\"enddate\":\"1886-11-25\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1880-09-04",
+              "until": "1886-11-25",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=PAR-1880; LEADID=81fe84c3-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"81fe84c3-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1839,\"yrdied\":1912,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1880-09-04",
+              "until": "1886-11-25",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1880-09-04 to 1886-11-25.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-81fe84c3-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Caballero",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1839",
+            "until": "1912"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-e5a30fc30cf92dbfe4b52068-5a868614ce",
+          "sourceIdentifier": "Archigos PAR-1880; leadid 81fe84c3-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 6e12f8e724a4b89a894f8f3f320deb9644b301e3f317683cb4bd5d7394cca3fb"
+        }
+      },
+      {
+        "id": "office-figure-0988aaa2f61538d1a6016ff9",
+        "category": "important-figures",
+        "value": "Aceval",
+        "entityId": "paraguay-1870-constitutional-framework",
+        "temporal": {
+          "kind": "interval",
+          "from": "1898-11-25",
+          "until": "1902-01-09",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "paraguay-1870-constitutional-framework-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row PAR-1898; leadid 81feb596-1e42-11e4-b4cd-db5882bf8def; idacr PAR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"PAR-1898\",\"leadid\":\"81feb596-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"PAR\",\"leader\":\"Aceval\",\"startdate\":\"1898-11-25\",\"enddate\":\"1902-01-09\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1898-11-25",
+              "until": "1902-01-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=PAR-1898; LEADID=81feb596-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"81feb596-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1854,\"yrdied\":1931,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1898-11-25",
+              "until": "1902-01-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1898-11-25 to 1902-01-09.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-81feb596-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Aceval",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1854",
+            "until": "1931"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-e0f36ed0f889becdb12f9ceb-5a868614ce",
+          "sourceIdentifier": "Archigos PAR-1898; leadid 81feb596-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA cc452623a319f465ec014a9a7d66bcf64633e0ff8121562a0ab8527b807cecef"
+        }
+      },
+      {
+        "id": "office-figure-f71efd8e573ea757b4cfe00c",
+        "category": "important-figures",
+        "value": "Schaerer",
+        "entityId": "paraguay-1870-constitutional-framework",
+        "temporal": {
+          "kind": "interval",
+          "from": "1912-08-15",
+          "until": "1916-08-15",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "paraguay-1870-constitutional-framework-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row PAR-1912-3; leadid 81ff173e-1e42-11e4-b4cd-db5882bf8def; idacr PAR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"PAR-1912-3\",\"leadid\":\"81ff173e-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"PAR\",\"leader\":\"Schaerer\",\"startdate\":\"1912-08-15\",\"enddate\":\"1916-08-15\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1912-08-15",
+              "until": "1916-08-15",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=PAR-1912-3; LEADID=81ff173e-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"81ff173e-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1873,\"yrdied\":1941,\"borndate\":\"1873-12-02\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1912-08-15",
+              "until": "1916-08-15",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1912-08-15 to 1916-08-15.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-81ff173e-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Schaerer",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1873-12-02",
+            "until": "1941"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-fae9e07b3ba69191293f7549-5a868614ce",
+          "sourceIdentifier": "Archigos PAR-1912-3; leadid 81ff173e-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 9b91666d0a479401d62c6ddf7a6a2c893dafc3ce373a6b9d951d39bd9d1209ba"
+        }
+      },
+      {
+        "id": "office-figure-086e2bdc35f9dd4837d3cefc",
+        "category": "important-figures",
+        "value": "Montero",
+        "entityId": "paraguay-1870-constitutional-framework",
+        "temporal": {
+          "kind": "interval",
+          "from": "1919-06-05",
+          "until": "1920-08-15",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "paraguay-1870-constitutional-framework-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row PAR-1919; leadid 81ff480e-1e42-11e4-b4cd-db5882bf8def; idacr PAR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"PAR-1919\",\"leadid\":\"81ff480e-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"PAR\",\"leader\":\"Montero\",\"startdate\":\"1919-06-05\",\"enddate\":\"1920-08-15\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1919-06-05",
+              "until": "1920-08-15",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=PAR-1919; LEADID=81ff480e-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"81ff480e-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1879,\"yrdied\":1927,\"borndate\":\"1879-02-12\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1919-06-05",
+              "until": "1920-08-15",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1919-06-05 to 1920-08-15.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-81ff480e-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Montero",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1879-02-12",
+            "until": "1927"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-5cd1095192bb22ed108b2d0b-5a868614ce",
+          "sourceIdentifier": "Archigos PAR-1919; leadid 81ff480e-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 580aade7bb6f7986c508971036cffc1fb04a39afe8eef7d1eee8eba5ef9dded6"
+        }
+      },
+      {
+        "id": "office-figure-fd4245ec55940e650d24de3c",
+        "category": "important-figures",
+        "value": "Gondra",
+        "entityId": "paraguay-1870-constitutional-framework",
+        "temporal": {
+          "kind": "interval",
+          "from": "1920-08-15",
+          "until": "1921-10-30",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "paraguay-1870-constitutional-framework-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row PAR-1920; leadid 81ff173a-1e42-11e4-b4cd-db5882bf8def; idacr PAR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"PAR-1920\",\"leadid\":\"81ff173a-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"PAR\",\"leader\":\"Gondra\",\"startdate\":\"1920-08-15\",\"enddate\":\"1921-10-30\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-08-15",
+              "until": "1921-10-30",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=PAR-1920; LEADID=81ff173a-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"81ff173a-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1871,\"yrdied\":1927,\"borndate\":\"1871-01-01\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-08-15",
+              "until": "1921-10-30",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1920-08-15 to 1921-10-30.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-81ff173a-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Gondra",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1871-01-01",
+            "until": "1927"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-75ae373a4afc4f82628f384a-5a868614ce",
+          "sourceIdentifier": "Archigos PAR-1920; leadid 81ff173a-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 66dc74a370adf06aa10373e2dc736a81f00af7697d2ff3527e13e0e3f62bcf2d"
+        }
+      },
+      {
+        "id": "office-figure-b92b42f4b3144be357bb334d",
+        "category": "important-figures",
+        "value": "Guggiari",
+        "entityId": "paraguay-1870-constitutional-framework",
+        "temporal": {
+          "kind": "interval",
+          "from": "1928-08-15",
+          "until": "1931-10-26",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "paraguay-1870-constitutional-framework-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row PAR-1928; leadid 81ff4813-1e42-11e4-b4cd-db5882bf8def; idacr PAR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"PAR-1928\",\"leadid\":\"81ff4813-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"PAR\",\"leader\":\"Guggiari\",\"startdate\":\"1928-08-15\",\"enddate\":\"1931-10-26\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1928-08-15",
+              "until": "1931-10-26",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=PAR-1928; LEADID=81ff4813-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"81ff4813-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1884,\"yrdied\":1957,\"borndate\":\"1884-03-17\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1928-08-15",
+              "until": "1931-10-26",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1928-08-15 to 1931-10-26.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-81ff4813-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Guggiari",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1884-03-17",
+            "until": "1957"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Paraguay — 1870 constitutional framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-d578a5cb1f5cbbeef13171cf-5a868614ce",
+          "sourceIdentifier": "Archigos PAR-1928; leadid 81ff4813-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 18db98a9cfbf772d3030c329853ed790870d1131a46933ee20f2f3c14676191f"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "preservedPackageHashes": [
+        "5eb3a126356b9f73fa774eb052eaeb98d6d163f849e70c3d53c68d186e471697",
+        "1abad35e5eb1af197c5c90ced35f06408446cf00f7191cba26001cf194e0933b"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "2e6c39a6947e3365f7d0857a6bc0e1556156ecc63df35628a9ff9e438dbf45ef",
+    "productionFingerprint": "572833e13152c75c92f8d7d2194729e217548cc91a44dc8e78bfc5a3e73d4b5c",
+    "jobId": "dossier-484beb7c8bd60b183f082dd5",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide reviewer",
+      "packageHash": "2e6c39a6947e3365f7d0857a6bc0e1556156ecc63df35628a9ff9e438dbf45ef",
+      "bodyReviewed": true,
+      "rationale": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "reviewedIssues": [],
+      "decisions": {
+        "office-figure-737e432ec663fba806d52546": "accepted",
+        "office-figure-aa408d5f79cb503103a01877": "accepted",
+        "office-figure-dc9ca321ac8ae2ef6e2ebd19": "accepted",
+        "office-figure-0988aaa2f61538d1a6016ff9": "accepted",
+        "office-figure-f71efd8e573ea757b4cfe00c": "accepted",
+        "office-figure-086e2bdc35f9dd4837d3cefc": "accepted",
+        "office-figure-fd4245ec55940e650d24de3c": "accepted",
+        "office-figure-b92b42f4b3144be357bb334d": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "office-figure-737e432ec663fba806d52546",
+      "office-figure-aa408d5f79cb503103a01877",
+      "office-figure-dc9ca321ac8ae2ef6e2ebd19",
+      "office-figure-0988aaa2f61538d1a6016ff9",
+      "office-figure-f71efd8e573ea757b4cfe00c",
+      "office-figure-086e2bdc35f9dd4837d3cefc",
+      "office-figure-fd4245ec55940e650d24de3c",
+      "office-figure-b92b42f4b3144be357bb334d"
+    ]
+  }
+}

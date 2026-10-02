@@ -1,0 +1,540 @@
+{
+  "job": {
+    "id": "dossier-c9013e796588bdca70891da1",
+    "entityId": "new-zealand-preadoption-dominion-core",
+    "period": {
+      "from": "1928-12-10",
+      "until": "1947-11-25"
+    },
+    "mapIds": [
+      "entity-new-zealand"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "9175a012e4fdcc2b039ceff2cf89b60b6863f03e25e66775ad19aebcefa38f5e",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-accepted-office-figures-new-zealand-preadoption-dominion-core",
+    "jobId": "dossier-c9013e796588bdca70891da1",
+    "entityId": "new-zealand-preadoption-dominion-core",
+    "mapIds": [
+      "entity-new-zealand"
+    ],
+    "worker": {
+      "id": "campaign2-flags",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "9175a012e4fdcc2b039ceff2cf89b60b6863f03e25e66775ad19aebcefa38f5e",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1928-12-10",
+      "until": "1947-11-25"
+    },
+    "claims": [
+      {
+        "id": "office-figure-d0f6abe6e3591bb429ed0d23",
+        "category": "important-figures",
+        "value": "Ward",
+        "entityId": "new-zealand-preadoption-dominion-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1928-12-10",
+          "until": "1930-05-15",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "new-zealand-preadoption-dominion-core-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within New Zealand — Dominion parliamentary framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row NEW-1928; leadid 824ea233-1e42-11e4-b4cd-db5882bf8def; idacr NEW; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"NEW-1928\",\"leadid\":\"824ea233-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"NEW\",\"leader\":\"Ward\",\"startdate\":\"1928-12-10\",\"enddate\":\"1930-05-15\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1928-12-10",
+              "until": "1930-05-15",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=NEW-1928; LEADID=824ea233-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"824ea233-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1856,\"yrdied\":1930,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1928-12-10",
+              "until": "1930-05-15",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1928-12-10 to 1930-05-15.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within New Zealand — Dominion parliamentary framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-824ea233-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Ward",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1856",
+            "until": "1930"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within New Zealand — Dominion parliamentary framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-92e69600cdaa43c7c538bafc-dbee8902c1",
+          "sourceIdentifier": "Archigos NEW-1928; leadid 824ea233-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 8684da09ef25ee2d33647f61e0aaf63e98dba25c15ac4fee9b22f73638ef598e"
+        }
+      },
+      {
+        "id": "office-figure-364a352524cdcb351a9d853a",
+        "category": "important-figures",
+        "value": "Forbes",
+        "entityId": "new-zealand-preadoption-dominion-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1930-05-28",
+          "until": "1935-11-27",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "new-zealand-preadoption-dominion-core-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within New Zealand — Dominion parliamentary framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row NEW-1930; leadid 824ed306-1e42-11e4-b4cd-db5882bf8def; idacr NEW; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"NEW-1930\",\"leadid\":\"824ed306-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"NEW\",\"leader\":\"Forbes\",\"startdate\":\"1930-05-28\",\"enddate\":\"1935-11-27\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-05-28",
+              "until": "1935-11-27",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=NEW-1930; LEADID=824ed306-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"824ed306-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1869,\"yrdied\":1947,\"borndate\":\"1869-03-12\",\"deathdate\":\"1947-05-17\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-05-28",
+              "until": "1935-11-27",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1930-05-28 to 1935-11-27.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within New Zealand — Dominion parliamentary framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-824ed306-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Forbes",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1869-03-12",
+            "until": "1947-05-17"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within New Zealand — Dominion parliamentary framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-17333077ead24792cdc84cd4-dbee8902c1",
+          "sourceIdentifier": "Archigos NEW-1930; leadid 824ed306-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 83f3900fe6db92881137dda74db4bae0b19e472ed627a88a9f29d146086859af"
+        }
+      },
+      {
+        "id": "office-figure-9b48601807ed7bd701c5580a",
+        "category": "important-figures",
+        "value": "Savage",
+        "entityId": "new-zealand-preadoption-dominion-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1935-11-27",
+          "until": "1940-03-26",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "new-zealand-preadoption-dominion-core-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within New Zealand — Dominion parliamentary framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row NEW-1935; leadid 824ed307-1e42-11e4-b4cd-db5882bf8def; idacr NEW; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"NEW-1935\",\"leadid\":\"824ed307-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"NEW\",\"leader\":\"Savage\",\"startdate\":\"1935-11-27\",\"enddate\":\"1940-03-26\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1935-11-27",
+              "until": "1940-03-26",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=NEW-1935; LEADID=824ed307-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"824ed307-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1872,\"yrdied\":1940,\"borndate\":\"1872-03-07\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1935-11-27",
+              "until": "1940-03-26",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1935-11-27 to 1940-03-26.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within New Zealand — Dominion parliamentary framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-824ed307-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Savage",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1872-03-07",
+            "until": "1940"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within New Zealand — Dominion parliamentary framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-f1630ca788eda5fbbd1e85a0-dbee8902c1",
+          "sourceIdentifier": "Archigos NEW-1935; leadid 824ed307-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA e470e15d0e560ce7513737b55c3f15e11a48a2a0d68bd7b6c149b0660f1488c5"
+        }
+      },
+      {
+        "id": "office-figure-7b417b33fab0c098a3bfcbb5",
+        "category": "important-figures",
+        "value": "Fraser",
+        "entityId": "new-zealand-preadoption-dominion-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1940-04-01",
+          "until": "1947-11-25",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "new-zealand-preadoption-dominion-core-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within New Zealand — Dominion parliamentary framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row NEW-1940; leadid 824f03da-1e42-11e4-b4cd-db5882bf8def; idacr NEW; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"NEW-1940\",\"leadid\":\"824f03da-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"NEW\",\"leader\":\"Fraser\",\"startdate\":\"1940-04-01\",\"enddate\":\"1949-12-12\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1940-04-01",
+              "until": "1949-12-12",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=NEW-1940; LEADID=824f03da-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"824f03da-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1884,\"yrdied\":1950,\"borndate\":\"1884-08-28\",\"deathdate\":\"1950-12-12\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1940-04-01",
+              "until": "1947-11-25",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1940-04-01 to 1949-12-12.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within New Zealand — Dominion parliamentary framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-824f03da-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Fraser",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1884-08-28",
+            "until": "1950-12-12"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within New Zealand — Dominion parliamentary framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-e12d1369dc1e21d4987cdf07-dbee8902c1",
+          "sourceIdentifier": "Archigos NEW-1940; leadid 824f03da-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA e951351e8d583ccf080c55c725751e911791b14afed337ae37cb45c0bf47af5d"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "preservedPackageHashes": [
+        "5eb3a126356b9f73fa774eb052eaeb98d6d163f849e70c3d53c68d186e471697",
+        "1abad35e5eb1af197c5c90ced35f06408446cf00f7191cba26001cf194e0933b"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "a93cac193a02968d7e3559b97d214d6acb8e547c22b05aaf9df82153ea09789e",
+    "productionFingerprint": "9175a012e4fdcc2b039ceff2cf89b60b6863f03e25e66775ad19aebcefa38f5e",
+    "jobId": "dossier-c9013e796588bdca70891da1",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide reviewer",
+      "packageHash": "a93cac193a02968d7e3559b97d214d6acb8e547c22b05aaf9df82153ea09789e",
+      "bodyReviewed": true,
+      "rationale": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "reviewedIssues": [],
+      "decisions": {
+        "office-figure-d0f6abe6e3591bb429ed0d23": "accepted",
+        "office-figure-364a352524cdcb351a9d853a": "accepted",
+        "office-figure-9b48601807ed7bd701c5580a": "accepted",
+        "office-figure-7b417b33fab0c098a3bfcbb5": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "office-figure-d0f6abe6e3591bb429ed0d23",
+      "office-figure-364a352524cdcb351a9d853a",
+      "office-figure-9b48601807ed7bd701c5580a",
+      "office-figure-7b417b33fab0c098a3bfcbb5"
+    ]
+  }
+}

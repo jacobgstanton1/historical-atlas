@@ -1,0 +1,940 @@
+{
+  "job": {
+    "id": "dossier-59e90b015fdb38a4f490e42d",
+    "entityId": "belgium-kingdom",
+    "period": {
+      "from": "1875-01-01",
+      "until": "1961-01-01"
+    },
+    "mapIds": [
+      "entity-belgium"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "348d64cf98e83e22afc04a9b5feba8f514a2dc8893cc95161f0124cceea3c42a",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-accepted-office-figures-belgium-kingdom",
+    "jobId": "dossier-59e90b015fdb38a4f490e42d",
+    "entityId": "belgium-kingdom",
+    "mapIds": [
+      "entity-belgium"
+    ],
+    "worker": {
+      "id": "campaign2-flags",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "348d64cf98e83e22afc04a9b5feba8f514a2dc8893cc95161f0124cceea3c42a",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1875-01-01",
+      "until": "1961-01-01"
+    },
+    "claims": [
+      {
+        "id": "office-figure-157cc1df05b2c1d25703497b",
+        "category": "important-figures",
+        "value": "Jules Malou",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1875-01-01",
+          "until": "1878-06-19",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row BEL-1871; leadid 8209c5d7-1e42-11e4-b4cd-db5882bf8def; idacr BEL; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"BEL-1871\",\"leadid\":\"8209c5d7-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"BEL\",\"leader\":\"Jules Malou\",\"startdate\":\"1871-12-07\",\"enddate\":\"1878-06-19\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1871-12-07",
+              "until": "1878-06-19",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=BEL-1871; LEADID=8209c5d7-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"8209c5d7-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1810,\"yrdied\":1886,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1875-01-01",
+              "until": "1878-06-19",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1871-12-07 to 1878-06-19.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-8209c5d7-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Jules Malou",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1810",
+            "until": "1886"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-4f2d7f4d9b5bc3b3b08dd212-1dfedb815b",
+          "sourceIdentifier": "Archigos BEL-1871; leadid 8209c5d7-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA dba2a472e6c1b3fe309b7b06dd7e137bab6803d41c940855a879d81b47e74ca7"
+        }
+      },
+      {
+        "id": "office-figure-777cef9eccdb453615b8bc25",
+        "category": "important-figures",
+        "value": "Walthere Frere-Orban",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1878-06-19",
+          "until": "1884-06-16",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row BEL-1878; leadid 19768ee8-3bbd-11e5-afeb-eb6f07f9fec7; idacr BEL; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"BEL-1878\",\"leadid\":\"19768ee8-3bbd-11e5-afeb-eb6f07f9fec7\",\"idacr\":\"BEL\",\"leader\":\"Walthere Frere-Orban\",\"startdate\":\"1878-06-19\",\"enddate\":\"1884-06-16\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1878-06-19",
+              "until": "1884-06-16",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=BEL-1878; LEADID=19768ee8-3bbd-11e5-afeb-eb6f07f9fec7; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"19768ee8-3bbd-11e5-afeb-eb6f07f9fec7\",\"yrborn\":1812,\"yrdied\":1896,\"borndate\":\"1812-04-22\",\"deathdate\":\"1896-02-02\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1878-06-19",
+              "until": "1884-06-16",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1878-06-19 to 1884-06-16.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-19768ee8-3bbd-11e5-afeb-eb6f07f9fec7",
+          "name": "Walthere Frere-Orban",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1812-04-22",
+            "until": "1896-02-02"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-0b958e461dd86d13721da054-1dfedb815b",
+          "sourceIdentifier": "Archigos BEL-1878; leadid 19768ee8-3bbd-11e5-afeb-eb6f07f9fec7; original accepted leadership SHA 19b6ba59f8ebbb4a32b64a7b1198f00232cf5fc904b1fd6d014cd587eb1cc116"
+        }
+      },
+      {
+        "id": "office-figure-3634072c19d25df95c946bf2",
+        "category": "important-figures",
+        "value": "Paul de Smet de Nayer",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1899-08-05",
+          "until": "1907-05-02",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row BEL-1899-2; leadid 8209c5da-1e42-11e4-b4cd-db5882bf8def; idacr BEL; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"BEL-1899-2\",\"leadid\":\"8209c5da-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"BEL\",\"leader\":\"Paul de Smet de Nayer\",\"startdate\":\"1899-08-05\",\"enddate\":\"1907-05-02\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1899-08-05",
+              "until": "1907-05-02",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=BEL-1899-2; LEADID=8209c5da-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"8209c5da-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1843,\"yrdied\":1913,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1899-08-05",
+              "until": "1907-05-02",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1899-08-05 to 1907-05-02.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-8209c5da-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Paul de Smet de Nayer",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1843",
+            "until": "1913"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-68ea934a8c4b013842242036-1dfedb815b",
+          "sourceIdentifier": "Archigos BEL-1899-2; leadid 8209c5da-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA c1f5fe334d9f073c1d86ebfd8bb3e0d89a82c9f8221757e15853d5dc835e12ce"
+        }
+      },
+      {
+        "id": "office-figure-ef8cbdb66f5647bd126fb061",
+        "category": "important-figures",
+        "value": "Delacroix",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1919-01-01",
+          "until": "1920-11-03",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row BEL-1918-2; leadid 820a277f-1e42-11e4-b4cd-db5882bf8def; idacr BEL; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"BEL-1918-2\",\"leadid\":\"820a277f-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"BEL\",\"leader\":\"Delacroix\",\"startdate\":\"1918-11-22\",\"enddate\":\"1920-11-03\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1918-11-22",
+              "until": "1920-11-03",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=BEL-1918-2; LEADID=820a277f-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820a277f-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1876,\"yrdied\":1929,\"borndate\":\"1876-12-27\",\"deathdate\":\"1929-10-15\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1919-01-01",
+              "until": "1920-11-03",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1918-11-22 to 1920-11-03.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820a277f-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Delacroix",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1876-12-27",
+            "until": "1929-10-15"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-059410be7edb58950bffe77e-1dfedb815b",
+          "sourceIdentifier": "Archigos BEL-1918-2; leadid 820a277f-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA e4cf9c87907367d70afa38876c0fa3ff6c85e04a6487f04109a77dcff5341a8c"
+        }
+      },
+      {
+        "id": "office-figure-adfd334575ef58ea7e8b8cf4",
+        "category": "important-figures",
+        "value": "de Wiart",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1920-11-18",
+          "until": "1921-11-19",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row BEL-1920; leadid 820a2780-1e42-11e4-b4cd-db5882bf8def; idacr BEL; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"BEL-1920\",\"leadid\":\"820a2780-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"BEL\",\"leader\":\"de Wiart\",\"startdate\":\"1920-11-18\",\"enddate\":\"1921-11-19\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-11-18",
+              "until": "1921-11-19",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=BEL-1920; LEADID=820a2780-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820a2780-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1869,\"yrdied\":1951,\"borndate\":\"1869-01-31\",\"deathdate\":\"1951-05-06\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-11-18",
+              "until": "1921-11-19",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1920-11-18 to 1921-11-19.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820a2780-1e42-11e4-b4cd-db5882bf8def",
+          "name": "de Wiart",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1869-01-31",
+            "until": "1951-05-06"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-8ee6a76502547769cbaea9fe-1dfedb815b",
+          "sourceIdentifier": "Archigos BEL-1920; leadid 820a2780-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA e7e528438faed1e8496b5fe9672edc1124aca30c0fe42a0d34b588c1cd898afe"
+        }
+      },
+      {
+        "id": "office-figure-43bc2ac28bc3148a53943888",
+        "category": "important-figures",
+        "value": "Jasper",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1926-05-20",
+          "until": "1931-05-21",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row BEL-1926; leadid 820a2784-1e42-11e4-b4cd-db5882bf8def; idacr BEL; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"BEL-1926\",\"leadid\":\"820a2784-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"BEL\",\"leader\":\"Jasper\",\"startdate\":\"1926-05-20\",\"enddate\":\"1931-05-21\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1926-05-20",
+              "until": "1931-05-21",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=BEL-1926; LEADID=820a2784-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820a2784-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1870,\"yrdied\":1939,\"borndate\":\"1870-07-28\",\"deathdate\":\"1939-02-15\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1926-05-20",
+              "until": "1931-05-21",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1926-05-20 to 1931-05-21.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820a2784-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Jasper",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1870-07-28",
+            "until": "1939-02-15"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-fee686dcedd141fc0f01aae6-1dfedb815b",
+          "sourceIdentifier": "Archigos BEL-1926; leadid 820a2784-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 6a1c665b0d17d7222cb33a9cd289d024e2895c0269f887aae8f462fc68b3cd85"
+        }
+      },
+      {
+        "id": "office-figure-a858c691156d967f894effbb",
+        "category": "important-figures",
+        "value": "Janson",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1937-11-24",
+          "until": "1938-05-13",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row BEL-1937; leadid 820a5854-1e42-11e4-b4cd-db5882bf8def; idacr BEL; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"BEL-1937\",\"leadid\":\"820a5854-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"BEL\",\"leader\":\"Janson\",\"startdate\":\"1937-11-24\",\"enddate\":\"1938-05-13\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1937-11-24",
+              "until": "1938-05-13",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=BEL-1937; LEADID=820a5854-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820a5854-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1872,\"yrdied\":1944,\"borndate\":\"1872-05-30\",\"deathdate\":\"1944-03-03\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1937-11-24",
+              "until": "1938-05-13",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1937-11-24 to 1938-05-13.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820a5854-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Janson",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1872-05-30",
+            "until": "1944-03-03"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-3b6b537c111867a5827385e9-1dfedb815b",
+          "sourceIdentifier": "Archigos BEL-1937; leadid 820a5854-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 9ed1678ecac6899c8adfcfaaf479f16aecf17b92c960e36e0bd08585eec74db5"
+        }
+      },
+      {
+        "id": "office-figure-5aa27afabdab206bd7dcbcc8",
+        "category": "important-figures",
+        "value": "Spaak",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1938-05-15",
+          "until": "1939-02-09",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row BEL-1938; leadid 820a5855-1e42-11e4-b4cd-db5882bf8def; idacr BEL; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"BEL-1938\",\"leadid\":\"820a5855-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"BEL\",\"leader\":\"Spaak\",\"startdate\":\"1938-05-15\",\"enddate\":\"1939-02-09\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1938-05-15",
+              "until": "1939-02-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=BEL-1938; LEADID=820a5855-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820a5855-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1899,\"yrdied\":1972,\"borndate\":\"NA\",\"deathdate\":\"1972-07-31\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1938-05-15",
+              "until": "1939-02-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1938-05-15 to 1939-02-09.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820a5855-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Spaak",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1899",
+            "until": "1972-07-31"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-7fdb2ccedeb3151778a96230-1dfedb815b",
+          "sourceIdentifier": "Archigos BEL-1938; leadid 820a5855-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 2085d7a626e5a76e6bb18ea2b09e0643d63b25688faa846fb5a90ffbfc1bb4a0"
+        }
+      },
+      {
+        "id": "office-figure-fe040089670082c6e284b653",
+        "category": "important-figures",
+        "value": "Eyskens, G.",
+        "entityId": "belgium-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1958-06-25",
+          "until": "1961-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "belgium-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row BEL-1958; leadid 820a8927-1e42-11e4-b4cd-db5882bf8def; idacr BEL; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"BEL-1958\",\"leadid\":\"820a8927-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"BEL\",\"leader\":\"Eyskens, G.\",\"startdate\":\"1958-06-25\",\"enddate\":\"1961-03-27\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1958-06-25",
+              "until": "1961-03-27",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=BEL-1958; LEADID=820a8927-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820a8927-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1905,\"yrdied\":1988,\"borndate\":\"1905-04-01\",\"deathdate\":\"1988-01-03\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1958-06-25",
+              "until": "1961-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1958-06-25 to 1961-03-27.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820a8927-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Eyskens, G.",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1905-04-01",
+            "until": "1988-01-03"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Belgium; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-3ffdd5c6168a45f3a78acf4e-1dfedb815b",
+          "sourceIdentifier": "Archigos BEL-1958; leadid 820a8927-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 17e017c8317719fbd9e9b4e1aa883857872b57e1ffb12adf74cd0ac06d622f12"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "preservedPackageHashes": [
+        "5eb3a126356b9f73fa774eb052eaeb98d6d163f849e70c3d53c68d186e471697",
+        "1abad35e5eb1af197c5c90ced35f06408446cf00f7191cba26001cf194e0933b"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "c34efd8262f1ec1c2556fc5f3de546e828b225bfe8ed5534ba3e9e604ecc96f1",
+    "productionFingerprint": "348d64cf98e83e22afc04a9b5feba8f514a2dc8893cc95161f0124cceea3c42a",
+    "jobId": "dossier-59e90b015fdb38a4f490e42d",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide reviewer",
+      "packageHash": "c34efd8262f1ec1c2556fc5f3de546e828b225bfe8ed5534ba3e9e604ecc96f1",
+      "bodyReviewed": true,
+      "rationale": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "reviewedIssues": [],
+      "decisions": {
+        "office-figure-157cc1df05b2c1d25703497b": "accepted",
+        "office-figure-777cef9eccdb453615b8bc25": "accepted",
+        "office-figure-3634072c19d25df95c946bf2": "accepted",
+        "office-figure-ef8cbdb66f5647bd126fb061": "accepted",
+        "office-figure-adfd334575ef58ea7e8b8cf4": "accepted",
+        "office-figure-43bc2ac28bc3148a53943888": "accepted",
+        "office-figure-a858c691156d967f894effbb": "accepted",
+        "office-figure-5aa27afabdab206bd7dcbcc8": "accepted",
+        "office-figure-fe040089670082c6e284b653": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "office-figure-157cc1df05b2c1d25703497b",
+      "office-figure-777cef9eccdb453615b8bc25",
+      "office-figure-3634072c19d25df95c946bf2",
+      "office-figure-ef8cbdb66f5647bd126fb061",
+      "office-figure-adfd334575ef58ea7e8b8cf4",
+      "office-figure-43bc2ac28bc3148a53943888",
+      "office-figure-a858c691156d967f894effbb",
+      "office-figure-5aa27afabdab206bd7dcbcc8",
+      "office-figure-fe040089670082c6e284b653"
+    ]
+  }
+}

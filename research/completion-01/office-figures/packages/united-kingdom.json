@@ -1,0 +1,702 @@
+{
+  "job": {
+    "id": "dossier-7ca54d56c80c8b6d16d62835",
+    "entityId": "united-kingdom",
+    "period": {
+      "from": "1875-01-01",
+      "until": "1940-05-10"
+    },
+    "mapIds": [
+      "entity-united-kingdom",
+      "entity-united-kingdom-of-great-britain-and-ireland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "2ee481b3e377c7dac64d10c15226ec9de3fc335c9ff3495f4bd904ead54f84be",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-accepted-office-figures-united-kingdom",
+    "jobId": "dossier-7ca54d56c80c8b6d16d62835",
+    "entityId": "united-kingdom",
+    "mapIds": [
+      "entity-united-kingdom",
+      "entity-united-kingdom-of-great-britain-and-ireland"
+    ],
+    "worker": {
+      "id": "campaign2-flags",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "2ee481b3e377c7dac64d10c15226ec9de3fc335c9ff3495f4bd904ead54f84be",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1875-01-01",
+      "until": "1940-05-10"
+    },
+    "claims": [
+      {
+        "id": "office-figure-b13a1127b6fd8c3dfd0ac73a",
+        "category": "important-figures",
+        "value": "Disraeli",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1875-01-01",
+          "until": "1880-04-18",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1874; leadid 1975cb98-3bbd-11e5-afeb-eb6f07f9fec7; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1874\",\"leadid\":\"1975cb98-3bbd-11e5-afeb-eb6f07f9fec7\",\"idacr\":\"UKG\",\"leader\":\"Disraeli\",\"startdate\":\"1874-02-20\",\"enddate\":\"1880-04-18\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1874-02-20",
+              "until": "1880-04-18",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=UKG-1874; LEADID=1975cb98-3bbd-11e5-afeb-eb6f07f9fec7; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"1975cb98-3bbd-11e5-afeb-eb6f07f9fec7\",\"yrborn\":1804,\"yrdied\":1881,\"borndate\":\"1804-11-21\",\"deathdate\":\"1881-04-19\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1875-01-01",
+              "until": "1880-04-18",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1874-02-20 to 1880-04-18.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-1975cb98-3bbd-11e5-afeb-eb6f07f9fec7",
+          "name": "Disraeli",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1804-11-21",
+            "until": "1881-04-19"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-5d8d98a6f11347fab24e2a31-2fd3da0793",
+          "sourceIdentifier": "Archigos UKG-1874; leadid 1975cb98-3bbd-11e5-afeb-eb6f07f9fec7; original accepted leadership SHA 2b3a102d0a20d7c108180bcddb4a386cfbeace70f5426a7033b0730ce5bd4703"
+        }
+      },
+      {
+        "id": "office-figure-3c072ce85869cea41a6ea8e1",
+        "category": "important-figures",
+        "value": "Gladstone",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1880-04-28",
+          "until": "1885-06-09",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1880; leadid 3568a438-3bbd-11e5-afeb-eb6f07f9fec7; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1880\",\"leadid\":\"3568a438-3bbd-11e5-afeb-eb6f07f9fec7\",\"idacr\":\"UKG\",\"leader\":\"Gladstone\",\"startdate\":\"1880-04-28\",\"enddate\":\"1885-06-09\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1880-04-28",
+              "until": "1885-06-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=UKG-1880; LEADID=3568a438-3bbd-11e5-afeb-eb6f07f9fec7; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"3568a438-3bbd-11e5-afeb-eb6f07f9fec7\",\"yrborn\":1809,\"yrdied\":1898,\"borndate\":\"1809-12-29\",\"deathdate\":\"1898-05-19\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1880-04-28",
+              "until": "1885-06-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1880-04-28 to 1885-06-09.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-3568a438-3bbd-11e5-afeb-eb6f07f9fec7",
+          "name": "Gladstone",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1809-12-29",
+            "until": "1898-05-19"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-597c8f02063f313b3db05a39-2fd3da0793",
+          "sourceIdentifier": "Archigos UKG-1880; leadid 3568a438-3bbd-11e5-afeb-eb6f07f9fec7; original accepted leadership SHA 2fd7a756941aa2580b63b8c9182cf98bda92f9b929cb7b99c51e9a1e4a00f649"
+        }
+      },
+      {
+        "id": "office-figure-7a0fd417c1053399c78b923d",
+        "category": "important-figures",
+        "value": "Salisbury",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1895-06-28",
+          "until": "1902-07-11",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1895; leadid 8206b883-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1895\",\"leadid\":\"8206b883-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Salisbury\",\"startdate\":\"1895-06-28\",\"enddate\":\"1902-07-11\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1895-06-28",
+              "until": "1902-07-11",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=UKG-1895; LEADID=8206b883-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"8206b883-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1830,\"yrdied\":1903,\"borndate\":\"1830-02-03\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1895-06-28",
+              "until": "1902-07-11",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1895-06-28 to 1902-07-11.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-8206b883-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Salisbury",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1830-02-03",
+            "until": "1903"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-92ce3338d62f56a9af12d8c4-2fd3da0793",
+          "sourceIdentifier": "Archigos UKG-1895; leadid 8206b883-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA dbc67d683f6ae3f37a9965757bc54583eb2cef4d3ebb66bd52b392a829b7c4ae"
+        }
+      },
+      {
+        "id": "office-figure-c9412e2d42664c19d6600720",
+        "category": "important-figures",
+        "value": "Asquith",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1908-04-06",
+          "until": "1916-12-05",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1908; leadid 8206e957-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1908\",\"leadid\":\"8206e957-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Asquith\",\"startdate\":\"1908-04-06\",\"enddate\":\"1916-12-05\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1908-04-06",
+              "until": "1916-12-05",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=UKG-1908; LEADID=8206e957-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"8206e957-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1852,\"yrdied\":1928,\"borndate\":\"1852-09-12\",\"deathdate\":\"1928-02-15\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1908-04-06",
+              "until": "1916-12-05",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1908-04-06 to 1916-12-05.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-8206e957-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Asquith",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1852-09-12",
+            "until": "1928-02-15"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-b3def0fc8772f0f24e7b80b3-2fd3da0793",
+          "sourceIdentifier": "Archigos UKG-1908; leadid 8206e957-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA df7ed52dce70470d2038589df5f103ad5ff84a20618d807c7be44aefb01f6b12"
+        }
+      },
+      {
+        "id": "office-figure-be425631914085778d5f42e6",
+        "category": "important-figures",
+        "value": "Lloyd-George",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1916-12-10",
+          "until": "1922-10-19",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1916; leadid 8206e958-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1916\",\"leadid\":\"8206e958-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Lloyd-George\",\"startdate\":\"1916-12-10\",\"enddate\":\"1922-10-19\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1916-12-10",
+              "until": "1922-10-19",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=UKG-1916; LEADID=8206e958-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"8206e958-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1863,\"yrdied\":1945,\"borndate\":\"1863-11-17\",\"deathdate\":\"1945-03-26\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1916-12-10",
+              "until": "1922-10-19",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1916-12-10 to 1922-10-19.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-8206e958-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Lloyd-George",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1863-11-17",
+            "until": "1945-03-26"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-1de8e904191bd12945d3191d-2fd3da0793",
+          "sourceIdentifier": "Archigos UKG-1916; leadid 8206e958-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 000d113b51870bfa381cdacc0044fe4690a4be38ffd78b17441871ea11b65e1e"
+        }
+      },
+      {
+        "id": "office-figure-e20695f6fc5dd887af6bf2a2",
+        "category": "important-figures",
+        "value": "Chamberlin",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1937-05-28",
+          "until": "1940-05-10",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1937; leadid 82071a2c-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1937\",\"leadid\":\"82071a2c-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Chamberlin\",\"startdate\":\"1937-05-28\",\"enddate\":\"1940-05-10\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1937-05-28",
+              "until": "1940-05-10",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=UKG-1937; LEADID=82071a2c-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"82071a2c-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1869,\"yrdied\":1940,\"borndate\":\"1869-04-18\",\"deathdate\":\"1940-11-09\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1937-05-28",
+              "until": "1940-05-10",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1937-05-28 to 1940-05-10.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-82071a2c-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Chamberlin",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1869-04-18",
+            "until": "1940-11-09"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-505c06722e73e0c2c7a1ad40-2fd3da0793",
+          "sourceIdentifier": "Archigos UKG-1937; leadid 82071a2c-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA b958a2df25dca95ae9b31c8af8fcf1ca5a82c6f172b1c427438d208f6d55d2fb"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "preservedPackageHashes": [
+        "5eb3a126356b9f73fa774eb052eaeb98d6d163f849e70c3d53c68d186e471697",
+        "1abad35e5eb1af197c5c90ced35f06408446cf00f7191cba26001cf194e0933b"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "24d304e0d43141a832e7d9e67d8cf9804fa37c986c4350aa8c88acd2b43d0935",
+    "productionFingerprint": "2ee481b3e377c7dac64d10c15226ec9de3fc335c9ff3495f4bd904ead54f84be",
+    "jobId": "dossier-7ca54d56c80c8b6d16d62835",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide reviewer",
+      "packageHash": "24d304e0d43141a832e7d9e67d8cf9804fa37c986c4350aa8c88acd2b43d0935",
+      "bodyReviewed": true,
+      "rationale": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "reviewedIssues": [],
+      "decisions": {
+        "office-figure-b13a1127b6fd8c3dfd0ac73a": "accepted",
+        "office-figure-3c072ce85869cea41a6ea8e1": "accepted",
+        "office-figure-7a0fd417c1053399c78b923d": "accepted",
+        "office-figure-c9412e2d42664c19d6600720": "accepted",
+        "office-figure-be425631914085778d5f42e6": "accepted",
+        "office-figure-e20695f6fc5dd887af6bf2a2": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "office-figure-b13a1127b6fd8c3dfd0ac73a",
+      "office-figure-3c072ce85869cea41a6ea8e1",
+      "office-figure-7a0fd417c1053399c78b923d",
+      "office-figure-c9412e2d42664c19d6600720",
+      "office-figure-be425631914085778d5f42e6",
+      "office-figure-e20695f6fc5dd887af6bf2a2"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 // Internal completion accounting only. Never imported by the atlas runtime.
 import fs from 'node:fs';
 import path from 'node:path';
-import {scanSnapshots} from './research-snapshot-scan.mjs';
+import {scanSnapshots,fullYear} from './research-snapshot-scan.mjs';
 import {fields} from './research-comprehensive.mjs';
 import {readContext,readJSON,saveJSON,digest,dateRange,isCLI} from './research-common.mjs';
 export const completionCategories=[...fields,'historical-context-status'];
@@ -41,7 +41,7 @@ export function completionMatrix(context,{scan=scanSnapshots(context),resolution
  const rows=scan.rows.map(row=>{
   const categories=Object.fromEntries(Object.entries(row.categories).map(([c,s])=>[c,{...s,status:s.status==='historical-review'?'held':s.status}]));
   const political=categories['political-institutional'],records=political.records.filter(r=>statusIds.has(r.claimId));
-  categories['historical-context-status']={status:records.length?(political.status==='supported'?'supported':political.status==='partial'?'partial':'held'):'missing',records,issues:records.length?political.issues:[]};
+  categories['historical-context-status']={status:records.length?(['supported','partial'].includes(political.status)?(records.some(r=>fullYear({temporal:r.actualTemporal},row.snapshotYear))?'supported':'partial'):'held'):'missing',records,issues:records.length?political.issues:[]};
   for(const category of completionCategories){const slot=categories[category],assessments=resolutions.filter(r=>r.entityId===row.entityId&&r.category===category&&(r.period.from.length===10?dateRange(r.period.from)[0]:dateRange(r.period.from)[1])<=Date.UTC(row.snapshotYear,0,1)&&dateRange(r.period.until)[0]>=Date.UTC(row.snapshotYear+1,0,1));
    if(assessments.length){if(slot.records.length)throw Error('Resolution would overwrite sourced facts');slot.status=assessments[0].status;slot.resolutionId=assessments[0].id;}
    const candidates=held.filter(h=>h.entityId===row.entityId&&h.category===category&&h.snapshotYears?.includes(row.snapshotYear));

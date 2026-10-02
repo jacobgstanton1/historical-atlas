@@ -1,0 +1,17 @@
+// Source-wide normalization of the independently reviewed contemporary Table 32.
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {readJSON,readContext,saveJSON,digest} from './research-common.mjs';
+const base='research/completion-01/empire-statistics/',raw=readJSON(base+'candidate-tranche.json'),review=readJSON(base+'independent-review.json'),context=readContext();
+if(digest(review)!=='f93e3078f126bd587a9a074b9c2c3fc138118bdf329d2386902466e2cf0ccda9'||review.inputCanonicalDigest!==digest(raw))throw Error('Changed source review');
+const sha=path=>crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex');
+for(const b of review.sourceBindings)if(sha(b.path)!==b.sha256)throw Error('Changed source '+b.path);
+const sources=raw.source.bodies.map(b=>({id:'canada-yearbook1915-table32-p'+b.page,title:raw.source.title+', page '+b.page,institution:raw.source.institution,url:b.url,accessed:'2026-10-02',usage:'Official Table32 explicitly reporting1911, reproduced from British Statistical Abstract1913;1915 publication is not an observation date. Row dates/scope/footnotes retained. Area survey dates unspecified.',kind:'official-contemporary-statistical-table'}));
+const claims=review.rows.filter(r=>r.decision==='source-and-mapping-approved').map(r=>{
+ const original=raw.candidates.find(c=>c.candidateId===r.candidateId),f=r.approvedMappedFields,entity=context.db.entities.find(e=>e.id===f.entityId);
+ if(digest(original)!==r.originalCandidateDigest||digest(entity)!==r.mappingReceipt.entityRecordDigest||f.statisticalComparability!=='HISTORICALLY_MATCHING_SCOPE')throw Error('Changed or unsafe approved row');
+ const sourceId='canada-yearbook1915-table32-p'+r.sourceBinding.page,temporal={kind:'observation',observationDate:f.observationDate,certainty:'exact'};
+ return{id:'completion-empire-statistics-'+digest(r.candidateId).slice(0,24),entityId:f.entityId,category:f.category,value:f.value,metric:f.category==='area-statistics'?'Area (source-reported table)':'Population (source-reported table)',unit:f.unit,temporal,scope:{id:f.entityId+'-table32-whole-framework',description:f.scope,relationship:'same'},sourceIds:[sourceId],evidence:[{sourceId,locator:f.locator+'; '+r.sourceBinding.url,note:'Original table row '+r.originalTableRowDigest+'; source body '+r.sourceBinding.sha256+'. '+r.reason,precision:f.observationPrecision,temporal,interpretation:'direct'}],status:'supported',risks:[],qualifications:[...new Set(f.qualifications)],origin:{kind:'bulk-candidate',reference:r.candidateId,sourceIdentifier:f.locator}};
+});
+const cohort={id:'completion01-empire1911-statistics',worker:'completion-official-table-normalizer',sources,claims},bindings=[...review.sourceBindings,{path:base+'independent-review.json',sha256:sha(base+'independent-review.json')},{path:'scripts/research-completion-empire-statistics.mjs',sha256:sha('scripts/research-completion-empire-statistics.mjs')}];
+saveJSON(base+'cohort.json',cohort);saveJSON(base+'certificate.json',{cohortHash:digest(cohort),reviewer:review.reviewer,bodyReviewed:true,acceptedClaimIds:claims.map(c=>c.id),inputBindings:bindings,rationale:review.reviewMethod+' Source catalogue uses each actual reviewed page PDF URL; the input whole-table source ID is normalized to page IDs solely for accurate citation access. Values, units, observation years and approved scope/qualifications are unchanged. Exclusions/printed-total conflicts remain held.'});console.log({accepted:claims.length,held:review.heldCandidateIds.length});

@@ -1,0 +1,460 @@
+{
+  "job": {
+    "id": "dossier-e43484a4f6e5d8b6288f8c18",
+    "entityId": "italy-republican-1948-framework",
+    "period": {
+      "from": "1959-02-15",
+      "until": "1961-01-01"
+    },
+    "mapIds": [
+      "entity-italy"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "ffa2bedb17cd862f957863b4a3a6520c5f5d47806260d9964113377219ace641",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-accepted-office-figures-italy-republican-1948-framework",
+    "jobId": "dossier-e43484a4f6e5d8b6288f8c18",
+    "entityId": "italy-republican-1948-framework",
+    "mapIds": [
+      "entity-italy"
+    ],
+    "worker": {
+      "id": "campaign2-flags",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "ffa2bedb17cd862f957863b4a3a6520c5f5d47806260d9964113377219ace641",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1959-02-15",
+      "until": "1961-01-01"
+    },
+    "claims": [
+      {
+        "id": "office-figure-e67f63d7151bbe67871ef0b2",
+        "category": "important-figures",
+        "value": "Segni",
+        "entityId": "italy-republican-1948-framework",
+        "temporal": {
+          "kind": "interval",
+          "from": "1959-02-15",
+          "until": "1960-02-24",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "italy-republican-1948-framework-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Italian Republic — 1948 constitutional framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row ITA-1959; leadid 8219393c-1e42-11e4-b4cd-db5882bf8def; idacr ITA; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"ITA-1959\",\"leadid\":\"8219393c-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"ITA\",\"leader\":\"Segni\",\"startdate\":\"1959-02-15\",\"enddate\":\"1960-02-24\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1959-02-15",
+              "until": "1960-02-24",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=ITA-1959; LEADID=8219393c-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"8219393c-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1891,\"yrdied\":1972,\"borndate\":\"1891-02-02\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1959-02-15",
+              "until": "1960-02-24",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1959-02-15 to 1960-02-24.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Italian Republic — 1948 constitutional framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-8219393c-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Segni",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1891-02-02",
+            "until": "1972"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Italian Republic — 1948 constitutional framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-f4793ff7fb3d20fc518338bd-55bda56991",
+          "sourceIdentifier": "Archigos ITA-1959; leadid 8219393c-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA ebffbed9141b8f97c85f2687e8af9df5e406d0b2ea9e0018b00f07828525e156"
+        }
+      },
+      {
+        "id": "office-figure-ddb71ed7c9058754a92355bf",
+        "category": "important-figures",
+        "value": "Tambroni",
+        "entityId": "italy-republican-1948-framework",
+        "temporal": {
+          "kind": "interval",
+          "from": "1960-03-25",
+          "until": "1960-07-19",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "italy-republican-1948-framework-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Italian Republic — 1948 constitutional framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row ITA-1960-1; leadid 8219393e-1e42-11e4-b4cd-db5882bf8def; idacr ITA; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"ITA-1960-1\",\"leadid\":\"8219393e-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"ITA\",\"leader\":\"Tambroni\",\"startdate\":\"1960-03-25\",\"enddate\":\"1960-07-19\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1960-03-25",
+              "until": "1960-07-19",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=ITA-1960-1; LEADID=8219393e-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"8219393e-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1901,\"yrdied\":1963,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1960-03-25",
+              "until": "1960-07-19",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1960-03-25 to 1960-07-19.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Italian Republic — 1948 constitutional framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-8219393e-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Tambroni",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1901",
+            "until": "1963"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Italian Republic — 1948 constitutional framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-ab361390627880af61ecf82b-55bda56991",
+          "sourceIdentifier": "Archigos ITA-1960-1; leadid 8219393e-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA cc91283a0a717f0ca28386f5468fc6e6d2c46907addb597673a455f0fc9f5b98"
+        }
+      },
+      {
+        "id": "office-figure-9e9214d6bbd57aef2cf57575",
+        "category": "important-figures",
+        "value": "Fanfani",
+        "entityId": "italy-republican-1948-framework",
+        "temporal": {
+          "kind": "interval",
+          "from": "1960-07-26",
+          "until": "1961-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "italy-republican-1948-framework-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Italian Republic — 1948 constitutional framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row ITA-1960-2; leadid 8219393a-1e42-11e4-b4cd-db5882bf8def; idacr ITA; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"ITA-1960-2\",\"leadid\":\"8219393a-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"ITA\",\"leader\":\"Fanfani\",\"startdate\":\"1960-07-26\",\"enddate\":\"1963-05-16\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1960-07-26",
+              "until": "1963-05-16",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=ITA-1960-2; LEADID=8219393a-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"8219393a-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1908,\"yrdied\":1999,\"borndate\":\"1908-02-06\",\"deathdate\":\"1999-11-20\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1960-07-26",
+              "until": "1961-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1960-07-26 to 1963-05-16.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Italian Republic — 1948 constitutional framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-8219393a-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Fanfani",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1908-02-06",
+            "until": "1999-11-20"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Italian Republic — 1948 constitutional framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-bf7e5af2359b8c3e3516c4e4-55bda56991",
+          "sourceIdentifier": "Archigos ITA-1960-2; leadid 8219393a-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 257eeaa1adccd225954a42f41af10d83dd7a4ce289c410d2661958ac84705d36"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "preservedPackageHashes": [
+        "5eb3a126356b9f73fa774eb052eaeb98d6d163f849e70c3d53c68d186e471697",
+        "1abad35e5eb1af197c5c90ced35f06408446cf00f7191cba26001cf194e0933b"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "4b20d556ff45dc8dc406107163f7a68f676afee05f8f203053d9d11755afc702",
+    "productionFingerprint": "ffa2bedb17cd862f957863b4a3a6520c5f5d47806260d9964113377219ace641",
+    "jobId": "dossier-e43484a4f6e5d8b6288f8c18",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide reviewer",
+      "packageHash": "4b20d556ff45dc8dc406107163f7a68f676afee05f8f203053d9d11755afc702",
+      "bodyReviewed": true,
+      "rationale": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "reviewedIssues": [],
+      "decisions": {
+        "office-figure-e67f63d7151bbe67871ef0b2": "accepted",
+        "office-figure-ddb71ed7c9058754a92355bf": "accepted",
+        "office-figure-9e9214d6bbd57aef2cf57575": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "office-figure-e67f63d7151bbe67871ef0b2",
+      "office-figure-ddb71ed7c9058754a92355bf",
+      "office-figure-9e9214d6bbd57aef2cf57575"
+    ]
+  }
+}

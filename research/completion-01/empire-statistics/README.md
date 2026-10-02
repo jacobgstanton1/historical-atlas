@@ -1,0 +1,13 @@
+# Contemporary empire-wide statistical table
+
+Official Canada Year Book1915 Table32, printed100–102, explicitly reports **1911** area and population, reproduced from British Statistical Abstract1913. The three individual publisher facsimiles are retained and SHA256-bound. The alleged full-PDF cache is actually an archived-web HTML notice and is not source evidence.
+
+83 rows, including subdivisions and aggregate rows, yield166 raw category candidates. Only straightforward proposed framework matches valid throughout the actual observation year may proceed to independent review. Many production frameworks begin1912/1914; they remain held without changing existence. Publication1915 and abstract edition1913 are never transformed into observation dates.
+
+Area is a source-reported1911 statistical table observation in square miles. Underlying survey/measurement date is explicitly unspecified. Population normally reports1911 at year precision; Socotra/Papua footnote1 says estimated1910. Exact census days are not supplied by this table. Exclusions and scope footnotes remain visible. No density derivation, no invented day/month, no geometry inference. HongKong/NewTerritories area404 is shared; individual areas remain absent. Canada's source total is7206643, verified visually, although searchable PDF extraction repeats/misreads merged cells.
+
+Safe-looking proposals cover Ceylon, SouthAfricaUnion, Basutoland, Nyasaland, Canada, SaintLucia, Bahamas, Jamaica, SierraLeone, Gambia, Barbados, Grenada, Dominica, BritishHonduras, BritishGuiana and Malta. Table subdivisions, ambiguous unions/protectorate geographies, out-of-framework observations and explicitly excluded Fiji stay held. This source does **not** meet the aspirational100missing-slot target: currently26 missing1914slots are proposed (32review candidates; six category slots already covered or absent from the1914matrix). Preserve that limitation rather than force mappings or dates.
+
+Run `node research/completion-01/empire-statistics/build-table.mjs` only before freezing; `node research/completion-01/empire-statistics/validate-table.mjs` verifies source bytes, canonical artifact digest, row/category counts, temporal contracts and required holds. Independent review must certify original facsimile values and historical scopes before integration. No production files were edited.
+
+Retrieval: original full-book URL returned archivedHTML; one read-only header follow-up; officialTOC; three successful bounded PDFpage requests. No per-country searches or extra books. Facsimiles/rendered images and original HTML notice are preserved in `cache/`.

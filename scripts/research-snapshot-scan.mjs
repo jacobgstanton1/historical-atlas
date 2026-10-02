@@ -29,7 +29,7 @@ function legacyClaim(e,field,r){
  const signature={entityId:e.id,category,value:r.value??r.text??r.name??r.asset,temporal,role:r.role,metric:r.metric};
  return{...signature,id:'legacy-'+digest(signature),sourceIds:r.sourceIds||[],status:['low','inferred','speculative','uncertain'].includes(r.confidence)?'review':'supported',scope:r.scope,scopeRelationship:r.scopeRelationship||r.snapshotCompatibility?.scopeRelationship,temporal,legacy:true,field,flag:category==='historical-flag'?{asset:r.asset,license:r.license,attribution:r.attribution,sha256:r.assetSha256}:undefined,reviewRequired:r.reviewStatus==='required'||r.reviewStatus==='unresolved',snapshotCompatibility:r.snapshotCompatibility};
 }
-function fullYear(c,year){
+export function fullYear(c,year){
  if(c.temporal.kind!=='interval')return true;
  const y=dateBounds(yearDate(year));let b=bounds(c.temporal);
  // Unknown endpoint precision stays partial at that boundary; never invent a day.
@@ -37,6 +37,20 @@ function fullYear(c,year){
  if(from&&dateBounds(from).precision!=='day')b={...b,lo:dateBounds(from).hi};
  if(until&&dateBounds(until).precision!=='day')b={...b,hi:dateBounds(until).lo};
  return b.lo<=y.lo&&b.hi>=y.hi;
+}
+// Combine only documented intervals for the same field/office and territorial scope.
+// Conservative inner bounds leave coarse endpoints and real gaps unresolved.
+export function collectiveFullYear(claims,year){
+ if(claims.some(c=>fullYear(c,year)))return true;
+ const allowed=new Set(['identity','political-institutional','leadership','capital','currency','historical-flag','relationships']);
+ const groups=new Map(),y=dateBounds(yearDate(year));
+ for(const c of claims){if(c.temporal.kind!=='interval'||!allowed.has(c.category))continue;
+  const key=JSON.stringify([c.category,c.field||'',c.role||'',c.metric||'',c.scope?.id||'']);
+  let b=bounds(c.temporal);if(c.temporal.from&&dateBounds(c.temporal.from).precision!=='day')b={...b,lo:dateBounds(c.temporal.from).hi};if(c.temporal.until&&dateBounds(c.temporal.until).precision!=='day')b={...b,hi:dateBounds(c.temporal.until).lo};
+  if(b.lo>=b.hi)continue;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(b);
+ }
+ for(const list of groups.values()){let end=y.lo;for(const b of list.sort((a,b)=>a.lo-b.lo||a.hi-b.hi)){if(b.hi<=end)continue;if(b.lo>end)break;end=b.hi;if(end>=y.hi)return true;}}
+ return false;
 }
 function match(c,year,options){
  const t=c.temporal,y=dateBounds(yearDate(year));
@@ -100,7 +114,7 @@ export function scanSnapshots(context,{snapshots,entityIds,rich,queue,observatio
   const mappingPartial=p.mappings.some(m=>!fullYear({temporal:{kind:'interval',from:m.validFrom,until:m.validUntil}},year));
   for(const category of fields){
    const facts=candidates.filter(c=>c.category===category).map(c=>({c,m:match(c,year,{observationWindowYears,contextWindowYears})})).filter(x=>x.m),issues=[];
-   const supported=[];let partial=false;
+   const supported=[],eligible=[];let complete=false;
    for(const {c,m} of facts){
     if(!strong(c,sources)){issues.push('Missing source provenance: '+c.id);continue;}
     if(c.value===undefined||c.value===null){issues.push('Missing substantive value: '+c.id);continue;}
@@ -112,11 +126,12 @@ export function scanSnapshots(context,{snapshots,entityIds,rich,queue,observatio
     if((m.mode==='nearby-observation'||m.mode==='dated-context'||statistical&&!c.legacy)&&!compatible(c)){issues.push('Scope compatibility requires review: '+c.id);continue;}
     if(c.scope?.relationship&&c.scope.relationship!=='same'){issues.push('Different territorial scope: '+c.id);continue;}
     supported.push({claimId:c.id,value:c.value,sourceIds:c.sourceIds,actualTemporal:m.actualTemporal,mode:m.mode,scope:c.scope,qualifications:c.qualifications||[]});
-    if(!fullYear(c,year))partial=true;
+    eligible.push(c);
    }
    for(let i=0;i<facts.length;i++)for(let j=i+1;j<facts.length;j++)if(conflict(facts[i].c,facts[j].c))issues.push('Conflicting facts: '+facts[i].c.id+' / '+facts[j].c.id);
+   complete=collectiveFullYear(eligible,year);
    const explicitNA=!facts.length&&rich.packages.some(pkg=>pkg.entityId===p.entity.id&&fullYear({temporal:{...pkg.period,kind:'interval'}},year)&&pkg.investigation?.some(i=>i.category===category&&i.status==='not-applicable'&&i.rationale&&i.consultedSourceIds?.length&&i.consultedSourceIds.every(id=>sources.has(id))));
-   const status=issues.length?'historical-review':supported.length?(partial?'partial':'supported'):explicitNA?'not-applicable':'missing';
+   const status=issues.length?'historical-review':supported.length?(complete?'supported':'partial'):explicitNA?'not-applicable':'missing';
    categories[category]={status,records:supported,issues:unique(issues)};
    if(status==='supported'||status==='partial')for(const f of supported){const k=f.claimId;if(!usage.has(k))usage.set(k,new Set());usage.get(k).add(year+'|'+p.entity.id+'|'+category);}
   }

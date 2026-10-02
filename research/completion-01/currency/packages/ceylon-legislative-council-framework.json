@@ -1,0 +1,284 @@
+{
+  "job": {
+    "id": "dossier-692b626ff715e33e239098af",
+    "entityId": "ceylon-legislative-council-framework",
+    "period": {
+      "from": "1872-03-17",
+      "until": "1931-01-01"
+    },
+    "mapIds": [
+      "entity-ceylon"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "3da8eadd9402c0fbce2b897e22d98fc53ed6077675136354f999e9bdd38193bd",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-cached-currency-final-ceylon-legislative-council-framework",
+    "jobId": "dossier-692b626ff715e33e239098af",
+    "entityId": "ceylon-legislative-council-framework",
+    "mapIds": [
+      "entity-ceylon"
+    ],
+    "worker": {
+      "id": "source-bound-currency-normalizer",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "3da8eadd9402c0fbce2b897e22d98fc53ed6077675136354f999e9bdd38193bd",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1872-03-17",
+      "until": "1931-01-01"
+    },
+    "claims": [
+      {
+        "id": "completion-currency-ceylon-decimal-rupee-ceylon-legislative-council-framework",
+        "entityId": "ceylon-legislative-council-framework",
+        "category": "currency",
+        "metric": "historical-monetary-unit",
+        "value": "Rupee (Ceylon decimal unit;100 cents)",
+        "temporal": {
+          "kind": "interval",
+          "from": "1872-03-17",
+          "until": "1931-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "ceylon-legislative-council-framework-local-monetary-system",
+          "description": "Contemporary Ceylon island currency; no modernSriLanka naming back-projection.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "completion-currency-cbsl-anniversary"
+        ],
+        "evidence": [
+          {
+            "sourceId": "completion-currency-cbsl-anniversary",
+            "locator": "printed90/PDFpage101: inherited currency system and17March1872 decimalcoinage",
+            "note": "17March1872 is decimal copper-coinage introduction,100cents to rupee, not first rupee use.1950CBSL inherited colonial currency system;28August endpoint is source/institutional continuity context, not unit termination.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1872-03-17",
+              "until": "1950-08-28",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Official historical volume states decimal Ceylon copper coinage introduced17March1872 at100cents perrupee;1950CBSL inherited the colonial currency system. Introduction is decimal coinage, not necessarily the firstrupee or solelegal-tender date.",
+          "Conservative researchedinterior of originalsourceprecision andexistingframework. Sourceyear/monthprecision never re-described as exactlegalintroduction;1961cutoff isatlasresearchbound.",
+          "17March1872 is decimal copper-coinage introduction,100cents to rupee, not first rupee use.1950CBSL inherited colonial currency system;28August endpoint is source/institutional continuity context, not unit termination.",
+          "Source names original local currency/notes/monetary system explicitly; no inference from metropolitan currency or exclusive legal-tender assertion.",
+          "Display dates are conservative framework/research clipping; original date precision preserved separately."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "completion-currency-ceylon-decimal-rupee-ceylon-legislative-council-framework",
+          "sourceIdentifier": "printed90/PDFpage101: inherited currency system and17March1872 decimalcoinage"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "completion-currency-cbsl-anniversary",
+        "title": "60th Anniversary Commemorative Volume: Currency issue, printedp90",
+        "institution": "Central Bank of Sri Lanka",
+        "url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/publications/60th_anniversary_commemorative_volume_of_the_central_bank_of_sri_lanka.pdf",
+        "accessed": "2026-10-02",
+        "kind": "official-institutional-historical-source",
+        "usage": "Official historical monetary-unit chronology; original local scope, source precision, wartime exclusions and conservative research bounds retained."
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "completion-currency-cbsl-anniversary"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Final already-started safe operation before external acquisition. Exact independently reviewed mapped values/bounds. Source chronology and precision retained; validator must hold any technical precision incompatibility rather than silently changing it.",
+      "preservedPackageHashes": [
+        "298363a80e505cf3290b6a214d5d2df887b99e96fb3aea1cf26a8fec8c944c23",
+        "1e2625988ee34e3c3e19184bb3c6a0bd095d13570a8bbd1c8472ed249c199158"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "f6e87000cf234e157f475f86ea6ffcffb00046aff8b3c45f998d6e0c3d08b690",
+    "productionFingerprint": "3da8eadd9402c0fbce2b897e22d98fc53ed6077675136354f999e9bdd38193bd",
+    "jobId": "dossier-692b626ff715e33e239098af",
+    "review": {
+      "reviewer": "officeholder_sources independent of campaign2_selection extractor",
+      "packageHash": "f6e87000cf234e157f475f86ea6ffcffb00046aff8b3c45f998d6e0c3d08b690",
+      "bodyReviewed": true,
+      "rationale": "Final already-started safe operation before external acquisition. Exact independently reviewed mapped values/bounds. Source chronology and precision retained; validator must hold any technical precision incompatibility rather than silently changing it.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "completion-currency-ceylon-decimal-rupee-ceylon-legislative-council-framework": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "completion-currency-ceylon-decimal-rupee-ceylon-legislative-council-framework"
+    ]
+  }
+}

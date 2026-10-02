@@ -1,0 +1,780 @@
+{
+  "job": {
+    "id": "dossier-bd9cffb5cdc38bcc7d061e43",
+    "entityId": "spain-political-frameworks",
+    "period": {
+      "from": "1877-01-01",
+      "until": "1921-03-08"
+    },
+    "mapIds": [
+      "entity-spain"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "d6ad70e81b7b3c7c081bd9525aaf482e27a4d9404a057ed630639f86cabe636b",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-accepted-office-figures-spain-political-frameworks",
+    "jobId": "dossier-bd9cffb5cdc38bcc7d061e43",
+    "entityId": "spain-political-frameworks",
+    "mapIds": [
+      "entity-spain"
+    ],
+    "worker": {
+      "id": "campaign2-flags",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "d6ad70e81b7b3c7c081bd9525aaf482e27a4d9404a057ed630639f86cabe636b",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1877-01-01",
+      "until": "1921-03-08"
+    },
+    "claims": [
+      {
+        "id": "office-figure-bbb3091a2c34919cffba6051",
+        "category": "important-figures",
+        "value": "del Castillo",
+        "entityId": "spain-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1877-01-01",
+          "until": "1879-03-07",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "spain-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row SPN-1875-2; leadid 821072f1-1e42-11e4-b4cd-db5882bf8def; idacr SPN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"SPN-1875-2\",\"leadid\":\"821072f1-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"SPN\",\"leader\":\"del Castillo\",\"startdate\":\"1875-12-02\",\"enddate\":\"1879-03-07\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1875-12-02",
+              "until": "1879-03-07",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=SPN-1875-2; LEADID=821072f1-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"821072f1-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1828,\"yrdied\":1897,\"borndate\":\"1828-02-08\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1877-01-01",
+              "until": "1879-03-07",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1875-12-02 to 1879-03-07.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-821072f1-1e42-11e4-b4cd-db5882bf8def",
+          "name": "del Castillo",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1828-02-08",
+            "until": "1897"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-9a33d3283bab8128005ae8c4-2df58cf506",
+          "sourceIdentifier": "Archigos SPN-1875-2; leadid 821072f1-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 4f6aa7ec7437f09c91dafc503240294d8788a51126caafb3af0c6ad6dd80aa16"
+        }
+      },
+      {
+        "id": "office-figure-5080a8216509b01fc8d6efc7",
+        "category": "important-figures",
+        "value": "del Castillo",
+        "entityId": "spain-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1879-12-09",
+          "until": "1881-02-08",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "spain-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row SPN-1879-2; leadid 821072f1-1e42-11e4-b4cd-db5882bf8def; idacr SPN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"SPN-1879-2\",\"leadid\":\"821072f1-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"SPN\",\"leader\":\"del Castillo\",\"startdate\":\"1879-12-09\",\"enddate\":\"1881-02-08\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1879-12-09",
+              "until": "1881-02-08",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=SPN-1879-2; LEADID=821072f1-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"821072f1-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1828,\"yrdied\":1897,\"borndate\":\"1828-02-08\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1879-12-09",
+              "until": "1881-02-08",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1879-12-09 to 1881-02-08.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-821072f1-1e42-11e4-b4cd-db5882bf8def",
+          "name": "del Castillo",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1828-02-08",
+            "until": "1897"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-9a95f6d778731cdf7ae97cf7-2df58cf506",
+          "sourceIdentifier": "Archigos SPN-1879-2; leadid 821072f1-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 03b4248536ac72da6591efae9adc172179066206689a9ff8ec362630c1659738"
+        }
+      },
+      {
+        "id": "office-figure-7205a66dc0bdd9ebb3085739",
+        "category": "important-figures",
+        "value": "Le-Vielleuze",
+        "entityId": "spain-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1899-03-05",
+          "until": "1900-10-22",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "spain-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row SPN-1899; leadid 8210a3c4-1e42-11e4-b4cd-db5882bf8def; idacr SPN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"SPN-1899\",\"leadid\":\"8210a3c4-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"SPN\",\"leader\":\"Le-Vielleuze\",\"startdate\":\"1899-03-05\",\"enddate\":\"1900-10-22\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1899-03-05",
+              "until": "1900-10-22",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=SPN-1899; LEADID=8210a3c4-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"8210a3c4-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1843,\"yrdied\":1905,\"borndate\":\"1843-12-15\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1899-03-05",
+              "until": "1900-10-22",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1899-03-05 to 1900-10-22.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-8210a3c4-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Le-Vielleuze",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1843-12-15",
+            "until": "1905"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-1d7f22711a4469f17953f329-2df58cf506",
+          "sourceIdentifier": "Archigos SPN-1899; leadid 8210a3c4-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA a5beef173f6effbc3cf67c184e4e0f463fc1c87cd4626ea8bdb69f12e3b25bd4"
+        }
+      },
+      {
+        "id": "office-figure-6476d1536bd4c200b95bcd86",
+        "category": "important-figures",
+        "value": "Azcarraga y Palmero",
+        "entityId": "spain-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1900-10-22",
+          "until": "1901-02-26",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "spain-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row SPN-1900; leadid 821072f4-1e42-11e4-b4cd-db5882bf8def; idacr SPN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"SPN-1900\",\"leadid\":\"821072f4-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"SPN\",\"leader\":\"Azcarraga y Palmero\",\"startdate\":\"1900-10-22\",\"enddate\":\"1901-02-26\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900-10-22",
+              "until": "1901-02-26",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=SPN-1900; LEADID=821072f4-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"821072f4-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1832,\"yrdied\":1915,\"borndate\":\"1832-09-04\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900-10-22",
+              "until": "1901-02-26",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1900-10-22 to 1901-02-26.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-821072f4-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Azcarraga y Palmero",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1832-09-04",
+            "until": "1915"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-a3f7586e5aaf1ffd40eb6179-2df58cf506",
+          "sourceIdentifier": "Archigos SPN-1900; leadid 821072f4-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 8a5e26f41dc76565a4039106e07a5f06fb5f73325afa2d66adf77a8022cbd86f"
+        }
+      },
+      {
+        "id": "office-figure-18930290eaa2e01f4d08a3f3",
+        "category": "important-figures",
+        "value": "Dato y Iradier",
+        "entityId": "spain-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1913-10-27",
+          "until": "1915-12-09",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "spain-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row SPN-1913; leadid 8211671e-1e42-11e4-b4cd-db5882bf8def; idacr SPN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"SPN-1913\",\"leadid\":\"8211671e-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"SPN\",\"leader\":\"Dato y Iradier\",\"startdate\":\"1913-10-27\",\"enddate\":\"1915-12-09\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1913-10-27",
+              "until": "1915-12-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=SPN-1913; LEADID=8211671e-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"8211671e-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1856,\"yrdied\":1921,\"borndate\":\"1856-08-12\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1913-10-27",
+              "until": "1915-12-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1913-10-27 to 1915-12-09.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-8211671e-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Dato y Iradier",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1856-08-12",
+            "until": "1921"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-f165f51f91a2b5c6e6c3bc73-2df58cf506",
+          "sourceIdentifier": "Archigos SPN-1913; leadid 8211671e-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA ec2963245afe8e4882cb2006e7cfbe1ae07f920c9bdca9bd0be0c4c95ccb82b0"
+        }
+      },
+      {
+        "id": "office-figure-925e9a615c944700908982cf",
+        "category": "important-figures",
+        "value": "Allende Salazar",
+        "entityId": "spain-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1919-12-12",
+          "until": "1920-05-05",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "spain-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row SPN-1919-3; leadid 82116720-1e42-11e4-b4cd-db5882bf8def; idacr SPN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"SPN-1919-3\",\"leadid\":\"82116720-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"SPN\",\"leader\":\"Allende Salazar\",\"startdate\":\"1919-12-12\",\"enddate\":\"1920-05-05\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1919-12-12",
+              "until": "1920-05-05",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=SPN-1919-3; LEADID=82116720-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"82116720-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1856,\"yrdied\":1923,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1919-12-12",
+              "until": "1920-05-05",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1919-12-12 to 1920-05-05.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-82116720-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Allende Salazar",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1856",
+            "until": "1923"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-1b71652f93c44668b681f724-2df58cf506",
+          "sourceIdentifier": "Archigos SPN-1919-3; leadid 82116720-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 2a65eecb7c428af1b63e8be1666a93ed13a050d2e284d4d23338f25c21db3e6b"
+        }
+      },
+      {
+        "id": "office-figure-b6595d725b85da3a7daae32d",
+        "category": "important-figures",
+        "value": "Dato y Iradier",
+        "entityId": "spain-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1920-05-05",
+          "until": "1921-03-08",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "spain-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row SPN-1920; leadid 8211671e-1e42-11e4-b4cd-db5882bf8def; idacr SPN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"SPN-1920\",\"leadid\":\"8211671e-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"SPN\",\"leader\":\"Dato y Iradier\",\"startdate\":\"1920-05-05\",\"enddate\":\"1921-03-08\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-05-05",
+              "until": "1921-03-08",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=SPN-1920; LEADID=8211671e-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"8211671e-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1856,\"yrdied\":1921,\"borndate\":\"1856-08-12\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-05-05",
+              "until": "1921-03-08",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1920-05-05 to 1921-03-08.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-8211671e-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Dato y Iradier",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1856-08-12",
+            "until": "1921"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Spain; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-aed417ce35980b1dd305e60d-2df58cf506",
+          "sourceIdentifier": "Archigos SPN-1920; leadid 8211671e-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA d1ea8144e13e46db1f8aaac30fc126878bfeac0ce89ebadaf020f1de92bc9e04"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "preservedPackageHashes": [
+        "5eb3a126356b9f73fa774eb052eaeb98d6d163f849e70c3d53c68d186e471697",
+        "1abad35e5eb1af197c5c90ced35f06408446cf00f7191cba26001cf194e0933b"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "cc53d0a352e5e859ce4166160656a9e422c956c7437a4506c5d8cc079313e0d5",
+    "productionFingerprint": "d6ad70e81b7b3c7c081bd9525aaf482e27a4d9404a057ed630639f86cabe636b",
+    "jobId": "dossier-bd9cffb5cdc38bcc7d061e43",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide reviewer",
+      "packageHash": "cc53d0a352e5e859ce4166160656a9e422c956c7437a4506c5d8cc079313e0d5",
+      "bodyReviewed": true,
+      "rationale": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "reviewedIssues": [],
+      "decisions": {
+        "office-figure-bbb3091a2c34919cffba6051": "accepted",
+        "office-figure-5080a8216509b01fc8d6efc7": "accepted",
+        "office-figure-7205a66dc0bdd9ebb3085739": "accepted",
+        "office-figure-6476d1536bd4c200b95bcd86": "accepted",
+        "office-figure-18930290eaa2e01f4d08a3f3": "accepted",
+        "office-figure-925e9a615c944700908982cf": "accepted",
+        "office-figure-b6595d725b85da3a7daae32d": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "office-figure-bbb3091a2c34919cffba6051",
+      "office-figure-5080a8216509b01fc8d6efc7",
+      "office-figure-7205a66dc0bdd9ebb3085739",
+      "office-figure-6476d1536bd4c200b95bcd86",
+      "office-figure-18930290eaa2e01f4d08a3f3",
+      "office-figure-925e9a615c944700908982cf",
+      "office-figure-b6595d725b85da3a7daae32d"
+    ]
+  }
+}

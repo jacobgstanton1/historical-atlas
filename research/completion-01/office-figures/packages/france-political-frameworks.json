@@ -1,0 +1,1020 @@
+{
+  "job": {
+    "id": "dossier-b0a106d40c698d868e43538a",
+    "entityId": "france-political-frameworks",
+    "period": {
+      "from": "1899-06-22",
+      "until": "1940-01-01"
+    },
+    "mapIds": [
+      "entity-france"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "e47983d6c376aed83e63c1bb08e3ed9bb463abd7fa4e993f36f81ed6843c8765",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-accepted-office-figures-france-political-frameworks",
+    "jobId": "dossier-b0a106d40c698d868e43538a",
+    "entityId": "france-political-frameworks",
+    "mapIds": [
+      "entity-france"
+    ],
+    "worker": {
+      "id": "campaign2-flags",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "e47983d6c376aed83e63c1bb08e3ed9bb463abd7fa4e993f36f81ed6843c8765",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1899-06-22",
+      "until": "1940-01-01"
+    },
+    "claims": [
+      {
+        "id": "office-figure-2488b5a9c6aa29823db128bc",
+        "category": "important-figures",
+        "value": "Waldeck-Rousseau",
+        "entityId": "france-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1899-06-22",
+          "until": "1902-05-28",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "france-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row FRN-1899; leadid 820c0fd2-1e42-11e4-b4cd-db5882bf8def; idacr FRN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"FRN-1899\",\"leadid\":\"820c0fd2-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"FRN\",\"leader\":\"Waldeck-Rousseau\",\"startdate\":\"1899-06-22\",\"enddate\":\"1902-05-28\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1899-06-22",
+              "until": "1902-05-28",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=FRN-1899; LEADID=820c0fd2-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820c0fd2-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1846,\"yrdied\":1904,\"borndate\":\"NA\",\"deathdate\":\"1904-08-10\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1899-06-22",
+              "until": "1902-05-28",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1899-06-22 to 1902-05-28.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820c0fd2-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Waldeck-Rousseau",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1846",
+            "until": "1904-08-10"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-cc8e531eab671101785597db-664972552c",
+          "sourceIdentifier": "Archigos FRN-1899; leadid 820c0fd2-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 50aadc994b6ca1f4b22fd22bf4c597db53e73df6169e72025d3dd362529d6ff6"
+        }
+      },
+      {
+        "id": "office-figure-26669fa947e94693c5cd6d7d",
+        "category": "important-figures",
+        "value": "Doumergue",
+        "entityId": "france-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1913-12-08",
+          "until": "1914-06-04",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "france-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row FRN-1913-3; leadid 820c40a9-1e42-11e4-b4cd-db5882bf8def; idacr FRN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"FRN-1913-3\",\"leadid\":\"820c40a9-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"FRN\",\"leader\":\"Doumergue\",\"startdate\":\"1913-12-08\",\"enddate\":\"1914-06-04\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1913-12-08",
+              "until": "1914-06-04",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=FRN-1913-3; LEADID=820c40a9-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820c40a9-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1863,\"yrdied\":1937,\"borndate\":\"1863-08-01\",\"deathdate\":\"1937-06-18\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1913-12-08",
+              "until": "1914-06-04",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1913-12-08 to 1914-06-04.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820c40a9-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Doumergue",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1863-08-01",
+            "until": "1937-06-18"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-97ada518d93a859ef9772c4b-664972552c",
+          "sourceIdentifier": "Archigos FRN-1913-3; leadid 820c40a9-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 450c169d5df95f4385a15638c7ff851d7009a9be4a440dbc337bd3ce6ab37fb0"
+        }
+      },
+      {
+        "id": "office-figure-54041e60671ba5b75a1587a1",
+        "category": "important-figures",
+        "value": "Viviani",
+        "entityId": "france-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1914-06-09",
+          "until": "1915-10-29",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "france-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row FRN-1914; leadid 820c7178-1e42-11e4-b4cd-db5882bf8def; idacr FRN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"FRN-1914\",\"leadid\":\"820c7178-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"FRN\",\"leader\":\"Viviani\",\"startdate\":\"1914-06-09\",\"enddate\":\"1915-10-29\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1914-06-09",
+              "until": "1915-10-29",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=FRN-1914; LEADID=820c7178-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820c7178-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1863,\"yrdied\":1925,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1914-06-09",
+              "until": "1915-10-29",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1914-06-09 to 1915-10-29.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820c7178-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Viviani",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1863",
+            "until": "1925"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-2165d26c768a9237114fd2c4-664972552c",
+          "sourceIdentifier": "Archigos FRN-1914; leadid 820c7178-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 06c1032fdacd4b05f744799258c02c98565ae5e401d94eb54a1822c4a8109f6e"
+        }
+      },
+      {
+        "id": "office-figure-54f8e1ddf718993adcbf412c",
+        "category": "important-figures",
+        "value": "Tardieu",
+        "entityId": "france-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1929-11-03",
+          "until": "1930-02-21",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "france-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row FRN-1929-2; leadid 820ca24c-1e42-11e4-b4cd-db5882bf8def; idacr FRN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"FRN-1929-2\",\"leadid\":\"820ca24c-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"FRN\",\"leader\":\"Tardieu\",\"startdate\":\"1929-11-03\",\"enddate\":\"1930-02-21\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1929-11-03",
+              "until": "1930-02-21",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=FRN-1929-2; LEADID=820ca24c-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820ca24c-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1876,\"yrdied\":1945,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1929-11-03",
+              "until": "1930-02-21",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1929-11-03 to 1930-02-21.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820ca24c-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Tardieu",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1876",
+            "until": "1945"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-4e14fcc1ce153d2ab5d5b947-664972552c",
+          "sourceIdentifier": "Archigos FRN-1929-2; leadid 820ca24c-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 991ce04aa6abcaf61e1c725551deb9094ac5ed381e6470ee542ba3a1d0987e97"
+        }
+      },
+      {
+        "id": "office-figure-f3c985bdc04ede47229b2c0f",
+        "category": "important-figures",
+        "value": "Chautemps",
+        "entityId": "france-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1930-02-21",
+          "until": "1930-03-02",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "france-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row FRN-1930-1; leadid 820ca24d-1e42-11e4-b4cd-db5882bf8def; idacr FRN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"FRN-1930-1\",\"leadid\":\"820ca24d-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"FRN\",\"leader\":\"Chautemps\",\"startdate\":\"1930-02-21\",\"enddate\":\"1930-03-02\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-02-21",
+              "until": "1930-03-02",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=FRN-1930-1; LEADID=820ca24d-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820ca24d-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1885,\"yrdied\":1963,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-02-21",
+              "until": "1930-03-02",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1930-02-21 to 1930-03-02.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820ca24d-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Chautemps",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1885",
+            "until": "1963"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-daeb7c83183f71199e0a45b0-664972552c",
+          "sourceIdentifier": "Archigos FRN-1930-1; leadid 820ca24d-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 72c70e7b5a7ff2f48093d630d4aed207296117fcdc4522d7d3819ee077ea7e22"
+        }
+      },
+      {
+        "id": "office-figure-b36112512ded5b0b41c92996",
+        "category": "important-figures",
+        "value": "Tardieu",
+        "entityId": "france-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1930-03-02",
+          "until": "1930-12-13",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "france-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row FRN-1930-2; leadid 820ca24c-1e42-11e4-b4cd-db5882bf8def; idacr FRN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"FRN-1930-2\",\"leadid\":\"820ca24c-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"FRN\",\"leader\":\"Tardieu\",\"startdate\":\"1930-03-02\",\"enddate\":\"1930-12-13\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-03-02",
+              "until": "1930-12-13",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=FRN-1930-2; LEADID=820ca24c-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820ca24c-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1876,\"yrdied\":1945,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-03-02",
+              "until": "1930-12-13",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1930-03-02 to 1930-12-13.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820ca24c-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Tardieu",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1876",
+            "until": "1945"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-d02622b70cfe1cea6fa76675-664972552c",
+          "sourceIdentifier": "Archigos FRN-1930-2; leadid 820ca24c-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 45971bec26542f9274d821504c4972b5c11dc4ec174add4573368f42a55dd0f3"
+        }
+      },
+      {
+        "id": "office-figure-61356c2acf5a380c2148f061",
+        "category": "important-figures",
+        "value": "Steeg",
+        "entityId": "france-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1930-12-13",
+          "until": "1931-01-27",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "france-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row FRN-1930-3; leadid 820ca24e-1e42-11e4-b4cd-db5882bf8def; idacr FRN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"FRN-1930-3\",\"leadid\":\"820ca24e-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"FRN\",\"leader\":\"Steeg\",\"startdate\":\"1930-12-13\",\"enddate\":\"1931-01-27\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-12-13",
+              "until": "1931-01-27",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=FRN-1930-3; LEADID=820ca24e-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820ca24e-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1868,\"yrdied\":1950,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-12-13",
+              "until": "1931-01-27",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1930-12-13 to 1931-01-27.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820ca24e-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Steeg",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1868",
+            "until": "1950"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-a421e92ee99852e2ee660546-664972552c",
+          "sourceIdentifier": "Archigos FRN-1930-3; leadid 820ca24e-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 2fce0c17766ec6e71f630326641e96e28fc1146535965dec4177b5a51c39ea23"
+        }
+      },
+      {
+        "id": "office-figure-ca9ba8cc73f2446ff435770b",
+        "category": "important-figures",
+        "value": "Chautemps",
+        "entityId": "france-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1937-06-23",
+          "until": "1938-03-12",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "france-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row FRN-1937; leadid 820ca24d-1e42-11e4-b4cd-db5882bf8def; idacr FRN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"FRN-1937\",\"leadid\":\"820ca24d-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"FRN\",\"leader\":\"Chautemps\",\"startdate\":\"1937-06-23\",\"enddate\":\"1938-03-12\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1937-06-23",
+              "until": "1938-03-12",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=FRN-1937; LEADID=820ca24d-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820ca24d-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1885,\"yrdied\":1963,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1937-06-23",
+              "until": "1938-03-12",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1937-06-23 to 1938-03-12.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820ca24d-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Chautemps",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1885",
+            "until": "1963"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-49702519dce4cc86bf8cffae-664972552c",
+          "sourceIdentifier": "Archigos FRN-1937; leadid 820ca24d-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 6e259423ac9deb8a9b5e54b96d52419c5e55333212ca28a78125d155bb7a4c31"
+        }
+      },
+      {
+        "id": "office-figure-f3a0850923bdd90b46982d1b",
+        "category": "important-figures",
+        "value": "Blum",
+        "entityId": "france-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1938-03-12",
+          "until": "1938-04-10",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "france-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row FRN-1938-1; leadid 820cd322-1e42-11e4-b4cd-db5882bf8def; idacr FRN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"FRN-1938-1\",\"leadid\":\"820cd322-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"FRN\",\"leader\":\"Blum\",\"startdate\":\"1938-03-12\",\"enddate\":\"1938-04-10\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1938-03-12",
+              "until": "1938-04-10",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=FRN-1938-1; LEADID=820cd322-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820cd322-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1872,\"yrdied\":1950,\"borndate\":\"1872-04-09\",\"deathdate\":\"1950-03-30\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1938-03-12",
+              "until": "1938-04-10",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1938-03-12 to 1938-04-10.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820cd322-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Blum",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1872-04-09",
+            "until": "1950-03-30"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-c474f339eebece920e26d62c-664972552c",
+          "sourceIdentifier": "Archigos FRN-1938-1; leadid 820cd322-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 1c025e02578b113b979ab7adc8b051550e05fb368461df99b833c4b08b9c51d9"
+        }
+      },
+      {
+        "id": "office-figure-fe6342a222cfb0e55d26865d",
+        "category": "important-figures",
+        "value": "Daladier",
+        "entityId": "france-political-frameworks",
+        "temporal": {
+          "kind": "interval",
+          "from": "1938-04-10",
+          "until": "1940-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "france-political-frameworks-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row FRN-1938-2; leadid 820ca251-1e42-11e4-b4cd-db5882bf8def; idacr FRN; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"FRN-1938-2\",\"leadid\":\"820ca251-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"FRN\",\"leader\":\"Daladier\",\"startdate\":\"1938-04-10\",\"enddate\":\"1940-03-21\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1938-04-10",
+              "until": "1940-03-21",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=FRN-1938-2; LEADID=820ca251-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"820ca251-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1884,\"yrdied\":1970,\"borndate\":\"1884-06-18\",\"deathdate\":\"1970-10-10\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1938-04-10",
+              "until": "1940-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1938-04-10 to 1940-03-21.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-820ca251-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Daladier",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1884-06-18",
+            "until": "1970-10-10"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within France; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-948a1194d679a0163488156f-664972552c",
+          "sourceIdentifier": "Archigos FRN-1938-2; leadid 820ca251-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA b3c25df3e2fbdd14a63317aefed39dab9187443a03d8da762e4eaa46303e15cb"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "preservedPackageHashes": [
+        "5eb3a126356b9f73fa774eb052eaeb98d6d163f849e70c3d53c68d186e471697",
+        "1abad35e5eb1af197c5c90ced35f06408446cf00f7191cba26001cf194e0933b"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "88d6a5ce9c66c78ea375f15863321365f041da7460b98e1a2c42a31e4cf2f112",
+    "productionFingerprint": "e47983d6c376aed83e63c1bb08e3ed9bb463abd7fa4e993f36f81ed6843c8765",
+    "jobId": "dossier-b0a106d40c698d868e43538a",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide reviewer",
+      "packageHash": "88d6a5ce9c66c78ea375f15863321365f041da7460b98e1a2c42a31e4cf2f112",
+      "bodyReviewed": true,
+      "rationale": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "reviewedIssues": [],
+      "decisions": {
+        "office-figure-2488b5a9c6aa29823db128bc": "accepted",
+        "office-figure-26669fa947e94693c5cd6d7d": "accepted",
+        "office-figure-54041e60671ba5b75a1587a1": "accepted",
+        "office-figure-54f8e1ddf718993adcbf412c": "accepted",
+        "office-figure-f3c985bdc04ede47229b2c0f": "accepted",
+        "office-figure-b36112512ded5b0b41c92996": "accepted",
+        "office-figure-61356c2acf5a380c2148f061": "accepted",
+        "office-figure-ca9ba8cc73f2446ff435770b": "accepted",
+        "office-figure-f3a0850923bdd90b46982d1b": "accepted",
+        "office-figure-fe6342a222cfb0e55d26865d": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "office-figure-2488b5a9c6aa29823db128bc",
+      "office-figure-26669fa947e94693c5cd6d7d",
+      "office-figure-54041e60671ba5b75a1587a1",
+      "office-figure-54f8e1ddf718993adcbf412c",
+      "office-figure-f3c985bdc04ede47229b2c0f",
+      "office-figure-b36112512ded5b0b41c92996",
+      "office-figure-61356c2acf5a380c2148f061",
+      "office-figure-ca9ba8cc73f2446ff435770b",
+      "office-figure-f3a0850923bdd90b46982d1b",
+      "office-figure-fe6342a222cfb0e55d26865d"
+    ]
+  }
+}

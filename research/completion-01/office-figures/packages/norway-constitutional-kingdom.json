@@ -1,0 +1,620 @@
+{
+  "job": {
+    "id": "dossier-b8a54e2ff016a620f030f2d0",
+    "entityId": "norway-constitutional-kingdom",
+    "period": {
+      "from": "1913-01-29",
+      "until": "1961-01-01"
+    },
+    "mapIds": [
+      "entity-norway"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "0b575c2e5f43dda8b318b82e3542a6b82e71bc70340d9316a0076f555799534d",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-accepted-office-figures-norway-constitutional-kingdom",
+    "jobId": "dossier-b8a54e2ff016a620f030f2d0",
+    "entityId": "norway-constitutional-kingdom",
+    "mapIds": [
+      "entity-norway"
+    ],
+    "worker": {
+      "id": "campaign2-flags",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "0b575c2e5f43dda8b318b82e3542a6b82e71bc70340d9316a0076f555799534d",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1913-01-29",
+      "until": "1961-01-01"
+    },
+    "claims": [
+      {
+        "id": "office-figure-4fc1ad52770b5fdf498d9bcf",
+        "category": "important-figures",
+        "value": "Knudsen",
+        "entityId": "norway-constitutional-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1913-01-29",
+          "until": "1920-06-20",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "norway-constitutional-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row NOR-1913; leadid 822600f5-1e42-11e4-b4cd-db5882bf8def; idacr NOR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"NOR-1913\",\"leadid\":\"822600f5-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"NOR\",\"leader\":\"Knudsen\",\"startdate\":\"1913-01-29\",\"enddate\":\"1920-06-20\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1913-01-29",
+              "until": "1920-06-20",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=NOR-1913; LEADID=822600f5-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"822600f5-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1848,\"yrdied\":1928,\"borndate\":\"1848-09-19\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1913-01-29",
+              "until": "1920-06-20",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1913-01-29 to 1920-06-20.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-822600f5-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Knudsen",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1848-09-19",
+            "until": "1928"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-8062c1e570869627e3dbbf71-24bd39ad6c",
+          "sourceIdentifier": "Archigos NOR-1913; leadid 822600f5-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 12fcc1f86bbf53291be65a74f86e7688fb3493a898d5fdd4292a86c507e72bd4"
+        }
+      },
+      {
+        "id": "office-figure-92167f5b0d7eae0f694591a5",
+        "category": "important-figures",
+        "value": "Halvorsen",
+        "entityId": "norway-constitutional-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1920-06-20",
+          "until": "1921-06-22",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "norway-constitutional-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row NOR-1920; leadid 822631c6-1e42-11e4-b4cd-db5882bf8def; idacr NOR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"NOR-1920\",\"leadid\":\"822631c6-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"NOR\",\"leader\":\"Halvorsen\",\"startdate\":\"1920-06-20\",\"enddate\":\"1921-06-22\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-06-20",
+              "until": "1921-06-22",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=NOR-1920; LEADID=822631c6-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"822631c6-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1872,\"yrdied\":1923,\"borndate\":\"1872-05-28\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-06-20",
+              "until": "1921-06-22",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1920-06-20 to 1921-06-22.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-822631c6-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Halvorsen",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1872-05-28",
+            "until": "1923"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-f27dd8741f4f6705355bf3e4-24bd39ad6c",
+          "sourceIdentifier": "Archigos NOR-1920; leadid 822631c6-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 733da918183cc136f0dbbec71d1a476b9240b66cde11cf2fe337515509d82357"
+        }
+      },
+      {
+        "id": "office-figure-92c33a7f13b7cc49248dc6fe",
+        "category": "important-figures",
+        "value": "Mowinckel",
+        "entityId": "norway-constitutional-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1928-02-15",
+          "until": "1931-05-09",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "norway-constitutional-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row NOR-1928-2; leadid 822631c8-1e42-11e4-b4cd-db5882bf8def; idacr NOR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"NOR-1928-2\",\"leadid\":\"822631c8-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"NOR\",\"leader\":\"Mowinckel\",\"startdate\":\"1928-02-15\",\"enddate\":\"1931-05-09\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1928-02-15",
+              "until": "1931-05-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=NOR-1928-2; LEADID=822631c8-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"822631c8-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1870,\"yrdied\":1943,\"borndate\":\"1870-10-22\",\"deathdate\":\"1943-09-30\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1928-02-15",
+              "until": "1931-05-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1928-02-15 to 1931-05-09.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-822631c8-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Mowinckel",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1870-10-22",
+            "until": "1943-09-30"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-e995d90d14570e8778ace19a-24bd39ad6c",
+          "sourceIdentifier": "Archigos NOR-1928-2; leadid 822631c8-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA b03c5442e1ebbee441de08c707761db39578beabbd0a3c14f87ef16b56904d4a"
+        }
+      },
+      {
+        "id": "office-figure-6a9b4244f0b09d8b14c7098e",
+        "category": "important-figures",
+        "value": "Nygaardsvold",
+        "entityId": "norway-constitutional-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1935-03-19",
+          "until": "1940-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "norway-constitutional-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row NOR-1935; leadid 822662a7-1e42-11e4-b4cd-db5882bf8def; idacr NOR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"NOR-1935\",\"leadid\":\"822662a7-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"NOR\",\"leader\":\"Nygaardsvold\",\"startdate\":\"1935-03-19\",\"enddate\":\"1940-04-09\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1935-03-19",
+              "until": "1940-04-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=NOR-1935; LEADID=822662a7-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"822662a7-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1879,\"yrdied\":1952,\"borndate\":\"1879-09-06\",\"deathdate\":\"1952-03-13\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1935-03-19",
+              "until": "1940-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1935-03-19 to 1940-04-09.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-822662a7-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Nygaardsvold",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1879-09-06",
+            "until": "1952-03-13"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-41f3519768e31eec5eb3c33e-24bd39ad6c",
+          "sourceIdentifier": "Archigos NOR-1935; leadid 822662a7-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 12d16ae3ab94b5a3e63cf8034a417d7aa0a93c786f973a5fc58a92b1f097dac1"
+        }
+      },
+      {
+        "id": "office-figure-387276cd86ca5570705d8e80",
+        "category": "important-figures",
+        "value": "Gerhardsen",
+        "entityId": "norway-constitutional-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1955-01-22",
+          "until": "1961-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "norway-constitutional-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row NOR-1955; leadid 82269378-1e42-11e4-b4cd-db5882bf8def; idacr NOR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"NOR-1955\",\"leadid\":\"82269378-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"NOR\",\"leader\":\"Gerhardsen\",\"startdate\":\"1955-01-22\",\"enddate\":\"1963-08-23\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1955-01-22",
+              "until": "1963-08-23",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=NOR-1955; LEADID=82269378-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"82269378-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1897,\"yrdied\":1987,\"borndate\":\"1897-05-10\",\"deathdate\":\"1987-09-19\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1955-01-22",
+              "until": "1961-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1955-01-22 to 1963-08-23.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-82269378-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Gerhardsen",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1897-05-10",
+            "until": "1987-09-19"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Norway; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-35384713c209fb9d7b37ffb4-24bd39ad6c",
+          "sourceIdentifier": "Archigos NOR-1955; leadid 82269378-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA a58f842cdc152748119e17f236906ade2d147a93285fd5bba072c448685015f7"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "preservedPackageHashes": [
+        "5eb3a126356b9f73fa774eb052eaeb98d6d163f849e70c3d53c68d186e471697",
+        "1abad35e5eb1af197c5c90ced35f06408446cf00f7191cba26001cf194e0933b"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "3fe84ab42176c1d161d255eee598e0b36b6d0a08d1e17581ac4c2b5de40495ca",
+    "productionFingerprint": "0b575c2e5f43dda8b318b82e3542a6b82e71bc70340d9316a0076f555799534d",
+    "jobId": "dossier-b8a54e2ff016a620f030f2d0",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide reviewer",
+      "packageHash": "3fe84ab42176c1d161d255eee598e0b36b6d0a08d1e17581ac4c2b5de40495ca",
+      "bodyReviewed": true,
+      "rationale": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "reviewedIssues": [],
+      "decisions": {
+        "office-figure-4fc1ad52770b5fdf498d9bcf": "accepted",
+        "office-figure-92167f5b0d7eae0f694591a5": "accepted",
+        "office-figure-92c33a7f13b7cc49248dc6fe": "accepted",
+        "office-figure-6a9b4244f0b09d8b14c7098e": "accepted",
+        "office-figure-387276cd86ca5570705d8e80": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "office-figure-4fc1ad52770b5fdf498d9bcf",
+      "office-figure-92167f5b0d7eae0f694591a5",
+      "office-figure-92c33a7f13b7cc49248dc6fe",
+      "office-figure-6a9b4244f0b09d8b14c7098e",
+      "office-figure-387276cd86ca5570705d8e80"
+    ]
+  }
+}

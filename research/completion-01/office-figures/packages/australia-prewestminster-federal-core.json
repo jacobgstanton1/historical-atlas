@@ -1,0 +1,460 @@
+{
+  "job": {
+    "id": "dossier-d232fde7f1b1f00958878ff9",
+    "entityId": "australia-prewestminster-federal-core",
+    "period": {
+      "from": "1914-01-01",
+      "until": "1923-02-03"
+    },
+    "mapIds": [
+      "entity-australia"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "d1f69fbbba06f63602da98b23cb7f14074d828e933f8cc89b476482627bd862f",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-accepted-office-figures-australia-prewestminster-federal-core",
+    "jobId": "dossier-d232fde7f1b1f00958878ff9",
+    "entityId": "australia-prewestminster-federal-core",
+    "mapIds": [
+      "entity-australia"
+    ],
+    "worker": {
+      "id": "campaign2-flags",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "d1f69fbbba06f63602da98b23cb7f14074d828e933f8cc89b476482627bd862f",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1914-01-01",
+      "until": "1923-02-03"
+    },
+    "claims": [
+      {
+        "id": "office-figure-fde34ee66523acf12f19a642",
+        "category": "important-figures",
+        "value": "Joseph Cook",
+        "entityId": "australia-prewestminster-federal-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1914-01-01",
+          "until": "1914-09-17",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "australia-prewestminster-federal-core-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Commonwealth of Australia — pre-adoption federal framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row AUL-1913; leadid 824dae05-1e42-11e4-b4cd-db5882bf8def; idacr AUL; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"AUL-1913\",\"leadid\":\"824dae05-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"AUL\",\"leader\":\"Joseph Cook\",\"startdate\":\"1913-04-24\",\"enddate\":\"1914-09-17\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1913-04-24",
+              "until": "1914-09-17",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=AUL-1913; LEADID=824dae05-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"824dae05-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1860,\"yrdied\":1947,\"borndate\":\"1860-12-07\",\"deathdate\":\"1947-07-30\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1914-01-01",
+              "until": "1914-09-17",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1913-04-24 to 1914-09-17.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Commonwealth of Australia — pre-adoption federal framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-824dae05-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Joseph Cook",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1860-12-07",
+            "until": "1947-07-30"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Commonwealth of Australia — pre-adoption federal framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-64c49733335ef1a0f8e06407-e6661b53d8",
+          "sourceIdentifier": "Archigos AUL-1913; leadid 824dae05-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA af33a13a7acf6d6009ce982ab153a9ec095dd69e0f93bec66e5242aab21e458b"
+        }
+      },
+      {
+        "id": "office-figure-5462f810de033d596012dd9e",
+        "category": "important-figures",
+        "value": "Andrew Fisher",
+        "entityId": "australia-prewestminster-federal-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1914-09-17",
+          "until": "1915-10-27",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "australia-prewestminster-federal-core-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Commonwealth of Australia — pre-adoption federal framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row AUL-1914; leadid 824dae04-1e42-11e4-b4cd-db5882bf8def; idacr AUL; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"AUL-1914\",\"leadid\":\"824dae04-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"AUL\",\"leader\":\"Andrew Fisher\",\"startdate\":\"1914-09-17\",\"enddate\":\"1915-10-27\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1914-09-17",
+              "until": "1915-10-27",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=AUL-1914; LEADID=824dae04-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"824dae04-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1862,\"yrdied\":1928,\"borndate\":\"1862-08-29\",\"deathdate\":\"1928-10-22\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1914-09-17",
+              "until": "1915-10-27",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1914-09-17 to 1915-10-27.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Commonwealth of Australia — pre-adoption federal framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-824dae04-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Andrew Fisher",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1862-08-29",
+            "until": "1928-10-22"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Commonwealth of Australia — pre-adoption federal framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-479ff53787bd5586236d8562-e6661b53d8",
+          "sourceIdentifier": "Archigos AUL-1914; leadid 824dae04-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 5ca414985778984294a7076b8610a21926489c36dafaa126e935269b6db37c7a"
+        }
+      },
+      {
+        "id": "office-figure-0f396422184ee1f00a0f0bbd",
+        "category": "important-figures",
+        "value": "Hughes",
+        "entityId": "australia-prewestminster-federal-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1915-10-27",
+          "until": "1923-02-03",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "australia-prewestminster-federal-core-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Commonwealth of Australia — pre-adoption federal framework; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row AUL-1915; leadid 824dae06-1e42-11e4-b4cd-db5882bf8def; idacr AUL; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"AUL-1915\",\"leadid\":\"824dae06-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"AUL\",\"leader\":\"Hughes\",\"startdate\":\"1915-10-27\",\"enddate\":\"1923-02-03\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1915-10-27",
+              "until": "1923-02-03",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=AUL-1915; LEADID=824dae06-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"824dae06-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1864,\"yrdied\":1952,\"borndate\":\"1864-09-25\",\"deathdate\":\"1952-10-28\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1915-10-27",
+              "until": "1923-02-03",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1915-10-27 to 1923-02-03.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Commonwealth of Australia — pre-adoption federal framework; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-824dae06-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Hughes",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1864-09-25",
+            "until": "1952-10-28"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Commonwealth of Australia — pre-adoption federal framework; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-46326bdf72a8996e89d968a1-e6661b53d8",
+          "sourceIdentifier": "Archigos AUL-1915; leadid 824dae06-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 142e145816a2128e56bc0b63464aff07df005fa6ba5734d7a29ec96af2fd0daf"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "preservedPackageHashes": [
+        "5eb3a126356b9f73fa774eb052eaeb98d6d163f849e70c3d53c68d186e471697",
+        "1abad35e5eb1af197c5c90ced35f06408446cf00f7191cba26001cf194e0933b"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "d3cf2b89e80ecc92c2c7cff74eb95a9c5d6dca892035211c5ea22515273abfa6",
+    "productionFingerprint": "d1f69fbbba06f63602da98b23cb7f14074d828e933f8cc89b476482627bd862f",
+    "jobId": "dossier-d232fde7f1b1f00958878ff9",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide reviewer",
+      "packageHash": "d3cf2b89e80ecc92c2c7cff74eb95a9c5d6dca892035211c5ea22515273abfa6",
+      "bodyReviewed": true,
+      "rationale": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "reviewedIssues": [],
+      "decisions": {
+        "office-figure-fde34ee66523acf12f19a642": "accepted",
+        "office-figure-5462f810de033d596012dd9e": "accepted",
+        "office-figure-0f396422184ee1f00a0f0bbd": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "office-figure-fde34ee66523acf12f19a642",
+      "office-figure-5462f810de033d596012dd9e",
+      "office-figure-0f396422184ee1f00a0f0bbd"
+    ]
+  }
+}

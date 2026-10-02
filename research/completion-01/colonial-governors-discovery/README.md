@@ -1,0 +1,11 @@
+# Bounded colonial-governor dataset discovery
+
+No structured tenure dataset was acquired. No production facts or completion gains are asserted.
+
+**British:** the author's and AER's replication link resolves to DOI `10.3886/E113197V1`, OpenICPSR project113197. Its listing contains `analysis.dta`, `Readme.pdf`, licence and two Stata scripts. The study covers1854–1966 and uses ColonialOfficeLists/BlueBooks. Both project and file downloads lead to ICPSR login; direct listing retrieval returned403. The original data schema remains unverified. A misleading search result for test project113080 must not be substituted for the author-linked113197. No thesis download or individual biography research was attempted.
+
+**French:** publisher and author pages were read. The reported study universe is637 governors, five federations,18colonies and five protectorates over1830–1960. It describes annual pre-governorship career stages with start/endyear, location, organization and occupation;592usable sequences. That is potential research breadth, not proof of complete named tenure rows. Author research links the paper; author Data page has unrelated conflict/GIS datasets. Publisher exposes an OnlineAppendixPDF only. No public structured governor table was found in the bounded search; availability remains discovery-limited, rather than claiming that none exists anywhere.
+
+`discovery.json` records precise routes, acquisition outcomes, original-byte hashes of four cached author/publisher bodies and schema limitations. `build-discovery.py` reproducibly builds the report from these preserved bodies. Four successful bodies and one403curl attempt; five targeted search queries; two web download-route inspections ended at login. No authentication bypass, fabricated tenure, guessed office title, framework mapping or production mutation.
+
+Recommended next acquisition step, if authorised separately: use normal authenticated ICPSR download, read the original licence/Readme and inspect whether `analysis.dta` contains territory and person names plus literal appointment/end dates. Do not assume a fiscal regression panel can supply governor biographies or exact dates. French source remains held pending an exposed author-owned structured dataset. Stop here rather than reconstruct governor lists individually.

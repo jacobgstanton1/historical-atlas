@@ -1,0 +1,620 @@
+{
+  "job": {
+    "id": "dossier-3202a472a05449ac7c96e8f4",
+    "entityId": "liberia-presidential-constitutional-core",
+    "period": {
+      "from": "1878-01-01",
+      "until": "1930-12-03"
+    },
+    "mapIds": [
+      "entity-liberia"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "8152cb599973b16c1a4c2546b19b89a636b96c55aa74a964c6f5664bc4530702",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-accepted-office-figures-liberia-presidential-constitutional-core",
+    "jobId": "dossier-3202a472a05449ac7c96e8f4",
+    "entityId": "liberia-presidential-constitutional-core",
+    "mapIds": [
+      "entity-liberia"
+    ],
+    "worker": {
+      "id": "campaign2-flags",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "8152cb599973b16c1a4c2546b19b89a636b96c55aa74a964c6f5664bc4530702",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1878-01-01",
+      "until": "1930-12-03"
+    },
+    "claims": [
+      {
+        "id": "office-figure-bf17a3154bd160f378631a88",
+        "category": "important-figures",
+        "value": "James Spriggs Payne",
+        "entityId": "liberia-presidential-constitutional-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1878-01-01",
+          "until": "1878-01-07",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row LBR-1876; leadid 19788ab8-3bbd-11e5-afeb-eb6f07f9fec7; idacr LBR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"LBR-1876\",\"leadid\":\"19788ab8-3bbd-11e5-afeb-eb6f07f9fec7\",\"idacr\":\"LBR\",\"leader\":\"James Spriggs Payne\",\"startdate\":\"1876-01-03\",\"enddate\":\"1878-01-07\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1876-01-03",
+              "until": "1878-01-07",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=LBR-1876; LEADID=19788ab8-3bbd-11e5-afeb-eb6f07f9fec7; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"19788ab8-3bbd-11e5-afeb-eb6f07f9fec7\",\"yrborn\":1819,\"yrdied\":1882,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1878-01-01",
+              "until": "1878-01-07",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1876-01-03 to 1878-01-07.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-19788ab8-3bbd-11e5-afeb-eb6f07f9fec7",
+          "name": "James Spriggs Payne",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1819",
+            "until": "1882"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-9af1e3c6658e2104acbb194a-4a2c6e53aa",
+          "sourceIdentifier": "Archigos LBR-1876; leadid 19788ab8-3bbd-11e5-afeb-eb6f07f9fec7; original accepted leadership SHA 8006458af6e8976e5e4681d7158f43b886b7582323943904ffb4fcadc37e0a06"
+        }
+      },
+      {
+        "id": "office-figure-71e52c53ad04e45ffd8380e9",
+        "category": "important-figures",
+        "value": "William David Coleman",
+        "entityId": "liberia-presidential-constitutional-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1896-11-12",
+          "until": "1900-12-11",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row LBR-1896; leadid 822e966a-1e42-11e4-b4cd-db5882bf8def; idacr LBR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"LBR-1896\",\"leadid\":\"822e966a-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"LBR\",\"leader\":\"William David Coleman\",\"startdate\":\"1896-11-12\",\"enddate\":\"1900-12-11\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1896-11-12",
+              "until": "1900-12-11",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=LBR-1896; LEADID=822e966a-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"822e966a-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1842,\"yrdied\":1908,\"borndate\":\"1842-07-18\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1896-11-12",
+              "until": "1900-12-11",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1896-11-12 to 1900-12-11.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-822e966a-1e42-11e4-b4cd-db5882bf8def",
+          "name": "William David Coleman",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1842-07-18",
+            "until": "1908"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-81927bcbc478a53dbbd2c27a-4a2c6e53aa",
+          "sourceIdentifier": "Archigos LBR-1896; leadid 822e966a-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 2e7cd8851ce31868da8e52aa825a583e776c879464c135efc88830ed938e4df7"
+        }
+      },
+      {
+        "id": "office-figure-e642c9c82e48f8976ef777a7",
+        "category": "important-figures",
+        "value": "Garretson Wilmot Gibson",
+        "entityId": "liberia-presidential-constitutional-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1900-12-11",
+          "until": "1904-01-04",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row LBR-1900; leadid 822e966b-1e42-11e4-b4cd-db5882bf8def; idacr LBR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"LBR-1900\",\"leadid\":\"822e966b-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"LBR\",\"leader\":\"Garretson Wilmot Gibson\",\"startdate\":\"1900-12-11\",\"enddate\":\"1904-01-04\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900-12-11",
+              "until": "1904-01-04",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=LBR-1900; LEADID=822e966b-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"822e966b-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1832,\"yrdied\":1910,\"borndate\":\"1832-05-20\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1900-12-11",
+              "until": "1904-01-04",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1900-12-11 to 1904-01-04.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-822e966b-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Garretson Wilmot Gibson",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1832-05-20",
+            "until": "1910"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-883799a8af42a71d3cf13287-4a2c6e53aa",
+          "sourceIdentifier": "Archigos LBR-1900; leadid 822e966b-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 38ac658c790a06ffd1fb72939fe549d4e148d70a941fc690e8c92225be9adc0b"
+        }
+      },
+      {
+        "id": "office-figure-0e60149fcf15363e39109429",
+        "category": "important-figures",
+        "value": "Daniel E. Howard",
+        "entityId": "liberia-presidential-constitutional-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1912-01-01",
+          "until": "1920-01-05",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row LBR-1912; leadid 822ec73d-1e42-11e4-b4cd-db5882bf8def; idacr LBR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"LBR-1912\",\"leadid\":\"822ec73d-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"LBR\",\"leader\":\"Daniel E. Howard\",\"startdate\":\"1912-01-01\",\"enddate\":\"1920-01-05\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1912-01-01",
+              "until": "1920-01-05",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=LBR-1912; LEADID=822ec73d-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"822ec73d-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1861,\"yrdied\":1935,\"borndate\":\"1861-08-04\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1912-01-01",
+              "until": "1920-01-05",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1912-01-01 to 1920-01-05.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-822ec73d-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Daniel E. Howard",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1861-08-04",
+            "until": "1935"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-7e21f70267fe8a3b4f10ac19-4a2c6e53aa",
+          "sourceIdentifier": "Archigos LBR-1912; leadid 822ec73d-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 4befde0523bd4d30d5165531026616bee638934527a4ff20429c7454317c1e00"
+        }
+      },
+      {
+        "id": "office-figure-339fd82a38828662dc99c78c",
+        "category": "important-figures",
+        "value": "Burgess King",
+        "entityId": "liberia-presidential-constitutional-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1920-01-05",
+          "until": "1930-12-03",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "liberia-presidential-constitutional-core-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row LBR-1920; leadid 822ec73e-1e42-11e4-b4cd-db5882bf8def; idacr LBR; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"LBR-1920\",\"leadid\":\"822ec73e-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"LBR\",\"leader\":\"Burgess King\",\"startdate\":\"1920-01-05\",\"enddate\":\"1930-12-03\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-01-05",
+              "until": "1930-12-03",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 DTA obsid=LBR-1920; LEADID=822ec73e-1e42-11e4-b4cd-db5882bf8def; YRBORN/BORNDATE/YRDIED/DEATHDATE; codebook printed pp.4–5 (PDF10–11)",
+            "note": "Focused original-DTA comparison certifies literal person metadata {\"leadid\":\"822ec73e-1e42-11e4-b4cd-db5882bf8def\",\"yrborn\":1875,\"yrdied\":1961,\"borndate\":\"NA\",\"deathdate\":\"NA\"}. Birth/death dates are lifespan metadata, not activity intervals; accepted effective-leadership interval supplies all entity association and political activity relevance.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-01-05",
+              "until": "1930-12-03",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1920-01-05 to 1930-12-03.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage.",
+          "Political figure relevance is limited to this already accepted effective-leadership spell; this is not a nationality, birthplace, formal title, generic lifetime affiliation, or an additional achievement claim.",
+          "Source literal name is retained, including surname-only labels and original spelling; no full-name expansion or correction is inferred.",
+          "Lifespan retains exact source day dates when supplied; otherwise explicit source year precision. Missing or conflicting person metadata remains held."
+        ],
+        "figure": {
+          "personId": "archigos-822ec73e-1e42-11e4-b4cd-db5882bf8def",
+          "name": "Burgess King",
+          "categories": [
+            "political"
+          ],
+          "lifespan": {
+            "from": "1875",
+            "until": "1961"
+          },
+          "relationship": "Existing sourced entity-associated effective political leadership: Entity-associated effective central political leadership according to Archigos, within Liberia — amended 1847 constitutional tradition; country coding does not establish polygon-wide authority.",
+          "activity": "Served as Effective political leader (Archigos coding) during the dated relevance interval; source coding and existing framework qualification retained.",
+          "contribution": "Served as Effective political leader (Archigos coding); no additional historical achievement asserted."
+        },
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "bulk-39bc93f7304dc7fb11ab5ce5-4a2c6e53aa",
+          "sourceIdentifier": "Archigos LBR-1920; leadid 822ec73e-1e42-11e4-b4cd-db5882bf8def; original accepted leadership SHA 84d63b72f8fe0c4839643ad2609659fe70d872d814de84289a97beccf22d80c4"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "preservedPackageHashes": [
+        "5eb3a126356b9f73fa774eb052eaeb98d6d163f849e70c3d53c68d186e471697",
+        "1abad35e5eb1af197c5c90ced35f06408446cf00f7191cba26001cf194e0933b"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "3acb387565daa3140286a3b56295ba0b35103d0078d53b1fcb12f386da8a971f",
+    "productionFingerprint": "8152cb599973b16c1a4c2546b19b89a636b96c55aa74a964c6f5664bc4530702",
+    "jobId": "dossier-3202a472a05449ac7c96e8f4",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide reviewer",
+      "packageHash": "3acb387565daa3140286a3b56295ba0b35103d0078d53b1fcb12f386da8a971f",
+      "bodyReviewed": true,
+      "rationale": "Independent source-wide review of source metadata semantics, focused original-DTA960-field certificate and immutable accepted office references. Birth/death year/date metadata is lifespan only. All historical activity/entity association reused exactly from previously accepted source-coded effective-leadership spells. No nationality/achievements/formal title/name expansion/portrait inference. Intake removes only the independently held subset; original frozen cohort and explicit holds are preserved. No accepted office reference, lifespan, name, source or activity interval is rewritten.",
+      "reviewedIssues": [],
+      "decisions": {
+        "office-figure-bf17a3154bd160f378631a88": "accepted",
+        "office-figure-71e52c53ad04e45ffd8380e9": "accepted",
+        "office-figure-e642c9c82e48f8976ef777a7": "accepted",
+        "office-figure-0e60149fcf15363e39109429": "accepted",
+        "office-figure-339fd82a38828662dc99c78c": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "office-figure-bf17a3154bd160f378631a88",
+      "office-figure-71e52c53ad04e45ffd8380e9",
+      "office-figure-e642c9c82e48f8976ef777a7",
+      "office-figure-0e60149fcf15363e39109429",
+      "office-figure-339fd82a38828662dc99c78c"
+    ]
+  }
+}
