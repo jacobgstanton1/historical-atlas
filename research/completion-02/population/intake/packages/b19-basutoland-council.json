@@ -1,0 +1,320 @@
+{
+  "job": {
+    "id": "dossier-0bca28bf35e31c4ddf5c3934",
+    "entityId": "b19-basutoland-council",
+    "period": {
+      "from": "1920",
+      "until": "1930"
+    },
+    "mapIds": [
+      "entity-lesotho"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "25afba051d17eb1780b54d126a8634beddd9db91b7d6ca1764a3fa1943ab6de2",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-wave01-population-b19-basutoland-council",
+    "jobId": "dossier-0bca28bf35e31c4ddf5c3934",
+    "entityId": "b19-basutoland-council",
+    "mapIds": [
+      "entity-lesotho"
+    ],
+    "worker": {
+      "id": "wave01-population-deterministic-adapter",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "25afba051d17eb1780b54d126a8634beddd9db91b7d6ca1764a3fa1943ab6de2",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1920",
+      "until": "1930"
+    },
+    "claims": [
+      {
+        "id": "wave01-population-7c0e1045a9ebc7b40788f55a",
+        "entityId": "b19-basutoland-council",
+        "category": "population-statistics",
+        "value": 320591,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "b19-basutoland-council-population-reviewed-territory",
+          "description": "WholeBasutoland protectorateCouncil administration; official1911Table32 independently namesfullBasutoland row and existingalias source relatesLesotho. NotCapeColony total. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Lesotho; Code=LSO; Year=1920; Population=320591. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Lesotho\",\"code\":\"LSO\",\"year\":\"1920\",\"value\":\"320591\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b19-basutoland-report, b19-country-aliases. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "WholeBasutoland protectorateCouncil administration; official1911Table32 independently namesfullBasutoland row and existingalias source relatesLesotho. NotCapeColony total. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "LSO:1920"
+        }
+      },
+      {
+        "id": "wave01-population-2337fd5f448563ebc279af3e",
+        "entityId": "b19-basutoland-council",
+        "category": "population-statistics",
+        "value": 393273,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "b19-basutoland-council-population-reviewed-territory",
+          "description": "WholeBasutoland protectorateCouncil administration; official1911Table32 independently namesfullBasutoland row and existingalias source relatesLesotho. NotCapeColony total. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Lesotho; Code=LSO; Year=1930; Population=393273. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Lesotho\",\"code\":\"LSO\",\"year\":\"1930\",\"value\":\"393273\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b19-basutoland-report, b19-country-aliases. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "WholeBasutoland protectorateCouncil administration; official1911Table32 independently namesfullBasutoland row and existingalias source relatesLesotho. NotCapeColony total. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "LSO:1930"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "All 106 literal original population/provenance CSV rows independently checked using Python csv.DictReader. 97 historical Gapminder observations independently match original v7 (2022-10-19) workbook cells exactly; 9 observations preserve UN WPP2024 country-year attribution and year1960. No Togo interim series, HYDE defaults, census claims, invented days or point-to-interval conversion accepted. Existing whole-territory crosswalk approvals and entire-year framework bounds checked; current-border qualification and source-produced-estimate semantics retained. Four unsupported HYDE keys remain held by normalization. No production records edited by this review.",
+      "preservedPackageHashes": [
+        "c741e427a7ec0ecb14f851c229d9ec9037c6381b7b455400027d11884cbb001c",
+        "691a94f2b9cbe62b27a84ef64bdbf3260849f4b6fb9891cb9e4816c5dfa8dbbc"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "08bd5064675b58fe2ff4533db2f197dd1dba408a3303f0277c50ba357b1cff9d",
+    "productionFingerprint": "25afba051d17eb1780b54d126a8634beddd9db91b7d6ca1764a3fa1943ab6de2",
+    "jobId": "dossier-0bca28bf35e31c4ddf5c3934",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide population reviewer",
+      "packageHash": "08bd5064675b58fe2ff4533db2f197dd1dba408a3303f0277c50ba357b1cff9d",
+      "bodyReviewed": true,
+      "rationale": "All 106 literal original population/provenance CSV rows independently checked using Python csv.DictReader. 97 historical Gapminder observations independently match original v7 (2022-10-19) workbook cells exactly; 9 observations preserve UN WPP2024 country-year attribution and year1960. No Togo interim series, HYDE defaults, census claims, invented days or point-to-interval conversion accepted. Existing whole-territory crosswalk approvals and entire-year framework bounds checked; current-border qualification and source-produced-estimate semantics retained. Four unsupported HYDE keys remain held by normalization. No production records edited by this review.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "wave01-population-7c0e1045a9ebc7b40788f55a": "accepted",
+        "wave01-population-2337fd5f448563ebc279af3e": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "wave01-population-7c0e1045a9ebc7b40788f55a",
+      "wave01-population-2337fd5f448563ebc279af3e"
+    ]
+  }
+}

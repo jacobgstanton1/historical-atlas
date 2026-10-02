@@ -1,0 +1,419 @@
+{
+  "job": {
+    "id": "dossier-6bbf2b87c9693d5984a7ad81",
+    "entityId": "iceland-sovereign",
+    "period": {
+      "from": "1920",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-iceland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "47b25c476b269ab4e04ef022f45eb6a7b005f6ae036ec396c3c5ff9c149c2368",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-wave01-population-iceland-sovereign",
+    "jobId": "dossier-6bbf2b87c9693d5984a7ad81",
+    "entityId": "iceland-sovereign",
+    "mapIds": [
+      "entity-iceland"
+    ],
+    "worker": {
+      "id": "wave01-population-deterministic-adapter",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "47b25c476b269ab4e04ef022f45eb6a7b005f6ae036ec396c3c5ff9c149c2368",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1920",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "wave01-population-1b21dc29f8af0a4e2754dd93",
+        "entityId": "iceland-sovereign",
+        "category": "population-statistics",
+        "value": 97534,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "iceland-sovereign-population-reviewed-territory",
+          "description": "Whole Icelandic island sovereigncountry framework after1918transition; monarchic/republican transition does not combine Denmark into population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Iceland; Code=ISL; Year=1920; Population=97534. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Iceland\",\"code\":\"ISL\",\"year\":\"1920\",\"value\":\"97534\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-iceland-sovereignty, b01-sveinn-bjornsson, b01-iceland-parliament, b01-icelandic-currency, b01-asgeir-asgeirsson. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Whole Icelandic island sovereigncountry framework after1918transition; monarchic/republican transition does not combine Denmark into population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "ISL:1920"
+        }
+      },
+      {
+        "id": "wave01-population-0cb5c67d0ec6d170ae9a2254",
+        "entityId": "iceland-sovereign",
+        "category": "population-statistics",
+        "value": 108477,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "iceland-sovereign-population-reviewed-territory",
+          "description": "Whole Icelandic island sovereigncountry framework after1918transition; monarchic/republican transition does not combine Denmark into population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Iceland; Code=ISL; Year=1930; Population=108477. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Iceland\",\"code\":\"ISL\",\"year\":\"1930\",\"value\":\"108477\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-iceland-sovereignty, b01-sveinn-bjornsson, b01-iceland-parliament, b01-icelandic-currency, b01-asgeir-asgeirsson. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Whole Icelandic island sovereigncountry framework after1918transition; monarchic/republican transition does not combine Denmark into population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "ISL:1930"
+        }
+      },
+      {
+        "id": "wave01-population-e61b11534d8b3fe318df861c",
+        "entityId": "iceland-sovereign",
+        "category": "population-statistics",
+        "value": 130918,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1945",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "iceland-sovereign-population-reviewed-territory",
+          "description": "Whole Icelandic island sovereigncountry framework after1918transition; monarchic/republican transition does not combine Denmark into population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Iceland; Code=ISL; Year=1945; Population=130918. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Iceland\",\"code\":\"ISL\",\"year\":\"1945\",\"value\":\"130918\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-iceland-sovereignty, b01-sveinn-bjornsson, b01-iceland-parliament, b01-icelandic-currency, b01-asgeir-asgeirsson. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Whole Icelandic island sovereigncountry framework after1918transition; monarchic/republican transition does not combine Denmark into population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "ISL:1945"
+        }
+      },
+      {
+        "id": "wave01-population-3b09fdf2243596191521f35f",
+        "entityId": "iceland-sovereign",
+        "category": "population-statistics",
+        "value": 175572,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "iceland-sovereign-population-reviewed-territory",
+          "description": "Whole Icelandic island sovereigncountry framework after1918transition; monarchic/republican transition does not combine Denmark into population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-un-wpp2024-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-un-wpp2024-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Iceland; Code=ISL; Year=1960; Population=175572. Country-year source: United Nations - World Population Prospects (2024) (https://population.un.org/wpp/downloads?folder=Standard%20Projections&group=Population)",
+            "note": "Original observation {\"entity\":\"Iceland\",\"code\":\"ISL\",\"year\":\"1960\",\"value\":\"175572\",\"source\":\"United Nations - World Population Prospects (2024) (https://population.un.org/wpp/downloads?folder=Standard%20Projections&group=Population)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-iceland-sovereignty, b01-sveinn-bjornsson, b01-iceland-parliament, b01-icelandic-currency, b01-asgeir-asgeirsson. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Whole Icelandic island sovereigncountry framework after1918transition; monarchic/republican transition does not combine Denmark into population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-un-wpp2024-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "ISL:1960"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "wave01-gapminder-v7-owid-953903",
+          "wave01-un-wpp2024-owid-953903"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "All 106 literal original population/provenance CSV rows independently checked using Python csv.DictReader. 97 historical Gapminder observations independently match original v7 (2022-10-19) workbook cells exactly; 9 observations preserve UN WPP2024 country-year attribution and year1960. No Togo interim series, HYDE defaults, census claims, invented days or point-to-interval conversion accepted. Existing whole-territory crosswalk approvals and entire-year framework bounds checked; current-border qualification and source-produced-estimate semantics retained. Four unsupported HYDE keys remain held by normalization. No production records edited by this review.",
+      "preservedPackageHashes": [
+        "c741e427a7ec0ecb14f851c229d9ec9037c6381b7b455400027d11884cbb001c",
+        "691a94f2b9cbe62b27a84ef64bdbf3260849f4b6fb9891cb9e4816c5dfa8dbbc"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "080898dcff34b7eb1e99ca776aa9b6e6bcf292a3222dab5c3dc6fb2ed589f4be",
+    "productionFingerprint": "47b25c476b269ab4e04ef022f45eb6a7b005f6ae036ec396c3c5ff9c149c2368",
+    "jobId": "dossier-6bbf2b87c9693d5984a7ad81",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide population reviewer",
+      "packageHash": "080898dcff34b7eb1e99ca776aa9b6e6bcf292a3222dab5c3dc6fb2ed589f4be",
+      "bodyReviewed": true,
+      "rationale": "All 106 literal original population/provenance CSV rows independently checked using Python csv.DictReader. 97 historical Gapminder observations independently match original v7 (2022-10-19) workbook cells exactly; 9 observations preserve UN WPP2024 country-year attribution and year1960. No Togo interim series, HYDE defaults, census claims, invented days or point-to-interval conversion accepted. Existing whole-territory crosswalk approvals and entire-year framework bounds checked; current-border qualification and source-produced-estimate semantics retained. Four unsupported HYDE keys remain held by normalization. No production records edited by this review.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "wave01-population-1b21dc29f8af0a4e2754dd93": "accepted",
+        "wave01-population-0cb5c67d0ec6d170ae9a2254": "accepted",
+        "wave01-population-e61b11534d8b3fe318df861c": "accepted",
+        "wave01-population-3b09fdf2243596191521f35f": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "wave01-population-1b21dc29f8af0a4e2754dd93",
+      "wave01-population-0cb5c67d0ec6d170ae9a2254",
+      "wave01-population-e61b11534d8b3fe318df861c",
+      "wave01-population-3b09fdf2243596191521f35f"
+    ]
+  }
+}

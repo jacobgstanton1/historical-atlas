@@ -1,0 +1,33 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {digest,readJSON,saveJSON,dateRange} from '../../../../scripts/research-common.mjs';
+const base='research/completion-02/population/';
+const cohort=readJSON(base+'intake/cohort.json'),normalization=readJSON(base+'intake/normalization.json');
+const territorial=readJSON(base+'territorial-review.json'),asia=readJSON(base+'asia-former-crosswalk-review.json');
+const checks=readJSON(base+'intake/independent-value-checks.json');
+const db=readJSON('data/historical-entities.json');
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const extra=['intake/independent-values-review.py','intake/independent-value-checks.json','intake/build-independent-certificate.mjs','cache/gapminder-v7-country-notes.json','intake/normalization.json','intake/refresh-format-certificate.mjs','intake/format-refresh-review.json','intake/format-rejected-certificate.json'].map(p=>({path:base+p,sha256:sha(base+p)}));
+const all=[...normalization.inputBindings,...territorial.sourceBindings,...asia.cachedBodyBindings,...extra];
+const inputBindings=[...new Map(all.map(b=>[b.path,b])).values()];
+for(const b of all)assert.equal(sha(b.path),b.sha256,'Immutable source/input mismatch: '+b.path);
+const maps=[...territorial.mappings,...asia.mappings];
+const approved=maps.filter(m=>['EXACT','HIGH_CONFIDENCE'].includes(m.confidence));
+const receipts=[];
+assert.equal(cohort.claims.length,checks.results.length);
+for(const c of cohort.claims){
+ const y=c.temporal.observationDate,m=approved.find(m=>m.entityId===c.entityId&&m.years.includes(Number(y)));
+ assert(m,'Approved territorial key required');
+ const entity=db.entities.find(e=>e.id===c.entityId);assert(entity);
+ if(m.entityRecordDigest)assert.equal(digest(entity),m.entityRecordDigest);
+ const year=dateRange(y),exist=entity.existence;
+ if(exist?.validFrom)assert(year[0]>=dateRange(exist.validFrom)[1]||exist.validFrom.length===10&&year[0]>=dateRange(exist.validFrom)[0],'Whole year after conservative start');
+ if(exist?.validUntil)assert(year[1]<=dateRange(exist.validUntil)[0],'Whole year before earliest endpoint');
+ const r=checks.results.find(r=>r.claimId===c.id);assert(r&&r.decision==='accepted');
+ assert.equal(Number(r.originalValue),c.value);
+ receipts.push({claimId:c.id,claimDigest:digest(c),entityId:c.entityId,entityRecordDigest:digest(entity),sourceEntity:m.sourceEntity,sourceCode:m.sourceCode,observationDate:y,decision:'accepted',territorialConfidence:m.confidence,sourceIds:m.sourceIds});
+}
+const certificate={cohortHash:digest(cohort),reviewer:'officeholder_sources independent source-wide population reviewer',bodyReviewed:true,acceptedClaimIds:cohort.claims.map(c=>c.id),inputBindings,rationale:'All 106 literal original population/provenance CSV rows independently checked using Python csv.DictReader. 97 historical Gapminder observations independently match original v7 (2022-10-19) workbook cells exactly; 9 observations preserve UN WPP2024 country-year attribution and year1960. No Togo interim series, HYDE defaults, census claims, invented days or point-to-interval conversion accepted. Existing whole-territory crosswalk approvals and entire-year framework bounds checked; current-border qualification and source-produced-estimate semantics retained. Four unsupported HYDE keys remain held by normalization. No production records edited by this review.',claimReceipts:receipts,metrics:{reviewed:receipts.length,accepted:receipts.length,held:0,entities:new Set(receipts.map(r=>r.entityId)).size,primaryWorkbookCells:97,un1960Observations:9}};
+saveJSON(base+'intake/certificate.json',certificate);
+console.log(JSON.stringify({certificateDigest:digest(certificate),fileSHA256:sha(base+'intake/certificate.json'),cohortHash:certificate.cohortHash,...certificate.metrics}));

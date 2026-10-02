@@ -1,0 +1,624 @@
+{
+  "job": {
+    "id": "dossier-b6842d515b89d66d122fd0f7",
+    "entityId": "swiss-federal-state",
+    "period": {
+      "from": "1878",
+      "until": "1945"
+    },
+    "mapIds": [
+      "entity-switzerland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "64e6d5ad41e01a36782cc066d8856edec6ed6fb3dbdf161c9e3d34531a3eb2a0",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-wave01-population-swiss-federal-state",
+    "jobId": "dossier-b6842d515b89d66d122fd0f7",
+    "entityId": "swiss-federal-state",
+    "mapIds": [
+      "entity-switzerland"
+    ],
+    "worker": {
+      "id": "wave01-population-deterministic-adapter",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "64e6d5ad41e01a36782cc066d8856edec6ed6fb3dbdf161c9e3d34531a3eb2a0",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1878",
+      "until": "1945"
+    },
+    "claims": [
+      {
+        "id": "wave01-population-4e3522087970de2073c1e13b",
+        "entityId": "swiss-federal-state",
+        "category": "population-statistics",
+        "value": 2798861,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1878",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "swiss-federal-state-population-reviewed-territory",
+          "description": "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Switzerland; Code=CHE; Year=1878; Population=2798861. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Switzerland\",\"code\":\"CHE\",\"year\":\"1878\",\"value\":\"2798861\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-swiss-franc, b01-swiss-federal-council, b01-bern-federal-city. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "CHE:1878"
+        }
+      },
+      {
+        "id": "wave01-population-c9e3fd806ef6a43c7acb39c3",
+        "entityId": "swiss-federal-state",
+        "category": "population-statistics",
+        "value": 2831582,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1880",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "swiss-federal-state-population-reviewed-territory",
+          "description": "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Switzerland; Code=CHE; Year=1880; Population=2831582. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Switzerland\",\"code\":\"CHE\",\"year\":\"1880\",\"value\":\"2831582\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-swiss-franc, b01-swiss-federal-council, b01-bern-federal-city. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "CHE:1880"
+        }
+      },
+      {
+        "id": "wave01-population-940e51ca038cc789d6baec5d",
+        "entityId": "swiss-federal-state",
+        "category": "population-statistics",
+        "value": 3297641,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1900",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "swiss-federal-state-population-reviewed-territory",
+          "description": "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Switzerland; Code=CHE; Year=1900; Population=3297641. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Switzerland\",\"code\":\"CHE\",\"year\":\"1900\",\"value\":\"3297641\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-swiss-franc, b01-swiss-federal-council, b01-bern-federal-city. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1900",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "CHE:1900"
+        }
+      },
+      {
+        "id": "wave01-population-5a21a7c619ab9a53a566c13d",
+        "entityId": "swiss-federal-state",
+        "category": "population-statistics",
+        "value": 3783571,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1914",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "swiss-federal-state-population-reviewed-territory",
+          "description": "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Switzerland; Code=CHE; Year=1914; Population=3783571. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Switzerland\",\"code\":\"CHE\",\"year\":\"1914\",\"value\":\"3783571\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-swiss-franc, b01-swiss-federal-council, b01-bern-federal-city. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "CHE:1914"
+        }
+      },
+      {
+        "id": "wave01-population-45da7bd0ff59c5105b8ff742",
+        "entityId": "swiss-federal-state",
+        "category": "population-statistics",
+        "value": 3870407,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "swiss-federal-state-population-reviewed-territory",
+          "description": "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Switzerland; Code=CHE; Year=1920; Population=3870407. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Switzerland\",\"code\":\"CHE\",\"year\":\"1920\",\"value\":\"3870407\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-swiss-franc, b01-swiss-federal-council, b01-bern-federal-city. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "CHE:1920"
+        }
+      },
+      {
+        "id": "wave01-population-49644936f95c834c067b9ff9",
+        "entityId": "swiss-federal-state",
+        "category": "population-statistics",
+        "value": 4042131,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "swiss-federal-state-population-reviewed-territory",
+          "description": "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Switzerland; Code=CHE; Year=1930; Population=4042131. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Switzerland\",\"code\":\"CHE\",\"year\":\"1930\",\"value\":\"4042131\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-swiss-franc, b01-swiss-federal-council, b01-bern-federal-city. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "CHE:1930"
+        }
+      },
+      {
+        "id": "wave01-population-3a233d60305dd31490a40772",
+        "entityId": "swiss-federal-state",
+        "category": "population-statistics",
+        "value": 4181632,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1938",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "swiss-federal-state-population-reviewed-territory",
+          "description": "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Switzerland; Code=CHE; Year=1938; Population=4181632. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Switzerland\",\"code\":\"CHE\",\"year\":\"1938\",\"value\":\"4181632\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-swiss-franc, b01-swiss-federal-council, b01-bern-federal-city. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "CHE:1938"
+        }
+      },
+      {
+        "id": "wave01-population-46487337fcd680b334984a07",
+        "entityId": "swiss-federal-state",
+        "category": "population-statistics",
+        "value": 4444943,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1945",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "swiss-federal-state-population-reviewed-territory",
+          "description": "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Switzerland; Code=CHE; Year=1945; Population=4444943. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Switzerland\",\"code\":\"CHE\",\"year\":\"1945\",\"value\":\"4444943\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-swiss-franc, b01-swiss-federal-council, b01-bern-federal-city. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "CHE:1945"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "wave01-gapminder-v7-owid-953903",
+        "title": "Gapminder Population v7 (2022), via OWID long-run population dataset 2024-07-15",
+        "institution": "Gapminder; Our World in Data",
+        "url": "https://gapm.io/dpop",
+        "usage": "CC BY 4.0. Free data from www.gapminder.org. Source-produced historical estimates, generally reconstructed to current geographical borders. Only independently reviewed compatible historical territories are imported; no atlas interpolation. Original year and OWID country-year source retained.",
+        "accessed": "2026-10-02",
+        "kind": "licensed-statistical-dataset"
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "All 106 literal original population/provenance CSV rows independently checked using Python csv.DictReader. 97 historical Gapminder observations independently match original v7 (2022-10-19) workbook cells exactly; 9 observations preserve UN WPP2024 country-year attribution and year1960. No Togo interim series, HYDE defaults, census claims, invented days or point-to-interval conversion accepted. Existing whole-territory crosswalk approvals and entire-year framework bounds checked; current-border qualification and source-produced-estimate semantics retained. Four unsupported HYDE keys remain held by normalization. No production records edited by this review.",
+      "preservedPackageHashes": [
+        "c741e427a7ec0ecb14f851c229d9ec9037c6381b7b455400027d11884cbb001c",
+        "691a94f2b9cbe62b27a84ef64bdbf3260849f4b6fb9891cb9e4816c5dfa8dbbc"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "cdc741627c8232f19a19cc4d9c876a6e931d69c163fd170ec55ea5063f8a2752",
+    "productionFingerprint": "64e6d5ad41e01a36782cc066d8856edec6ed6fb3dbdf161c9e3d34531a3eb2a0",
+    "jobId": "dossier-b6842d515b89d66d122fd0f7",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide population reviewer",
+      "packageHash": "cdc741627c8232f19a19cc4d9c876a6e931d69c163fd170ec55ea5063f8a2752",
+      "bodyReviewed": true,
+      "rationale": "All 106 literal original population/provenance CSV rows independently checked using Python csv.DictReader. 97 historical Gapminder observations independently match original v7 (2022-10-19) workbook cells exactly; 9 observations preserve UN WPP2024 country-year attribution and year1960. No Togo interim series, HYDE defaults, census claims, invented days or point-to-interval conversion accepted. Existing whole-territory crosswalk approvals and entire-year framework bounds checked; current-border qualification and source-produced-estimate semantics retained. Four unsupported HYDE keys remain held by normalization. No production records edited by this review.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "wave01-population-4e3522087970de2073c1e13b": "accepted",
+        "wave01-population-c9e3fd806ef6a43c7acb39c3": "accepted",
+        "wave01-population-940e51ca038cc789d6baec5d": "accepted",
+        "wave01-population-5a21a7c619ab9a53a566c13d": "accepted",
+        "wave01-population-45da7bd0ff59c5105b8ff742": "accepted",
+        "wave01-population-49644936f95c834c067b9ff9": "accepted",
+        "wave01-population-3a233d60305dd31490a40772": "accepted",
+        "wave01-population-46487337fcd680b334984a07": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "wave01-population-4e3522087970de2073c1e13b",
+      "wave01-population-c9e3fd806ef6a43c7acb39c3",
+      "wave01-population-940e51ca038cc789d6baec5d",
+      "wave01-population-5a21a7c619ab9a53a566c13d",
+      "wave01-population-45da7bd0ff59c5105b8ff742",
+      "wave01-population-49644936f95c834c067b9ff9",
+      "wave01-population-3a233d60305dd31490a40772",
+      "wave01-population-46487337fcd680b334984a07"
+    ]
+  }
+}

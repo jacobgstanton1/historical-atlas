@@ -1,0 +1,271 @@
+{
+  "job": {
+    "id": "dossier-7e3e480382e8bff8281c48b3",
+    "entityId": "san-marino-republic",
+    "period": {
+      "from": "1815",
+      "until": "1815"
+    },
+    "mapIds": [
+      "entity-san-marino"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "dc4e08ad4f6edb8e5d72a6feaeab4b5a20376ac7aa8fa01d112a179fd1eb9d6a",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-wave01-population-san-marino-republic",
+    "jobId": "dossier-7e3e480382e8bff8281c48b3",
+    "entityId": "san-marino-republic",
+    "mapIds": [
+      "entity-san-marino"
+    ],
+    "worker": {
+      "id": "wave01-population-deterministic-adapter",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "dc4e08ad4f6edb8e5d72a6feaeab4b5a20376ac7aa8fa01d112a179fd1eb9d6a",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1815",
+      "until": "1815"
+    },
+    "claims": [
+      {
+        "id": "wave01-population-6e0b4ec7f2a1f1403e5bd155",
+        "entityId": "san-marino-republic",
+        "category": "population-statistics",
+        "value": 5492,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1815",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "san-marino-republic-population-reviewed-territory",
+          "description": "Existing source explicitly records separate republic maintained duringNapoleonicperiod and territorialexpansion offer declined. Whole enclave, not metropolitanItalian population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=San Marino; Code=SMR; Year=1815; Population=5492. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"San Marino\",\"code\":\"SMR\",\"year\":\"1815\",\"value\":\"5492\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-san-marino-history. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1815",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Existing source explicitly records separate republic maintained duringNapoleonicperiod and territorialexpansion offer declined. Whole enclave, not metropolitanItalian population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "SMR:1815"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "All 106 literal original population/provenance CSV rows independently checked using Python csv.DictReader. 97 historical Gapminder observations independently match original v7 (2022-10-19) workbook cells exactly; 9 observations preserve UN WPP2024 country-year attribution and year1960. No Togo interim series, HYDE defaults, census claims, invented days or point-to-interval conversion accepted. Existing whole-territory crosswalk approvals and entire-year framework bounds checked; current-border qualification and source-produced-estimate semantics retained. Four unsupported HYDE keys remain held by normalization. No production records edited by this review.",
+      "preservedPackageHashes": [
+        "c741e427a7ec0ecb14f851c229d9ec9037c6381b7b455400027d11884cbb001c",
+        "691a94f2b9cbe62b27a84ef64bdbf3260849f4b6fb9891cb9e4816c5dfa8dbbc"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "46ed940455bb02e7545dd3fb7744c9d1dce2e125fcd5a3fc1a9b0fb975f72090",
+    "productionFingerprint": "dc4e08ad4f6edb8e5d72a6feaeab4b5a20376ac7aa8fa01d112a179fd1eb9d6a",
+    "jobId": "dossier-7e3e480382e8bff8281c48b3",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide population reviewer",
+      "packageHash": "46ed940455bb02e7545dd3fb7744c9d1dce2e125fcd5a3fc1a9b0fb975f72090",
+      "bodyReviewed": true,
+      "rationale": "All 106 literal original population/provenance CSV rows independently checked using Python csv.DictReader. 97 historical Gapminder observations independently match original v7 (2022-10-19) workbook cells exactly; 9 observations preserve UN WPP2024 country-year attribution and year1960. No Togo interim series, HYDE defaults, census claims, invented days or point-to-interval conversion accepted. Existing whole-territory crosswalk approvals and entire-year framework bounds checked; current-border qualification and source-produced-estimate semantics retained. Four unsupported HYDE keys remain held by normalization. No production records edited by this review.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "wave01-population-6e0b4ec7f2a1f1403e5bd155": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "wave01-population-6e0b4ec7f2a1f1403e5bd155"
+    ]
+  }
+}

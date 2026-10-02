@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {parseCSV,eligibleMapping,providerFor,fileHash} from '../scripts/research-population-wave.mjs';
+const entity={id:'test-polity',existence:{validFrom:'1900-01-01',validUntil:'1946-01-01'}};
+const mapping={entityId:entity.id,years:[1900,1914,1945,1960],confidence:'HIGH_CONFIDENCE',scopeRationale:'Reviewed same island territory',sourceIds:['territorial-source']};
+test('Quoted source CSV cells preserve source strings and do not create extra columns',()=>assert.deepEqual(parseCSV('Entity,Year,Source\r\n"A, B",1914,"Book ""A"""\r\n'),[{Entity:'A, B',Year:'1914',Source:'Book "A"'}]));
+test('Malformed source files fail closed',()=>{assert.throws(()=>parseCSV('A,B\n1,2,3'));assert.throws(()=>parseCSV('A,B\n"broken,2'));assert.throws(()=>parseCSV('A,A\n1,2'));});
+test('A name/code match cannot bypass territorial review',()=>{assert.equal(eligibleMapping({...mapping,confidence:'REVIEW'},entity,1914),false);assert.equal(eligibleMapping({...mapping,confidence:'INCOMPATIBLE'},entity,1914),false);assert.equal(eligibleMapping({...mapping,scopeRationale:''},entity,1914),false);assert.equal(eligibleMapping({...mapping,sourceIds:[]},entity,1914),false);});
+test('Crosswalk cannot back-project or extend observations into another historical framework',()=>{assert.equal(eligibleMapping(mapping,entity,1914),true);assert.equal(eligibleMapping(mapping,entity,1960),false);assert.equal(eligibleMapping(mapping,entity,1938),false);assert.equal(eligibleMapping({...mapping,entityId:'another-polity'},entity,1914),false);});
+test('Year-precision observation is held when entity starts partway through that year',()=>assert.equal(eligibleMapping(mapping,{...entity,existence:{validFrom:'1900-07-01',validUntil:'1946-01-01'}},1900),false));
+test('A partial terminal year cannot silently become a whole-year observation',()=>assert.equal(eligibleMapping(mapping,{...entity,existence:{validFrom:'1900-01-01',validUntil:'1945-07-01'}},1945),false));
+test('Country-year source attribution distinguishes Gapminder, UN and former-country series',()=>{assert.equal(providerFor('Gapminder v7 (2022)'), 'gapminder');assert.equal(providerFor('Gapminder - Systema Globalis (2023)'), 'systema');assert.equal(providerFor('United Nations - World Population Prospects (2024)'), 'un-wpp');assert.equal(providerFor('United Nations World Population Prospects 2024 interim update'),null);assert.equal(providerFor('HYDE v3.3'),null);});
+test('Parser and territorial eligibility tests do not mutate accepted production',()=>{const path='data/comprehensive-dossiers.json',before=fileHash(path);parseCSV('Entity,Year,Population\nIsland,1914,123');eligibleMapping(mapping,entity,1914);assert.equal(fileHash(path),before);assert.ok(fs.statSync(path).size>0);});

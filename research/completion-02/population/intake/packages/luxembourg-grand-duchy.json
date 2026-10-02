@@ -1,0 +1,674 @@
+{
+  "job": {
+    "id": "dossier-fd7ff42701833f7b4e498d9a",
+    "entityId": "luxembourg-grand-duchy",
+    "period": {
+      "from": "1878",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-luxembourg"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "1f55990a5f35b1014962c35579c21d65639817f655b6ead01da8726f95ffd560",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-wave01-population-luxembourg-grand-duchy",
+    "jobId": "dossier-fd7ff42701833f7b4e498d9a",
+    "entityId": "luxembourg-grand-duchy",
+    "mapIds": [
+      "entity-luxembourg"
+    ],
+    "worker": {
+      "id": "wave01-population-deterministic-adapter",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "1f55990a5f35b1014962c35579c21d65639817f655b6ead01da8726f95ffd560",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1878",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "wave01-population-ae07261f4ac03a30e5b43a2b",
+        "entityId": "luxembourg-grand-duchy",
+        "category": "population-statistics",
+        "value": 207433,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1878",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "luxembourg-grand-duchy-population-reviewed-territory",
+          "description": "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Luxembourg; Code=LUX; Year=1878; Population=207433. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Luxembourg\",\"code\":\"LUX\",\"year\":\"1878\",\"value\":\"207433\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-luxembourg-dynasty, b01-grand-duchess-charlotte, b01-luxembourg-money. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "LUX:1878"
+        }
+      },
+      {
+        "id": "wave01-population-42ce5f3f47c7c56f851e1a8c",
+        "entityId": "luxembourg-grand-duchy",
+        "category": "population-statistics",
+        "value": 209196,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1880",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "luxembourg-grand-duchy-population-reviewed-territory",
+          "description": "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Luxembourg; Code=LUX; Year=1880; Population=209196. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Luxembourg\",\"code\":\"LUX\",\"year\":\"1880\",\"value\":\"209196\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-luxembourg-dynasty, b01-grand-duchess-charlotte, b01-luxembourg-money. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "LUX:1880"
+        }
+      },
+      {
+        "id": "wave01-population-e96c46aff504a83e75639c93",
+        "entityId": "luxembourg-grand-duchy",
+        "category": "population-statistics",
+        "value": 235574,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1900",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "luxembourg-grand-duchy-population-reviewed-territory",
+          "description": "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Luxembourg; Code=LUX; Year=1900; Population=235574. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Luxembourg\",\"code\":\"LUX\",\"year\":\"1900\",\"value\":\"235574\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-luxembourg-dynasty, b01-grand-duchess-charlotte, b01-luxembourg-money. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1900",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "LUX:1900"
+        }
+      },
+      {
+        "id": "wave01-population-e9b904e8c7a088a39154091a",
+        "entityId": "luxembourg-grand-duchy",
+        "category": "population-statistics",
+        "value": 263227,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1914",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "luxembourg-grand-duchy-population-reviewed-territory",
+          "description": "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Luxembourg; Code=LUX; Year=1914; Population=263227. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Luxembourg\",\"code\":\"LUX\",\"year\":\"1914\",\"value\":\"263227\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-luxembourg-dynasty, b01-grand-duchess-charlotte, b01-luxembourg-money. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "LUX:1914"
+        }
+      },
+      {
+        "id": "wave01-population-32ad052b72c2d4a2b1257521",
+        "entityId": "luxembourg-grand-duchy",
+        "category": "population-statistics",
+        "value": 269864,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "luxembourg-grand-duchy-population-reviewed-territory",
+          "description": "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Luxembourg; Code=LUX; Year=1920; Population=269864. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Luxembourg\",\"code\":\"LUX\",\"year\":\"1920\",\"value\":\"269864\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-luxembourg-dynasty, b01-grand-duchess-charlotte, b01-luxembourg-money. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "LUX:1920"
+        }
+      },
+      {
+        "id": "wave01-population-8647e6b55935db0e6b640c35",
+        "entityId": "luxembourg-grand-duchy",
+        "category": "population-statistics",
+        "value": 297712,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "luxembourg-grand-duchy-population-reviewed-territory",
+          "description": "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Luxembourg; Code=LUX; Year=1930; Population=297712. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Luxembourg\",\"code\":\"LUX\",\"year\":\"1930\",\"value\":\"297712\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-luxembourg-dynasty, b01-grand-duchess-charlotte, b01-luxembourg-money. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "LUX:1930"
+        }
+      },
+      {
+        "id": "wave01-population-826a683e76223bca557fe7f5",
+        "entityId": "luxembourg-grand-duchy",
+        "category": "population-statistics",
+        "value": 300394,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1938",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "luxembourg-grand-duchy-population-reviewed-territory",
+          "description": "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Luxembourg; Code=LUX; Year=1938; Population=300394. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Luxembourg\",\"code\":\"LUX\",\"year\":\"1938\",\"value\":\"300394\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-luxembourg-dynasty, b01-grand-duchess-charlotte, b01-luxembourg-money. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "LUX:1938"
+        }
+      },
+      {
+        "id": "wave01-population-d2bad66efe9aadb3612a68b0",
+        "entityId": "luxembourg-grand-duchy",
+        "category": "population-statistics",
+        "value": 297880,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1945",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "luxembourg-grand-duchy-population-reviewed-territory",
+          "description": "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-gapminder-v7-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-gapminder-v7-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Luxembourg; Code=LUX; Year=1945; Population=297880. Country-year source: Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)",
+            "note": "Original observation {\"entity\":\"Luxembourg\",\"code\":\"LUX\",\"year\":\"1945\",\"value\":\"297880\",\"source\":\"Gapminder v7 (2022) (https://www.gapminder.org/data/documentation/gd003/)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-luxembourg-dynasty, b01-grand-duchess-charlotte, b01-luxembourg-money. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-gapminder-v7-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "LUX:1945"
+        }
+      },
+      {
+        "id": "wave01-population-efed4a1e92bcfc700bbab77d",
+        "entityId": "luxembourg-grand-duchy",
+        "category": "population-statistics",
+        "value": 313888,
+        "metric": "Population (source-produced historical estimate)",
+        "unit": "persons",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "luxembourg-grand-duchy-population-reviewed-territory",
+          "description": "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "wave01-un-wpp2024-owid-953903"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wave01-un-wpp2024-owid-953903",
+            "locator": "OWID indicator 953903 CSV: Entity=Luxembourg; Code=LUX; Year=1960; Population=313888. Country-year source: United Nations - World Population Prospects (2024) (https://population.un.org/wpp/downloads?folder=Standard%20Projections&group=Population)",
+            "note": "Original observation {\"entity\":\"Luxembourg\",\"code\":\"LUX\",\"year\":\"1960\",\"value\":\"313888\",\"source\":\"United Nations - World Population Prospects (2024) (https://population.un.org/wpp/downloads?folder=Standard%20Projections&group=Population)\"}. Population CSV SHA256 6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541; country-year attribution SHA256 4560b72e9f346db6c8c0eeb0b3bfbd2f13ec9c7d118e33b99764247e9ba82b16. Historical scope reviewed separately using b01-luxembourg-dynasty, b01-grand-duchess-charlotte, b01-luxembourg-money. Estimate, not census; no atlas interpolation.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced estimate; observation year is explicit and is not a claim of census enumeration or exact headcount.",
+          "Source geography is compatible only for the listed independently reviewed entity/snapshot; no modern-country fallback.",
+          "Existing sourced framework explicitly acknowledges1839partition; conservative1840start excludes partition year. Current remaining grandducal country core, not larger1815territory. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "OWID indicator 953903; wave01-un-wpp2024-owid-953903; exact CSV value and independent historical territorial crosswalk",
+          "sourceIdentifier": "LUX:1960"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "wave01-un-wpp2024-owid-953903",
+        "title": "UN World Population Prospects 2024 population estimates, via OWID long-run population dataset 2024-07-15",
+        "institution": "United Nations DESA Population Division; Our World in Data",
+        "url": "https://www.un.org/development/desa/pd/content/World-Population-Prospects-2024",
+        "usage": "UN WPP 2024, Online Edition; CC BY 3.0 IGO. Estimates for countries AND areas, not contemporary census enumeration. Only historically compatible territories; exact source observation year retained. Dataset country-year attribution checked, interim/unknown versions held.",
+        "accessed": "2026-10-02",
+        "kind": "licensed-statistical-dataset"
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "wave01-gapminder-v7-owid-953903",
+          "wave01-un-wpp2024-owid-953903"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "All 106 literal original population/provenance CSV rows independently checked using Python csv.DictReader. 97 historical Gapminder observations independently match original v7 (2022-10-19) workbook cells exactly; 9 observations preserve UN WPP2024 country-year attribution and year1960. No Togo interim series, HYDE defaults, census claims, invented days or point-to-interval conversion accepted. Existing whole-territory crosswalk approvals and entire-year framework bounds checked; current-border qualification and source-produced-estimate semantics retained. Four unsupported HYDE keys remain held by normalization. No production records edited by this review.",
+      "preservedPackageHashes": [
+        "c741e427a7ec0ecb14f851c229d9ec9037c6381b7b455400027d11884cbb001c",
+        "691a94f2b9cbe62b27a84ef64bdbf3260849f4b6fb9891cb9e4816c5dfa8dbbc"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "68fe4d7f27bc43ff14ee030facf660bbedcd519912acb79cba048ab80f6ca3c7",
+    "productionFingerprint": "1f55990a5f35b1014962c35579c21d65639817f655b6ead01da8726f95ffd560",
+    "jobId": "dossier-fd7ff42701833f7b4e498d9a",
+    "review": {
+      "reviewer": "officeholder_sources independent source-wide population reviewer",
+      "packageHash": "68fe4d7f27bc43ff14ee030facf660bbedcd519912acb79cba048ab80f6ca3c7",
+      "bodyReviewed": true,
+      "rationale": "All 106 literal original population/provenance CSV rows independently checked using Python csv.DictReader. 97 historical Gapminder observations independently match original v7 (2022-10-19) workbook cells exactly; 9 observations preserve UN WPP2024 country-year attribution and year1960. No Togo interim series, HYDE defaults, census claims, invented days or point-to-interval conversion accepted. Existing whole-territory crosswalk approvals and entire-year framework bounds checked; current-border qualification and source-produced-estimate semantics retained. Four unsupported HYDE keys remain held by normalization. No production records edited by this review.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "wave01-population-ae07261f4ac03a30e5b43a2b": "accepted",
+        "wave01-population-42ce5f3f47c7c56f851e1a8c": "accepted",
+        "wave01-population-e96c46aff504a83e75639c93": "accepted",
+        "wave01-population-e9b904e8c7a088a39154091a": "accepted",
+        "wave01-population-32ad052b72c2d4a2b1257521": "accepted",
+        "wave01-population-8647e6b55935db0e6b640c35": "accepted",
+        "wave01-population-826a683e76223bca557fe7f5": "accepted",
+        "wave01-population-d2bad66efe9aadb3612a68b0": "accepted",
+        "wave01-population-efed4a1e92bcfc700bbab77d": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "wave01-population-ae07261f4ac03a30e5b43a2b",
+      "wave01-population-42ce5f3f47c7c56f851e1a8c",
+      "wave01-population-e96c46aff504a83e75639c93",
+      "wave01-population-e9b904e8c7a088a39154091a",
+      "wave01-population-32ad052b72c2d4a2b1257521",
+      "wave01-population-8647e6b55935db0e6b640c35",
+      "wave01-population-826a683e76223bca557fe7f5",
+      "wave01-population-d2bad66efe9aadb3612a68b0",
+      "wave01-population-efed4a1e92bcfc700bbab77d"
+    ]
+  }
+}
