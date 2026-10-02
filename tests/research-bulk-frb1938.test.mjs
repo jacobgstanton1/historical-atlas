@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readContext,digest} from '../scripts/research-common.mjs';
+import {frb1938Intake} from '../scripts/research-bulk-frb1938.mjs';
+import {prepareCandidates,verifyContract} from '../scripts/research-bulk.mjs';
+const {manifest,contract}=frb1938Intake();
+test('1938 original facsimile, parser and independent receipt are bound',()=>assert.equal(verifyContract(contract,manifest),true));
+test('annual series is held and monthly observations are not publication dates',()=>{for(const r of manifest.rows.filter(r=>r.disposition==='candidate')){assert.match(r.temporal.observationDate,/^1938-0[2-9]$|^1938-10$/);assert.equal(r.precision,'month');} for(const r of manifest.rows.filter(r=>/^193[0-7]$|^1929$/.test(r.temporal.observationDate)))assert.equal(r.disposition,'historical-review');});
+test('market types remain distinct quoted instruments',()=>{const free=manifest.rows.find(r=>r.category==='economy'&&r.originalRow.includes('Brazil')&&r.disposition==='candidate');assert.match(free.metric,/Free/);const official=manifest.rows.find(r=>r.category==='economy'&&r.originalRow.includes('Chile')&&r.disposition==='candidate');assert.match(official.metric,/Official/);});
+test('nominal, glyph and transition risks stay held',()=>{for(const r of manifest.rows.filter(r=>r.originalRow.includes('Austria')||r.originalRow.includes('Czecho')||r.originalRow.includes('Spain')))assert.equal(r.disposition,'historical-review');});
+test('1938 intake preserves production and refuses altered observation',()=>{const before=readContext().productionFingerprint;prepareCandidates(manifest,contract,readContext());assert.equal(readContext().productionFingerprint,before);const changed=structuredClone(manifest);changed.rows[0].temporal.observationDate='1938-12';assert.notEqual(digest(changed),digest(manifest));assert.throws(()=>verifyContract(contract,changed));});

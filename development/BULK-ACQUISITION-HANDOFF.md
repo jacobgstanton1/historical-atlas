@@ -28,3 +28,6 @@ Next category now identified: FederalReserveBulletin July1930 foreignexchange ta
 
 ## FRB1930 checkpoint
 90 dated observations integrated in26 packages:14 currency-unit observations and76 exchange quotations. Production1319 claims, net805. Audit12997 checks passed. Review83 held/3 duplicate candidates preserved. Next: reviewed1938 extraction and contract;1960 bounded source extraction preserved, do not restart research. Capital100 cells remain held for absent observation date.
+
+## FRB1938 checkpoint
+220 further dated observations integrated in28 packages. Total1539 rich claims, net1025. Audit15291 passed.235 independently approved source observations reconciled to220 accepted production candidates,2 duplicates and555 total holds. Next: preserve/reuse1960 source extraction and independent review; source approval is not production acceptance.
