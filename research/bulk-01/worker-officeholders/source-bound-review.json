@@ -1,0 +1,2160 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "worker-officeholders original-body research review",
+  "reviewedAt": "2026-10-02",
+  "purpose": "Source-bound extraction review. This is neither production acceptance nor an independent historical adjudication.",
+  "parserPath": "research/bulk-01/worker-officeholders/extract.mjs",
+  "parserSha256": "e5498319dc33ee237e62e720649719d274ee236e05554fc27106103225147d37",
+  "checks": [
+    "All immutable downloaded source body hashes match manifest.",
+    "All suggested entity ids are actual production entities.",
+    "All source dates parse as valid day-precision dates and retain real tenure endpoints.",
+    "Canada 18 ministries and Japan 59 cabinets through 1960 extracted; split strong-tag Bowell surname regression checked.",
+    "Victoria full premier table uses Assumed office / Left office columns, with six-column guard.",
+    "Queensland list source uses DD/MM/YYYY; full given names retained.",
+    "NSW card boundaries tested against first Donaldson card so current-office name cannot bleed into history."
+  ],
+  "sourceSemantics": {
+    "japan-cabinets": "Each his-block is a numbered cabinet term. Adjacent same-person terms are often a continuous Prime Minister tenure; do not count cabinet reappointments as distinct new persons or claim improvements if existing tenure covers them. Official English spelling HATOYMA is present in body; preserve original label as evidence, reconcile display spelling separately.",
+    "c01-canada-ministry-tenures": "Intro explicitly defines ministry by prime minister tenure, oath to resignation/death/dismissal. Date columns are DD-MM-YYYY. Historical transfer gaps shown by body are preserved; do not interpolate to successors.",
+    "bulk01-victoria-premiers": "Table explicitly says Premier leader with Legislative Assembly support. Assumed office and Left office full dates are explicit. Roman reappointment suffix stripped from person but retained in originalRow. Pre-1902 blank party cells not filled.",
+    "bulk01-queensland-premiers": "Government official named-office list of former Premiers. Source first Herbert term begins 1859-12-10 whereas parliamentary list found during discovery begins 1860-05-22: hold that pre-snapshot row; do not reconcile automatically.",
+    "bulk01-nsw-premiers": "Government served-as-premier cards give real full dates; end dates sometimes precede next start by one day and sometimes equal next start. Preserve endpoints; automatic exclusive/inclusive normalization unsafe."
+  },
+  "rows": [
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 59th; p.his-name; p.his-period",
+      "evidenceSha256": "3af79840353533a2435f881952835b796d57e7db11f4f6079d1cf14326e6bf3d",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 58th; p.his-name; p.his-period",
+      "evidenceSha256": "4ca2bc4e37e572a51144dd7ee2393d991403b5c0043ede46c4b3fcb5f323fb0b",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 57th; p.his-name; p.his-period",
+      "evidenceSha256": "80ed9bc4c0113189394661431dff5f713e071f3a699233ee4b931fee38fd915e",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 56th; p.his-name; p.his-period",
+      "evidenceSha256": "94197395c9f5e0f3aaa2d2ed98cc312ee73aa631f0dbf1e54c52740965849a58",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 55th; p.his-name; p.his-period",
+      "evidenceSha256": "8e6dd73a4188acd5679d79f83abadf56f16a2a8bf367d9c2279a76e3d75516d6",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 54th; p.his-name; p.his-period",
+      "evidenceSha256": "8af5b594422cbe234a02260ae4e2588eac24bd1ed7440afbcf806854a1cf0908",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 53rd; p.his-name; p.his-period",
+      "evidenceSha256": "4dd885b89c44814c54748fec8ea968482324099509ea83ed4d759983cbc390dd",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 52nd; p.his-name; p.his-period",
+      "evidenceSha256": "463c5efca787ae2511fb95ae62510468741bdb2939ca2944e8aa1b1250937292",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 51st; p.his-name; p.his-period",
+      "evidenceSha256": "3512ced414fdd905f9c85287ef7bf0452f1a6a8d18461c403e2ae71d0bf2b7ee",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 50th; p.his-name; p.his-period",
+      "evidenceSha256": "d10d8b46aa0d3d01f7993bf42e6adbea5256ebbc321c382a165f114548613a20",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 49th; p.his-name; p.his-period",
+      "evidenceSha256": "29c2f011f30bc4ec9e248ec42bf360f81833447ebde2009f2edb327e2c652a66",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 48th; p.his-name; p.his-period",
+      "evidenceSha256": "332ec7e87f4724274060cb424f255cae60f9e8cc6ef4a85a382ac561316001c5",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 47th; p.his-name; p.his-period",
+      "evidenceSha256": "159f5ac19e37b93a41ea41317059edb5ba68f1ab9de93b4d12ca7dfbdede2963",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 46th; p.his-name; p.his-period",
+      "evidenceSha256": "e8ab59d55acb5ed955343cd1ff83d077da9a0b3ce7fa7ac2798790fa7fc763dc",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 45th; p.his-name; p.his-period",
+      "evidenceSha256": "b3a66d2f7b90867a9135be09ce213dc3758fbc08bc4f9a50d3ba317a89e8a241",
+      "suggestedMappingCount": 2,
+      "proposedDisposition": "historical-review-transition",
+      "cautions": [
+        "Tenure crosses a curated polity/framework transition. Keep full source tenure; coordinator must adjudicate claim applicability without inventing clipped dates."
+      ]
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 44th; p.his-name; p.his-period",
+      "evidenceSha256": "7259688fc15973f5b6040df2f89e2c090b212bf56193d4d9fc8785a3ce869af1",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 43rd; p.his-name; p.his-period",
+      "evidenceSha256": "2ee2444860d7d4dec6f3dee279d879e6f351caa7711d26ade840800b24cd1984",
+      "suggestedMappingCount": 2,
+      "proposedDisposition": "historical-review-transition",
+      "cautions": [
+        "Tenure crosses a curated polity/framework transition. Keep full source tenure; coordinator must adjudicate claim applicability without inventing clipped dates."
+      ]
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 42nd; p.his-name; p.his-period",
+      "evidenceSha256": "7cdac3a20d3c6df76af88759a8b47ba51efe0284447c843cb2aa3713dc43f6fa",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 41st; p.his-name; p.his-period",
+      "evidenceSha256": "ca2326b140d81bc7b07c02ac1c112041feece93b54f5cc688d18c7157a592bb9",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 40th; p.his-name; p.his-period",
+      "evidenceSha256": "f8c24c1769f1d125f79131b27a0de9979a028f020cf6904e94b21c9c1c694039",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 39th; p.his-name; p.his-period",
+      "evidenceSha256": "5807e515bd0c8443d896e1b991a7621541299e0926984ce4801835fc3a316267",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 38th; p.his-name; p.his-period",
+      "evidenceSha256": "c93313761279fb38d7b2ffe7c11ba96ec3b03846049fffbb75f54732e650d46a",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 37th; p.his-name; p.his-period",
+      "evidenceSha256": "4f45da8c6cff73ec4238e7e766b0233d5b46e4f6aa0582d9765b90e8c1561229",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 36th; p.his-name; p.his-period",
+      "evidenceSha256": "3ef23b352eb5194ea817019f99f71fb3b0acb04a4be7cbb4d215bca4180d18d5",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 35th; p.his-name; p.his-period",
+      "evidenceSha256": "2cdc0030c7098a5f7d2708ccfcb53655e6e57f79b986b932e6346c613678446c",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 34th; p.his-name; p.his-period",
+      "evidenceSha256": "b6b2e131edae664fa67641b57121089e75d3b4d54151936c998c535483d70775",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 33rd; p.his-name; p.his-period",
+      "evidenceSha256": "fe7297c0b3b5f8e2a4f640e42ae8857dd1997d437bcbe4799abb6553987c2d08",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 32nd; p.his-name; p.his-period",
+      "evidenceSha256": "612e24e68c1d0a3488cb11b2ff50fea38ff12fb7cf9dd83b6f00e641a6c736da",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 31st; p.his-name; p.his-period",
+      "evidenceSha256": "3843a27fb283fb5e1043b0c2225aeaf060988a54beeafe2f85759c0583de198e",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 30th; p.his-name; p.his-period",
+      "evidenceSha256": "b94f7d8203327a32c2451d48438c6943d15debc14eb1e8f7ef88c0833f028443",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 29th; p.his-name; p.his-period",
+      "evidenceSha256": "8cd3c5806cf06299fb2e639f25677b3d58a3644bc5bf04e0596264fcabbb84b6",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 28th; p.his-name; p.his-period",
+      "evidenceSha256": "68f647146c3833abeaa5530f889f75398bb7c2e888cdb2cd1ee92e85cdf6836d",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 27th; p.his-name; p.his-period",
+      "evidenceSha256": "d3dc87f3610e6cadb1842cef7d9c828a930ab6dba66a63784c488b7b9195191e",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 26th; p.his-name; p.his-period",
+      "evidenceSha256": "df28e0e5887efd9b8e1031db9f8b2c1f8538cabd745b5e4b42fb535dc1951b5d",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 25th; p.his-name; p.his-period",
+      "evidenceSha256": "73f90a43c1bdf95dbe5772716ce069e2949a8ae8749e7bbff77f202abf689efb",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 24th; p.his-name; p.his-period",
+      "evidenceSha256": "a9036c07c44db6e1548825115771562a2a414edb9ec4d9855554e70dd0c996d7",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 23rd; p.his-name; p.his-period",
+      "evidenceSha256": "7f66818f8ebc371007d6d82d46e7d18fed8a86668e9699f50a5c7b3883d4157c",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 22nd; p.his-name; p.his-period",
+      "evidenceSha256": "fbf7ec4053145b49c052ce1393498077f60b2922dcd2ad6b79e98a933f6d5111",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 21st; p.his-name; p.his-period",
+      "evidenceSha256": "8e1bb74c09386b399882ba442a988596d2d8dfd9b5eaa92b138be7edb80fa36f",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 20th; p.his-name; p.his-period",
+      "evidenceSha256": "648e618e53318a5baae0d539a814dab80e8dec1f2d11793bd980e91a1cb05a72",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 19th; p.his-name; p.his-period",
+      "evidenceSha256": "764c80e535d6961484d8786e33a3d95c9ad71e89d3291414c9c4268359f08637",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 18th; p.his-name; p.his-period",
+      "evidenceSha256": "5a44f3491e776050983ec65a458d8019734d5952390c2fd6c5fa850f065270cc",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 17th; p.his-name; p.his-period",
+      "evidenceSha256": "fa390541fa3b038f3fb6e224e076ba04fa3d804af2e0fc9578e817f40265a389",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 16th; p.his-name; p.his-period",
+      "evidenceSha256": "7a762d5fbd954dd0fa3a66f0908160ee6efc64d391fa050275b7264a3e3d7521",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 15th; p.his-name; p.his-period",
+      "evidenceSha256": "32dedfcb27f873afb38944c0a481e5bc9859fb3c1b18e8a76eb6f858b18f5635",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 14th; p.his-name; p.his-period",
+      "evidenceSha256": "aa9ea8163e7e91794b39f45e9810b804d6fde1c960df5a33f4d3c6b0179d10fe",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 13rd; p.his-name; p.his-period",
+      "evidenceSha256": "643728805dd6c86735d7b7a581c0eda773a85edd1553776c13e4cab82416869e",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 12nd; p.his-name; p.his-period",
+      "evidenceSha256": "dc97e1eb2c36d1a7faf49b7229457c52c5d9a7006665f5f3d4880ac7ead1cf95",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 11st; p.his-name; p.his-period",
+      "evidenceSha256": "aa9ffa4f3d9daed10cc4c2fede076bdc03df7b2a9b7a8eb785e8f957d6e899d7",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 10th; p.his-name; p.his-period",
+      "evidenceSha256": "a8d68788f5f1e9e6c2e4aa2d04621c7ae8d66a42c750575e0a4a54296833aee6",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 9th; p.his-name; p.his-period",
+      "evidenceSha256": "435cc23acd29cdc8bbf7b937845a83e99fab0cade3f1fff16b433ab238a83b46",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 8th; p.his-name; p.his-period",
+      "evidenceSha256": "3cd500854dd184789d9d7d9c755a2d2059bc2c7825ccaf6da0c2c10102b98c9f",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 7th; p.his-name; p.his-period",
+      "evidenceSha256": "7cada486525cdad0169a863775d455d7845a650f42cb650a9677695649d7bbc5",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 6th; p.his-name; p.his-period",
+      "evidenceSha256": "da7961d9376204723e85b725c601967c0fbfebcd6b9870fee22197164740bb11",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 5th; p.his-name; p.his-period",
+      "evidenceSha256": "0be713f576325ceab8e65e2534478a7ae4a77720f59aa71e0a2b4b1ceca23eb5",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 4th; p.his-name; p.his-period",
+      "evidenceSha256": "d97f58c4209c1e57b08b9a0b40a5676aa41515adb7e82c7b8c98d1010534af21",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 3rd; p.his-name; p.his-period",
+      "evidenceSha256": "3e0173eec64a46486a5d809371409124c32fab05f20c77ad9877213991c88742",
+      "suggestedMappingCount": 2,
+      "proposedDisposition": "historical-review-transition",
+      "cautions": [
+        "Tenure crosses a curated polity/framework transition. Keep full source tenure; coordinator must adjudicate claim applicability without inventing clipped dates."
+      ]
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 2nd; p.his-name; p.his-period",
+      "evidenceSha256": "a8c7c17c934fdf5fe7c8ff795c2d6085944a0e89ab61124a1db22682f1dfff4a",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "locator": "li.his-block: 1st; p.his-name; p.his-period",
+      "evidenceSha256": "281033aa6d42af7dc90d21ce5fb9adb2465b47c7c7815ab5211fc2a8ae553689",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 1; Prime Minister column; Term of Office column",
+      "evidenceSha256": "2721b263af6e047fee8c5b42b48c7582f5c77cb4a681c0515749e1931b8f265e",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 2; Prime Minister column; Term of Office column",
+      "evidenceSha256": "b780ba9ee50c0c41a88cae21bd5286b1cff7f0b4d8f8cd546b7256391ddd475a",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 3; Prime Minister column; Term of Office column",
+      "evidenceSha256": "60205b1b113c41511706b04b15e047d5d916244f44007ca21d26ae33809b0f26",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 4; Prime Minister column; Term of Office column",
+      "evidenceSha256": "169dbe3e9364fe3389530fb746dedf3532fac4cf3a73e55c2c5b091a52a49146",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 5; Prime Minister column; Term of Office column",
+      "evidenceSha256": "9c660899dd74c3576cc011801e5deaf7417a1ac61499fa8cd617df89a6a02230",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 6; Prime Minister column; Term of Office column",
+      "evidenceSha256": "5b8721bd7559dc3f652b076c53f0ec3c7a9024274d5677e6d8103562ff2ede29",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 7; Prime Minister column; Term of Office column",
+      "evidenceSha256": "6eb86c49a09751daf21e185669a2c00362b52f240c9921d563ff9ca1bde46993",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 8; Prime Minister column; Term of Office column",
+      "evidenceSha256": "16b9ab403dc12ffcc5b30fab9d8a1830f840b3007e51c51fa8da7cd383c6e812",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 9; Prime Minister column; Term of Office column",
+      "evidenceSha256": "1bf18010632749a601b21649208e4ecb4e39393673decb244363b562b39425fc",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 10; Prime Minister column; Term of Office column",
+      "evidenceSha256": "4eab4bdbb72519b5c4d0c6862a0fab94c4d5a61e4d02fbadf1657eb6f1892623",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 11; Prime Minister column; Term of Office column",
+      "evidenceSha256": "758d464f1f36b5e9232bed7c30d603cf646525a7be92e9e364941a288ec11ea3",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 12; Prime Minister column; Term of Office column",
+      "evidenceSha256": "90f7128c20b68e409407be72009b5c481f45c8de193416b8da835cec1ac21672",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 13; Prime Minister column; Term of Office column",
+      "evidenceSha256": "3642a615d829060af5db63d98f78c6a20b136e76956e8bd0b5e206c6778b9e3c",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 14; Prime Minister column; Term of Office column",
+      "evidenceSha256": "8e44f7b59e423d9d8c97c92274af8dd56478433e4a7c1accec51371d3fed7da8",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 15; Prime Minister column; Term of Office column",
+      "evidenceSha256": "ed59bd7bd9f7aad96b133b725817e8211b820504fbdbccd4042d2c55a64eb7d8",
+      "suggestedMappingCount": 2,
+      "proposedDisposition": "historical-review-transition",
+      "cautions": [
+        "Tenure crosses 1931 framework boundary; full official dates retained for coordinator applicability adjudication."
+      ]
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 16; Prime Minister column; Term of Office column",
+      "evidenceSha256": "0c1843c24056cf82e02644f1592b5fa2ec0c2ec3eadeaee9c84277a6118cb454",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 17; Prime Minister column; Term of Office column",
+      "evidenceSha256": "082d421700d6c3b378220088bb5d6e0ab80ea82ca74a1cb37aa28244b7ee753f",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "locator": "Appendix 6 ministry row 18; Prime Minister column; Term of Office column",
+      "evidenceSha256": "5c037eeb86474fc716f369814895a1ebb4265d2ecf1342b6995efbafd62e0260",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": []
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Henry Bolte; Assumed office / Left office columns",
+      "evidenceSha256": "4a2ece23a59e169eb2c363d7a7acb5d7eb7b85816dd84ffe053622acf265f2d9",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: John Cain Sr (III); Assumed office / Left office columns",
+      "evidenceSha256": "f9843feaa54e572c52e0d4c92eb120a682dd5cc6dd7c96b2d4fd00a0f6deec71",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: John McDonald (II); Assumed office / Left office columns",
+      "evidenceSha256": "0e7d1d5410830f2d4faf86cb4ec11931af5afa3b5e8894c5c0c7f03024b5ef8c",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Thomas Hollway (II); Assumed office / Left office columns",
+      "evidenceSha256": "b244f6591d4f82264f449f9cc1590c2c07ce5cb428f62933efa2c8a5a0daa529",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: John McDonald; Assumed office / Left office columns",
+      "evidenceSha256": "32320a7ef8d483af2afeadf8b563500d49b4f8fa4ce5db6c08b06040d493c9ea",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Thomas Hollway; Assumed office / Left office columns",
+      "evidenceSha256": "011197dc6004b8bd79f0d8be6b9ba853e4905c2289599779bcc2e299aa01c71a",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Thomas Hollway; Assumed office / Left office columns",
+      "evidenceSha256": "ef24cea82fa39eaeee04482231a7d9eb4530c3e870c9405c5fa35f65e09bc037",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: John Cain Sr (II); Assumed office / Left office columns",
+      "evidenceSha256": "6143a7b06e0e5ebb157601961fe2aa962bacb7cdc5260a400b4030a0dc474af6",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Ian MacFarlan; Assumed office / Left office columns",
+      "evidenceSha256": "079edf0b74399434b2af3a89daee5cb097b579d4bfcc1dcdddab599753dc7aaf",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Albert Dunstan (II); Assumed office / Left office columns",
+      "evidenceSha256": "02c047a51ee7428a0facedb9fee2a51870f3bb892830b282ce0da59d687dd8ea",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: John Cain Sr; Assumed office / Left office columns",
+      "evidenceSha256": "3ec47630aa8d73624e51fcd3b5698f43f0b80dbfe19889376b6d39e129521149",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Albert Dunstan; Assumed office / Left office columns",
+      "evidenceSha256": "fe321eda19b4dee1c4ef2a598a3d4ffdda4d7934167dfe5f652f01084ef85039",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Stanley Argyle; Assumed office / Left office columns",
+      "evidenceSha256": "d6df973373167ebbb88d6c5e49c5059a36773119ddccce55352f5bc28802ba4b",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Edmond Hogan (II); Assumed office / Left office columns",
+      "evidenceSha256": "0d9ffbd4258be7168299d24ea2a8e6eceaf9783ddbbc192df8f9c4c279356c26",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: William McPherson; Assumed office / Left office columns",
+      "evidenceSha256": "5818763ba81b8a91f5b5ddea1fc756901fe18db4d32637fb55460db879025387",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Edmond Hogan; Assumed office / Left office columns",
+      "evidenceSha256": "7ee2c54286c3ed4888f697eccc3a028e220937bc46ed2a48de4f59dee17977f6",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: John Allan; Assumed office / Left office columns",
+      "evidenceSha256": "7d97416c198e738f681cf05060d4f3ba9209045f13133115110f19989e9d1fd6",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: George Prendergast; Assumed office / Left office columns",
+      "evidenceSha256": "819243f0fb2589ea627593b9b3941790656c234bda0686a841ea937a332f9cff",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Alexander Peacock (III); Assumed office / Left office columns",
+      "evidenceSha256": "544f9a22ff6c9629a85df50f109cca5afe8e81c09d42e4491d5145d76ad1ce6d",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Harry Lawson; Assumed office / Left office columns",
+      "evidenceSha256": "075aeae77ba709dc9eae11888ac344d2c5ce64921b32c9f0cddaf965688b7a3c",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Harry Lawson; Assumed office / Left office columns",
+      "evidenceSha256": "0bf63630ca962a9dd15b9784298d0030ef6e9baa0a3841d1457ea726b1bb9c1e",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Harry Lawson; Assumed office / Left office columns",
+      "evidenceSha256": "d838f189d42d0b48429f6d625a0c5c5a8178a6cb4c039838ce08d4bd905ec3f6",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: John Bowser; Assumed office / Left office columns",
+      "evidenceSha256": "34da7c2e8dfa1b8b772d64314a8e3e7fb1f84cdf98969862de6bb95487ec9424",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Alexander Peacock (II); Assumed office / Left office columns",
+      "evidenceSha256": "81eec1ef308fe9646cdbc7907c7903a184cf8fa0c7019f03e1c415d555b5cb89",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: William Watt (II); Assumed office / Left office columns",
+      "evidenceSha256": "0dfb1fbfe41c5e152e88bd8ba5495fd4398abbedd25acd22a3487a3e735bfc57",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: George Elmslie; Assumed office / Left office columns",
+      "evidenceSha256": "9b94cd91901fefb3d1d99c7cb43e453106847dd9af4bd17e2c5c7ea0a5185efc",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: William Watt; Assumed office / Left office columns",
+      "evidenceSha256": "76c913bee848d93850102028f4741ba41be00ca98b353ed6532c29438be76a7e",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: John Murray; Assumed office / Left office columns",
+      "evidenceSha256": "d79b5e6536c76bd6637f7c0358bb2c073ff0e1bab3341d0faa360865222f216d",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Thomas Bent; Assumed office / Left office columns",
+      "evidenceSha256": "e8d1cc883ae93061c9f28d6170176f5dfc12f92293aa411e553f0e35a5f4e381",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: William Irvine; Assumed office / Left office columns",
+      "evidenceSha256": "c2cfa6ac92f408d127e6034f4cff723607ba6aeafd3a683477494bee02874271",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Alexander Peacock; Assumed office / Left office columns",
+      "evidenceSha256": "bd74906e5d2e53b576e459435b4757417fde48d1f4f42423470e270161acc88b",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: George Turner (II); Assumed office / Left office columns",
+      "evidenceSha256": "75e825919bd1a3710ae39db298239d5dbd858b901428ce46d4b9a0eb9a29e181",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Allan McLean; Assumed office / Left office columns",
+      "evidenceSha256": "6619eb4bfa2f5ec70ec6954e8a599e18971f25cf207f45adea885db1b4ead2f5",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: George Turner; Assumed office / Left office columns",
+      "evidenceSha256": "dda22b636936c507cc870813663cd5fe873b1a9c9da20cf5916c2d3abe6f279d",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: James Patterson; Assumed office / Left office columns",
+      "evidenceSha256": "f92263bca8646e0ddd33af5dcbf0c680a3914c5b581e9ce513ee36fc78be695f",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: William Shiels; Assumed office / Left office columns",
+      "evidenceSha256": "83226745f0436912aa40b98cfc41c981efb9f7445cddd752efbbcedef5139f63",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: James Munro; Assumed office / Left office columns",
+      "evidenceSha256": "46eb89336e798771571782a0df2eb1b77c47a117d1f366871603dfaa8977adb9",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Duncan Gillies; Assumed office / Left office columns",
+      "evidenceSha256": "750dfa7c361f7e61751d6c8ea3f103cd0a12a195511c18c135705f90bf951d1c",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: James Service (II); Assumed office / Left office columns",
+      "evidenceSha256": "73e1e346af464ac60d393b4ffa5d49c0213aa0fc986f9b350ed98da1258eca92",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Bryan O'Loghlen; Assumed office / Left office columns",
+      "evidenceSha256": "bec0047e8142fbf102fa91000d8cb3f50da567297676e727b2119232bfb8feed",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Graham Berry (III); Assumed office / Left office columns",
+      "evidenceSha256": "dc495323b594e8a55b42a6329be95951026f59b1e3797ecdf2d574781e706c3d",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: James Service; Assumed office / Left office columns",
+      "evidenceSha256": "0ad4657d0f5023a003154c7dab299b4497af5b27e37458987bce0224323ccbf8",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Graham Berry (II); Assumed office / Left office columns",
+      "evidenceSha256": "5ed04b1e0d00582efc31f91f99ddc57e0d6337169c309080af4cba578a7f9b28",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: James McCulloch (IV); Assumed office / Left office columns",
+      "evidenceSha256": "3e33460d5709c642b90f01bf96046bc49d2c5bfe496de1ae14bce090bc21ca3e",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Graham Berry; Assumed office / Left office columns",
+      "evidenceSha256": "a1500f2abd2cd015ef02af9343b3d6e3ac1caad9b4eee88428357acb072793d5",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: George Kerferd; Assumed office / Left office columns",
+      "evidenceSha256": "94e4c2af2731753ef0b3394155ac6b72d3c430fddace39ea7bc7e9c5a251f3d4",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: James Francis; Assumed office / Left office columns",
+      "evidenceSha256": "2a64563013dcb9f652689613f4e99898a200e7282ea87d45189ace5558e53d26",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Charles Gavan Duffy; Assumed office / Left office columns",
+      "evidenceSha256": "6f07cad4219f898f7174f9912be7da9bbd5e1509fb6a61723c72c3b45b368fb5",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: James McCulloch (III); Assumed office / Left office columns",
+      "evidenceSha256": "8e8b7a7f20263895e84474f5665ccd937b8701a8a24ccaaf98bdbc3e5a274f2e",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: John MacPherson; Assumed office / Left office columns",
+      "evidenceSha256": "ba6f6578857cd68e46f5b0f6789e8df3cc670dedde9e9541aabebc72a2770af7",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: James McCulloch (II); Assumed office / Left office columns",
+      "evidenceSha256": "ea3de9efd07caad6dd8c8f9ffe757109f0ff51c59f020b6bdd6f3cd78c27c2aa",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Charles Sladen; Assumed office / Left office columns",
+      "evidenceSha256": "6b1ee8f632ec733d375c20e63ec93970ba468c4e39d262cbb6ef0693fd8de96c",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: James McCulloch; Assumed office / Left office columns",
+      "evidenceSha256": "6ae216b633b828150f3af99ea2f9fadf71bc9c32acd21122d2e27927fda4baf2",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: John O'Shanassy (III); Assumed office / Left office columns",
+      "evidenceSha256": "e80d5e2746960ab5435f8616d2649812b239f8a31f4a71b7cf6ad35dc92a5058",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: Richard Heales; Assumed office / Left office columns",
+      "evidenceSha256": "9cbb721a4fd9689f1d2bc3071a5f68d90b61cbe573f04b0b715cc417d059ad7c",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: William Nicholson; Assumed office / Left office columns",
+      "evidenceSha256": "091e418d5e50ba89fbb87242fc872b6f75531d63bf22e258d8df92c9c02e1911",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: John O'Shanassy (II); Assumed office / Left office columns",
+      "evidenceSha256": "9254690d6fe6a73617fffba160085f9c4ac033bcb6dad2c708966eaf06d8016b",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: William Clark Haines (II); Assumed office / Left office columns",
+      "evidenceSha256": "f0e5ecbc0e768cc48ea4dcb6701debd703a2154162e9a046678703b4e65cd8b3",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: John O'Shanassy; Assumed office / Left office columns",
+      "evidenceSha256": "761d25a30d2efb2b7fe62ea28f378f5d61b57d37e5b70de89df8f4e74196ac7d",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "locator": "Former Premiers table row: William Clark Haines; Assumed office / Left office columns",
+      "evidenceSha256": "857ca5851bbfaa23f63ed3d7675683c349e68796179447ae8432d4c3ee1726ca",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside existing curated colony coverage: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: George Francis Reuben Nicklin,12/08/1957–17/01/1968",
+      "evidenceSha256": "921b5097351d938db7828ab145d1161e66e6b770f4b4b6367cca4ac2ec80c5ab",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Vincent Clair Gair, 17/01/1952–12/08/1957",
+      "evidenceSha256": "b6158fb2c9349c4b42ed627a6635ae8271abc084d505777fbb25ce00abb22dff",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Edward Michael Hanlon, 07/03/1946–17/01/1952",
+      "evidenceSha256": "4db056528d23edbf48896f2cba7da4fee20f509ed352249d1860519e7697a84f",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Frank Arthur Cooper, 16/09/1942–07/03/1946",
+      "evidenceSha256": "0535994c8d3c6f4ffeda72aeaafb03c71982622b09675081d10af6ccbe3e49cf",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: William Forgan Smith, 17/06/1932–16/09/1942",
+      "evidenceSha256": "9763a3e0b17f272ab4518d8db0d9e756cf7fe3f2208643c121fef04dcccd6880",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Arthur Edward Moore, 21/05/1929–17/06/1932",
+      "evidenceSha256": "44121887db2a26ad467e4ec17593b69a5e87d9ebf8ba2335ffc4e83809194f5c",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: William McCormack, 22/10/1925–21/05/1929",
+      "evidenceSha256": "e031a84813a699d46f6036bb351494c13ed2f497159b6144f7f98a3d5d6e4854",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: William Neal Gillies, 26/02/1925–22/10/1925",
+      "evidenceSha256": "80b8b9970dae74aa0a8fa6bc18baf353260bf322c4477c2988f3ddfc203cb4d2",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Edward Granville Theodore, 22/10/1919–26/02/1925",
+      "evidenceSha256": "8948e0ecb5ca303fd46cabcc13418c39879535e3213b34781d591bff113ae662",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Thomas Joseph Ryan, 01/06/1915–22/10/1919",
+      "evidenceSha256": "479e9dda7f20ffbb1f810b498a228b4de86c9f9444aaba61055d1d3df28c748c",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Digby Frank Denham, 07/02/1911–01/06/1915",
+      "evidenceSha256": "d279912d687caf34bdbb103121b78b83cda5911c06d9a561b2cf39da926656c3",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: William Kidston, 18/02/1908–07/02/1911",
+      "evidenceSha256": "37c4df9e27a4ced064e8a876d3ad0805ae8f6c9f9233b11cc9b442cf49c2a86c",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Robert Philp, 19/11/1907–18/02/1908",
+      "evidenceSha256": "584dc8a2d56a419454284cbe9da4d34e15cb8f5676488848387ab33464d28ab9",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: William Kidston, 19/01/1906–19/11/1907",
+      "evidenceSha256": "3f27eb67c671aa898b3dbca34322f6f874fcd65b21047850f5a39a383a25bf94",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Arthur Morgan, 17/09/1903–19/01/1906",
+      "evidenceSha256": "ec06d79422eea11c826f0ad679c3ba3b301637537b5d2acffaed833a99356609",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Robert Philp, 07/12/1899–17/09/1903",
+      "evidenceSha256": "f1edad64ddef951defac2e8b548347fd604a947b2fa8f4c00b16a9f53b1d9939",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Anderson Dawson, 01/12/1899–07/12/1899",
+      "evidenceSha256": "fe3e594280a3800dfeb2ccf67b237e37b9e01c2fe98325f219a1e86bf4906f78",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: James Robert Dickson, 01/10/1898–01/12/1899",
+      "evidenceSha256": "25c8b78e05d875c21dbc09f2bb2d80096fd7e0d2f466a3bb5acd42ff3c5b63cd",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Thomas Joseph Byrnes, 13/04/1898–01/10/1898",
+      "evidenceSha256": "46647b1b80ce41ef6dbf3a58793218e0fd0fe91e81c730be85cc040d2fb17c13",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Hugh Muir Nelson, 27/10/1893–13/04/1898",
+      "evidenceSha256": "bc55d095a6a1a50a96cf91500ebaad3f915ae58ec9ea6b179831201574a5f361",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Thomas McIlwraith, 27/03/1893–27/10/1893",
+      "evidenceSha256": "6fb3dc8e755a12030ef0c45f13f0ad27f6e3421a9bdc9e73062724cd83c315ba",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Samuel Walker Griffith, 12/08/1890–27/03/1893",
+      "evidenceSha256": "480649d9f1a43cecc1bf29f5a24c2a36e0fd0d29eef2f804d65e48c2a66a46db",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Boyd Dunlop Morehead, 30/11/1888–12/08/1890",
+      "evidenceSha256": "75691667ecdcafc708a5a316c5434b0f8fdfcb4e0d7e8936b04e33999ff88932",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Thomas McIlwraith, 13/06/1888–30/11/1888",
+      "evidenceSha256": "e8f54f5ffc44ba99fcb1d3466164e8871135874ad259f64626782386f7760359",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Samuel Walker Griffith, 13/11/1883–13/06/1888",
+      "evidenceSha256": "bc01ac27ec6ff8ce66b589dc3b09d9cf487bcb0c865caa8ae14e77f2d3a4dcdb",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Thomas McIlwraith, 21/01/1879–13/11/1883",
+      "evidenceSha256": "d190460c0c3bbab5d458f6c7136b123f2b5fb3fbb24f9e259fc6713e3d103675",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: John Douglas, 08/03/1877–21/01/1879",
+      "evidenceSha256": "f4c44b66375f6110d55aee26a949e29470ab6e10c6ef4da79f49673b67c8b4f9",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "source-row-extracted",
+      "cautions": [
+        "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: George Thorn, 05/06/1876–08/03/1877",
+      "evidenceSha256": "7fc8251d766575af08943e3e805b2ab91d3ba6f08adeb7d68f7d8356e884b90c",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Arthur Macalister, 08/01/1874–05/06/1876",
+      "evidenceSha256": "e93be21ae39894e9cde9fd1f9a412e2907abaa2c140138204ea17145008045f1",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Arthur Hunter Palmer, 03/05/1870–08/01/1874",
+      "evidenceSha256": "75ac24e16691083d370f56cd395660ffbd132d5eeb68a58c8fc1aef811e5ad84",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Charles Lilley, 25/11/1868–03/05/1870",
+      "evidenceSha256": "dd7348c87b0d0533621e0e5f8fc2b9a5f2f266d57ffc62fee122892f6495a9fb",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Robert Ramsey Mackenzie, 15/08/1867–25/11/1868",
+      "evidenceSha256": "f6b2a3229f2bb1a40dfa0696f902b09bb290fbbe95c01c6a5a50dc90a9823844",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Arthur Macalister, 07/08/1866–15/08/1867",
+      "evidenceSha256": "c369bc1f4e38ed2915c9098df8ae09f811fd24bde830843b561d608b13d950e7",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Robert George Wyndham Herbert, 20/07/1866–07/08/1866",
+      "evidenceSha256": "0682e66e78d91ea1219b93f134e5a020603b097ea5854010ee1345fb9c533c34",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Arthur Macalister, 01/02/1866–20/07/1866",
+      "evidenceSha256": "1e8ecf932013a8c09b06c1a1b48e5a050af144149a5b03f35e663abb567c5e60",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "locator": "Former Premiers of Queensland list item: Robert George Wyndham Herbert, 10/12/1859–01/02/1866",
+      "evidenceSha256": "6dc95a6ecca788202f89428528fd0c9a4052045bed0e9540724942aa64e30bb7",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Stuart (later Sir Stuart) Donaldson; SERVED AS PREMIER: 6 Jun 1856 — 25 Aug 1856",
+      "evidenceSha256": "faac55f97a2b8f79608595b429192727f538b0372715386a722851a9d75d9426",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Charles (later Sir Charles) Cowper; SERVED AS PREMIER: 26 Aug 1856 — 2 Oct 1856",
+      "evidenceSha256": "364eb2c72c1097e5b9da26397c7b253a13bae1a5f6c0cadec0486bf685eef6fc",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Charles (later Sir Charles) Cowper; SERVED AS PREMIER: 7 Sep 1857 — 26 Oct 1859",
+      "evidenceSha256": "a919d7cb5ed47eda0d353ec80ab76c273d42e03ad72f88dc6a1688302812d0e4",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Charles (later Sir Charles) Cowper; SERVED AS PREMIER: 10 Jan 1861 — 15 Oct 1863",
+      "evidenceSha256": "d013e48945eb43945a436a8af74ce2c99146e722880e265e3feec1aa79bcd504",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Charles (later Sir Charles) Cowper; SERVED AS PREMIER: 3 Feb 1865 — 21 Jan 1866",
+      "evidenceSha256": "2eda661b4676af736e893e7ab2b6a5597dbc361d3012f0095bca4bd32ad5e5d3",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Charles (later Sir Charles) Cowper; SERVED AS PREMIER: 13 Jan 1870 — 15 Dec 1870",
+      "evidenceSha256": "dafa76552deed28601565cd1fe1582b61ba4c2cf85dd2e718e4c8806718a18ca",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Henry (later Sir Henry) Parker; SERVED AS PREMIER: 3 Oct 1856 — 7 Sep 1857",
+      "evidenceSha256": "dbe91f7d5455f3e14588715c5ae28b538e0b4f8d07e35f30d016c5daebaa7bdb",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon William Foster; SERVED AS PREMIER: 27 Oct 1859 — 8 Mar 1860",
+      "evidenceSha256": "5db9831a21379dda2c72fd92c7f8aabb7aff7c853957d079ef6b134d59f9b4ac",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir John Robertson KCMG; SERVED AS PREMIER: 9 Mar 1860 — 9 Jan 1861",
+      "evidenceSha256": "241aa752d56432897f8b16fb0282ebffad5b3c511d5497057e64e5101abeb14f",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir John Robertson KCMG; SERVED AS PREMIER: 27 Oct 1868 — 12 Jan 1870",
+      "evidenceSha256": "9d44251cf19901806cf7ca408fe421f4cd171bd1afad5e1879458bb2d94c4f0e",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir John Robertson KCMG; SERVED AS PREMIER: 9 Feb 1875 — 21 Mar 1877",
+      "evidenceSha256": "333f9194503eeb8bc158af3161555d615f611ec8793e460f33b49a8cacb3bfc2",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir John Robertson KCMG; SERVED AS PREMIER: 17 Aug 1877 — 17 Dec 1877",
+      "evidenceSha256": "fd1d4d3747d1972d5e031f0670913f8795196578b50d72095185ab4849cd576f",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir John Robertson KCMG; SERVED AS PREMIER: 22 Dec 1885 — 25 Feb 1886",
+      "evidenceSha256": "04a78966bbf86a15646150eaf9235a64e4dab2200115d6f63800da254d24ca9c",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "held-endpoint-semantics",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Curated colony coverage only 1878–1901."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir James Martin KCB; SERVED AS PREMIER: 16 Oct 1863 — 2 Feb 1865",
+      "evidenceSha256": "5833e8d0d54a63639ae3fa35950b9386d33395eecb100173020a971c842b4564",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir James Martin KCB; SERVED AS PREMIER: 22 Jan 1866 — 26 Oct 1868",
+      "evidenceSha256": "0cf35ab34f271f5948993c9e254efe507c684f5f87e1dacd24527c968fe80c85",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir James Martin KCB; SERVED AS PREMIER: 16 Dec 1870 — 13 May 1872",
+      "evidenceSha256": "8d07443c99a2692554c7c664011d88a9930eae8c8411ae4ce73ef5103f302aba",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir Henry Parkes GCMG; SERVED AS PREMIER: 14 May 1872 — 8 Feb 1875",
+      "evidenceSha256": "bd37f520bff4607e8c98b3a115986067584a8b11586f2e1444ed2d43d0bdc82d",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir Henry Parkes GCMG; SERVED AS PREMIER: 22 Mar 1877 — 16 Aug 1877",
+      "evidenceSha256": "f616cc881f084a0bf2725bbaaa34bd62002a4fa74386440e66cade12d67afa72",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir Henry Parkes GCMG; SERVED AS PREMIER: 21 Dec 1878 — 4 Jan 1883",
+      "evidenceSha256": "17385224f673bdaf8ca4cf7282ea5e43c9f5039950419d325a100b7e29bdf55d",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "held-endpoint-semantics",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Curated colony coverage only 1878–1901."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir Henry Parkes GCMG; SERVED AS PREMIER: 20 Jan 1887 — 16 Jan 1889",
+      "evidenceSha256": "7f82c86030494c1a18ee17c9e7c435ca4e17832780001a711de5d29d8752f2d8",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "held-endpoint-semantics",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Curated colony coverage only 1878–1901."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir Henry Parkes GCMG; SERVED AS PREMIER: 8 Mar 1889 — 22 Oct 1891",
+      "evidenceSha256": "378ecb684b392d3d3d99524a1483b2f2c14f4519a0373862928372e546ef7c9f",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "held-endpoint-semantics",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Curated colony coverage only 1878–1901."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon James Farnell; SERVED AS PREMIER: 18 Dec 1877 — 20 Dec 1878",
+      "evidenceSha256": "2dd6cee8454a11b13fd1931c3f69606debadb77c03afc3a9ea9ad2aef573a48b",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "held-endpoint-semantics",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Curated colony coverage only 1878–1901."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir Alexander Stuart KCMG; SERVED AS PREMIER: 5 Jan 1883 — 6 Oct 1885",
+      "evidenceSha256": "f19a74e344bcbba329a890a4ce2dcba64494f383b8432b8b037c8d07bb6e82ab",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "held-endpoint-semantics",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Curated colony coverage only 1878–1901."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir George Dibbs KCMG; SERVED AS PREMIER: 7 Oct 1885 — 21 Dec 1885",
+      "evidenceSha256": "09260ff46c46abfa47a3a74066b1fae0096d700268d411fa290512c78ca0e846",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "held-endpoint-semantics",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Curated colony coverage only 1878–1901."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir George Dibbs KCMG; SERVED AS PREMIER: 17 Jan 1889 — 7 Mar 1889",
+      "evidenceSha256": "f1651c8987b1cd7f78c646fa22d34f5fa1d13473eb6b83e7a335ce356824ab2e",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "held-endpoint-semantics",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Curated colony coverage only 1878–1901."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir George Dibbs KCMG; SERVED AS PREMIER: 23 Oct 1891 — 2 Aug 1894",
+      "evidenceSha256": "324244476ed435f814b7f7c0174900953f10d826c880f6e38119e9f4a81a6f3f",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "held-endpoint-semantics",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Curated colony coverage only 1878–1901."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir Patrick Jennings KCMG; SERVED AS PREMIER: 26 Feb 1886 — 19 Jan 1887",
+      "evidenceSha256": "06ae4d9ef43aa4dfa7956deb6ca394db3de65bd88f4a9e186a7817d4745ff1c7",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "held-endpoint-semantics",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Curated colony coverage only 1878–1901."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon George George (later Sir George) Reid; SERVED AS PREMIER: 3 Aug 1894 — 13 Sep 1899",
+      "evidenceSha256": "e4aa4b67edb3ede91989fdb9dbc90125ae6ef86e9bac022d5c50eb21bd22bc24",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "held-endpoint-semantics",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Curated colony coverage only 1878–1901."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir William Lyne KCMG; SERVED AS PREMIER: 14 Sep 1899 — 27 Mar 1901",
+      "evidenceSha256": "c7c192465e71805d5fd3951b1762ed077d23c27138f9ac2e3d2332b9790a8128",
+      "suggestedMappingCount": 1,
+      "proposedDisposition": "held-endpoint-semantics",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Curated colony coverage only 1878–1901."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir John See KCMG; SERVED AS PREMIER: 28 Mar 1901 — 14 Jun 1904",
+      "evidenceSha256": "976008f707266573d2afae7b55c5ae5dfe00e26c8990f5898d2db19abb42a399",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Thomas Waddell; SERVED AS PREMIER: 15 Jun 1904 — 29 Aug 1904",
+      "evidenceSha256": "c2017775b9530b196156cb4f09da03176703142f45b138822abfd6c38e0e827e",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Joseph (later Sir Joseph) Carruthers; SERVED AS PREMIER: 30 Aug 1904 — 1 Oct 1907",
+      "evidenceSha256": "108a89e97e897b98391fdff5b86b2d6893334cd796b57fbbd5b2348705fa69e9",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Charles (later Sir Charles) Wade; SERVED AS PREMIER: 2 Oct 1907 — 20 Oct 1910",
+      "evidenceSha256": "b64dc7992afa71f88b28c61defc1465ff0f6f64a81026724d769fb9a059ce493",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon James McGowen; SERVED AS PREMIER: 21 Oct 1910 — 29 Jun 1913",
+      "evidenceSha256": "7bddebbd8c838e79974fcf354f2c374d558e4156bb28a1634d56b373013a9c9b",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon William Holman; SERVED AS PREMIER: 30 Jun 1913 — 15 Nov 1916",
+      "evidenceSha256": "2680994e8764adee4d5ba77ec3fe3068bc9b4c82a92bcf45f8ea533232793727",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon William Holman; SERVED AS PREMIER: 15 Nov 1916 — 12 Apr 1920",
+      "evidenceSha256": "02b4273d42a63eb6883d52570133c151801a2cc3de850b87178f5d00b57a5ff2",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon John Storey; SERVED AS PREMIER: 13 Apr 1920 — 5 Oct 1921",
+      "evidenceSha256": "1fe4f18308553a86ec96a2ee2e16f9609fa96b713e19d262edfba0f6cdd829f6",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon James Dooley; SERVED AS PREMIER: 5 Oct 1921 — 20 Dec 1921",
+      "evidenceSha256": "549b53c5ba9c0771117c9bfb6b0068634627e78749b675d0839bf537139cc695",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon James Dooley; SERVED AS PREMIER: 20 Dec 1921 — 13 Apr 1922",
+      "evidenceSha256": "60c6a174b5420e1f7920935da32f477b0e287511119b7236205ef42676bd73a9",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir George Fuller KCMG; SERVED AS PREMIER: 20 Dec 1921 — 20 Dec 1921",
+      "evidenceSha256": "443ef4d160bb49b8590dc63315512dcea8e247d2bf422eaee0d7b5373c89ee14",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Sir George Fuller KCMG; SERVED AS PREMIER: 13 Apr 1922 — 17 Jun 1925",
+      "evidenceSha256": "35042d66ae5d853a0b7d8b019845d43d9541397f323ce2a4b9fedfeae3247d22",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon John (Jack) Lang; SERVED AS PREMIER: 17 Jun 1925 — 18 Oct 1927",
+      "evidenceSha256": "c900be2bc9f832740e0c609a384a4f6ecaed894ed587def452b4faa87a5d6ab1",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon John (Jack) Lang; SERVED AS PREMIER: 4 Nov 1930 — 13 May 1932",
+      "evidenceSha256": "69d18f41368007807866931dbb9e8fc3d98fb9da58b32942e100cb98c7fc5fe6",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Thomas (later Sir Thomas) Bavin; SERVED AS PREMIER: 18 Oct 1927 — 3 Nov 1930",
+      "evidenceSha256": "84b73b63261024e3d9059eaae700953d99b2320e449cffd8581537b8d0e516dc",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Bertram (later Sir Bertram) Stevens; SERVED AS PREMIER: 13 May 1932 — 5 Aug 1939",
+      "evidenceSha256": "538d17406c4d7d0cc6c8db88e93d334023aefda484ae19edbffceed4755a964c",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Alexander Mair; SERVED AS PREMIER: 5 Aug 1939 — 16 May 1941",
+      "evidenceSha256": "cd300e4025014af0500aedb38ba3f6cb95a60569f9c14dc97371cd82da14dd42",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon William (later Sir William) McKell; SERVED AS PREMIER: 16 May 1941 — 6 Feb 1947",
+      "evidenceSha256": "fff38254e0937e2da70c5e9c3ca6fccab331e857f06cbabcfa15ebe88f71b3d7",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon John Cahill; SERVED AS PREMIER: 2 Apr 1952 — 22 Oct 1959",
+      "evidenceSha256": "e1df68b5db60ea913093297667b2143ba64c5b1bee1e7dff107c2d1208138147",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon Robert Heffron; SERVED AS PREMIER: 23 Oct 1959 — 30 Apr 1964",
+      "evidenceSha256": "0e83b3f2454a9a264df663c82cd8651f51eed4cd52b62753256aff4cd337f567",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "locator": "Former Premiers card The Hon James McGirr; SERVED AS PREMIER: 6 Feb 1947 — 2 Apr 1952",
+      "evidenceSha256": "644e2fe92fef04c1efbc7d24c685f999cc645573da2a4ede7c5b3949476b4dc1",
+      "suggestedMappingCount": 0,
+      "proposedDisposition": "held-outside-curated-scope",
+      "cautions": [
+        "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+        "Outside represented colonial scope: hold."
+      ]
+    }
+  ]
+}

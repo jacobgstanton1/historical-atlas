@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "id": "official-officeholders-01",
+  "adapter": "dated-official-officeholder-tables/v1",
+  "tier": "A — official structured tables with coordinator-reviewed mappings; cautions retained",
+  "reviewer": "coordinator-original-source-and-framework-review",
+  "manifestHash": "402f47121943d2c60d64a767a85f12246ed832d0d1c1f209fc3272a9c06bd20c",
+  "parserPath": "research/bulk-01/worker-officeholders/extract.mjs",
+  "parserSha256": "e5498319dc33ee237e62e720649719d274ee236e05554fc27106103225147d37",
+  "parserBindings": [
+    {
+      "path": "research/bulk-01/worker-officeholders/extract.mjs",
+      "sha256": "e5498319dc33ee237e62e720649719d274ee236e05554fc27106103225147d37"
+    },
+    {
+      "path": "research/bulk-01/worker-tables/extract-officeholders.mjs",
+      "sha256": "5fd942999a997b9f0e2c13340553efd018ee73a5d536a715f418f3bd8b787c14"
+    }
+  ],
+  "mappings": [
+    {
+      "sourceId": "japan-cabinets",
+      "entityId": "japan-restoration-framework",
+      "from": "1868-01-03",
+      "until": "1890-11-29",
+      "role": "Prime minister",
+      "scope": "Central named office of Japan under the early Meiji government within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "b02-japan-restoration",
+        "b02-meiji-commencement"
+      ]
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "entityId": "japan-meiji-framework",
+      "from": "1890-11-29",
+      "until": "1945-01-01",
+      "role": "Prime minister",
+      "scope": "Central named office of Empire of Japan within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "meiji",
+        "b02-meiji-commencement"
+      ]
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "entityId": "japan-initial-allied-occupation",
+      "from": "1945-09-02",
+      "until": "1947-05-03",
+      "role": "Prime minister",
+      "scope": "Central named office of Japan — initial Allied occupation framework within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "b02-japan-surrender",
+        "japan-occupation",
+        "japan1947"
+      ]
+    },
+    {
+      "sourceId": "japan-cabinets",
+      "entityId": "japan-postwar-framework",
+      "from": "1947-05-03",
+      "until": "1961-01-01",
+      "role": "Prime minister",
+      "scope": "Central named office of Japan within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "japan-constitution"
+      ]
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "entityId": "canada-1867-federal-framework",
+      "from": "1867-07-01",
+      "until": "1931-12-11",
+      "role": "Prime Minister",
+      "scope": "Central named office of Canada — Dominion under the 1867 Act within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "b08-canada-1867-act",
+        "b08-canada-institutions"
+      ]
+    },
+    {
+      "sourceId": "c01-canada-ministry-tenures",
+      "entityId": "canada-westminster-federal-framework",
+      "from": "1931-12-11",
+      "until": "1961-01-01",
+      "role": "Prime Minister",
+      "scope": "Central named office of Canada — post-Westminster federal framework within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "b08-canada-1867-act",
+        "b08-westminster-1931"
+      ]
+    },
+    {
+      "sourceId": "bulk01-victoria-premiers",
+      "entityId": "victoria-bicameral-colonial-core",
+      "from": "1878-01-01",
+      "until": "1901-01-01",
+      "role": "Premier",
+      "scope": "Central named office of Victoria — parliamentary British colony within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "b21-victorian-parliament",
+        "b21-australian-federation"
+      ]
+    },
+    {
+      "sourceId": "bulk01-queensland-premiers",
+      "entityId": "queensland-selfgoverning-colonial-core",
+      "from": "1878-01-01",
+      "until": "1901-01-01",
+      "role": "Premier",
+      "scope": "Central named office of Queensland — self-governing British colony within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "b21-queensland-parliament",
+        "b21-australian-federation"
+      ]
+    },
+    {
+      "sourceId": "bulk01-nsw-premiers",
+      "entityId": "nsw-responsible-colonial-core",
+      "from": "1878-01-01",
+      "until": "1901-01-01",
+      "role": "Premier",
+      "scope": "Central named office of New South Wales — self-governing British colony within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "b21-nsw-responsible-government",
+        "b21-australian-federation"
+      ]
+    },
+    {
+      "sourceId": "bulk01-us-presidents-congress",
+      "entityId": "united-states",
+      "from": "1789-03-04",
+      "until": "1961-01-01",
+      "scope": "Central named office of United States within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "archives-independence",
+        "basemaps",
+        "us-constitution",
+        "us-constitutional-start"
+      ]
+    },
+    {
+      "sourceId": "bulk01-france-presidents",
+      "entityId": "france-political-frameworks",
+      "from": "1799-12-13",
+      "until": "1961-01-01",
+      "scope": "Central named office of France within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "b01-french-consulate",
+        "b01-france-third-republic",
+        "b01-france-republican-legality"
+      ]
+    },
+    {
+      "sourceId": "bulk01-portugal-presidents",
+      "entityId": "portugal-political-frameworks",
+      "from": "1808-01-01",
+      "until": "1961-01-01",
+      "scope": "Central named office of Portugal within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "b01-portugal-court-brazil",
+        "b01-portugal-monarchy",
+        "b01-portugal-first-republic",
+        "b01-portugal-dictatorship"
+      ]
+    },
+    {
+      "sourceId": "bulk01-netherlands-monarchs",
+      "entityId": "netherlands-kingdom",
+      "from": "1815-03-16",
+      "until": "1961-01-01",
+      "scope": "Central named office of Netherlands within the reviewed historical framework; no claim of polygon-wide sovereignty.",
+      "rationale": "Coordinator inspected existing sourced entity names, curated existence and dated mapping bounds, and literal institutional table/office semantics. This associates an office with an existing framework; it does not infer succession.",
+      "identityReferences": [
+        "b01-netherlands-monarchy",
+        "b01-nl-king-willem-i-1772-1843"
+      ]
+    }
+  ],
+  "resolvedCautions": [
+    "Outside existing curated colony coverage: hold.",
+    "Source tenure spans retained unchanged; entity curated coverage is only 1878–1901. Post-1901 office continuation requires explicit colonial scope; no federated state mapping is inferred.",
+    "Full tenure retained; curated colonial entity coverage only 1878–1901. Do not project post-federation state role as continued independent colony.",
+    "Source states SERVED AS PREMIER endpoints; consecutive cards sometimes end day before successor. End semantics must be adjudicated; retain source end date as supplied.",
+    "Curated colony coverage only 1878–1901."
+  ],
+  "endpointNote": "Original end date is a conservative exclusive cutoff; the final listed service day is omitted where source endpoint semantics differ. No successor date or missing transfer day is invented.",
+  "rationale": "Coordinator independently inspected literal date/name columns, cabinet reappointments, source-bound sourceSemantics, House footnote parsing and existing sourced entity/framework bounds. Worker accession/oath cautions remain held; partial precision stays held; overlapping sourced intervals are never replaced. Machine acceptance binds exact original body and parser hashes, row locators and this review, rather than inventing a human review for each row."
+}

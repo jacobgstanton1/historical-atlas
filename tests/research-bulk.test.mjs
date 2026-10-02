@@ -1,0 +1,16 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readJSON,readContext,digest} from '../scripts/research-common.mjs';
+import {prepareCandidates,verifyContract,normalizedRole,reconcile,sourceRecord} from '../scripts/research-bulk.mjs';
+import {selectForYear} from '../scripts/research-comprehensive.mjs';
+const manifest=readJSON('research/bulk-01/official-officeholders-manifest.json'),contract=readJSON('research/bulk-01/official-officeholders-contract.json'),context=readContext();
+test('exact original body/parser/mapping contract verifies',()=>assert.equal(verifyContract(contract,manifest),true));
+test('changing a literal extracted claim invalidates certified manifest',()=>{const changed=structuredClone(manifest);changed.rows[0].from='1800-01-01';assert.throws(()=>verifyContract(contract,changed),/exact-manifest/);});
+test('changing reviewed parser hash fails closed',()=>assert.throws(()=>verifyContract({...contract,parserSha256:'0'.repeat(64)},manifest),/parser changed/));
+test('same worker cannot certify its own source intake',()=>assert.throws(()=>verifyContract({...contract,reviewer:manifest.worker},manifest),/cannot certify/));
+test('vice presidency is distinct from presidency; office aliases reconcile',()=>{assert.notEqual(normalizedRole('Vice President of the United States'),normalizedRole('President'));assert.equal(normalizedRole('Prime Minister'),normalizedRole('Prime minister'));});
+test('existing exact source URL reuses registered identity without metadata edits',()=>{const s=manifest.sources.find(s=>s.id==='japan-cabinets');assert.deepEqual(sourceRecord(s,context),context.registry.sources.find(x=>x.url===s.url));});
+test('intake is deterministic and production remains immutable',()=>{const before=digest(context.db),a=prepareCandidates(manifest,contract,context),b=prepareCandidates(manifest,contract,context);assert.equal(digest(a),digest(b));assert.equal(before,digest(readContext().db));assert.ok(a.some(c=>c.status==='historical-review'));assert.ok(a.some(c=>c.status==='duplicate'));});
+test('unresolved source cautions and partial precision cannot become production facts',()=>{const candidates=prepareCandidates(manifest,contract,context);for(const r of candidates.filter(c=>c.originalRow.precision!=='day'||c.originalRow.disposition==='historical-review'))assert.notEqual(r.status,'accepted-candidate');});
+test('all accepted intervals remain within reviewed framework and atlas bounds',()=>{for(const row of prepareCandidates(manifest,contract,context))for(const p of row.claims.filter(p=>p.status==='accepted-candidate')){assert.ok(p.claim.temporal.from>='1800-01-01');assert.ok(p.claim.temporal.until<='1961-01-01');assert.equal(selectForYear([p.claim],Number(p.claim.temporal.from.slice(0,4))-1).length,0);assert.ok(p.claim.qualifications.some(q=>q.startsWith('Source tenure:')));}});
+test('existing same-office conflicting name is held rather than overwritten',()=>{const c={entityId:'united-states',category:'leadership',value:'Unsupported ruler',role:'President',temporal:{kind:'interval',from:'1939-01-01',until:'1940-01-01'}};assert.equal(reconcile(c,context).status,'historical-review');});
