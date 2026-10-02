@@ -1,5 +1,15 @@
 # Curated-source reset
 
+## Completed UN follow-up
+
+The live Federico–Tena baseline (771d78f1cfde008ec9376e3cbf9043b11227cfc2) has been followed by nine safe UN1948 census observations supporting1945 (three dated1945, six earlier censuses explicitly dated1940–1943) and four UN1960 Table4 estimates dated1959 supporting1960 (Albania, Austria, Belgium, Denmark). Population369 →382/1,056; claims3,702 →3,715; supported/resolved7,030 →7,043/15,840 (44.38131% →44.46338%);8,797 unresolved. All prior accepted packages remain canonically unchanged. Ten focused tests and52,877 integrity checks passed; zero browser checks, no frontend changes. Source-wide assessments and immutable receipts are in un-followup/REPORT.md and REPORT.json. Do not repeat the completed integrations.
+
+The complete cached1960 Table4 source was computationally inspected across242 rows and1,452 dated1955–1960 cells. Previously reviewed53 UN records and nine WPP crosswalks had no additional already-approved matrix slots; four cheap1959 observations had absent1960 cells and were accepted. Other rows remain candidate-only. Existing territorial holds are not resolved by modern-name matching. The46 Federico–Tena held cases remain untouched.
+
+Density assessment: zero explicitly certified population-to-mapped-polygon pairs. Ten older same-source/scope/date statistical pairs remain held by the unchanged validator, which requires derivation IDs, same-package accepted dependencies and km2 area inputs. No density facts entered production; do not loosen scope or silently duplicate accepted inputs to force these through. This is not a substantial automated mapped-density tranche. Preserve the held candidate report for a later small integrator compatibility task; do not refactor the frozen frontend.
+
+Next high-yield curated operation: full-source ICOW Historical State Names v1.31 dated capitals/name reconciliation, using the previously supplied source URL https://www.paulhensel.org/icownames.html. Calculate full-source safe yield, take dated exact/high-confidence matches, hold undated or ambiguous capitals, then Archigos. Do not revisit difficult population exceptions now. Remaining UN population records require bounded source/scope review and are not falsely reported as historically exhausted. Final checkpoint requires actual Pages/live verification after push.
+
 ## Current population checkpoint
 
 The CC BY 4.0 acceptance was explicitly authorized by the user and completed. All five original continental workbooks, quality assessment and readmes were acquired. The complete method paper has separate CC BY-NC-ND 3.0 ES terms and remains locally ignored; cite its handle, do not redistribute it.

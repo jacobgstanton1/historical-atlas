@@ -1,0 +1,281 @@
+{
+  "job": {
+    "id": "dossier-a94e041f0a5dcb89535a7cbe",
+    "entityId": "denmark-post-kiel",
+    "period": {
+      "from": "1945-06-15",
+      "until": "1945"
+    },
+    "mapIds": [
+      "entity-denmark"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "b4cebd8ce1aa66b1a03f7681bc62394a2bb933c3129d3fa988c3bbb01b5644a6",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion03-un1945-past-censuses-denmark-post-kiel",
+    "jobId": "dossier-a94e041f0a5dcb89535a7cbe",
+    "entityId": "denmark-post-kiel",
+    "mapIds": [
+      "entity-denmark"
+    ],
+    "worker": {
+      "id": "un1948-literal-table-adapter",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "b4cebd8ce1aa66b1a03f7681bc62394a2bb933c3129d3fa988c3bbb01b5644a6",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1945-06-15",
+      "until": "1945"
+    },
+    "claims": [
+      {
+        "id": "un1948-census-c08cb43e4a5c0d425f6a952a",
+        "entityId": "denmark-post-kiel",
+        "category": "population-statistics",
+        "value": 4045232,
+        "unit": "persons",
+        "metric": "Population (UN-reported census)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1945-06-15",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "denmark-post-kiel-un1948-census-territory",
+          "description": "De jure population; excludes the Faeroes, which have a separate row (footnotes 21,72).",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "un-statistical-yearbook1948-population-table1"
+        ],
+        "evidence": [
+          {
+            "sourceId": "un-statistical-yearbook1948-population-table1",
+            "locator": "Table 1, printed page 26, PDF page 27, latest census column, Denmark; 1945-06-15; 4045232 persons",
+            "note": "De jure population; excludes the Faeroes, which have a separate row (footnotes 21,72). Original literal source row and source PDF SHA256 retained in the certified intake. Superscript footnotes excluded from numerical values after original-source review.",
+            "precision": "day",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945-06-15",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "De jure population; excludes the Faeroes, which have a separate row (footnotes 21,72).",
+          "Actual census observation 1945-06-15; displayed in the 1945 dossier under the existing past-observation window. Not a 1945 population observation unless dated 1945.",
+          "Statistical scope is not certified equal to mapped polygon scope; no automatic density derivation."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "United Nations Statistical Yearbook 1948 Table 1; literal country/territory census row; historical-framework scope checked",
+          "sourceIdentifier": "table1:pdf27:Denmark:1945-06-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "un-statistical-yearbook1948-population-table1",
+        "title": "United Nations Statistical Yearbook 1948, Table 1: Population, area and density",
+        "institution": "Statistical Office of the United Nations",
+        "url": "https://unstats.un.org/UNSDWebsite/Publications/StatisticalYearbook/SYB1.pdf",
+        "accessed": "2026-10-02",
+        "kind": "official-statistical-yearbook",
+        "usage": "Literal latest-census observations, with actual enumeration dates, original footnotes and contemporary country/area scope. Persons, not the separate estimates in thousands. No redistribution of a derived bulk dataset; independently sourced historical facts retain citation."
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "un-statistical-yearbook1948-population-table1"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Source-wide yield screening first. Only literal country/territory rows with independently checked census dates, values, footnotes and already-established historical entity scopes accepted. Exact dates retained; nearby past censuses never relabelled 1945. Future censuses, Finland territorial adjustment, colonial subdivisions/aggregates, non-indigenous-only counts and all unapproved mappings held. Original accepted evidence preserved. Density forbidden without a separate polygon-scope certificate.",
+      "preservedPackageHashes": [
+        "359cf0c42477105719fa036a3324e7c66c4c3069a88036acd573fbf068c8b0ed",
+        "5ea363c366e6550d87b7241074f96b1baf13e207490e44418549b643efdcc876"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "1506a9e0d6a5a759416085c3a8b4e3564087c11dd375192a97225ca1a37179d5",
+    "productionFingerprint": "b4cebd8ce1aa66b1a03f7681bc62394a2bb933c3129d3fa988c3bbb01b5644a6",
+    "jobId": "dossier-a94e041f0a5dcb89535a7cbe",
+    "review": {
+      "reviewer": "/root original UN census source and historical-scope review",
+      "packageHash": "1506a9e0d6a5a759416085c3a8b4e3564087c11dd375192a97225ca1a37179d5",
+      "bodyReviewed": true,
+      "rationale": "Source-wide yield screening first. Only literal country/territory rows with independently checked census dates, values, footnotes and already-established historical entity scopes accepted. Exact dates retained; nearby past censuses never relabelled 1945. Future censuses, Finland territorial adjustment, colonial subdivisions/aggregates, non-indigenous-only counts and all unapproved mappings held. Original accepted evidence preserved. Density forbidden without a separate polygon-scope certificate.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "un1948-census-c08cb43e4a5c0d425f6a952a": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "un1948-census-c08cb43e4a5c0d425f6a952a"
+    ]
+  }
+}

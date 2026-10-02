@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {eligibleDate,hash,base} from '../scripts/research-un-population-followup.mjs';
+import {compatibleDensity} from '../scripts/research-un-population-assessment.mjs';
+import {readJSON,digest} from '../scripts/research-common.mjs';
+const entity={existence:{validFrom:'1937-01-01',validUntil:'1961-01-01'}};
+test('Future and over-age observations cannot be projected into a snapshot',()=>{assert.equal(eligibleDate('1946-01-01',entity),false);assert.equal(eligibleDate('1939-12-31',entity),false);assert.equal(eligibleDate('1940-04-01',entity),true);});
+test('An earlier census cannot precede the target entity framework',()=>assert.equal(eligibleDate('1940-04-01',{existence:{validFrom:'1943-01-01'}}),false));
+test('All integrated 1945 dates preserve the original actual year',()=>{let c=readJSON(base+'/1945-intake/cohort.json');assert.equal(c.claims.length,9);assert.equal(c.claims.filter(c=>c.temporal.observationDate.startsWith('1945')).length,3);assert.equal(c.claims.filter(c=>!c.temporal.observationDate.startsWith('1945')).length,6);assert.ok(c.claims.every(c=>c.temporal.kind==='observation'));});
+test('Original reviewed source inputs remain byte-bound',()=>{let c=readJSON(base+'/1945-intake/certificate.json');for(let b of c.inputBindings)assert.equal(hash(b.path),b.sha256);});
+const pop={entityId:'e',unit:'persons',value:1000,scope:{id:'statistical',description:'whole country census territory',relationship:'same'},temporal:{kind:'observation',observationDate:'1959'}};
+const area={...structuredClone(pop),value:10,unit:'km2'};
+test('Entity identity alone cannot certify mapped density',()=>assert.equal(compatibleDensity(pop,{...area,scope:{...area.scope,id:'mapped-1960'}}),false));
+test('Observation dates and statistical scopes must both match',()=>{assert.equal(compatibleDensity(pop,{...area,temporal:{...area.temporal,observationDate:'1960'}}),false);assert.equal(compatibleDensity(pop,{...area,scope:{...area.scope,description:'different territory'}}),false);assert.equal(compatibleDensity(pop,area),true);});
+test('Overseas or population-subset geography is not silently used for density',()=>assert.equal(compatibleDensity({...pop,scope:{...pop.scope,description:'Includes armed forces overseas'}},{...area,scope:{...area.scope,description:'Includes armed forces overseas'}}),false));
+test('Prior accepted production packages have not changed',()=>{let old=readJSON(base+'/preserved-package-hashes.json'),current=readJSON('data/comprehensive-dossiers.json');for(let p of old)assert.equal(digest(current.packages.find(x=>x.id===p.id)),p.hash);});
+test('Nearby 1960 evidence retains 1959 and is never promoted to an interval',()=>{let c=readJSON(base+'/1960-intake/cohort.json');assert.equal(c.claims.length,4);assert.ok(c.claims.every(c=>c.temporal.observationDate==='1959'&&c.temporal.kind==='observation'));assert.ok(c.claims.every(c=>c.qualifications.some(q=>q.includes('never relabelled'))));});
+test('New UN1960 source inputs remain byte-certified',()=>{for(let b of readJSON(base+'/1960-intake/certificate.json').inputBindings)assert.equal(hash(b.path),b.sha256);});
