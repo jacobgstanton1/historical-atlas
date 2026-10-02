@@ -8,7 +8,7 @@ import {
   clean,
 } from './data-pipeline.js?v=0.6.1';
 import { loadMetadata } from './historical-metadata.js?v=canonical-cleanup1';
-import { renderDossier } from './dossier.js?v=canonical-cleanup1';
+import { renderDossier } from './dossier.js?v=visual-polish1';
 import { loadRichDossiers } from './rich-dossier.js?v=canonical-cleanup1';
 import { createBoundaryHistory } from './boundary-history.js?v=0.6.1';
 
@@ -204,8 +204,8 @@ function installMapLayers() {
     source: 'historical',
     filter: ['==', ['get', '_featureId'], '__none__'],
     paint: {
-      'line-color': '#ffffff',
-      'line-width': ['interpolate', ['linear'], ['zoom'], 1, 1, 8, 1.8, 14, 2.2, 18, 2.4],
+      'line-color': '#293d47',
+      'line-width': ['interpolate', ['linear'], ['zoom'], 1, 1, 8, 1.5, 14, 1.8, 18, 2],
       'line-opacity': 0.9,
     },
   });
@@ -217,7 +217,7 @@ function installMapLayers() {
     filter: ['==', ['get', '_stableId'], '__none__'],
     paint: {
       'line-color': '#050607',
-      'line-width': ['interpolate', ['linear'], ['zoom'], 1, 1.8, 8, 2.8, 14, 3.2, 18, 3.4],
+      'line-width': ['interpolate', ['linear'], ['zoom'], 1, 2, 8, 2.6, 14, 3, 18, 3.2],
     },
   });
 
@@ -489,7 +489,7 @@ function selectFeature(stableId, { zoomTo = false } = {}) {
   if (zoomTo) {
     worldViewActive = false;
     const bounds = featuresBounds(matches);
-    if (bounds) map.fitBounds(bounds, { padding: responsiveFitPadding(), maxZoom: 7.8, duration: 550 });
+    if (bounds) map.fitBounds(bounds, { padding: responsiveFitPadding(), maxZoom: 7.8, duration: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 200 });
   }
 }
 
@@ -688,11 +688,11 @@ function worldPadding() {
   };
 }
 
-function resetView({ duration = 450 } = {}) {
+function resetView({ duration = 200 } = {}) {
   worldViewActive = true;
   map.fitBounds(WORLD_BOUNDS, {
     padding: worldPadding(), maxZoom: 1.35, bearing: 0, pitch: 0,
-    duration, retainPadding: false,
+    duration: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : duration, retainPadding: false,
   });
 }
 
@@ -716,8 +716,9 @@ function togglePlay() {
   if (currentIndex >= SNAPSHOTS.length - 1) {
     setSnapshot(0, { resetSelection: false, requested: SNAPSHOTS[0].year });
   }
-  els.play.textContent = '❚❚';
+  els.play.dataset.playing = 'true';
   els.play.setAttribute('aria-label', 'Pause timeline');
+  els.play.title = 'Pause timeline';
   playTimer = window.setInterval(() => {
     if (currentIndex >= SNAPSHOTS.length - 1) {
       stopPlay();
@@ -731,8 +732,9 @@ function togglePlay() {
 function stopPlay() {
   if (playTimer) window.clearInterval(playTimer);
   playTimer = null;
-  els.play.textContent = '▶';
+  els.play.dataset.playing = 'false';
   els.play.setAttribute('aria-label', 'Play timeline');
+  els.play.title = 'Play timeline';
 }
 
 function showLoading(message) {

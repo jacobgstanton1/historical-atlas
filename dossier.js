@@ -76,6 +76,11 @@ export function renderDossier(container,context){
   const fact=(parent,r,label)=>{const row=node('div',undefined,'dossier-row'),dd=markers(node('dd',present(r,displayValue(r))),r.sourceIds);row.dataset.state=dataState(r);if(dataState(r)==='uncertain')dd.prepend(node('span','Uncertain · ','dossier-state'));if(dataState(r)==='not-applicable'){dd.replaceChildren(node('span','Not applicable','dossier-state'));markers(dd,r.sourceIds);}if(detail(r)){if(isExchange(r)){dd.append(node('small',presentationPeriod(r,r.presentationEntity),'fact-context'));const notes=node('details',undefined,'quotation-notes');notes.append(node('summary','Quotation scope & notes'),node('small',detail(r),'fact-context'));dd.append(notes);}else dd.append(node('small',detail(r),'fact-context'));}row.append(node('dt',humanLabel(label||r.role||r.metric)),dd);parent.append(row);};
   const allRecords=groupRecords.filter(f=>f.entity).flatMap(f=>resolveDossierRecords(f,rich,year,registry,{mappings:f.mappings||[]}).map(r=>({...r,presentationEntity:f.entity})));
   if(canonical){
+    // A short supported descriptor supplements the title; detailed facts remain below.
+    if(!resolved.ambiguous){
+      const descriptor=allRecords.find(r=>r.category==='political-institutional'&&['governments','politicalStatus'].includes(r.legacyField)&&dataState(r)==='supported'&&displayValue(r).length<=120);
+      if(descriptor){const text=present(descriptor,displayValue(descriptor));if(text)header.append(markers(node('p',text,'dossier-status-line'),descriptor.sourceIds));}
+    }
     const flagBox=node('div',undefined,'dossier-flags');flagBox.dataset.field='historical-flag';
     const flags=allRecords.filter(r=>r.category==='historical-flag'&&safeFlag(r.flag));
     if(!flags.length)empty(flagBox,'missing','Flag / symbol not yet documented');

@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#11161b" />
   <title>Historical Atlas</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzExMTYxYiIvPjxwYXRoIGQ9Im04IDI0IDgtMTcgOCAxN00xMSAxOWgxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjRmNWYzIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" />
   <link rel="preconnect" href="https://unpkg.com" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.11.2/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="./styles.css?v=canonical-cleanup1" />
+  <link rel="stylesheet" href="./styles.css?v=visual-polish1" />
 </head>
 <body>
   <main id="app" class="app-shell">
@@ -27,8 +28,8 @@
         </div>
 
         <div class="top-actions">
-          <button id="labels-toggle" class="ui-button" type="button" aria-pressed="true">Labels</button>
-          <button id="reset-view" class="ui-button" type="button">Reset view</button>
+          <button id="labels-toggle" class="ui-button" type="button" aria-pressed="true" title="Toggle map labels" aria-label="Toggle map labels"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16M12 5v14M8 19h8"/></svg><span class="control-text">Labels</span></button>
+          <button id="reset-view" class="ui-button" type="button" title="Reset world view" aria-label="Reset world view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></svg><span class="control-text">Reset</span></button>
         </div>
       </header>
 
@@ -38,14 +39,14 @@
       </div>
 
       <aside id="inspector" class="inspector" aria-label="Historical Territory Dossier" aria-hidden="true" inert>
-        <button id="close-inspector" class="inspector-close" type="button" aria-label="Close historical territory dossier">×</button>
+        <button id="close-inspector" class="inspector-close" type="button" aria-label="Close historical territory dossier" title="Close dossier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
         <div id="dossier-content"></div>
       </aside>
 
       <section class="timeline-shell" aria-label="Historical timeline">
         <div class="timeline-controls">
-          <button id="previous-year" class="timeline-button" type="button" aria-label="Previous available snapshot">‹</button>
-          <button id="play" class="timeline-button play-button" type="button" aria-label="Play timeline">▶</button>
+          <button id="previous-year" class="timeline-button" type="button" aria-label="Previous available snapshot" title="Previous snapshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m14 6-6 6 6 6"/></svg></button>
+          <button id="play" class="timeline-button play-button" type="button" aria-label="Play timeline" title="Play timeline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path class="play-symbol" d="m9 5 11 7-11 7Z"/><path class="pause-symbol" d="M8 5v14M16 5v14"/></svg></button>
 
           <div class="timeline-main">
             <div class="timeline-heading">
@@ -53,7 +54,6 @@
                 <strong id="year-label">1938 CE</strong>
                 <span id="snapshot-note" class="snapshot-note">Exact boundary snapshot</span>
               </div>
-              <span class="test-range-badge">1800–1960 test range</span>
             </div>
 
             <div class="timeline-track-wrap">
@@ -72,7 +72,7 @@
             </div>
           </div>
 
-          <button id="next-year" class="timeline-button" type="button" aria-label="Next available snapshot">›</button>
+          <button id="next-year" class="timeline-button" type="button" aria-label="Next available snapshot" title="Next snapshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m10 6 6 6-6 6"/></svg></button>
         </div>
       </section>
 
@@ -80,6 +80,6 @@
     </section>
   </main>
 
-  <script type="module" src="./app.js?v=canonical-cleanup1"></script>
+  <script type="module" src="./app.js?v=visual-polish1"></script>
 </body>
 </html>
