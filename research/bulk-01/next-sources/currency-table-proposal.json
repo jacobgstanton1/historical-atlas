@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "kind": "bounded-next-adapter-source-discovery",
+  "worker": "campaign-selection-tables",
+  "createdAt": "2026-10-02",
+  "source": {
+    "idSuggested": "bulk-frb-july1930-exchange-table",
+    "title": "Federal Reserve Bulletin, July 1930 — Foreign Exchange Rates",
+    "institution": "Federal Reserve Board; digitised by Federal Reserve Bank of St. Louis, FRASER",
+    "kind": "contemporary-official-statistical-table",
+    "publicationDate": "1930-07",
+    "url": "https://fraser.stlouisfed.org/title/federal-reserve-bulletin-62/july-1930-20703",
+    "bodyUrl": "https://fraser.stlouisfed.org/title/federal-reserve-bulletin-62/july-1930-20703/fulltext",
+    "bodyLocator": "Printed page450, FOREIGN EXCHANGE RATES, Country / Monetary unit columns and complete numbered footnotes; OCR page block ends before printed451 PRICE MOVEMENTS.",
+    "sourceBodyReviewed": true,
+    "reviewRoute": "Full official FRASER OCR body read, including entire page450 table and footnotes. Not merely search snippets. Original PDFpage59 (printed450) rendered locally and independently visually inspected both columns and complete notes.",
+    "originalBytesCached": true,
+    "sha256": "d1069ccedd71d113e28a5efff3372f5caffa17228bbc17e2d90bf6b2d4ae733d",
+    "cacheFailure": "Initial fulltext HTML acquisition failed; subsequent verified /files/docs/ original PDF acquisition succeeded. Failure retained as acquisition history, not current evidence limitation.",
+    "reuseSearch": "Existing source registry and retained research filename catalogue searched first; no reusable FRASER1930 body or registered exchange-table source found. Existing monetary evidence remains reusable for independent corroboration.",
+    "originalPdfUrl": "https://fraser.stlouisfed.org/files/docs/publications/FRB/1930s/frb_071930.pdf",
+    "cachePath": "research/bulk-01/next-sources/frb_071930.pdf",
+    "pdfPageIndex": 59,
+    "renderedPagePath": "research/bulk-01/next-sources/frb-1930-p450.png",
+    "layoutTextPath": "research/bulk-01/next-sources/frb-1930-p450-layout.txt",
+    "visualBodyReviewed": true
+  },
+  "temporalScope": {
+    "configuredSnapshot": 1930,
+    "columnObservationMonths": [
+      "1930-04",
+      "1930-05",
+      "1930-06"
+    ],
+    "statisticalMeaning": "Monthly averages of daily New York foreign-exchange quotations, cents per unit of foreign currency.",
+    "notClaimed": [
+      "A unit was sole legal tender throughout1930",
+      "An observation establishes continuous currency validity",
+      "July publication date is the June observation date",
+      "Foreign-exchange parity is an observed market quotation"
+    ],
+    "footnoteDateOverrides": "Some cells explicitly refer to February, March or April instead of displayed month. Adapter must bind each footnote and retain actual observation month."
+  },
+  "highYieldAssessment": {
+    "breadth": "One contemporary table spans Europe, South America, Asia, Africa and North America, with many country/unit pairs and repeated China units.",
+    "usefulFirstOutput": "Dated quoted-monetary-unit evidence at1930 snapshot, followed only where unambiguous by separate exchange-rate observations. This is not a full-year legal-currency catalogue.",
+    "noCandidateCorpusBuilt": true,
+    "rawSourceRows": 44
+  },
+  "limitedRawLabelMappingExamples": [
+    {
+      "rawCountry": "France",
+      "rawUnit": "Franc",
+      "suggestedEntityId": "france-political-frameworks",
+      "basis": "Contemporary source label and represented French framework at1930; exact relationship requires coordinator review, not polygon inference."
+    },
+    {
+      "rawCountry": "Germany",
+      "rawUnit": "Reichsmark",
+      "suggestedEntityId": "germany-weimar-framework",
+      "basis": "1930 contemporary label; no Imperial or later Nazi framework backfill."
+    },
+    {
+      "rawCountry": "Netherlands",
+      "rawUnit": "Florin",
+      "suggestedEntityId": "netherlands-kingdom",
+      "basis": "Existing historical kingdom ID; quoted unit only, not claim of every colonial polygon's currency."
+    },
+    {
+      "rawCountry": "Russia",
+      "rawUnit": "Chervonetz",
+      "suggestedEntityId": null,
+      "review": "Footnote says quotation nominal; Russia is not automatically equivalent to USSR or a successor entity."
+    },
+    {
+      "rawCountry": "Java",
+      "rawUnit": "Florin",
+      "suggestedEntityId": null,
+      "review": "Island/exchange scope differs from full Dutch East Indies administration; do not widen geography."
+    },
+    {
+      "rawCountry": "China",
+      "rawUnit": "Mexican dollar / Shanghai tael / Yuan dollar",
+      "suggestedEntityId": null,
+      "review": "Three separately quoted silver units; do not select a single nationwide legal currency or suppress alternatives."
+    }
+  ],
+  "nextAdapter": {
+    "scope": "Exactly July1930 Bulletin page450; one bounded source table, no entire-year or global recurring campaign.",
+    "requiredBeforeParsing": [
+      "Independent reviewer bind original PDF hash and verify retained page450 rendering",
+      "Establish explicitly dated currency-observation rendering contract",
+      "Parse only visually verified country/unit pairs; require coordinator-reviewed historical mapping contracts"
+    ],
+    "rowSchema": [
+      "sourceId",
+      "sourceBodyHash",
+      "printedPage",
+      "rowRegion",
+      "rawCountryLabel",
+      "rawMonetaryUnit",
+      "columnMonth",
+      "observationMonth",
+      "footnoteIds",
+      "quotationMethod",
+      "rawValue",
+      "scope",
+      "proposedEntityId",
+      "mappingReview",
+      "originLocator"
+    ],
+    "parseRules": [
+      "Preserve source spellings and repeated raw labels",
+      "Do not infer two-column row alignment from OCR sequence",
+      "Retain do./ditto cells with a reference to visually verified preceding unit rather than silently guessing",
+      "Keep par-of-exchange separate from monthly observed values",
+      "Peru monetary reform and Peruvian-pound quotation footnotes remain separate",
+      "Nominal quotations and silver-parity methodology remain qualified",
+      "No currency interval extension outside the supported observation month"
+    ],
+    "priority": "Promising next category; source acquisition/visual alignment and observation-rendering contract must precede candidates."
+  },
+  "productionEdited": false,
+  "engineEdited": false,
+  "gitEdited": false
+}

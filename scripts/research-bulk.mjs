@@ -42,7 +42,8 @@ export function verifyContract(contract,manifest){
 export function reconcile(c,context,pending=[]){
  const e=context.db.entities.find(e=>e.id===c.entityId);requireThat(e,'Unknown entity');
  const store=storeFor(context);
- const old=[...(e.leaders||[]).map(r=>({category:'leadership',value:r.value,role:r.role,temporal:{kind:'interval',from:r.validFrom||'1800',until:r.validUntil||'1961-01-01'}})),...store.packages.flatMap(p=>p.claims.filter(r=>r.entityId===c.entityId)),...pending];
+ const key={leadership:'leaders',capital:'capitals',currency:'currencies'}[c.category];
+ const old=[...(e[key]||[]).map(r=>({category:c.category,value:r.value,role:r.role,temporal:{kind:'interval',from:r.validFrom||'1800',until:r.validUntil||'1961-01-01'}})),...store.packages.flatMap(p=>p.claims.filter(r=>r.entityId===c.entityId)),...pending];
  const cb=temporalBounds(c.temporal);
  if(c.role==='Effective political leader (Archigos coding)'){
   const last=normalizeName(c.value).split(' ').at(-1);
@@ -52,7 +53,7 @@ export function reconcile(c,context,pending=[]){
   if(matching.some(r=>{const b=temporalBounds(r.temporal);return b.lo<=cb.lo&&b.hi>=cb.hi;}))return{status:'duplicate',reason:'Source-coded surname/tenure already covered by a sourced named officeholder; no duplicate effective-role claim added'};
   if(matching.length)return{status:'historical-review',reason:'Partly overlapping coded surname/officeholder interval: identity/endpoints need reconciliation'};
  }
- for(const r of old){if(r.category!==c.category||normalizedRole(r.role||'')!==normalizedRole(c.role||'')||!overlaps(temporalBounds(r.temporal),cb))continue;
+ for(const r of old){if(r.category!==c.category||normalizedRole(r.role||'')!==normalizedRole(c.role||'')||(r.metric||'')!==(c.metric||'')||!overlaps(temporalBounds(r.temporal),cb))continue;
   const rb=temporalBounds(r.temporal);
   if(normalizeName(r.value)===normalizeName(c.value)&&rb.lo<=cb.lo&&rb.hi>=cb.hi)return {status:'duplicate',reason:'Existing sourced office/person interval already covers this candidate'};
   return {status:'historical-review',reason:'Overlapping existing office interval requires name/date reconciliation; no automatic overwrite'};
@@ -74,6 +75,18 @@ export function prepareCandidates(manifest,contract,context){
   if(unresolved.length||r.disposition==='historical-review'){envelope.reason='Preserved source/date caution: '+unresolved.join('; ');candidates.push(envelope);continue;}
   const mappings=contract.mappings.filter(m=>m.sourceId===source.id&&(r.entityIdsSuggested||[]).includes(m.entityId));
   for(const m of mappings){
+   if(r.temporal?.kind==='observation'){
+    const original=structuredClone(r.temporal),b=temporalBounds(original),window=temporalBounds({kind:'interval',from:m.from,until:m.until});
+    if(b.lo<window.lo||b.hi>window.hi||b.lo<1800*372||b.hi>1961*372)continue;
+    requireThat(['capital','currency','economy','population-statistics','area-statistics'].includes(r.category),'Unsupported observation adapter category');
+    requireThat(r.precision&&r.qualifications?.length&&m.scope&&m.scopeId&&m.statisticalComparability==='historically-matching','Observation evidence/scope comparability incomplete');
+    const s=sourceRecord(source,context);
+    const claim={id:envelope.id+'-'+digest(m.entityId).slice(0,10),category:r.category,value:r.value,entityId:m.entityId,temporal:original,scope:{id:m.scopeId,description:m.scope,relationship:'same'},sourceIds:[s.id],evidence:[{sourceId:s.id,locator:r.locator,note:r.originalRow+'; '+contract.rationale,precision:r.precision,temporal:original,interpretation:'direct'}],status:'supported',risks:[],qualifications:[...r.qualifications,m.qualification||m.scope],origin:{kind:'bulk-candidate',reference:envelope.id,sourceIdentifier:r.locator},...(r.metric?{metric:r.metric}:{}),...(r.unit?{unit:r.unit}:{})};
+    const result=reconcile(claim,context,pending.filter(p=>p.entityId===m.entityId));
+    envelope.claims.push({claim,source:s,...result});envelope.statisticalComparability=m.statisticalComparability;
+    if(result.status==='accepted-candidate')pending.push(claim);
+    continue;
+   }
    let from=r.from,until=r.until;
    // Partial precision cannot be made more exact. Transition months/years are held.
    if(r.precision!=='day'){envelope.reason='Partial-date transition requires separate conservative-interior adapter';continue;}
@@ -114,12 +127,13 @@ export function runTranche(manifestPath,contractPath,{apply=false}={}){
  for(const [entityId,parts]of groups){
   const existing=readJSON('data/comprehensive-dossiers.json').packages.find(p=>p.id===contract.id+'-'+entityId);
   if(existing){requireThat(digest(existing.claims)===digest(parts.map(p=>p.claim))&&existing.provenance.preservedPackageHashes.includes(digest(contract)),'Existing package disagrees with preserved intake');if(!ledger.integrations.some(i=>i.packageId===existing.id&&i.applied)){ledger.integrations.push({entityId,packageId:existing.id,packageHash:existing.acceptance.packageHash,claims:existing.claims.length,applied:true,recovered:true});saveJSON(ledgerPath,ledger);}continue;}
-  const fresh=readContext(),claims=parts.map(p=>p.claim),period={from:claims.map(c=>c.temporal.from).sort()[0],until:claims.map(c=>c.temporal.until).sort().at(-1)},job=generateDossierJob(entityId,period,fresh);
+  const fresh=readContext(),claims=parts.map(p=>p.claim),period={from:claims.map(c=>c.temporal.from||c.temporal.observationDate).sort()[0],until:claims.map(c=>c.temporal.until||c.temporal.observationDate).sort().at(-1)},job=generateDossierJob(entityId,period,fresh);
   const consulted=[...new Map(parts.map(p=>[p.source.id,p.source])).values()];
   // Existing registry sources are referenced by ID, never redefined to fit a
   // different schema. Preserve their original metadata exactly.
   const sources=consulted.filter(s=>!sourcesIn(fresh).some(old=>old.id===s.id));
-  const pkg={schemaVersion:2,id:contract.id+'-'+entityId,jobId:job.id,entityId,mapIds:job.mapIds,worker:{id:'bulk-parser/'+contract.adapter,assignmentType:'comprehensive-entity-period'},productionFingerprint:job.productionFingerprint,chronology:{calendar:'proleptic-gregorian',yearConvention:'astronomical'},period,claims,sources,investigation:fields.map(category=>({category,status:category==='leadership'?'partial':'unresolved',rationale:category==='leadership'?'Source-first dated officeholder tranche; other offices and unsourced dates remain gaps.':'This bounded source-first tranche does not investigate this category.',consultedSourceIds:category==='leadership'?consulted.map(s=>s.id):[],gaps:[category==='leadership'?'Offices/dates not covered by this source remain unresolved.':'Outside this tranche.']})),conflicts:[],provenance:{createdAt:new Date().toISOString(),method:'Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.',preservedPackageHashes:[digest(manifest),digest(contract)]}};
+  const categories=new Set(claims.map(c=>c.category));
+  const pkg={schemaVersion:2,id:contract.id+'-'+entityId,jobId:job.id,entityId,mapIds:job.mapIds,worker:{id:'bulk-parser/'+contract.adapter,assignmentType:'comprehensive-entity-period'},productionFingerprint:job.productionFingerprint,chronology:{calendar:'proleptic-gregorian',yearConvention:'astronomical'},period,claims,sources,investigation:fields.map(category=>({category,status:categories.has(category)?'partial':'unresolved',rationale:categories.has(category)?'Source-first bounded table evidence; other facts and dates remain gaps.':'This bounded source-first tranche does not investigate this category.',consultedSourceIds:categories.has(category)?consulted.map(s=>s.id):[],gaps:[categories.has(category)?'Facts/dates not covered by this source remain unresolved.':'Outside this tranche.']})),conflicts:[],provenance:{createdAt:new Date().toISOString(),method:'Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.',preservedPackageHashes:[digest(manifest),digest(contract)]}};
   const validation=validateDossier(pkg,job,fresh);saveJSON(output+'/packages/'+entityId+'.validation.json',validation);
   requireThat(validation.valid,JSON.stringify(validation.errors));
   requireThat(validation.review.every(issue=>issue==='Candidate claims require independent original-source review'),'Unexpected historical conflict: '+validation.review.join('; '));

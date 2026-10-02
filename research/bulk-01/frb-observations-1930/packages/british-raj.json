@@ -1,0 +1,421 @@
+{
+  "job": {
+    "id": "dossier-86ba749cc9d467dacc1b3ce6",
+    "entityId": "british-raj",
+    "period": {
+      "from": "1930-04",
+      "until": "1930-06"
+    },
+    "mapIds": [
+      "entity-british-raj"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "b4879d05638f2a96fa30ed256b8484154684ac1603f6872cd7610b487f6ce7d5",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "frb-observations-1930-british-raj",
+    "jobId": "dossier-86ba749cc9d467dacc1b3ce6",
+    "entityId": "british-raj",
+    "mapIds": [
+      "entity-british-raj"
+    ],
+    "worker": {
+      "id": "bulk-parser/dated-official-monetary-quotation/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "b4879d05638f2a96fa30ed256b8484154684ac1603f6872cd7610b487f6ce7d5",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1930-04",
+      "until": "1930-06"
+    },
+    "claims": [
+      {
+        "id": "bulk-d10341b03821ad7baa78f373-83e468209c",
+        "category": "currency",
+        "value": "Rupee",
+        "entityId": "british-raj",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930-06",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "frb1930-new-york-british-raj",
+          "description": "NewYork quotation for the monetary instrument labelled India in this contemporaneous table; no countrywide economic estimate, exclusive legal tender, sovereignty, polygon currency circulation, or GDP claim.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk-frb-july1930-exchange-table"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk-frb-july1930-exchange-table",
+            "locator": "Printed450/Asia/India/Monetaryunit and finalquotation column",
+            "note": "{\"rawCountry\":\"India\",\"rawUnit\":\"Rupee\",\"rawValue\":\"Rupee\",\"value\":\"Rupee\",\"columnMonth\":null,\"actualObservationMonth\":\"1930-06\",\"footnoteIds\":[],\"rowId\":\"frb1930-39\"}; Independent original facsimile review and coordinate parser bind literal cells, quoted instruments, numeric values, all footnotes and historical frameworks. Coordinator inspected full page and existing dated presentation path: actual observation month is displayed unchanged. Nominal, reform, source-glyph, uncertain-date and geographic mapping cases stay held. Contemporary monetary quotation is not sole legal tender or national GDP.",
+            "precision": "month",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930-06",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Contemporary quoted monetaryunit only; does not establish exclusive legal tender or continuous full-year persistence.",
+          "Monetary unit recorded in the contemporary quotation table at the stated observation month, not an assertion of sole legal tender.",
+          "BritishIndia rupee quotation; no claim every princely state or map polygon used the instrument."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-d10341b03821ad7baa78f373",
+          "sourceIdentifier": "Printed450/Asia/India/Monetaryunit and finalquotation column"
+        }
+      },
+      {
+        "id": "bulk-78b5cfde8565693211334594-83e468209c",
+        "category": "economy",
+        "value": 36.1163,
+        "entityId": "british-raj",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930-04",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "frb1930-new-york-british-raj",
+          "description": "NewYork quotation for the monetary instrument labelled India in this contemporaneous table; no countrywide economic estimate, exclusive legal tender, sovereignty, polygon currency circulation, or GDP claim.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk-frb-july1930-exchange-table"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk-frb-july1930-exchange-table",
+            "locator": "Printed450/Asia/India/1930-04",
+            "note": "{\"rawCountry\":\"India\",\"rawUnit\":\"Rupee\",\"rawValue\":\"36.1163\",\"value\":36.1163,\"columnMonth\":\"1930-04\",\"actualObservationMonth\":\"1930-04\",\"footnoteIds\":[],\"rowId\":\"frb1930-39\"}; Independent original facsimile review and coordinate parser bind literal cells, quoted instruments, numeric values, all footnotes and historical frameworks. Coordinator inspected full page and existing dated presentation path: actual observation month is displayed unchanged. Nominal, reform, source-glyph, uncertain-date and geographic mapping cases stay held. Contemporary monetary quotation is not sole legal tender or national GDP.",
+            "precision": "month",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930-04",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Monthly average of daily noon buying quotations for cable transfers in NewYork.",
+          "U.S. cents per Rupee; monthly average quotation, not par value, GDP, a purchasing-power conversion or a territory-wide statistic.",
+          "Publication: July 1930; observation: 1930-04. Column label: 1930-04; applicable source footnotes: none.",
+          "BritishIndia rupee quotation; no claim every princely state or map polygon used the instrument."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-78b5cfde8565693211334594",
+          "sourceIdentifier": "Printed450/Asia/India/1930-04"
+        },
+        "metric": "Foreign exchange quotation — Rupee (monthly New York average)",
+        "unit": "US cents per Rupee"
+      },
+      {
+        "id": "bulk-429cf433be16b470906f77f0-83e468209c",
+        "category": "economy",
+        "value": 36.0567,
+        "entityId": "british-raj",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930-05",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "frb1930-new-york-british-raj",
+          "description": "NewYork quotation for the monetary instrument labelled India in this contemporaneous table; no countrywide economic estimate, exclusive legal tender, sovereignty, polygon currency circulation, or GDP claim.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk-frb-july1930-exchange-table"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk-frb-july1930-exchange-table",
+            "locator": "Printed450/Asia/India/1930-05",
+            "note": "{\"rawCountry\":\"India\",\"rawUnit\":\"Rupee\",\"rawValue\":\"36. 0567\",\"value\":36.0567,\"columnMonth\":\"1930-05\",\"actualObservationMonth\":\"1930-05\",\"footnoteIds\":[],\"rowId\":\"frb1930-39\"}; Independent original facsimile review and coordinate parser bind literal cells, quoted instruments, numeric values, all footnotes and historical frameworks. Coordinator inspected full page and existing dated presentation path: actual observation month is displayed unchanged. Nominal, reform, source-glyph, uncertain-date and geographic mapping cases stay held. Contemporary monetary quotation is not sole legal tender or national GDP.",
+            "precision": "month",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930-05",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Monthly average of daily noon buying quotations for cable transfers in NewYork.",
+          "U.S. cents per Rupee; monthly average quotation, not par value, GDP, a purchasing-power conversion or a territory-wide statistic.",
+          "Publication: July 1930; observation: 1930-05. Column label: 1930-05; applicable source footnotes: none.",
+          "BritishIndia rupee quotation; no claim every princely state or map polygon used the instrument."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-429cf433be16b470906f77f0",
+          "sourceIdentifier": "Printed450/Asia/India/1930-05"
+        },
+        "metric": "Foreign exchange quotation — Rupee (monthly New York average)",
+        "unit": "US cents per Rupee"
+      },
+      {
+        "id": "bulk-17ed0f3fc3395a7c619259e5-83e468209c",
+        "category": "economy",
+        "value": 35.9971,
+        "entityId": "british-raj",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930-06",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "frb1930-new-york-british-raj",
+          "description": "NewYork quotation for the monetary instrument labelled India in this contemporaneous table; no countrywide economic estimate, exclusive legal tender, sovereignty, polygon currency circulation, or GDP claim.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk-frb-july1930-exchange-table"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk-frb-july1930-exchange-table",
+            "locator": "Printed450/Asia/India/1930-06",
+            "note": "{\"rawCountry\":\"India\",\"rawUnit\":\"Rupee\",\"rawValue\":\"35.9971\",\"value\":35.9971,\"columnMonth\":\"1930-06\",\"actualObservationMonth\":\"1930-06\",\"footnoteIds\":[],\"rowId\":\"frb1930-39\"}; Independent original facsimile review and coordinate parser bind literal cells, quoted instruments, numeric values, all footnotes and historical frameworks. Coordinator inspected full page and existing dated presentation path: actual observation month is displayed unchanged. Nominal, reform, source-glyph, uncertain-date and geographic mapping cases stay held. Contemporary monetary quotation is not sole legal tender or national GDP.",
+            "precision": "month",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930-06",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Monthly average of daily noon buying quotations for cable transfers in NewYork.",
+          "U.S. cents per Rupee; monthly average quotation, not par value, GDP, a purchasing-power conversion or a territory-wide statistic.",
+          "Publication: July 1930; observation: 1930-06. Column label: 1930-06; applicable source footnotes: none.",
+          "BritishIndia rupee quotation; no claim every princely state or map polygon used the instrument."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-17ed0f3fc3395a7c619259e5",
+          "sourceIdentifier": "Printed450/Asia/India/1930-06"
+        },
+        "metric": "Foreign exchange quotation — Rupee (monthly New York average)",
+        "unit": "US cents per Rupee"
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "bulk-frb-july1930-exchange-table"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "bulk-frb-july1930-exchange-table"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T03:57:09.342Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "0bc9d9f9c03be663aad5137a2d9b8ab18a1d6b32d56c0054e578419e0f33ac98",
+        "495e0d0f2f2ea0ecf2563985c49105e3499bdaafe30e279be210508f67174ce8"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "d9a2ef90d9641d4e57429f1dd54d6b1f560853eef499aff08ebfef7bfcd6c7fa",
+    "productionFingerprint": "b4879d05638f2a96fa30ed256b8484154684ac1603f6872cd7610b487f6ce7d5",
+    "jobId": "dossier-86ba749cc9d467dacc1b3ce6",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "d9a2ef90d9641d4e57429f1dd54d6b1f560853eef499aff08ebfef7bfcd6c7fa",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by scale-flags-independent-frb1930 / coordinator-facsimile-and-observation-rendering-review; contract 495e0d0f2f2ea0ecf2563985c49105e3499bdaafe30e279be210508f67174ce8; adapter dated-official-monetary-quotation/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-d10341b03821ad7baa78f373-83e468209c": "accepted",
+        "bulk-78b5cfde8565693211334594-83e468209c": "accepted",
+        "bulk-429cf433be16b470906f77f0-83e468209c": "accepted",
+        "bulk-17ed0f3fc3395a7c619259e5-83e468209c": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-d10341b03821ad7baa78f373-83e468209c",
+      "bulk-78b5cfde8565693211334594-83e468209c",
+      "bulk-429cf433be16b470906f77f0-83e468209c",
+      "bulk-17ed0f3fc3395a7c619259e5-83e468209c"
+    ]
+  }
+}

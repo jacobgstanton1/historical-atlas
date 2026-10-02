@@ -1,0 +1,17 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readJSON,readContext,digest} from '../scripts/research-common.mjs';
+import {frbIntake} from '../scripts/research-bulk-frb.mjs';
+import {prepareCandidates,verifyContract} from '../scripts/research-bulk.mjs';
+import {selectForYear} from '../scripts/research-comprehensive.mjs';
+import {presentationPeriod} from '../dossier-presentation.js';
+const {manifest,contract}=frbIntake(),context=readContext(),candidates=prepareCandidates(manifest,contract,context);
+test('official facsimile/coordinate parser and independent exact review bind',()=>assert.equal(verifyContract(contract,manifest),true));
+test('all currency and economic facts preserve actual observation months',()=>{for(const r of manifest.rows.filter(r=>!r.evidenceCautions.length)){assert.equal(r.temporal.kind,'observation');assert.match(r.temporal.observationDate,/^1930-\d{2}$/);assert.equal(r.precision,'month');assert.notEqual(r.temporal.observationDate,'1930-07');}});
+test('Turkey footnote months never become April/May/June or publication July',()=>{const rows=manifest.rows.filter(r=>r.category==='economy'&&r.originalRow.includes('"rawCountry":"Turkey"'));assert.deepEqual(rows.map(r=>r.temporal.observationDate),['1930-02','1930-03','1930-04']);});
+test('original Egyptian footnote inconsistency, reform and nominal cases stay held',()=>{for(const r of manifest.rows.filter(r=>/"rawCountry":"(?:Egypt|China|Java|Russia|Peru)"/.test(r.originalRow)))assert.equal(r.disposition,'historical-review');});
+test('numeric facts carry exact quoted unit and market methodology, not GDP',()=>{for(const c of candidates)for(const p of c.claims.filter(p=>p.claim.category==='economy')){assert.equal(typeof p.claim.value,'number');assert.match(p.claim.metric,/Foreign exchange quotation/);assert.match(p.claim.unit,/US cents per/);assert.ok(p.claim.qualifications.some(q=>q.includes('not par value, GDP')));}});
+test('selected-year leakage and unchanged source-observation date checks',()=>{for(const c of candidates)for(const p of c.claims){assert.equal(selectForYear([p.claim],1929).length,0);assert.equal(selectForYear([p.claim],1931).length,0);assert.equal(p.claim.temporal.observationDate,p.claim.evidence[0].temporal.observationDate);}});
+test('existing presentation explicitly displays actual month',()=>{assert.match(presentationPeriod({temporal:{kind:'observation',observationDate:'1930-06'}}),/Jun.*1930.*observation/i);});
+test('source examination never changes production before integration',()=>{const before=context.productionFingerprint;prepareCandidates(manifest,contract,context);assert.equal(readContext().productionFingerprint,before);});
+test('a retimed observation fails exact independent manifest certification',()=>{const altered=structuredClone(manifest);altered.rows.find(r=>!r.evidenceCautions.length).temporal.observationDate='1930-07';assert.notEqual(digest(altered),digest(manifest));assert.throws(()=>verifyContract(contract,altered),/exact-manifest/);});
