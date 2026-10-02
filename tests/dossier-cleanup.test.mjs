@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createMetadataIndex} from '../historical-metadata.js';
-import {entityTitle,splitPresentation,presentationPeriod,publicFigure,factLabel} from '../dossier-presentation.js';
+import {entityTitle,splitPresentation,presentationPeriod,publicFigure,factLabel,headerValue} from '../dossier-presentation.js';
 const read=f=>JSON.parse(fs.readFileSync(new URL('../data/'+f,import.meta.url)));
 const db=read('historical-entities.json'),index=createMetadataIndex(db,read('historical-sources.json'));
 test('Italy 1960 uses the historical state name, not its constitutional descriptor',()=>assert.equal(entityTitle(index.resolve('entity-italy',1960)).text,'Italian Republic'));
@@ -16,3 +16,7 @@ test('genuinely bounded periods and measurement dates remain distinct',()=>{asse
 test('an arbitrary 1961 end without cutoff evidence remains bounded',()=>assert.equal(presentationPeriod({temporal:{kind:'interval',from:'1948',until:'1961-01-01'}}),'1948 – 1 January 1961'));
 test('Daniel Bovet card keeps the award and dated association without ingestion jargon',()=>{const c=read('comprehensive-dossiers.json').packages.flatMap(p=>p.claims).find(c=>c.figure?.name==='Daniel Bovet');const f=publicFigure(c.figure,c.value);assert.equal(f.activity,'Nobel Prize in Physiology or Medicine, 1957');assert.match(f.relationship,/Affiliation in 1957/);assert.equal(f.contribution,c.figure.contribution);});
 test('fact labels use supported roles and categories',()=>{assert.equal(factLabel({legacyField:'governments'}),'Government');assert.equal(factLabel({metric:'constitutional-legislature'}),'Legislature');assert.equal(factLabel({role:'President of the Republic'}),'President of the Republic');});
+
+test('research projection and coverage caveats route intact to methodology',()=>{const text='The constitution establishes the executive. No current constitutional amendments are projected backwards; the 1958 constitutional transition itself remains a gap in detailed coverage.';const p=splitPresentation(text);assert.equal(p.text,'The constitution establishes the executive.');assert.ok(p.notes[0].includes('1958'));});
+test('header conversion shortens currency only; original claim is untouched',()=>{const r={category:'currency',value:'New franc (100 earlier francs)'};assert.equal(headerValue(r,r.value),'New franc');assert.equal(r.value,'New franc (100 earlier francs)');assert.equal(headerValue({category:'identity'},'Republic (provisional)'),'Republic (provisional)');});
+test('ordinary empty wording does not relabel genuine uncertainty or non-applicability',async()=>{const {stateText,dataState}=await import('../dossier-layout.js');assert.equal(stateText.missing,'Not yet documented');assert.equal(stateText[dataState({status:'uncertain'})],'Uncertain');assert.equal(stateText[dataState({status:'not-applicable'})],'Not applicable');});

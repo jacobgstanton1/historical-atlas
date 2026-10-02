@@ -7,9 +7,9 @@ import {
   presenceSummary,
   clean,
 } from './data-pipeline.js?v=0.6.1';
-import { loadMetadata } from './historical-metadata.js?v=canonical1';
-import { renderDossier } from './dossier.js?v=canonical1';
-import { loadRichDossiers } from './rich-dossier.js?v=canonical1';
+import { loadMetadata } from './historical-metadata.js?v=canonical-cleanup1';
+import { renderDossier } from './dossier.js?v=canonical-cleanup1';
+import { loadRichDossiers } from './rich-dossier.js?v=canonical-cleanup1';
 import { createBoundaryHistory } from './boundary-history.js?v=0.6.1';
 
 const SNAPSHOTS = [
@@ -497,7 +497,7 @@ function renderInspector(stableId) {
   const matches = currentFeatures.filter(item => item.properties?._stableId === stableId);
   if (matches.length) selectedName = clean(matches[0].properties._name);
   const body = document.querySelector('#dossier-content');
-  const scroll = renderedDossierId === stableId ? els.inspector.scrollTop : 0;
+  const scroll = renderedDossierId === stableId ? body.scrollTop : 0;
   renderedDossierId = stableId;
   renderDossier(body, {
     stableId, savedName: selectedName, features: matches, allFeatures: currentFeatures,
@@ -511,7 +511,7 @@ function renderInspector(stableId) {
   els.inspector.classList.add('is-open');
   els.inspector.setAttribute('aria-hidden', 'false');
   els.inspector.inert = false;
-  els.inspector.scrollTop = scroll;
+  body.scrollTop = scroll;
 }
 
 function clearSelection() {

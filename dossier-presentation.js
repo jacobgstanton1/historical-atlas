@@ -1,7 +1,7 @@
 import {formatHistoricalDate,formatHistoricalPeriod} from './historical-chronology.js';
 
 // Conservative presentation rules: unknown qualifications remain beside the fact.
-const methodology=/^(?:Schematic licensed SVG|Conservative bounded interval|Curated (?:facts|coverage)|Office-holder coverage|These bounds|Bounds delimit|This dossier covers|This partial interval|This interval ends|This overview ends|Dates retain the precision|The leadership records preserve|Presidential terms are retained|Award-year context only|Multiple institutions|Official API|Geographic scope: Entity-level|Interior\d|.*\b(?:research clipping|research boundary|ingestion|dataset limit|atlas[’']?s? (?:supported )?limit|no geometry-based)\b)/i;
+const methodology=/^(?:Schematic licensed SVG|No current .*projected backwards|.*\b(?:gap in (?:detailed )?coverage|coverage-gap|research pipeline|acquisition methodology|internal validation)\b|Conservative bounded interval|Curated (?:facts|coverage)|Office-holder coverage|These bounds|Bounds delimit|This dossier covers|This partial interval|This interval ends|This overview ends|Dates retain the precision|The leadership records preserve|Presidential terms are retained|Award-year context only|Multiple institutions|Official API|Geographic scope: Entity-level|Interior\d|.*\b(?:research clipping|research boundary|ingestion|dataset limit|atlas[’']?s? (?:supported )?limit|no geometry-based)\b)/i;
 export function splitPresentation(text='') {
   const publicText=[],notes=[];
   for(const sentence of String(text).split(/(?<=[.!?])\s+/)){
@@ -39,3 +39,6 @@ export function factLabel(record){
 export function publicFigure(figure,value){
   return {...figure,activity:value?.prizeYear&&value?.prizeCategory?'Nobel Prize in '+value.prizeCategory+', '+value.prizeYear:figure.activity.replace(/; status recorded as \w+\.?$/i,''),relationship:figure.relationship.replace(/; official affiliation at award time\.?$/i,' · '+(value?.prizeYear?'Affiliation in '+value.prizeYear:'Affiliation at the time of the award'))};
 }
+
+// Shorten only an explicitly parenthesised currency conversion; preserve full fact elsewhere.
+export function headerValue(record,value){return record.category==='currency'?value.replace(/\s*\(\d+(?:[.,]\d+)?\s+(?:earlier|old)\s+[^)]+\)$/, ''):value;}
