@@ -1,0 +1,435 @@
+{
+  "job": {
+    "id": "dossier-43cba8991abbcc42058088ab",
+    "entityId": "hong-kong-historical-administration",
+    "period": {
+      "from": "1842-08-29",
+      "until": "1961-01-01"
+    },
+    "mapIds": [
+      "entity-hong-kong"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "66bca3af6aac5b25bd944fd53632f402978921c95a5ed2b5f98fd94a599ec61a",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-explicit-status-relationships-hong-kong-historical-administration",
+    "jobId": "dossier-43cba8991abbcc42058088ab",
+    "entityId": "hong-kong-historical-administration",
+    "mapIds": [
+      "entity-hong-kong"
+    ],
+    "worker": {
+      "id": "campaign2-flags",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "66bca3af6aac5b25bd944fd53632f402978921c95a5ed2b5f98fd94a599ec61a",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1842-08-29",
+      "until": "1961-01-01"
+    },
+    "claims": [
+      {
+        "id": "completion-status-relationship-900b169ad97b2acdb3b24724",
+        "category": "relationships",
+        "value": "British colonial administration",
+        "entityId": "hong-kong-historical-administration",
+        "temporal": {
+          "kind": "interval",
+          "from": "1842-08-29",
+          "until": "1941-12-25",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "hong-kong-historical-administration",
+          "description": "Existing accepted political-status scope of Hong Kong — historical administrations; original statement and qualifications preserved.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "b02-hong-kong-origin",
+          "b02-hong-kong-war"
+        ],
+        "evidence": [
+          {
+            "sourceId": "b02-hong-kong-origin",
+            "locator": "data/historical-entities.json entity hong-kong-historical-administration politicalStatus[1]; original legacy-00888f2166d9c37bbf73801e71e55660b295e4470c80d840cb04fb1b3d733227; source https://www.yearbook.gov.hk/2006/en/21_03.htm",
+            "note": "Existing accepted source record SHA (canonical JSON) e924fe386cb2c565a9f7c2eb05520512dd05e7d0e1dd8544571b689a40daf9a5. Literal reused statement: British colonial administration",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1842-08-29",
+              "until": "1941-12-25",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "b02-hong-kong-war",
+            "locator": "data/historical-entities.json entity hong-kong-historical-administration politicalStatus[1]; original legacy-00888f2166d9c37bbf73801e71e55660b295e4470c80d840cb04fb1b3d733227; source https://www.yearbook.gov.hk/2006/en/21_06.htm",
+            "note": "Existing accepted source record SHA (canonical JSON) e924fe386cb2c565a9f7c2eb05520512dd05e7d0e1dd8544571b689a40daf9a5. Literal reused statement: British colonial administration",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1842-08-29",
+              "until": "1941-12-25",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Exact reuse of an already accepted sourced political-status statement; no additional sovereignty, succession, occupation legitimacy or target-entity assertion.",
+          "Named party is a literal text marker only, without inferred historical entity ID.",
+          "Original interval dates and precision are copied exactly inside the existing source/entity/atlas validity envelope."
+        ],
+        "relatedParty": "British",
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "legacy-00888f2166d9c37bbf73801e71e55660b295e4470c80d840cb04fb1b3d733227",
+          "sourceIdentifier": "e924fe386cb2c565a9f7c2eb05520512dd05e7d0e1dd8544571b689a40daf9a5"
+        }
+      },
+      {
+        "id": "completion-status-relationship-e9084ea40108613f31c317c1",
+        "category": "relationships",
+        "value": "Japanese military occupation",
+        "entityId": "hong-kong-historical-administration",
+        "temporal": {
+          "kind": "interval",
+          "from": "1941-12-25",
+          "until": "1945-08",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "hong-kong-historical-administration",
+          "description": "Existing accepted political-status scope of Hong Kong — historical administrations; original statement and qualifications preserved.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "b02-hong-kong-war"
+        ],
+        "evidence": [
+          {
+            "sourceId": "b02-hong-kong-war",
+            "locator": "data/historical-entities.json entity hong-kong-historical-administration politicalStatus[2]; original legacy-74ef03110f92c939384eee32d0a9124f07e55def15c42ff52bdf4dfffe2a1954; source https://www.yearbook.gov.hk/2006/en/21_06.htm",
+            "note": "Existing accepted source record SHA (canonical JSON) fcf3b593f05a51480fd011eb95e14b4fd4ed0d0070443c120478156630cba3df. Literal reused statement: Japanese military occupation",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1941-12-25",
+              "until": "1945-08",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Exact reuse of an already accepted sourced political-status statement; no additional sovereignty, succession, occupation legitimacy or target-entity assertion.",
+          "Named party is a literal text marker only, without inferred historical entity ID.",
+          "Original interval dates and precision are copied exactly inside the existing source/entity/atlas validity envelope."
+        ],
+        "relatedParty": "Japanese",
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "legacy-74ef03110f92c939384eee32d0a9124f07e55def15c42ff52bdf4dfffe2a1954",
+          "sourceIdentifier": "fcf3b593f05a51480fd011eb95e14b4fd4ed0d0070443c120478156630cba3df"
+        }
+      },
+      {
+        "id": "completion-status-relationship-f6db7cfdbd2432658cbaafde",
+        "category": "relationships",
+        "value": "Restored British military administration",
+        "entityId": "hong-kong-historical-administration",
+        "temporal": {
+          "kind": "interval",
+          "from": "1945-08-30",
+          "until": "1946-05-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "hong-kong-historical-administration",
+          "description": "Existing accepted political-status scope of Hong Kong — historical administrations; original statement and qualifications preserved.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "b02-hong-kong-war"
+        ],
+        "evidence": [
+          {
+            "sourceId": "b02-hong-kong-war",
+            "locator": "data/historical-entities.json entity hong-kong-historical-administration politicalStatus[4]; original legacy-e91f8d0c211443ae6181db5abf47020c5bd5c3eda2c9bd32e81e95dbf7c7daca; source https://www.yearbook.gov.hk/2006/en/21_06.htm",
+            "note": "Existing accepted source record SHA (canonical JSON) 3ee0e76de71a4b6a462088ee9f7b1abb9258795d52fe7da75d8554e35bd5cf4f. Literal reused statement: Restored British military administration",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1945-08-30",
+              "until": "1946-05-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Exact reuse of an already accepted sourced political-status statement; no additional sovereignty, succession, occupation legitimacy or target-entity assertion.",
+          "Named party is a literal text marker only, without inferred historical entity ID.",
+          "Original interval dates and precision are copied exactly inside the existing source/entity/atlas validity envelope."
+        ],
+        "relatedParty": "British",
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "legacy-e91f8d0c211443ae6181db5abf47020c5bd5c3eda2c9bd32e81e95dbf7c7daca",
+          "sourceIdentifier": "3ee0e76de71a4b6a462088ee9f7b1abb9258795d52fe7da75d8554e35bd5cf4f"
+        }
+      },
+      {
+        "id": "completion-status-relationship-d638e7b91b8e8aa099c6301e",
+        "category": "relationships",
+        "value": "British colonial civil administration",
+        "entityId": "hong-kong-historical-administration",
+        "temporal": {
+          "kind": "interval",
+          "from": "1946-05-01",
+          "until": "1961-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "hong-kong-historical-administration",
+          "description": "Existing accepted political-status scope of Hong Kong — historical administrations; original statement and qualifications preserved.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "b02-hong-kong-war"
+        ],
+        "evidence": [
+          {
+            "sourceId": "b02-hong-kong-war",
+            "locator": "data/historical-entities.json entity hong-kong-historical-administration politicalStatus[5]; original legacy-e4ee22e26a39c6a333d7017395ae8a553432baa5ff234a0f0de053c9ebb28d60; source https://www.yearbook.gov.hk/2006/en/21_06.htm",
+            "note": "Existing accepted source record SHA (canonical JSON) bcb02738c32ecab6bf17da4e3192c29e423bd8ae97f7fff92fa1d8a7eb4a1150. Literal reused statement: British colonial civil administration",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1946-05-01",
+              "until": "1961-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Exact reuse of an already accepted sourced political-status statement; no additional sovereignty, succession, occupation legitimacy or target-entity assertion.",
+          "Named party is a literal text marker only, without inferred historical entity ID.",
+          "Original interval dates and precision are copied exactly inside the existing source/entity/atlas validity envelope."
+        ],
+        "relatedParty": "British",
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "legacy-e4ee22e26a39c6a333d7017395ae8a553432baa5ff234a0f0de053c9ebb28d60",
+          "sourceIdentifier": "bcb02738c32ecab6bf17da4e3192c29e423bd8ae97f7fff92fa1d8a7eb4a1150"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "b02-hong-kong-origin",
+          "b02-hong-kong-war"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator inspected every distinct literal affiliation description and the category predicate, including contested/claimed qualifications, named group markers and exclusions. Independent validation requires original accepted documented politicalStatus reference, exact wording/source order/notes, unchanged dated bounds, entity envelope and no inferred target IDs. This is structured reuse of accepted evidence, not new historical research or a sovereignty decision.",
+      "preservedPackageHashes": [
+        "286ce66daafe73d6d1e11ec6c10d6849cac7b9ac7986cccef05c17df61fdbf46",
+        "359478a1a83fe6412dbcba523618d1e895e9dd66077896b9856b50ade3e236b5"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "2d515dd784a01a4a74a3ad9dd43f5f3483cb03466be3ed1794327a06db86ad49",
+    "productionFingerprint": "66bca3af6aac5b25bd944fd53632f402978921c95a5ed2b5f98fd94a599ec61a",
+    "jobId": "dossier-43cba8991abbcc42058088ab",
+    "review": {
+      "reviewer": "coordinator-independent-literal-affiliation-review",
+      "packageHash": "2d515dd784a01a4a74a3ad9dd43f5f3483cb03466be3ed1794327a06db86ad49",
+      "bodyReviewed": true,
+      "rationale": "Coordinator inspected every distinct literal affiliation description and the category predicate, including contested/claimed qualifications, named group markers and exclusions. Independent validation requires original accepted documented politicalStatus reference, exact wording/source order/notes, unchanged dated bounds, entity envelope and no inferred target IDs. This is structured reuse of accepted evidence, not new historical research or a sovereignty decision.",
+      "reviewedIssues": [],
+      "decisions": {
+        "completion-status-relationship-900b169ad97b2acdb3b24724": "accepted",
+        "completion-status-relationship-e9084ea40108613f31c317c1": "accepted",
+        "completion-status-relationship-f6db7cfdbd2432658cbaafde": "accepted",
+        "completion-status-relationship-d638e7b91b8e8aa099c6301e": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "completion-status-relationship-900b169ad97b2acdb3b24724",
+      "completion-status-relationship-e9084ea40108613f31c317c1",
+      "completion-status-relationship-f6db7cfdbd2432658cbaafde",
+      "completion-status-relationship-d638e7b91b8e8aa099c6301e"
+    ]
+  }
+}

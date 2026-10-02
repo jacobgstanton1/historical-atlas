@@ -3,6 +3,7 @@ import path from 'node:path';
 import {digest,readJSON,saveJSON,productionFingerprint,root,isCLI} from './research-common.mjs';
 import {withLock,atomicWrite} from './research-queue.mjs';
 import {validateFlagClaim} from './research-flags.mjs';
+import {validateLiteralRelationshipReuse} from './research-completion-reuse.mjs';
 export const fields=['identity','political-institutional','leadership','capital','currency','historical-flag','population-statistics','area-statistics','density','economy','events-context','relationships','overview','important-figures'];
 export const fingerprint=(directory=root)=>{
  const store=fs.existsSync(path.join(directory,'data/comprehensive-dossiers.json'))?readJSON(path.join(directory,'data/comprehensive-dossiers.json')):null;
@@ -91,7 +92,7 @@ export function validateDossier(pkg,job,context){
  if(c.temporal.kind==='event')check('Events use event temporal form '+c.id,c.category==='events-context');
  if(c.category==='events-context')check('Selected-period event date '+c.id,c.temporal.kind==='event');
  if(c.category==='important-figures'){check('Figure relationship/activity '+c.id,!!c.figure?.relationship&&!!c.figure?.activity&&!!c.figure?.contribution&&!!c.figure?.personId);const life=temporalBounds({...c.figure.lifespan,kind:'interval'});check('Figure relevance within lifespan '+c.id,b.lo>=life.lo&&b.hi<=life.hi);}
- if(c.category==='relationships')check('Related entity IDs resolve '+c.id,c.relatedEntityIds?.length&&c.relatedEntityIds.every(id=>context.db.entities.some(e=>e.id===id)));
+ if(c.category==='relationships')check('Related entity IDs or exact sourced literal affiliation resolve '+c.id,c.relatedParty?validateLiteralRelationshipReuse(c,context,temporalBounds):c.relatedEntityIds?.length&&c.relatedEntityIds.every(id=>context.db.entities.some(e=>e.id===id)));
  }catch(e){errors.push(c.id+': '+e.message);}
  for(const risk of c.risks||[])if(['geometry-succession','modern-nationality','modern-fallback','subjecto-succession','interpolated-statistic'].includes(risk))errors.push(c.id+': prohibited '+risk);else review.push(c.id+': '+risk);
  }

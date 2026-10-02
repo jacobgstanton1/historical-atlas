@@ -1,0 +1,300 @@
+{
+  "job": {
+    "id": "dossier-671e83c2fe68db34ad30e438",
+    "entityId": "b19-bechuanaland-early",
+    "period": {
+      "from": "1912-01-01",
+      "until": "1931-01-01"
+    },
+    "mapIds": [
+      "entity-botswana"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "7ba76177bd230633587b19f3fd721b197d15ebccbabab6b2c0df5f775f5f9719",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion01-explicit-status-relationships-b19-bechuanaland-early",
+    "jobId": "dossier-671e83c2fe68db34ad30e438",
+    "entityId": "b19-bechuanaland-early",
+    "mapIds": [
+      "entity-botswana"
+    ],
+    "worker": {
+      "id": "campaign2-flags",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "7ba76177bd230633587b19f3fd721b197d15ebccbabab6b2c0df5f775f5f9719",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1912-01-01",
+      "until": "1931-01-01"
+    },
+    "claims": [
+      {
+        "id": "completion-status-relationship-d1666e3a2eb1565cbe3eb112",
+        "category": "relationships",
+        "value": "British protectorate",
+        "entityId": "b19-bechuanaland-early",
+        "temporal": {
+          "kind": "interval",
+          "from": "1912-01-01",
+          "until": "1931-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "b19-bechuanaland-early",
+          "description": "Existing accepted political-status scope of Bechuanaland Protectorate — pre-1931 administration; original statement and qualifications preserved.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "b19-bechuanaland-report",
+          "b19-basutoland-report",
+          "b19-country-aliases"
+        ],
+        "evidence": [
+          {
+            "sourceId": "b19-bechuanaland-report",
+            "locator": "data/historical-entities.json entity b19-bechuanaland-early politicalStatus[0]; original legacy-76e084aa8678a7743208967e27de8fca619199c55b4e19d6bc97a8b1d0cc2110; source https://libsysdigi.library.illinois.edu/ilharvest/Africana/Books2011-05/466540/466540_1936/466540_1936_opt.pdf",
+            "note": "Existing accepted source record SHA (canonical JSON) 151a2fccf4ba66e2fc1a9379b19847de5eb7239ea5a10097e7a372f6f0cb9c3e. Literal reused statement: British protectorate",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1912-01-01",
+              "until": "1931-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "b19-basutoland-report",
+            "locator": "data/historical-entities.json entity b19-bechuanaland-early politicalStatus[0]; original legacy-76e084aa8678a7743208967e27de8fca619199c55b4e19d6bc97a8b1d0cc2110; source https://libsysdigi.library.illinois.edu/ilharvest/Africana/Books2011-05/469256/469256_1936/469256_1936_opt.pdf",
+            "note": "Existing accepted source record SHA (canonical JSON) 151a2fccf4ba66e2fc1a9379b19847de5eb7239ea5a10097e7a372f6f0cb9c3e. Literal reused statement: British protectorate",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1912-01-01",
+              "until": "1931-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "b19-country-aliases",
+            "locator": "data/historical-entities.json entity b19-bechuanaland-early politicalStatus[0]; original legacy-76e084aa8678a7743208967e27de8fca619199c55b4e19d6bc97a8b1d0cc2110; source https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/other-countries/",
+            "note": "Existing accepted source record SHA (canonical JSON) 151a2fccf4ba66e2fc1a9379b19847de5eb7239ea5a10097e7a372f6f0cb9c3e. Literal reused statement: British protectorate",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1912-01-01",
+              "until": "1931-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Exact reuse of an already accepted sourced political-status statement; no additional sovereignty, succession, occupation legitimacy or target-entity assertion.",
+          "Named party is a literal text marker only, without inferred historical entity ID.",
+          "Original interval dates and precision are copied exactly inside the existing source/entity/atlas validity envelope."
+        ],
+        "relatedParty": "British",
+        "origin": {
+          "kind": "production-reuse",
+          "reference": "legacy-76e084aa8678a7743208967e27de8fca619199c55b4e19d6bc97a8b1d0cc2110",
+          "sourceIdentifier": "151a2fccf4ba66e2fc1a9379b19847de5eb7239ea5a10097e7a372f6f0cb9c3e"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "b19-bechuanaland-report",
+          "b19-basutoland-report",
+          "b19-country-aliases"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator inspected every distinct literal affiliation description and the category predicate, including contested/claimed qualifications, named group markers and exclusions. Independent validation requires original accepted documented politicalStatus reference, exact wording/source order/notes, unchanged dated bounds, entity envelope and no inferred target IDs. This is structured reuse of accepted evidence, not new historical research or a sovereignty decision.",
+      "preservedPackageHashes": [
+        "286ce66daafe73d6d1e11ec6c10d6849cac7b9ac7986cccef05c17df61fdbf46",
+        "359478a1a83fe6412dbcba523618d1e895e9dd66077896b9856b50ade3e236b5"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "e04548705817e0983025db91ac5ef642f2e201ac3303ff2164ddebcfc6197e82",
+    "productionFingerprint": "7ba76177bd230633587b19f3fd721b197d15ebccbabab6b2c0df5f775f5f9719",
+    "jobId": "dossier-671e83c2fe68db34ad30e438",
+    "review": {
+      "reviewer": "coordinator-independent-literal-affiliation-review",
+      "packageHash": "e04548705817e0983025db91ac5ef642f2e201ac3303ff2164ddebcfc6197e82",
+      "bodyReviewed": true,
+      "rationale": "Coordinator inspected every distinct literal affiliation description and the category predicate, including contested/claimed qualifications, named group markers and exclusions. Independent validation requires original accepted documented politicalStatus reference, exact wording/source order/notes, unchanged dated bounds, entity envelope and no inferred target IDs. This is structured reuse of accepted evidence, not new historical research or a sovereignty decision.",
+      "reviewedIssues": [],
+      "decisions": {
+        "completion-status-relationship-d1666e3a2eb1565cbe3eb112": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "completion-status-relationship-d1666e3a2eb1565cbe3eb112"
+    ]
+  }
+}
