@@ -50,3 +50,6 @@ Continue highest-yield bulk categories after1960 while budget safely permits. Pr
 
 ## Population and supplementary checkpoint
 22 matching-scope UN1960 population observations, 3 source-bound illustrative US flags and 7 exact-year Tagore publication contexts integrated. Production1904; campaign365 newclaims,202 net supportedslots plus explicitpartial contexts.9 population holds preserve two reversed territorial footnotes. Next:45 independently reviewed COW combat endpoints; capitalcohort02 research remains isolated. No browserchecks or UIchanges.
+
+## Dated combat-events checkpoint
+45 independently reviewed COW actual combat endpoints integrated in15 packages,25 missing event slots filled. Production1949, campaign410 claims and227 net fullcategory slots,211 materiallyimproveddossiers;21094 integritychecks and17 focused tests pass. Next: finish independent capitalcohort02 review of55 mapping proposals/69 rows. No production acceptance until historical review and strictvalidator pass.

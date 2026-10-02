@@ -1,0 +1,412 @@
+{
+  "job": {
+    "id": "dossier-6c0ea6f5027b6cf390d35521",
+    "entityId": "italy-liberal-monarchy-framework",
+    "period": {
+      "from": "1911-09-29",
+      "until": "1918-11-12"
+    },
+    "mapIds": [
+      "entity-italy",
+      "entity-kingdom-of-italy"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "249b0740fcc2725ab2d53b0f0716e00ff5892b9f5112f9324af7be60e51d162f",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "cow-events-01-italy-liberal-monarchy-framework",
+    "jobId": "dossier-6c0ea6f5027b6cf390d35521",
+    "entityId": "italy-liberal-monarchy-framework",
+    "mapIds": [
+      "entity-italy",
+      "entity-kingdom-of-italy"
+    ],
+    "worker": {
+      "id": "bulk-parser/dated-coded-combat-event/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "249b0740fcc2725ab2d53b0f0716e00ff5892b9f5112f9324af7be60e51d162f",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1911-09-29",
+      "until": "1918-11-12"
+    },
+    "claims": [
+      {
+        "id": "bulk-4592b9a55393476213077f38-d458bfa6f8",
+        "category": "events-context",
+        "value": "COW codes Italy's sustained-combat episode in Italian-Turkish as began on 1911-09-29.",
+        "entityId": "italy-liberal-monarchy-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1911-09-29",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "italy-liberal-monarchy-framework-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Kingdom of Italy — liberal monarchical framework",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row102; WarNum=97; ccode=325; Side=1; StartYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"97\",\"WarName\":\"Italian-Turkish\",\"WarType\":\"1\",\"ccode\":\"325\",\"StateName\":\"Italy\",\"Side\":\"1\",\"StartMonth1\":\"9\",\"StartDay1\":\"29\",\"StartYear1\":\"1911\",\"EndMonth1\":\"10\",\"EndDay1\":\"18\",\"EndYear1\":\"1912\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"6\",\"Initiator\":\"1\",\"Outcome\":\"1\",\"TransTo\":\"-8\",\"BatDeath\":\"6000\",\"Version\":\"4\"},\"originalRowNumber\":102,\"eventDate\":\"1911-09-29\",\"warId\":\"97\",\"participant\":\"Italy\",\"sourceContext\":[{\"entityId\":\"italy-liberal-monarchy-framework\",\"snapshotYear\":1914,\"categoryStatus\":\"missing\",\"context\":\"explicitly dated prior-context\",\"actualEventDate\":\"1911-09-29\",\"contextAgeYears\":3,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1911-09-29",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Kingdom of Italy — liberal monarchical framework"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-4592b9a55393476213077f38",
+          "sourceIdentifier": "Original CSV row102; WarNum=97; ccode=325; Side=1; StartYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-e940358a7fe8264869d8693d-d458bfa6f8",
+        "category": "events-context",
+        "value": "COW codes Italy's sustained-combat episode in Italian-Turkish as ended on 1912-10-18.",
+        "entityId": "italy-liberal-monarchy-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1912-10-18",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "italy-liberal-monarchy-framework-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Kingdom of Italy — liberal monarchical framework",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row102; WarNum=97; ccode=325; Side=1; EndYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"97\",\"WarName\":\"Italian-Turkish\",\"WarType\":\"1\",\"ccode\":\"325\",\"StateName\":\"Italy\",\"Side\":\"1\",\"StartMonth1\":\"9\",\"StartDay1\":\"29\",\"StartYear1\":\"1911\",\"EndMonth1\":\"10\",\"EndDay1\":\"18\",\"EndYear1\":\"1912\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"6\",\"Initiator\":\"1\",\"Outcome\":\"1\",\"TransTo\":\"-8\",\"BatDeath\":\"6000\",\"Version\":\"4\"},\"originalRowNumber\":102,\"eventDate\":\"1912-10-18\",\"warId\":\"97\",\"participant\":\"Italy\",\"sourceContext\":[{\"entityId\":\"italy-liberal-monarchy-framework\",\"snapshotYear\":1914,\"categoryStatus\":\"missing\",\"context\":\"explicitly dated prior-context\",\"actualEventDate\":\"1912-10-18\",\"contextAgeYears\":2,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1912-10-18",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Kingdom of Italy — liberal monarchical framework"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-e940358a7fe8264869d8693d",
+          "sourceIdentifier": "Original CSV row102; WarNum=97; ccode=325; Side=1; EndYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-71759698987dc3c0442e7ce2-d458bfa6f8",
+        "category": "events-context",
+        "value": "COW codes Italy's sustained-combat episode in World War I as began on 1915-05-23.",
+        "entityId": "italy-liberal-monarchy-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1915-05-23",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "italy-liberal-monarchy-framework-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Kingdom of Italy — liberal monarchical framework",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row126; WarNum=106; ccode=325; Side=1; StartYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"106\",\"WarName\":\"World War I\",\"WarType\":\"1\",\"ccode\":\"325\",\"StateName\":\"Italy\",\"Side\":\"1\",\"StartMonth1\":\"5\",\"StartDay1\":\"23\",\"StartYear1\":\"1915\",\"EndMonth1\":\"11\",\"EndDay1\":\"11\",\"EndYear1\":\"1918\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"2\",\"Initiator\":\"2\",\"Outcome\":\"1\",\"TransTo\":\"-8\",\"BatDeath\":\"650000\",\"Version\":\"4\"},\"originalRowNumber\":126,\"eventDate\":\"1915-05-23\",\"warId\":\"106\",\"participant\":\"Italy\",\"sourceContext\":[{\"entityId\":\"italy-liberal-monarchy-framework\",\"snapshotYear\":1920,\"categoryStatus\":\"missing\",\"context\":\"explicitly dated prior-context\",\"actualEventDate\":\"1915-05-23\",\"contextAgeYears\":5,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1915-05-23",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Kingdom of Italy — liberal monarchical framework"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-71759698987dc3c0442e7ce2",
+          "sourceIdentifier": "Original CSV row126; WarNum=106; ccode=325; Side=1; StartYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-b770a390250ac30c63b6b778-d458bfa6f8",
+        "category": "events-context",
+        "value": "COW codes Italy's sustained-combat episode in World War I as ended on 1918-11-11.",
+        "entityId": "italy-liberal-monarchy-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1918-11-11",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "italy-liberal-monarchy-framework-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Kingdom of Italy — liberal monarchical framework",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row126; WarNum=106; ccode=325; Side=1; EndYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"106\",\"WarName\":\"World War I\",\"WarType\":\"1\",\"ccode\":\"325\",\"StateName\":\"Italy\",\"Side\":\"1\",\"StartMonth1\":\"5\",\"StartDay1\":\"23\",\"StartYear1\":\"1915\",\"EndMonth1\":\"11\",\"EndDay1\":\"11\",\"EndYear1\":\"1918\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"2\",\"Initiator\":\"2\",\"Outcome\":\"1\",\"TransTo\":\"-8\",\"BatDeath\":\"650000\",\"Version\":\"4\"},\"originalRowNumber\":126,\"eventDate\":\"1918-11-11\",\"warId\":\"106\",\"participant\":\"Italy\",\"sourceContext\":[{\"entityId\":\"italy-liberal-monarchy-framework\",\"snapshotYear\":1920,\"categoryStatus\":\"missing\",\"context\":\"explicitly dated prior-context\",\"actualEventDate\":\"1918-11-11\",\"contextAgeYears\":2,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1918-11-11",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Kingdom of Italy — liberal monarchical framework"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-b770a390250ac30c63b6b778",
+          "sourceIdentifier": "Original CSV row126; WarNum=106; ccode=325; Side=1; EndYear/Month/Day1"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T09:43:35.611Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "8d5035c3b4ad0685a90d4dbe9dc914d13e1a7dc94fb967a8a84749c2909f3587",
+        "864f4a96c0d3fab2c14bd13ec47650921a8030e17ed8d4f3db2bfd2e42aacd39"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "5d53d7e926e421e82e2386db7b0861217a53c655fd4e625681a9cad8ef66224e",
+    "productionFingerprint": "249b0740fcc2725ab2d53b0f0716e00ff5892b9f5112f9324af7be60e51d162f",
+    "jobId": "dossier-6c0ea6f5027b6cf390d35521",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "5d53d7e926e421e82e2386db7b0861217a53c655fd4e625681a9cad8ef66224e",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by Independent capital/population receipt worker, separate from COW extractionworker / coordinator-date-context-gate; contract 864f4a96c0d3fab2c14bd13ec47650921a8030e17ed8d4f3db2bfd2e42aacd39; adapter dated-coded-combat-event/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-4592b9a55393476213077f38-d458bfa6f8": "accepted",
+        "bulk-e940358a7fe8264869d8693d-d458bfa6f8": "accepted",
+        "bulk-71759698987dc3c0442e7ce2-d458bfa6f8": "accepted",
+        "bulk-b770a390250ac30c63b6b778-d458bfa6f8": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-4592b9a55393476213077f38-d458bfa6f8",
+      "bulk-e940358a7fe8264869d8693d-d458bfa6f8",
+      "bulk-71759698987dc3c0442e7ce2-d458bfa6f8",
+      "bulk-b770a390250ac30c63b6b778-d458bfa6f8"
+    ]
+  }
+}

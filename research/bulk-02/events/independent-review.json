@@ -1,0 +1,3875 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent capital/population receipt worker, separate from COW extractionworker",
+  "reviewMethod": "Read original codebook definitions and variable semantics; independently reparsed all337CSVparticipantrows with Python csv.DictReader; checked all45selected participant/country/side/episode/endpoint/date fields and descriptions; manually certified15boundedexistingframeworkaliases including COWTurkey640 Ottomannamespace.",
+  "inputCanonicalDigest": "ccc1f26a7573c0dad12d9e182552d44e760a392f062c4223221e87e1a98afa1c",
+  "inputFileSha256": "ad685847aec7e10dae28b28953fea946141bf15e24c46bea23aaf200461f0fec",
+  "sourceBindings": [
+    {
+      "path": "research/bulk-02/events/cow-events-review-tranche.json",
+      "sha256": "ad685847aec7e10dae28b28953fea946141bf15e24c46bea23aaf200461f0fec"
+    },
+    {
+      "path": "research\\bulk-02\\events\\cache\\Inter-StateWarData_v4.0.csv",
+      "sha256": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731"
+    },
+    {
+      "path": "research\\bulk-02\\events\\cache\\Inter-StateWars_Codebook.pdf",
+      "sha256": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be"
+    },
+    {
+      "path": "research/bulk-02/events/cache/independent-codebook-text.txt",
+      "sha256": "4cce486af4a0f96172826ae9451aa99037465c597737bc52a6a99c209a831dac"
+    },
+    {
+      "path": "research/bulk-02/events/independent-original-csv-rows.json",
+      "sha256": "b2d5b973aa9f877585561706fa047a681087f2981d12b22919657ba804e2c66b"
+    },
+    {
+      "path": "research/bulk-02/events/independent-parse.py",
+      "sha256": "c01792e754869a4ac954930c89b4c7814b1e62872073358b2608cc5888bc16d9"
+    },
+    {
+      "path": "research/bulk-02/events/extract-cow.py",
+      "sha256": "c66ca5f43ef66a6bfc415a2e165d68291a16678a7131b36484aaadb1dc436a2b"
+    },
+    {
+      "path": "research/bulk-02/events/prioritize-events.mjs",
+      "sha256": "5059e720bdd364c14d17247bec6a1a7d4c3566c3979e0fd4ff8bca46f5b39e8a"
+    },
+    {
+      "path": "research/bulk-02/events/validation.json",
+      "sha256": "400db5ae05eb62a838303aac0e06f0cf1e753d5582c1ab7fdf7e595c492d0ea2"
+    },
+    {
+      "path": "research/bulk-02/events/build-independent-review.mjs",
+      "sha256": "1283510fcb53f6653fe9594ed5e88b481f896d163f2ced438a71e1491f5db1ad"
+    }
+  ],
+  "parserBindings": [
+    {
+      "path": "research/bulk-02/events/extract-cow.py",
+      "sha256": "c66ca5f43ef66a6bfc415a2e165d68291a16678a7131b36484aaadb1dc436a2b"
+    },
+    {
+      "path": "research/bulk-02/events/prioritize-events.mjs",
+      "sha256": "5059e720bdd364c14d17247bec6a1a7d4c3566c3979e0fd4ff8bca46f5b39e8a"
+    }
+  ],
+  "codebookEvidence": {
+    "warDefinition": "Codebook p1:organized sustainedcombat >=1000battlecombatantfatalities/12months; p2 participant threshold1000troops or100deaths.",
+    "variables": "Codebook p3:one record perstate participant unless sidechanges; StartMonth/Day/Year sustainedcombatbeginning, EndDay sustainedcombatending or dayafterlastmajorengagement afterwhichfatalitiesdecline belowthreshold. Episode2resumption isnotcontinuousparticipation.",
+    "sentinels": "-9unknown,-8notapplicable,-7ongoing at2007 cutoff; none present in45selected actualdate fields. Transformations and repeated/sidechangedparticipants excluded from selectedtranche.",
+    "scope": "No declarations, treaty dates, casualties, initiated-war conclusions, borders, legalsovereignty or territorialsuccession inferred."
+  },
+  "rows": [
+    {
+      "eventId": "cow-v4-row69-w64-c155-s1-ep1-start",
+      "originalEventDigest": "a48489ddb047f2618a8e138a8d0d48f6cbb21a1bf8a8c05a560ddc2a92797e7d",
+      "sourceRowNumber": 69,
+      "originalCsvRowDigest": "379bea9efb8ad01a175fbc9c0f7da9ff5b8a085fce86e7e6eae0cb68e674be08",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Chile",
+      "sourceCountryCode": "155",
+      "warId": "64",
+      "warName": "War of the Pacific",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1879",
+        "Month": "2",
+        "Day": "14"
+      },
+      "sourceDate": "1879-02-14",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "chile-late-1833-framework",
+        "entityRecordDigest": "c9541625f5022e2d9d3ff4e37f3709988bd6718626eb817184f79e31a2af6f14",
+        "activeNames": [
+          {
+            "value": "Chile — late nineteenth-century constitutional framework",
+            "validFrom": "1872-01-01",
+            "validUntil": "1891-01-01",
+            "sourceIds": [
+              "b09-chile-1833"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1891-01-01",
+        "identityEvidenceIds": [
+          "b09-chile-1833"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Chile participant155 at1879 date matches existing Chile1872–1891framework.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "chile-late-1833-framework",
+        "category": "events",
+        "eventDate": "1879-02-14",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Chile's sustained-combat episode in War of the Pacific as began on 1879-02-14.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row69; WarNum=64; ccode=155; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "64",
+        "sourceCountryCode": "155",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "chile-late-1833-framework",
+          "snapshotYear": 1880,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1879-02-14",
+          "contextAgeYears": 1,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row89-w82-c220-s1-ep1-start",
+      "originalEventDigest": "fd407ea970be85835c283ec0edf9e1cf7b61686828388b9eab5059a1b45d5e86",
+      "sourceRowNumber": 89,
+      "originalCsvRowDigest": "797c403e46542a8fca2e05a1e05fe7e71de54ebcc1b3617294761d220edef3e8",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "France",
+      "sourceCountryCode": "220",
+      "warId": "82",
+      "warName": "Boxer Rebellion",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1900",
+        "Month": "6",
+        "Day": "17"
+      },
+      "sourceDate": "1900-06-17",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "france-political-frameworks",
+        "entityRecordDigest": "6a3baf5bd54f537f10f348897d3e57405adb31a5aef073e48e90d3dd6e26df46",
+        "activeNames": [
+          {
+            "value": "France",
+            "validFrom": "1799-12-13",
+            "sourceIds": [
+              "b01-french-consulate",
+              "b01-france-third-republic",
+              "b01-france-republican-legality"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1876-01-01",
+        "until": "1940-01-01",
+        "identityEvidenceIds": [
+          "b01-french-consulate",
+          "b01-france-third-republic",
+          "b01-france-republican-legality"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal France participant220 at1900,1914–1919 dates falls in existing curated French framework; no wartime1940 competing-authority bridge used.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "france-political-frameworks",
+        "category": "events",
+        "eventDate": "1900-06-17",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes France's sustained-combat episode in Boxer Rebellion as began on 1900-06-17.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row89; WarNum=82; ccode=220; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "82",
+        "sourceCountryCode": "220",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "france-political-frameworks",
+          "snapshotYear": 1900,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1900-06-17",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row89-w82-c220-s1-ep1-end",
+      "originalEventDigest": "0908c370de1b4d7462de8e831814fcdf13cf90aecf810eb88b220da6c8f908e7",
+      "sourceRowNumber": 89,
+      "originalCsvRowDigest": "797c403e46542a8fca2e05a1e05fe7e71de54ebcc1b3617294761d220edef3e8",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "France",
+      "sourceCountryCode": "220",
+      "warId": "82",
+      "warName": "Boxer Rebellion",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1900",
+        "Month": "8",
+        "Day": "14"
+      },
+      "sourceDate": "1900-08-14",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "france-political-frameworks",
+        "entityRecordDigest": "6a3baf5bd54f537f10f348897d3e57405adb31a5aef073e48e90d3dd6e26df46",
+        "activeNames": [
+          {
+            "value": "France",
+            "validFrom": "1799-12-13",
+            "sourceIds": [
+              "b01-french-consulate",
+              "b01-france-third-republic",
+              "b01-france-republican-legality"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1876-01-01",
+        "until": "1940-01-01",
+        "identityEvidenceIds": [
+          "b01-french-consulate",
+          "b01-france-third-republic",
+          "b01-france-republican-legality"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal France participant220 at1900,1914–1919 dates falls in existing curated French framework; no wartime1940 competing-authority bridge used.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "france-political-frameworks",
+        "category": "events",
+        "eventDate": "1900-08-14",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes France's sustained-combat episode in Boxer Rebellion as ended on 1900-08-14.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row89; WarNum=82; ccode=220; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "82",
+        "sourceCountryCode": "220",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "france-political-frameworks",
+          "snapshotYear": 1900,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1900-08-14",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row79-w73-c740-s1-ep1-end",
+      "originalEventDigest": "e263c8e80d9e27d056127463ed96d81d97fa924fbfc68b1b7ebb56bd1d7b76cd",
+      "sourceRowNumber": 79,
+      "originalCsvRowDigest": "f273744faf7b732cd71df59ca9b485a09521c4e471e31da9bd0145e97fddd7d4",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Japan",
+      "sourceCountryCode": "740",
+      "warId": "73",
+      "warName": "First Sino-Japanese",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1895",
+        "Month": "3",
+        "Day": "30"
+      },
+      "sourceDate": "1895-03-30",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "japan-meiji-framework",
+        "entityRecordDigest": "c79db16a33ff96b6fd4fc78b4045ef6de462e5f32013567822c22dd47cc35dfc",
+        "activeNames": [
+          {
+            "value": "Empire of Japan — Meiji constitutional framework",
+            "validFrom": "1890-11-29",
+            "validUntil": "1930-01-01",
+            "sourceIds": [
+              "b02-meiji-commencement",
+              "meiji"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1890-11-29",
+        "until": "1945-01-01",
+        "identityEvidenceIds": [
+          "meiji",
+          "b02-meiji-commencement"
+        ],
+        "origin": "existing-registry-sourced-family-proposal",
+        "reason": "Literal Japan participant740 at1895,1900,1914–1918 is EmpireofJapan under existingMeiji constitutionalname interval1890-11-29–1930, notpostwarJapan.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "japan-meiji-framework",
+        "category": "events",
+        "eventDate": "1895-03-30",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Japan's sustained-combat episode in First Sino-Japanese as ended on 1895-03-30.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row79; WarNum=73; ccode=740; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "73",
+        "sourceCountryCode": "740",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "japan-meiji-framework",
+          "snapshotYear": 1900,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1895-03-30",
+          "contextAgeYears": 5,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row85-w82-c740-s1-ep1-start",
+      "originalEventDigest": "5794dfe98a7b7537a04328f4a04fd1bed30d4d6a6ba14c228ca9ef57a8392cb4",
+      "sourceRowNumber": 85,
+      "originalCsvRowDigest": "3ba4bde8c0d294ea00c6cbd92ef2c817f6e487e9a5680bce989756528b7744a0",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Japan",
+      "sourceCountryCode": "740",
+      "warId": "82",
+      "warName": "Boxer Rebellion",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1900",
+        "Month": "6",
+        "Day": "17"
+      },
+      "sourceDate": "1900-06-17",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "japan-meiji-framework",
+        "entityRecordDigest": "c79db16a33ff96b6fd4fc78b4045ef6de462e5f32013567822c22dd47cc35dfc",
+        "activeNames": [
+          {
+            "value": "Empire of Japan — Meiji constitutional framework",
+            "validFrom": "1890-11-29",
+            "validUntil": "1930-01-01",
+            "sourceIds": [
+              "b02-meiji-commencement",
+              "meiji"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1890-11-29",
+        "until": "1945-01-01",
+        "identityEvidenceIds": [
+          "meiji",
+          "b02-meiji-commencement"
+        ],
+        "origin": "existing-registry-sourced-family-proposal",
+        "reason": "Literal Japan participant740 at1895,1900,1914–1918 is EmpireofJapan under existingMeiji constitutionalname interval1890-11-29–1930, notpostwarJapan.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "japan-meiji-framework",
+        "category": "events",
+        "eventDate": "1900-06-17",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Japan's sustained-combat episode in Boxer Rebellion as began on 1900-06-17.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row85; WarNum=82; ccode=740; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "82",
+        "sourceCountryCode": "740",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "japan-meiji-framework",
+          "snapshotYear": 1900,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1900-06-17",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row85-w82-c740-s1-ep1-end",
+      "originalEventDigest": "1f93ae3fd64ef692fa1fb9f56fdd36ffc22c5f7c9a5abf31b198c453d0feb7af",
+      "sourceRowNumber": 85,
+      "originalCsvRowDigest": "3ba4bde8c0d294ea00c6cbd92ef2c817f6e487e9a5680bce989756528b7744a0",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Japan",
+      "sourceCountryCode": "740",
+      "warId": "82",
+      "warName": "Boxer Rebellion",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1900",
+        "Month": "8",
+        "Day": "14"
+      },
+      "sourceDate": "1900-08-14",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "japan-meiji-framework",
+        "entityRecordDigest": "c79db16a33ff96b6fd4fc78b4045ef6de462e5f32013567822c22dd47cc35dfc",
+        "activeNames": [
+          {
+            "value": "Empire of Japan — Meiji constitutional framework",
+            "validFrom": "1890-11-29",
+            "validUntil": "1930-01-01",
+            "sourceIds": [
+              "b02-meiji-commencement",
+              "meiji"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1890-11-29",
+        "until": "1945-01-01",
+        "identityEvidenceIds": [
+          "meiji",
+          "b02-meiji-commencement"
+        ],
+        "origin": "existing-registry-sourced-family-proposal",
+        "reason": "Literal Japan participant740 at1895,1900,1914–1918 is EmpireofJapan under existingMeiji constitutionalname interval1890-11-29–1930, notpostwarJapan.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "japan-meiji-framework",
+        "category": "events",
+        "eventDate": "1900-08-14",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Japan's sustained-combat episode in Boxer Rebellion as ended on 1900-08-14.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row85; WarNum=82; ccode=740; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "82",
+        "sourceCountryCode": "740",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "japan-meiji-framework",
+          "snapshotYear": 1900,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1900-08-14",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row88-w82-c200-s1-ep1-start",
+      "originalEventDigest": "8f0bd61e6ba81dfc470a255f640d19f159a30d0f1958c9caea6340e4b202e8f2",
+      "sourceRowNumber": 88,
+      "originalCsvRowDigest": "4884eb1bd2017310fed26ae3b2c905aebe6a234cce1f983255e3d5d0add0d514",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "United Kingdom",
+      "sourceCountryCode": "200",
+      "warId": "82",
+      "warName": "Boxer Rebellion",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1900",
+        "Month": "6",
+        "Day": "17"
+      },
+      "sourceDate": "1900-06-17",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "united-kingdom",
+        "entityRecordDigest": "982974decb9bbd590cf7fc4aaa55214b133c4d30b01ca0e753a294d23a0c720d",
+        "activeNames": [
+          {
+            "value": "United Kingdom",
+            "validFrom": "1801-01-01",
+            "validUntil": "1936-12",
+            "sourceIds": [
+              "b01-uk-union-acts",
+              "b01-uk-independence"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United Kingdom of Great Britain and Ireland",
+            "validFrom": "1801-01-01",
+            "validUntil": "1927-04-12",
+            "sourceIds": [
+              "b01-uk-union-acts",
+              "uk-formal-name"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-uk-union-acts",
+          "b01-uk-independence",
+          "basemaps",
+          "george-vi",
+          "elizabeth-ii",
+          "uk-parliament"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal UnitedKingdom participant200 has existing dated primary/formal UKnames at1900,1914–1918,1956; Irish territorial/title transition notinferred as unchanged geography.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "united-kingdom",
+        "category": "events",
+        "eventDate": "1900-06-17",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes United Kingdom's sustained-combat episode in Boxer Rebellion as began on 1900-06-17.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row88; WarNum=82; ccode=200; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "82",
+        "sourceCountryCode": "200",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "united-kingdom",
+          "snapshotYear": 1900,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1900-06-17",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row88-w82-c200-s1-ep1-end",
+      "originalEventDigest": "ec52f33119c7615f317205c3072bcfd9078ef6661938ac73c53d085fdee3b88d",
+      "sourceRowNumber": 88,
+      "originalCsvRowDigest": "4884eb1bd2017310fed26ae3b2c905aebe6a234cce1f983255e3d5d0add0d514",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "United Kingdom",
+      "sourceCountryCode": "200",
+      "warId": "82",
+      "warName": "Boxer Rebellion",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1900",
+        "Month": "8",
+        "Day": "14"
+      },
+      "sourceDate": "1900-08-14",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "united-kingdom",
+        "entityRecordDigest": "982974decb9bbd590cf7fc4aaa55214b133c4d30b01ca0e753a294d23a0c720d",
+        "activeNames": [
+          {
+            "value": "United Kingdom",
+            "validFrom": "1801-01-01",
+            "validUntil": "1936-12",
+            "sourceIds": [
+              "b01-uk-union-acts",
+              "b01-uk-independence"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United Kingdom of Great Britain and Ireland",
+            "validFrom": "1801-01-01",
+            "validUntil": "1927-04-12",
+            "sourceIds": [
+              "b01-uk-union-acts",
+              "uk-formal-name"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-uk-union-acts",
+          "b01-uk-independence",
+          "basemaps",
+          "george-vi",
+          "elizabeth-ii",
+          "uk-parliament"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal UnitedKingdom participant200 has existing dated primary/formal UKnames at1900,1914–1918,1956; Irish territorial/title transition notinferred as unchanged geography.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "united-kingdom",
+        "category": "events",
+        "eventDate": "1900-08-14",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes United Kingdom's sustained-combat episode in Boxer Rebellion as ended on 1900-08-14.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row88; WarNum=82; ccode=200; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "82",
+        "sourceCountryCode": "200",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "united-kingdom",
+          "snapshotYear": 1900,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1900-08-14",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row86-w82-c2-s1-ep1-start",
+      "originalEventDigest": "186e1ea3f54d644d6bc4cf3f6ffb479cf05239074eb69ce849e4cea7baec1a8d",
+      "sourceRowNumber": 86,
+      "originalCsvRowDigest": "1bf020c06d1905d7f0dc4e94e81e72f413b7d87eec45612f4545ef8b35522b88",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "United States of America",
+      "sourceCountryCode": "2",
+      "warId": "82",
+      "warName": "Boxer Rebellion",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1900",
+        "Month": "6",
+        "Day": "17"
+      },
+      "sourceDate": "1900-06-17",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "united-states",
+        "entityRecordDigest": "9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265",
+        "activeNames": [
+          {
+            "value": "United States",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United States of America",
+            "validFrom": "1789-03-04",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "archives-independence",
+          "basemaps",
+          "us-constitution",
+          "us-constitutional-start"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal UnitedStatesofAmerica participant2 exactly matches existing formalname from1789, eventdates1900,1917–1918. No overseaswar geography inferred.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "united-states",
+        "category": "events",
+        "eventDate": "1900-06-17",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes United States of America's sustained-combat episode in Boxer Rebellion as began on 1900-06-17.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row86; WarNum=82; ccode=2; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "82",
+        "sourceCountryCode": "2",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "united-states",
+          "snapshotYear": 1900,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1900-06-17",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row86-w82-c2-s1-ep1-end",
+      "originalEventDigest": "5338451526ada1bcfa32011014dab7fbe730cd1518b6c70dc68d0ad59ccbb3ed",
+      "sourceRowNumber": 86,
+      "originalCsvRowDigest": "1bf020c06d1905d7f0dc4e94e81e72f413b7d87eec45612f4545ef8b35522b88",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "United States of America",
+      "sourceCountryCode": "2",
+      "warId": "82",
+      "warName": "Boxer Rebellion",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1900",
+        "Month": "8",
+        "Day": "14"
+      },
+      "sourceDate": "1900-08-14",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "united-states",
+        "entityRecordDigest": "9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265",
+        "activeNames": [
+          {
+            "value": "United States",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United States of America",
+            "validFrom": "1789-03-04",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "archives-independence",
+          "basemaps",
+          "us-constitution",
+          "us-constitutional-start"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal UnitedStatesofAmerica participant2 exactly matches existing formalname from1789, eventdates1900,1917–1918. No overseaswar geography inferred.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "united-states",
+        "category": "events",
+        "eventDate": "1900-08-14",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes United States of America's sustained-combat episode in Boxer Rebellion as ended on 1900-08-14.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row86; WarNum=82; ccode=2; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "82",
+        "sourceCountryCode": "2",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "united-states",
+          "snapshotYear": 1900,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1900-08-14",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row124-w106-c300-s2-ep1-start",
+      "originalEventDigest": "a169c25a341543af9c9005942fde499553dbfea70fc3b963b99dc7aad9f94ebd",
+      "sourceRowNumber": 124,
+      "originalCsvRowDigest": "f3fac9e2b3256519d3f15e79e52de6ee220ef218288e60645b8a76d6154b7426",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Austria-Hungary",
+      "sourceCountryCode": "300",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1914",
+        "Month": "7",
+        "Day": "29"
+      },
+      "sourceDate": "1914-07-29",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "austria-hungary-dual-framework",
+        "entityRecordDigest": "842ad55e4e3d5a0f9a1fab0330db9da54d87237cd8ef16c55dff952d9e5c7fe1",
+        "activeNames": [
+          {
+            "value": "Austria-Hungary — dual monarchy",
+            "validFrom": "1867",
+            "validUntil": "1918-01-01",
+            "sourceIds": [
+              "b03-compromise",
+              "b03-dual-institutions"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1868-01-01",
+        "until": "1918-01-01",
+        "identityEvidenceIds": [
+          "b03-compromise",
+          "b03-dual-institutions"
+        ],
+        "origin": "existing-registry-sourced-family-proposal",
+        "reason": "Literal Austria-Hungary participant300 at1914 exactname matches curateddualmonarchy1867–1918; proposed conservativefrom1868 avoids coarsefoundingyear.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "austria-hungary-dual-framework",
+        "category": "events",
+        "eventDate": "1914-07-29",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Austria-Hungary's sustained-combat episode in World War I as began on 1914-07-29.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row124; WarNum=106; ccode=300; Side=2; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "300",
+        "sideCode": "2",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "austria-hungary-dual-framework",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1914-07-29",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row125-w106-c220-s1-ep1-start",
+      "originalEventDigest": "c056b43af0ea2b2e1d5a5815a86eab41f0f80e1b9ff18b31678ad04d9ab4d9c8",
+      "sourceRowNumber": 125,
+      "originalCsvRowDigest": "cfdc9ca3ed45212a7e81661aa49e9fb91364c6c99d43cbfdff65d1e9b4fdee70",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "France",
+      "sourceCountryCode": "220",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1914",
+        "Month": "8",
+        "Day": "3"
+      },
+      "sourceDate": "1914-08-03",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "france-political-frameworks",
+        "entityRecordDigest": "6a3baf5bd54f537f10f348897d3e57405adb31a5aef073e48e90d3dd6e26df46",
+        "activeNames": [
+          {
+            "value": "France",
+            "validFrom": "1799-12-13",
+            "sourceIds": [
+              "b01-french-consulate",
+              "b01-france-third-republic",
+              "b01-france-republican-legality"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1876-01-01",
+        "until": "1940-01-01",
+        "identityEvidenceIds": [
+          "b01-french-consulate",
+          "b01-france-third-republic",
+          "b01-france-republican-legality"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal France participant220 at1900,1914–1919 dates falls in existing curated French framework; no wartime1940 competing-authority bridge used.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "france-political-frameworks",
+        "category": "events",
+        "eventDate": "1914-08-03",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes France's sustained-combat episode in World War I as began on 1914-08-03.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row125; WarNum=106; ccode=220; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "220",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "france-political-frameworks",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1914-08-03",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row121-w106-c255-s2-ep1-start",
+      "originalEventDigest": "834d2c568278e6bd0ad3c81ba68b6779972356371909a6573015c4293cd587f7",
+      "sourceRowNumber": 121,
+      "originalCsvRowDigest": "bac0ef6e6e1bde0a62292df1491e8baa4c2dd0a596885b6f09d707a9c38bc358",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Germany",
+      "sourceCountryCode": "255",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1914",
+        "Month": "8",
+        "Day": "1"
+      },
+      "sourceDate": "1914-08-01",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "germany-imperial-framework",
+        "entityRecordDigest": "9573b4f6619f2199572b868d6977855b89d534346b226009be8df095940b76cf",
+        "activeNames": [
+          {
+            "value": "German Empire",
+            "validFrom": "1871",
+            "validUntil": "1918-11-09",
+            "sourceIds": [
+              "b03-german-imperial"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1918-11-09",
+        "identityEvidenceIds": [
+          "b03-german-imperial"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Germany participant255 at1914 matches dated existingGermanEmpire1871–1918-11-09, notGermanFederalRepublic or earlierPrussia.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "germany-imperial-framework",
+        "category": "events",
+        "eventDate": "1914-08-01",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Germany's sustained-combat episode in World War I as began on 1914-08-01.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row121; WarNum=106; ccode=255; Side=2; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "255",
+        "sideCode": "2",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "germany-imperial-framework",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1914-08-01",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row102-w97-c325-s1-ep1-start",
+      "originalEventDigest": "1e672f995716870bcc1fb4782d943cba6d5cddf8ba7280f8ff51149c66a1d15a",
+      "sourceRowNumber": 102,
+      "originalCsvRowDigest": "30641e2edae21ab7979aa6d37d92d06ccac85894976998f3654a0d564b4340d7",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Italy",
+      "sourceCountryCode": "325",
+      "warId": "97",
+      "warName": "Italian-Turkish",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1911",
+        "Month": "9",
+        "Day": "29"
+      },
+      "sourceDate": "1911-09-29",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "italy-liberal-monarchy-framework",
+        "entityRecordDigest": "a8b098d23cec26113851a8a45b379de4085fd1875c68b204edf7a1acb842b3e2",
+        "activeNames": [
+          {
+            "value": "Kingdom of Italy — liberal monarchical framework",
+            "validFrom": "1861-03-17",
+            "validUntil": "1922-01-01",
+            "sourceIds": [
+              "b04-italian-unity",
+              "b04-statuto",
+              "b04-unification-framework"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1922-01-01",
+        "identityEvidenceIds": [
+          "b04-italian-unity",
+          "b04-statuto",
+          "b04-unification-framework"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Italy participant325 at1911–1918 matches curatedKingdomofItaly1861–1922framework, notFascist/republican framework.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "italy-liberal-monarchy-framework",
+        "category": "events",
+        "eventDate": "1911-09-29",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Italy's sustained-combat episode in Italian-Turkish as began on 1911-09-29.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row102; WarNum=97; ccode=325; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "97",
+        "sourceCountryCode": "325",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "italy-liberal-monarchy-framework",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1911-09-29",
+          "contextAgeYears": 3,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row102-w97-c325-s1-ep1-end",
+      "originalEventDigest": "b4bfa69a0d532e1a4b336b1d7aeb54947f73b949e68f68b767c79eb82fa17f98",
+      "sourceRowNumber": 102,
+      "originalCsvRowDigest": "30641e2edae21ab7979aa6d37d92d06ccac85894976998f3654a0d564b4340d7",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Italy",
+      "sourceCountryCode": "325",
+      "warId": "97",
+      "warName": "Italian-Turkish",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1912",
+        "Month": "10",
+        "Day": "18"
+      },
+      "sourceDate": "1912-10-18",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "italy-liberal-monarchy-framework",
+        "entityRecordDigest": "a8b098d23cec26113851a8a45b379de4085fd1875c68b204edf7a1acb842b3e2",
+        "activeNames": [
+          {
+            "value": "Kingdom of Italy — liberal monarchical framework",
+            "validFrom": "1861-03-17",
+            "validUntil": "1922-01-01",
+            "sourceIds": [
+              "b04-italian-unity",
+              "b04-statuto",
+              "b04-unification-framework"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1922-01-01",
+        "identityEvidenceIds": [
+          "b04-italian-unity",
+          "b04-statuto",
+          "b04-unification-framework"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Italy participant325 at1911–1918 matches curatedKingdomofItaly1861–1922framework, notFascist/republican framework.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "italy-liberal-monarchy-framework",
+        "category": "events",
+        "eventDate": "1912-10-18",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Italy's sustained-combat episode in Italian-Turkish as ended on 1912-10-18.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row102; WarNum=97; ccode=325; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "97",
+        "sourceCountryCode": "325",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "italy-liberal-monarchy-framework",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1912-10-18",
+          "contextAgeYears": 2,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row117-w106-c740-s1-ep1-start",
+      "originalEventDigest": "619fbffb1add895158da2b268e90dc631ba181209d60a97ea5b24c51cd80228d",
+      "sourceRowNumber": 117,
+      "originalCsvRowDigest": "baca548acd804563fabb5e9b5cf96d6fa313e379367a38b1d7f78eaabdf3e92f",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Japan",
+      "sourceCountryCode": "740",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1914",
+        "Month": "8",
+        "Day": "23"
+      },
+      "sourceDate": "1914-08-23",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "japan-meiji-framework",
+        "entityRecordDigest": "c79db16a33ff96b6fd4fc78b4045ef6de462e5f32013567822c22dd47cc35dfc",
+        "activeNames": [
+          {
+            "value": "Empire of Japan — Meiji constitutional framework",
+            "validFrom": "1890-11-29",
+            "validUntil": "1930-01-01",
+            "sourceIds": [
+              "b02-meiji-commencement",
+              "meiji"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1890-11-29",
+        "until": "1945-01-01",
+        "identityEvidenceIds": [
+          "meiji",
+          "b02-meiji-commencement"
+        ],
+        "origin": "existing-registry-sourced-family-proposal",
+        "reason": "Literal Japan participant740 at1895,1900,1914–1918 is EmpireofJapan under existingMeiji constitutionalname interval1890-11-29–1930, notpostwarJapan.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "japan-meiji-framework",
+        "category": "events",
+        "eventDate": "1914-08-23",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Japan's sustained-combat episode in World War I as began on 1914-08-23.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row117; WarNum=106; ccode=740; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "740",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "japan-meiji-framework",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1914-08-23",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row103-w97-c640-s2-ep1-start",
+      "originalEventDigest": "4dcaeecb08652752ce21080d66b983108e0e90e5f1da400979160dd6c77f7e31",
+      "sourceRowNumber": 103,
+      "originalCsvRowDigest": "8d2b23de7d9f8d341dbdda569fd2054876b61755cf1e086812d577d2943a7a98",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Turkey",
+      "sourceCountryCode": "640",
+      "warId": "97",
+      "warName": "Italian-Turkish",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1911",
+        "Month": "9",
+        "Day": "29"
+      },
+      "sourceDate": "1911-09-29",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "ottoman-second-constitutional-core",
+        "entityRecordDigest": "ef6aacaad9d143de4dfe1f3b3cbf2fe0d3640fadf9a7c7a1d2800c8fea023444",
+        "activeNames": [
+          {
+            "value": "Ottoman Empire — amended 1909 framework",
+            "validFrom": "1909-08-21",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b12-turkish-parliament-history",
+              "b13-ottoman-calendar-review"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1909-08-21",
+        "until": "1915-01-01",
+        "identityEvidenceIds": [
+          "b12-turkish-parliament-history",
+          "b13-ottoman-calendar-review"
+        ],
+        "origin": "existing-registry-sourced-family-proposal",
+        "reason": "COW640 has literal OttomanEmpire in1828row4 and Turkey label in1853/1877/1897/1911–1914 rows20/67/81/103/108/119. Existing registry explicitlynamesOttomanEmpireamended1909framework1909-08-21–1915. This is a bounded source-namespace alias for selected1911–1914dates only, notsuccession inference or modernRepublicofTurkey mapping.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "ottoman-second-constitutional-core",
+        "category": "events",
+        "eventDate": "1911-09-29",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Turkey's sustained-combat episode in Italian-Turkish as began on 1911-09-29.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row103; WarNum=97; ccode=640; Side=2; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "97",
+        "sourceCountryCode": "640",
+        "sideCode": "2",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "ottoman-second-constitutional-core",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1911-09-29",
+          "contextAgeYears": 3,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row103-w97-c640-s2-ep1-end",
+      "originalEventDigest": "d2e183bf74ce15e955a3696d195585c6cefbe998cdca0f082a5e44b75e4019a3",
+      "sourceRowNumber": 103,
+      "originalCsvRowDigest": "8d2b23de7d9f8d341dbdda569fd2054876b61755cf1e086812d577d2943a7a98",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Turkey",
+      "sourceCountryCode": "640",
+      "warId": "97",
+      "warName": "Italian-Turkish",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1912",
+        "Month": "10",
+        "Day": "18"
+      },
+      "sourceDate": "1912-10-18",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "ottoman-second-constitutional-core",
+        "entityRecordDigest": "ef6aacaad9d143de4dfe1f3b3cbf2fe0d3640fadf9a7c7a1d2800c8fea023444",
+        "activeNames": [
+          {
+            "value": "Ottoman Empire — amended 1909 framework",
+            "validFrom": "1909-08-21",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b12-turkish-parliament-history",
+              "b13-ottoman-calendar-review"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1909-08-21",
+        "until": "1915-01-01",
+        "identityEvidenceIds": [
+          "b12-turkish-parliament-history",
+          "b13-ottoman-calendar-review"
+        ],
+        "origin": "existing-registry-sourced-family-proposal",
+        "reason": "COW640 has literal OttomanEmpire in1828row4 and Turkey label in1853/1877/1897/1911–1914 rows20/67/81/103/108/119. Existing registry explicitlynamesOttomanEmpireamended1909framework1909-08-21–1915. This is a bounded source-namespace alias for selected1911–1914dates only, notsuccession inference or modernRepublicofTurkey mapping.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "ottoman-second-constitutional-core",
+        "category": "events",
+        "eventDate": "1912-10-18",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Turkey's sustained-combat episode in Italian-Turkish as ended on 1912-10-18.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row103; WarNum=97; ccode=640; Side=2; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "97",
+        "sourceCountryCode": "640",
+        "sideCode": "2",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "ottoman-second-constitutional-core",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1912-10-18",
+          "contextAgeYears": 2,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row108-w103-c640-s1-ep1-start",
+      "originalEventDigest": "62a83b59da226f83d103d16ee7faa454c75f8944b58da2d66ba2b68f09d4c161",
+      "sourceRowNumber": 108,
+      "originalCsvRowDigest": "89e571660960310475ea5affbfd366e08fdc34a616d22efa2d0e2cc324275730",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Turkey",
+      "sourceCountryCode": "640",
+      "warId": "103",
+      "warName": "Second Balkan",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1913",
+        "Month": "7",
+        "Day": "15"
+      },
+      "sourceDate": "1913-07-15",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "ottoman-second-constitutional-core",
+        "entityRecordDigest": "ef6aacaad9d143de4dfe1f3b3cbf2fe0d3640fadf9a7c7a1d2800c8fea023444",
+        "activeNames": [
+          {
+            "value": "Ottoman Empire — amended 1909 framework",
+            "validFrom": "1909-08-21",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b12-turkish-parliament-history",
+              "b13-ottoman-calendar-review"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1909-08-21",
+        "until": "1915-01-01",
+        "identityEvidenceIds": [
+          "b12-turkish-parliament-history",
+          "b13-ottoman-calendar-review"
+        ],
+        "origin": "existing-registry-sourced-family-proposal",
+        "reason": "COW640 has literal OttomanEmpire in1828row4 and Turkey label in1853/1877/1897/1911–1914 rows20/67/81/103/108/119. Existing registry explicitlynamesOttomanEmpireamended1909framework1909-08-21–1915. This is a bounded source-namespace alias for selected1911–1914dates only, notsuccession inference or modernRepublicofTurkey mapping.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "ottoman-second-constitutional-core",
+        "category": "events",
+        "eventDate": "1913-07-15",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Turkey's sustained-combat episode in Second Balkan as began on 1913-07-15.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row108; WarNum=103; ccode=640; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "103",
+        "sourceCountryCode": "640",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "ottoman-second-constitutional-core",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1913-07-15",
+          "contextAgeYears": 1,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row108-w103-c640-s1-ep1-end",
+      "originalEventDigest": "5e54109d46dd90117a898abc4bc672a2565690bbba38ca3a8df0e19afca4b7c4",
+      "sourceRowNumber": 108,
+      "originalCsvRowDigest": "89e571660960310475ea5affbfd366e08fdc34a616d22efa2d0e2cc324275730",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Turkey",
+      "sourceCountryCode": "640",
+      "warId": "103",
+      "warName": "Second Balkan",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1913",
+        "Month": "7",
+        "Day": "30"
+      },
+      "sourceDate": "1913-07-30",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "ottoman-second-constitutional-core",
+        "entityRecordDigest": "ef6aacaad9d143de4dfe1f3b3cbf2fe0d3640fadf9a7c7a1d2800c8fea023444",
+        "activeNames": [
+          {
+            "value": "Ottoman Empire — amended 1909 framework",
+            "validFrom": "1909-08-21",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b12-turkish-parliament-history",
+              "b13-ottoman-calendar-review"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1909-08-21",
+        "until": "1915-01-01",
+        "identityEvidenceIds": [
+          "b12-turkish-parliament-history",
+          "b13-ottoman-calendar-review"
+        ],
+        "origin": "existing-registry-sourced-family-proposal",
+        "reason": "COW640 has literal OttomanEmpire in1828row4 and Turkey label in1853/1877/1897/1911–1914 rows20/67/81/103/108/119. Existing registry explicitlynamesOttomanEmpireamended1909framework1909-08-21–1915. This is a bounded source-namespace alias for selected1911–1914dates only, notsuccession inference or modernRepublicofTurkey mapping.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "ottoman-second-constitutional-core",
+        "category": "events",
+        "eventDate": "1913-07-30",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Turkey's sustained-combat episode in Second Balkan as ended on 1913-07-30.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row108; WarNum=103; ccode=640; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "103",
+        "sourceCountryCode": "640",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "ottoman-second-constitutional-core",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1913-07-30",
+          "contextAgeYears": 1,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row119-w106-c640-s2-ep1-start",
+      "originalEventDigest": "d63f07fa86898b72177397e8c2d59b86330a8b37dffa3e25e41a2f0615e5f84c",
+      "sourceRowNumber": 119,
+      "originalCsvRowDigest": "1a8c2566845f2883471d927be7ac94c689ad8bea8bbd19498e5760730809462d",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Turkey",
+      "sourceCountryCode": "640",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1914",
+        "Month": "10",
+        "Day": "28"
+      },
+      "sourceDate": "1914-10-28",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "ottoman-second-constitutional-core",
+        "entityRecordDigest": "ef6aacaad9d143de4dfe1f3b3cbf2fe0d3640fadf9a7c7a1d2800c8fea023444",
+        "activeNames": [
+          {
+            "value": "Ottoman Empire — amended 1909 framework",
+            "validFrom": "1909-08-21",
+            "validUntil": "1915-01-01",
+            "sourceIds": [
+              "b12-turkish-parliament-history",
+              "b13-ottoman-calendar-review"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1909-08-21",
+        "until": "1915-01-01",
+        "identityEvidenceIds": [
+          "b12-turkish-parliament-history",
+          "b13-ottoman-calendar-review"
+        ],
+        "origin": "existing-registry-sourced-family-proposal",
+        "reason": "COW640 has literal OttomanEmpire in1828row4 and Turkey label in1853/1877/1897/1911–1914 rows20/67/81/103/108/119. Existing registry explicitlynamesOttomanEmpireamended1909framework1909-08-21–1915. This is a bounded source-namespace alias for selected1911–1914dates only, notsuccession inference or modernRepublicofTurkey mapping.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "ottoman-second-constitutional-core",
+        "category": "events",
+        "eventDate": "1914-10-28",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Turkey's sustained-combat episode in World War I as began on 1914-10-28.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row119; WarNum=106; ccode=640; Side=2; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "640",
+        "sideCode": "2",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "ottoman-second-constitutional-core",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1914-10-28",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row100-w94-c230-s1-ep1-start",
+      "originalEventDigest": "8af0e1df7e28780695d22d4c0cbf9bdeba1fa22615fac48fd64ad13e85e75b3d",
+      "sourceRowNumber": 100,
+      "originalCsvRowDigest": "774f947609dc904cc537eca55c02678d22dcf3b7f705094f5a80fbc5440abda8",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Spain",
+      "sourceCountryCode": "230",
+      "warId": "94",
+      "warName": "Second Spanish-Moroccan",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1909",
+        "Month": "7",
+        "Day": "7"
+      },
+      "sourceDate": "1909-07-07",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "spain-political-frameworks",
+        "entityRecordDigest": "b71fbc16b2bdf47951d37648dc82fe4445169e2c3f67e6265ea05b1c98dd4f59",
+        "activeNames": [
+          {
+            "value": "Spain",
+            "validFrom": "1800-01-01",
+            "sourceIds": [
+              "b01-spanish-monarchs",
+              "b01-spain-constitution-1876",
+              "b01-spain-constitution-1931",
+              "b01-spain-franco-regime"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1877-01-01",
+        "until": "1923-01-01",
+        "identityEvidenceIds": [
+          "b01-spanish-monarchs",
+          "b01-spain-constitution-1876",
+          "b01-spain-constitution-1931",
+          "b01-spain-franco-regime"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Spain participant230 at1909–1910 and1957–1958 matches existing Spain countryframework; respective explicit monarchy/postcivilwar identitycontracts retained. No1936–1939competing-authority bridge.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "spain-political-frameworks",
+        "category": "events",
+        "eventDate": "1909-07-07",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Spain's sustained-combat episode in Second Spanish-Moroccan as began on 1909-07-07.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row100; WarNum=94; ccode=230; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "94",
+        "sourceCountryCode": "230",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "spain-political-frameworks",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1909-07-07",
+          "contextAgeYears": 5,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row100-w94-c230-s1-ep1-end",
+      "originalEventDigest": "aaabc5baafab8333847cd787e1664bed1a6bdf4c99ea0bcb1b16eabe3631e5ee",
+      "sourceRowNumber": 100,
+      "originalCsvRowDigest": "774f947609dc904cc537eca55c02678d22dcf3b7f705094f5a80fbc5440abda8",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Spain",
+      "sourceCountryCode": "230",
+      "warId": "94",
+      "warName": "Second Spanish-Moroccan",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1910",
+        "Month": "3",
+        "Day": "23"
+      },
+      "sourceDate": "1910-03-23",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "spain-political-frameworks",
+        "entityRecordDigest": "b71fbc16b2bdf47951d37648dc82fe4445169e2c3f67e6265ea05b1c98dd4f59",
+        "activeNames": [
+          {
+            "value": "Spain",
+            "validFrom": "1800-01-01",
+            "sourceIds": [
+              "b01-spanish-monarchs",
+              "b01-spain-constitution-1876",
+              "b01-spain-constitution-1931",
+              "b01-spain-franco-regime"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1877-01-01",
+        "until": "1923-01-01",
+        "identityEvidenceIds": [
+          "b01-spanish-monarchs",
+          "b01-spain-constitution-1876",
+          "b01-spain-constitution-1931",
+          "b01-spain-franco-regime"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Spain participant230 at1909–1910 and1957–1958 matches existing Spain countryframework; respective explicit monarchy/postcivilwar identitycontracts retained. No1936–1939competing-authority bridge.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "spain-political-frameworks",
+        "category": "events",
+        "eventDate": "1910-03-23",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Spain's sustained-combat episode in Second Spanish-Moroccan as ended on 1910-03-23.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row100; WarNum=94; ccode=230; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "94",
+        "sourceCountryCode": "230",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "spain-political-frameworks",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1910-03-23",
+          "contextAgeYears": 4,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row116-w106-c200-s1-ep1-start",
+      "originalEventDigest": "b5f4783fcb3c14775b4b65541816d9480b739f2c0112d188c0bb7643dd3b4727",
+      "sourceRowNumber": 116,
+      "originalCsvRowDigest": "c023b61e79ded6c472aa18c5ff1d0872069e0cbab0dcffac89c0dc2f5d6edec6",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "United Kingdom",
+      "sourceCountryCode": "200",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1914",
+        "Month": "8",
+        "Day": "5"
+      },
+      "sourceDate": "1914-08-05",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "united-kingdom",
+        "entityRecordDigest": "982974decb9bbd590cf7fc4aaa55214b133c4d30b01ca0e753a294d23a0c720d",
+        "activeNames": [
+          {
+            "value": "United Kingdom",
+            "validFrom": "1801-01-01",
+            "validUntil": "1936-12",
+            "sourceIds": [
+              "b01-uk-union-acts",
+              "b01-uk-independence"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United Kingdom of Great Britain and Ireland",
+            "validFrom": "1801-01-01",
+            "validUntil": "1927-04-12",
+            "sourceIds": [
+              "b01-uk-union-acts",
+              "uk-formal-name"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-uk-union-acts",
+          "b01-uk-independence",
+          "basemaps",
+          "george-vi",
+          "elizabeth-ii",
+          "uk-parliament"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal UnitedKingdom participant200 has existing dated primary/formal UKnames at1900,1914–1918,1956; Irish territorial/title transition notinferred as unchanged geography.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "united-kingdom",
+        "category": "events",
+        "eventDate": "1914-08-05",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes United Kingdom's sustained-combat episode in World War I as began on 1914-08-05.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row116; WarNum=106; ccode=200; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "200",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "united-kingdom",
+          "snapshotYear": 1914,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1914-08-05",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row125-w106-c220-s1-ep1-end",
+      "originalEventDigest": "7a6856a19b78dca52a3469c00d65dd3e676cbdfc534a8df4c7d35d3962c8867c",
+      "sourceRowNumber": 125,
+      "originalCsvRowDigest": "cfdc9ca3ed45212a7e81661aa49e9fb91364c6c99d43cbfdff65d1e9b4fdee70",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "France",
+      "sourceCountryCode": "220",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1918",
+        "Month": "11",
+        "Day": "11"
+      },
+      "sourceDate": "1918-11-11",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "france-political-frameworks",
+        "entityRecordDigest": "6a3baf5bd54f537f10f348897d3e57405adb31a5aef073e48e90d3dd6e26df46",
+        "activeNames": [
+          {
+            "value": "France",
+            "validFrom": "1799-12-13",
+            "sourceIds": [
+              "b01-french-consulate",
+              "b01-france-third-republic",
+              "b01-france-republican-legality"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1876-01-01",
+        "until": "1940-01-01",
+        "identityEvidenceIds": [
+          "b01-french-consulate",
+          "b01-france-third-republic",
+          "b01-france-republican-legality"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal France participant220 at1900,1914–1919 dates falls in existing curated French framework; no wartime1940 competing-authority bridge used.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "france-political-frameworks",
+        "category": "events",
+        "eventDate": "1918-11-11",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes France's sustained-combat episode in World War I as ended on 1918-11-11.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row125; WarNum=106; ccode=220; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "220",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "france-political-frameworks",
+          "snapshotYear": 1920,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1918-11-11",
+          "contextAgeYears": 2,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row144-w116-c220-s1-ep1-start",
+      "originalEventDigest": "7221baf185220e660630b5b224ed268bbfadbb32297c5e86985251bdbe85307b",
+      "sourceRowNumber": 144,
+      "originalCsvRowDigest": "692c4157df2d022a27e1951d9f55a86f147421fbe1d7dc19a44b437b15520077",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "France",
+      "sourceCountryCode": "220",
+      "warId": "116",
+      "warName": "Franco-Turkish",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1919",
+        "Month": "11",
+        "Day": "1"
+      },
+      "sourceDate": "1919-11-01",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "france-political-frameworks",
+        "entityRecordDigest": "6a3baf5bd54f537f10f348897d3e57405adb31a5aef073e48e90d3dd6e26df46",
+        "activeNames": [
+          {
+            "value": "France",
+            "validFrom": "1799-12-13",
+            "sourceIds": [
+              "b01-french-consulate",
+              "b01-france-third-republic",
+              "b01-france-republican-legality"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1876-01-01",
+        "until": "1940-01-01",
+        "identityEvidenceIds": [
+          "b01-french-consulate",
+          "b01-france-third-republic",
+          "b01-france-republican-legality"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal France participant220 at1900,1914–1919 dates falls in existing curated French framework; no wartime1940 competing-authority bridge used.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "france-political-frameworks",
+        "category": "events",
+        "eventDate": "1919-11-01",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes France's sustained-combat episode in Franco-Turkish as began on 1919-11-01.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row144; WarNum=116; ccode=220; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "116",
+        "sourceCountryCode": "220",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "france-political-frameworks",
+          "snapshotYear": 1920,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1919-11-01",
+          "contextAgeYears": 1,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row126-w106-c325-s1-ep1-start",
+      "originalEventDigest": "0e613c4dff407a88027174e85849c4780576c0f3ef9b1d869db5b0e96f19f384",
+      "sourceRowNumber": 126,
+      "originalCsvRowDigest": "ffb5e024cb2ae703583eba817cbafc574888f84e994e81539e18f1ac2b614a43",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Italy",
+      "sourceCountryCode": "325",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1915",
+        "Month": "5",
+        "Day": "23"
+      },
+      "sourceDate": "1915-05-23",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "italy-liberal-monarchy-framework",
+        "entityRecordDigest": "a8b098d23cec26113851a8a45b379de4085fd1875c68b204edf7a1acb842b3e2",
+        "activeNames": [
+          {
+            "value": "Kingdom of Italy — liberal monarchical framework",
+            "validFrom": "1861-03-17",
+            "validUntil": "1922-01-01",
+            "sourceIds": [
+              "b04-italian-unity",
+              "b04-statuto",
+              "b04-unification-framework"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1922-01-01",
+        "identityEvidenceIds": [
+          "b04-italian-unity",
+          "b04-statuto",
+          "b04-unification-framework"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Italy participant325 at1911–1918 matches curatedKingdomofItaly1861–1922framework, notFascist/republican framework.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "italy-liberal-monarchy-framework",
+        "category": "events",
+        "eventDate": "1915-05-23",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Italy's sustained-combat episode in World War I as began on 1915-05-23.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row126; WarNum=106; ccode=325; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "325",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "italy-liberal-monarchy-framework",
+          "snapshotYear": 1920,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1915-05-23",
+          "contextAgeYears": 5,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row126-w106-c325-s1-ep1-end",
+      "originalEventDigest": "c9214af72af2f830c5ab9e0c7d9d7c95c702fc0a5b66241dcebbb878affa2a8e",
+      "sourceRowNumber": 126,
+      "originalCsvRowDigest": "ffb5e024cb2ae703583eba817cbafc574888f84e994e81539e18f1ac2b614a43",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Italy",
+      "sourceCountryCode": "325",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1918",
+        "Month": "11",
+        "Day": "11"
+      },
+      "sourceDate": "1918-11-11",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "italy-liberal-monarchy-framework",
+        "entityRecordDigest": "a8b098d23cec26113851a8a45b379de4085fd1875c68b204edf7a1acb842b3e2",
+        "activeNames": [
+          {
+            "value": "Kingdom of Italy — liberal monarchical framework",
+            "validFrom": "1861-03-17",
+            "validUntil": "1922-01-01",
+            "sourceIds": [
+              "b04-italian-unity",
+              "b04-statuto",
+              "b04-unification-framework"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1922-01-01",
+        "identityEvidenceIds": [
+          "b04-italian-unity",
+          "b04-statuto",
+          "b04-unification-framework"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Italy participant325 at1911–1918 matches curatedKingdomofItaly1861–1922framework, notFascist/republican framework.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "italy-liberal-monarchy-framework",
+        "category": "events",
+        "eventDate": "1918-11-11",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Italy's sustained-combat episode in World War I as ended on 1918-11-11.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row126; WarNum=106; ccode=325; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "325",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "italy-liberal-monarchy-framework",
+          "snapshotYear": 1920,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1918-11-11",
+          "contextAgeYears": 2,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row117-w106-c740-s1-ep1-end",
+      "originalEventDigest": "017116a39d4a178233cd20f35e5767af41ae02d64cad3bd86693b6006d818312",
+      "sourceRowNumber": 117,
+      "originalCsvRowDigest": "baca548acd804563fabb5e9b5cf96d6fa313e379367a38b1d7f78eaabdf3e92f",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Japan",
+      "sourceCountryCode": "740",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1918",
+        "Month": "11",
+        "Day": "11"
+      },
+      "sourceDate": "1918-11-11",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "japan-meiji-framework",
+        "entityRecordDigest": "c79db16a33ff96b6fd4fc78b4045ef6de462e5f32013567822c22dd47cc35dfc",
+        "activeNames": [
+          {
+            "value": "Empire of Japan — Meiji constitutional framework",
+            "validFrom": "1890-11-29",
+            "validUntil": "1930-01-01",
+            "sourceIds": [
+              "b02-meiji-commencement",
+              "meiji"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1890-11-29",
+        "until": "1945-01-01",
+        "identityEvidenceIds": [
+          "meiji",
+          "b02-meiji-commencement"
+        ],
+        "origin": "existing-registry-sourced-family-proposal",
+        "reason": "Literal Japan participant740 at1895,1900,1914–1918 is EmpireofJapan under existingMeiji constitutionalname interval1890-11-29–1930, notpostwarJapan.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "japan-meiji-framework",
+        "category": "events",
+        "eventDate": "1918-11-11",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Japan's sustained-combat episode in World War I as ended on 1918-11-11.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row117; WarNum=106; ccode=740; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "740",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "japan-meiji-framework",
+          "snapshotYear": 1920,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1918-11-11",
+          "contextAgeYears": 2,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row118-w106-c235-s1-ep1-start",
+      "originalEventDigest": "a1a6eda4fa08d6cd659d130e708e66a25a26e4c647cf93baa94e9d3e3eb6ace5",
+      "sourceRowNumber": 118,
+      "originalCsvRowDigest": "fb425a8e4ebf7758135ee54b096fdf311cd303993746e216a3d5591d2ca4e219",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Portugal",
+      "sourceCountryCode": "235",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1916",
+        "Month": "3",
+        "Day": "1"
+      },
+      "sourceDate": "1916-03-01",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "portugal-political-frameworks",
+        "entityRecordDigest": "eb0533e3dde536dce755ab84854f47768dc171504d583f04e54bf27f52b028f7",
+        "activeNames": [
+          {
+            "value": "Portugal",
+            "validFrom": "1808",
+            "sourceIds": [
+              "b01-portugal-court-brazil",
+              "b01-portugal-monarchy",
+              "b01-portugal-first-republic",
+              "b01-portugal-dictatorship"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-portugal-court-brazil",
+          "b01-portugal-monarchy",
+          "b01-portugal-first-republic",
+          "b01-portugal-dictatorship"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Portugal participant235 at1916–1918 matches existing Portugal framework with republican chronology; notcomposite1815PortugalBrazil title or moderncountry fallback.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "portugal-political-frameworks",
+        "category": "events",
+        "eventDate": "1916-03-01",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Portugal's sustained-combat episode in World War I as began on 1916-03-01.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row118; WarNum=106; ccode=235; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "235",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "portugal-political-frameworks",
+          "snapshotYear": 1920,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1916-03-01",
+          "contextAgeYears": 4,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row118-w106-c235-s1-ep1-end",
+      "originalEventDigest": "530becdb33bdc08442787ffe77a02bfa3f8ce16b02dd365b98135a1420541d7a",
+      "sourceRowNumber": 118,
+      "originalCsvRowDigest": "fb425a8e4ebf7758135ee54b096fdf311cd303993746e216a3d5591d2ca4e219",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Portugal",
+      "sourceCountryCode": "235",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1918",
+        "Month": "11",
+        "Day": "11"
+      },
+      "sourceDate": "1918-11-11",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "portugal-political-frameworks",
+        "entityRecordDigest": "eb0533e3dde536dce755ab84854f47768dc171504d583f04e54bf27f52b028f7",
+        "activeNames": [
+          {
+            "value": "Portugal",
+            "validFrom": "1808",
+            "sourceIds": [
+              "b01-portugal-court-brazil",
+              "b01-portugal-monarchy",
+              "b01-portugal-first-republic",
+              "b01-portugal-dictatorship"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-portugal-court-brazil",
+          "b01-portugal-monarchy",
+          "b01-portugal-first-republic",
+          "b01-portugal-dictatorship"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Portugal participant235 at1916–1918 matches existing Portugal framework with republican chronology; notcomposite1815PortugalBrazil title or moderncountry fallback.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "portugal-political-frameworks",
+        "category": "events",
+        "eventDate": "1918-11-11",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Portugal's sustained-combat episode in World War I as ended on 1918-11-11.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row118; WarNum=106; ccode=235; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "235",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "portugal-political-frameworks",
+          "snapshotYear": 1920,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1918-11-11",
+          "contextAgeYears": 2,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row116-w106-c200-s1-ep1-end",
+      "originalEventDigest": "ce537aaa902d62dc5994779446a23cdfa3d6d3cc96335a76e774712cbf398b0c",
+      "sourceRowNumber": 116,
+      "originalCsvRowDigest": "c023b61e79ded6c472aa18c5ff1d0872069e0cbab0dcffac89c0dc2f5d6edec6",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "United Kingdom",
+      "sourceCountryCode": "200",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1918",
+        "Month": "11",
+        "Day": "11"
+      },
+      "sourceDate": "1918-11-11",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "united-kingdom",
+        "entityRecordDigest": "982974decb9bbd590cf7fc4aaa55214b133c4d30b01ca0e753a294d23a0c720d",
+        "activeNames": [
+          {
+            "value": "United Kingdom",
+            "validFrom": "1801-01-01",
+            "validUntil": "1936-12",
+            "sourceIds": [
+              "b01-uk-union-acts",
+              "b01-uk-independence"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United Kingdom of Great Britain and Ireland",
+            "validFrom": "1801-01-01",
+            "validUntil": "1927-04-12",
+            "sourceIds": [
+              "b01-uk-union-acts",
+              "uk-formal-name"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-uk-union-acts",
+          "b01-uk-independence",
+          "basemaps",
+          "george-vi",
+          "elizabeth-ii",
+          "uk-parliament"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal UnitedKingdom participant200 has existing dated primary/formal UKnames at1900,1914–1918,1956; Irish territorial/title transition notinferred as unchanged geography.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "united-kingdom",
+        "category": "events",
+        "eventDate": "1918-11-11",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes United Kingdom's sustained-combat episode in World War I as ended on 1918-11-11.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row116; WarNum=106; ccode=200; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "200",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "united-kingdom",
+          "snapshotYear": 1920,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1918-11-11",
+          "contextAgeYears": 2,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row127-w106-c2-s1-ep1-start",
+      "originalEventDigest": "487c6bbe178d343e3d8c636ec81317c59fc0f78dc2c0dd9646c6055aeca0a918",
+      "sourceRowNumber": 127,
+      "originalCsvRowDigest": "4bfa4231d56384aa7e7fa6f37c1be7bbd8f65e726a8e48905d62dea3f9f3fc2c",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "United States of America",
+      "sourceCountryCode": "2",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1917",
+        "Month": "4",
+        "Day": "17"
+      },
+      "sourceDate": "1917-04-17",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "united-states",
+        "entityRecordDigest": "9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265",
+        "activeNames": [
+          {
+            "value": "United States",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United States of America",
+            "validFrom": "1789-03-04",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "archives-independence",
+          "basemaps",
+          "us-constitution",
+          "us-constitutional-start"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal UnitedStatesofAmerica participant2 exactly matches existing formalname from1789, eventdates1900,1917–1918. No overseaswar geography inferred.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "united-states",
+        "category": "events",
+        "eventDate": "1917-04-17",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes United States of America's sustained-combat episode in World War I as began on 1917-04-17.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row127; WarNum=106; ccode=2; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "2",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "united-states",
+          "snapshotYear": 1920,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1917-04-17",
+          "contextAgeYears": 3,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row127-w106-c2-s1-ep1-end",
+      "originalEventDigest": "670c936096c648552d488f3234bce01a7ebae2bd3682b78caec3f53b56975ceb",
+      "sourceRowNumber": 127,
+      "originalCsvRowDigest": "4bfa4231d56384aa7e7fa6f37c1be7bbd8f65e726a8e48905d62dea3f9f3fc2c",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "United States of America",
+      "sourceCountryCode": "2",
+      "warId": "106",
+      "warName": "World War I",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1918",
+        "Month": "11",
+        "Day": "11"
+      },
+      "sourceDate": "1918-11-11",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "united-states",
+        "entityRecordDigest": "9ed5631c412f6fba8f7e3efe3331d7de768c99acacf7713d38681eae8210e265",
+        "activeNames": [
+          {
+            "value": "United States",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          },
+          {
+            "value": "United States of America",
+            "validFrom": "1789-03-04",
+            "sourceIds": [
+              "us-constitution",
+              "us-constitutional-start"
+            ],
+            "confidence": "documented",
+            "kind": "formal"
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "archives-independence",
+          "basemaps",
+          "us-constitution",
+          "us-constitutional-start"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal UnitedStatesofAmerica participant2 exactly matches existing formalname from1789, eventdates1900,1917–1918. No overseaswar geography inferred.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "united-states",
+        "category": "events",
+        "eventDate": "1918-11-11",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes United States of America's sustained-combat episode in World War I as ended on 1918-11-11.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row127; WarNum=106; ccode=2; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "106",
+        "sourceCountryCode": "2",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "united-states",
+          "snapshotYear": 1920,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1918-11-11",
+          "contextAgeYears": 2,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row155-w127-c325-s1-ep1-start",
+      "originalEventDigest": "0922b0abe9a2d22f311ea958d32fa8e55e14aff0e3497585de107d03076b5386",
+      "sourceRowNumber": 155,
+      "originalCsvRowDigest": "fb5fbdd50a027f0aada4ecae86f5b1e7df0fed1a8e8f7b6048e568cf4adde557",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Italy",
+      "sourceCountryCode": "325",
+      "warId": "127",
+      "warName": "Conquest of Ethiopia",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1935",
+        "Month": "10",
+        "Day": "3"
+      },
+      "sourceDate": "1935-10-03",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "italy-fascist-monarchical-framework",
+        "entityRecordDigest": "1ad38be45c5122bd6873d29a2fb9973609563d32bde9d89895f44d7df2b08dbe",
+        "activeNames": [
+          {
+            "value": "Italy — Fascist monarchical framework",
+            "validFrom": "1930-01-01",
+            "validUntil": "1943-07-25",
+            "sourceIds": [
+              "b04-mussolini"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1930-01-01",
+        "until": "1943-07-25",
+        "identityEvidenceIds": [
+          "b04-mussolini"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Italy participant325 at1935–1936 matches explicitlydated1930–1943Fascistmonarchical framework; no territory gained/conquest sovereignty inferred.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "italy-fascist-monarchical-framework",
+        "category": "events",
+        "eventDate": "1935-10-03",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Italy's sustained-combat episode in Conquest of Ethiopia as began on 1935-10-03.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row155; WarNum=127; ccode=325; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "127",
+        "sourceCountryCode": "325",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "italy-fascist-monarchical-framework",
+          "snapshotYear": 1938,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1935-10-03",
+          "contextAgeYears": 3,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row155-w127-c325-s1-ep1-end",
+      "originalEventDigest": "43217cc235383f1624dd3ed076ed1578ad2fcec4110e35d3427ebd2fb4b01890",
+      "sourceRowNumber": 155,
+      "originalCsvRowDigest": "fb5fbdd50a027f0aada4ecae86f5b1e7df0fed1a8e8f7b6048e568cf4adde557",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Italy",
+      "sourceCountryCode": "325",
+      "warId": "127",
+      "warName": "Conquest of Ethiopia",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1936",
+        "Month": "5",
+        "Day": "9"
+      },
+      "sourceDate": "1936-05-09",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "italy-fascist-monarchical-framework",
+        "entityRecordDigest": "1ad38be45c5122bd6873d29a2fb9973609563d32bde9d89895f44d7df2b08dbe",
+        "activeNames": [
+          {
+            "value": "Italy — Fascist monarchical framework",
+            "validFrom": "1930-01-01",
+            "validUntil": "1943-07-25",
+            "sourceIds": [
+              "b04-mussolini"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1930-01-01",
+        "until": "1943-07-25",
+        "identityEvidenceIds": [
+          "b04-mussolini"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Italy participant325 at1935–1936 matches explicitlydated1930–1943Fascistmonarchical framework; no territory gained/conquest sovereignty inferred.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "italy-fascist-monarchical-framework",
+        "category": "events",
+        "eventDate": "1936-05-09",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Italy's sustained-combat episode in Conquest of Ethiopia as ended on 1936-05-09.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row155; WarNum=127; ccode=325; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "127",
+        "sourceCountryCode": "325",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "italy-fascist-monarchical-framework",
+          "snapshotYear": 1938,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1936-05-09",
+          "contextAgeYears": 2,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row182-w139-c900-s1-ep1-end",
+      "originalEventDigest": "3ec76a2ba95fab0f34e4d77e7b808fa865cf7f20a6fa4fac516c7aa7367dd33b",
+      "sourceRowNumber": 182,
+      "originalCsvRowDigest": "6946ed23be4d502f0b699ecdfeca63b61a641cad297e7bbd766b0a88b314b0b2",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Australia",
+      "sourceCountryCode": "900",
+      "warId": "139",
+      "warName": "World War II",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1945",
+        "Month": "8",
+        "Day": "14"
+      },
+      "sourceDate": "1945-08-14",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "australia-postadoption-federal-core",
+        "entityRecordDigest": "8409f253eff34a9cf84d2ba2c8e772857c471e000e1c3f255e3933b3ab368493",
+        "activeNames": [
+          {
+            "value": "Australia — federal constitutional framework after Westminster adoption",
+            "validFrom": "1945-01-01",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "b21-australian-federation",
+              "b21-australian-first-parliament",
+              "b21-australia-westminster-primary"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1945-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b21-australian-federation",
+          "b21-australian-first-parliament",
+          "b21-australia-westminster-primary"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Australia participant900 WWII END1945-08-14 falls within existingpostadoption1945framework. No participation START1939 or continuity acrossinstitutionaltransition inferred.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "australia-postadoption-federal-core",
+        "category": "events",
+        "eventDate": "1945-08-14",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Australia's sustained-combat episode in World War II as ended on 1945-08-14.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row182; WarNum=139; ccode=900; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "139",
+        "sourceCountryCode": "900",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "australia-postadoption-federal-core",
+          "snapshotYear": 1945,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1945-08-14",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row193-w142-c375-s2-ep1-end",
+      "originalEventDigest": "892e00c01e4d6c95fe39aaa259a58121bea9d7d15cbf4b84d7c810e684bab9b4",
+      "sourceRowNumber": 193,
+      "originalCsvRowDigest": "08b55c075e6d2b1fe0f70f026b6b135e4ea254e8a4cd59aef5b8a24234bf8615",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Finland",
+      "sourceCountryCode": "375",
+      "warId": "142",
+      "warName": "Russo-Finnish",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1940",
+        "Month": "3",
+        "Day": "12"
+      },
+      "sourceDate": "1940-03-12",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "finland-independent",
+        "entityRecordDigest": "3ded1ea9381359b10455b256ca46790470703a2f16a9d4c78c8d77fda1c9a015",
+        "activeNames": [
+          {
+            "value": "Finland",
+            "validFrom": "1917",
+            "sourceIds": [
+              "b01-finnish-markka",
+              "b01-finland-constitution"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1920-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-finnish-markka",
+          "b01-finland-constitution",
+          "b01-finland-presidents"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Finland participant375 at1940–1944 matches independentlynamedFinland from1917; WinterWar and WWII are distinctcodedwars, notmerged.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "finland-independent",
+        "category": "events",
+        "eventDate": "1940-03-12",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Finland's sustained-combat episode in Russo-Finnish as ended on 1940-03-12.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row193; WarNum=142; ccode=375; Side=2; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "142",
+        "sourceCountryCode": "375",
+        "sideCode": "2",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "finland-independent",
+          "snapshotYear": 1945,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1940-03-12",
+          "contextAgeYears": 5,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row168-w139-c375-s2-ep1-start",
+      "originalEventDigest": "fb28e5a6fe9cea15c0a0249a1db5cfb484874297fb040fe2623f13988ded6693",
+      "sourceRowNumber": 168,
+      "originalCsvRowDigest": "30d5debb8ad608f3e61982490aab7a8ea4cbec575127addaede6b36ec1055769",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Finland",
+      "sourceCountryCode": "375",
+      "warId": "139",
+      "warName": "World War II",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1941",
+        "Month": "6",
+        "Day": "25"
+      },
+      "sourceDate": "1941-06-25",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "finland-independent",
+        "entityRecordDigest": "3ded1ea9381359b10455b256ca46790470703a2f16a9d4c78c8d77fda1c9a015",
+        "activeNames": [
+          {
+            "value": "Finland",
+            "validFrom": "1917",
+            "sourceIds": [
+              "b01-finnish-markka",
+              "b01-finland-constitution"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1920-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-finnish-markka",
+          "b01-finland-constitution",
+          "b01-finland-presidents"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Finland participant375 at1940–1944 matches independentlynamedFinland from1917; WinterWar and WWII are distinctcodedwars, notmerged.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "finland-independent",
+        "category": "events",
+        "eventDate": "1941-06-25",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Finland's sustained-combat episode in World War II as began on 1941-06-25.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row168; WarNum=139; ccode=375; Side=2; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "139",
+        "sourceCountryCode": "375",
+        "sideCode": "2",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "finland-independent",
+          "snapshotYear": 1945,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1941-06-25",
+          "contextAgeYears": 4,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row168-w139-c375-s2-ep1-end",
+      "originalEventDigest": "f2351632febeece7c94f1fc180609160dfae495e9957fa8da1c3ff57c9a770d4",
+      "sourceRowNumber": 168,
+      "originalCsvRowDigest": "30d5debb8ad608f3e61982490aab7a8ea4cbec575127addaede6b36ec1055769",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Finland",
+      "sourceCountryCode": "375",
+      "warId": "139",
+      "warName": "World War II",
+      "sideCode": "2",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1944",
+        "Month": "9",
+        "Day": "19"
+      },
+      "sourceDate": "1944-09-19",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "finland-independent",
+        "entityRecordDigest": "3ded1ea9381359b10455b256ca46790470703a2f16a9d4c78c8d77fda1c9a015",
+        "activeNames": [
+          {
+            "value": "Finland",
+            "validFrom": "1917",
+            "sourceIds": [
+              "b01-finnish-markka",
+              "b01-finland-constitution"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1920-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-finnish-markka",
+          "b01-finland-constitution",
+          "b01-finland-presidents"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Finland participant375 at1940–1944 matches independentlynamedFinland from1917; WinterWar and WWII are distinctcodedwars, notmerged.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "finland-independent",
+        "category": "events",
+        "eventDate": "1944-09-19",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Finland's sustained-combat episode in World War II as ended on 1944-09-19.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row168; WarNum=139; ccode=375; Side=2; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "139",
+        "sourceCountryCode": "375",
+        "sideCode": "2",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "finland-independent",
+          "snapshotYear": 1945,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1944-09-19",
+          "contextAgeYears": 1,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row183-w139-c920-s1-ep1-end",
+      "originalEventDigest": "afb9cc7ee0401bfdc8fe358bc06a86bc2f094b19d0684f6441c623508b393503",
+      "sourceRowNumber": 183,
+      "originalCsvRowDigest": "c5f613d05083065ca1bc2b261acd984d4e035e25d333f54de4f9b47b02b2e64b",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "New Zealand",
+      "sourceCountryCode": "920",
+      "warId": "139",
+      "warName": "World War II",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1945",
+        "Month": "8",
+        "Day": "14"
+      },
+      "sourceDate": "1945-08-14",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "new-zealand-preadoption-dominion-core",
+        "entityRecordDigest": "505f34927c81700c8527a3bbef9a9f5e1c6a5447ab1a52e0fc891d7a019b4c77",
+        "activeNames": [
+          {
+            "value": "New Zealand — Dominion parliamentary framework",
+            "validFrom": "1914-01-01",
+            "validUntil": "1947-11-25",
+            "sourceIds": [
+              "b21-new-zealand-parliament",
+              "b21-new-zealand-westminster",
+              "b21-new-zealand-council"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1914-01-01",
+        "until": "1947-11-25",
+        "identityEvidenceIds": [
+          "b21-new-zealand-parliament",
+          "b21-new-zealand-westminster",
+          "b21-new-zealand-council"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal NewZealand participant920 WWII END1945-08-14 falls within existingDominion1914–1947-11-25framework, notpostadoption1960framework.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "new-zealand-preadoption-dominion-core",
+        "category": "events",
+        "eventDate": "1945-08-14",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes New Zealand's sustained-combat episode in World War II as ended on 1945-08-14.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row183; WarNum=139; ccode=920; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "139",
+        "sourceCountryCode": "920",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "new-zealand-preadoption-dominion-core",
+          "snapshotYear": 1945,
+          "categoryStatus": "missing",
+          "context": "event-in-selected-year",
+          "actualEventDate": "1945-08-14",
+          "contextAgeYears": 0,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row230-w158-c230-s1-ep1-start",
+      "originalEventDigest": "7a8103f21d0e2f2ddf50cd8018357952fbf6da7ad2b164de448214d5529cbc4c",
+      "sourceRowNumber": 230,
+      "originalCsvRowDigest": "1d356d45b2fbfe5c9280f43be157d29e567a2b7f2777b8f35e65abf1dd7a481e",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Spain",
+      "sourceCountryCode": "230",
+      "warId": "158",
+      "warName": "IfniWar",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1957",
+        "Month": "11",
+        "Day": "21"
+      },
+      "sourceDate": "1957-11-21",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "spain-political-frameworks",
+        "entityRecordDigest": "b71fbc16b2bdf47951d37648dc82fe4445169e2c3f67e6265ea05b1c98dd4f59",
+        "activeNames": [
+          {
+            "value": "Spain",
+            "validFrom": "1800-01-01",
+            "sourceIds": [
+              "b01-spanish-monarchs",
+              "b01-spain-constitution-1876",
+              "b01-spain-constitution-1931",
+              "b01-spain-franco-regime"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1940-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-spanish-monarchs",
+          "b01-spain-constitution-1876",
+          "b01-spain-constitution-1931",
+          "b01-spain-franco-regime"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Spain participant230 at1909–1910 and1957–1958 matches existing Spain countryframework; respective explicit monarchy/postcivilwar identitycontracts retained. No1936–1939competing-authority bridge.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "spain-political-frameworks",
+        "category": "events",
+        "eventDate": "1957-11-21",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes Spain's sustained-combat episode in IfniWar as began on 1957-11-21.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row230; WarNum=158; ccode=230; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "158",
+        "sourceCountryCode": "230",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "spain-political-frameworks",
+          "snapshotYear": 1960,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1957-11-21",
+          "contextAgeYears": 3,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row230-w158-c230-s1-ep1-end",
+      "originalEventDigest": "4953b1983eb8065ac1b376d3958bd0857feb71e91285d9154f0b2f963cd8c75c",
+      "sourceRowNumber": 230,
+      "originalCsvRowDigest": "1d356d45b2fbfe5c9280f43be157d29e567a2b7f2777b8f35e65abf1dd7a481e",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "Spain",
+      "sourceCountryCode": "230",
+      "warId": "158",
+      "warName": "IfniWar",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1958",
+        "Month": "4",
+        "Day": "10"
+      },
+      "sourceDate": "1958-04-10",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "spain-political-frameworks",
+        "entityRecordDigest": "b71fbc16b2bdf47951d37648dc82fe4445169e2c3f67e6265ea05b1c98dd4f59",
+        "activeNames": [
+          {
+            "value": "Spain",
+            "validFrom": "1800-01-01",
+            "sourceIds": [
+              "b01-spanish-monarchs",
+              "b01-spain-constitution-1876",
+              "b01-spain-constitution-1931",
+              "b01-spain-franco-regime"
+            ],
+            "confidence": "documented",
+            "kind": "primary"
+          }
+        ],
+        "from": "1940-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-spanish-monarchs",
+          "b01-spain-constitution-1876",
+          "b01-spain-constitution-1931",
+          "b01-spain-franco-regime"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal Spain participant230 at1909–1910 and1957–1958 matches existing Spain countryframework; respective explicit monarchy/postcivilwar identitycontracts retained. No1936–1939competing-authority bridge.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "spain-political-frameworks",
+        "category": "events",
+        "eventDate": "1958-04-10",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes Spain's sustained-combat episode in IfniWar as ended on 1958-04-10.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row230; WarNum=158; ccode=230; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "158",
+        "sourceCountryCode": "230",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "spain-political-frameworks",
+          "snapshotYear": 1960,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1958-04-10",
+          "contextAgeYears": 2,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row226-w155-c200-s1-ep1-start",
+      "originalEventDigest": "bf65c0a2781c92e48a75fec6ab58a920bf385f4b6d06ac54c33c26c1a185fbb8",
+      "sourceRowNumber": 226,
+      "originalCsvRowDigest": "9fdf8aab9fab901dabf3d6f5208d81d14cc7b50027dd8299be58afe3e2e6b7dd",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "United Kingdom",
+      "sourceCountryCode": "200",
+      "warId": "155",
+      "warName": "Sinai War",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "Start",
+      "rawDateFields": {
+        "Year": "1956",
+        "Month": "10",
+        "Day": "31"
+      },
+      "sourceDate": "1956-10-31",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "united-kingdom",
+        "entityRecordDigest": "982974decb9bbd590cf7fc4aaa55214b133c4d30b01ca0e753a294d23a0c720d",
+        "activeNames": [
+          {
+            "value": "United Kingdom",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary",
+            "validFrom": "1936-12",
+            "validUntil": "1961-01-01"
+          },
+          {
+            "value": "United Kingdom of Great Britain and Northern Ireland",
+            "validFrom": "1936-12",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "uk-formal-name"
+            ],
+            "confidence": "documented",
+            "kind": "formal",
+            "note": "Formal wording documented by the 1927 Act; the curated profile begins in 1936, not the state’s inception."
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-uk-union-acts",
+          "b01-uk-independence",
+          "basemaps",
+          "george-vi",
+          "elizabeth-ii",
+          "uk-parliament"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal UnitedKingdom participant200 has existing dated primary/formal UKnames at1900,1914–1918,1956; Irish territorial/title transition notinferred as unchanged geography.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "united-kingdom",
+        "category": "events",
+        "eventDate": "1956-10-31",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-began",
+        "value": "COW codes United Kingdom's sustained-combat episode in Sinai War as began on 1956-10-31.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row226; WarNum=155; ccode=200; Side=1; StartYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "155",
+        "sourceCountryCode": "200",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "Start"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "united-kingdom",
+          "snapshotYear": 1960,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1956-10-31",
+          "contextAgeYears": 4,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    },
+    {
+      "eventId": "cow-v4-row226-w155-c200-s1-ep1-end",
+      "originalEventDigest": "7ccecf0d75b4bccff604b66c2080b62a48266da25e8d4208848154a0399f56d0",
+      "sourceRowNumber": 226,
+      "originalCsvRowDigest": "9fdf8aab9fab901dabf3d6f5208d81d14cc7b50027dd8299be58afe3e2e6b7dd",
+      "sourceBodyHash": "2535e30b145141c331a07d12d91e498ad8bdd3db32ba8d3bd88c4fda54817731",
+      "codebookHash": "875bf75f8f3df5f1ac418a03eeaa6dd9b9a81a3b4d112bd6832040cffc26a1be",
+      "literalParticipant": "United Kingdom",
+      "sourceCountryCode": "200",
+      "warId": "155",
+      "warName": "Sinai War",
+      "sideCode": "1",
+      "episode": 1,
+      "endpoint": "End",
+      "rawDateFields": {
+        "Year": "1956",
+        "Month": "11",
+        "Day": "6"
+      },
+      "sourceDate": "1956-11-06",
+      "sourceDatePrecision": "day-coded; literal original fields, not independently verified legal/historical change day",
+      "sourceValueDateEpisodeApproved": true,
+      "mapping": {
+        "entityId": "united-kingdom",
+        "entityRecordDigest": "982974decb9bbd590cf7fc4aaa55214b133c4d30b01ca0e753a294d23a0c720d",
+        "activeNames": [
+          {
+            "value": "United Kingdom",
+            "sourceIds": [
+              "basemaps"
+            ],
+            "confidence": "documented",
+            "kind": "primary",
+            "validFrom": "1936-12",
+            "validUntil": "1961-01-01"
+          },
+          {
+            "value": "United Kingdom of Great Britain and Northern Ireland",
+            "validFrom": "1936-12",
+            "validUntil": "1961-01-01",
+            "sourceIds": [
+              "uk-formal-name"
+            ],
+            "confidence": "documented",
+            "kind": "formal",
+            "note": "Formal wording documented by the 1927 Act; the curated profile begins in 1936, not the state’s inception."
+          }
+        ],
+        "from": "1875-01-01",
+        "until": "1961-01-01",
+        "identityEvidenceIds": [
+          "b01-uk-union-acts",
+          "b01-uk-independence",
+          "basemaps",
+          "george-vi",
+          "elizabeth-ii",
+          "uk-parliament"
+        ],
+        "origin": "existing-reviewed-Archigos-identity-only",
+        "reason": "Literal UnitedKingdom participant200 has existing dated primary/formal UKnames at1900,1914–1918,1956; Irish territorial/title transition notinferred as unchanged geography.",
+        "confidence": "source-specific historical identity alias reviewed against existing dated names and bounds; no geometry/status/territorial inference"
+      },
+      "sourceIdentityApproval": true,
+      "decision": "source-date-mapping-approved",
+      "reason": "Literal participant/date/side/episode/endpoint verified independently from337CSVrows. Unique existinghistoricalframework/date bridge and coding-only scope approved; actualeventdate remains unchanged.",
+      "approvedMappedFields": {
+        "entityId": "united-kingdom",
+        "category": "events",
+        "eventDate": "1956-11-06",
+        "eventPrecision": "day",
+        "eventKind": "coded-combat-ended",
+        "value": "COW codes United Kingdom's sustained-combat episode in Sinai War as ended on 1956-11-06.",
+        "sourceId": "cow-interstate-war-v4",
+        "locator": "Original CSV row226; WarNum=155; ccode=200; Side=1; EndYear/Month/Day1",
+        "scope": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession.",
+        "qualification": "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+        "sourceWarId": "155",
+        "sourceCountryCode": "200",
+        "sideCode": "1",
+        "episode": 1,
+        "endpoint": "End"
+      },
+      "snapshotContextReview": [
+        {
+          "entityId": "united-kingdom",
+          "snapshotYear": 1960,
+          "categoryStatus": "missing",
+          "context": "explicitly dated prior-context",
+          "actualEventDate": "1956-11-06",
+          "contextAgeYears": 4,
+          "mappingPartial": false,
+          "contextPolicy": "Actual dated event; selected calendar-year or explicitly past context within5calendar-years; no retiming, persistence or ongoingwar assertion."
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "reviewed": 45,
+    "sourceDateMappingApproved": 45,
+    "held": 0,
+    "originalParticipantRows": 337,
+    "distinctOriginalSelectedRows": 27,
+    "existingEntityAliases": 15,
+    "missingEntitySnapshotTargets": 25,
+    "productionAccepted": 0
+  },
+  "productionEdited": false,
+  "reviewDigest": "6d70ab76ad9c4d2abfa5dc2d3a1f73cadbe22974d18ce190d1279266fd9e8ca6"
+}

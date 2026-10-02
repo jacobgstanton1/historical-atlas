@@ -1,0 +1,363 @@
+{
+  "job": {
+    "id": "dossier-446806e25d70792d6e0a8999",
+    "entityId": "finland-independent",
+    "period": {
+      "from": "1940-03-12",
+      "until": "1944-09-20"
+    },
+    "mapIds": [
+      "entity-finland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "b138bc7708161df2b6179f3d6557d46a9ff8ae36a61079a0c4940df93be419c3",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "cow-events-01-finland-independent",
+    "jobId": "dossier-446806e25d70792d6e0a8999",
+    "entityId": "finland-independent",
+    "mapIds": [
+      "entity-finland"
+    ],
+    "worker": {
+      "id": "bulk-parser/dated-coded-combat-event/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "b138bc7708161df2b6179f3d6557d46a9ff8ae36a61079a0c4940df93be419c3",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1940-03-12",
+      "until": "1944-09-20"
+    },
+    "claims": [
+      {
+        "id": "bulk-ea9fa1ca7df0ae56cadba51d-46b1aea131",
+        "category": "events-context",
+        "value": "COW codes Finland's sustained-combat episode in Russo-Finnish as ended on 1940-03-12.",
+        "entityId": "finland-independent",
+        "temporal": {
+          "kind": "event",
+          "date": "1940-03-12",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "finland-independent-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Finland",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row193; WarNum=142; ccode=375; Side=2; EndYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"142\",\"WarName\":\"Russo-Finnish\",\"WarType\":\"1\",\"ccode\":\"375\",\"StateName\":\"Finland\",\"Side\":\"2\",\"StartMonth1\":\"11\",\"StartDay1\":\"30\",\"StartYear1\":\"1939\",\"EndMonth1\":\"3\",\"EndDay1\":\"12\",\"EndYear1\":\"1940\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"2\",\"Initiator\":\"2\",\"Outcome\":\"2\",\"TransTo\":\"-8\",\"BatDeath\":\"24923\",\"Version\":\"4\"},\"originalRowNumber\":193,\"eventDate\":\"1940-03-12\",\"warId\":\"142\",\"participant\":\"Finland\",\"sourceContext\":[{\"entityId\":\"finland-independent\",\"snapshotYear\":1945,\"categoryStatus\":\"missing\",\"context\":\"explicitly dated prior-context\",\"actualEventDate\":\"1940-03-12\",\"contextAgeYears\":5,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1940-03-12",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Finland"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-ea9fa1ca7df0ae56cadba51d",
+          "sourceIdentifier": "Original CSV row193; WarNum=142; ccode=375; Side=2; EndYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-48290ed7d61f9c39ea590eee-46b1aea131",
+        "category": "events-context",
+        "value": "COW codes Finland's sustained-combat episode in World War II as began on 1941-06-25.",
+        "entityId": "finland-independent",
+        "temporal": {
+          "kind": "event",
+          "date": "1941-06-25",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "finland-independent-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Finland",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row168; WarNum=139; ccode=375; Side=2; StartYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"139\",\"WarName\":\"World War II\",\"WarType\":\"1\",\"ccode\":\"375\",\"StateName\":\"Finland\",\"Side\":\"2\",\"StartMonth1\":\"6\",\"StartDay1\":\"25\",\"StartYear1\":\"1941\",\"EndMonth1\":\"9\",\"EndDay1\":\"19\",\"EndYear1\":\"1944\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"2\",\"Initiator\":\"2\",\"Outcome\":\"2\",\"TransTo\":\"-8\",\"BatDeath\":\"65000\",\"Version\":\"4\"},\"originalRowNumber\":168,\"eventDate\":\"1941-06-25\",\"warId\":\"139\",\"participant\":\"Finland\",\"sourceContext\":[{\"entityId\":\"finland-independent\",\"snapshotYear\":1945,\"categoryStatus\":\"missing\",\"context\":\"explicitly dated prior-context\",\"actualEventDate\":\"1941-06-25\",\"contextAgeYears\":4,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1941-06-25",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Finland"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-48290ed7d61f9c39ea590eee",
+          "sourceIdentifier": "Original CSV row168; WarNum=139; ccode=375; Side=2; StartYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-a8c9bfbc63bc3d465a2731ff-46b1aea131",
+        "category": "events-context",
+        "value": "COW codes Finland's sustained-combat episode in World War II as ended on 1944-09-19.",
+        "entityId": "finland-independent",
+        "temporal": {
+          "kind": "event",
+          "date": "1944-09-19",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "finland-independent-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Finland",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row168; WarNum=139; ccode=375; Side=2; EndYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"139\",\"WarName\":\"World War II\",\"WarType\":\"1\",\"ccode\":\"375\",\"StateName\":\"Finland\",\"Side\":\"2\",\"StartMonth1\":\"6\",\"StartDay1\":\"25\",\"StartYear1\":\"1941\",\"EndMonth1\":\"9\",\"EndDay1\":\"19\",\"EndYear1\":\"1944\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"2\",\"Initiator\":\"2\",\"Outcome\":\"2\",\"TransTo\":\"-8\",\"BatDeath\":\"65000\",\"Version\":\"4\"},\"originalRowNumber\":168,\"eventDate\":\"1944-09-19\",\"warId\":\"139\",\"participant\":\"Finland\",\"sourceContext\":[{\"entityId\":\"finland-independent\",\"snapshotYear\":1945,\"categoryStatus\":\"missing\",\"context\":\"explicitly dated prior-context\",\"actualEventDate\":\"1944-09-19\",\"contextAgeYears\":1,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1944-09-19",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Finland"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-a8c9bfbc63bc3d465a2731ff",
+          "sourceIdentifier": "Original CSV row168; WarNum=139; ccode=375; Side=2; EndYear/Month/Day1"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T09:44:03.212Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "8d5035c3b4ad0685a90d4dbe9dc914d13e1a7dc94fb967a8a84749c2909f3587",
+        "864f4a96c0d3fab2c14bd13ec47650921a8030e17ed8d4f3db2bfd2e42aacd39"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "a84eb3de65111e8a4ddc7645046890525e5cb6b501232cc64264e6ab32278d34",
+    "productionFingerprint": "b138bc7708161df2b6179f3d6557d46a9ff8ae36a61079a0c4940df93be419c3",
+    "jobId": "dossier-446806e25d70792d6e0a8999",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "a84eb3de65111e8a4ddc7645046890525e5cb6b501232cc64264e6ab32278d34",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by Independent capital/population receipt worker, separate from COW extractionworker / coordinator-date-context-gate; contract 864f4a96c0d3fab2c14bd13ec47650921a8030e17ed8d4f3db2bfd2e42aacd39; adapter dated-coded-combat-event/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-ea9fa1ca7df0ae56cadba51d-46b1aea131": "accepted",
+        "bulk-48290ed7d61f9c39ea590eee-46b1aea131": "accepted",
+        "bulk-a8c9bfbc63bc3d465a2731ff-46b1aea131": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-ea9fa1ca7df0ae56cadba51d-46b1aea131",
+      "bulk-48290ed7d61f9c39ea590eee-46b1aea131",
+      "bulk-a8c9bfbc63bc3d465a2731ff-46b1aea131"
+    ]
+  }
+}

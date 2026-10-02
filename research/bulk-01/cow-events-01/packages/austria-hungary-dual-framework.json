@@ -1,0 +1,271 @@
+{
+  "job": {
+    "id": "dossier-2a5f7d533adcd6d65f577dab",
+    "entityId": "austria-hungary-dual-framework",
+    "period": {
+      "from": "1914-07-29",
+      "until": "1914-07-30"
+    },
+    "mapIds": [
+      "entity-austria-hungary",
+      "entity-austro-hungarian-empire"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "3b100fc5aa123bf19f6ff679943068244e6a45bb3c36377f7f738149214d7cc8",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "cow-events-01-austria-hungary-dual-framework",
+    "jobId": "dossier-2a5f7d533adcd6d65f577dab",
+    "entityId": "austria-hungary-dual-framework",
+    "mapIds": [
+      "entity-austria-hungary",
+      "entity-austro-hungarian-empire"
+    ],
+    "worker": {
+      "id": "bulk-parser/dated-coded-combat-event/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "3b100fc5aa123bf19f6ff679943068244e6a45bb3c36377f7f738149214d7cc8",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1914-07-29",
+      "until": "1914-07-30"
+    },
+    "claims": [
+      {
+        "id": "bulk-f62e6784ee65ae1d78bf60c8-88f7956581",
+        "category": "events-context",
+        "value": "COW codes Austria-Hungary's sustained-combat episode in World War I as began on 1914-07-29.",
+        "entityId": "austria-hungary-dual-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1914-07-29",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "austria-hungary-dual-framework-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Austria-Hungary — dual monarchy",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row124; WarNum=106; ccode=300; Side=2; StartYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"106\",\"WarName\":\"World War I\",\"WarType\":\"1\",\"ccode\":\"300\",\"StateName\":\"Austria-Hungary\",\"Side\":\"2\",\"StartMonth1\":\"7\",\"StartDay1\":\"29\",\"StartYear1\":\"1914\",\"EndMonth1\":\"11\",\"EndDay1\":\"3\",\"EndYear1\":\"1918\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"2\",\"Initiator\":\"1\",\"Outcome\":\"2\",\"TransTo\":\"-8\",\"BatDeath\":\"1200000\",\"Version\":\"4\"},\"originalRowNumber\":124,\"eventDate\":\"1914-07-29\",\"warId\":\"106\",\"participant\":\"Austria-Hungary\",\"sourceContext\":[{\"entityId\":\"austria-hungary-dual-framework\",\"snapshotYear\":1914,\"categoryStatus\":\"missing\",\"context\":\"event-in-selected-year\",\"actualEventDate\":\"1914-07-29\",\"contextAgeYears\":0,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1914-07-29",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Austria-Hungary — dual monarchy"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-f62e6784ee65ae1d78bf60c8",
+          "sourceIdentifier": "Original CSV row124; WarNum=106; ccode=300; Side=2; StartYear/Month/Day1"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T09:43:28.433Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "8d5035c3b4ad0685a90d4dbe9dc914d13e1a7dc94fb967a8a84749c2909f3587",
+        "864f4a96c0d3fab2c14bd13ec47650921a8030e17ed8d4f3db2bfd2e42aacd39"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "0fb523c4cc7520c9e80401885e3819124ce519fc05be9b1c630f89e57d59de54",
+    "productionFingerprint": "3b100fc5aa123bf19f6ff679943068244e6a45bb3c36377f7f738149214d7cc8",
+    "jobId": "dossier-2a5f7d533adcd6d65f577dab",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "0fb523c4cc7520c9e80401885e3819124ce519fc05be9b1c630f89e57d59de54",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by Independent capital/population receipt worker, separate from COW extractionworker / coordinator-date-context-gate; contract 864f4a96c0d3fab2c14bd13ec47650921a8030e17ed8d4f3db2bfd2e42aacd39; adapter dated-coded-combat-event/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-f62e6784ee65ae1d78bf60c8-88f7956581": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-f62e6784ee65ae1d78bf60c8-88f7956581"
+    ]
+  }
+}

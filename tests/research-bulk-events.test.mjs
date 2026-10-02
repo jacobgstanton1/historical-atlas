@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {eventsIntake} from '../scripts/research-bulk-events.mjs';
+import {readContext,readJSON,digest} from '../scripts/research-common.mjs';
+import {prepareCandidates,verifyContract,boundedResearchPeriod} from '../scripts/research-bulk.mjs';
+import {temporalBounds} from '../scripts/research-comprehensive.mjs';
+const {manifest,contract}=eventsIntake();
+test('all selected endpoints bind independent literal-source and historical-framework review',()=>{assert.equal(manifest.rows.length,45);assert.equal(verifyContract(contract,manifest),true);const review=readJSON('research/bulk-02/events/independent-review.json');assert.equal(review.rows.length,45);assert.ok(review.rows.every(r=>r.decision==='source-date-mapping-approved'));});
+test('combat endpoints are actual dated events, never a legal declaration or continuous-war interval',()=>{for(const r of manifest.rows){assert.equal(r.temporal.kind,'event');assert.ok(r.qualifications.some(q=>q.includes('not an assertion of ongoing war')));const receipt=readJSON('research/bulk-02/events/independent-review.json').rows.find(x=>x.eventId===r.id);assert.equal(r.temporal.date,receipt.sourceDate);assert.match(contract.rationale,/not legal declaration/);}});
+test('events fit the job envelope and do not borrow future evidence',()=>{const candidates=prepareCandidates(manifest,contract,readContext());for(const c of candidates)for(const p of c.claims){const period=boundedResearchPeriod([p.claim]),b=temporalBounds({...period,kind:'interval'}),actual=temporalBounds(p.claim.temporal);assert.ok(b.lo<=actual.lo&&b.hi>=actual.hi);for(const y of c.targetSnapshots){assert.ok(y>=Number(p.claim.temporal.date.slice(0,4)));assert.ok(y-Number(p.claim.temporal.date.slice(0,4))<=5);}}});
+test('unknown and transformed episodes remain isolated in complete source inventory',()=>{const x=readJSON('research/bulk-02/events/cow-events-extracted.json');assert.ok(JSON.stringify(x).includes('historical-review')||JSON.stringify(x).includes('held'));assert.ok(contract.rationale.includes('Unknown'));});
+test('changed source date requires fresh review and no preview mutates production',()=>{const before=readContext().productionFingerprint,bad=structuredClone(manifest);bad.rows[0].temporal.date='1800-01-01';assert.throws(()=>verifyContract(contract,bad));prepareCandidates(manifest,contract,readContext());assert.equal(readContext().productionFingerprint,before);});

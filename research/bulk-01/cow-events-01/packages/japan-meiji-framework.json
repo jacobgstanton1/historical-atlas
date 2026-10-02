@@ -1,0 +1,461 @@
+{
+  "job": {
+    "id": "dossier-d2ee718a02a51db9dd1f0bef",
+    "entityId": "japan-meiji-framework",
+    "period": {
+      "from": "1895-03-30",
+      "until": "1918-11-12"
+    },
+    "mapIds": [
+      "entity-empire-of-japan",
+      "entity-imperial-japan",
+      "entity-japan"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "d06624fbd2bb7f69beb230a1edab51478d7e672bc2d18a0e505ab25dee51bc5d",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "cow-events-01-japan-meiji-framework",
+    "jobId": "dossier-d2ee718a02a51db9dd1f0bef",
+    "entityId": "japan-meiji-framework",
+    "mapIds": [
+      "entity-empire-of-japan",
+      "entity-imperial-japan",
+      "entity-japan"
+    ],
+    "worker": {
+      "id": "bulk-parser/dated-coded-combat-event/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "d06624fbd2bb7f69beb230a1edab51478d7e672bc2d18a0e505ab25dee51bc5d",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1895-03-30",
+      "until": "1918-11-12"
+    },
+    "claims": [
+      {
+        "id": "bulk-f5eef5699572bd71981f1112-3cfda36ea2",
+        "category": "events-context",
+        "value": "COW codes Japan's sustained-combat episode in First Sino-Japanese as ended on 1895-03-30.",
+        "entityId": "japan-meiji-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1895-03-30",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "japan-meiji-framework-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Empire of Japan",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row79; WarNum=73; ccode=740; Side=1; EndYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"73\",\"WarName\":\"First Sino-Japanese\",\"WarType\":\"1\",\"ccode\":\"740\",\"StateName\":\"Japan\",\"Side\":\"1\",\"StartMonth1\":\"7\",\"StartDay1\":\"25\",\"StartYear1\":\"1894\",\"EndMonth1\":\"3\",\"EndDay1\":\"30\",\"EndYear1\":\"1895\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"7\",\"Initiator\":\"1\",\"Outcome\":\"1\",\"TransTo\":\"-8\",\"BatDeath\":\"5000\",\"Version\":\"4\"},\"originalRowNumber\":79,\"eventDate\":\"1895-03-30\",\"warId\":\"73\",\"participant\":\"Japan\",\"sourceContext\":[{\"entityId\":\"japan-meiji-framework\",\"snapshotYear\":1900,\"categoryStatus\":\"missing\",\"context\":\"explicitly dated prior-context\",\"actualEventDate\":\"1895-03-30\",\"contextAgeYears\":5,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1895-03-30",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Empire of Japan"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-f5eef5699572bd71981f1112",
+          "sourceIdentifier": "Original CSV row79; WarNum=73; ccode=740; Side=1; EndYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-b480b7da7364aa0aa909d091-3cfda36ea2",
+        "category": "events-context",
+        "value": "COW codes Japan's sustained-combat episode in Boxer Rebellion as began on 1900-06-17.",
+        "entityId": "japan-meiji-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1900-06-17",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "japan-meiji-framework-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Empire of Japan",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row85; WarNum=82; ccode=740; Side=1; StartYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"82\",\"WarName\":\"Boxer Rebellion\",\"WarType\":\"1\",\"ccode\":\"740\",\"StateName\":\"Japan\",\"Side\":\"1\",\"StartMonth1\":\"6\",\"StartDay1\":\"17\",\"StartYear1\":\"1900\",\"EndMonth1\":\"8\",\"EndDay1\":\"14\",\"EndYear1\":\"1900\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"7\",\"Initiator\":\"1\",\"Outcome\":\"1\",\"TransTo\":\"-8\",\"BatDeath\":\"622\",\"Version\":\"4\"},\"originalRowNumber\":85,\"eventDate\":\"1900-06-17\",\"warId\":\"82\",\"participant\":\"Japan\",\"sourceContext\":[{\"entityId\":\"japan-meiji-framework\",\"snapshotYear\":1900,\"categoryStatus\":\"missing\",\"context\":\"event-in-selected-year\",\"actualEventDate\":\"1900-06-17\",\"contextAgeYears\":0,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1900-06-17",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Empire of Japan"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-b480b7da7364aa0aa909d091",
+          "sourceIdentifier": "Original CSV row85; WarNum=82; ccode=740; Side=1; StartYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-f8975cea53829901a860790a-3cfda36ea2",
+        "category": "events-context",
+        "value": "COW codes Japan's sustained-combat episode in Boxer Rebellion as ended on 1900-08-14.",
+        "entityId": "japan-meiji-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1900-08-14",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "japan-meiji-framework-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Empire of Japan",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row85; WarNum=82; ccode=740; Side=1; EndYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"82\",\"WarName\":\"Boxer Rebellion\",\"WarType\":\"1\",\"ccode\":\"740\",\"StateName\":\"Japan\",\"Side\":\"1\",\"StartMonth1\":\"6\",\"StartDay1\":\"17\",\"StartYear1\":\"1900\",\"EndMonth1\":\"8\",\"EndDay1\":\"14\",\"EndYear1\":\"1900\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"7\",\"Initiator\":\"1\",\"Outcome\":\"1\",\"TransTo\":\"-8\",\"BatDeath\":\"622\",\"Version\":\"4\"},\"originalRowNumber\":85,\"eventDate\":\"1900-08-14\",\"warId\":\"82\",\"participant\":\"Japan\",\"sourceContext\":[{\"entityId\":\"japan-meiji-framework\",\"snapshotYear\":1900,\"categoryStatus\":\"missing\",\"context\":\"event-in-selected-year\",\"actualEventDate\":\"1900-08-14\",\"contextAgeYears\":0,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1900-08-14",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Empire of Japan"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-f8975cea53829901a860790a",
+          "sourceIdentifier": "Original CSV row85; WarNum=82; ccode=740; Side=1; EndYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-eede1cf24b79aa36f1d57a37-3cfda36ea2",
+        "category": "events-context",
+        "value": "COW codes Japan's sustained-combat episode in World War I as began on 1914-08-23.",
+        "entityId": "japan-meiji-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1914-08-23",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "japan-meiji-framework-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Empire of Japan",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row117; WarNum=106; ccode=740; Side=1; StartYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"106\",\"WarName\":\"World War I\",\"WarType\":\"1\",\"ccode\":\"740\",\"StateName\":\"Japan\",\"Side\":\"1\",\"StartMonth1\":\"8\",\"StartDay1\":\"23\",\"StartYear1\":\"1914\",\"EndMonth1\":\"11\",\"EndDay1\":\"11\",\"EndYear1\":\"1918\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"7\",\"Initiator\":\"2\",\"Outcome\":\"1\",\"TransTo\":\"-8\",\"BatDeath\":\"300\",\"Version\":\"4\"},\"originalRowNumber\":117,\"eventDate\":\"1914-08-23\",\"warId\":\"106\",\"participant\":\"Japan\",\"sourceContext\":[{\"entityId\":\"japan-meiji-framework\",\"snapshotYear\":1914,\"categoryStatus\":\"missing\",\"context\":\"event-in-selected-year\",\"actualEventDate\":\"1914-08-23\",\"contextAgeYears\":0,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1914-08-23",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat began for this participant; academic coding, not an asserted legal declaration or war-wide beginning. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Empire of Japan"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-eede1cf24b79aa36f1d57a37",
+          "sourceIdentifier": "Original CSV row117; WarNum=106; ccode=740; Side=1; StartYear/Month/Day1"
+        }
+      },
+      {
+        "id": "bulk-10824885dae609b6b6818c61-3cfda36ea2",
+        "category": "events-context",
+        "value": "COW codes Japan's sustained-combat episode in World War I as ended on 1918-11-11.",
+        "entityId": "japan-meiji-framework",
+        "temporal": {
+          "kind": "event",
+          "date": "1918-11-11",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "japan-meiji-framework-coded-combat-participation",
+          "description": "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Empire of Japan",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "cow-interstate-war-v4",
+            "locator": "Original CSV row117; WarNum=106; ccode=740; Side=1; EndYear/Month/Day1",
+            "note": "{\"original\":{\"WarNum\":\"106\",\"WarName\":\"World War I\",\"WarType\":\"1\",\"ccode\":\"740\",\"StateName\":\"Japan\",\"Side\":\"1\",\"StartMonth1\":\"8\",\"StartDay1\":\"23\",\"StartYear1\":\"1914\",\"EndMonth1\":\"11\",\"EndDay1\":\"11\",\"EndYear1\":\"1918\",\"StartMonth2\":\"-8\",\"StartDay2\":\"-8\",\"StartYear2\":\"-8\",\"EndMonth2\":\"-8\",\"EndDay2\":\"-8\",\"EndYear2\":\"-8\",\"TransFrom\":\"-8\",\"WhereFought\":\"7\",\"Initiator\":\"2\",\"Outcome\":\"1\",\"TransTo\":\"-8\",\"BatDeath\":\"300\",\"Version\":\"4\"},\"originalRowNumber\":117,\"eventDate\":\"1918-11-11\",\"warId\":\"106\",\"participant\":\"Japan\",\"sourceContext\":[{\"entityId\":\"japan-meiji-framework\",\"snapshotYear\":1920,\"categoryStatus\":\"missing\",\"context\":\"explicitly dated prior-context\",\"actualEventDate\":\"1918-11-11\",\"contextAgeYears\":2,\"mappingPartial\":false}]}; Independent reparse of original337 participant CSV rows and fullcodebook; all45 selected literal participant/date/episode/side/endpoints and source-specific historical aliases reviewed. Unknown, changed-side/transformed/second-episode and incompatible identities remain held in raw498 endpoint inventory. Event coding is not legal declaration, peace, sovereignty or succession. Source dates and precision remain unchanged; selected-year/past context explicitly qualified.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1918-11-11",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "COW-coded date on which sustained combat ended for this participant, or the day after its last major engagement after which fatalities declined below the threshold; not an asserted peace treaty or war-wide cessation. Source endpoint coding concerns sustained combat or threshold-related last engagement; end day may be the day after last major engagement. No war-wide cessation or declaration inferred.",
+          "Actual event date is unchanged. Relevance in a later snapshot is explicitly past dated context within five calendar years, not an assertion of ongoing war or a retimed event.",
+          "Academic coded state participant and combat episode; not independent proof of legal declaration, peace treaty, sovereignty, geometry or succession. Existing historical framework: Empire of Japan"
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-10824885dae609b6b6818c61",
+          "sourceIdentifier": "Original CSV row117; WarNum=106; ccode=740; Side=1; EndYear/Month/Day1"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "cow-interstate-war-v4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T09:43:14.627Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "8d5035c3b4ad0685a90d4dbe9dc914d13e1a7dc94fb967a8a84749c2909f3587",
+        "864f4a96c0d3fab2c14bd13ec47650921a8030e17ed8d4f3db2bfd2e42aacd39"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "9b3c9c0617750f1efe9df0b8b7b10467ac2e776887ae29cc9e587e54dbf4dca0",
+    "productionFingerprint": "d06624fbd2bb7f69beb230a1edab51478d7e672bc2d18a0e505ab25dee51bc5d",
+    "jobId": "dossier-d2ee718a02a51db9dd1f0bef",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "9b3c9c0617750f1efe9df0b8b7b10467ac2e776887ae29cc9e587e54dbf4dca0",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by Independent capital/population receipt worker, separate from COW extractionworker / coordinator-date-context-gate; contract 864f4a96c0d3fab2c14bd13ec47650921a8030e17ed8d4f3db2bfd2e42aacd39; adapter dated-coded-combat-event/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-f5eef5699572bd71981f1112-3cfda36ea2": "accepted",
+        "bulk-b480b7da7364aa0aa909d091-3cfda36ea2": "accepted",
+        "bulk-f8975cea53829901a860790a-3cfda36ea2": "accepted",
+        "bulk-eede1cf24b79aa36f1d57a37-3cfda36ea2": "accepted",
+        "bulk-10824885dae609b6b6818c61-3cfda36ea2": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-f5eef5699572bd71981f1112-3cfda36ea2",
+      "bulk-b480b7da7364aa0aa909d091-3cfda36ea2",
+      "bulk-f8975cea53829901a860790a-3cfda36ea2",
+      "bulk-eede1cf24b79aa36f1d57a37-3cfda36ea2",
+      "bulk-10824885dae609b6b6818c61-3cfda36ea2"
+    ]
+  }
+}

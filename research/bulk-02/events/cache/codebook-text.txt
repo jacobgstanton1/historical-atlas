@@ -1,0 +1,121 @@
+Inter-state Wars (Version 4.0): Definitions and Variables by Meredith Reid Sarkees
+The Correlates of War (COW) Project has utilized a classification of wars that is based
+upon the status of territorial entities, in particular focusing on those that are classified as
+members of the inter-state system (referred to as “states”). Wars have been categorized
+by whether they primarily take place between/among states, between/among a state(s)
+and a non-state entity, and within states. This dataset encompasses wars in the first
+category (WarType #1)– wars that take place between or among states (members of the
+interstate system). For a complete description of the COW war typology and for a
+definition of the major variables as they apply to all wars, see “The COW Typology of
+War: Defining and Categorizing Wars [Version 4 of the Data]” by Meredith Reid
+Sarkees, also available on this website. A more detailed discussion can also be found in
+Chapter 2 of Resort to War: A Data Guide to Inter-State, Extra-State, Intra-state, and
+Non-State Wars, 1816-2007 by Meredith Reid Sarkees and Frank Whelon Wayman,
+(Washington, DC: CQ Press 2010). This volume also contains a brief historical
+description of each war and a discussion of the coding decisions made in each case.
+Within the COW war typology, an inter-state war must meet same definitional
+requirements of all wars in that the war must involve sustained combat, involving
+organized armed forces, resulting in a minimum of 1,000 battle-related combatant
+fatalities within a twelve month period. In Resort to Arms, Correlates of War scholars
+Melvin Small and J. David Singer further established the requisite condition that for a
+conflict to be a war, it must involve armed forces capable of “effective resistance” on
+
+both sides. The effective resistance criteria were specifically utilized to differentiate wars
+from massacres, one-sided state killings, or general riots by unorganized individuals.
+Such one-sided violence is not considered to be the same phenomenon as war and is not
+included here.
+As with all categories of war, for a state to be considered a war participant, the minimum
+requirement is that it has to either commit 1,000 troops to the war or suffer 100 battle-
+related deaths.
+One particular addition to this version of the data is information concerning war
+“transformations.” Though the understanding of wars being transformed or changing
+categories goes back to the origins of the COW project and Wages of War, it is only in
+this version of the data that specific variables addressing such transformations have been
+added. Wars are often not as clearly delineated as our typologies, and can often contain
+elements of different types of wars. Furthermore, a conflict can, over its life span,
+metamorphose from one type of war to another. COW has attempted to deal with such
+complexity by relying on two major determinants: the principle of the mutual exclusivity
+of wars, and the classification of wars based upon the decision concerning which parties
+are doing the “bulk of the fighting.” Thus, if a war changes so that one or more of the
+parties doing the bulk of the fighting changes, the initial war ends and the conflict is
+transformed into a war of a second type. Such transformations can be seen in all types of
+war: for example, if another state intervenes in an intra-state war on the side of the non-
+state forces, and then takes over the bulk of the fighting, the war is transformed into an
+inter-state war between the two states. Conversely, inter-state wars can also be
+
+transformed into intra-state or extra-state wars, for example when a state withdraws from
+a an inter-state war, leaving one state in continuing combat with a non-state actor. The
+fact that such a transformation has taken place are sometimes indicated in the title of the
+war, for example: The Viet Nam War phase 2 of 1965-1975.
+Variables Layout
+In general, there is one record for each state war participant, unless the state changed
+sides during the war, in which case there are two records.
+WarNum - the number assigned to the war
+WarName - the name given to the war
+WarType - 1 = Inter-state war
+Ccode – the System Membership number (or Country Code) for the state participant
+State Name - the name of the System Member
+StartMonth1 - the month in which sustained combat began: -9 = month unknown
+StartDay1 - the day on which sustained combat began: -9 = day unknown
+StartYear1 - the year in which sustained combat began: -9 = year is unknown
+EndMonth1 - the month in which sustained combat ended, or the month of the last major
+engagement after which fatalities declined below the war fatality threshold: -7 =
+war ongoing as if 12/31/2007, -9 = month unknown
+EndDay1- the day on which sustained combat ended, or the day after the last major
+engagement after which fatalities declined below the war fatality threshold: -7 =
+war ongoing as if 12/31/2007, -9 = day unknown
+EndYear1 - the year in which sustained combat ended, or the year of the last major
+engagement after which fatalities declined below the war fatality threshold: -7 =
+war ongoing as if 12/31/2007, -9 = year unknown
+StartMonth2 - after a break in the fighting, the month in which sustained combat
+resumes: -9 = month unknown, -8 = not applicable
+StartDay2- after a break in the fighting, the day on which sustained combat resumes: -9 =
+month unknown, -8 = not applicable
+StartYear2 - after a break in the fighting, the year in which sustained combat resumes: -9
+= year unknown, -8 = not applicable
+EndMonth2 - after fighting resumes, the month in which sustained combat ended, or the
+month of the last major engagement after which fatalities declined below the war
+fatality threshold: -7 = war ongoing as if 12/31/2007, -9 = month unknown, -8 =
+not applicable
+EndDay2- after fighting resumes, the day on which sustained combat ended, or the day
+after the last major engagement after which fatalities declined below the war
+fatality threshold: -7 = war ongoing as if 12/31/2007, -9 = day unknown, -8 = not
+applicable
+
+EndYear2 - after fighting resumes, the year in which sustained combat ended, or the year
+of the last major engagement after which fatalities declined below the war fatality
+threshold: -7 = war ongoing as if 12/31/2007, -9 = year unknown, -8 = not
+applicable
+TransFrom - the War# of a preceding war that was transformed into this inter-state war: -
+8 = Not applicable
+WhereFought - Region(s) where combat involving the state occurred. Values are:
+1 = W. Hemisphere
+2 = Europe
+4 = Africa
+6 = Middle East
+7 = Asia
+9 = Oceania
+11 = Europe & Middle East
+12 = Europe & Asia
+13 = W. Hemisphere & Asia
+14 = Europe, Africa & Middle East
+15 = Europe, Africa, Middle East, & Asia
+16 = Africa, Middle East, Asia & Oceania
+17 = Asia & Oceania
+18 = Africa & Middle East
+19 = Europe, Africa, Middle East, Asia & Oceania
+Initiator - whether the state initiated the war
+1 = Yes
+2 = No
+TransTo - the WarNum of the war that this war transformed into, -8=Not applicable
+Outcome: coded as:
+1 = Winner
+2 = Loser
+3 = Compromise/Tied
+4 = The war was transformed into another type of war
+5 = The war is ongoing as of 12/31/2007
+6 = Stalemate
+7 = Conflict continues at below war level
+8 = changed sides
+BatDeaths - the battle-related combatant fatalities suffered by the state: -9= data unknown
+Version - Version of the data = 4.0
