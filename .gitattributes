@@ -59,3 +59,6 @@ research/completion-03/**/*.json text eol=lf
 research/completion-03/**/*.py text eol=lf
 scripts/research-federico-tena*.mjs text eol=lf
 tests/research-federico-tena*.mjs text eol=lf
+# Python's literal extraction emitted CRLF; preserve certified input bytes.
+research/completion-03/population/observations.json -text -diff
+research/completion-03/population/historical-crosswalk.json -text -diff
