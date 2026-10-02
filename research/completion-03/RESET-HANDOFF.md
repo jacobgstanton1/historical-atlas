@@ -1,5 +1,9 @@
 # Curated-source reset
 
+## Completed Important Figures full-source yield test
+
+The two full curated sources were acquired and screened: 2,291,817 cross-verified people; 11,341 Pantheon biographies. Conservative filters produced 3,897 non-officeholding significance candidates, 3,371 possible person/snapshot associations and 101 unresolved candidate slots (two additional already-supported slots). Zero new slots are automatically acceptable: the sources lack dated activity/contribution and adjudicated historical-polity association. Lifespan and undated country attachment cannot supply those facts. The 333 decoding exceptions remain held with original compressed bytes preserved. See figures/REPORT.md and yield.json. No production changes; 44.55808% and 8,782 unresolved remain unchanged. Stop this low-safe-yield operation; do not start individual biography review or repeat downloads. Original full CSV is locally ignored; selected candidate excerpts retain CC BY-SA attribution.
+
 ## Completed capital safe-yield test and leadership follow-up
 
 Capital source-wide operation is complete: 217 ICOW entries parsed privately; one Wikidata query returned 301 bindings and one original-statement verification batch covered 35 dated entities. Four open-source capital claims added eight supported slots, Capital 398 → 406/1,056. The 334 matched unresolved exceptions remain held/candidate-only; no ICOW dataset was redistributed. Because yield was small, the immediate complete cached Archigos join reused existing independently reviewed mappings and added six effective-leader claims supporting seven slots, Leadership 391 → 398. See capitals/REPORT.md and REPORT.json.

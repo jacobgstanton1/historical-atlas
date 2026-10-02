@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {readJSON,digest} from '../scripts/research-common.mjs';
+const base='research/completion-03/figures/',report=readJSON(base+'yield.json'),pool=readJSON(base+'held-candidates.json');
+test('complete cross-verified and Pantheon source counts',()=>{assert.equal(report.counts.totalSourceRecords,2291817);assert.equal(report.pantheonRecords,11341);});
+test('candidate geography does not become accepted association',()=>{assert.equal(report.safeAutomaticNewSlots,0);assert.equal(report.exactHighConfidenceHistoricalAssociations,0);assert.ok(pool.every(s=>s.state==='held'));});
+test('small candidate lists retain source identities and actual lifespans',()=>{for(const s of pool){assert.ok(s.candidates.length<=3);for(const p of s.candidates){assert.match(p.wikidata_code,/^Q\d+$/);assert.ok(Number(p.birth)+18<=s.year);assert.ok(Number(p.death)>s.year);assert.ok(Number(p.number_wiki_editions)>=2);assert.notEqual(p.pantheonOccupation,'POLITICIAN');}}});
+test('source columns do not establish dated activity',()=>{assert.ok(!report.sourceColumns.includes('activity_start'));assert.ok(!report.sourceColumns.includes('citizenship_start'));assert.equal(report.productionModified,false);});
+test('production remains identical to deployed baseline',()=>{const before=JSON.parse(execFileSync('git',['show','4006074d8e12765d09a0239deb3f0b74d21e443c:data/comprehensive-dossiers.json'],{encoding:'utf8',maxBuffer:50000000}));assert.equal(digest(readJSON('data/comprehensive-dossiers.json')),digest(before));});
