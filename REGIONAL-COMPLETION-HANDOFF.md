@@ -11,3 +11,11 @@ Next action: begin Batch 15 West Africa as coherent historical administrative/so
 Preserved holds: conflicting Spain/Portugal capitals; Zeeman chronology pending original-source verification; qualitative Economy schema-incompatible evidence; transition/exile and territorial exceptions. Do not force them. Keep earlier bulk queues deferred.
 
 Final reviewed cohort/certificate pairs: `western`, `western/figures-only-*`, `lowcountries`, `nordic`, `treaties`. All accepted packages integrated. Construction builders must not overwrite final certified inputs. Serial intake and recovery journal remain in the existing pipeline. Focused tests: 23; final integrity checks: 53,898; browser checks: zero.
+
+## Superseding checkpoint — Batch 15 West Africa
+
+Batch 15's safe source-family tranche is integrated: 54 accepted claims, 56 newly supported slots, 3823 production claims, 7180/15840 supported/resolved slots (45.328283%), 8660 unresolved globally. See research/regional-15/REPORT.md and checkpoint-delta.json. All three certified cohorts are integrated; 29 focused tests and 54714 final integrity checks passed; zero browser checks. The commit containing this update is authoritative.
+
+Preserve regional-01 baseline/workload and certified files. Generate future current workloads into a NEW directory with: node scripts/research-regional-workload.mjs research/completion-01/reports/completion.json research/regional-NN. The optional output directory prevents overwriting earlier checkpoint evidence.
+
+Do not revisit Western holds or Batch 15 difficult residue now. The next unworked high-volume reconstructed cohort is Batch 09 South America (44 entities, 83 dossiers, 641 unresolved slots); recover its current source-family needs before research. Batch 15 remains incomplete, with 597 unresolved slots and two critically sparse dossiers; this checkpoint does not assert exhaustive regional completion. Preserve local ignored source caches and all held packages. No renewed bulk discovery or frontend changes.

@@ -1,0 +1,450 @@
+{
+  "job": {
+    "id": "dossier-3a3855625a06c971fe861c9f",
+    "entityId": "togo-1922-mandate-core",
+    "period": {
+      "from": "1923",
+      "until": "1946-01-01"
+    },
+    "mapIds": [
+      "entity-togo"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "ce6245636bd68a40fe38058753910ff1aef70411066eead57875c9e664dd6c36",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "regional15-french-institutional-systems-togo-1922-mandate-core",
+    "jobId": "dossier-3a3855625a06c971fe861c9f",
+    "entityId": "togo-1922-mandate-core",
+    "mapIds": [
+      "entity-togo"
+    ],
+    "worker": {
+      "id": "regional15-french-source-worker",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "ce6245636bd68a40fe38058753910ff1aef70411066eead57875c9e664dd6c36",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1923",
+      "until": "1946-01-01"
+    },
+    "claims": [
+      {
+        "id": "r15-french-togo-colonial-franc",
+        "entityId": "togo-1922-mandate-core",
+        "category": "currency",
+        "value": "Franc — BAO monetary issue",
+        "temporal": {
+          "kind": "interval",
+          "from": "1923",
+          "until": "1944",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "togo-1922-mandate-core-togo-colonial-franc",
+          "description": "Named historical administration or royal polity; no geometry-derived sovereignty or modern-country backprojection.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r15-bceao-institutional-chronology"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r15-bceao-institutional-chronology",
+            "locator": "Introduction pI; printed p8 BAO Lomé agency; printed p14 CFA creation",
+            "note": "BAO operations at Lomé precede the curated mandate window; CFA begins only in December 1945. No claim about British Togoland.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1923",
+              "until": "1944",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Conservative full-year window ends before the 1945 monetary transition; no current currency backprojection."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 15 French West African original institutional source packet",
+          "sourceIdentifier": "togo-colonial-franc"
+        }
+      },
+      {
+        "id": "r15-french-togo-cfa-1945",
+        "entityId": "togo-1922-mandate-core",
+        "category": "currency",
+        "value": "CFA franc — colonial monetary issue",
+        "temporal": {
+          "kind": "interval",
+          "from": "1945-12-26",
+          "until": "1946-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "togo-1922-mandate-core-togo-cfa-1945",
+          "description": "Named historical administration or royal polity; no geometry-derived sovereignty or modern-country backprojection.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r15-bceao-institutional-chronology",
+          "r15-bceao-cfa-history"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r15-bceao-institutional-chronology",
+            "locator": "BCEAO chronology printed p14; CFA history Origine and parities table",
+            "note": "CFA creation is dated 26 December 1945; BCEAO chronology explicitly covers AOF and Togo. Applies only to the last six days of the mandate entity window.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1945-12-26",
+              "until": "1946-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "r15-bceao-cfa-history",
+            "locator": "BCEAO chronology printed p14; CFA history Origine and parities table",
+            "note": "CFA creation is dated 26 December 1945; BCEAO chronology explicitly covers AOF and Togo. Applies only to the last six days of the mandate entity window.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1945-12-26",
+              "until": "1946-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Within-year monetary transition. Not evidence that CFA existed throughout 1945. Historical 1945 name referred to French African colonies."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 15 French West African original institutional source packet",
+          "sourceIdentifier": "togo-cfa-1945"
+        }
+      },
+      {
+        "id": "r15-french-togo-cfa-first-parity",
+        "entityId": "togo-1922-mandate-core",
+        "category": "economy",
+        "value": 1.7,
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1945-12-26",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "togo-1922-mandate-core-togo-cfa-first-parity",
+          "description": "Named historical administration or royal polity; no geometry-derived sovereignty or modern-country backprojection.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r15-bceao-cfa-history"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r15-bceao-cfa-history",
+            "locator": "Historical parity table, Création du FCFA row",
+            "note": "Official initial parity: one CFA franc equals 1.70 French francs on 26 December 1945.",
+            "precision": "day",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945-12-26",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Dated monetary parity, not GDP or national income; counterpart is the pre-1960 French franc. Actual observation date retained."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 15 French West African original institutional source packet",
+          "sourceIdentifier": "togo-cfa-first-parity"
+        },
+        "metric": "exchange-rate",
+        "unit": "French francs per CFA franc"
+      },
+      {
+        "id": "r15-french-togo-cfa-transition",
+        "entityId": "togo-1922-mandate-core",
+        "category": "events-context",
+        "value": "Creation of the CFA franc in the French African monetary system, including French-administered Togo",
+        "temporal": {
+          "kind": "event",
+          "date": "1945-12-26",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "togo-1922-mandate-core-togo-cfa-transition",
+          "description": "Named historical administration or royal polity; no geometry-derived sovereignty or modern-country backprojection.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r15-bceao-institutional-chronology",
+          "r15-bceao-cfa-history"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r15-bceao-institutional-chronology",
+            "locator": "Chronology printed p14; CFA history Origine",
+            "note": "Regionally significant monetary transition; no assertion of independence or change in mandatory power.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1945-12-26",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "r15-bceao-cfa-history",
+            "locator": "Chronology printed p14; CFA history Origine",
+            "note": "Regionally significant monetary transition; no assertion of independence or change in mandatory power.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1945-12-26",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Curated research bounds are not historical foundation, accession or dissolution dates. Year-only evidence is not given invented event precision."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 15 French West African original institutional source packet",
+          "sourceIdentifier": "togo-cfa-transition"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "r15-bceao-cfa-history",
+        "title": "Histoire du franc CFA",
+        "institution": "Banque Centrale des États de l’Afrique de l’Ouest",
+        "url": "https://www.bceao.int/fr/content/histoire-du-franc-cfa",
+        "accessed": "2026-10-02",
+        "kind": "official-institutional-history",
+        "usage": "Individual factual paraphrases and source locators; no source images or full source text redistributed."
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r15-bceao-institutional-chronology",
+          "r15-bceao-cfa-history"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r15-bceao-institutional-chronology",
+          "r15-bceao-cfa-history"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r15-bceao-institutional-chronology",
+          "r15-bceao-cfa-history"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent review of original institutional source bodies, preserved chronological/geographic qualifications and significance. Current mandate body unavailable: that new claim held. Exact research files bound; originals cited without wholesale copyrighted redistribution.",
+      "preservedPackageHashes": [
+        "3f4cd63c6f4e69aaf36a146116dad3c309393b3d989e07d6ab0346db37a4a06a",
+        "1aa9cc65a3ac2909a52dcfdaab75835d025724b2a235340caa8217d0e1ff3579"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "ee14040d1b1ff6cf8e304405f01e89ae8bdff53d5bbfd595679ca5302350ed1c",
+    "productionFingerprint": "ce6245636bd68a40fe38058753910ff1aef70411066eead57875c9e664dd6c36",
+    "jobId": "dossier-3a3855625a06c971fe861c9f",
+    "review": {
+      "reviewer": "regional15-coordinator-independent-review",
+      "packageHash": "ee14040d1b1ff6cf8e304405f01e89ae8bdff53d5bbfd595679ca5302350ed1c",
+      "bodyReviewed": true,
+      "rationale": "Independent review of original institutional source bodies, preserved chronological/geographic qualifications and significance. Current mandate body unavailable: that new claim held. Exact research files bound; originals cited without wholesale copyrighted redistribution.",
+      "reviewedIssues": [],
+      "decisions": {
+        "r15-french-togo-colonial-franc": "accepted",
+        "r15-french-togo-cfa-1945": "accepted",
+        "r15-french-togo-cfa-first-parity": "accepted",
+        "r15-french-togo-cfa-transition": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "r15-french-togo-colonial-franc",
+      "r15-french-togo-cfa-1945",
+      "r15-french-togo-cfa-first-parity",
+      "r15-french-togo-cfa-transition"
+    ]
+  }
+}

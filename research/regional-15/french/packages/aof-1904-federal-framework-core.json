@@ -1,0 +1,550 @@
+{
+  "job": {
+    "id": "dossier-c37b784c795cffb0bff52ea8",
+    "entityId": "aof-1904-federal-framework-core",
+    "period": {
+      "from": "1905",
+      "until": "1938"
+    },
+    "mapIds": [
+      "entity-french-west-africa"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "761d4b8a5391b9a18abfe8bae37f4baaab3b03d967fbef5e7e8f36b9679bec8e",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "regional15-french-institutional-systems-aof-1904-federal-framework-core",
+    "jobId": "dossier-c37b784c795cffb0bff52ea8",
+    "entityId": "aof-1904-federal-framework-core",
+    "mapIds": [
+      "entity-french-west-africa"
+    ],
+    "worker": {
+      "id": "regional15-french-source-worker",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "761d4b8a5391b9a18abfe8bae37f4baaab3b03d967fbef5e7e8f36b9679bec8e",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1905",
+      "until": "1938"
+    },
+    "claims": [
+      {
+        "id": "r15-french-dakar-federal-capital",
+        "entityId": "aof-1904-federal-framework-core",
+        "category": "capital",
+        "value": "Dakar",
+        "temporal": {
+          "kind": "interval",
+          "from": "1905",
+          "until": "1938",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "aof-1904-federal-framework-core-dakar-federal-capital",
+          "description": "Named historical administration or royal polity; no geometry-derived sovereignty or modern-country backprojection.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r15-national-archives-aof-place",
+          "b16-aof-archives"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r15-national-archives-aof-place",
+            "locator": "Archives authority generalDescription; ANOM AOF territorial fonds",
+            "note": "Archival authority identifies Dakar as federal capital; ANOM places the former Governor-General seat there. Restricted post-1904 window avoids initial Saint-Louis headquarters.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1905",
+              "until": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "b16-aof-archives",
+            "locator": "Archives authority generalDescription; ANOM AOF territorial fonds",
+            "note": "Archival authority identifies Dakar as federal capital; ANOM places the former Governor-General seat there. Restricted post-1904 window avoids initial Saint-Louis headquarters.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1905",
+              "until": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Curated research bounds are not historical foundation, accession or dissolution dates. Year-only evidence is not given invented event precision."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 15 French West African original institutional source packet",
+          "sourceIdentifier": "dakar-federal-capital"
+        },
+        "role": "Federal administrative capital"
+      },
+      {
+        "id": "r15-french-ponty-governor-general",
+        "entityId": "aof-1904-federal-framework-core",
+        "category": "leadership",
+        "value": "William Merlaud-Ponty",
+        "temporal": {
+          "kind": "interval",
+          "from": "1909",
+          "until": "1915",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "aof-1904-federal-framework-core-ponty-governor-general",
+          "description": "Named historical administration or royal polity; no geometry-derived sovereignty or modern-country backprojection.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r15-cirad-tourte-vol4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r15-cirad-tourte-vol4",
+            "locator": "Volume IV printed pp103,169; PDF pp116,182",
+            "note": "Tourte explicitly dates Governor-General Ponty 1908–1915. Conservative interior omits both transition years.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1909",
+              "until": "1915",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Curated research bounds are not historical foundation, accession or dissolution dates. Year-only evidence is not given invented event precision.",
+          "Source reign endpoint1915 retained at year precision. The conservative scanner excludes1915 while retaining documented complete1914; no day/month invented."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 15 French West African original institutional source packet",
+          "sourceIdentifier": "ponty-governor-general"
+        },
+        "role": "Governor-General of French West Africa"
+      },
+      {
+        "id": "r15-french-aof-colonial-franc",
+        "entityId": "aof-1904-federal-framework-core",
+        "category": "currency",
+        "value": "Franc — colonial monetary issue",
+        "temporal": {
+          "kind": "interval",
+          "from": "1905",
+          "until": "1938",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "aof-1904-federal-framework-core-aof-colonial-franc",
+          "description": "Named historical administration or royal polity; no geometry-derived sovereignty or modern-country backprojection.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r15-bceao-institutional-chronology"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r15-bceao-institutional-chronology",
+            "locator": "Introduction pI; monetary chronology BAO 1901–1955",
+            "note": "BCEAO traces franc introduction in western French colonies and BAO issuance. This does not claim cash exclusively displaced local exchange media.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1905",
+              "until": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Colonial franc before CFA creation in December 1945; CFA is not projected backward. Historical issuance regime, not a claim of exclusive use in every local transaction."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 15 French West African original institutional source packet",
+          "sourceIdentifier": "aof-colonial-franc"
+        }
+      },
+      {
+        "id": "r15-french-diagne-election",
+        "entityId": "aof-1904-federal-framework-core",
+        "category": "events-context",
+        "value": "Blaise Diagne was elected deputy for Senegal to the French Chamber of Deputies",
+        "temporal": {
+          "kind": "event",
+          "date": "1914-05-10",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "aof-1904-federal-framework-core-diagne-election",
+          "description": "Named historical administration or royal polity; no geometry-derived sovereignty or modern-country backprojection.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r15-assemblee-diagne"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r15-assemblee-diagne",
+            "locator": "Mandats, XIe législature; Jean Jolly biography election paragraph",
+            "note": "Senegal constituency within AOF, not election as ruler of the federation.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1914-05-10",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Curated research bounds are not historical foundation, accession or dissolution dates. Year-only evidence is not given invented event precision."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 15 French West African original institutional source packet",
+          "sourceIdentifier": "diagne-election"
+        }
+      },
+      {
+        "id": "r15-french-blaise-diagne-rights",
+        "entityId": "aof-1904-federal-framework-core",
+        "category": "important-figures",
+        "value": "Blaise Diagne — Senegal parliamentary representative and advocate concerning African political rights",
+        "temporal": {
+          "kind": "interval",
+          "from": "1919",
+          "until": "1933",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "aof-1904-federal-framework-core-blaise-diagne-rights",
+          "description": "Named historical administration or royal polity; no geometry-derived sovereignty or modern-country backprojection.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r15-assemblee-diagne"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r15-assemblee-diagne",
+            "locator": "Jean Jolly biography: political rights legislation1915–1916, recruitment mission1918; mandates1914–1934",
+            "note": "Significance rests on documented rights advocacy and regional political intervention, not officeholding alone. The account also records his support for colonial military recruitment.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1919",
+              "until": "1933",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Regional association is constituency and political activity, not projected modern nationality. Later1931 ministerial office is not presented as a1920 fact. Recruitment role was part of colonial government and is not idealised."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 15 French West African original institutional source packet",
+          "sourceIdentifier": "blaise-diagne-rights"
+        },
+        "figure": {
+          "personId": "blaise-diagne",
+          "name": "Blaise Diagne",
+          "categories": [
+            "political",
+            "reformist"
+          ],
+          "lifespan": {
+            "from": "1872-10-13",
+            "until": "1934-05-11"
+          },
+          "relationship": "Representative of Senegal, a constituent territory of AOF; regional recruitment commissioner in1918, not Governor-General.",
+          "activity": "Continued Senegal parliamentary representation and Dakar municipal political activity.",
+          "contribution": "Advocacy linking African political rights and military obligations, documented in legislation1915–1916."
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "r15-national-archives-aof-place",
+        "title": "Afrique Occidentale Française. 1895–1958 — place authority record",
+        "institution": "Archives nationales de France",
+        "url": "https://rdf.archives-nationales.culture.gouv.fr/garance/entities/place/FRAN_RI_005-d5bdp4q7h6-ul70lkju24s3/",
+        "accessed": "2026-10-02",
+        "kind": "official-archival-authority",
+        "usage": "Individual factual paraphrases and source locators; no source images or full source text redistributed."
+      },
+      {
+        "id": "r15-cirad-tourte-vol4",
+        "title": "Histoire de la recherche agricole en Afrique tropicale francophone, volume IV — René Tourte",
+        "institution": "CIRAD; René Tourte",
+        "url": "https://collaboratif.cirad.fr/alfresco/s/d/workspace/SpacesStore/f5efb13a-b1f6-4c07-974e-4d96dfd6d469/217506.pdf",
+        "accessed": "2026-10-02",
+        "kind": "institutional-scholarly-history",
+        "usage": "Individual factual paraphrases and source locators; no source images or full source text redistributed."
+      },
+      {
+        "id": "r15-bceao-institutional-chronology",
+        "title": "Chronologie des événements marquants de l’histoire de la BCEAO et de l’UMOA",
+        "institution": "Banque Centrale des États de l’Afrique de l’Ouest",
+        "url": "https://www.bceao.int/sites/default/files/2019-12/Chronologie%20des%20%C3%A9venements%20marquants%20de%20l%27histoire%20de%20la%20BCEAO%20et%20de%20l%27UMOA.pdf",
+        "accessed": "2026-10-02",
+        "kind": "official-institutional-history",
+        "usage": "Individual factual paraphrases and source locators; no source images or full source text redistributed."
+      },
+      {
+        "id": "r15-assemblee-diagne",
+        "title": "Blaise Diagne — parliamentary mandates and Jean Jolly biographical entry",
+        "institution": "Assemblée nationale de France",
+        "url": "https://www2.assemblee-nationale.fr/sycomore/fiche/2496",
+        "accessed": "2026-10-02",
+        "kind": "official-parliamentary-biography",
+        "usage": "Individual factual paraphrases and source locators; no source images or full source text redistributed."
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r15-national-archives-aof-place",
+          "b16-aof-archives",
+          "r15-cirad-tourte-vol4",
+          "r15-bceao-institutional-chronology",
+          "r15-assemblee-diagne"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r15-national-archives-aof-place",
+          "b16-aof-archives",
+          "r15-cirad-tourte-vol4",
+          "r15-bceao-institutional-chronology",
+          "r15-assemblee-diagne"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r15-national-archives-aof-place",
+          "b16-aof-archives",
+          "r15-cirad-tourte-vol4",
+          "r15-bceao-institutional-chronology",
+          "r15-assemblee-diagne"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r15-national-archives-aof-place",
+          "b16-aof-archives",
+          "r15-cirad-tourte-vol4",
+          "r15-bceao-institutional-chronology",
+          "r15-assemblee-diagne"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r15-national-archives-aof-place",
+          "b16-aof-archives",
+          "r15-cirad-tourte-vol4",
+          "r15-bceao-institutional-chronology",
+          "r15-assemblee-diagne"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent review of original institutional source bodies, preserved chronological/geographic qualifications and significance. Current mandate body unavailable: that new claim held. Exact research files bound; originals cited without wholesale copyrighted redistribution.",
+      "preservedPackageHashes": [
+        "3f4cd63c6f4e69aaf36a146116dad3c309393b3d989e07d6ab0346db37a4a06a",
+        "1aa9cc65a3ac2909a52dcfdaab75835d025724b2a235340caa8217d0e1ff3579"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "f249dcfd1482e3d9d43120a535aa0cce930295bc7bee74c3c9999123e381bf3e",
+    "productionFingerprint": "761d4b8a5391b9a18abfe8bae37f4baaab3b03d967fbef5e7e8f36b9679bec8e",
+    "jobId": "dossier-c37b784c795cffb0bff52ea8",
+    "review": {
+      "reviewer": "regional15-coordinator-independent-review",
+      "packageHash": "f249dcfd1482e3d9d43120a535aa0cce930295bc7bee74c3c9999123e381bf3e",
+      "bodyReviewed": true,
+      "rationale": "Independent review of original institutional source bodies, preserved chronological/geographic qualifications and significance. Current mandate body unavailable: that new claim held. Exact research files bound; originals cited without wholesale copyrighted redistribution.",
+      "reviewedIssues": [],
+      "decisions": {
+        "r15-french-dakar-federal-capital": "accepted",
+        "r15-french-ponty-governor-general": "accepted",
+        "r15-french-aof-colonial-franc": "accepted",
+        "r15-french-diagne-election": "accepted",
+        "r15-french-blaise-diagne-rights": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "r15-french-dakar-federal-capital",
+      "r15-french-ponty-governor-general",
+      "r15-french-aof-colonial-franc",
+      "r15-french-diagne-election",
+      "r15-french-blaise-diagne-rights"
+    ]
+  }
+}

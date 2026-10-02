@@ -1,0 +1,332 @@
+{
+  "job": {
+    "id": "dossier-fe413c20b8b31384427651d6",
+    "entityId": "togo-1960-independent-core",
+    "period": {
+      "from": "1960-04-27",
+      "until": "1961-01-01"
+    },
+    "mapIds": [
+      "entity-togo"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "cfbe8a1682222b8db9d77f7579f72cc2a18ba1e1248391558a6fa3ed6e986aa4",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "regional15-french-institutional-systems-togo-1960-independent-core",
+    "jobId": "dossier-fe413c20b8b31384427651d6",
+    "entityId": "togo-1960-independent-core",
+    "mapIds": [
+      "entity-togo"
+    ],
+    "worker": {
+      "id": "regional15-french-source-worker",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "cfbe8a1682222b8db9d77f7579f72cc2a18ba1e1248391558a6fa3ed6e986aa4",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1960-04-27",
+      "until": "1961-01-01"
+    },
+    "claims": [
+      {
+        "id": "r15-french-togo-cfa-1960",
+        "entityId": "togo-1960-independent-core",
+        "category": "currency",
+        "value": "CFA franc — BCEAO issue",
+        "temporal": {
+          "kind": "interval",
+          "from": "1960-04-27",
+          "until": "1961-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "togo-1960-independent-core-togo-cfa-1960",
+          "description": "Named historical administration or royal polity; no geometry-derived sovereignty or modern-country backprojection.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r15-bceao-institutional-chronology",
+          "r15-bceao-cfa-history"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r15-bceao-institutional-chronology",
+            "locator": "BCEAO chronology Introduction, Institut d’Émission AOF/Togo 1955–1959 and BCEAO from1959; CFA historical parities",
+            "note": "The emission history includes Togo and continues through 1960. Research bounds follow the independent entity rather than dating a currency introduction to independence.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1960-04-27",
+              "until": "1961-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "r15-bceao-cfa-history",
+            "locator": "BCEAO chronology Introduction, Institut d’Émission AOF/Togo 1955–1959 and BCEAO from1959; CFA historical parities",
+            "note": "The emission history includes Togo and continues through 1960. Research bounds follow the independent entity rather than dating a currency introduction to independence.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1960-04-27",
+              "until": "1961-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "No claim that the 1962 UMOA treaty had already entered force, or that its later currency-name expansion applied in 1960. Start/end are curated entity-window bounds."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 15 French West African original institutional source packet",
+          "sourceIdentifier": "togo-cfa-1960"
+        }
+      },
+      {
+        "id": "r15-french-togo-independence-event",
+        "entityId": "togo-1960-independent-core",
+        "category": "events-context",
+        "value": "Togo became independent from French-administered United Nations trusteeship",
+        "temporal": {
+          "kind": "event",
+          "date": "1960-04-27",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "togo-1960-independent-core-togo-independence-event",
+          "description": "Named historical administration or royal polity; no geometry-derived sovereignty or modern-country backprojection.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "b15-togo-independence"
+        ],
+        "evidence": [
+          {
+            "sourceId": "b15-togo-independence",
+            "locator": "U.S. Recognition of Togo,1960",
+            "note": "Official diplomatic history dates independence and U.S. recognition to27April1960. British Togoland is not merged into this entity.",
+            "precision": "day",
+            "temporal": {
+              "kind": "event",
+              "date": "1960-04-27",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Curated research bounds are not historical foundation, accession or dissolution dates. Year-only evidence is not given invented event precision."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional Batch 15 French West African original institutional source packet",
+          "sourceIdentifier": "togo-independence-event"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r15-bceao-institutional-chronology",
+          "r15-bceao-cfa-history",
+          "b15-togo-independence"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r15-bceao-institutional-chronology",
+          "r15-bceao-cfa-history",
+          "b15-togo-independence"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent review of original institutional source bodies, preserved chronological/geographic qualifications and significance. Current mandate body unavailable: that new claim held. Exact research files bound; originals cited without wholesale copyrighted redistribution.",
+      "preservedPackageHashes": [
+        "3f4cd63c6f4e69aaf36a146116dad3c309393b3d989e07d6ab0346db37a4a06a",
+        "1aa9cc65a3ac2909a52dcfdaab75835d025724b2a235340caa8217d0e1ff3579"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "771991a6b817126a3430ba6bde64629c46a63c3be53a3e93a31997eb7b65854b",
+    "productionFingerprint": "cfbe8a1682222b8db9d77f7579f72cc2a18ba1e1248391558a6fa3ed6e986aa4",
+    "jobId": "dossier-fe413c20b8b31384427651d6",
+    "review": {
+      "reviewer": "regional15-coordinator-independent-review",
+      "packageHash": "771991a6b817126a3430ba6bde64629c46a63c3be53a3e93a31997eb7b65854b",
+      "bodyReviewed": true,
+      "rationale": "Independent review of original institutional source bodies, preserved chronological/geographic qualifications and significance. Current mandate body unavailable: that new claim held. Exact research files bound; originals cited without wholesale copyrighted redistribution.",
+      "reviewedIssues": [],
+      "decisions": {
+        "r15-french-togo-cfa-1960": "accepted",
+        "r15-french-togo-independence-event": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "r15-french-togo-cfa-1960",
+      "r15-french-togo-independence-event"
+    ]
+  }
+}

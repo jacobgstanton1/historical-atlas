@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import {readJSON,saveJSON} from './research-common.mjs';
 const matrix=readJSON(process.argv[2]||'research/completion-01/reports/completion.json');
+const output=process.argv[3]||'research/regional-01';
+fs.mkdirSync(output,{recursive:true});
 const batches=[];
 for(let n=1;n<=21;n++){
  const tag=String(n).padStart(2,'0'), old=readJSON(`development/coverage/research-batch-${tag}.json`);
@@ -23,6 +25,6 @@ for(let n=1;n<=21;n++){
 // Deterministic opportunity proxy, not a claim of measured future research yield.
 batches.sort((a,b)=>b.unresolved-a.unresolved||b.sourceReuseOpportunity.sharedEntitySources.length-a.sourceReuseOpportunity.sharedEntitySources.length||a.entities.length-b.entities.length||a.batch.localeCompare(b.batch));
 const membership=new Map();for(const batch of batches)for(const row of batch.needs){const key=row.entityId+'|'+row.snapshot;membership.set(key,[...(membership.get(key)||[]),batch.batch]);}
-saveJSON('research/regional-01/workload.json',{baseline:matrix.productionFingerprint,metrics:matrix.metrics,rankingPolicy:'Unresolved volume first; shared-source reuse then entity-review burden break ties. Source review must confirm expected yield; no fabricated credit estimates.',cohortOverlap:{uniqueAssignedDossiers:membership.size,multipleCohortDossiers:[...membership].filter(([,ids])=>ids.length>1).map(([dossier,batches])=>({dossier,batches})),unassignedDossiers:matrix.rows.filter(r=>!membership.has(r.entityId+'|'+r.snapshotYear)).map(r=>({entityId:r.entityId,snapshot:r.snapshotYear}))},batches});
-fs.writeFileSync('research/regional-01/WORKLOAD.md','# Regional completion workload\n\nCurrent gaps only; supported categories excluded. Ranking is an unresolved-volume proxy, subject to source reuse and effort review.\n\n| Batch | Cohort | Entities | Dossiers | Unresolved | Partial | Held | Sparse |\n|---|---|---:|---:|---:|---:|---:|---:|\n'+batches.map(b=>`| ${b.batch} | ${b.title} | ${b.entities.length} | ${b.dossiers} | ${b.unresolved} | ${b.states.partial||0} | ${b.states.held||0} | ${b.criticallySparse} |`).join('\n')+'\n');
+saveJSON(output+'/workload.json',{baseline:matrix.productionFingerprint,metrics:matrix.metrics,rankingPolicy:'Unresolved volume first; shared-source reuse then entity-review burden break ties. Source review must confirm expected yield; no fabricated credit estimates.',cohortOverlap:{uniqueAssignedDossiers:membership.size,multipleCohortDossiers:[...membership].filter(([,ids])=>ids.length>1).map(([dossier,batches])=>({dossier,batches})),unassignedDossiers:matrix.rows.filter(r=>!membership.has(r.entityId+'|'+r.snapshotYear)).map(r=>({entityId:r.entityId,snapshot:r.snapshotYear}))},batches});
+fs.writeFileSync(output+'/WORKLOAD.md','# Regional completion workload\n\nCurrent gaps only; supported categories excluded. Ranking is an unresolved-volume proxy, subject to source reuse and effort review.\n\n| Batch | Cohort | Entities | Dossiers | Unresolved | Partial | Held | Sparse |\n|---|---|---:|---:|---:|---:|---:|---:|\n'+batches.map(b=>`| ${b.batch} | ${b.title} | ${b.entities.length} | ${b.dossiers} | ${b.unresolved} | ${b.states.partial||0} | ${b.states.held||0} | ${b.criticallySparse} |`).join('\n')+'\n');
 console.log(JSON.stringify(batches.map(({batch,title,entities,dossiers,unresolved,sourceReuseOpportunity})=>({batch,title,entities:entities.length,dossiers,unresolved,sharedSources:sourceReuseOpportunity.sharedEntitySources.length})),null,2));
