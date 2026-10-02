@@ -1,0 +1,23 @@
+# Responsible dossier completion
+
+The frozen atlas UI is independent of this internal research programme. Run `node scripts/research-completion.mjs` to regenerate `research/completion-01/reports/completion.json`, `completion.md` and `priority-queue.json`. Production data is read only. The report retains the previous 14-category metric and adds a fifteenth, Historical Context / Status. Explicit sourced political-status claims support that category; ordinary government form, generic warnings and pipeline commentary do not.
+
+Evidence coverage is fully supported slots / applicable slots (excluding independently established non-applicability). Research resolution is supported + evidence-established uncertain + known unavailable + not applicable + genuinely resolved territorial incompatibility / all assessed slots. Partial, missing and held are separate and unresolved. These measures describe the current category granularity, not exhaustive historical knowledge. Core-supported means identity, political institutions, leadership and capital are supported. Critically sparse means fewer than three fully supported categories. Unresolved raw map identities remain a separate open-work inventory outside the resolved entity denominator. Invalid undated legacy records are disclosed and excluded, never assigned guessed dates.
+
+## Evidence-based resolution records
+
+Optional `resolutions.json` is an array. Each entry requires `id`, `entityId`, `category`, `period: {from, until}`, `status`, `rationale`, `evidenceNote`, `scope`, `sourceIds`, `worker` and `review: {reviewer, decision: "accepted", contentHash}`. The hash is `research-common.digest(entry without review)`. Reviewer must differ from worker. Source references must resolve to titled, institutional, linked sources. Intervals cannot overlap for the same entity/category; exact end dates are exclusive. Imprecise start/end years are conservatively excluded at transition boundaries. Assessments cannot overwrite sourced facts.
+
+Permitted resolution states: `uncertain`, `known-unavailable`, `not-applicable`, `territorially-incompatible`. Unavailability requires documented reasonable investigation, not an empty search result. Incompatibility additionally requires `assessmentScope: "category-question-resolved"`: one modern-border or otherwise unsuitable candidate cannot settle an entire historical population question. All assessment claims require historical review; deterministic validation cannot prove a reviewer's historical interpretation. Do not create cosmetic resolutions to raise percentages.
+
+Optional `held.json` entries require `id`, `entityId`, `category`, `snapshotYears`, `reason`, `evidencePath`. They link preserved candidate evidence to bounded slots. Held evidence never counts as resolution. The scanner also routes conflicting, unsupported or scope-mismatched existing evidence to held. Do not invent mappings to attach held evidence.
+
+## Acquisition and checkpoints
+
+Use the generated stable entity/year/category jobs. Prioritize sparse dossiers and missing core fields, but select source-wide tranches by expected responsibly supported new slots per cost. Cache reuse is preferred. Research workers write isolated source-bound candidates; independent review binds observations, dates, scope, entity records and original bytes. Production integration is serial through existing strict bulk/comprehensive validation, acceptance and atomic integration journal. Never mutate frozen adapter contracts or approved packages to extend a cohort: create a new cohort and bind its parser bytes. Normalize new parsers before certification; preserve original publisher bytes.
+
+Store observations/events at their actual dates. One interval claim may support several snapshots without being duplicated. Modern-border historical estimates do not become historical-polity populations. Dataset country names do not establish sovereignty or succession. Reuse sources by exact URL and retain qualifications. Conflicts remain held.
+
+After each meaningful tranche: validate, integrate, regenerate completion reports, compare against the immutable campaign baseline, checkpoint/push, verify Pages and live production registry, then continue. Data-only work uses zero browser checks. Preserve unfinished candidates and an exact handoff when stopping; do not stop just because the included primary allowance is exhausted when paid credits are authorized.
+
+Focused tests: `node --test tests/research-completion.test.mjs tests/research-snapshot-scan.test.mjs`. The status model, provenance gates, no fractional scoring, precision boundaries, deterministic jobs and pre-integration production immutability are tested.
