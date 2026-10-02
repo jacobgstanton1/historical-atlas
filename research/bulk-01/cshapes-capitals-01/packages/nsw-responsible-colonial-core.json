@@ -1,0 +1,275 @@
+{
+  "job": {
+    "id": "dossier-ee1704957a4355ef34967820",
+    "entityId": "nsw-responsible-colonial-core",
+    "period": {
+      "from": "1887-01-01",
+      "until": "1900-01-01"
+    },
+    "mapIds": [
+      "entity-new-south-wales-uk"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "260f0771b4730c5a506d47f3b59bb8e499a05f87b64ceafa42b11bcc23a378a2",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "cshapes-capitals-01-nsw-responsible-colonial-core",
+    "jobId": "dossier-ee1704957a4355ef34967820",
+    "entityId": "nsw-responsible-colonial-core",
+    "mapIds": [
+      "entity-new-south-wales-uk"
+    ],
+    "worker": {
+      "id": "bulk-parser/dated-academic-capital-interval/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "260f0771b4730c5a506d47f3b59bb8e499a05f87b64ceafa42b11bcc23a378a2",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1887-01-01",
+      "until": "1900-01-01"
+    },
+    "claims": [
+      {
+        "id": "bulk-73583ee560da8f1c33d5442f-5f75570fb8",
+        "category": "capital",
+        "value": "Sydney",
+        "entityId": "nsw-responsible-colonial-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1887-01-01",
+          "until": "1900-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "nsw-responsible-colonial-core-coded-capital",
+          "description": "Capital (CShapes2 academic coding) for the independently curated historical framework New South Wales — self-governing British colony; no claim of exclusive/constitutional/administrative seat, territorial control or source-derived sovereignty.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk02-cshapes-2-capital-periods"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk02-cshapes-2-capital-periods",
+            "locator": "Released CShapes2 GW properties fid=648; country_name/start/end/capname",
+            "note": "Original-source parser extract-cshapes-properties-v1; body SHA256 196c6d9d881cf944e176e4ce5bfc61074d21792de7152cb0a9e035e56b0297c8; {\"fid\":648,\"gwcode\":901,\"country_name\":\"New South Wales\",\"start\":\"1886-01-01\",\"end\":\"1900-12-31\",\"capname\":\"Sydney\"}; Independent review of original CShapes codebook pp1–3 (unchanged attributes including capname; possible default dates), released property columns and publisher cshp.R inclusive selection. Coordinator reviewed capital-name/framework associations; source naming/seat/default/occupation contradictions remain held. Original row proof retains all 591 historical decisions, 480 held. Geometry, owner/status and polygon overlap are never historical evidence.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1887-01-01",
+              "until": "1900-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-supported interval: 1886-01-01 to 1900-12-31 inclusive (publisher coding).",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. Possible January1/year and first-month defaults exclude their boundary year/month; other final coded day omitted conservatively. These safe interior bounds never assert a capital change/founding event.",
+          "Capital (CShapes2 academic coding) for the independently curated historical framework New South Wales — self-governing British colony; no claim of exclusive/constitutional/administrative seat, territorial control or source-derived sovereignty.",
+          "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+          "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates.",
+          "These are conservative interiors of source-coded unchanged-attribute periods, not asserted exact historical capital-change days. Original coded dates and endpoint uncertainty remain in the research package.",
+          "Place names are literal dated source attributes. Conservative source endpoint interiors and separate entity-framework bounds are retained; no inferred predecessor/successor."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-73583ee560da8f1c33d5442f",
+          "sourceIdentifier": "Released CShapes2 GW properties fid=648; country_name/start/end/capname"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "bulk02-cshapes-2-capital-periods"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T09:19:58.436Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "53ca865d84b5c19233bcd41d9ec357b0f9416ae15f7c9cb6b3124f06e213465d",
+        "257fc051ce18555f9b8fd61073c1de0deda477d5b79b6742ada52b8c06194005"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "5f42b69530d3c82c5f0bff249cfe0d06bd8155564ec748e58a68314e16bbc8ca",
+    "productionFingerprint": "260f0771b4730c5a506d47f3b59bb8e499a05f87b64ceafa42b11bcc23a378a2",
+    "jobId": "dossier-ee1704957a4355ef34967820",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "5f42b69530d3c82c5f0bff249cfe0d06bd8155564ec748e58a68314e16bbc8ca",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by coordinator-independent-codebook-attribute-identity-review; contract 257fc051ce18555f9b8fd61073c1de0deda477d5b79b6742ada52b8c06194005; adapter dated-academic-capital-interval/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-73583ee560da8f1c33d5442f-5f75570fb8": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-73583ee560da8f1c33d5442f-5f75570fb8"
+    ]
+  }
+}

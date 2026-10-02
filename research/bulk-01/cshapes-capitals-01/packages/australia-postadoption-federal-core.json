@@ -1,0 +1,275 @@
+{
+  "job": {
+    "id": "dossier-dcaa67d9b6fa8cacbd722418",
+    "entityId": "australia-postadoption-federal-core",
+    "period": {
+      "from": "1945-01-01",
+      "until": "1961-01-01"
+    },
+    "mapIds": [
+      "entity-australia"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "d4eac532889f5a662e1af01a8c0a257e05414f40b33e22ffc8b8aff9be04b863",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "cshapes-capitals-01-australia-postadoption-federal-core",
+    "jobId": "dossier-dcaa67d9b6fa8cacbd722418",
+    "entityId": "australia-postadoption-federal-core",
+    "mapIds": [
+      "entity-australia"
+    ],
+    "worker": {
+      "id": "bulk-parser/dated-academic-capital-interval/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "d4eac532889f5a662e1af01a8c0a257e05414f40b33e22ffc8b8aff9be04b863",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1945-01-01",
+      "until": "1961-01-01"
+    },
+    "claims": [
+      {
+        "id": "bulk-f6fb45f9f8e5f694cd39e816-83953f285b",
+        "category": "capital",
+        "value": "Canberra",
+        "entityId": "australia-postadoption-federal-core",
+        "temporal": {
+          "kind": "interval",
+          "from": "1945-01-01",
+          "until": "1961-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "australia-postadoption-federal-core-coded-capital",
+          "description": "Capital (CShapes2 academic coding) for the independently curated historical framework Australia — federal constitutional framework after Westminster adoption; no claim of exclusive/constitutional/administrative seat, territorial control or source-derived sovereignty.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk02-cshapes-2-capital-periods"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk02-cshapes-2-capital-periods",
+            "locator": "Released CShapes2 GW properties fid=646; country_name/start/end/capname",
+            "note": "Original-source parser extract-cshapes-properties-v1; body SHA256 196c6d9d881cf944e176e4ce5bfc61074d21792de7152cb0a9e035e56b0297c8; {\"fid\":646,\"gwcode\":900,\"country_name\":\"Australia\",\"start\":\"1927-05-09\",\"end\":\"2019-12-31\",\"capname\":\"Canberra\"}; Independent review of original CShapes codebook pp1–3 (unchanged attributes including capname; possible default dates), released property columns and publisher cshp.R inclusive selection. Coordinator reviewed capital-name/framework associations; source naming/seat/default/occupation contradictions remain held. Original row proof retains all 591 historical decisions, 480 held. Geometry, owner/status and polygon overlap are never historical evidence.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1927-05-09",
+              "until": "2019-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-supported interval: 1927-05-09 to 2019-12-31 inclusive (publisher coding).",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. Possible January1/year and first-month defaults exclude their boundary year/month; other final coded day omitted conservatively. These safe interior bounds never assert a capital change/founding event.",
+          "Capital (CShapes2 academic coding) for the independently curated historical framework Australia — federal constitutional framework after Westminster adoption; no claim of exclusive/constitutional/administrative seat, territorial control or source-derived sovereignty.",
+          "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+          "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates.",
+          "These are conservative interiors of source-coded unchanged-attribute periods, not asserted exact historical capital-change days. Original coded dates and endpoint uncertainty remain in the research package.",
+          "Place names are literal dated source attributes. Conservative source endpoint interiors and separate entity-framework bounds are retained; no inferred predecessor/successor."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-f6fb45f9f8e5f694cd39e816",
+          "sourceIdentifier": "Released CShapes2 GW properties fid=646; country_name/start/end/capname"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "bulk02-cshapes-2-capital-periods"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T09:19:52.378Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "53ca865d84b5c19233bcd41d9ec357b0f9416ae15f7c9cb6b3124f06e213465d",
+        "257fc051ce18555f9b8fd61073c1de0deda477d5b79b6742ada52b8c06194005"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "99a6e4c2ea26eb368fdaf0daaf60a2494f4bc7f725727fbf24956976c85fe420",
+    "productionFingerprint": "d4eac532889f5a662e1af01a8c0a257e05414f40b33e22ffc8b8aff9be04b863",
+    "jobId": "dossier-dcaa67d9b6fa8cacbd722418",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "99a6e4c2ea26eb368fdaf0daaf60a2494f4bc7f725727fbf24956976c85fe420",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by coordinator-independent-codebook-attribute-identity-review; contract 257fc051ce18555f9b8fd61073c1de0deda477d5b79b6742ada52b8c06194005; adapter dated-academic-capital-interval/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-f6fb45f9f8e5f694cd39e816-83953f285b": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-f6fb45f9f8e5f694cd39e816-83953f285b"
+    ]
+  }
+}

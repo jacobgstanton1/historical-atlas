@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readContext,readJSON} from '../scripts/research-common.mjs';
+import {capitalIntake} from '../scripts/research-bulk-capitals.mjs';
+import {prepareCandidates,verifyContract} from '../scripts/research-bulk.mjs';
+const {manifest,contract}=capitalIntake();
+test('591 original decisions, default/naming holds and parser body binding retained',()=>{assert.equal(manifest.rows.length,591);assert.equal(manifest.rows.filter(r=>r.disposition==='historical-review').length,480);assert.equal(verifyContract(contract,manifest),true);});
+test('academic capital evidence never uses geometry owner status or sovereignty',()=>{assert.deepEqual(manifest.prohibitedFields,['geometry','owner','status','area']);for(const r of manifest.rows.filter(r=>r.disposition==='candidate'))assert.equal(r.category,'capital');});
+test('Jan1 coded start drops uncertain year rather than inventing change date',()=>{const r=manifest.rows.find(r=>r.id==='cshapes-capital-fid-1');assert.equal(r.from,'1887-01-01');assert.match(r.originalRow,/1886-01-01/);assert.ok(r.qualifications.some(q=>q.includes('not asserted exact historical')));});
+test('modern renamed defaults and dual capital conflicts remain held',()=>{for(const r of manifest.rows.filter(r=>/Mozambique|Gambia|Mauritania|Austria-Hungary|Dominican Republic|Netherlands|Bolivia/.test(r.originalRow)))assert.equal(r.disposition,'historical-review');});
+test('capital intervals and multiple mapping windows have unique IDs and preserve production',()=>{const context=readContext(),before=context.productionFingerprint,c=prepareCandidates(manifest,contract,context),claims=c.flatMap(r=>r.claims.filter(x=>x.status==='accepted-candidate').map(x=>x.claim));assert.ok(claims.length>50);assert.equal(new Set(claims.map(c=>c.id)).size,claims.length);assert.ok(claims.every(c=>c.category==='capital'&&!c.role));assert.equal(readContext().productionFingerprint,before);});

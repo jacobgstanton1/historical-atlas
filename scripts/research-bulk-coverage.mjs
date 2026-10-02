@@ -9,7 +9,7 @@ const name=process.argv[2];if(!/^[a-z0-9-]+$/.test(name||''))throw Error('Named 
 const baselineStore=JSON.parse(execFileSync('git',['show',baseline.commit+':data/comprehensive-dossiers.json'],{encoding:'utf8',maxBuffer:50_000_000}));
 const current=readJSON('data/comprehensive-dossiers.json'),before=fs.existsSync(base+'reports/coverage-latest.json')?readJSON(base+'reports/coverage-latest.json'):baseline.coverage;
 const scanned=scanSnapshots(readContext());
-const after=writeSnapshotReport(scanned,base+'reports','coverage-latest');
+const after=writeSnapshotReport(scanned,base+'reports',{basename:'coverage-latest'});
 const compare=(a,b)=>{
  const index=new Map(a.rows.map(r=>[r.entityId+'|'+r.snapshotYear,r]));
  const filled=[],material=[],transitions={};

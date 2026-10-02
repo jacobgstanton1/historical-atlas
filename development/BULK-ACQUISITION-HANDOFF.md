@@ -44,3 +44,6 @@ Continue highest-yield bulk categories after1960 while budget safely permits. Pr
 
 ## Coverage-value campaign:1960 complete
 234 claims integrated (8 currency-unit observations/226 FX), production1773.27 net supportedcategoryslots,21 materiallyimproveddossiers.17602 integritychecks and17focusedtests passed.Original52holds plus11reconciliationholds retained;3duplicates excluded. Currentbaseline/reports research/bulk-02. Next: capitaltemporalreview/CShapes source and UN1960population, stagedUSflags; do not repeat1960. FurtherFXlowerpriority.
+
+## Capital checkpoint
+99 additional source-qualifiedcapitalclaims in81packages;production1872.153 netnewcapital slots, campaignnet180 slots.19737 integritychecks;17focusedtests pass. Sourceendpointuncertainties conservativelynarrowed; 514 heldsource/reconciliationrows and5duplicates preserved. OriginalAlmanac100allheld reviewed; no borrowed dates. Next:22independentlyapprovedpopulation observations,USflags andTagore packages; preserve ambiguity.

@@ -94,9 +94,11 @@ export function prepareCandidates(manifest,contract,context){
    from=[from,m.from,'1800-01-01'].sort().at(-1);until=[until,m.until,'1961-01-01'].sort()[0];
    if(from>=until)continue;
    const s=sourceRecord(source,context);
-   const qualifications=[`Source tenure: ${r.originalTerm||r.from+' to '+r.until}.`,`Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. ${contract.endpointNote}`,m.scope];
+   const category=r.category||'leadership';
+   requireThat(['leadership','capital','political-institutional'].includes(category),'Unsupported source-bound interval category');
+   const qualifications=[`${category==='leadership'?'Source tenure':'Source-supported interval'}: ${r.originalTerm||r.from+' to '+r.until}.`,`Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. ${contract.endpointNote}`,m.scope,...(r.qualifications||[])];
    if(m.qualification)qualifications.push(m.qualification);
-   const claim={id:envelope.id+'-'+digest(m.entityId).slice(0,10),category:'leadership',value:r.name,role:m.role||normalizedRole(r.officeTitle),entityId:m.entityId,temporal:{kind:'interval',from,until,certainty:'exact'},scope:{id:m.entityId+'-central-office',description:m.scope,relationship:'same'},sourceIds:[s.id],evidence:[{sourceId:s.id,locator:r.locator,note:`Original-source parser ${source.parser}; body SHA256 ${source.sha256}; ${r.originalRow||r.originalTerm}; ${contract.rationale}`,precision:r.precision,temporal:original,interpretation:'direct'}],status:'supported',risks:[],qualifications,origin:{kind:'bulk-candidate',reference:envelope.id,sourceIdentifier:r.locator}};
+   const claim={id:envelope.id+'-'+digest(category==='leadership'?m.entityId:{entityId:m.entityId,from,until}).slice(0,10),category,value:category==='leadership'?r.name:r.value,...(category==='leadership'?{role:m.role||normalizedRole(r.officeTitle)}:{}),entityId:m.entityId,temporal:{kind:'interval',from,until,certainty:'exact'},scope:{id:m.scopeId||m.entityId+'-central-office',description:m.scope,relationship:'same'},sourceIds:[s.id],evidence:[{sourceId:s.id,locator:r.locator,note:`Original-source parser ${source.parser}; body SHA256 ${source.sha256}; ${r.originalRow||r.originalTerm}; ${contract.rationale}`,precision:r.precision,temporal:original,interpretation:'direct'}],status:'supported',risks:[],qualifications,origin:{kind:'bulk-candidate',reference:envelope.id,sourceIdentifier:r.locator}};
    const result=reconcile(claim,context,pending.filter(p=>p.entityId===m.entityId));
    envelope.claims.push({claim,source:s,...result});
    if(result.status==='accepted-candidate')pending.push(claim);

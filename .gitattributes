@@ -9,3 +9,15 @@ research/bulk-01/**/*.py text eol=lf
 research/bulk-01/next-sources/*.txt -text -diff
 research/bulk-01/worker-currency/*-layout.txt -text -diff
 research/bulk-01/worker-capitals/*.txt -text -diff
+research/bulk-02/**/cache/* -text -diff
+research/bulk-02/**/*.mjs text eol=lf
+research/bulk-02/**/*.py text eol=lf
+research/bulk-02/figures-flags/staged-assets/*.svg -text
+research/bulk-02/figures-flags/asset-validation/assets/flags/*.svg -text
+assets/flags/us-15.svg -text
+assets/flags/us-38.svg -text
+assets/flags/us-45.svg -text
+# Preserve frozen reviewed worker-parser bytes across Windows checkout.
+research/bulk-02/**/*.mjs -text
+research/bulk-02/**/*.py -text
+research/bulk-02/capitals/normalize-cshapes.mjs -diff
