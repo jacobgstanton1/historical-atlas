@@ -1,0 +1,1244 @@
+{
+  "job": {
+    "id": "dossier-57ca08a229c18d77dcf1b7fc",
+    "entityId": "united-kingdom",
+    "period": {
+      "from": "1875-01-01",
+      "until": "1951-10-26"
+    },
+    "mapIds": [
+      "entity-united-kingdom",
+      "entity-united-kingdom-of-great-britain-and-ireland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "1402fb96b02cc192e164be9740ca7d633d7df3642e9341cda85420bf5d9ba693",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "archigos-officeholders-03-united-kingdom",
+    "jobId": "dossier-57ca08a229c18d77dcf1b7fc",
+    "entityId": "united-kingdom",
+    "mapIds": [
+      "entity-united-kingdom",
+      "entity-united-kingdom-of-great-britain-and-ireland"
+    ],
+    "worker": {
+      "id": "bulk-parser/dated-academic-effective-leader/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "1402fb96b02cc192e164be9740ca7d633d7df3642e9341cda85420bf5d9ba693",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1875-01-01",
+      "until": "1951-10-26"
+    },
+    "claims": [
+      {
+        "id": "bulk-5d8d98a6f11347fab24e2a31-2fd3da0793",
+        "category": "leadership",
+        "value": "Disraeli",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1875-01-01",
+          "until": "1880-04-18",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1874; leadid 1975cb98-3bbd-11e5-afeb-eb6f07f9fec7; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1874\",\"leadid\":\"1975cb98-3bbd-11e5-afeb-eb6f07f9fec7\",\"idacr\":\"UKG\",\"leader\":\"Disraeli\",\"startdate\":\"1874-02-20\",\"enddate\":\"1880-04-18\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1874-02-20",
+              "until": "1880-04-18",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1874-02-20 to 1880-04-18.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-5d8d98a6f11347fab24e2a31",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1874; leadid 1975cb98-3bbd-11e5-afeb-eb6f07f9fec7; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-597c8f02063f313b3db05a39-2fd3da0793",
+        "category": "leadership",
+        "value": "Gladstone",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1880-04-28",
+          "until": "1885-06-09",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1880; leadid 3568a438-3bbd-11e5-afeb-eb6f07f9fec7; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1880\",\"leadid\":\"3568a438-3bbd-11e5-afeb-eb6f07f9fec7\",\"idacr\":\"UKG\",\"leader\":\"Gladstone\",\"startdate\":\"1880-04-28\",\"enddate\":\"1885-06-09\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1880-04-28",
+              "until": "1885-06-09",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1880-04-28 to 1885-06-09.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-597c8f02063f313b3db05a39",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1880; leadid 3568a438-3bbd-11e5-afeb-eb6f07f9fec7; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-7a68ba575487600d02c45640-2fd3da0793",
+        "category": "leadership",
+        "value": "Salisbury",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1885-06-24",
+          "until": "1886-01-26",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1885; leadid 8206b883-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1885\",\"leadid\":\"8206b883-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Salisbury\",\"startdate\":\"1885-06-24\",\"enddate\":\"1886-01-26\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1885-06-24",
+              "until": "1886-01-26",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1885-06-24 to 1886-01-26.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-7a68ba575487600d02c45640",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1885; leadid 8206b883-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-a44c58c52ff62f00bc2dc48f-2fd3da0793",
+        "category": "leadership",
+        "value": "Gladstone",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1886-02-03",
+          "until": "1886-07-20",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1886-1; leadid 3568a438-3bbd-11e5-afeb-eb6f07f9fec7; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1886-1\",\"leadid\":\"3568a438-3bbd-11e5-afeb-eb6f07f9fec7\",\"idacr\":\"UKG\",\"leader\":\"Gladstone\",\"startdate\":\"1886-02-03\",\"enddate\":\"1886-07-20\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1886-02-03",
+              "until": "1886-07-20",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1886-02-03 to 1886-07-20.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-a44c58c52ff62f00bc2dc48f",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1886-1; leadid 3568a438-3bbd-11e5-afeb-eb6f07f9fec7; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-02993508200ddd1b7e092133-2fd3da0793",
+        "category": "leadership",
+        "value": "Salisbury",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1886-08-03",
+          "until": "1892-08-11",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1886-2; leadid 8206b883-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1886-2\",\"leadid\":\"8206b883-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Salisbury\",\"startdate\":\"1886-08-03\",\"enddate\":\"1892-08-11\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1886-08-03",
+              "until": "1892-08-11",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1886-08-03 to 1892-08-11.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-02993508200ddd1b7e092133",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1886-2; leadid 8206b883-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-9eb440f53f8933822f6115b1-2fd3da0793",
+        "category": "leadership",
+        "value": "Gladstone",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1892-08-16",
+          "until": "1894-03-03",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1892; leadid 3568a438-3bbd-11e5-afeb-eb6f07f9fec7; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1892\",\"leadid\":\"3568a438-3bbd-11e5-afeb-eb6f07f9fec7\",\"idacr\":\"UKG\",\"leader\":\"Gladstone\",\"startdate\":\"1892-08-16\",\"enddate\":\"1894-03-03\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1892-08-16",
+              "until": "1894-03-03",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1892-08-16 to 1894-03-03.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-9eb440f53f8933822f6115b1",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1892; leadid 3568a438-3bbd-11e5-afeb-eb6f07f9fec7; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-095fcfa89daa5f6ab21aa8fd-2fd3da0793",
+        "category": "leadership",
+        "value": "Rosebery",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1894-03-06",
+          "until": "1895-06-24",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1894; leadid 8206b884-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1894\",\"leadid\":\"8206b884-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Rosebery\",\"startdate\":\"1894-03-06\",\"enddate\":\"1895-06-24\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1894-03-06",
+              "until": "1895-06-24",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1894-03-06 to 1895-06-24.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-095fcfa89daa5f6ab21aa8fd",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1894; leadid 8206b884-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-92ce3338d62f56a9af12d8c4-2fd3da0793",
+        "category": "leadership",
+        "value": "Salisbury",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1895-06-28",
+          "until": "1902-07-11",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1895; leadid 8206b883-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1895\",\"leadid\":\"8206b883-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Salisbury\",\"startdate\":\"1895-06-28\",\"enddate\":\"1902-07-11\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1895-06-28",
+              "until": "1902-07-11",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1895-06-28 to 1902-07-11.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-92ce3338d62f56a9af12d8c4",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1895; leadid 8206b883-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-5ae3c248bdf5d470e91bd985-2fd3da0793",
+        "category": "leadership",
+        "value": "Balfour",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1902-07-12",
+          "until": "1905-12-04",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1902; leadid 8206b885-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1902\",\"leadid\":\"8206b885-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Balfour\",\"startdate\":\"1902-07-12\",\"enddate\":\"1905-12-04\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1902-07-12",
+              "until": "1905-12-04",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1902-07-12 to 1905-12-04.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-5ae3c248bdf5d470e91bd985",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1902; leadid 8206b885-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-7665bbd34bbdb8abf68a9536-2fd3da0793",
+        "category": "leadership",
+        "value": "Campbell-Bannerman",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1905-12-10",
+          "until": "1908-04-06",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1905; leadid 8206e956-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1905\",\"leadid\":\"8206e956-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Campbell-Bannerman\",\"startdate\":\"1905-12-10\",\"enddate\":\"1908-04-06\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1905-12-10",
+              "until": "1908-04-06",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1905-12-10 to 1908-04-06.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-7665bbd34bbdb8abf68a9536",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1905; leadid 8206e956-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-b3def0fc8772f0f24e7b80b3-2fd3da0793",
+        "category": "leadership",
+        "value": "Asquith",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1908-04-06",
+          "until": "1916-12-05",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1908; leadid 8206e957-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1908\",\"leadid\":\"8206e957-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Asquith\",\"startdate\":\"1908-04-06\",\"enddate\":\"1916-12-05\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1908-04-06",
+              "until": "1916-12-05",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1908-04-06 to 1916-12-05.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-b3def0fc8772f0f24e7b80b3",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1908; leadid 8206e957-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-1de8e904191bd12945d3191d-2fd3da0793",
+        "category": "leadership",
+        "value": "Lloyd-George",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1916-12-10",
+          "until": "1922-10-19",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1916; leadid 8206e958-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1916\",\"leadid\":\"8206e958-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Lloyd-George\",\"startdate\":\"1916-12-10\",\"enddate\":\"1922-10-19\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1916-12-10",
+              "until": "1922-10-19",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1916-12-10 to 1922-10-19.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-1de8e904191bd12945d3191d",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1916; leadid 8206e958-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-46bd8a698b09b5ab508fb80c-2fd3da0793",
+        "category": "leadership",
+        "value": "Bonar Law",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1922-10-24",
+          "until": "1923-05-20",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1922; leadid 8206e959-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1922\",\"leadid\":\"8206e959-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Bonar Law\",\"startdate\":\"1922-10-24\",\"enddate\":\"1923-05-20\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1922-10-24",
+              "until": "1923-05-20",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1922-10-24 to 1923-05-20.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-46bd8a698b09b5ab508fb80c",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1922; leadid 8206e959-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-5eb7587e72b16cb952b03637-2fd3da0793",
+        "category": "leadership",
+        "value": "Baldwin",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1923-05-27",
+          "until": "1924-01-22",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1923; leadid 82071a2a-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1923\",\"leadid\":\"82071a2a-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Baldwin\",\"startdate\":\"1923-05-27\",\"enddate\":\"1924-01-22\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1923-05-27",
+              "until": "1924-01-22",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1923-05-27 to 1924-01-22.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-5eb7587e72b16cb952b03637",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1923; leadid 82071a2a-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-2ad87a87dabfc889ea078818-2fd3da0793",
+        "category": "leadership",
+        "value": "MacDonald",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1924-01-23",
+          "until": "1924-11-04",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1924-1; leadid 82071a2b-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1924-1\",\"leadid\":\"82071a2b-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"MacDonald\",\"startdate\":\"1924-01-23\",\"enddate\":\"1924-11-04\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1924-01-23",
+              "until": "1924-11-04",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1924-01-23 to 1924-11-04.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-2ad87a87dabfc889ea078818",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1924-1; leadid 82071a2b-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-e7c5d75c178fe04180366ecb-2fd3da0793",
+        "category": "leadership",
+        "value": "Baldwin",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1924-11-06",
+          "until": "1929-06-04",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1924-2; leadid 82071a2a-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1924-2\",\"leadid\":\"82071a2a-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Baldwin\",\"startdate\":\"1924-11-06\",\"enddate\":\"1929-06-04\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1924-11-06",
+              "until": "1929-06-04",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1924-11-06 to 1929-06-04.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-e7c5d75c178fe04180366ecb",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1924-2; leadid 82071a2a-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-935676bfa7dbb6a574c21ef4-2fd3da0793",
+        "category": "leadership",
+        "value": "MacDonald",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1929-06-08",
+          "until": "1935-06-07",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1929; leadid 82071a2b-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1929\",\"leadid\":\"82071a2b-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"MacDonald\",\"startdate\":\"1929-06-08\",\"enddate\":\"1935-06-07\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1929-06-08",
+              "until": "1935-06-07",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1929-06-08 to 1935-06-07.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-935676bfa7dbb6a574c21ef4",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1929; leadid 82071a2b-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-69144aa0cb1c2a05b2a18a09-2fd3da0793",
+        "category": "leadership",
+        "value": "Baldwin",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1935-06-07",
+          "until": "1937-05-28",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1935; leadid 82071a2a-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1935\",\"leadid\":\"82071a2a-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Baldwin\",\"startdate\":\"1935-06-07\",\"enddate\":\"1937-05-28\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1935-06-07",
+              "until": "1937-05-28",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1935-06-07 to 1937-05-28.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-69144aa0cb1c2a05b2a18a09",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1935; leadid 82071a2a-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-505c06722e73e0c2c7a1ad40-2fd3da0793",
+        "category": "leadership",
+        "value": "Chamberlin",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1937-05-28",
+          "until": "1940-05-10",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1937; leadid 82071a2c-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1937\",\"leadid\":\"82071a2c-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Chamberlin\",\"startdate\":\"1937-05-28\",\"enddate\":\"1940-05-10\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1937-05-28",
+              "until": "1940-05-10",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1937-05-28 to 1940-05-10.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-505c06722e73e0c2c7a1ad40",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1937; leadid 82071a2c-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      },
+      {
+        "id": "bulk-00c56202cd332efa897dbfc8-2fd3da0793",
+        "category": "leadership",
+        "value": "Atlee",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "united-kingdom",
+        "temporal": {
+          "kind": "interval",
+          "from": "1945-07-27",
+          "until": "1951-10-26",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "united-kingdom-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row UKG-1945; leadid 82074afe-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"UKG-1945\",\"leadid\":\"82074afe-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"UKG\",\"leader\":\"Atlee\",\"startdate\":\"1945-07-27\",\"enddate\":\"1951-10-26\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1945-07-27",
+              "until": "1951-10-26",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1945-07-27 to 1951-10-26.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within United Kingdom; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-00c56202cd332efa897dbfc8",
+          "sourceIdentifier": "Archigos v4.1 original DTA row UKG-1945; leadid 82074afe-1e42-11e4-b4cd-db5882bf8def; idacr UKG; STARTDATE/ENDDATE"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "partial",
+        "rationale": "Source-first dated officeholder tranche; other offices and unsourced dates remain gaps.",
+        "consultedSourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Offices/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T03:35:57.989Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "55c09ffcbcc43aea841ad14896055fe8c52c2b04ebf674063ac28dcb215aac04",
+        "a081c56d47f8219b3e084b8c3f7e955609f4fe782eb9b572858e85177d0c4231"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "aa2b8a4065891e34da46ed05037018a826c5d40a42ed5c996703a476204190fd",
+    "productionFingerprint": "1402fb96b02cc192e164be9740ca7d633d7df3642e9341cda85420bf5d9ba693",
+    "jobId": "dossier-57ca08a229c18d77dcf1b7fc",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "aa2b8a4065891e34da46ed05037018a826c5d40a42ed5c996703a476204190fd",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by scale-flags-independent-archigos / coordinator-normalized-core-field-review; contract a081c56d47f8219b3e084b8c3f7e955609f4fe782eb9b572858e85177d0c4231; adapter dated-academic-effective-leader/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-5d8d98a6f11347fab24e2a31-2fd3da0793": "accepted",
+        "bulk-597c8f02063f313b3db05a39-2fd3da0793": "accepted",
+        "bulk-7a68ba575487600d02c45640-2fd3da0793": "accepted",
+        "bulk-a44c58c52ff62f00bc2dc48f-2fd3da0793": "accepted",
+        "bulk-02993508200ddd1b7e092133-2fd3da0793": "accepted",
+        "bulk-9eb440f53f8933822f6115b1-2fd3da0793": "accepted",
+        "bulk-095fcfa89daa5f6ab21aa8fd-2fd3da0793": "accepted",
+        "bulk-92ce3338d62f56a9af12d8c4-2fd3da0793": "accepted",
+        "bulk-5ae3c248bdf5d470e91bd985-2fd3da0793": "accepted",
+        "bulk-7665bbd34bbdb8abf68a9536-2fd3da0793": "accepted",
+        "bulk-b3def0fc8772f0f24e7b80b3-2fd3da0793": "accepted",
+        "bulk-1de8e904191bd12945d3191d-2fd3da0793": "accepted",
+        "bulk-46bd8a698b09b5ab508fb80c-2fd3da0793": "accepted",
+        "bulk-5eb7587e72b16cb952b03637-2fd3da0793": "accepted",
+        "bulk-2ad87a87dabfc889ea078818-2fd3da0793": "accepted",
+        "bulk-e7c5d75c178fe04180366ecb-2fd3da0793": "accepted",
+        "bulk-935676bfa7dbb6a574c21ef4-2fd3da0793": "accepted",
+        "bulk-69144aa0cb1c2a05b2a18a09-2fd3da0793": "accepted",
+        "bulk-505c06722e73e0c2c7a1ad40-2fd3da0793": "accepted",
+        "bulk-00c56202cd332efa897dbfc8-2fd3da0793": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-5d8d98a6f11347fab24e2a31-2fd3da0793",
+      "bulk-597c8f02063f313b3db05a39-2fd3da0793",
+      "bulk-7a68ba575487600d02c45640-2fd3da0793",
+      "bulk-a44c58c52ff62f00bc2dc48f-2fd3da0793",
+      "bulk-02993508200ddd1b7e092133-2fd3da0793",
+      "bulk-9eb440f53f8933822f6115b1-2fd3da0793",
+      "bulk-095fcfa89daa5f6ab21aa8fd-2fd3da0793",
+      "bulk-92ce3338d62f56a9af12d8c4-2fd3da0793",
+      "bulk-5ae3c248bdf5d470e91bd985-2fd3da0793",
+      "bulk-7665bbd34bbdb8abf68a9536-2fd3da0793",
+      "bulk-b3def0fc8772f0f24e7b80b3-2fd3da0793",
+      "bulk-1de8e904191bd12945d3191d-2fd3da0793",
+      "bulk-46bd8a698b09b5ab508fb80c-2fd3da0793",
+      "bulk-5eb7587e72b16cb952b03637-2fd3da0793",
+      "bulk-2ad87a87dabfc889ea078818-2fd3da0793",
+      "bulk-e7c5d75c178fe04180366ecb-2fd3da0793",
+      "bulk-935676bfa7dbb6a574c21ef4-2fd3da0793",
+      "bulk-69144aa0cb1c2a05b2a18a09-2fd3da0793",
+      "bulk-505c06722e73e0c2c7a1ad40-2fd3da0793",
+      "bulk-00c56202cd332efa897dbfc8-2fd3da0793"
+    ]
+  }
+}
