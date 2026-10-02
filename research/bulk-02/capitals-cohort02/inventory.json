@@ -1,0 +1,3368 @@
+{
+  "schemaVersion": 1,
+  "task": "Bounded capital cohort02 candidate inventory; no normalization/integration/acceptance",
+  "inputs": {
+    "manifest": {
+      "path": "research/bulk-02/capitals/cshapes-capitals-manifest.json",
+      "sha256": "4adfd1a55cee67e11d1a16a193b0590893c0dbef153f04c62ee11da7a1be7bd2"
+    },
+    "attributes": {
+      "path": "research/bulk-02/capitals/cshapes-attributes.json",
+      "sha256": "3dfaca307b100cc5905fe61b92c68a94fcb0c42a37d499e7fa26ea466f69ac11"
+    },
+    "codebook": {
+      "path": "research/bulk-02/capitals/cache/CShapes-2.0_Codebook.pdf",
+      "sha256": "e132b84d6df02b58eef3c10845ca2b87b1816fa18c5b4a64104cc124afa3ebbd",
+      "locators": [
+        "pp1–2 unchanged country-period capital attribute definition",
+        "p3 possible Jan1/month1 date defaults",
+        "p5 capital changes create rows"
+      ]
+    },
+    "coverage": {
+      "path": "research/bulk-02/reports/snapshot-coverage.json",
+      "sha256": "f384064ff017b95428f7cb85edff573f20147ca5a890cd8a6c55b84c2b073bd5",
+      "productionFingerprint": "a535e196835d3567c3ab498c2bc3c1c8d12f893a74789e9ab6350fc5a72055b3"
+    }
+  },
+  "policy": "Frozen supportedInterior reused verbatim. Full-calendar-year estimate measures union within existing entity scope; partial entity intervals remain partial. Missing report is a captured baseline, not a promised integration yield. No source-country/status/owner/geometry evidence establishes sovereignty or succession.",
+  "mappings": [
+    {
+      "sourceCountryLabel": "Egypt",
+      "entityId": "egypt-british-occupied-khedivate-framework",
+      "from": "1883-01-01",
+      "until": "1914-12-18",
+      "existingIdentity": {
+        "name": "Egypt — British-occupied Khedivate",
+        "validFrom": "1883-01-01",
+        "validUntil": "1914-12-18",
+        "sourceIds": [
+          "b14-egypt-occupation",
+          "b14-egypt-protectorate-date"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Egypt",
+      "entityId": "egypt-british-protectorate-framework",
+      "from": "1914-12-18",
+      "until": "1922-02-28",
+      "existingIdentity": {
+        "name": "Egypt — British protectorate",
+        "validFrom": "1914-12-18",
+        "validUntil": "1922-02-28",
+        "sourceIds": [
+          "b14-egypt-protectorate-date",
+          "b14-egypt-protectorate"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Egypt",
+      "entityId": "egypt-kingdom-1930-framework",
+      "from": "1931-01-01",
+      "until": "1934-01-01",
+      "existingIdentity": {
+        "name": "Egypt — kingdom under strengthened royal authority",
+        "validFrom": "1931-01-01",
+        "validUntil": "1934-01-01",
+        "sourceIds": [
+          "b14-egypt-kingdom"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Egypt",
+      "entityId": "egypt-kingdom-treaty-framework",
+      "from": "1937-01-01",
+      "until": "1939-01-01",
+      "existingIdentity": {
+        "name": "Egypt — kingdom under Anglo-Egyptian alliance",
+        "validFrom": "1937-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b14-egypt-kingdom"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Egypt",
+      "entityId": "egypt-kingdom-1945-framework",
+      "from": "1945-01-01",
+      "until": "1946-01-01",
+      "existingIdentity": {
+        "name": "Egypt — wartime and postwar kingdom",
+        "validFrom": "1945-01-01",
+        "validUntil": "1946-01-01",
+        "sourceIds": [
+          "b14-egypt-kingdom",
+          "b14-egypt-war"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Angola",
+      "entityId": "b17-angola-republic-colonial",
+      "from": "1920-01-01",
+      "until": "1921-01-01",
+      "existingIdentity": {
+        "name": "Angola — Portuguese republican colonial administration",
+        "validFrom": "1920-01-01",
+        "validUntil": "1921-01-01",
+        "sourceIds": [
+          "b17-angola-republic"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Angola",
+      "entityId": "b17-angola-newstate-colonial",
+      "from": "1938-01-01",
+      "until": "1946-01-01",
+      "existingIdentity": {
+        "name": "Angola — Portuguese New State colonial administration",
+        "validFrom": "1938-01-01",
+        "validUntil": "1946-01-01",
+        "sourceIds": [
+          "b17-angola-salazar"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Angola",
+      "entityId": "b17-angola-1960-colonial",
+      "from": "1960-01-01",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Angola — Portuguese colonial administration in 1960",
+        "validFrom": "1960-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b17-angola-1960"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Congo",
+      "entityId": "b17-moyen-congo-prewar",
+      "from": "1938-01-01",
+      "until": "1939-01-01",
+      "existingIdentity": {
+        "name": "Moyen-Congo — French colonial administration",
+        "validFrom": "1938-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b16-aof-archives",
+          "b17-aef-chad"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Gabon",
+      "entityId": "b17-gabon-1945",
+      "from": "1945-01-01",
+      "until": "1946-01-01",
+      "existingIdentity": {
+        "name": "Gabon — French colonial administration",
+        "validFrom": "1945-01-01",
+        "validUntil": "1946-01-01",
+        "sourceIds": [
+          "b16-aof-archives",
+          "b17-aef-chad",
+          "b17-aef-decolonisation"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Gabon",
+      "entityId": "b17-gabon-community-1960",
+      "from": "1960-01-01",
+      "until": "1960-08-17",
+      "existingIdentity": {
+        "name": "Gabon — autonomous French Community republic",
+        "validFrom": "1960-01-01",
+        "validUntil": "1960-08-17",
+        "sourceIds": [
+          "b17-aef-decolonisation",
+          "b17-gabon"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Gabon",
+      "entityId": "b17-gabon-independent-1960",
+      "from": "1960-08-17",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Gabon — independent republic",
+        "validFrom": "1960-08-17",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b17-gabon"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Ghana",
+      "entityId": "gold-coast-pre1925-councils-core",
+      "from": "1903-01-01",
+      "until": "1925-01-01",
+      "existingIdentity": {
+        "name": "Gold Coast — appointed colonial council order",
+        "validFrom": "1903-01-01",
+        "validUntil": "1925-01-01",
+        "sourceIds": [
+          "b15-gold-coast-colonial-core",
+          "b15-gold-coast-councils"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Ghana",
+      "entityId": "gold-coast-1930-chiefly-framework-core",
+      "from": "1928-01-01",
+      "until": "1935-01-01",
+      "existingIdentity": {
+        "name": "Gold Coast — colonial framework around 1930",
+        "validFrom": "1928-01-01",
+        "validUntil": "1935-01-01",
+        "sourceIds": [
+          "b15-gold-coast-councils",
+          "b15-gold-coast-colonial-core"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Ghana",
+      "entityId": "gold-coast-post1935-authorities-core",
+      "from": "1936-01-01",
+      "until": "1946-01-01",
+      "existingIdentity": {
+        "name": "Gold Coast — appointed Native Authorities framework",
+        "validFrom": "1936-01-01",
+        "validUntil": "1946-01-01",
+        "sourceIds": [
+          "b15-gold-coast-councils",
+          "b15-gold-coast-colonial-core"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Ghana",
+      "entityId": "ghana-1960-monarchical-core",
+      "from": "1960-01-01",
+      "until": "1960-07-01",
+      "existingIdentity": {
+        "name": "Ghana — Commonwealth monarchy before July 1960",
+        "validFrom": "1960-01-01",
+        "validUntil": "1960-07-01",
+        "sourceIds": [
+          "b15-ghana-independence",
+          "b15-ghana-republic-transition"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Ghana",
+      "entityId": "ghana-1960-republic-core",
+      "from": "1960-07-01",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Ghana — early republican framework",
+        "validFrom": "1960-07-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b15-ghana-independence",
+          "b15-ghana-republic-transition"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Niger",
+      "entityId": "b16-niger-colonial",
+      "from": "1930-01-01",
+      "until": "1940-01-01",
+      "existingIdentity": {
+        "name": "Niger — prewar French colonial administration",
+        "validFrom": "1930-01-01",
+        "validUntil": "1940-01-01",
+        "sourceIds": [
+          "b16-aof-archives"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Niger",
+      "entityId": "b16-niger-independence",
+      "from": "1960-08-03",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Republic of Niger — independence period",
+        "validFrom": "1960-08-03",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b16-niger-recognition"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Zanzibar",
+      "entityId": "zanzibar-1900-protected-sultanate-core",
+      "from": "1900-01-01",
+      "until": "1901-01-01",
+      "existingIdentity": {
+        "name": "Zanzibar — protected sultanate around 1900",
+        "validFrom": "1900-01-01",
+        "validUntil": "1901-01-01",
+        "sourceIds": [
+          "b18-zanzibar-protectorate-primary",
+          "b18-zanzibar-legal-history",
+          "b18-east-africa-archives"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Kenya",
+      "entityId": "kenya-colony-protectorate-prewar-core",
+      "from": "1921-01-01",
+      "until": "1939-01-01",
+      "existingIdentity": {
+        "name": "Kenya — colony and coastal protectorate",
+        "validFrom": "1921-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b18-kenya-archives"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Kenya",
+      "entityId": "kenya-1945-colonial-core",
+      "from": "1945-01-01",
+      "until": "1946-01-01",
+      "existingIdentity": {
+        "name": "Kenya — colonial administration in 1945",
+        "validFrom": "1945-01-01",
+        "validUntil": "1946-01-01",
+        "sourceIds": [
+          "b18-kenya-archives"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Kenya",
+      "entityId": "kenya-1960-colonial-core",
+      "from": "1960-01-01",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Kenya — colonial administration in 1960",
+        "validFrom": "1960-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b18-kenya-archives"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Sudan",
+      "entityId": "b17-sudan-condominium",
+      "from": "1914-01-01",
+      "until": "1946-01-01",
+      "existingIdentity": {
+        "name": "Anglo-Egyptian Sudan — formal joint authority and British administration",
+        "validFrom": "1914-01-01",
+        "validUntil": "1946-01-01",
+        "sourceIds": [
+          "b17-sudan-condominium"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Sudan",
+      "entityId": "b17-sudan-1960-military",
+      "from": "1960-01-01",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Sudan — Abbud military government",
+        "validFrom": "1960-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b17-sudan-military"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Cameroon",
+      "entityId": "b17-cameroon-pre-mandate",
+      "from": "1920-01-01",
+      "until": "1921-01-01",
+      "existingIdentity": {
+        "name": "French Cameroons — provisional French administration",
+        "validFrom": "1920-01-01",
+        "validUntil": "1921-01-01",
+        "sourceIds": [
+          "b17-cameroon-mandate"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Cameroon",
+      "entityId": "b17-cameroon-league-mandate",
+      "from": "1930-01-01",
+      "until": "1946-01-01",
+      "existingIdentity": {
+        "name": "French Cameroons — League mandate",
+        "validFrom": "1930-01-01",
+        "validUntil": "1946-01-01",
+        "sourceIds": [
+          "b17-cameroon-mandate"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "German Togoland",
+      "entityId": "b16-togoland-german-1914",
+      "from": "1914-01-01",
+      "until": "1914-08-26",
+      "existingIdentity": {
+        "name": "Togoland — German colonial administration",
+        "validFrom": "1914-01-01",
+        "validUntil": "1914-08-26",
+        "sourceIds": [
+          "b16-west-african-mandates",
+          "b16-togoland-surrender"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Togo",
+      "entityId": "togo-1922-mandate-core",
+      "from": "1923-01-01",
+      "until": "1946-01-01",
+      "existingIdentity": {
+        "name": "Togoland — French League mandate",
+        "validFrom": "1923-01-01",
+        "validUntil": "1946-01-01",
+        "sourceIds": [
+          "b15-togo-primary-mandate"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Togo",
+      "entityId": "togo-1960-independent-core",
+      "from": "1960-04-27",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Togo — independent republic in 1960",
+        "validFrom": "1960-04-27",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b15-togo-independence"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Morocco",
+      "entityId": "morocco-french-protectorate-framework",
+      "from": "1913-01-01",
+      "until": "1939-01-01",
+      "existingIdentity": {
+        "name": "Morocco — French protectorate framework",
+        "validFrom": "1913-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b14-morocco-fes",
+          "b14-french-protectorates"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Morocco",
+      "entityId": "morocco-postwar-french-protectorate-framework",
+      "from": "1945-01-01",
+      "until": "1946-01-01",
+      "existingIdentity": {
+        "name": "Morocco — postwar French protectorate framework",
+        "validFrom": "1945-01-01",
+        "validUntil": "1946-01-01",
+        "sourceIds": [
+          "b14-morocco-fes",
+          "b14-french-protectorates"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Morocco",
+      "entityId": "morocco-independent-kingdom-1960-framework",
+      "from": "1960-01-01",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Morocco — independent kingdom",
+        "validFrom": "1960-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b14-morocco-guide",
+          "b14-morocco-king1959",
+          "b14-morocco-king1961"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Poland",
+      "entityId": "polish-small-constitution-framework",
+      "from": "1919-03-01",
+      "until": "1921-01-01",
+      "existingIdentity": {
+        "name": "Republic of Poland — provisional parliamentary framework",
+        "validFrom": "1919-03-01",
+        "validUntil": "1921-01-01",
+        "sourceIds": [
+          "b06-polish-parliament-history"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Poland",
+      "entityId": "polish-amended-march-framework",
+      "from": "1927-01-01",
+      "until": "1935-01-01",
+      "existingIdentity": {
+        "name": "Republic of Poland — amended March framework",
+        "validFrom": "1927-01-01",
+        "validUntil": "1935-01-01",
+        "sourceIds": [
+          "b06-polish-parliament-history"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Poland",
+      "entityId": "polish-april-presidential-framework",
+      "from": "1936-01-01",
+      "until": "1939-01-01",
+      "existingIdentity": {
+        "name": "Republic of Poland — April constitutional framework",
+        "validFrom": "1936-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b06-polish-parliament-history"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Poland",
+      "entityId": "polish-peoples-republic-1952-framework",
+      "from": "1953-01-01",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Polish People’s Republic — 1952 framework",
+        "validFrom": "1953-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b06-polish-parliament-history"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Hungary",
+      "entityId": "hungary-horthy-framework",
+      "from": "1920",
+      "until": "1944-03-19",
+      "existingIdentity": {
+        "name": "Hungary — Horthy regency framework",
+        "validFrom": "1920",
+        "validUntil": "1944-03-19",
+        "sourceIds": [
+          "b03-hungary-horthy"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Hungary",
+      "entityId": "hungary-post1956-framework",
+      "from": "1957-11-08",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Hungary — post-1956 Communist government",
+        "validFrom": "1957-11-08",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b03-hungary-1957",
+          "b03-hungary-1960"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Czechoslovakia",
+      "entityId": "czechoslovakia-first-republic-framework",
+      "from": "1921-01-01",
+      "until": "1938-01-01",
+      "existingIdentity": {
+        "name": "Czechoslovakia — First Republic constitutional framework",
+        "validFrom": "1921-01-01",
+        "validUntil": "1938-01-01",
+        "sourceIds": [
+          "b04-czechoslovak-parliament"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Czechoslovakia",
+      "entityId": "czechoslovakia-communist-constitutional-framework",
+      "from": "1949-01-01",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Czechoslovakia — Communist constitutional framework",
+        "validFrom": "1949-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b04-czechoslovak-parliament",
+          "b04-czechoslovak-1960"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Rumania",
+      "entityId": "romanian-1923-monarchical-framework",
+      "from": "1924-01-01",
+      "until": "1938-02-10",
+      "existingIdentity": {
+        "name": "Kingdom of Romania — 1923 framework",
+        "validFrom": "1924-01-01",
+        "validUntil": "1938-02-10",
+        "sourceIds": [
+          "b06-romanian-parliament-history"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Rumania",
+      "entityId": "romanian-1938-royal-authoritarian-framework",
+      "from": "1938-02-10",
+      "until": "1939-01-01",
+      "existingIdentity": {
+        "name": "Romania — royal authoritarian framework",
+        "validFrom": "1938-02-10",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b06-romanian-parliament-history"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Albania",
+      "entityId": "albanian-royal-statute-framework",
+      "from": "1929-01-01",
+      "until": "1939-01-01",
+      "existingIdentity": {
+        "name": "Kingdom of Albania — royal statute framework",
+        "validFrom": "1929-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b06-albanian-parliament-history"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Albania",
+      "entityId": "albanian-postwar-peoples-parliament-framework",
+      "from": "1947-01-01",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Albania — postwar People’s Parliament framework",
+        "validFrom": "1947-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b06-albanian-parliament-history"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Serbia",
+      "entityId": "serbian-1903-royal-parliamentary-framework",
+      "from": "1904-01-01",
+      "until": "1915-01-01",
+      "existingIdentity": {
+        "name": "Serbia — 1903 royal parliamentary framework",
+        "validFrom": "1904-01-01",
+        "validUntil": "1915-01-01",
+        "sourceIds": [
+          "b06-serbian-1903-parliament"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Afghanistan",
+      "entityId": "afghan-abd-al-rahman-framework",
+      "from": "1881-01-01",
+      "until": "1901",
+      "existingIdentity": {
+        "name": "Afghanistan — Abd al-Rahman’s centralized monarchy",
+        "validFrom": "1881-01-01",
+        "validUntil": "1901",
+        "sourceIds": [
+          "b07-afghan-constitutions"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Afghanistan",
+      "entityId": "afghan-habibullah-framework",
+      "from": "1902-01-01",
+      "until": "1919-02",
+      "existingIdentity": {
+        "name": "Afghanistan — Habibullah’s monarchy",
+        "validFrom": "1902-01-01",
+        "validUntil": "1919-02",
+        "sourceIds": [
+          "b07-afghan-constitutions"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Afghanistan",
+      "entityId": "afghan-amanullah-independent-framework",
+      "from": "1920-01-01",
+      "until": "1921-01-01",
+      "existingIdentity": {
+        "name": "Afghanistan — Amanullah’s independent government",
+        "validFrom": "1920-01-01",
+        "validUntil": "1921-01-01",
+        "sourceIds": [
+          "b07-afghan-constitutions"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Afghanistan",
+      "entityId": "afghan-1931-hashim-framework",
+      "from": "1934-01-01",
+      "until": "1946",
+      "existingIdentity": {
+        "name": "Afghanistan — 1931 framework under Zahir Shah and Hashim",
+        "validFrom": "1934-01-01",
+        "validUntil": "1946",
+        "sourceIds": [
+          "b07-afghan-constitutions"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Afghanistan",
+      "entityId": "afghan-1931-daoud-framework",
+      "from": "1954-01-01",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Afghanistan — 1931 framework under Zahir Shah and Daoud",
+        "validFrom": "1954-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b07-afghan-constitutions"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Iraq",
+      "entityId": "iraq-1930-british-protection-core",
+      "from": "1930-01-01",
+      "until": "1932-01-01",
+      "existingIdentity": {
+        "name": "Iraq — 1930 British mandate relationship",
+        "validFrom": "1930-01-01",
+        "validUntil": "1932-01-01",
+        "sourceIds": [
+          "b12-iraq-diplomatic-history"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Iraq",
+      "entityId": "iraq-1945-restored-monarchy-core",
+      "from": "1945-01-01",
+      "until": "1946-01-01",
+      "existingIdentity": {
+        "name": "Iraq — restored monarchy in 1945",
+        "validFrom": "1945-01-01",
+        "validUntil": "1946-01-01",
+        "sourceIds": [
+          "b12-iraq-historical-profile"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Iraq",
+      "entityId": "iraq-qasim-republic-core",
+      "from": "1959-01-01",
+      "until": "1961-01-01",
+      "existingIdentity": {
+        "name": "Iraq — Qasim’s early republican government",
+        "validFrom": "1959-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b12-iraq-historical-profile",
+          "b12-iraq-qasim-primary"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    },
+    {
+      "sourceCountryLabel": "Syria",
+      "entityId": "syria-french-1930-constitutional-core",
+      "from": "1931-01-01",
+      "until": "1939-01-01",
+      "existingIdentity": {
+        "name": "Syria — imposed 1930 constitution",
+        "validFrom": "1931-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b12-syria-country-study",
+          "b12-mandates-entry-1923"
+        ]
+      },
+      "rationale": "Named capital attribute only, clipped to existing source-backed historical framework. Source country label is an explicit proposed historical alias, not a modern fallback; no geometry/owner/status/coordinates used.",
+      "disposition": "coordinator-review-required"
+    }
+  ],
+  "candidates": [
+    {
+      "entityId": "egypt-british-occupied-khedivate-framework",
+      "sourceFid": 489,
+      "sourceCountryLabel": "Egypt",
+      "value": "Cairo",
+      "from": "1887-01-01",
+      "until": "1899-01-18",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=489; country_name/start/end/capname",
+      "originalAttributesSha256": "569a6acc3a2c67c0a2efd0e1d257e7d12d7c31c0288cdbb5ae2426b215430f9d",
+      "supportedInterior": {
+        "from": "1887-01-01",
+        "until": "1899-01-18",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "year-uncertain",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "egypt-british-occupied-khedivate-framework",
+      "sourceFid": 490,
+      "sourceCountryLabel": "Egypt",
+      "value": "Cairo",
+      "from": "1899-01-19",
+      "until": "1914-12-17",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=490; country_name/start/end/capname",
+      "originalAttributesSha256": "646f5d0de9eefca0d9e9498354367a6393cf5da4fb2b3ec81cfa6ea87a8026ce",
+      "supportedInterior": {
+        "from": "1899-01-19",
+        "until": "1914-12-17",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "egypt-british-protectorate-framework",
+      "sourceFid": 495,
+      "sourceCountryLabel": "Egypt",
+      "value": "Cairo",
+      "from": "1914-12-18",
+      "until": "1922-02-27",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=495; country_name/start/end/capname",
+      "originalAttributesSha256": "8f3db9ebe8e7221dd6ab7c5762e9ee914307bd7bad084c5a0493a65a4a606d6b",
+      "supportedInterior": {
+        "from": "1914-12-18",
+        "until": "1922-02-27",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "egypt-kingdom-1930-framework",
+      "sourceFid": 492,
+      "sourceCountryLabel": "Egypt",
+      "value": "Cairo",
+      "from": "1931-01-01",
+      "until": "1934-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=492; country_name/start/end/capname",
+      "originalAttributesSha256": "2a143f0697b86b7ba8e2e1050a42e59c200e4243668b08752b835064ff0fe91e",
+      "supportedInterior": {
+        "from": "1925-12-06",
+        "until": "1967-06-09",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "egypt-kingdom-treaty-framework",
+      "sourceFid": 492,
+      "sourceCountryLabel": "Egypt",
+      "value": "Cairo",
+      "from": "1937-01-01",
+      "until": "1939-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=492; country_name/start/end/capname",
+      "originalAttributesSha256": "2a143f0697b86b7ba8e2e1050a42e59c200e4243668b08752b835064ff0fe91e",
+      "supportedInterior": {
+        "from": "1925-12-06",
+        "until": "1967-06-09",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "egypt-kingdom-1945-framework",
+      "sourceFid": 492,
+      "sourceCountryLabel": "Egypt",
+      "value": "Cairo",
+      "from": "1945-01-01",
+      "until": "1946-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=492; country_name/start/end/capname",
+      "originalAttributesSha256": "2a143f0697b86b7ba8e2e1050a42e59c200e4243668b08752b835064ff0fe91e",
+      "supportedInterior": {
+        "from": "1925-12-06",
+        "until": "1967-06-09",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-angola-republic-colonial",
+      "sourceFid": 389,
+      "sourceCountryLabel": "Angola",
+      "value": "Luanda",
+      "from": "1920-01-01",
+      "until": "1921-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=389; country_name/start/end/capname",
+      "originalAttributesSha256": "d259b896f1c4da03843f7aa7d821ff2e37fea006a613b1dc6d55195eb1ed7bc6",
+      "supportedInterior": {
+        "from": "1905-05-30",
+        "until": "1975-11-10",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-angola-newstate-colonial",
+      "sourceFid": 389,
+      "sourceCountryLabel": "Angola",
+      "value": "Luanda",
+      "from": "1938-01-01",
+      "until": "1946-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=389; country_name/start/end/capname",
+      "originalAttributesSha256": "d259b896f1c4da03843f7aa7d821ff2e37fea006a613b1dc6d55195eb1ed7bc6",
+      "supportedInterior": {
+        "from": "1905-05-30",
+        "until": "1975-11-10",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-angola-1960-colonial",
+      "sourceFid": 389,
+      "sourceCountryLabel": "Angola",
+      "value": "Luanda",
+      "from": "1960-01-01",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=389; country_name/start/end/capname",
+      "originalAttributesSha256": "d259b896f1c4da03843f7aa7d821ff2e37fea006a613b1dc6d55195eb1ed7bc6",
+      "supportedInterior": {
+        "from": "1905-05-30",
+        "until": "1975-11-10",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-moyen-congo-prewar",
+      "sourceFid": 328,
+      "sourceCountryLabel": "Congo",
+      "value": "Brazzaville",
+      "from": "1938-01-01",
+      "until": "1939-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=328; country_name/start/end/capname",
+      "originalAttributesSha256": "8089874b2c07d7eb03b710d781603ff4536c49658650812b155ffd06b5d3afa4",
+      "supportedInterior": {
+        "from": "1919-06-28",
+        "until": "1960-08-14",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-gabon-1945",
+      "sourceFid": 311,
+      "sourceCountryLabel": "Gabon",
+      "value": "Libreville",
+      "from": "1945-01-01",
+      "until": "1946-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=311; country_name/start/end/capname",
+      "originalAttributesSha256": "c25c8236fb8cdd32496201d6012b63766300655dcd42b0caafeda4957b4db555",
+      "supportedInterior": {
+        "from": "1919-06-28",
+        "until": "1960-08-16",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-gabon-community-1960",
+      "sourceFid": 311,
+      "sourceCountryLabel": "Gabon",
+      "value": "Libreville",
+      "from": "1960-01-01",
+      "until": "1960-08-16",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=311; country_name/start/end/capname",
+      "originalAttributesSha256": "c25c8236fb8cdd32496201d6012b63766300655dcd42b0caafeda4957b4db555",
+      "supportedInterior": {
+        "from": "1919-06-28",
+        "until": "1960-08-16",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-gabon-independent-1960",
+      "sourceFid": 312,
+      "sourceCountryLabel": "Gabon",
+      "value": "Libreville",
+      "from": "1960-08-17",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=312; country_name/start/end/capname",
+      "originalAttributesSha256": "a34705b00d2114aa2a5bc7f50873e0dd794b185336d17095b46adf881bafdd4c",
+      "supportedInterior": {
+        "from": "1960-08-17",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "gold-coast-pre1925-councils-core",
+      "sourceFid": 280,
+      "sourceCountryLabel": "Ghana",
+      "value": "Accra",
+      "from": "1903-01-01",
+      "until": "1925-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=280; country_name/start/end/capname",
+      "originalAttributesSha256": "deb92f565168c0b230f22b6d1e2b50a3eed1ae3b58a34ce3482fe6641e8cf6a9",
+      "supportedInterior": {
+        "from": "1898-06-14",
+        "until": "1956-03-05",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "gold-coast-1930-chiefly-framework-core",
+      "sourceFid": 280,
+      "sourceCountryLabel": "Ghana",
+      "value": "Accra",
+      "from": "1928-01-01",
+      "until": "1935-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=280; country_name/start/end/capname",
+      "originalAttributesSha256": "deb92f565168c0b230f22b6d1e2b50a3eed1ae3b58a34ce3482fe6641e8cf6a9",
+      "supportedInterior": {
+        "from": "1898-06-14",
+        "until": "1956-03-05",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "gold-coast-post1935-authorities-core",
+      "sourceFid": 280,
+      "sourceCountryLabel": "Ghana",
+      "value": "Accra",
+      "from": "1936-01-01",
+      "until": "1946-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=280; country_name/start/end/capname",
+      "originalAttributesSha256": "deb92f565168c0b230f22b6d1e2b50a3eed1ae3b58a34ce3482fe6641e8cf6a9",
+      "supportedInterior": {
+        "from": "1898-06-14",
+        "until": "1956-03-05",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "ghana-1960-monarchical-core",
+      "sourceFid": 282,
+      "sourceCountryLabel": "Ghana",
+      "value": "Accra",
+      "from": "1960-01-01",
+      "until": "1960-07-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=282; country_name/start/end/capname",
+      "originalAttributesSha256": "ed362ecd31c4baeafa815bba1740c8d5533ed0a89dad6a6f37e00d8c6738b5d9",
+      "supportedInterior": {
+        "from": "1957-03-06",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "ghana-1960-republic-core",
+      "sourceFid": 282,
+      "sourceCountryLabel": "Ghana",
+      "value": "Accra",
+      "from": "1960-07-01",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=282; country_name/start/end/capname",
+      "originalAttributesSha256": "ed362ecd31c4baeafa815bba1740c8d5533ed0a89dad6a6f37e00d8c6738b5d9",
+      "supportedInterior": {
+        "from": "1957-03-06",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b16-niger-colonial",
+      "sourceFid": 253,
+      "sourceCountryLabel": "Niger",
+      "value": "Niamey",
+      "from": "1930-01-01",
+      "until": "1932-09-04",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=253; country_name/start/end/capname",
+      "originalAttributesSha256": "7bcaec889c57296512660bd7008a50cc539fba0e02e6780796f4186183bf83f5",
+      "supportedInterior": {
+        "from": "1926-12-28",
+        "until": "1932-09-04",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b16-niger-colonial",
+      "sourceFid": 254,
+      "sourceCountryLabel": "Niger",
+      "value": "Niamey",
+      "from": "1932-09-05",
+      "until": "1940-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=254; country_name/start/end/capname",
+      "originalAttributesSha256": "6601eb46d45c9a11d02dcb80785370a31fdb9d55a135bf53bea87d9bdcc3a3eb",
+      "supportedInterior": {
+        "from": "1932-09-05",
+        "until": "1947-01-03",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b16-niger-independence",
+      "sourceFid": 257,
+      "sourceCountryLabel": "Niger",
+      "value": "Niamey",
+      "from": "1960-08-03",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=257; country_name/start/end/capname",
+      "originalAttributesSha256": "4f2ebec0867be6ac2bcc3bf8672f9d02e3f0f74495db6578a2dd4c1dd2a1e4fc",
+      "supportedInterior": {
+        "from": "1960-08-03",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "zanzibar-1900-protected-sultanate-core",
+      "sourceFid": 363,
+      "sourceCountryLabel": "Zanzibar",
+      "value": "Zanzibar City",
+      "from": "1900-01-01",
+      "until": "1901-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=363; country_name/start/end/capname",
+      "originalAttributesSha256": "2230471212779e4cacd8f4e86a3c3f75f2d7c71340f98a430ce49fc4e09b322f",
+      "supportedInterior": {
+        "from": "1895-08-01",
+        "until": "1963-12-18",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "month-uncertain",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "kenya-colony-protectorate-prewar-core",
+      "sourceFid": 343,
+      "sourceCountryLabel": "Kenya",
+      "value": "Nairobi",
+      "from": "1921-01-01",
+      "until": "1924-06-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=343; country_name/start/end/capname",
+      "originalAttributesSha256": "ca6f2e91ed7365076f716b7bfdc1212d2913190fb06bf680091e1e7b4b5912cd",
+      "supportedInterior": {
+        "from": "1920-07-23",
+        "until": "1924-06-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "month-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "kenya-colony-protectorate-prewar-core",
+      "sourceFid": 344,
+      "sourceCountryLabel": "Kenya",
+      "value": "Nairobi",
+      "from": "1924-08-01",
+      "until": "1926-09-26",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=344; country_name/start/end/capname",
+      "originalAttributesSha256": "3472f6c4354e87c407484f88e1162647dc2d321efffe6fab6c9bdc2a6aa6a54c",
+      "supportedInterior": {
+        "from": "1924-08-01",
+        "until": "1926-09-26",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "month-uncertain",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "kenya-colony-protectorate-prewar-core",
+      "sourceFid": 345,
+      "sourceCountryLabel": "Kenya",
+      "value": "Nairobi",
+      "from": "1926-09-27",
+      "until": "1939-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=345; country_name/start/end/capname",
+      "originalAttributesSha256": "99c113e5b3f3a6344bac077890cb55f149d9c9cba4910aedcd0462c96b99418c",
+      "supportedInterior": {
+        "from": "1926-09-27",
+        "until": "1963-12-11",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "kenya-1945-colonial-core",
+      "sourceFid": 345,
+      "sourceCountryLabel": "Kenya",
+      "value": "Nairobi",
+      "from": "1945-01-01",
+      "until": "1946-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=345; country_name/start/end/capname",
+      "originalAttributesSha256": "99c113e5b3f3a6344bac077890cb55f149d9c9cba4910aedcd0462c96b99418c",
+      "supportedInterior": {
+        "from": "1926-09-27",
+        "until": "1963-12-11",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "kenya-1960-colonial-core",
+      "sourceFid": 345,
+      "sourceCountryLabel": "Kenya",
+      "value": "Nairobi",
+      "from": "1960-01-01",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=345; country_name/start/end/capname",
+      "originalAttributesSha256": "99c113e5b3f3a6344bac077890cb55f149d9c9cba4910aedcd0462c96b99418c",
+      "supportedInterior": {
+        "from": "1926-09-27",
+        "until": "1963-12-11",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-sudan-condominium",
+      "sourceFid": 468,
+      "sourceCountryLabel": "Sudan",
+      "value": "Khartoum",
+      "from": "1914-01-01",
+      "until": "1914-04-20",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=468; country_name/start/end/capname",
+      "originalAttributesSha256": "1c9c8f93848a93f3baaf670187c7ff77c55a6caaf3fc0eb6702ab331c24b114b",
+      "supportedInterior": {
+        "from": "1910-06-16",
+        "until": "1914-04-20",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-sudan-condominium",
+      "sourceFid": 469,
+      "sourceCountryLabel": "Sudan",
+      "value": "Khartoum",
+      "from": "1914-04-21",
+      "until": "1934-07-19",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=469; country_name/start/end/capname",
+      "originalAttributesSha256": "61c7042fd31b3a0299c961f9ff75af520b450ed5e8d91bc20ed3d1a9111515b1",
+      "supportedInterior": {
+        "from": "1914-04-21",
+        "until": "1934-07-19",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-sudan-condominium",
+      "sourceFid": 470,
+      "sourceCountryLabel": "Sudan",
+      "value": "Khartoum",
+      "from": "1934-07-20",
+      "until": "1946-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=470; country_name/start/end/capname",
+      "originalAttributesSha256": "3591dbf2b973a3d3db23f1496aae596245dc672b6ab1b2cd309f4e0c59aca933",
+      "supportedInterior": {
+        "from": "1934-07-20",
+        "until": "1955-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-sudan-1960-military",
+      "sourceFid": 471,
+      "sourceCountryLabel": "Sudan",
+      "value": "Khartoum",
+      "from": "1960-01-01",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=471; country_name/start/end/capname",
+      "originalAttributesSha256": "d2c196f4e00cf702d039102cb4110ad43f546b93031bdee6d0a42b4a58a29550",
+      "supportedInterior": {
+        "from": "1957-01-01",
+        "until": "2011-07-08",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "year-uncertain",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-cameroon-pre-mandate",
+      "sourceFid": 302,
+      "sourceCountryLabel": "Cameroon",
+      "value": "Yaounde",
+      "from": "1920-01-01",
+      "until": "1921-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=302; country_name/start/end/capname",
+      "originalAttributesSha256": "be79650180ab863301a94de8f23d6f8986564d3d16d7b5c232edf33d93ac736c",
+      "supportedInterior": {
+        "from": "1919-06-28",
+        "until": "1922-07-19",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b17-cameroon-league-mandate",
+      "sourceFid": 301,
+      "sourceCountryLabel": "Cameroon",
+      "value": "Yaounde",
+      "from": "1930-01-01",
+      "until": "1946-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=301; country_name/start/end/capname",
+      "originalAttributesSha256": "b19dd73a60774564da61e31af79d2a4dd125441e7c06cd1e287767791845d941",
+      "supportedInterior": {
+        "from": "1922-07-20",
+        "until": "1959-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "b16-togoland-german-1914",
+      "sourceFid": 286,
+      "sourceCountryLabel": "German Togoland",
+      "value": "Lome",
+      "from": "1914-01-01",
+      "until": "1914-08-26",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=286; country_name/start/end/capname",
+      "originalAttributesSha256": "f6cf28da240b9778c6732bab9d3c0ad28faf0d5ca458ec5130ffe9622a4d6b1b",
+      "supportedInterior": {
+        "from": "1897-07-23",
+        "until": "1914-08-30",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "togo-1922-mandate-core",
+      "sourceFid": 292,
+      "sourceCountryLabel": "Togo",
+      "value": "Lome",
+      "from": "1923-01-01",
+      "until": "1946-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=292; country_name/start/end/capname",
+      "originalAttributesSha256": "fc00438c65fcd4b074d31e18a6043512a346b2537b2bd5f98893df0ff6dffe65",
+      "supportedInterior": {
+        "from": "1922-07-20",
+        "until": "1960-04-26",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "togo-1960-independent-core",
+      "sourceFid": 291,
+      "sourceCountryLabel": "Togo",
+      "value": "Lome",
+      "from": "1960-04-27",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=291; country_name/start/end/capname",
+      "originalAttributesSha256": "3cc821884a9a321eb7ed9d9724e10c43d665e94d6ebfbfd7321172110fb35c19",
+      "supportedInterior": {
+        "from": "1960-04-27",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "morocco-french-protectorate-framework",
+      "sourceFid": 446,
+      "sourceCountryLabel": "Morocco",
+      "value": "Rabat",
+      "from": "1913-01-01",
+      "until": "1939-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=446; country_name/start/end/capname",
+      "originalAttributesSha256": "991391f73993a4af0de904244e4355d698971969fd3fea3bd6b8f4edd9172e15",
+      "supportedInterior": {
+        "from": "1912-11-27",
+        "until": "1956-03-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "month-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "morocco-postwar-french-protectorate-framework",
+      "sourceFid": 446,
+      "sourceCountryLabel": "Morocco",
+      "value": "Rabat",
+      "from": "1945-01-01",
+      "until": "1946-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=446; country_name/start/end/capname",
+      "originalAttributesSha256": "991391f73993a4af0de904244e4355d698971969fd3fea3bd6b8f4edd9172e15",
+      "supportedInterior": {
+        "from": "1912-11-27",
+        "until": "1956-03-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "month-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "morocco-independent-kingdom-1960-framework",
+      "sourceFid": 441,
+      "sourceCountryLabel": "Morocco",
+      "value": "Rabat",
+      "from": "1960-01-01",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=441; country_name/start/end/capname",
+      "originalAttributesSha256": "7e440e3295a183ce24448c58d75dde0eff70723fa900a00a5e991385bb964c83",
+      "supportedInterior": {
+        "from": "1958-04-10",
+        "until": "1975-11-13",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "polish-small-constitution-framework",
+      "sourceFid": 93,
+      "sourceCountryLabel": "Poland",
+      "value": "Warsaw",
+      "from": "1919-03-01",
+      "until": "1919-06-27",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=93; country_name/start/end/capname",
+      "originalAttributesSha256": "16e42d77b6e982e4f70e276d86fc929ffd1390affe51b8a339540a480f324e33",
+      "supportedInterior": {
+        "from": "1918-11-11",
+        "until": "1919-06-27",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "polish-small-constitution-framework",
+      "sourceFid": 94,
+      "sourceCountryLabel": "Poland",
+      "value": "Warsaw",
+      "from": "1919-06-28",
+      "until": "1919-09-09",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=94; country_name/start/end/capname",
+      "originalAttributesSha256": "977f93fc5062b0261f392edc3566ad5667a490a240031c05531a3188d3499d51",
+      "supportedInterior": {
+        "from": "1919-06-28",
+        "until": "1919-09-09",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "polish-small-constitution-framework",
+      "sourceFid": 95,
+      "sourceCountryLabel": "Poland",
+      "value": "Warsaw",
+      "from": "1919-09-10",
+      "until": "1920-10-06",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=95; country_name/start/end/capname",
+      "originalAttributesSha256": "eee51249379334204d53f69c35b8042a866e5089c4ca541a2cc5ed28d69935d2",
+      "supportedInterior": {
+        "from": "1919-09-10",
+        "until": "1920-10-06",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "polish-small-constitution-framework",
+      "sourceFid": 96,
+      "sourceCountryLabel": "Poland",
+      "value": "Warsaw",
+      "from": "1920-10-07",
+      "until": "1921-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=96; country_name/start/end/capname",
+      "originalAttributesSha256": "49f6629efbdcb4b94ee83b0b379a4307cb6144dd1faac0084ecf715199635c98",
+      "supportedInterior": {
+        "from": "1920-10-07",
+        "until": "1921-03-17",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "polish-amended-march-framework",
+      "sourceFid": 97,
+      "sourceCountryLabel": "Poland",
+      "value": "Warsaw",
+      "from": "1927-01-01",
+      "until": "1935-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=97; country_name/start/end/capname",
+      "originalAttributesSha256": "120157c4a4d1f33584e33e04b51d287ec6c89218220cc762eabfff4c7e2a583e",
+      "supportedInterior": {
+        "from": "1921-03-18",
+        "until": "1945-05-07",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "polish-april-presidential-framework",
+      "sourceFid": 97,
+      "sourceCountryLabel": "Poland",
+      "value": "Warsaw",
+      "from": "1936-01-01",
+      "until": "1939-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=97; country_name/start/end/capname",
+      "originalAttributesSha256": "120157c4a4d1f33584e33e04b51d287ec6c89218220cc762eabfff4c7e2a583e",
+      "supportedInterior": {
+        "from": "1921-03-18",
+        "until": "1945-05-07",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "polish-peoples-republic-1952-framework",
+      "sourceFid": 98,
+      "sourceCountryLabel": "Poland",
+      "value": "Warsaw",
+      "from": "1953-01-01",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=98; country_name/start/end/capname",
+      "originalAttributesSha256": "11a3334d830d059a267d6d3c9e268e03a3922cd18a6b9d02786ed45739c05982",
+      "supportedInterior": {
+        "from": "1945-05-08",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "hungary-horthy-framework",
+      "sourceFid": 106,
+      "sourceCountryLabel": "Hungary",
+      "value": "Budapest",
+      "from": "1920-01-01",
+      "until": "1920-06-03",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=106; country_name/start/end/capname",
+      "originalAttributesSha256": "1e1d976e1171ab76355bdf15ff7275138e04168bb00e7dfa39ddca975576a760",
+      "supportedInterior": {
+        "from": "1919-09-10",
+        "until": "1920-06-03",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "hungary-horthy-framework",
+      "sourceFid": 107,
+      "sourceCountryLabel": "Hungary",
+      "value": "Budapest",
+      "from": "1920-06-04",
+      "until": "1938-11-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=107; country_name/start/end/capname",
+      "originalAttributesSha256": "a28db9b11d6212e996f6ab91521e14f3566f4353c37a16763521502f9c120cf3",
+      "supportedInterior": {
+        "from": "1920-06-04",
+        "until": "1938-11-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "month-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "hungary-horthy-framework",
+      "sourceFid": 108,
+      "sourceCountryLabel": "Hungary",
+      "value": "Budapest",
+      "from": "1938-11-02",
+      "until": "1944-03-19",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=108; country_name/start/end/capname",
+      "originalAttributesSha256": "40c5ef567db4b713e85a3c3e78f4e0b085636fee9758430a5063d96703bd0dc0",
+      "supportedInterior": {
+        "from": "1938-11-02",
+        "until": "1947-02-09",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "hungary-post1956-framework",
+      "sourceFid": 109,
+      "sourceCountryLabel": "Hungary",
+      "value": "Budapest",
+      "from": "1957-11-08",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=109; country_name/start/end/capname",
+      "originalAttributesSha256": "769ae9943dec68e38abc811897d9cf6c8af112b8f99ac03714202efe51f7f4fb",
+      "supportedInterior": {
+        "from": "1947-02-10",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "czechoslovakia-first-republic-framework",
+      "sourceFid": 110,
+      "sourceCountryLabel": "Czechoslovakia",
+      "value": "Prague",
+      "from": "1921-01-01",
+      "until": "1938-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=110; country_name/start/end/capname",
+      "originalAttributesSha256": "6737b26052963b31daa7a27acc6afa5a9a7bd831d48a24e277dde214e123e9a1",
+      "supportedInterior": {
+        "from": "1918-11-11",
+        "until": "1938-09-29",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "czechoslovakia-communist-constitutional-framework",
+      "sourceFid": 114,
+      "sourceCountryLabel": "Czechoslovakia",
+      "value": "Prague",
+      "from": "1949-01-01",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=114; country_name/start/end/capname",
+      "originalAttributesSha256": "5901bf110decdc79cc56142b9ff518f63038f59821306a8576fb2a4f66e91c08",
+      "supportedInterior": {
+        "from": "1947-02-10",
+        "until": "1992-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "romanian-1923-monarchical-framework",
+      "sourceFid": 160,
+      "sourceCountryLabel": "Rumania",
+      "value": "Bukarest",
+      "from": "1924-01-01",
+      "until": "1938-02-10",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=160; country_name/start/end/capname",
+      "originalAttributesSha256": "39e069c31709c93e85de0779c079458b4214d3b6e1faec00008d98d15a5396ca",
+      "supportedInterior": {
+        "from": "1920-10-28",
+        "until": "1940-06-27",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "romanian-1938-royal-authoritarian-framework",
+      "sourceFid": 160,
+      "sourceCountryLabel": "Rumania",
+      "value": "Bukarest",
+      "from": "1938-02-10",
+      "until": "1939-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=160; country_name/start/end/capname",
+      "originalAttributesSha256": "39e069c31709c93e85de0779c079458b4214d3b6e1faec00008d98d15a5396ca",
+      "supportedInterior": {
+        "from": "1920-10-28",
+        "until": "1940-06-27",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "albanian-royal-statute-framework",
+      "sourceFid": 122,
+      "sourceCountryLabel": "Albania",
+      "value": "Tirane",
+      "from": "1929-01-01",
+      "until": "1939-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=122; country_name/start/end/capname",
+      "originalAttributesSha256": "55c6ee1edcd9f2819599972f0b1f2f10d9dc37c39b3435cf9b00540ba11d687c",
+      "supportedInterior": {
+        "from": "1920-02-11",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "albanian-postwar-peoples-parliament-framework",
+      "sourceFid": 122,
+      "sourceCountryLabel": "Albania",
+      "value": "Tirane",
+      "from": "1947-01-01",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=122; country_name/start/end/capname",
+      "originalAttributesSha256": "55c6ee1edcd9f2819599972f0b1f2f10d9dc37c39b3435cf9b00540ba11d687c",
+      "supportedInterior": {
+        "from": "1920-02-11",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "serbian-1903-royal-parliamentary-framework",
+      "sourceFid": 124,
+      "sourceCountryLabel": "Serbia",
+      "value": "Belgrade",
+      "from": "1904-01-01",
+      "until": "1913-08-09",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=124; country_name/start/end/capname",
+      "originalAttributesSha256": "759db7f114c467f8e77b16b50408d87548a05f00fe922499796c8202536e40be",
+      "supportedInterior": {
+        "from": "1887-01-01",
+        "until": "1913-08-09",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "year-uncertain",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "serbian-1903-royal-parliamentary-framework",
+      "sourceFid": 125,
+      "sourceCountryLabel": "Serbia",
+      "value": "Belgrade",
+      "from": "1913-08-10",
+      "until": "1915-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=125; country_name/start/end/capname",
+      "originalAttributesSha256": "8ddaca36b147296ada24148a9c73fe586a75d57c26fa1804306fd605f35b25eb",
+      "supportedInterior": {
+        "from": "1913-08-10",
+        "until": "1915-10-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "month-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "afghan-abd-al-rahman-framework",
+      "sourceFid": 533,
+      "sourceCountryLabel": "Afghanistan",
+      "value": "Kabul",
+      "from": "1887-01-01",
+      "until": "1888-12-30",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=533; country_name/start/end/capname",
+      "originalAttributesSha256": "a9abdc477f6194c25c83cacaab87d4cef51540533ec9461d4125177a625d9073",
+      "supportedInterior": {
+        "from": "1887-01-01",
+        "until": "1888-12-30",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "year-uncertain",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "afghan-abd-al-rahman-framework",
+      "sourceFid": 535,
+      "sourceCountryLabel": "Afghanistan",
+      "value": "Kabul",
+      "from": "1888-12-31",
+      "until": "1893-11-11",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=535; country_name/start/end/capname",
+      "originalAttributesSha256": "8952a57edbea32d2349596238d2ec6605f13411b4fb978e660067353afef47b0",
+      "supportedInterior": {
+        "from": "1888-12-31",
+        "until": "1893-11-11",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "afghan-abd-al-rahman-framework",
+      "sourceFid": 536,
+      "sourceCountryLabel": "Afghanistan",
+      "value": "Kabul",
+      "from": "1893-11-12",
+      "until": "1901-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=536; country_name/start/end/capname",
+      "originalAttributesSha256": "65c8eabd70382b4754833adc48d79d25fc8ae1edd62ac11fce4d9bdb66c28f40",
+      "supportedInterior": {
+        "from": "1893-11-12",
+        "until": "1919-04-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "month-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "afghan-habibullah-framework",
+      "sourceFid": 536,
+      "sourceCountryLabel": "Afghanistan",
+      "value": "Kabul",
+      "from": "1902-01-01",
+      "until": "1919-02-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=536; country_name/start/end/capname",
+      "originalAttributesSha256": "65c8eabd70382b4754833adc48d79d25fc8ae1edd62ac11fce4d9bdb66c28f40",
+      "supportedInterior": {
+        "from": "1893-11-12",
+        "until": "1919-04-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "month-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "afghan-amanullah-independent-framework",
+      "sourceFid": 534,
+      "sourceCountryLabel": "Afghanistan",
+      "value": "Kabul",
+      "from": "1920-01-01",
+      "until": "1921-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=534; country_name/start/end/capname",
+      "originalAttributesSha256": "cc7a246cb44d9762bdf1e0365eaa1f40ae170beacebc2689cd973d618478f18e",
+      "supportedInterior": {
+        "from": "1919-06-01",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "month-uncertain",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "afghan-1931-hashim-framework",
+      "sourceFid": 534,
+      "sourceCountryLabel": "Afghanistan",
+      "value": "Kabul",
+      "from": "1934-01-01",
+      "until": "1946-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=534; country_name/start/end/capname",
+      "originalAttributesSha256": "cc7a246cb44d9762bdf1e0365eaa1f40ae170beacebc2689cd973d618478f18e",
+      "supportedInterior": {
+        "from": "1919-06-01",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "month-uncertain",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "afghan-1931-daoud-framework",
+      "sourceFid": 534,
+      "sourceCountryLabel": "Afghanistan",
+      "value": "Kabul",
+      "from": "1954-01-01",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=534; country_name/start/end/capname",
+      "originalAttributesSha256": "cc7a246cb44d9762bdf1e0365eaa1f40ae170beacebc2689cd973d618478f18e",
+      "supportedInterior": {
+        "from": "1919-06-01",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "month-uncertain",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "iraq-1930-british-protection-core",
+      "sourceFid": 486,
+      "sourceCountryLabel": "Iraq",
+      "value": "Baghdad",
+      "from": "1930-01-01",
+      "until": "1932-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=486; country_name/start/end/capname",
+      "originalAttributesSha256": "2c8107d3c0499f2732b9af657dc7c638e87a363393faf06d4acaf14099ad9563",
+      "supportedInterior": {
+        "from": "1922-12-02",
+        "until": "1932-09-22",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "coded-day",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "iraq-1945-restored-monarchy-core",
+      "sourceFid": 484,
+      "sourceCountryLabel": "Iraq",
+      "value": "Baghdad",
+      "from": "1945-01-01",
+      "until": "1946-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=484; country_name/start/end/capname",
+      "originalAttributesSha256": "4110e21f7e4e6ad640b08c5ccee614c4c3ab21787abeb366838a44c5e24cecc8",
+      "supportedInterior": {
+        "from": "1932-10-03",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "iraq-qasim-republic-core",
+      "sourceFid": 484,
+      "sourceCountryLabel": "Iraq",
+      "value": "Baghdad",
+      "from": "1959-01-01",
+      "until": "1961-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=484; country_name/start/end/capname",
+      "originalAttributesSha256": "4110e21f7e4e6ad640b08c5ccee614c4c3ab21787abeb366838a44c5e24cecc8",
+      "supportedInterior": {
+        "from": "1932-10-03",
+        "until": "2019-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    },
+    {
+      "entityId": "syria-french-1930-constitutional-core",
+      "sourceFid": 499,
+      "sourceCountryLabel": "Syria",
+      "value": "Damascus",
+      "from": "1931-01-01",
+      "until": "1939-01-01",
+      "scope": "Capital (CShapes2 academic coding), not exclusive capital, legal sovereign seat or uniform territorial control.",
+      "sourceRowLocator": "Released CShapes2 GW properties fid=499; country_name/start/end/capname",
+      "originalAttributesSha256": "c450513944af0a91ccfbbef8ba535ff4b199764b61da8b370ae54e8daf11e95f",
+      "supportedInterior": {
+        "from": "1922-12-02",
+        "until": "1945-01-01",
+        "endSemantics": "exclusive conservative interior",
+        "startPrecision": "coded-day",
+        "endPrecision": "year-uncertain",
+        "policy": "Possible Jan1/default-year endpoint loses uncertain endpoint year; possible month1 or preceding last-day endpoint loses uncertain endpoint month. Other coded final day omitted. These are derived conservative bounds, not exact historical capital-change dates."
+      },
+      "disposition": "unaccepted-candidate"
+    }
+  ],
+  "slots": [
+    {
+      "entityId": "egypt-british-occupied-khedivate-framework",
+      "snapshotYear": 1900,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1900-01-01",
+          "until": "1901-01-01",
+          "value": "Cairo",
+          "sourceFid": 490
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "egypt-british-protectorate-framework",
+      "snapshotYear": 1920,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1920-01-01",
+          "until": "1921-01-01",
+          "value": "Cairo",
+          "sourceFid": 495
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "egypt-kingdom-treaty-framework",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Cairo",
+          "sourceFid": 492
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "egypt-kingdom-1945-framework",
+      "snapshotYear": 1945,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1945-01-01",
+          "until": "1946-01-01",
+          "value": "Cairo",
+          "sourceFid": 492
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-angola-republic-colonial",
+      "snapshotYear": 1920,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1920-01-01",
+          "until": "1921-01-01",
+          "value": "Luanda",
+          "sourceFid": 389
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-angola-newstate-colonial",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Luanda",
+          "sourceFid": 389
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-angola-newstate-colonial",
+      "snapshotYear": 1945,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1945-01-01",
+          "until": "1946-01-01",
+          "value": "Luanda",
+          "sourceFid": 389
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-angola-1960-colonial",
+      "snapshotYear": 1960,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1960-01-01",
+          "until": "1961-01-01",
+          "value": "Luanda",
+          "sourceFid": 389
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-moyen-congo-prewar",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Brazzaville",
+          "sourceFid": 328
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-gabon-1945",
+      "snapshotYear": 1945,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1945-01-01",
+          "until": "1946-01-01",
+          "value": "Libreville",
+          "sourceFid": 311
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "gold-coast-pre1925-councils-core",
+      "snapshotYear": 1914,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1914-01-01",
+          "until": "1915-01-01",
+          "value": "Accra",
+          "sourceFid": 280
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "gold-coast-pre1925-councils-core",
+      "snapshotYear": 1920,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1920-01-01",
+          "until": "1921-01-01",
+          "value": "Accra",
+          "sourceFid": 280
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "gold-coast-1930-chiefly-framework-core",
+      "snapshotYear": 1930,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "value": "Accra",
+          "sourceFid": 280
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "gold-coast-post1935-authorities-core",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Accra",
+          "sourceFid": 280
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "gold-coast-post1935-authorities-core",
+      "snapshotYear": 1945,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1945-01-01",
+          "until": "1946-01-01",
+          "value": "Accra",
+          "sourceFid": 280
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b16-niger-independence",
+      "snapshotYear": 1960,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "partial-year",
+      "intervals": [
+        {
+          "from": "1960-08-03",
+          "until": "1961-01-01",
+          "value": "Niamey",
+          "sourceFid": 257
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "zanzibar-1900-protected-sultanate-core",
+      "snapshotYear": 1900,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1900-01-01",
+          "until": "1901-01-01",
+          "value": "Zanzibar City",
+          "sourceFid": 363
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "kenya-colony-protectorate-prewar-core",
+      "snapshotYear": 1930,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "value": "Nairobi",
+          "sourceFid": 345
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "kenya-colony-protectorate-prewar-core",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Nairobi",
+          "sourceFid": 345
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "kenya-1945-colonial-core",
+      "snapshotYear": 1945,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1945-01-01",
+          "until": "1946-01-01",
+          "value": "Nairobi",
+          "sourceFid": 345
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "kenya-1960-colonial-core",
+      "snapshotYear": 1960,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1960-01-01",
+          "until": "1961-01-01",
+          "value": "Nairobi",
+          "sourceFid": 345
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-sudan-condominium",
+      "snapshotYear": 1914,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "partial-year",
+      "intervals": [
+        {
+          "from": "1914-01-01",
+          "until": "1914-04-20",
+          "value": "Khartoum",
+          "sourceFid": 468
+        },
+        {
+          "from": "1914-04-21",
+          "until": "1915-01-01",
+          "value": "Khartoum",
+          "sourceFid": 469
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-sudan-condominium",
+      "snapshotYear": 1920,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1920-01-01",
+          "until": "1921-01-01",
+          "value": "Khartoum",
+          "sourceFid": 469
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-sudan-condominium",
+      "snapshotYear": 1930,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "value": "Khartoum",
+          "sourceFid": 469
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-sudan-condominium",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Khartoum",
+          "sourceFid": 470
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-sudan-condominium",
+      "snapshotYear": 1945,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1945-01-01",
+          "until": "1946-01-01",
+          "value": "Khartoum",
+          "sourceFid": 470
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-sudan-1960-military",
+      "snapshotYear": 1960,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1960-01-01",
+          "until": "1961-01-01",
+          "value": "Khartoum",
+          "sourceFid": 471
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-cameroon-pre-mandate",
+      "snapshotYear": 1920,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1920-01-01",
+          "until": "1921-01-01",
+          "value": "Yaounde",
+          "sourceFid": 302
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-cameroon-league-mandate",
+      "snapshotYear": 1930,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "value": "Yaounde",
+          "sourceFid": 301
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-cameroon-league-mandate",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Yaounde",
+          "sourceFid": 301
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "b17-cameroon-league-mandate",
+      "snapshotYear": 1945,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1945-01-01",
+          "until": "1946-01-01",
+          "value": "Yaounde",
+          "sourceFid": 301
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "togo-1922-mandate-core",
+      "snapshotYear": 1930,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "value": "Lome",
+          "sourceFid": 292
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "togo-1922-mandate-core",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Lome",
+          "sourceFid": 292
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "togo-1922-mandate-core",
+      "snapshotYear": 1945,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1945-01-01",
+          "until": "1946-01-01",
+          "value": "Lome",
+          "sourceFid": 292
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "togo-1960-independent-core",
+      "snapshotYear": 1960,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "partial-year",
+      "intervals": [
+        {
+          "from": "1960-04-27",
+          "until": "1961-01-01",
+          "value": "Lome",
+          "sourceFid": 291
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "morocco-french-protectorate-framework",
+      "snapshotYear": 1914,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1914-01-01",
+          "until": "1915-01-01",
+          "value": "Rabat",
+          "sourceFid": 446
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "morocco-french-protectorate-framework",
+      "snapshotYear": 1920,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1920-01-01",
+          "until": "1921-01-01",
+          "value": "Rabat",
+          "sourceFid": 446
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "morocco-french-protectorate-framework",
+      "snapshotYear": 1930,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "value": "Rabat",
+          "sourceFid": 446
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "morocco-french-protectorate-framework",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Rabat",
+          "sourceFid": 446
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "morocco-postwar-french-protectorate-framework",
+      "snapshotYear": 1945,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1945-01-01",
+          "until": "1946-01-01",
+          "value": "Rabat",
+          "sourceFid": 446
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "morocco-independent-kingdom-1960-framework",
+      "snapshotYear": 1960,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1960-01-01",
+          "until": "1961-01-01",
+          "value": "Rabat",
+          "sourceFid": 441
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "polish-small-constitution-framework",
+      "snapshotYear": 1920,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "partial-year",
+      "intervals": [
+        {
+          "from": "1920-01-01",
+          "until": "1920-10-06",
+          "value": "Warsaw",
+          "sourceFid": 95
+        },
+        {
+          "from": "1920-10-07",
+          "until": "1921-01-01",
+          "value": "Warsaw",
+          "sourceFid": 96
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "polish-amended-march-framework",
+      "snapshotYear": 1930,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "value": "Warsaw",
+          "sourceFid": 97
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "polish-april-presidential-framework",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Warsaw",
+          "sourceFid": 97
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "polish-peoples-republic-1952-framework",
+      "snapshotYear": 1960,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1960-01-01",
+          "until": "1961-01-01",
+          "value": "Warsaw",
+          "sourceFid": 98
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "hungary-horthy-framework",
+      "snapshotYear": 1920,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "partial-year",
+      "intervals": [
+        {
+          "from": "1920-01-01",
+          "until": "1920-06-03",
+          "value": "Budapest",
+          "sourceFid": 106
+        },
+        {
+          "from": "1920-06-04",
+          "until": "1921-01-01",
+          "value": "Budapest",
+          "sourceFid": 107
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "hungary-horthy-framework",
+      "snapshotYear": 1930,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "value": "Budapest",
+          "sourceFid": 107
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "hungary-horthy-framework",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "partial-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1938-11-01",
+          "value": "Budapest",
+          "sourceFid": 107
+        },
+        {
+          "from": "1938-11-02",
+          "until": "1939-01-01",
+          "value": "Budapest",
+          "sourceFid": 108
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "hungary-post1956-framework",
+      "snapshotYear": 1960,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1960-01-01",
+          "until": "1961-01-01",
+          "value": "Budapest",
+          "sourceFid": 109
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "czechoslovakia-first-republic-framework",
+      "snapshotYear": 1930,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "value": "Prague",
+          "sourceFid": 110
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "czechoslovakia-communist-constitutional-framework",
+      "snapshotYear": 1960,
+      "existingCapitalStatus": "partial",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1960-01-01",
+          "until": "1961-01-01",
+          "value": "Prague",
+          "sourceFid": 114
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "romanian-1923-monarchical-framework",
+      "snapshotYear": 1930,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "value": "Bukarest",
+          "sourceFid": 160
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "albanian-royal-statute-framework",
+      "snapshotYear": 1930,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "value": "Tirane",
+          "sourceFid": 122
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "albanian-royal-statute-framework",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Tirane",
+          "sourceFid": 122
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "albanian-postwar-peoples-parliament-framework",
+      "snapshotYear": 1960,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1960-01-01",
+          "until": "1961-01-01",
+          "value": "Tirane",
+          "sourceFid": 122
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "serbian-1903-royal-parliamentary-framework",
+      "snapshotYear": 1914,
+      "existingCapitalStatus": "supported",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1914-01-01",
+          "until": "1915-01-01",
+          "value": "Belgrade",
+          "sourceFid": 125
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "afghan-abd-al-rahman-framework",
+      "snapshotYear": 1900,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1900-01-01",
+          "until": "1901-01-01",
+          "value": "Kabul",
+          "sourceFid": 536
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "afghan-habibullah-framework",
+      "snapshotYear": 1914,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1914-01-01",
+          "until": "1915-01-01",
+          "value": "Kabul",
+          "sourceFid": 536
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "afghan-amanullah-independent-framework",
+      "snapshotYear": 1920,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1920-01-01",
+          "until": "1921-01-01",
+          "value": "Kabul",
+          "sourceFid": 534
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "afghan-1931-hashim-framework",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Kabul",
+          "sourceFid": 534
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "afghan-1931-hashim-framework",
+      "snapshotYear": 1945,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1945-01-01",
+          "until": "1946-01-01",
+          "value": "Kabul",
+          "sourceFid": 534
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "afghan-1931-daoud-framework",
+      "snapshotYear": 1960,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1960-01-01",
+          "until": "1961-01-01",
+          "value": "Kabul",
+          "sourceFid": 534
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "iraq-1945-restored-monarchy-core",
+      "snapshotYear": 1945,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1945-01-01",
+          "until": "1946-01-01",
+          "value": "Baghdad",
+          "sourceFid": 484
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "iraq-qasim-republic-core",
+      "snapshotYear": 1960,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1960-01-01",
+          "until": "1961-01-01",
+          "value": "Baghdad",
+          "sourceFid": 484
+        }
+      ],
+      "coordinatorReviewRequired": true
+    },
+    {
+      "entityId": "syria-french-1930-constitutional-core",
+      "snapshotYear": 1938,
+      "existingCapitalStatus": "missing",
+      "potentialCoverage": "full-calendar-year",
+      "intervals": [
+        {
+          "from": "1938-01-01",
+          "until": "1939-01-01",
+          "value": "Damascus",
+          "sourceFid": 499
+        }
+      ],
+      "coordinatorReviewRequired": true
+    }
+  ],
+  "holds": [
+    {
+      "scope": "Nigeria",
+      "reason": "Literal Abuja in 1914–1960 source rows; historical seat chronology risk. No replacement with Lagos or borrowing separate Lagos territory.",
+      "disposition": "held-no-auto-repair"
+    },
+    {
+      "scope": "Tanzania (Tanganyika)",
+      "reason": "Literal Dodoma across colonial periods; cannot replace with Dar es Salaam or inherit modern capital.",
+      "disposition": "held-no-auto-repair"
+    },
+    {
+      "scope": "Uganda",
+      "reason": "Literal Kampala in colonial periods; administrative-seat chronology requires independent evidence.",
+      "disposition": "held-no-auto-repair"
+    },
+    {
+      "scope": "Congo, Democratic Republic of (Zaire)",
+      "reason": "Kinshasa (Léopoldville) coded from 1908: rename and actual capital-move chronology unresolved. Neither strip modern name nor backdate Leopoldville; Boma rows retained unmodified but not mapped in this bounded tranche.",
+      "disposition": "held-no-auto-repair"
+    },
+    {
+      "scope": "Morocco before 1912 / Spanish Morocco",
+      "reason": "Rabat source label cannot prove sole capital of earlier multi-seat monarchy or capital of Spanish protectorate zone.",
+      "disposition": "held-no-auto-repair"
+    },
+    {
+      "scope": "United Arab Republic regional frameworks",
+      "reason": "Egypt/Cairo and Syria/Damascus country labels alone do not establish regional versus union-level seat scope.",
+      "disposition": "held-no-auto-repair"
+    },
+    {
+      "scope": "Albania/Czechoslovakia/Poland wartime frameworks",
+      "reason": "Omit occupied/provisional war periods rather than infer continuing capital from de-jure source coding.",
+      "disposition": "held-no-auto-repair"
+    },
+    {
+      "scope": "India 1911 / other inherited holds",
+      "reason": "Calcutta transition, multiple capitals, unsupported dates and all earlier manifest holds remain unchanged.",
+      "disposition": "held-no-auto-repair"
+    }
+  ],
+  "summary": {
+    "mappingContracts": 55,
+    "sourceBoundCandidates": 69,
+    "missingFullYearSlots": 57,
+    "missingPartialYearSlots": 6,
+    "alreadyNonmissingSlots": 2,
+    "heldScopeGroups": 8
+  },
+  "productionChanges": false
+}

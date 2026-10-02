@@ -1,12 +1,12 @@
 # Snapshot dossier coverage
 
 Existing resolver availability: 362/401 (a separate metric).
-Snapshot/entity opportunities: 1056. Supported category slots: 4004 of 14784 applicable slots (14784 total).
-Unique dated records: 5347; supporting records: 3526; claim/snapshot applications: 6132; additional reused applications: 2606.
+Snapshot/entity opportunities: 1056. Supported category slots: 4060 of 14784 applicable slots (14784 total).
+Unique dated records: 5413; supporting records: 3573; claim/snapshot applications: 6196; additional reused applications: 2623.
 Raw identity cases awaiting review: 717.
 substantially-complete: 1.
-core-covered: 144.
-partial: 788.
+core-covered: 156.
+partial: 776.
 sparse: 6.
 historical-review: 117.
 
@@ -15,7 +15,7 @@ historical-review: 117.
 | identity | 1000 | 56 | 0 | 0 | 0 |
 | political-institutional | 961 | 68 | 0 | 27 | 0 |
 | leadership | 293 | 97 | 663 | 3 | 0 |
-| capital | 341 | 23 | 683 | 9 | 0 |
+| capital | 397 | 28 | 622 | 9 | 0 |
 | currency | 199 | 13 | 841 | 3 | 0 |
 | historical-flag | 63 | 11 | 982 | 0 | 0 |
 | population-statistics | 22 | 0 | 1032 | 2 | 0 |

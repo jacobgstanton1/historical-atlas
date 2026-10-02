@@ -1,55 +1,59 @@
-# Bulk acquisition: exact safe-stop continuation
+# Bulk acquisition exact continuation
 
-Six production tranches are complete, validated and pushed. Do not repeat research, inventory, integration or expensive validation merely to resume.
+Resume only new work after this coverage-value campaign; do not repeat prior acquisition or inventory.
 
-Production: 514 → 1,539 rich claims; 1,025 new claims in 114 packages (715 leadership, 23 currency-unit observations, 287 exchange quotations). 181 total packages, 97 rich entities; 617 historical entities unchanged. 864 distinct registered sources (+7). Resolver 362/401 (90.27%), visible v0.6.1 and timeline remain unchanged.
+# Coverage-value bulk acquisition campaign
 
-| Checkpoint | New claims | Commit |
-| --- | ---: | --- |
-| Official dated officeholders |135|84b452678b7de7161d1ed48ff99d7978306704d9|
-| Archigos cohort01 |246|c70132c96a66e0f5a89896d953e5d01e2cc6bd5e|
-| Archigos cohort02 |107|89cd2856c4792777f6b385c74c081168684519b3|
-| Archigos cohort03 |227|a25897929d02eb85b8de16551b516aabdce7d53b|
-| FRB1930 observations |90|c49942ea6320f96556dc3af0c22c003ae1c40007|
-| FRB1938 observations |220|e632020e4d9b4ea9b26394d8640095c48516f021|
+Production claims: 1539 → 2015 (+476); 196 new packages. Fully supported category slots: 3777 → 4060 (+283). 269 entity/snapshot dossiers materially improved; 297 category improvements including explicitly partial evidence. Resolver remains362/401 (90.27%).
 
-Final full automated suite 362/362 passed; production audit 15,291 passed. All prior accepted packages unchanged; legacy production, assets and runtime untouched. Zero browser checks. 189 entity/snapshot dossiers receive evidence; supported category slots 3,677→3,777. Leadership full slots264→293; partial transition coverage remains separate. Reports: research/bulk-01/reports/completion.{json,md}; test output: research/bulk-01/final-tests.txt.
+Claims by category: {"currency":8,"economy":226,"capital":165,"population-statistics":22,"historical-flag":3,"important-figures":7,"events-context":45}.
 
-## Exact next action: FRB1960 observation adapter and tranche
+| Category | Supported before | Supported after | Net | Partial before → after |
+| --- | ---: | ---: | ---: | --- |
+| identity | 1000 | 1000 | 0 | 56 → 56 |
+| political-institutional | 961 | 961 | 0 | 68 → 68 |
+| leadership | 293 | 293 | 0 | 97 → 97 |
+| capital | 188 | 397 | 209 | 21 → 28 |
+| currency | 193 | 199 | 6 | 13 → 13 |
+| historical-flag | 59 | 63 | 4 | 10 → 11 |
+| population-statistics | 4 | 22 | 18 | 0 → 0 |
+| area-statistics | 0 | 0 | 0 | 0 → 0 |
+| density | 0 | 0 | 0 | 0 → 0 |
+| economy | 52 | 73 | 21 | 0 → 0 |
+| events-context | 20 | 45 | 25 | 0 → 0 |
+| relationships | 18 | 18 | 0 | 1 → 1 |
+| overview | 986 | 986 | 0 | 59 → 59 |
+| important-figures | 3 | 3 | 0 | 15 → 21 |
 
-Reuse research/bulk-01/worker-currency/frb1960-extracted.json and frb-review/mapping-source-review1960.json. Do not retrieve/research the source again. Original December1960 PDF, rendered printed1427/PDF108, layout and frozen coordinate parser are retained.
+New claims support 507 claim/snapshot applications from 403 unique claims, including 104 additional reused applications and 232 interval applications. These are applications, not distinct newly filled slots. Whole-year completeness remains conservative: Tagore dated editions and the1800 flag boundary are partial, not silently promoted.
 
-- PDF SHA: e7ff004d8734751e1fea1545cfe54503b16d165bfa105b32f414bfb86d3c40ca.
-- Extraction canonical digest: f67ccd5e9feb9200f44ecd3fd2f88f54e8fc3b2bfbcc7a6cd847bb179409cbbe.
-- Independent review digest: 57414f3ff7b9250ab50599bc2839b2580b4240d590cdefe357263041f717757d.
-- 300 observations: 275 monthlyFX/25 units. Source/mapping approval248 (226 FX/22 currency), held52;23 existing-framework contracts.
-- No1960 package is production-accepted or integrated. Source approval is not production acceptance.
-- Argentina absentframework, Malaysia anachronistic header, Philippine partialApril and glyph doubts remain held. France newfranc100oldfranc explicitly qualified. Annual1954–1959 and1959 months excluded.
+Bulk acquisition 466 claims; targeted source-bound flags/Tagore supplementary packages 10. Global source catalogue 864 → 876 (+12); reused source IDs: us-flag-dates, raj-parliament. Source-first computational extraction and bounded independent review. Most source bodies reused; new source IDs do not equal HTTP request counts. Research facsimile inspection is evidence review; atlas browser checks0.
 
-Coordinator: inspect original facsimile and independent review; create a SEPARATE scripts/research-bulk-frb1960.mjs. Bind PDF/image/extraction/parser/contract hashes and literal market/header/footnote semantics. Never edit frozen1930/1938 adapters: exact bytes certify previous tranches. Preview/reconcile legacy AND rich facts, retain actual month dates and qualifiers, run meaningful focused tests, then use existing runTranche/--apply serially for safely accepted packages. Do not guess aliases to bypass conflicts. Checkpoint/push useful gains and verify actual Pages/live registry. Routine data-only browser checks0.
+## Holds and territorial safeguards
 
-## Preserved research
+- FRB1960:63 held (original52 plus11 reconciliation),3 duplicates; frozen observations preserved.
+- Almanac100: all reviewed and held for missing observation dates; edition is not fact date.
+- CShapes cohort02:66 accepted candidates/66 claims,3 holds (Yaounde1920, early1920 Horthy interval and conflicting Prague record); literal source values preserved.
+- CShapes initial:514 source/reconciliation holds,5 duplicates; later cohort is a subset, not an additive global held total.
+- UN1960:9 of31 reviewed observations held; original242 OCR cells remain research, not automatic acceptance. US overseas forces and South Africa Walvis Bay exclusions caught; approximate/uncertain geography not promoted.
+- COW:118 structural holds in498 endpoints; unselected/unreviewed endpoints remain research. Selected45 all accepted.
+- Earlier Nobel and officeholder holds preserved. No disputed issue forced to reduce counts.
 
-Capital: research/bulk-01/worker-capitals/CONTINUATION.md. 100 literal cells from1900 WorldAlmanac remain held for absent observation dates; original facsimile/OCR/parser/metadata retained. Edition1900 is bibliographic context. PopulationJanuary1900 and headsDecember1899 dates must not be borrowed. Resolve only with genuinely dated evidence; no expensive per-country forcing.
+Nigeria/Abuja, colonial Tanganyika/Dodoma, colonial Uganda/Kampala, Congo renaming/seat moves, UAR regional scopes, wartime/multiple capitals and source default dates remain held or explicitly narrowed. Dataset country labels establish no sovereignty, succession or modern fallback. No guessed corrections or silently interpolated statistics.
 
-Supplementary official Victoria chair rows with month-only dates and emperor genealogy remain isolated. Existing accepted Nobel work and145 unresolved candidates preserved. No inventory/research restart or cosmetic gap resolution.
+## Verification and continuation
 
-## Engine and standards
+Production audit: 22497 checks passed; prior accepted packages unchanged. 129 focused automated tests passed (final-focused-tests.txt); Pages UTF8/exclusion safety passed1683 files. Certified parser Git-blob validation prevents newline-normalization recurrence. Zero browser checks. Live registry/runtime proof saved separately and exact final deployment checked after pushing. Legacy entity/mapping/source registries and UI runtime unchanged; three reviewed licensed schematic flag assets added.
 
-scripts/research-bulk.mjs shared fail-closed intake; acquisition schema under research/bulk-01/schemas. Immutable bodies, canonical manifests, independent source/mapping contracts and parser hashes bind claims. Receipts honestly certify source-bound review, not fabricated per-row human review. Existing comprehensive schema/source/date/scope/conflict validator and atomic serial integrator remain authoritative. Crash-before-ledger recovery and source-ID reuse tested. No parallel production edits.
+Next: Population/statistics: independently re-review retained1960 Poland census candidate using the existing polish-peoples-republic-1952-framework, then other unreviewed literal contemporary-scope UN1960 cells. Prioritize matching-scope missing population slots; retain approximation/uncertainty holds. Reuse original PDF and parser, no new inventory.
 
-Archigos means Effective political leader (Archigos coding), not formaloffice/sovereignty. Original endpoints retained, finalcodedday omitted conservatively rather than extended. Acting/contested/partial/sourceencoding cases held. FRB data are quoted financial instruments, not GDP, sole legal tender or interpolated statistics. Publisher bytes survive Windows checkout; internal research excluded from Pages. Source dataset counts are not HTTP request counts; retry/wall-clock costs were not instrumented.
+Checkpoint history before final documentation commit:
 
-Continue highest-yield bulk categories after1960 while budget safely permits. Preserve requested-year authority, snapshot/date separation and uncertainty. No UI redesign, version/timeline change, modern fallback, geometry/SUBJECTO/PARTOF inference, portraits or unrelated campaigns. Safe stop: finish coherent accepted work, validate, commit/push, retain candidates and precise handoff, verify clean main and deployed canonical registry, stop.
+- 1ff173f88e339d0caee77724108b1c7344b5c22e Fill 25 missing event slots with dated combat-source evidence
+- 2c3b2738b6d964c8eb2291eadd58d254fbe85fd7 Add matching-scope population, historical flags and dated literary contexts
+- 852399e701616766cbe592a7d1beeeb2b98513bd Fill 153 historical capital snapshot slots from dated source intervals
+- 56da55d52547ebcafbf5b53a0109705553401ff1 Publish accepted 1960 observations to production store
+- a01795b9d638b19ed74f4352275dfc199c74ce4d Integrate preserved 1960 observations with coverage-value reporting
 
-## Coverage-value campaign:1960 complete
-234 claims integrated (8 currency-unit observations/226 FX), production1773.27 net supportedcategoryslots,21 materiallyimproveddossiers.17602 integritychecks and17focusedtests passed.Original52holds plus11reconciliationholds retained;3duplicates excluded. Currentbaseline/reports research/bulk-02. Next: capitaltemporalreview/CShapes source and UN1960population, stagedUSflags; do not repeat1960. FurtherFXlowerpriority.
 
-## Capital checkpoint
-99 additional source-qualifiedcapitalclaims in81packages;production1872.153 netnewcapital slots, campaignnet180 slots.19737 integritychecks;17focusedtests pass. Sourceendpointuncertainties conservativelynarrowed; 514 heldsource/reconciliationrows and5duplicates preserved. OriginalAlmanac100allheld reviewed; no borrowed dates. Next:22independentlyapprovedpopulation observations,USflags andTagore packages; preserve ambiguity.
-
-## Population and supplementary checkpoint
-22 matching-scope UN1960 population observations, 3 source-bound illustrative US flags and 7 exact-year Tagore publication contexts integrated. Production1904; campaign365 newclaims,202 net supportedslots plus explicitpartial contexts.9 population holds preserve two reversed territorial footnotes. Next:45 independently reviewed COW combat endpoints; capitalcohort02 research remains isolated. No browserchecks or UIchanges.
-
-## Dated combat-events checkpoint
-45 independently reviewed COW actual combat endpoints integrated in15 packages,25 missing event slots filled. Production1949, campaign410 claims and227 net fullcategory slots,211 materiallyimproveddossiers;21094 integritychecks and17 focused tests pass. Next: finish independent capitalcohort02 review of55 mapping proposals/69 rows. No production acceptance until historical review and strictvalidator pass.
+Use scripts/research-bulk-coverage.mjs for baseline1539 reporting, not the earlier514 baseline. Frozen source-specific adapters and reviewed packages are immutable. Source-bound parser/cache bytes must survive checkout. Workers never edit production; coordinator integration remains serial, strict comprehensive validation and atomic journal required. Rebind only technical production fingerprints/source aliases after independent review. Validate data-only tranches with deterministic/focused tests and zero browsers; no UI redesign, timeline/version changes, geometry/owner/SUBJECTO/PARTOF inference, modern-border population fallback or forced uncertainty resolution. Prioritize materially improved dossiers/missing category slots/interval reuse before raw count.
