@@ -130,6 +130,9 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
   const root=path.resolve(fileURLToPath(new URL('../',import.meta.url))), options={};
   if(args.includes('--from'))options.from=Number(value('--from'));if(args.includes('--until'))options.until=Number(value('--until'));
   if(args.includes('--entities'))options.entityIds=value('--entities').split(',');
-  const result=scan(await readContext(root),options),dir=path.join(root,'research/reports');fs.mkdirSync(dir,{recursive:true});
+  const context=await readContext(root),annual=args.includes('--annual-integrity');
+  const {scanSnapshots,readSnapshotConfig}=await import('./research-snapshot-scan.mjs');
+  const snapshots=readSnapshotConfig(root).filter(s=>(options.from===undefined||s.year>=options.from)&&(options.until===undefined||s.year<=options.until));
+  const result=annual?scan(context,options):scanSnapshots(context,{entityIds:options.entityIds,snapshots}),dir=path.join(root,'research/reports');fs.mkdirSync(dir,{recursive:true});
   fs.writeFileSync(path.join(dir,'scan.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result.metrics));
 }

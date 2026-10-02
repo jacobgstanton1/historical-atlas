@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "bundleType": "historical-flag-evidence",
+  "id": "scale01-flags-germany-weimar-framework",
+  "entityId": "germany-weimar-framework",
+  "worker": {
+    "id": "campaign2-flags",
+    "specialism": "historical-flags"
+  },
+  "claims": [
+    {
+      "id": "scale01-flag-germany-weimar-framework",
+      "category": "historical-flag",
+      "value": "Weimar black-red-gold horizontal national tricolour",
+      "entityId": "germany-weimar-framework",
+      "temporal": {
+        "kind": "interval",
+        "from": "1920",
+        "until": "1932",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "entity-institutional",
+        "description": "Sourced national flag design of the selected historical state framework; no polygon-derived sovereignty or exact historical textile measurements.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "scale01-weimar-flag-history",
+        "scale01-weimar-flag-asset"
+      ],
+      "evidence": [
+        {
+          "sourceId": "scale01-weimar-flag-history",
+          "locator": "Historical narrative / constitutional flag colours",
+          "note": "Bundestag distinguishes black-red-gold Reich colours from the black-white-red merchant flag with republican canton. Constitution entered force 14 August1919; 1920–1932 avoids transitional endpoints. Licensed graphic uses the historical 3:2 national ratio.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1920",
+            "until": "1932",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        },
+        {
+          "sourceId": "scale01-weimar-flag-asset",
+          "locator": "Summary and licensing",
+          "note": "Complete file description and public-domain licensing read; original SVG acquired unchanged. Asset source supplies provenance, not independent historical chronology.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1920",
+            "until": "1932",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [
+        "Schematic vector; no assertion of historically standardized RGB shades or universal military/merchant-ensign use."
+      ],
+      "origin": {
+        "kind": "new-research",
+        "reference": "research/scale-01/flags/cache/weimar-history.html"
+      },
+      "flag": {
+        "asset": "./assets/flags/de-weimar.svg",
+        "type": "national flag",
+        "alt": "Weimar black-red-gold horizontal national tricolour",
+        "license": "Public domain",
+        "attribution": "Wikimedia Commons vector contributors; public-domain geometric Weimar national tricolour depiction",
+        "assetSourceIds": [
+          "scale01-weimar-flag-asset"
+        ],
+        "sha256": "d0ef7c45c78872a5942f5d521150a55acf3f5e082edf777ed3170145643fad97"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "scale01-weimar-flag-history",
+      "url": "https://www.bundestag.de/dokumente/textarchiv/1919-07-03-schwarz-rot-gold-649430",
+      "title": "Nationalversammlung stimmt Reichsfarben Schwarz-Rot-Gold zu",
+      "institution": "Deutscher Bundestag",
+      "kind": "institutional-historical",
+      "accessed": "2026-10-02",
+      "usage": "Full body reviewed; factual paraphrase only. Source cache is a local review aid, not redistributed source text."
+    },
+    {
+      "id": "scale01-weimar-flag-asset",
+      "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany_(3-2).svg",
+      "title": "Weimar black-red-gold horizontal national tricolour SVG",
+      "institution": "Wikimedia Commons",
+      "kind": "asset-catalogue",
+      "accessed": "2026-10-02",
+      "usage": "Full body reviewed; factual paraphrase only. Source cache is a local review aid, not redistributed source text.",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Germany_%283-2%29.svg",
+      "license": "Public domain",
+      "attribution": "Wikimedia Commons vector contributors; public-domain geometric Weimar national tricolour depiction"
+    }
+  ],
+  "stagedAsset": "research/scale-01/flags/staged-assets/de-weimar.svg",
+  "reviewStatus": "submitted",
+  "sourceBodyPaths": [
+    "cache/weimar-history.html",
+    "cache/weimar-license.html"
+  ]
+}

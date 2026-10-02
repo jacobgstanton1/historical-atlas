@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "bundleType": "historical-flag-evidence",
+  "id": "scale01-flags-germany-imperial-framework",
+  "entityId": "germany-imperial-framework",
+  "worker": {
+    "id": "campaign2-flags",
+    "specialism": "historical-flags"
+  },
+  "claims": [
+    {
+      "id": "scale01-flag-germany-imperial-framework",
+      "category": "historical-flag",
+      "value": "Imperial German black-white-red horizontal national tricolour",
+      "entityId": "germany-imperial-framework",
+      "temporal": {
+        "kind": "interval",
+        "from": "1893",
+        "until": "1917",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "entity-institutional",
+        "description": "Sourced flag design/type associated with the historical entity during the stated interval; no geometric sovereignty inference.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "scale01-empire-flag-history",
+        "scale01-empire-flag-asset"
+      ],
+      "evidence": [
+        {
+          "sourceId": "scale01-empire-flag-history",
+          "locator": "Full historical or statutory flag description",
+          "note": "DHM object body explicitly distinguishes symbolic use from1871 and formal Reichsflagge introduction by imperial ordinance1892. Interior1893–1917 avoids unasserted ordinance day and the1918 constitutional transition.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1893",
+            "until": "1917",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        },
+        {
+          "sourceId": "scale01-empire-flag-asset",
+          "locator": "Individual file description and licensing",
+          "note": "Individual public-domain licensing and design read; original asset acquired unchanged. The SVG supplies visual provenance, not historical chronology.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1893",
+            "until": "1917",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [
+        "Schematic licensed SVG; current RGB encoding is illustrative, not an assertion of standardized historical textile shades.",
+        "Conservative bounded interval excludes unreviewed transition/occupation years."
+      ],
+      "origin": {
+        "kind": "new-research",
+        "reference": "research/scale-01/flags/cache/empire-history.html"
+      },
+      "flag": {
+        "asset": "./assets/flags/de1892.svg",
+        "type": "national flag",
+        "alt": "Imperial German black-white-red horizontal national tricolour",
+        "license": "Public domain",
+        "attribution": "B1mbo, Madden and Wikimedia Commons vector contributors; public-domain geometric Imperial German flag depiction",
+        "assetSourceIds": [
+          "scale01-empire-flag-asset"
+        ],
+        "sha256": "6571eb6423bfe57942c89f989cf95238dc56e90a4072580750160552f4d9150d"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "scale01-empire-flag-history",
+      "url": "https://www.dhm.de/lemo/bestand/objekt/schwarz-weiss-rote-fahne-vom-schloss-in-versailles-1871",
+      "title": "Schwarz-weiß-rote Fahne vom Schloss in Versailles,1871",
+      "institution": "Deutsches Historisches Museum",
+      "kind": "institutional-historical",
+      "accessed": "2026-10-02",
+      "usage": "Full body reviewed; factual paraphrase only. Local source cache is not redistributed."
+    },
+    {
+      "id": "scale01-empire-flag-asset",
+      "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany_(1867%E2%80%931918).svg",
+      "title": "Imperial German black-white-red horizontal national tricolour SVG",
+      "institution": "Wikimedia Commons",
+      "kind": "asset-catalogue",
+      "accessed": "2026-10-02",
+      "usage": "Full body reviewed; factual paraphrase only. Local source cache is not redistributed.",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Flag_of_Germany_%281867%E2%80%931918%29.svg",
+      "license": "Public domain",
+      "attribution": "B1mbo, Madden and Wikimedia Commons vector contributors; public-domain geometric Imperial German flag depiction"
+    }
+  ],
+  "stagedAsset": "research/scale-01/flags/staged-assets/de1892.svg",
+  "reviewStatus": "submitted",
+  "sourceBodyPaths": [
+    "cache/empire-history.html",
+    "cache/empire-license.html"
+  ]
+}

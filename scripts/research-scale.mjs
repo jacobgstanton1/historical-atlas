@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {readJSON,saveJSON,readContext,digest,root,isCLI} from './research-common.mjs';
 import {fingerprint,temporalBounds,validateDossier,acceptDossier,integrateDossier} from './research-comprehensive.mjs';
+import {atomicWrite} from './research-queue.mjs';
+const durableSave=(file,value)=>{fs.mkdirSync(path.dirname(file),{recursive:true});atomicWrite(file,value);};
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
 export function reuseCatalogue(context,accepted=[],candidates=[]){
  const file=path.join(context.directory,'data/comprehensive-dossiers.json');
@@ -54,7 +56,7 @@ export function integrateReviewedFiles(packageFile,jobFile,reviewFile,directory=
   assert(j.afterFingerprint===fingerprint(directory),'Changed production requires explicit recovery review');
   assert(digest(readJSON(reviewFile))===digest(existing.acceptance.review.originalIndependentReview),'Independent review changed during recovery');
   ledger.integrations.push({entityId:existing.entityId,period:existing.period,packageId:existing.id,originalPackageHash:digest(original),integratedClaimIds:existing.claims.map(c=>c.id),newResearchClaims:existing.claims.filter(c=>c.origin.kind==='new-research').length,reusedEvidenceClaims:existing.claims.filter(c=>c.origin.kind!=='new-research').length,claimsByCategory:Object.fromEntries([...new Set(existing.claims.map(c=>c.category))].map(f=>[f,existing.claims.filter(c=>c.category===f).length])),result:{applied:true,recovered:true,afterFingerprint:j.afterFingerprint}});
-  saveJSON(ledgerFile,ledger);return {recovered:true,entityId:existing.entityId,integrated:existing.claims.length};
+  durableSave(ledgerFile,ledger);return {recovered:true,entityId:existing.entityId,integrated:existing.claims.length};
  }
  const prepared=prepareReviewedIntegration(original,readJSON(jobFile),readJSON(reviewFile),context);
  const journalFile=path.join(directory,'research/comprehensive/integration-journal.json');
@@ -65,7 +67,7 @@ export function integrateReviewedFiles(packageFile,jobFile,reviewFile,directory=
  ledger.integrations.push({entityId:original.entityId,period:original.period,packageId:original.id,originalPackageHash:digest(original),integratedClaimIds:integrated.map(c=>c.id),newResearchClaims:integrated.filter(c=>c.origin.kind==='new-research').length,
   reusedEvidenceClaims:integrated.filter(c=>c.origin.kind!=='new-research').length,claimsByCategory:Object.fromEntries([...new Set(integrated.map(c=>c.category))].map(f=>[f,integrated.filter(c=>c.category===f).length])),
   held:Object.values(readJSON(reviewFile).decisions).filter(d=>d==='held').length,rejected:Object.values(readJSON(reviewFile).decisions).filter(d=>d==='rejected').length,skippedDuplicates:prepared.skipped,validationChecks:prepared.validation.checks.length,contextChange:prepared.contextChange,result});
- saveJSON(ledgerFile,ledger);saveJSON(path.join(directory,'research/scale-01/integrated',original.entityId+'-'+digest({packageId:original.id,period:original.period}).slice(0,16)+'.json'),prepared);
+ durableSave(ledgerFile,ledger);durableSave(path.join(directory,'research/scale-01/integrated',original.entityId+'-'+digest({packageId:original.id,period:original.period}).slice(0,16)+'.json'),prepared);
  return {entityId:original.entityId,integrated:integrated.length,newResearch:integrated.filter(c=>c.origin.kind==='new-research').length,duplicates:Object.keys(prepared.skipped).length};
 }
 if(isCLI(import.meta.url)){const[p,j,r]=process.argv.slice(2);console.log(JSON.stringify(integrateReviewedFiles(p,j,r),null,2));}

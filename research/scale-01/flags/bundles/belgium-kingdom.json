@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 2,
+  "bundleType": "historical-flag-evidence",
+  "id": "scale01-flags-belgium-kingdom",
+  "entityId": "belgium-kingdom",
+  "period": {
+    "from": "1832",
+    "until": "1960"
+  },
+  "worker": {
+    "id": "campaign2-flags",
+    "specialism": "historical-flags"
+  },
+  "claims": [
+    {
+      "id": "scale01-flag-belgium-kingdom",
+      "category": "historical-flag",
+      "value": "Belgian black-yellow-red vertical tricolour",
+      "temporal": {
+        "kind": "interval",
+        "from": "1832",
+        "until": "1960",
+        "certainty": "exact"
+      },
+      "entityId": "belgium-kingdom",
+      "geographicScope": {
+        "description": "Entity-level dated office, denomination or symbol; no geometry or modern identity inference.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "c02-belgium-flag-history",
+        "c02-asset-be-1831"
+      ],
+      "evidence": [
+        {
+          "sourceId": "c02-belgium-flag-history",
+          "note": "Historical arrangement established definitively in 1831; schematic geometric depiction, not a claim about exact historical textile shades.",
+          "supportedPrecision": "year",
+          "supportsClaim": true,
+          "from": "1832",
+          "until": "1908",
+          "temporal": {
+            "kind": "interval",
+            "from": "1832",
+            "until": "1960",
+            "certainty": "exact"
+          },
+          "precision": "year"
+        },
+        {
+          "sourceId": "c02-asset-be-1831",
+          "note": "Historical arrangement established definitively in 1831; schematic geometric depiction, not a claim about exact historical textile shades.",
+          "supportedPrecision": "year",
+          "supportsClaim": true,
+          "from": "1832",
+          "until": "1908",
+          "temporal": {
+            "kind": "interval",
+            "from": "1832",
+            "until": "1960",
+            "certainty": "exact"
+          },
+          "precision": "year"
+        }
+      ],
+      "reviewStatus": "clear",
+      "cautions": [],
+      "flag": {
+        "asset": "./assets/flags/be-1831.svg",
+        "type": "national flag",
+        "alt": "Belgian black-yellow-red vertical tricolour",
+        "license": "Public domain",
+        "attribution": "Public-domain geometric depiction from Wikimedia Commons, Flag of Belgium.svg",
+        "assetSourceIds": [
+          "c02-asset-be-1831"
+        ],
+        "sha256": "95933c385c9e72479ec7e63f6cbca50d07695fd2e41fab334ea549c20b234fd1"
+      },
+      "status": "supported",
+      "risks": [],
+      "origin": {
+        "kind": "preserved-package",
+        "reference": "research/campaign-02/packages/belgium-kingdom.json#c02-design-belgium-kingdom-historical-flag-0"
+      },
+      "qualifications": [
+        "Schematic licensed vector depicts the sourced design; modern RGB shades and textile dimensions are not asserted as historical measurements.",
+        "Selected conservative interior years exclude adoption/abrogation transition years."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "c02-belgium-flag-history",
+      "url": "https://focusonbelgium.be/fr/le%20saviez-vous/quelle-est-lorigine-de-notre-drapeau-tricolore",
+      "title": "Quelle est l’origine de notre drapeau tricolore?",
+      "institution": "Belgian Federal Public Service Foreign Affairs",
+      "kind": "institutional-historical",
+      "accessed": "2026-10-01",
+      "usage": "Full body: horizontal 1830 tricolour made definitively vertical black at hoist in 1831; not inferred from current depiction."
+    },
+    {
+      "id": "c02-asset-be-1831",
+      "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Belgium.svg",
+      "title": "Belgian black-yellow-red vertical tricolour SVG asset",
+      "institution": "Wikimedia Commons",
+      "kind": "asset-catalogue",
+      "accessed": "2026-10-01",
+      "usage": "Full file description and licence read; unmodified original SVG staged separately.",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg",
+      "license": "Public domain",
+      "attribution": "Public-domain geometric depiction from Wikimedia Commons, Flag of Belgium.svg"
+    }
+  ],
+  "stagedAsset": "research/scale-01/flags/staged-assets/be-1831.svg",
+  "reviewStatus": "submitted",
+  "sourceBodyPaths": [
+    "cache/be-history.html"
+  ],
+  "notes": [
+    "Fresh full-source review on 2026-10-02 extends conservative interior bounds; prior Campaign 2 acceptance is not transferred."
+  ]
+}

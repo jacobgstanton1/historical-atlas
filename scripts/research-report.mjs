@@ -26,10 +26,12 @@ export function renderReport(report){
   lines.push('','## Queue','',`Jobs: ${report.queue.jobs}; stale fingerprints: ${report.queue.staleJobs.length}.`,...Object.entries(report.queue.statuses).sort().map(([s,n])=>`- ${s}: ${n}`),'',`Submitted research packages: ${report.researchEvidence.submittedPackages}; accepted outside production: ${report.researchEvidence.acceptedPackages}.`,'',...Object.entries(report.researchEvidence.acceptedClaimsByCategory).sort().map(([c,n])=>`- Accepted research claims (${c}): ${n}`),'','Accepted research is separate from production field coverage.','', '## Interpretation','',...report.qualifications.map(x=>'- '+x),'');return lines.join('\n');
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
-  const root=path.resolve(fileURLToPath(new URL('../',import.meta.url))),dir=path.join(root,'research/reports'),result=scan(readContext(root));
-  const args=process.argv.slice(2);if(args.length&&!(args.length===2&&args[0]==='--queue'&&args[1]))throw Error('Usage: research-report.mjs [--queue queue.json]');
-  const explicit=args[1]||null;
+  const root=path.resolve(fileURLToPath(new URL('../',import.meta.url))),dir=path.join(root,'research/reports');
+  const args=process.argv.slice(2),annual=args.includes('--annual-integrity'),remaining=args.filter(x=>x!=='--annual-integrity');
+  if(remaining.length&&!(remaining.length===2&&remaining[0]==='--queue'&&remaining[1]))throw Error('Usage: research-report.mjs [--annual-integrity] [--queue queue.json]');
+  const explicit=remaining[1]||null;
   const queuePath=explicit||['research/jobs/queue.json','research/pilot/queue.json'].map(p=>path.join(root,p)).find(p=>fs.existsSync(p));
   const queue=queuePath?JSON.parse(fs.readFileSync(queuePath,'utf8')):{jobs:[]};
-  const report=buildReport(result,queue);fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(path.join(dir,'research-report.json'),JSON.stringify(report,null,2)+'\n');fs.writeFileSync(path.join(dir,'research-report.md'),renderReport(report));console.log(JSON.stringify({gaps:report.metrics.totalGaps,categories:Object.keys(report.categories).length,jobs:report.queue.jobs}));
+  if(annual){const report=buildReport(scan(readContext(root)),queue);fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(path.join(dir,'research-report.json'),JSON.stringify(report,null,2)+'\n');fs.writeFileSync(path.join(dir,'research-report.md'),renderReport(report));console.log(JSON.stringify({model:'annual-integrity',gaps:report.metrics.totalGaps,jobs:report.queue.jobs}));}
+  else {const {scanSnapshots,writeSnapshotReport}=await import('./research-snapshot-scan.mjs');const report=scanSnapshots(readContext(root),{queue});report.queue={jobs:queue.jobs.length,statuses:Object.fromEntries([...new Set(queue.jobs.map(j=>j.status))].sort().map(s=>[s,queue.jobs.filter(j=>j.status===s).length]))};writeSnapshotReport(report,dir,{basename:'research-report'});console.log(JSON.stringify(report.metrics));}
 }
