@@ -1,33 +1,43 @@
-# Bulk acquisition continuation
+# Bulk acquisition: exact safe-stop continuation
 
-The official dated-table tranche is integrated: 135 new production leadership claims in 7 packages, total 649. 332 normalized rows; 44 duplicate controls; 153 held. Baseline514 claims preserved, no metadata/UI redesign. Source manifests, original bytes and reviewed contracts are under research/bulk-01.
+Six production tranches are complete, validated and pushed. Do not repeat research, inventory, integration or expensive validation merely to resume.
 
-Coverage: 3691 supported category slots; leadership 278 supported (baseline264). Resolver362/401 unchanged. Full focused validation:69 tests passed; revised ten bulk tests passed. Deterministic production audit 7292 checks passed. Zero browser checks.
+Production: 514 → 1,539 rich claims; 1,025 new claims in 114 packages (715 leadership, 23 currency-unit observations, 287 exchange quotations). 181 total packages, 97 rich entities; 617 historical entities unchanged. 864 distinct registered sources (+7). Resolver 362/401 (90.27%), visible v0.6.1 and timeline remain unchanged.
 
-Next: reuse the completed independent Archigos source/mapping contracts in research/bulk-01/archigos-review. Normalize literal source rows under the qualified Effective political leader (Archigos coding) role, not formal offices, with original endpoints and explicit final-coded-day omission. Hold non-ASCII fallback rows, source chronology conflicts, unlisted/occupied/contested frameworks and Swiss/Uruguayan collegiate cases. Validate each normalized row against its original DTA-extracted core fields and exact bounded contract; then integrate serially and checkpoint substantial gains. Do not repeat official-table research or baseline inventory.
+| Checkpoint | New claims | Commit |
+| --- | ---: | --- |
+| Official dated officeholders |135|84b452678b7de7161d1ed48ff99d7978306704d9|
+| Archigos cohort01 |246|c70132c96a66e0f5a89896d953e5d01e2cc6bd5e|
+| Archigos cohort02 |107|89cd2856c4792777f6b385c74c081168684519b3|
+| Archigos cohort03 |227|a25897929d02eb85b8de16551b516aabdce7d53b|
+| FRB1930 observations |90|c49942ea6320f96556dc3af0c22c003ae1c40007|
+| FRB1938 observations |220|e632020e4d9b4ea9b26394d8640095c48516f021|
 
-Preserved supplementary Victoria chair rows and official emperor genealogy remain unintegrated. Future priorities are genuinely dated capital/currency/statistical tables and diversified Important Figures; no modern fallback or nationality shortcuts. This is an ongoing campaign, not completion of every requested adapter.
+Final full automated suite 362/362 passed; production audit 15,291 passed. All prior accepted packages unchanged; legacy production, assets and runtime untouched. Zero browser checks. 189 entity/snapshot dossiers receive evidence; supported category slots 3,677→3,777. Leadership full slots264→293; partial transition coverage remains separate. Reports: research/bulk-01/reports/completion.{json,md}; test output: research/bulk-01/final-tests.txt.
 
-## Archigos cohort 01 checkpoint
+## Exact next action: FRB1960 observation adapter and tranche
 
-Integrated 246 additional source-qualified effective-leader claims in 21 packages. Total rich production 895; net campaign381. 9169 integrity checks passed; eight academic adapter tests passed. All 209 held candidates remain preserved; 28 coded-surname duplicate controls are excluded. Country cohorts are deterministic and do not split a country across checkpoints. Source definition, original DTA/PDF and 20,454 core-field comparison proof are retained.
+Reuse research/bulk-01/worker-currency/frb1960-extracted.json and frb-review/mapping-source-review1960.json. Do not retrieve/research the source again. Original December1960 PDF, rendered printed1427/PDF108, layout and frozen coordinate parser are retained.
 
-Next action: node scripts/research-bulk-archigos.mjs 2 (preview), then --apply only after package validation/source review. Follow with cohort3. Do not rerun/integrate cohort1. Final report must include all tranches and deployed canonical registry equality. Official first checkpoint84b4526 deployed successfully with649 claims, recorded in its deployment-proof.json.
+- PDF SHA: e7ff004d8734751e1fea1545cfe54503b16d165bfa105b32f414bfb86d3c40ca.
+- Extraction canonical digest: f67ccd5e9feb9200f44ecd3fd2f88f54e8fc3b2bfbcc7a6cd847bb179409cbbe.
+- Independent review digest: 57414f3ff7b9250ab50599bc2839b2580b4240d590cdefe357263041f717757d.
+- 300 observations: 275 monthlyFX/25 units. Source/mapping approval248 (226 FX/22 currency), held52;23 existing-framework contracts.
+- No1960 package is production-accepted or integrated. Source approval is not production acceptance.
+- Argentina absentframework, Malaysia anachronistic header, Philippine partialApril and glyph doubts remain held. France newfranc100oldfranc explicitly qualified. Annual1954–1959 and1959 months excluded.
 
-## Archigos cohort02 checkpoint
+Coordinator: inspect original facsimile and independent review; create a SEPARATE scripts/research-bulk-frb1960.mjs. Bind PDF/image/extraction/parser/contract hashes and literal market/header/footnote semantics. Never edit frozen1930/1938 adapters: exact bytes certify previous tranches. Preview/reconcile legacy AND rich facts, retain actual month dates and qualifiers, run meaningful focused tests, then use existing runTranche/--apply serially for safely accepted packages. Do not guess aliases to bypass conflicts. Checkpoint/push useful gains and verify actual Pages/live registry. Routine data-only browser checks0.
 
-107 further claims integrated; rich total 1002, campaign net488. 10039 integrity checks passed; all20 current bulk adapter/recovery tests passed. 136 held and 10 duplicate rows preserved. The newly added acquisition JSON schema keeps dispositions separate from coverage, carries target snapshots and statistical comparability classes, and does not weaken production acceptance. First-write-before-ledger interruption now resumes preserved candidates by detecting the durable exact package. No new source retrieval occurred.
+## Preserved research
 
-Next: preview/validate/apply Archigos cohort3 using the existing source/independent mapping contracts, then complete aggregate reporting and live deployment verification. Do not reintegrate cohorts1–2. A worker is making a bounded source-discovery pass for the next genuinely dated capital/currency bulk source; preserve its output even if integration budget is insufficient.
+Capital: research/bulk-01/worker-capitals/CONTINUATION.md. 100 literal cells from1900 WorldAlmanac remain held for absent observation dates; original facsimile/OCR/parser/metadata retained. Edition1900 is bibliographic context. PopulationJanuary1900 and headsDecember1899 dates must not be borrowed. Resolve only with genuinely dated evidence; no expensive per-country forcing.
 
-## Archigos cohort03 checkpoint
+Supplementary official Victoria chair rows with month-only dates and emperor genealogy remain isolated. Existing accepted Nobel work and145 unresolved candidates preserved. No inventory/research restart or cosmetic gap resolution.
 
-227 additional claims integrated from 226 accepted original rows, including one supported cross-framework split. Rich total 1229; campaign net715. 11781 production integrity checks passed. All3 reviewed Archigos country cohorts complete. Never re-import them. Remaining source ambiguity/encoding/occupation holds stay preserved.
+## Engine and standards
 
-Next category now identified: FederalReserveBulletin July1930 foreignexchange table, printed450/PDFpage59. Original facsimile retrieved via curl --http1.1, verifieduppercaseURLhttps://fraser.stlouisfed.org/files/docs/publications/FRB/1930s/frb_071930.pdf; rawbody research/bulk-01/cache/frb_071930.pdf. Currencyworker is extracting literal quoted units and numeric April/May/June1930 observations with exact footnotes, not sole-legal-tender intervals. Extend shared intake to observation categories only after independent source/mapping review and dated rendering contract. Capitalworker found 1900WorldAlmanac table; do not borrow unrelated population/heads dates as capitalobservationdates. Preserve its heldoutput for temporal review.
+scripts/research-bulk.mjs shared fail-closed intake; acquisition schema under research/bulk-01/schemas. Immutable bodies, canonical manifests, independent source/mapping contracts and parser hashes bind claims. Receipts honestly certify source-bound review, not fabricated per-row human review. Existing comprehensive schema/source/date/scope/conflict validator and atomic serial integrator remain authoritative. Crash-before-ledger recovery and source-ID reuse tested. No parallel production edits.
 
-## FRB1930 checkpoint
-90 dated observations integrated in26 packages:14 currency-unit observations and76 exchange quotations. Production1319 claims, net805. Audit12997 checks passed. Review83 held/3 duplicate candidates preserved. Next: reviewed1938 extraction and contract;1960 bounded source extraction preserved, do not restart research. Capital100 cells remain held for absent observation date.
+Archigos means Effective political leader (Archigos coding), not formaloffice/sovereignty. Original endpoints retained, finalcodedday omitted conservatively rather than extended. Acting/contested/partial/sourceencoding cases held. FRB data are quoted financial instruments, not GDP, sole legal tender or interpolated statistics. Publisher bytes survive Windows checkout; internal research excluded from Pages. Source dataset counts are not HTTP request counts; retry/wall-clock costs were not instrumented.
 
-## FRB1938 checkpoint
-220 further dated observations integrated in28 packages. Total1539 rich claims, net1025. Audit15291 passed.235 independently approved source observations reconciled to220 accepted production candidates,2 duplicates and555 total holds. Next: preserve/reuse1960 source extraction and independent review; source approval is not production acceptance.
+Continue highest-yield bulk categories after1960 while budget safely permits. Preserve requested-year authority, snapshot/date separation and uncertainty. No UI redesign, version/timeline change, modern fallback, geometry/SUBJECTO/PARTOF inference, portraits or unrelated campaigns. Safe stop: finish coherent accepted work, validate, commit/push, retain candidates and precise handoff, verify clean main and deployed canonical registry, stop.

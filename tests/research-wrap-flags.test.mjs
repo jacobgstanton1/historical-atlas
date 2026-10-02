@@ -5,6 +5,7 @@ import path from 'node:path';
 import os from 'node:os';
 import {root,readJSON,readContext,digest} from '../scripts/research-common.mjs';
 import {wrapFlagBundle,verifyFlagBundle} from '../scripts/research-wrap-flags.mjs';
+import {reuseCatalogue} from '../scripts/research-scale.mjs';
 const directory=path.join(root,'research/scale-01/flags');
 const bundle=readJSON(path.join(directory,'bundles/belgium-kingdom.json'));
 const review=readJSON(path.join(directory,'reviews/belgium-kingdom.json'));
@@ -21,9 +22,13 @@ test('technical envelope preserves dated meaning and original decisions',()=>{
  assert.ok(x.validation.errors.every(e=>e==='Flag asset missing or unreadable'));
 });
 test('exact source URL reuse aliases claim/evidence/asset provenance together',()=>{
- const context=readContext(),assetSource=bundle.sources.find(s=>s.id===bundle.claims[0].flag.assetSourceIds[0]),reused={...assetSource,id:'test-reused-flag-source'};
- context.registry.sources.push(reused);
- const x=wrapFlagBundle(bundle,review,context,directory),claim=x.pkg.claims[0];
+ const context=readContext(),fixture=structuredClone(bundle),assetSource=fixture.sources.find(s=>s.id===fixture.claims[0].flag.assetSourceIds[0]);
+ const reused=new Map(reuseCatalogue(context).sources.map(s=>[s.url,s])).get(assetSource.url);
+ assert.ok(reused,'Committed flag source must be reusable');
+ const originalId=assetSource.id,fixtureId='test-original-flag-source';assetSource.id=fixtureId;
+ for(const c of fixture.claims){c.sourceIds=c.sourceIds.map(id=>id===originalId?fixtureId:id);c.flag.assetSourceIds=c.flag.assetSourceIds.map(id=>id===originalId?fixtureId:id);for(const e of c.evidence)if(e.sourceId===originalId)e.sourceId=fixtureId;}
+ const fixtureReview={...structuredClone(review),bundleHash:digest(fixture),packageHash:digest(fixture)};
+ const x=wrapFlagBundle(fixture,fixtureReview,context,directory),claim=x.pkg.claims[0];
  assert.ok(claim.sourceIds.includes(reused.id));
  assert.deepEqual(claim.flag.assetSourceIds,[reused.id]);
  assert.ok(claim.evidence.some(e=>e.sourceId===reused.id));
