@@ -1,0 +1,312 @@
+{
+  "job": {
+    "id": "dossier-0b9c17252afe26d8400ee9d8",
+    "entityId": "spain-political-frameworks",
+    "period": {
+      "from": "1875",
+      "until": "1930"
+    },
+    "mapIds": [
+      "entity-spain"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "ddee38a5de8adc6d8b198b08a406136a24dc24f214b8389bd8e7cdc88a387382",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-dated-flags-spain-political-frameworks",
+    "jobId": "dossier-0b9c17252afe26d8400ee9d8",
+    "entityId": "spain-political-frameworks",
+    "mapIds": [
+      "entity-spain"
+    ],
+    "worker": {
+      "id": "dated-flag-deterministic-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "ddee38a5de8adc6d8b198b08a406136a24dc24f214b8389bd8e7cdc88a387382",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1875",
+      "until": "1930"
+    },
+    "claims": [
+      {
+        "id": "dated-flag-d694655a0d4587bef05d68e0",
+        "entityId": "spain-political-frameworks",
+        "category": "historical-flag",
+        "value": "Flag of Spain (1785–1873, 1875–1931)",
+        "metric": "Historical flag / symbol (dated P41 relationship)",
+        "temporal": {
+          "kind": "interval",
+          "from": "1875",
+          "until": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "spain-political-frameworks-dated-source-symbol",
+          "description": "Flag/symbol associated with this existing political framework through explicitly dated source relationships. No modern-border, nationality or sovereignty inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "commons-flagsdata-20261002",
+          "commons-1aef89339dddcadaaa2e9623-source"
+        ],
+        "evidence": [
+          {
+            "sourceId": "commons-flagsdata-20261002",
+            "locator": "Original Wikidata Q29 P41; file Flag of Spain (1785–1873, 1875–1931).svg; source dates 1874-01-01 → 1931-04-13; frozen FlagsData.tab and original entity revision in cache",
+            "note": "Original start/end qualifiers independently compared with the tabular source. Conservative complete-year subset within the existing entity envelope; this is an assessed applicability interval, not invented exact adoption/retirement dates.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1875",
+              "until": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "commons-1aef89339dddcadaaa2e9623-source",
+            "locator": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain_(1785%E2%80%931873,_1875%E2%80%931931).svg",
+            "note": "Licensed original illustration. SHA256 be501dde6fa7f7a6e22ef6c9c6c0f2d42716d15c2415aa966a6e0f82bdf55afd. Artist, license, credit and original URL in frozen Commons metadata; asset type is conservatively a state symbol, not an inferred national/civil/royal usage.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1875",
+              "until": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Dated source flag/symbol relationship, not independent evidence of sovereignty or unchanged national identity.",
+          "Conservative year-precision display interval; adoption/retirement years and competing or contradictory graphic periods remain held."
+        ],
+        "flag": {
+          "asset": "./assets/flags/commons-1aef89339dddcadaaa2e9623.svg",
+          "type": "state symbol",
+          "alt": "Flag of Spain (1785–1873, 1875–1931) — dated historical source symbol",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "attribution": "previous version User:Ignaciogavira ; current version HansenBCN , designs from SanchoPanzaXXI — self-made, based on Image:Bandera naval desde 1785.png ; [1]; Wikimedia Commons",
+          "assetSourceIds": [
+            "commons-1aef89339dddcadaaa2e9623-source"
+          ],
+          "sha256": "be501dde6fa7f7a6e22ef6c9c6c0f2d42716d15c2415aa966a6e0f82bdf55afd"
+        },
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Commons FlagsData.tab plus matching original qualified P41 and licensed original SVG",
+          "sourceIdentifier": "Q29:Flag of Spain (1785–1873, 1875–1931).svg:1874-01-01:1931-04-13"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "commons-1aef89339dddcadaaa2e9623-source",
+        "title": "Flag of Spain (1785–1873, 1875–1931).svg — licensed Commons original illustration",
+        "institution": "Wikimedia Commons contributors",
+        "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain_(1785%E2%80%931873,_1875%E2%80%931931).svg",
+        "accessed": "2026-10-02",
+        "usage": "Original SVG illustration only; historical date applicability independently checked against original P41 qualifiers. Source artist/credit metadata preserved in the frozen Commons response.",
+        "kind": "licensed-historical-flag-illustration",
+        "license": "CC BY-SA 3.0",
+        "attribution": "previous version User:Ignaciogavira ; current version HansenBCN , designs from SanchoPanzaXXI — self-made, based on Image:Bandera naval desde 1785.png ; [1]; Wikimedia Commons",
+        "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Flag_of_Spain_%281785%E2%80%931873%2C_1875%E2%80%931931%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "commons-flagsdata-20261002",
+          "commons-1aef89339dddcadaaa2e9623-source"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator reviewed the category-limited historical political associations, original matching non-deprecated P41 qualifiers and precision, Gregorian dates, entity envelopes, graphic-period contradictions, conflicts, source reuse and original Commons licensing/attribution. Straightforward source-family records are accepted only inside conservative dated intervals. Undated, competing, mismatched-period, missing-envelope, oversized and pending SVG cases remain held. Duplicate source-country rows for the same entity/symbol/period are reconciled; no modern identity fallback and no accepted source or historical fact overwritten.",
+      "preservedPackageHashes": [
+        "6b97476ec4872da8a5ac34efd69f432acd6ac02188d2e60866d1cf68617941b9",
+        "0a7d8612cd77609a692512c3d2a391cb5e981316cec4ac4e657357a2c0fb8e36"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "b17af28d43b2e0bd66de9507961d60f95834ab4a76258d48841ee08a21308cb6",
+    "productionFingerprint": "ddee38a5de8adc6d8b198b08a406136a24dc24f214b8389bd8e7cdc88a387382",
+    "jobId": "dossier-0b9c17252afe26d8400ee9d8",
+    "review": {
+      "reviewer": "/root coordinator original-source and licensed-symbol review",
+      "packageHash": "b17af28d43b2e0bd66de9507961d60f95834ab4a76258d48841ee08a21308cb6",
+      "bodyReviewed": true,
+      "rationale": "Coordinator reviewed the category-limited historical political associations, original matching non-deprecated P41 qualifiers and precision, Gregorian dates, entity envelopes, graphic-period contradictions, conflicts, source reuse and original Commons licensing/attribution. Straightforward source-family records are accepted only inside conservative dated intervals. Undated, competing, mismatched-period, missing-envelope, oversized and pending SVG cases remain held. Duplicate source-country rows for the same entity/symbol/period are reconciled; no modern identity fallback and no accepted source or historical fact overwritten.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "dated-flag-d694655a0d4587bef05d68e0": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "dated-flag-d694655a0d4587bef05d68e0"
+    ]
+  }
+}

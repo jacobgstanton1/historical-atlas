@@ -1,0 +1,309 @@
+{
+  "job": {
+    "id": "dossier-3ea9f8c57563910553ebf338",
+    "entityId": "germany-imperial-framework",
+    "period": {
+      "from": "1872",
+      "until": "1917"
+    },
+    "mapIds": [
+      "entity-german-empire",
+      "entity-germany"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "9e6df8a0c8c09ffa7d2c9db9c01709948d420f6f5a4476280ee009f674fbae9d",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-dated-flags-germany-imperial-framework",
+    "jobId": "dossier-3ea9f8c57563910553ebf338",
+    "entityId": "germany-imperial-framework",
+    "mapIds": [
+      "entity-german-empire",
+      "entity-germany"
+    ],
+    "worker": {
+      "id": "dated-flag-deterministic-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "9e6df8a0c8c09ffa7d2c9db9c01709948d420f6f5a4476280ee009f674fbae9d",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1872",
+      "until": "1917"
+    },
+    "claims": [
+      {
+        "id": "dated-flag-97ef21c7103f7b39aff3601d",
+        "entityId": "germany-imperial-framework",
+        "category": "historical-flag",
+        "value": "Flag of Germany (1867–1918)",
+        "metric": "Historical flag / symbol (dated P41 relationship)",
+        "temporal": {
+          "kind": "interval",
+          "from": "1872",
+          "until": "1917",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "germany-imperial-framework-dated-source-symbol",
+          "description": "Flag/symbol associated with this existing political framework through explicitly dated source relationships. No modern-border, nationality or sovereignty inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "commons-flagsdata-20261002",
+          "scale01-empire-flag-asset"
+        ],
+        "evidence": [
+          {
+            "sourceId": "commons-flagsdata-20261002",
+            "locator": "Original Wikidata Q183 P41; file Flag of Germany (1867–1918).svg; source dates 1867-07-01 → 1918-01-01; frozen FlagsData.tab and original entity revision in cache",
+            "note": "Original start/end qualifiers independently compared with the tabular source. Conservative complete-year subset within the existing entity envelope; this is an assessed applicability interval, not invented exact adoption/retirement dates.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1872",
+              "until": "1917",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "scale01-empire-flag-asset",
+            "locator": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany_(1867%E2%80%931918).svg",
+            "note": "Licensed original illustration. SHA256 6571eb6423bfe57942c89f989cf95238dc56e90a4072580750160552f4d9150d. Artist, license, credit and original URL in frozen Commons metadata; asset type is conservatively a state symbol, not an inferred national/civil/royal usage.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1872",
+              "until": "1917",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Dated source flag/symbol relationship, not independent evidence of sovereignty or unchanged national identity.",
+          "Conservative year-precision display interval; adoption/retirement years and competing or contradictory graphic periods remain held."
+        ],
+        "flag": {
+          "asset": "./assets/flags/commons-0b76a493e1369ca3d43a6c1c.svg",
+          "type": "state symbol",
+          "alt": "Flag of Germany (1867–1918) — dated historical source symbol",
+          "license": "Public domain",
+          "attribution": "B1mbo, Madden and Wikimedia Commons vector contributors; public-domain geometric Imperial German flag depiction",
+          "assetSourceIds": [
+            "scale01-empire-flag-asset"
+          ],
+          "sha256": "6571eb6423bfe57942c89f989cf95238dc56e90a4072580750160552f4d9150d"
+        },
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Commons FlagsData.tab plus matching original qualified P41 and licensed original SVG",
+          "sourceIdentifier": "Q183:Flag of Germany (1867–1918).svg:1867-07-01:1918-01-01"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "commons-flagsdata-20261002",
+        "title": "FlagsData.tab: dated Wikidata P41 flag relationships (frozen 2026-10-02)",
+        "institution": "Wikidata / Wikimedia Commons contributors",
+        "url": "https://commons.wikimedia.org/wiki/Data:FlagsData.tab",
+        "accessed": "2026-10-02",
+        "usage": "CC0-1.0 tabular data. Original P41 statements, qualifier precision and cached entity revisions checked. A source-country-family QID is used only for its dated flag relationship, not a retroactive modern-country political or statistical identity.",
+        "kind": "dated-structured-flag-data"
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "commons-flagsdata-20261002",
+          "scale01-empire-flag-asset"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator reviewed the category-limited historical political associations, original matching non-deprecated P41 qualifiers and precision, Gregorian dates, entity envelopes, graphic-period contradictions, conflicts, source reuse and original Commons licensing/attribution. Straightforward source-family records are accepted only inside conservative dated intervals. Undated, competing, mismatched-period, missing-envelope, oversized and pending SVG cases remain held. Duplicate source-country rows for the same entity/symbol/period are reconciled; no modern identity fallback and no accepted source or historical fact overwritten.",
+      "preservedPackageHashes": [
+        "6b97476ec4872da8a5ac34efd69f432acd6ac02188d2e60866d1cf68617941b9",
+        "0a7d8612cd77609a692512c3d2a391cb5e981316cec4ac4e657357a2c0fb8e36"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "36c662c68618aa7b7e12df6339bd7601d19c1ece9260ac8392daae2e60f659bb",
+    "productionFingerprint": "9e6df8a0c8c09ffa7d2c9db9c01709948d420f6f5a4476280ee009f674fbae9d",
+    "jobId": "dossier-3ea9f8c57563910553ebf338",
+    "review": {
+      "reviewer": "/root coordinator original-source and licensed-symbol review",
+      "packageHash": "36c662c68618aa7b7e12df6339bd7601d19c1ece9260ac8392daae2e60f659bb",
+      "bodyReviewed": true,
+      "rationale": "Coordinator reviewed the category-limited historical political associations, original matching non-deprecated P41 qualifiers and precision, Gregorian dates, entity envelopes, graphic-period contradictions, conflicts, source reuse and original Commons licensing/attribution. Straightforward source-family records are accepted only inside conservative dated intervals. Undated, competing, mismatched-period, missing-envelope, oversized and pending SVG cases remain held. Duplicate source-country rows for the same entity/symbol/period are reconciled; no modern identity fallback and no accepted source or historical fact overwritten.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "dated-flag-97ef21c7103f7b39aff3601d": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "dated-flag-97ef21c7103f7b39aff3601d"
+    ]
+  }
+}

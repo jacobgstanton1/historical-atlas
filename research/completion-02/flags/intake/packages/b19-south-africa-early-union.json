@@ -1,0 +1,314 @@
+{
+  "job": {
+    "id": "dossier-201cf2841b9ed37e89923e73",
+    "entityId": "b19-south-africa-early-union",
+    "period": {
+      "from": "1913",
+      "until": "1927"
+    },
+    "mapIds": [
+      "entity-south-africa",
+      "entity-union-of-south-africa"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "9245a96b73951503ceef7216a0e894947168fa1532a27af8cbd00e5011c0a021",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-dated-flags-b19-south-africa-early-union",
+    "jobId": "dossier-201cf2841b9ed37e89923e73",
+    "entityId": "b19-south-africa-early-union",
+    "mapIds": [
+      "entity-south-africa",
+      "entity-union-of-south-africa"
+    ],
+    "worker": {
+      "id": "dated-flag-deterministic-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "9245a96b73951503ceef7216a0e894947168fa1532a27af8cbd00e5011c0a021",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1913",
+      "until": "1927"
+    },
+    "claims": [
+      {
+        "id": "dated-flag-4eb7dfbce7c3b4e68b87c750",
+        "entityId": "b19-south-africa-early-union",
+        "category": "historical-flag",
+        "value": "Red Ensign of South Africa (1912–1951)",
+        "metric": "Historical flag / symbol (dated P41 relationship)",
+        "temporal": {
+          "kind": "interval",
+          "from": "1913",
+          "until": "1927",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "b19-south-africa-early-union-dated-source-symbol",
+          "description": "Flag/symbol associated with this existing political framework through explicitly dated source relationships. No modern-border, nationality or sovereignty inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "commons-flagsdata-20261002",
+          "commons-b004c94bdd75572cda0cac0a-source"
+        ],
+        "evidence": [
+          {
+            "sourceId": "commons-flagsdata-20261002",
+            "locator": "Original Wikidata Q258 P41; file Red Ensign of South Africa (1912–1951).svg; source dates 1912-01-01 → 1928-05-31; frozen FlagsData.tab and original entity revision in cache",
+            "note": "Original start/end qualifiers independently compared with the tabular source. Conservative complete-year subset within the existing entity envelope; this is an assessed applicability interval, not invented exact adoption/retirement dates.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1913",
+              "until": "1927",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "commons-b004c94bdd75572cda0cac0a-source",
+            "locator": "https://commons.wikimedia.org/wiki/File:Red_Ensign_of_South_Africa_(1912%E2%80%931951).svg",
+            "note": "Licensed original illustration. SHA256 9099120bebd04992f2a01f106df32c175b4350c5abb9049def6e5cef7e2e085f. Artist, license, credit and original URL in frozen Commons metadata; asset type is conservatively a state symbol, not an inferred national/civil/royal usage.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1913",
+              "until": "1927",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Dated source flag/symbol relationship, not independent evidence of sovereignty or unchanged national identity.",
+          "Conservative year-precision display interval; adoption/retirement years and competing or contradictory graphic periods remain held."
+        ],
+        "flag": {
+          "asset": "./assets/flags/commons-b004c94bdd75572cda0cac0a.svg",
+          "type": "state symbol",
+          "alt": "Red Ensign of South Africa (1912–1951) — dated historical source symbol",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "attribution": "Fornax — File:Flag of South Africa (1912-1928).png; Wikimedia Commons",
+          "assetSourceIds": [
+            "commons-b004c94bdd75572cda0cac0a-source"
+          ],
+          "sha256": "9099120bebd04992f2a01f106df32c175b4350c5abb9049def6e5cef7e2e085f"
+        },
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Commons FlagsData.tab plus matching original qualified P41 and licensed original SVG",
+          "sourceIdentifier": "Q258:Red Ensign of South Africa (1912–1951).svg:1912-01-01:1928-05-31"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "commons-b004c94bdd75572cda0cac0a-source",
+        "title": "Red Ensign of South Africa (1912–1951).svg — licensed Commons original illustration",
+        "institution": "Wikimedia Commons contributors",
+        "url": "https://commons.wikimedia.org/wiki/File:Red_Ensign_of_South_Africa_(1912%E2%80%931951).svg",
+        "accessed": "2026-10-02",
+        "usage": "Original SVG illustration only; historical date applicability independently checked against original P41 qualifiers. Source artist/credit metadata preserved in the frozen Commons response.",
+        "kind": "licensed-historical-flag-illustration",
+        "license": "CC BY-SA 3.0",
+        "attribution": "Fornax — File:Flag of South Africa (1912-1928).png; Wikimedia Commons",
+        "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Red_Ensign_of_South_Africa_%281912%E2%80%931951%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "commons-flagsdata-20261002",
+          "commons-b004c94bdd75572cda0cac0a-source"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator reviewed the category-limited historical political associations, original matching non-deprecated P41 qualifiers and precision, Gregorian dates, entity envelopes, graphic-period contradictions, conflicts, source reuse and original Commons licensing/attribution. Straightforward source-family records are accepted only inside conservative dated intervals. Undated, competing, mismatched-period, missing-envelope, oversized and pending SVG cases remain held. Duplicate source-country rows for the same entity/symbol/period are reconciled; no modern identity fallback and no accepted source or historical fact overwritten.",
+      "preservedPackageHashes": [
+        "6b97476ec4872da8a5ac34efd69f432acd6ac02188d2e60866d1cf68617941b9",
+        "0a7d8612cd77609a692512c3d2a391cb5e981316cec4ac4e657357a2c0fb8e36"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "a1613f1c226021ae3c521677beb1a96def58d97068481ba9ec84a9c3b9b4b035",
+    "productionFingerprint": "9245a96b73951503ceef7216a0e894947168fa1532a27af8cbd00e5011c0a021",
+    "jobId": "dossier-201cf2841b9ed37e89923e73",
+    "review": {
+      "reviewer": "/root coordinator original-source and licensed-symbol review",
+      "packageHash": "a1613f1c226021ae3c521677beb1a96def58d97068481ba9ec84a9c3b9b4b035",
+      "bodyReviewed": true,
+      "rationale": "Coordinator reviewed the category-limited historical political associations, original matching non-deprecated P41 qualifiers and precision, Gregorian dates, entity envelopes, graphic-period contradictions, conflicts, source reuse and original Commons licensing/attribution. Straightforward source-family records are accepted only inside conservative dated intervals. Undated, competing, mismatched-period, missing-envelope, oversized and pending SVG cases remain held. Duplicate source-country rows for the same entity/symbol/period are reconciled; no modern identity fallback and no accepted source or historical fact overwritten.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "dated-flag-4eb7dfbce7c3b4e68b87c750": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "dated-flag-4eb7dfbce7c3b4e68b87c750"
+    ]
+  }
+}

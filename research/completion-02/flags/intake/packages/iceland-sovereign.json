@@ -1,0 +1,310 @@
+{
+  "job": {
+    "id": "dossier-75addeb435e9d99a3053ecab",
+    "entityId": "iceland-sovereign",
+    "period": {
+      "from": "1919",
+      "until": "1943"
+    },
+    "mapIds": [
+      "entity-iceland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "5cbd9289a4d34e82783e0b87c716fd9ad6405306a06c6476c19c212a0ff695ca",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-dated-flags-iceland-sovereign",
+    "jobId": "dossier-75addeb435e9d99a3053ecab",
+    "entityId": "iceland-sovereign",
+    "mapIds": [
+      "entity-iceland"
+    ],
+    "worker": {
+      "id": "dated-flag-deterministic-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "5cbd9289a4d34e82783e0b87c716fd9ad6405306a06c6476c19c212a0ff695ca",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1919",
+      "until": "1943"
+    },
+    "claims": [
+      {
+        "id": "dated-flag-22f6bd81f992b7e85337c267",
+        "entityId": "iceland-sovereign",
+        "category": "historical-flag",
+        "value": "Flag of Iceland (1918–1944)",
+        "metric": "Historical flag / symbol (dated P41 relationship)",
+        "temporal": {
+          "kind": "interval",
+          "from": "1919",
+          "until": "1943",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "iceland-sovereign-dated-source-symbol",
+          "description": "Flag/symbol associated with this existing political framework through explicitly dated source relationships. No modern-border, nationality or sovereignty inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "commons-flagsdata-20261002",
+          "commons-351f5cc7ae68e15b359e6df3-source"
+        ],
+        "evidence": [
+          {
+            "sourceId": "commons-flagsdata-20261002",
+            "locator": "Original Wikidata Q189 P41; file Flag of Iceland (1918–1944).svg; source dates 1918-11-30 → 1944-06-17; frozen FlagsData.tab and original entity revision in cache",
+            "note": "Original start/end qualifiers independently compared with the tabular source. Conservative complete-year subset within the existing entity envelope; this is an assessed applicability interval, not invented exact adoption/retirement dates.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1919",
+              "until": "1943",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "commons-351f5cc7ae68e15b359e6df3-source",
+            "locator": "https://commons.wikimedia.org/wiki/File:Flag_of_Iceland_(1918%E2%80%931944).svg",
+            "note": "Licensed original illustration. SHA256 f5dfce68312351af14a7f61fc1d15b13d02d6ba6bef79961ed8ccc5c60c4f2fe. Artist, license, credit and original URL in frozen Commons metadata; asset type is conservatively a state symbol, not an inferred national/civil/royal usage.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1919",
+              "until": "1943",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Dated source flag/symbol relationship, not independent evidence of sovereignty or unchanged national identity.",
+          "Conservative year-precision display interval; adoption/retirement years and competing or contradictory graphic periods remain held."
+        ],
+        "flag": {
+          "asset": "./assets/flags/commons-351f5cc7ae68e15b359e6df3.svg",
+          "type": "state symbol",
+          "alt": "Flag of Iceland (1918–1944) — dated historical source symbol",
+          "license": "Public domain",
+          "attribution": "Original: Matthías Þórðarson Vector: Gustavo Ronconi — Own work; Wikimedia Commons",
+          "assetSourceIds": [
+            "commons-351f5cc7ae68e15b359e6df3-source"
+          ],
+          "sha256": "f5dfce68312351af14a7f61fc1d15b13d02d6ba6bef79961ed8ccc5c60c4f2fe"
+        },
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Commons FlagsData.tab plus matching original qualified P41 and licensed original SVG",
+          "sourceIdentifier": "Q189:Flag of Iceland (1918–1944).svg:1918-11-30:1944-06-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "commons-351f5cc7ae68e15b359e6df3-source",
+        "title": "Flag of Iceland (1918–1944).svg — licensed Commons original illustration",
+        "institution": "Wikimedia Commons contributors",
+        "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Iceland_(1918%E2%80%931944).svg",
+        "accessed": "2026-10-02",
+        "usage": "Original SVG illustration only; historical date applicability independently checked against original P41 qualifiers. Source artist/credit metadata preserved in the frozen Commons response.",
+        "kind": "licensed-historical-flag-illustration",
+        "license": "Public domain",
+        "attribution": "Original: Matthías Þórðarson Vector: Gustavo Ronconi — Own work; Wikimedia Commons",
+        "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_Iceland_%281918%E2%80%931944%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "commons-flagsdata-20261002",
+          "commons-351f5cc7ae68e15b359e6df3-source"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator reviewed the category-limited historical political associations, original matching non-deprecated P41 qualifiers and precision, Gregorian dates, entity envelopes, graphic-period contradictions, conflicts, source reuse and original Commons licensing/attribution. Straightforward source-family records are accepted only inside conservative dated intervals. Undated, competing, mismatched-period, missing-envelope, oversized and pending SVG cases remain held. Duplicate source-country rows for the same entity/symbol/period are reconciled; no modern identity fallback and no accepted source or historical fact overwritten.",
+      "preservedPackageHashes": [
+        "6b97476ec4872da8a5ac34efd69f432acd6ac02188d2e60866d1cf68617941b9",
+        "0a7d8612cd77609a692512c3d2a391cb5e981316cec4ac4e657357a2c0fb8e36"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "a5f626802c700b0952f274dd894e431d549a6f5c7650e6e5d124924b9ca79a5d",
+    "productionFingerprint": "5cbd9289a4d34e82783e0b87c716fd9ad6405306a06c6476c19c212a0ff695ca",
+    "jobId": "dossier-75addeb435e9d99a3053ecab",
+    "review": {
+      "reviewer": "/root coordinator original-source and licensed-symbol review",
+      "packageHash": "a5f626802c700b0952f274dd894e431d549a6f5c7650e6e5d124924b9ca79a5d",
+      "bodyReviewed": true,
+      "rationale": "Coordinator reviewed the category-limited historical political associations, original matching non-deprecated P41 qualifiers and precision, Gregorian dates, entity envelopes, graphic-period contradictions, conflicts, source reuse and original Commons licensing/attribution. Straightforward source-family records are accepted only inside conservative dated intervals. Undated, competing, mismatched-period, missing-envelope, oversized and pending SVG cases remain held. Duplicate source-country rows for the same entity/symbol/period are reconciled; no modern identity fallback and no accepted source or historical fact overwritten.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "dated-flag-22f6bd81f992b7e85337c267": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "dated-flag-22f6bd81f992b7e85337c267"
+    ]
+  }
+}

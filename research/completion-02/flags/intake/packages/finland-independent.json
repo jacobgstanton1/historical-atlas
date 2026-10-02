@@ -1,0 +1,310 @@
+{
+  "job": {
+    "id": "dossier-102525dd6d8133304007d100",
+    "entityId": "finland-independent",
+    "period": {
+      "from": "1919",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-finland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "d0a040d0d885e2b88674e15fd1d62a241cdf64820d9c8485a50da401c84ff464",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-dated-flags-finland-independent",
+    "jobId": "dossier-102525dd6d8133304007d100",
+    "entityId": "finland-independent",
+    "mapIds": [
+      "entity-finland"
+    ],
+    "worker": {
+      "id": "dated-flag-deterministic-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "d0a040d0d885e2b88674e15fd1d62a241cdf64820d9c8485a50da401c84ff464",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1919",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "dated-flag-0c5278a1fa352c08988fce3e",
+        "entityId": "finland-independent",
+        "category": "historical-flag",
+        "value": "Flag of Finland",
+        "metric": "Historical flag / symbol (dated P41 relationship)",
+        "temporal": {
+          "kind": "interval",
+          "from": "1919",
+          "until": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "finland-independent-dated-source-symbol",
+          "description": "Flag/symbol associated with this existing political framework through explicitly dated source relationships. No modern-border, nationality or sovereignty inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "commons-flagsdata-20261002",
+          "commons-9ca646e4b667e735bba07ac1-source"
+        ],
+        "evidence": [
+          {
+            "sourceId": "commons-flagsdata-20261002",
+            "locator": "Original Wikidata Q33 P41; file Flag of Finland.svg; source dates 1918-05-29 → open; frozen FlagsData.tab and original entity revision in cache",
+            "note": "Original start/end qualifiers independently compared with the tabular source. Conservative complete-year subset within the existing entity envelope; this is an assessed applicability interval, not invented exact adoption/retirement dates.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1919",
+              "until": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "commons-9ca646e4b667e735bba07ac1-source",
+            "locator": "https://commons.wikimedia.org/wiki/File:Flag_of_Finland.svg",
+            "note": "Licensed original illustration. SHA256 644a2d69b1a97f4e71b4a8341916a321ef9b2666774d3e12a7c0d95f56e7f2b3. Artist, license, credit and original URL in frozen Commons metadata; asset type is conservatively a state symbol, not an inferred national/civil/royal usage.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1919",
+              "until": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Dated source flag/symbol relationship, not independent evidence of sovereignty or unchanged national identity.",
+          "Conservative year-precision display interval; adoption/retirement years and competing or contradictory graphic periods remain held."
+        ],
+        "flag": {
+          "asset": "./assets/flags/commons-9ca646e4b667e735bba07ac1.svg",
+          "type": "state symbol",
+          "alt": "Flag of Finland — dated historical source symbol",
+          "license": "Public domain",
+          "attribution": "Unknown — https://finlex.fi/fi/laki/ajantasa/1978/19780380 https://finlex.fi/fi/laki/alkup/1993/19930827 https://encycolorpedia.com/002f6c; Wikimedia Commons",
+          "assetSourceIds": [
+            "commons-9ca646e4b667e735bba07ac1-source"
+          ],
+          "sha256": "644a2d69b1a97f4e71b4a8341916a321ef9b2666774d3e12a7c0d95f56e7f2b3"
+        },
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Commons FlagsData.tab plus matching original qualified P41 and licensed original SVG",
+          "sourceIdentifier": "Q33:Flag of Finland.svg:1918-05-29:"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "commons-9ca646e4b667e735bba07ac1-source",
+        "title": "Flag of Finland.svg — licensed Commons original illustration",
+        "institution": "Wikimedia Commons contributors",
+        "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Finland.svg",
+        "accessed": "2026-10-02",
+        "usage": "Original SVG illustration only; historical date applicability independently checked against original P41 qualifiers. Source artist/credit metadata preserved in the frozen Commons response.",
+        "kind": "licensed-historical-flag-illustration",
+        "license": "Public domain",
+        "attribution": "Unknown — https://finlex.fi/fi/laki/ajantasa/1978/19780380 https://finlex.fi/fi/laki/alkup/1993/19930827 https://encycolorpedia.com/002f6c; Wikimedia Commons",
+        "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "commons-flagsdata-20261002",
+          "commons-9ca646e4b667e735bba07ac1-source"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Coordinator reviewed the category-limited historical political associations, original matching non-deprecated P41 qualifiers and precision, Gregorian dates, entity envelopes, graphic-period contradictions, conflicts, source reuse and original Commons licensing/attribution. Straightforward source-family records are accepted only inside conservative dated intervals. Undated, competing, mismatched-period, missing-envelope, oversized and pending SVG cases remain held. Duplicate source-country rows for the same entity/symbol/period are reconciled; no modern identity fallback and no accepted source or historical fact overwritten.",
+      "preservedPackageHashes": [
+        "6b97476ec4872da8a5ac34efd69f432acd6ac02188d2e60866d1cf68617941b9",
+        "0a7d8612cd77609a692512c3d2a391cb5e981316cec4ac4e657357a2c0fb8e36"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "1e3c856b836f50ea246f09ba1e65d0ab5678828d38aeb3256eaab15681110ce2",
+    "productionFingerprint": "d0a040d0d885e2b88674e15fd1d62a241cdf64820d9c8485a50da401c84ff464",
+    "jobId": "dossier-102525dd6d8133304007d100",
+    "review": {
+      "reviewer": "/root coordinator original-source and licensed-symbol review",
+      "packageHash": "1e3c856b836f50ea246f09ba1e65d0ab5678828d38aeb3256eaab15681110ce2",
+      "bodyReviewed": true,
+      "rationale": "Coordinator reviewed the category-limited historical political associations, original matching non-deprecated P41 qualifiers and precision, Gregorian dates, entity envelopes, graphic-period contradictions, conflicts, source reuse and original Commons licensing/attribution. Straightforward source-family records are accepted only inside conservative dated intervals. Undated, competing, mismatched-period, missing-envelope, oversized and pending SVG cases remain held. Duplicate source-country rows for the same entity/symbol/period are reconciled; no modern identity fallback and no accepted source or historical fact overwritten.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "dated-flag-0c5278a1fa352c08988fce3e": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "dated-flag-0c5278a1fa352c08988fce3e"
+    ]
+  }
+}
