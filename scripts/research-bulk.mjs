@@ -43,6 +43,14 @@ export function reconcile(c,context,pending=[]){
  const store=storeFor(context);
  const old=[...(e.leaders||[]).map(r=>({category:'leadership',value:r.value,role:r.role,temporal:{kind:'interval',from:r.validFrom||'1800',until:r.validUntil||'1961-01-01'}})),...store.packages.flatMap(p=>p.claims.filter(r=>r.entityId===c.entityId)),...pending];
  const cb=temporalBounds(c.temporal);
+ if(c.role==='Effective political leader (Archigos coding)'){
+  const last=normalizeName(c.value).split(' ').at(-1);
+  const matching=old.filter(r=>r.category==='leadership'&&r.temporal.kind==='interval'&&normalizeName(r.value).split(' ').at(-1)===last&&overlaps(temporalBounds(r.temporal),cb));
+  // A literal surname match only suppresses redundant coverage. It does not
+  // expand names, identify figures, change offices or accept a new assertion.
+  if(matching.some(r=>{const b=temporalBounds(r.temporal);return b.lo<=cb.lo&&b.hi>=cb.hi;}))return{status:'duplicate',reason:'Source-coded surname/tenure already covered by a sourced named officeholder; no duplicate effective-role claim added'};
+  if(matching.length)return{status:'historical-review',reason:'Partly overlapping coded surname/officeholder interval: identity/endpoints need reconciliation'};
+ }
  for(const r of old){if(r.category!==c.category||normalizedRole(r.role||'')!==normalizedRole(c.role||'')||!overlaps(temporalBounds(r.temporal),cb))continue;
   const rb=temporalBounds(r.temporal);
   if(normalizeName(r.value)===normalizeName(c.value)&&rb.lo<=cb.lo&&rb.hi>=cb.hi)return {status:'duplicate',reason:'Existing sourced office/person interval already covers this candidate'};

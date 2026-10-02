@@ -1,0 +1,2405 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "scale-flags-independent-archigos",
+  "sourceTier": "B — academic historical dataset",
+  "source": {
+    "title": "Archigos: A Data Set on Leaders, 1875–2015, version 4.1 (29 February 2016)",
+    "authors": [
+      "H. E. Goemans",
+      "Kristian Skrede Gleditsch",
+      "Giacomo Chiozza"
+    ],
+    "codebookUrl": "https://www.rochester.edu/college/faculty/hgoemans/Archigos_4.1.pdf",
+    "bodyReviewed": true,
+    "bodyReviewScope": "Codebook definition/coding conventions printed pp.1–5; country-case namespace and context sections where relevant. This does not certify every 882-page historical narrative or each proposed claim before normalization.",
+    "hashes": {
+      "dta": "3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad",
+      "pdf": "6be0ec5c9dbd5510d3a4d02d276ec5094dbc942147432349db55b35b520abcdf",
+      "extracted": "2e6c204ee4176fed918a3eec584226623bbbeb96cbf7d6773200ca9d8f05e3dd"
+    },
+    "parser": {
+      "rows": 3409,
+      "encoding": "pandas UTF8 decoding with documented Latin1 fallback",
+      "policy": "No spelling expansion or encoding repair. Non-ASCII candidates are held pending individual verification."
+    }
+  },
+  "datePolicy": {
+    "codebookDefinition": "STARTDATE and ENDDATE identify beginning and end of each leader spell.",
+    "observedMixedBoundaries": "US successive spells share transfer day; Swiss annual rotating chair ends31December and next begins1January.",
+    "integrationRule": "No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held."
+  },
+  "contracts": [
+    {
+      "id": "archigos-USA-united-states-1875-01-01",
+      "sourceCountryCode": "USA",
+      "entityId": "united-states",
+      "from": "1875-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.6 (PDF page 12)",
+      "existingIdentity": {
+        "name": "United States",
+        "validFrom": "1776-07-04",
+        "validUntil": null,
+        "sourceIds": [
+          "archives-independence",
+          "basemaps",
+          "us-constitution",
+          "us-constitutional-start"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-CAN-canada-1867-federal-framework-1875-01-01",
+      "sourceCountryCode": "CAN",
+      "entityId": "canada-1867-federal-framework",
+      "from": "1875-01-01",
+      "until": "1931-12-11",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.8 (PDF page 14)",
+      "existingIdentity": {
+        "name": "Canada — Dominion under the 1867 Act",
+        "validFrom": "1867-07-01",
+        "validUntil": "1931-12-11",
+        "sourceIds": [
+          "b08-canada-1867-act",
+          "b08-canada-institutions"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-CAN-canada-westminster-federal-framework-1931-12-11",
+      "sourceCountryCode": "CAN",
+      "entityId": "canada-westminster-federal-framework",
+      "from": "1931-12-11",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.8 (PDF page 14)",
+      "existingIdentity": {
+        "name": "Canada — post-Westminster federal framework",
+        "validFrom": "1931-12-11",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b08-canada-1867-act",
+          "b08-westminster-1931"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-UKG-united-kingdom-1875-01-01",
+      "sourceCountryCode": "UKG",
+      "entityId": "united-kingdom",
+      "from": "1875-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.341 (PDF page 347)",
+      "existingIdentity": {
+        "name": "United Kingdom",
+        "validFrom": "1801-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b01-uk-union-acts",
+          "b01-uk-independence",
+          "basemaps",
+          "george-vi",
+          "elizabeth-ii",
+          "uk-parliament"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-IRE-ireland-independent-1923-01-01",
+      "sourceCountryCode": "IRE",
+      "entityId": "ireland-independent",
+      "from": "1923-01-01",
+      "until": "1937-12-29",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.343 (PDF page 349)",
+      "existingIdentity": {
+        "name": "Irish Free State",
+        "validFrom": "1922-12-06",
+        "validUntil": "1937-12-29",
+        "sourceIds": [
+          "b01-uk-independence",
+          "b01-irish-constitution-1922",
+          "b01-irish-constitution-1937"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-NTH-netherlands-kingdom-1875-01-01",
+      "sourceCountryCode": "NTH",
+      "entityId": "netherlands-kingdom",
+      "from": "1875-01-01",
+      "until": "1940-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.346 (PDF page 352)",
+      "existingIdentity": {
+        "name": "Netherlands",
+        "validFrom": "1815-03-16",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-netherlands-monarchy",
+          "b01-nl-king-willem-i-1772-1843"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-NTH-netherlands-kingdom-1946-01-01",
+      "sourceCountryCode": "NTH",
+      "entityId": "netherlands-kingdom",
+      "from": "1946-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.346 (PDF page 352)",
+      "existingIdentity": {
+        "name": "Netherlands",
+        "validFrom": "1815-03-16",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-netherlands-monarchy",
+          "b01-nl-king-willem-i-1772-1843"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-BEL-belgium-kingdom-1875-01-01",
+      "sourceCountryCode": "BEL",
+      "entityId": "belgium-kingdom",
+      "from": "1875-01-01",
+      "until": "1914-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.348 (PDF page 354)",
+      "existingIdentity": {
+        "name": "Belgium",
+        "validFrom": "1830",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-belgian-monarchy",
+          "b01-belgian-constitution-1831"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-BEL-belgium-kingdom-1919-01-01",
+      "sourceCountryCode": "BEL",
+      "entityId": "belgium-kingdom",
+      "from": "1919-01-01",
+      "until": "1940-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.348 (PDF page 354)",
+      "existingIdentity": {
+        "name": "Belgium",
+        "validFrom": "1830",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-belgian-monarchy",
+          "b01-belgian-constitution-1831"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-BEL-belgium-kingdom-1946-01-01",
+      "sourceCountryCode": "BEL",
+      "entityId": "belgium-kingdom",
+      "from": "1946-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.348 (PDF page 354)",
+      "existingIdentity": {
+        "name": "Belgium",
+        "validFrom": "1830",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-belgian-monarchy",
+          "b01-belgian-constitution-1831"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-FRN-france-political-frameworks-1876-01-01",
+      "sourceCountryCode": "FRN",
+      "entityId": "france-political-frameworks",
+      "from": "1876-01-01",
+      "until": "1940-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.354 (PDF page 360)",
+      "existingIdentity": {
+        "name": "France",
+        "validFrom": "1799-12-13",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-french-consulate",
+          "b01-france-third-republic",
+          "b01-france-republican-legality"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-FRN-france-political-frameworks-1947-01-01",
+      "sourceCountryCode": "FRN",
+      "entityId": "france-political-frameworks",
+      "from": "1947-01-01",
+      "until": "1958-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.354 (PDF page 360)",
+      "existingIdentity": {
+        "name": "France",
+        "validFrom": "1799-12-13",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-french-consulate",
+          "b01-france-third-republic",
+          "b01-france-republican-legality",
+          "b01-french-presidents",
+          "b01-france-fourth-republic"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-FRN-france-political-frameworks-1959-01-01",
+      "sourceCountryCode": "FRN",
+      "entityId": "france-political-frameworks",
+      "from": "1959-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.354 (PDF page 360)",
+      "existingIdentity": {
+        "name": "France",
+        "validFrom": "1799-12-13",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-french-consulate",
+          "b01-france-third-republic",
+          "b01-france-republican-legality",
+          "b01-french-presidents"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-POR-portugal-political-frameworks-1875-01-01",
+      "sourceCountryCode": "POR",
+      "entityId": "portugal-political-frameworks",
+      "from": "1875-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.372 (PDF page 378)",
+      "existingIdentity": {
+        "name": "Portugal",
+        "validFrom": "1808",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-portugal-court-brazil",
+          "b01-portugal-monarchy",
+          "b01-portugal-first-republic",
+          "b01-portugal-dictatorship"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-SPN-spain-political-frameworks-1877-01-01",
+      "sourceCountryCode": "SPN",
+      "entityId": "spain-political-frameworks",
+      "from": "1877-01-01",
+      "until": "1923-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.366 (PDF page 372)",
+      "existingIdentity": {
+        "name": "Spain",
+        "validFrom": "1800-01-01",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-spanish-monarchs",
+          "b01-spain-constitution-1876",
+          "b01-spain-constitution-1931",
+          "b01-spain-franco-regime"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-SPN-spain-political-frameworks-1924-01-01",
+      "sourceCountryCode": "SPN",
+      "entityId": "spain-political-frameworks",
+      "from": "1924-01-01",
+      "until": "1930-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.366 (PDF page 372)",
+      "existingIdentity": {
+        "name": "Spain",
+        "validFrom": "1800-01-01",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-spanish-monarchs",
+          "b01-spain-constitution-1876",
+          "b01-spain-constitution-1931",
+          "b01-spain-franco-regime"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-SPN-spain-political-frameworks-1932-01-01",
+      "sourceCountryCode": "SPN",
+      "entityId": "spain-political-frameworks",
+      "from": "1932-01-01",
+      "until": "1936-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.366 (PDF page 372)",
+      "existingIdentity": {
+        "name": "Spain",
+        "validFrom": "1800-01-01",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-spanish-monarchs",
+          "b01-spain-constitution-1876",
+          "b01-spain-constitution-1931",
+          "b01-spain-franco-regime",
+          "b01-spain-second-republic"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-SPN-spain-political-frameworks-1940-01-01",
+      "sourceCountryCode": "SPN",
+      "entityId": "spain-political-frameworks",
+      "from": "1940-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.366 (PDF page 372)",
+      "existingIdentity": {
+        "name": "Spain",
+        "validFrom": "1800-01-01",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-spanish-monarchs",
+          "b01-spain-constitution-1876",
+          "b01-spain-constitution-1931",
+          "b01-spain-franco-regime"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-SWD-sweden-kingdom-1875-01-01",
+      "sourceCountryCode": "SWD",
+      "entityId": "sweden-kingdom",
+      "from": "1875-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.490 (PDF page 496)",
+      "existingIdentity": {
+        "name": "Sweden",
+        "validFrom": "1800-01-01",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-sweden-monarchs",
+          "b01-sweden-democracy"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-NOR-norway-constitutional-kingdom-1906-01-01",
+      "sourceCountryCode": "NOR",
+      "entityId": "norway-constitutional-kingdom",
+      "from": "1906-01-01",
+      "until": "1940-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.494 (PDF page 500)",
+      "existingIdentity": {
+        "name": "Norway",
+        "validFrom": "1814-05-17",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-norway-democracy",
+          "b01-sweden-norway-union",
+          "b01-haakon-vii"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-NOR-norway-constitutional-kingdom-1946-01-01",
+      "sourceCountryCode": "NOR",
+      "entityId": "norway-constitutional-kingdom",
+      "from": "1946-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.494 (PDF page 500)",
+      "existingIdentity": {
+        "name": "Norway",
+        "validFrom": "1814-05-17",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-norway-democracy",
+          "b01-sweden-norway-union",
+          "b01-haakon-vii"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-DEN-denmark-post-kiel-1875-01-01",
+      "sourceCountryCode": "DEN",
+      "entityId": "denmark-post-kiel",
+      "from": "1875-01-01",
+      "until": "1940-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.497 (PDF page 503)",
+      "existingIdentity": {
+        "name": "Denmark",
+        "validFrom": "1814-01-14",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-norway-democracy",
+          "b01-denmark-monarchy"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-DEN-denmark-post-kiel-1946-01-01",
+      "sourceCountryCode": "DEN",
+      "entityId": "denmark-post-kiel",
+      "from": "1946-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.497 (PDF page 503)",
+      "existingIdentity": {
+        "name": "Denmark",
+        "validFrom": "1814-01-14",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-norway-democracy",
+          "b01-denmark-monarchy"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-FIN-finland-independent-1920-01-01",
+      "sourceCountryCode": "FIN",
+      "entityId": "finland-independent",
+      "from": "1920-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.488 (PDF page 494)",
+      "existingIdentity": {
+        "name": "Finland",
+        "validFrom": "1917",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-finnish-markka",
+          "b01-finland-constitution",
+          "b01-finland-presidents"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-ICE-iceland-sovereign-1919-01-01",
+      "sourceCountryCode": "ICE",
+      "entityId": "iceland-sovereign",
+      "from": "1919-01-01",
+      "until": "1940-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.501 (PDF page 507)",
+      "existingIdentity": {
+        "name": "Iceland",
+        "validFrom": "1918-12-01",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-iceland-sovereignty",
+          "b01-sveinn-bjornsson",
+          "b01-iceland-parliament"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-ICE-iceland-sovereign-1945-01-01",
+      "sourceCountryCode": "ICE",
+      "entityId": "iceland-sovereign",
+      "from": "1945-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.501 (PDF page 507)",
+      "existingIdentity": {
+        "name": "Iceland",
+        "validFrom": "1918-12-01",
+        "validUntil": null,
+        "sourceIds": [
+          "b01-iceland-sovereignty",
+          "b01-sveinn-bjornsson"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-GMY-germany-imperial-framework-1875-01-01",
+      "sourceCountryCode": "GMY",
+      "entityId": "germany-imperial-framework",
+      "from": "1875-01-01",
+      "until": "1918-11-09",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.377 (PDF page 383)",
+      "existingIdentity": {
+        "name": "German Empire",
+        "validFrom": "1871",
+        "validUntil": "1918-11-09",
+        "sourceIds": [
+          "b03-german-imperial"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-GMY-germany-weimar-framework-1919-08-14",
+      "sourceCountryCode": "GMY",
+      "entityId": "germany-weimar-framework",
+      "from": "1919-08-14",
+      "until": "1933-01-30",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.377 (PDF page 383)",
+      "existingIdentity": {
+        "name": "Germany — Weimar constitutional framework",
+        "validFrom": "1919-08-14",
+        "validUntil": "1933-01-30",
+        "sourceIds": [
+          "b03-weimar-commencement",
+          "b03-weimar-framework",
+          "reichstag"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-GFR-germany-federal-1949-framework-1949-05-24",
+      "sourceCountryCode": "GFR",
+      "entityId": "germany-federal-1949-framework",
+      "from": "1949-05-24",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.379 (PDF page 385)",
+      "existingIdentity": {
+        "name": "Federal Republic of Germany",
+        "validFrom": "1949-05-24",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b03-basic-law",
+          "b03-allied-reserved-rights",
+          "b03-divided-germany"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-GDR-germany-democratic-1949-framework-1950-07-25",
+      "sourceCountryCode": "GDR",
+      "entityId": "germany-democratic-1949-framework",
+      "from": "1950-07-25",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.380 (PDF page 386)",
+      "existingIdentity": {
+        "name": "German Democratic Republic",
+        "validFrom": "1949-10-07",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b03-germany-diplomatic",
+          "b03-divided-germany",
+          "b03-grotewohl"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-ITA-italy-liberal-monarchy-framework-1875-01-01",
+      "sourceCountryCode": "ITA",
+      "entityId": "italy-liberal-monarchy-framework",
+      "from": "1875-01-01",
+      "until": "1922-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.405 (PDF page 411)",
+      "existingIdentity": {
+        "name": "Kingdom of Italy — liberal monarchical framework",
+        "validFrom": "1861-03-17",
+        "validUntil": "1922-01-01",
+        "sourceIds": [
+          "b04-italian-unity",
+          "b04-statuto",
+          "b04-unification-framework"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-ITA-italy-fascist-monarchical-framework-1930-01-01",
+      "sourceCountryCode": "ITA",
+      "entityId": "italy-fascist-monarchical-framework",
+      "from": "1930-01-01",
+      "until": "1943-07-25",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.405 (PDF page 411)",
+      "existingIdentity": {
+        "name": "Italy — Fascist monarchical framework",
+        "validFrom": "1930-01-01",
+        "validUntil": "1943-07-25",
+        "sourceIds": [
+          "b04-mussolini"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-ITA-italy-republican-1948-framework-1948-01-01",
+      "sourceCountryCode": "ITA",
+      "entityId": "italy-republican-1948-framework",
+      "from": "1948-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.405 (PDF page 411)",
+      "existingIdentity": {
+        "name": "Italian Republic — 1948 constitutional framework",
+        "validFrom": "1948-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b04-italy-constitution"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-MEX-mexico-porfirian-framework-1878-01-01",
+      "sourceCountryCode": "MEX",
+      "entityId": "mexico-porfirian-framework",
+      "from": "1878-01-01",
+      "until": "1910-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.88 (PDF page 94)",
+      "existingIdentity": {
+        "name": "Mexico — Porfirian republican framework",
+        "validFrom": "1878-01-01",
+        "validUntil": "1910-01-01",
+        "sourceIds": [
+          "b08-mexico-loc-study",
+          "b08-mexico-porfiriato"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-MEX-mexico-1917-constitutional-framework-1918-01-01",
+      "sourceCountryCode": "MEX",
+      "entityId": "mexico-1917-constitutional-framework",
+      "from": "1918-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.88 (PDF page 94)",
+      "existingIdentity": {
+        "name": "Mexico — 1917 constitutional framework",
+        "validFrom": "1918-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b08-mexico-1917-exhibit",
+          "b08-mexico-loc-study"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-BRA-brazil-pedro-ii-imperial-framework-1875-01-01",
+      "sourceCountryCode": "BRA",
+      "entityId": "brazil-pedro-ii-imperial-framework",
+      "from": "1875-01-01",
+      "until": "1889-11-15",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.270 (PDF page 276)",
+      "existingIdentity": {
+        "name": "Empire of Brazil — late constitutional monarchy",
+        "validFrom": "1841-01-01",
+        "validUntil": "1889-11-15",
+        "sourceIds": [
+          "b09-brazil-chronology",
+          "b09-brazil-1824"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-BRA-brazil-early-federal-republic-framework-1892-01-01",
+      "sourceCountryCode": "BRA",
+      "entityId": "brazil-early-federal-republic-framework",
+      "from": "1892-01-01",
+      "until": "1930-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.270 (PDF page 276)",
+      "existingIdentity": {
+        "name": "Brazil — early federal republic",
+        "validFrom": "1892-01-01",
+        "validUntil": "1930-01-01",
+        "sourceIds": [
+          "b09-brazil-1891"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-BRA-brazil-estado-novo-framework-1937-11-10",
+      "sourceCountryCode": "BRA",
+      "entityId": "brazil-estado-novo-framework",
+      "from": "1937-11-10",
+      "until": "1945-10-29",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.270 (PDF page 276)",
+      "existingIdentity": {
+        "name": "Brazil — Estado Novo",
+        "validFrom": "1937-11-10",
+        "validUntil": "1945-10-29",
+        "sourceIds": [
+          "b09-brazil-estado"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-BRA-brazil-1946-federal-framework-1947-01-01",
+      "sourceCountryCode": "BRA",
+      "entityId": "brazil-1946-federal-framework",
+      "from": "1947-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.270 (PDF page 276)",
+      "existingIdentity": {
+        "name": "Brazil — restored federal constitutional republic",
+        "validFrom": "1947-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b09-brazil-1946"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-ARG-argentina-pre-1930-federal-framework-1899-01-01",
+      "sourceCountryCode": "ARG",
+      "entityId": "argentina-pre-1930-federal-framework",
+      "from": "1899-01-01",
+      "until": "1930-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.319 (PDF page 325)",
+      "existingIdentity": {
+        "name": "Argentina — federal constitutional framework",
+        "validFrom": "1899-01-01",
+        "validUntil": "1930-01-01",
+        "sourceIds": [
+          "b09-argentina-1853"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-ARG-argentina-1949-constitutional-framework-1950-01-01",
+      "sourceCountryCode": "ARG",
+      "entityId": "argentina-1949-constitutional-framework",
+      "from": "1950-01-01",
+      "until": "1955-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.319 (PDF page 325)",
+      "existingIdentity": {
+        "name": "Argentina — 1949 constitutional framework",
+        "validFrom": "1950-01-01",
+        "validUntil": "1955-01-01",
+        "sourceIds": [
+          "b09-argentina-1949"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-CHL-chile-late-1833-framework-1875-01-01",
+      "sourceCountryCode": "CHL",
+      "entityId": "chile-late-1833-framework",
+      "from": "1875-01-01",
+      "until": "1891-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.308 (PDF page 314)",
+      "existingIdentity": {
+        "name": "Chile — late nineteenth-century constitutional framework",
+        "validFrom": "1872-01-01",
+        "validUntil": "1891-01-01",
+        "sourceIds": [
+          "b09-chile-1833"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-CHL-chile-parliamentary-practice-framework-1892-01-01",
+      "sourceCountryCode": "CHL",
+      "entityId": "chile-parliamentary-practice-framework",
+      "from": "1892-01-01",
+      "until": "1924-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.308 (PDF page 314)",
+      "existingIdentity": {
+        "name": "Chile — parliamentary political practice",
+        "validFrom": "1892-01-01",
+        "validUntil": "1924-01-01",
+        "sourceIds": [
+          "b09-chile-parliament"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-CHL-chile-restored-presidential-framework-1933-01-01",
+      "sourceCountryCode": "CHL",
+      "entityId": "chile-restored-presidential-framework",
+      "from": "1933-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.308 (PDF page 314)",
+      "existingIdentity": {
+        "name": "Chile — restored presidential constitutional government",
+        "validFrom": "1933-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b09-chile-1925"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-COL-colombia-united-states-framework-1875-01-01",
+      "sourceCountryCode": "COL",
+      "entityId": "colombia-united-states-framework",
+      "from": "1875-01-01",
+      "until": "1885-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.222 (PDF page 228)",
+      "existingIdentity": {
+        "name": "United States of Colombia — federal framework",
+        "validFrom": "1870-01-01",
+        "validUntil": "1885-01-01",
+        "sourceIds": [
+          "b09-colombia-federal"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-COL-colombia-national-front-framework-1959-01-01",
+      "sourceCountryCode": "COL",
+      "entityId": "colombia-national-front-framework",
+      "from": "1959-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.222 (PDF page 228)",
+      "existingIdentity": {
+        "name": "Colombia — early National Front government",
+        "validFrom": "1959-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b09-colombia-front",
+          "b09-colombia-history"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-VEN-venezuela-guzman-framework-1875-01-01",
+      "sourceCountryCode": "VEN",
+      "entityId": "venezuela-guzman-framework",
+      "from": "1875-01-01",
+      "until": "1888-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.229 (PDF page 235)",
+      "existingIdentity": {
+        "name": "Venezuela — Guzman Blanco political predominance",
+        "validFrom": "1871-01-01",
+        "validUntil": "1888-01-01",
+        "sourceIds": [
+          "b09-venezuela-caudillos"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-VEN-venezuela-castro-framework-1900-01-01",
+      "sourceCountryCode": "VEN",
+      "entityId": "venezuela-castro-framework",
+      "from": "1900-01-01",
+      "until": "1908-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.229 (PDF page 235)",
+      "existingIdentity": {
+        "name": "Venezuela — Castro government",
+        "validFrom": "1900-01-01",
+        "validUntil": "1908-01-01",
+        "sourceIds": [
+          "b09-venezuela-caudillos"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-VEN-venezuela-gomez-framework-1909-01-01",
+      "sourceCountryCode": "VEN",
+      "entityId": "venezuela-gomez-framework",
+      "from": "1909-01-01",
+      "until": "1935-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.229 (PDF page 235)",
+      "existingIdentity": {
+        "name": "Venezuela — Gomez political predominance",
+        "validFrom": "1909-01-01",
+        "validUntil": "1935-01-01",
+        "sourceIds": [
+          "b09-venezuela-caudillos"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-VEN-venezuela-lopez-framework-1937-01-01",
+      "sourceCountryCode": "VEN",
+      "entityId": "venezuela-lopez-framework",
+      "from": "1937-01-01",
+      "until": "1941-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.229 (PDF page 235)",
+      "existingIdentity": {
+        "name": "Venezuela — Lopez Contreras government",
+        "validFrom": "1937-01-01",
+        "validUntil": "1941-01-01",
+        "sourceIds": [
+          "b09-venezuela-transition"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-VEN-venezuela-medina-framework-1943-01-01",
+      "sourceCountryCode": "VEN",
+      "entityId": "venezuela-medina-framework",
+      "from": "1943-01-01",
+      "until": "1945-10-18",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.229 (PDF page 235)",
+      "existingIdentity": {
+        "name": "Venezuela — Medina government",
+        "validFrom": "1943-01-01",
+        "validUntil": "1945-10-18",
+        "sourceIds": [
+          "b09-venezuela-transition"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-VEN-venezuela-betancourt-1959-framework-1959-02-13",
+      "sourceCountryCode": "VEN",
+      "entityId": "venezuela-betancourt-1959-framework",
+      "from": "1959-02-13",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.229 (PDF page 235)",
+      "existingIdentity": {
+        "name": "Venezuela — early elected Betancourt government",
+        "validFrom": "1959-02-13",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b09-venezuela-transition"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-ECU-ecuador-1906-liberal-framework-1913-01-01",
+      "sourceCountryCode": "ECU",
+      "entityId": "ecuador-1906-liberal-framework",
+      "from": "1913-01-01",
+      "until": "1925-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.240 (PDF page 246)",
+      "existingIdentity": {
+        "name": "Ecuador — Liberal constitutional government",
+        "validFrom": "1913-01-01",
+        "validUntil": "1925-01-01",
+        "sourceIds": [
+          "b09-ecuador-1906",
+          "b09-ecuador-liberal"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-ECU-ecuador-postwar-civilian-framework-1949-01-01",
+      "sourceCountryCode": "ECU",
+      "entityId": "ecuador-postwar-civilian-framework",
+      "from": "1949-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.240 (PDF page 246)",
+      "existingIdentity": {
+        "name": "Ecuador — postwar civilian presidencies",
+        "validFrom": "1949-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b09-ecuador-postwar",
+          "b09-ecuador-1960"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-PER-peru-restored-1860-prewar-framework-1875-01-01",
+      "sourceCountryCode": "PER",
+      "entityId": "peru-restored-1860-prewar-framework",
+      "from": "1875-01-01",
+      "until": "1879-12-27",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.256 (PDF page 262)",
+      "existingIdentity": {
+        "name": "Peru — restored 1860 constitutional framework",
+        "validFrom": "1869-01-01",
+        "validUntil": "1879-12-27",
+        "sourceIds": [
+          "b09-peru-periods",
+          "b09-peru-1860"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-PER-peru-later-1860-framework-1890-01-01",
+      "sourceCountryCode": "PER",
+      "entityId": "peru-later-1860-framework",
+      "from": "1890-01-01",
+      "until": "1919-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.256 (PDF page 262)",
+      "existingIdentity": {
+        "name": "Peru — later 1860 constitutional framework",
+        "validFrom": "1890-01-01",
+        "validUntil": "1919-01-01",
+        "sourceIds": [
+          "b09-peru-periods",
+          "b09-peru-1860"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-BOL-bolivia-late-1880-constitutional-framework-1881-01-01",
+      "sourceCountryCode": "BOL",
+      "entityId": "bolivia-late-1880-constitutional-framework",
+      "from": "1881-01-01",
+      "until": "1935-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.275 (PDF page 281)",
+      "existingIdentity": {
+        "name": "Bolivia — 1880 constitutional framework",
+        "validFrom": "1881-01-01",
+        "validUntil": "1935-01-01",
+        "sourceIds": [
+          "b09-bolivia-1880",
+          "b09-bolivia-charters"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-BOL-bolivia-1944-social-framework-1945-01-01",
+      "sourceCountryCode": "BOL",
+      "entityId": "bolivia-1944-social-framework",
+      "from": "1945-01-01",
+      "until": "1946-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.275 (PDF page 281)",
+      "existingIdentity": {
+        "name": "Bolivia — Villarroel constitutional period",
+        "validFrom": "1945-01-01",
+        "validUntil": "1946-01-01",
+        "sourceIds": [
+          "b09-bolivia-charters"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-BOL-bolivia-post-revolution-framework-1957-01-01",
+      "sourceCountryCode": "BOL",
+      "entityId": "bolivia-post-revolution-framework",
+      "from": "1957-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.275 (PDF page 281)",
+      "existingIdentity": {
+        "name": "Bolivia — National Revolution government",
+        "validFrom": "1957-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b09-bolivia-charters",
+          "b09-bolivia-revolution"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-PAR-paraguay-1870-constitutional-framework-1875-01-01",
+      "sourceCountryCode": "PAR",
+      "entityId": "paraguay-1870-constitutional-framework",
+      "from": "1875-01-01",
+      "until": "1935-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.296 (PDF page 302)",
+      "existingIdentity": {
+        "name": "Paraguay — 1870 constitutional framework",
+        "validFrom": "1871-01-01",
+        "validUntil": "1935-01-01",
+        "sourceIds": [
+          "b09-paraguay-charters"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-PAR-paraguay-1940-executive-framework-1941-01-01",
+      "sourceCountryCode": "PAR",
+      "entityId": "paraguay-1940-executive-framework",
+      "from": "1941-01-01",
+      "until": "1948-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.296 (PDF page 302)",
+      "existingIdentity": {
+        "name": "Paraguay — 1940 constitutional framework",
+        "validFrom": "1941-01-01",
+        "validUntil": "1948-01-01",
+        "sourceIds": [
+          "b09-paraguay-charters"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-PAR-paraguay-stroessner-early-framework-1955-01-01",
+      "sourceCountryCode": "PAR",
+      "entityId": "paraguay-stroessner-early-framework",
+      "from": "1955-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.296 (PDF page 302)",
+      "existingIdentity": {
+        "name": "Paraguay — early Stroessner government",
+        "validFrom": "1955-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b09-paraguay-charters"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-URU-uruguay-late-1830-framework-1890-01-01",
+      "sourceCountryCode": "URU",
+      "entityId": "uruguay-late-1830-framework",
+      "from": "1890-01-01",
+      "until": "1917-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.329 (PDF page 335)",
+      "existingIdentity": {
+        "name": "Uruguay — 1830 constitutional framework",
+        "validFrom": "1890-01-01",
+        "validUntil": "1917-01-01",
+        "sourceIds": [
+          "b09-uruguay-1830",
+          "b09-uruguay-executive"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-URU-uruguay-dual-executive-framework-1920-01-01",
+      "sourceCountryCode": "URU",
+      "entityId": "uruguay-dual-executive-framework",
+      "from": "1920-01-01",
+      "until": "1933-03-31",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.329 (PDF page 335)",
+      "existingIdentity": {
+        "name": "Uruguay — dual executive constitutional framework",
+        "validFrom": "1920-01-01",
+        "validUntil": "1933-03-31",
+        "sourceIds": [
+          "b09-uruguay-executive",
+          "b09-uruguay-parliament"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-URU-uruguay-postwar-presidential-framework-1944-01-01",
+      "sourceCountryCode": "URU",
+      "entityId": "uruguay-postwar-presidential-framework",
+      "from": "1944-01-01",
+      "until": "1952-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.329 (PDF page 335)",
+      "existingIdentity": {
+        "name": "Uruguay — postwar presidential framework",
+        "validFrom": "1944-01-01",
+        "validUntil": "1952-01-01",
+        "sourceIds": [
+          "b09-uruguay-executive",
+          "b09-uruguay-parliament"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-HAI-b10-haiti-duvalier-1958-01-01",
+      "sourceCountryCode": "HAI",
+      "entityId": "b10-haiti-duvalier",
+      "from": "1958-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.16 (PDF page 22)",
+      "existingIdentity": {
+        "name": "Haiti — early Duvalier government",
+        "validFrom": "1958-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b10-haiti-duvalier"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-DOM-b10-dominican-trujillo-1931-01-01",
+      "sourceCountryCode": "DOM",
+      "entityId": "b10-dominican-trujillo",
+      "from": "1931-01-01",
+      "until": "1952-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.41 (PDF page 47)",
+      "existingIdentity": {
+        "name": "Dominican Republic — Trujillo regime",
+        "validFrom": "1931-01-01",
+        "validUntil": "1952-01-01",
+        "sourceIds": [
+          "b10-dominican-policy-1951"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-GUA-b10-guatemala-ubico-1932-01-01",
+      "sourceCountryCode": "GUA",
+      "entityId": "b10-guatemala-ubico",
+      "from": "1932-01-01",
+      "until": "1944-07-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.94 (PDF page 100)",
+      "existingIdentity": {
+        "name": "Guatemala — Ubico government",
+        "validFrom": "1932-01-01",
+        "validUntil": "1944-07-01",
+        "sourceIds": [
+          "b10-guatemala-ubico"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-HON-b10-honduras-carias-1934-01-01",
+      "sourceCountryCode": "HON",
+      "entityId": "b10-honduras-carias",
+      "from": "1934-01-01",
+      "until": "1949-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.112 (PDF page 118)",
+      "existingIdentity": {
+        "name": "Honduras — Carías government",
+        "validFrom": "1934-01-01",
+        "validUntil": "1949-01-01",
+        "sourceIds": [
+          "b10-honduras-carias"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-SAL-b10-salvador-martinez-1936-01-01",
+      "sourceCountryCode": "SAL",
+      "entityId": "b10-salvador-martinez",
+      "from": "1936-01-01",
+      "until": "1939-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.136 (PDF page 142)",
+      "existingIdentity": {
+        "name": "El Salvador — Martínez military government",
+        "validFrom": "1936-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b10-salvador-martinez"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-NIC-b10-nicaragua-somoza-control-1938-01-01",
+      "sourceCountryCode": "NIC",
+      "entityId": "b10-nicaragua-somoza-control",
+      "from": "1938-01-01",
+      "until": "1952-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.160 (PDF page 166)",
+      "existingIdentity": {
+        "name": "Nicaragua — Somoza-dominated government",
+        "validFrom": "1938-01-01",
+        "validUntil": "1952-01-01",
+        "sourceIds": [
+          "b10-nicaragua-somoza"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-COS-b10-costa-rica-post-1949-1949-11-08",
+      "sourceCountryCode": "COS",
+      "entityId": "b10-costa-rica-post-1949",
+      "from": "1949-11-08",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.190 (PDF page 196)",
+      "existingIdentity": {
+        "name": "Costa Rica — 1949 constitutional framework",
+        "validFrom": "1949-11-08",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b10-costa-rica-1949"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-LBR-liberia-presidential-constitutional-core-1878-01-01",
+      "sourceCountryCode": "LBR",
+      "entityId": "liberia-presidential-constitutional-core",
+      "from": "1878-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.549 (PDF page 555)",
+      "existingIdentity": {
+        "name": "Liberia — amended 1847 constitutional tradition",
+        "validFrom": "1878-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b15-liberia-law-history",
+          "b15-liberia-recognition"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-AUL-australia-prewestminster-federal-core-1914-01-01",
+      "sourceCountryCode": "AUL",
+      "entityId": "australia-prewestminster-federal-core",
+      "from": "1914-01-01",
+      "until": "1939-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.847 (PDF page 853)",
+      "existingIdentity": {
+        "name": "Commonwealth of Australia — pre-adoption federal framework",
+        "validFrom": "1914-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b21-australian-federation",
+          "b21-australian-first-parliament",
+          "b21-australia-westminster-primary"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-AUL-australia-postadoption-federal-core-1945-01-01",
+      "sourceCountryCode": "AUL",
+      "entityId": "australia-postadoption-federal-core",
+      "from": "1945-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.847 (PDF page 853)",
+      "existingIdentity": {
+        "name": "Australia — federal constitutional framework after Westminster adoption",
+        "validFrom": "1945-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b21-australian-federation",
+          "b21-australian-first-parliament",
+          "b21-australia-westminster-primary"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-NEW-new-zealand-preadoption-dominion-core-1914-01-01",
+      "sourceCountryCode": "NEW",
+      "entityId": "new-zealand-preadoption-dominion-core",
+      "from": "1914-01-01",
+      "until": "1947-11-25",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.853 (PDF page 859)",
+      "existingIdentity": {
+        "name": "New Zealand — Dominion parliamentary framework",
+        "validFrom": "1914-01-01",
+        "validUntil": "1947-11-25",
+        "sourceIds": [
+          "b21-new-zealand-parliament",
+          "b21-new-zealand-westminster",
+          "b21-new-zealand-council"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-NEW-new-zealand-1960-parliamentary-core-1960-01-01",
+      "sourceCountryCode": "NEW",
+      "entityId": "new-zealand-1960-parliamentary-core",
+      "from": "1960-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.853 (PDF page 859)",
+      "existingIdentity": {
+        "name": "New Zealand — unicameral constitutional framework in 1960",
+        "validFrom": "1960-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b21-new-zealand-parliament",
+          "b21-new-zealand-westminster",
+          "b21-new-zealand-council"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-IND-india-republic-1950-framework-1950-01-26",
+      "sourceCountryCode": "IND",
+      "entityId": "india-republic-1950-framework",
+      "from": "1950-01-26",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.765 (PDF page 771)",
+      "existingIdentity": {
+        "name": "Republic of India",
+        "validFrom": "1950-01-26",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b07-india-constitution",
+          "b07-india-first-houses",
+          "b07-rajendra-prasad"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-SRI-ceylon-independent-parliamentary-framework-1948-02-04",
+      "sourceCountryCode": "SRI",
+      "entityId": "ceylon-independent-parliamentary-framework",
+      "from": "1948-02-04",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.794 (PDF page 800)",
+      "existingIdentity": {
+        "name": "Ceylon — independent parliamentary framework",
+        "validFrom": "1948-02-04",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b07-ceylon-independence",
+          "b07-ceylon-parliament"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-TUR-turkey-1928-constitutional-framework-1928-04-10",
+      "sourceCountryCode": "TUR",
+      "entityId": "turkey-1928-constitutional-framework",
+      "from": "1928-04-10",
+      "until": "1937-02-05",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.670 (PDF page 676)",
+      "existingIdentity": {
+        "name": "Turkey — republican order after 1928",
+        "validFrom": "1928-04-10",
+        "validUntil": "1937-02-05",
+        "sourceIds": [
+          "b12-turkish-parliament-history"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-TUR-turkey-1937-constitutional-framework-1937-02-05",
+      "sourceCountryCode": "TUR",
+      "entityId": "turkey-1937-constitutional-framework",
+      "from": "1937-02-05",
+      "until": "1960-05-27",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.670 (PDF page 676)",
+      "existingIdentity": {
+        "name": "Turkey — 1937 constitutional principles",
+        "validFrom": "1937-02-05",
+        "validUntil": "1960-05-27",
+        "sourceIds": [
+          "b12-turkish-parliament-history"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-TUR-turkey-1960-national-unity-framework-1960-05-27",
+      "sourceCountryCode": "TUR",
+      "entityId": "turkey-1960-national-unity-framework",
+      "from": "1960-05-27",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.670 (PDF page 676)",
+      "existingIdentity": {
+        "name": "Turkey — National Unity Committee",
+        "validFrom": "1960-05-27",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b12-turkish-parliament-history"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-THI-b13-siam-absolute-1875-01-01",
+      "sourceCountryCode": "THI",
+      "entityId": "b13-siam-absolute",
+      "from": "1875-01-01",
+      "until": "1932-06-24",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.808 (PDF page 814)",
+      "existingIdentity": {
+        "name": "Siam — Chakkri monarchy",
+        "validFrom": "1800-01-01",
+        "validUntil": "1932-06-24",
+        "sourceIds": [
+          "b13-siam-chakkri-history",
+          "b13-siam-1932-coup",
+          "b13-thai-parliament-history",
+          "b13-rattanakosin-chronology"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-THI-b13-siam-constitutional-1934-01-01",
+      "sourceCountryCode": "THI",
+      "entityId": "b13-siam-constitutional",
+      "from": "1934-01-01",
+      "until": "1939-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.808 (PDF page 814)",
+      "existingIdentity": {
+        "name": "Siam — early constitutional monarchy",
+        "validFrom": "1934-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b13-siam-1932-coup"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    },
+    {
+      "id": "archigos-THI-b13-thailand-sarit-1960-01-01",
+      "sourceCountryCode": "THI",
+      "entityId": "b13-thailand-sarit",
+      "from": "1960-01-01",
+      "until": "1961-01-01",
+      "sourceCountryLocator": "Archigos v4.1 case descriptions, printed p.808 (PDF page 814)",
+      "existingIdentity": {
+        "name": "Thailand — Sarit military government",
+        "validFrom": "1960-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b13-thailand-sarit-history",
+          "b13-thailand-1959-attestation"
+        ]
+      },
+      "rationale": "Explicit Archigos country-case namespace corresponds to this already-sourced historical atlas state/framework during this bounded interval. Framework boundary comes from the existing reviewed entity; it is not inferred from geometry or succession.",
+      "qualifications": [
+        "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title.",
+        "Country coding is not evidence of sovereignty of every map polygon.",
+        "Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance.",
+        "Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics."
+      ],
+      "role": "Effective political leader (Archigos coding)",
+      "status": "approved-mapping-contract",
+      "reviewer": "scale-flags-independent-archigos"
+    }
+  ],
+  "held": {
+    "rows": [
+      {
+        "obsid": "CAN-1911",
+        "reason": "Codebook p.8 table ENDDATE 10 June 1920 conflicts with narrative 10 July 1920; hold exact date."
+      },
+      {
+        "obsid": "GMY-1858",
+        "reason": "Codebook p.377 explicitly notes an acting Crown Prince interval in 1878; no fabricated boundary or sole-ruler assertion."
+      },
+      {
+        "obsid": "GDR-1946",
+        "reason": "Country coding begins before GDR state formation; hold whole inherited row rather than reinterpret pre-state party leadership as state office."
+      }
+    ],
+    "encoding": [
+      {
+        "obsid": "COL-1878",
+        "leader": "Julián Trujillo Largacha",
+        "reason": "Stata parser emitted Latin1 fallback warning. Preserve exact bytes/spelling; accented row held until separately verified, never silently repair."
+      },
+      {
+        "obsid": "ECU-1869",
+        "leader": "Gabriel García Moreno",
+        "reason": "Stata parser emitted Latin1 fallback warning. Preserve exact bytes/spelling; accented row held until separately verified, never silently repair."
+      },
+      {
+        "obsid": "PAR-1894-1",
+        "leader": "Marcos A. Morínigo",
+        "reason": "Stata parser emitted Latin1 fallback warning. Preserve exact bytes/spelling; accented row held until separately verified, never silently repair."
+      },
+      {
+        "obsid": "PAR-1940",
+        "leader": "Higinio Morínigo",
+        "reason": "Stata parser emitted Latin1 fallback warning. Preserve exact bytes/spelling; accented row held until separately verified, never silently repair."
+      },
+      {
+        "obsid": "SWD-1876",
+        "leader": "de Geer af Finspång",
+        "reason": "Stata parser emitted Latin1 fallback warning. Preserve exact bytes/spelling; accented row held until separately verified, never silently repair."
+      }
+    ],
+    "countries": [
+      {
+        "idacr": "SWZ",
+        "reason": "Rotating annual executive council chair; generic primary-ruler representation risks implying sole executive power."
+      },
+      {
+        "idacr": "RUS",
+        "reason": "Imperial/revolutionary/Soviet country coding requires more detailed cross-framework contracts; held in this first tranche."
+      },
+      {
+        "idacr": "CHN",
+        "reason": "Contested and competing national/state frameworks; no whole-country automatic mapping."
+      }
+    ],
+    "general": [
+      "Unlisted country/framework is held, not silently mapped to a modern successor.",
+      "Occupied intervals excluded for Netherlands, Belgium, Norway, Denmark, France, Iceland; no occupation-to-sovereign fallback.",
+      "No pre-1875 extrapolation despite source rows starting earlier.",
+      "Uruguay collegiate1953–1960 framework held rather than implying a council chair is the sole ruler."
+    ]
+  },
+  "summary": {
+    "countryCodes": 43,
+    "contracts": 85,
+    "eligibleOriginalRows": 682,
+    "mappedEntityCount": 74,
+    "excludedExplicitRows": 3,
+    "encodingHeldRows": 5
+  }
+}

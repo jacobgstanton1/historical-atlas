@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readJSON,digest,readContext} from '../scripts/research-common.mjs';
+import {archigosIntake} from '../scripts/research-bulk-archigos.mjs';
+import {prepareCandidates,verifyContract} from '../scripts/research-bulk.mjs';
+const raw=readJSON('research/bulk-01/cache/archigos-extracted.json'),review=readJSON('research/bulk-01/archigos-review/mapping-contracts.json');
+const {manifest,contract}=archigosIntake(1);
+test('academic adapter binds independently checked original DTA and codebook',()=>{assert.equal(verifyContract(contract,manifest),true);assert.equal(manifest.independentComparisonCertificateHash,digest(readJSON('research/bulk-01/archigos-review/parser-certification.json')));});
+test('every normalized row retains literal original six-field evidence',()=>{for(const row of manifest.rows){const original=JSON.parse(row.originalRow),r=raw.find(r=>r.obsid===original.obsid);assert.equal(row.name,r.leader);assert.equal(row.from,r.startdate);assert.equal(row.until,r.enddate);assert.equal(original.idacr,r.idacr);assert.equal(original.leadid,r.leadid);}});
+test('academic labels never become inferred formal office titles',()=>{assert.ok(manifest.rows.every(r=>r.officeTitle==='Effective political leader (Archigos coding)'));assert.ok(contract.mappings.every(m=>m.qualification.includes('not automatically a formal head of state')));});
+test('source disagreements and same-day spells remain held',()=>{for(const r of manifest.rows){if(review.held.rows.some(h=>r.originalRow.includes(h.obsid)))assert.ok(r.evidenceCautions.length);if(r.from>=r.until)assert.ok(r.evidenceCautions.some(c=>c.includes('Same-day')));}});
+test('partial framework beginning is excluded rather than assigned an invented exact accession day',()=>{const ctx=readContext();for(const m of contract.mappings){let e=ctx.db.entities.find(e=>e.id===m.entityId),v=e.existence?.validFrom||e.names.find(n=>n.kind==='primary')?.validFrom;if(v?.length===4)assert.ok(m.from>=String(Number(v)+1)+'-01-01');}});
+test('unlisted source countries cannot enter a reviewed cohort',()=>assert.ok(manifest.rows.every(r=>manifest.countryCodes.includes(JSON.parse(r.originalRow).idacr))));
+test('existing named officeholders suppress duplicate coded surnames',()=>{const c=prepareCandidates(manifest,contract,readContext());assert.ok(c.some(c=>c.status==='duplicate'));assert.ok(c.some(c=>c.status==='historical-review'));assert.ok(c.some(c=>c.status==='accepted-candidate'));});
+test('all proposed claims retain original endpoint and bounded scope qualifications',()=>{for(const c of prepareCandidates(manifest,contract,readContext()))for(const p of c.claims){assert.ok(p.claim.qualifications.some(q=>q.includes('final coded day')));assert.ok(p.claim.qualifications.some(q=>q.includes('Literal dataset leader label')));assert.equal(p.claim.evidence[0].temporal.from,c.originalRow.from);assert.equal(p.claim.evidence[0].temporal.until,c.originalRow.until);}});
