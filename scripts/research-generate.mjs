@@ -17,7 +17,7 @@ export function generateSnapshotJobs(result,context,{limit=10,entityIds,categori
   for(const gap of result.gaps||[]){
     if(!gap.entityId||!fields.includes(gap.category)||selected&&!selected.has(gap.entityId)||chosen&&!chosen.has(gap.category))continue;
     if(existingJobs.some(j=>{
-      if(j.entityId!==gap.entityId||!(j.categories||[j.category]).includes(gap.category)||['rejected','validation-failed'].includes(j.status))return false;
+      if(j.entityId!==gap.entityId||!(j.categories||[j.category]).includes(gap.category)||!['queued','researching','submitted','historical-review','accepted'].includes(j.status))return false;
       if(j.targetSnapshots)return j.targetSnapshots.includes(Number(gap.period.from));
       try{const a=temporalBounds({...j.period,kind:'interval'}),b=temporalBounds({...gap.period,kind:'interval'});return a.lo<=b.lo&&a.hi>=b.hi;}catch{return false;}
     }))continue;

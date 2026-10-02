@@ -13,6 +13,7 @@ test('Snapshot job IDs are deterministic across gap order and prevent active dup
   const first=generateSnapshotJobs(result,context,{limit:1});assert.deepEqual(first,generateSnapshotJobs({...result,gaps:[...result.gaps].reverse()},context,{limit:1}));
   assert.equal(generateSnapshotJobs(result,context,{existingJobs:first.jobs}).jobs.length,0);
   assert.equal(generateSnapshotJobs(result,context,{existingJobs:[{entityId,period:{from:'1870',until:'1890'},categories:['leadership','capital'],status:'researching'}]}).jobs.length,0);
+  assert.equal(generateSnapshotJobs(result,context,{existingJobs:first.jobs.map(j=>({...j,status:'integrated'}))}).jobs.length,1);
 });
 test('Snapshot generator refuses stale scans, unknown categories and unbounded job counts',()=>{
   assert.throws(()=>generateSnapshotJobs({...result,productionFingerprint:'stale'},context),/stale/);assert.throws(()=>generateSnapshotJobs(result,context,{limit:0}),/limit/);assert.throws(()=>generateSnapshotJobs(result,context,{categories:['made-up']}),/category/);
