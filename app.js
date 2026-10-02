@@ -7,9 +7,9 @@ import {
   presenceSummary,
   clean,
 } from './data-pipeline.js?v=0.6.1';
-import { loadMetadata } from './historical-metadata.js?v=territory2-cleanup1';
-import { renderDossier } from './dossier.js?v=territory2-cleanup1';
-import { loadRichDossiers } from './rich-dossier.js?v=territory2-cleanup1';
+import { loadMetadata } from './historical-metadata.js?v=canonical1';
+import { renderDossier } from './dossier.js?v=canonical1';
+import { loadRichDossiers } from './rich-dossier.js?v=canonical1';
 import { createBoundaryHistory } from './boundary-history.js?v=0.6.1';
 
 const SNAPSHOTS = [
