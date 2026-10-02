@@ -1,5 +1,13 @@
 # Curated-source reset
 
+## Completed capital safe-yield test and leadership follow-up
+
+Capital source-wide operation is complete: 217 ICOW entries parsed privately; one Wikidata query returned 301 bindings and one original-statement verification batch covered 35 dated entities. Four open-source capital claims added eight supported slots, Capital 398 → 406/1,056. The 334 matched unresolved exceptions remain held/candidate-only; no ICOW dataset was redistributed. Because yield was small, the immediate complete cached Archigos join reused existing independently reviewed mappings and added six effective-leader claims supporting seven slots, Leadership 391 → 398. See capitals/REPORT.md and REPORT.json.
+
+Current claims 3,725; supported/resolved slots 7,058/15,840; Evidence Coverage and Research Resolution 44.55808%; unresolved 8,782. Fourteen dossiers improved; all prior accepted packages unchanged. Eight focused tests and 53,129 final integrity checks passed. Zero browser checks; frozen frontend, population/density, Area, Flags and 46 FT holds unchanged.
+
+Exact next action: expand the full-source Archigos historical country/entity mapping against its original case namespace and existing sourced frameworks; assess net yield before accepting new mappings. Existing reviewed full-year joins are exhausted by this checkpoint. The wider 12-slot exact-name candidate join is not acceptance and includes overlap; do not count it as a gain or repeat the six completed leadership integrations. Preserve capital exceptions for the residual phase. Do not spend substantial effort forcing low-yield mappings. Verify this checkpoint's actual Pages deployment after push.
+
 ## Completed UN follow-up
 
 The live Federico–Tena baseline (771d78f1cfde008ec9376e3cbf9043b11227cfc2) has been followed by nine safe UN1948 census observations supporting1945 (three dated1945, six earlier censuses explicitly dated1940–1943) and four UN1960 Table4 estimates dated1959 supporting1960 (Albania, Austria, Belgium, Denmark). Population369 →382/1,056; claims3,702 →3,715; supported/resolved7,030 →7,043/15,840 (44.38131% →44.46338%);8,797 unresolved. All prior accepted packages remain canonically unchanged. Ten focused tests and52,877 integrity checks passed; zero browser checks, no frontend changes. Source-wide assessments and immutable receipts are in un-followup/REPORT.md and REPORT.json. Do not repeat the completed integrations.

@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {conservativeDate,capitalPeriod,completeYear} from '../scripts/research-capitals-join.mjs';
+const date=(time,precision=11)=>({time:'+'+time+'T00:00:00Z',precision,before:0,after:0,calendarmodel:'http://www.wikidata.org/entity/Q1985727'});
+const snak=v=>({datavalue:{value:v}});
+test('year precision excludes transition year',()=>{assert.equal(conservativeDate(date('1865-00-00',9),true),'1866-01-01');assert.equal(conservativeDate(date('1865-00-00',9),false),'1865-01-01');});
+test('month precision excludes transition month',()=>assert.equal(conservativeDate(date('1927-05-00',10),true),'1927-06-01'));
+test('decade precision requires review',()=>assert.equal(conservativeDate(date('1880-00-00',8),true),null));
+test('uncertain date requires review',()=>assert.equal(conservativeDate({...date('1900-01-01'),before:1},true),null));
+test('undated current capital cannot propagate',()=>assert.equal(capitalPeriod({qualifiers:{}}),null));
+test('role-qualified seat cannot flatten into capital',()=>assert.equal(capitalPeriod({qualifiers:{P580:[snak(date('1900-01-01'))],P518:[{}]}}),null));
+test('duplicate beginnings require review',()=>assert.equal(capitalPeriod({qualifiers:{P580:[snak(date('1900-01-01')),snak(date('1901-01-01'))]}}),null));
+test('full year must fit inside interval',()=>{assert.equal(completeYear({from:'1800-11-17',until:'1961-01-01'},1800),false);assert.equal(completeYear({from:'1800-11-17',until:'1961-01-01'},1815),true);});
