@@ -1,0 +1,300 @@
+{
+  "job": {
+    "id": "dossier-2765b63bf9640de56f3aab67",
+    "entityId": "newfoundland-commission-framework",
+    "period": {
+      "from": "1938",
+      "until": "1938"
+    },
+    "mapIds": [
+      "entity-dominion-of-newfoundland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "ad6a5025aed4f6ab2b5679b7016a540e4c3afb50539bdbc9c49ead4fc2494105",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion03-ftwphd-historical-population-newfoundland-commission-framework",
+    "jobId": "dossier-2765b63bf9640de56f3aab67",
+    "entityId": "newfoundland-commission-framework",
+    "mapIds": [
+      "entity-dominion-of-newfoundland"
+    ],
+    "worker": {
+      "id": "ftwphd-literal-excel-normalizer",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "ad6a5025aed4f6ab2b5679b7016a540e4c3afb50539bdbc9c49ead4fc2494105",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1938",
+      "until": "1938"
+    },
+    "claims": [
+      {
+        "id": "ftwphd-population-3518d2a8bb566119344dc9f2",
+        "entityId": "newfoundland-commission-framework",
+        "category": "population-statistics",
+        "value": 298853,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1938",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "newfoundland-commission-framework-ftwphd-historical-statistical-territory",
+          "description": "Newfoundland and Labrador statistical territory separate from Canada; historical Labrador delimitation retained by source.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-america",
+            "locator": "research/completion-03/population/cache/america.xlsx, AMERICA, row 142, column 32; polity=New Foundland; year=1938; original population (000)=298.853162092754",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: New Foundland; construction section 4.1; historical-border continental workbook.",
+            "note": "Newfoundland and Labrador statistical territory separate from Canada; historical Labrador delimitation retained by source. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=New Foundland; year=1938; grade=C; original workbook SHA256 bound in intake certificate",
+            "note": "fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1938. No claim that a census occurred in the selected snapshot.",
+          "Source quality C — fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Newfoundland and Labrador statistical territory separate from Canada; historical Labrador delimitation retained by source."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/NAEF8A; 2025-v01, repository 3.0; original polity New Foundland; original thousands 298.853162092754; year 1938; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210",
+          "sourceIdentifier": "AMERICA:32:1938"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Full five-continent original historical-border workbooks and original quality workbook acquired under user-approved CC BY 4.0 terms. Coordinator reviewed official methodology section 4.1 and Appendix I before approving explicit source-statistical-unit/entity/year crosswalks. Aggregate island groups, modern-border reconstructions, precolonial backward mappings, Napoleonic aggregates, source-quality D/E/NE, transition-year precision, incomplete mapping and unresolved territorial exceptions remain held. All observations retain exact source year, raw thousands, reconstruction grade and literal cell. Original accepted evidence takes precedence; no overwrites, no new interpolation, no point-to-interval propagation, no density inference.",
+      "preservedPackageHashes": [
+        "c2627bc23e86a6853837f63a1a9e56cc07a405ea530fcfb5c29341c8fef533ca",
+        "7420f54c25b54670e0e9d0fd0f509b38cfae35d7b1927dc88856ef2323a15a23"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "9ff4e8758b9b537e8ffe6aeb31fecdf1a5489163ea3630d3f7511375e586d6d0",
+    "productionFingerprint": "ad6a5025aed4f6ab2b5679b7016a540e4c3afb50539bdbc9c49ead4fc2494105",
+    "jobId": "dossier-2765b63bf9640de56f3aab67",
+    "review": {
+      "reviewer": "/root original-source historical-border and quality review",
+      "packageHash": "9ff4e8758b9b537e8ffe6aeb31fecdf1a5489163ea3630d3f7511375e586d6d0",
+      "bodyReviewed": true,
+      "rationale": "Full five-continent original historical-border workbooks and original quality workbook acquired under user-approved CC BY 4.0 terms. Coordinator reviewed official methodology section 4.1 and Appendix I before approving explicit source-statistical-unit/entity/year crosswalks. Aggregate island groups, modern-border reconstructions, precolonial backward mappings, Napoleonic aggregates, source-quality D/E/NE, transition-year precision, incomplete mapping and unresolved territorial exceptions remain held. All observations retain exact source year, raw thousands, reconstruction grade and literal cell. Original accepted evidence takes precedence; no overwrites, no new interpolation, no point-to-interval propagation, no density inference.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "ftwphd-population-3518d2a8bb566119344dc9f2": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "ftwphd-population-3518d2a8bb566119344dc9f2"
+    ]
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "job": {
+    "id": "dossier-7bbe9cb888bfabf122d4dabe",
+    "entityId": "japan-restoration-framework",
+    "period": {
+      "from": "1878",
+      "until": "1880"
+    },
+    "mapIds": [
+      "entity-imperial-japan",
+      "entity-japan"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "7cdc04fc53a2e73ea804ac785ee3ce624eed737a96f022397b5c97bebca485a3",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion03-ftwphd-historical-population-japan-restoration-framework",
+    "jobId": "dossier-7bbe9cb888bfabf122d4dabe",
+    "entityId": "japan-restoration-framework",
+    "mapIds": [
+      "entity-imperial-japan",
+      "entity-japan"
+    ],
+    "worker": {
+      "id": "ftwphd-literal-excel-normalizer",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "7cdc04fc53a2e73ea804ac785ee3ce624eed737a96f022397b5c97bebca485a3",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1878",
+      "until": "1880"
+    },
+    "claims": [
+      {
+        "id": "ftwphd-population-2e686df56bcccdbb8c9a75f8",
+        "entityId": "japan-restoration-framework",
+        "category": "population-statistics",
+        "value": 36485459,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1878",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "japan-restoration-framework-ftwphd-historical-statistical-territory",
+          "description": "Japanese home-island statistical territory before Taiwan annexation. Later imperial possessions are not assumed included in home-island series.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-asia",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-asia",
+            "locator": "research/completion-03/population/cache/asia-bundle/asia_1800-1938_FTWPHD_2025_v01.xlsx, ASIA, row 81, column 18; polity=Japan; year=1878; original population (000)=36485.458835830046",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Japan; construction section 4.1; historical-border continental workbook.",
+            "note": "Japanese home-island statistical territory before Taiwan annexation. Later imperial possessions are not assumed included in home-island series. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Japan; year=1878; grade=A; original workbook SHA256 bound in intake certificate",
+            "note": "excellent: trustworthy census/register-based estimate. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1878. No claim that a census occurred in the selected snapshot.",
+          "Source quality A — excellent: trustworthy census/register-based estimate.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Japanese home-island statistical territory before Taiwan annexation. Later imperial possessions are not assumed included in home-island series."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/SSMGAY; 2025-v01, repository 2.0; original polity Japan; original thousands 36485.458835830046; year 1878; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 872284825136dcee634acb398c6468fb876277944bac6ab0956300e2e463b7a8",
+          "sourceIdentifier": "ASIA:18:1878"
+        }
+      },
+      {
+        "id": "ftwphd-population-a4407c1fd5e8cacb68f38bad",
+        "entityId": "japan-restoration-framework",
+        "category": "population-statistics",
+        "value": 36972725,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1880",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "japan-restoration-framework-ftwphd-historical-statistical-territory",
+          "description": "Japanese home-island statistical territory before Taiwan annexation. Later imperial possessions are not assumed included in home-island series.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-asia",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-asia",
+            "locator": "research/completion-03/population/cache/asia-bundle/asia_1800-1938_FTWPHD_2025_v01.xlsx, ASIA, row 83, column 18; polity=Japan; year=1880; original population (000)=36972.72523570025",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Japan; construction section 4.1; historical-border continental workbook.",
+            "note": "Japanese home-island statistical territory before Taiwan annexation. Later imperial possessions are not assumed included in home-island series. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Japan; year=1880; grade=A; original workbook SHA256 bound in intake certificate",
+            "note": "excellent: trustworthy census/register-based estimate. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1880. No claim that a census occurred in the selected snapshot.",
+          "Source quality A — excellent: trustworthy census/register-based estimate.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Japanese home-island statistical territory before Taiwan annexation. Later imperial possessions are not assumed included in home-island series."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/SSMGAY; 2025-v01, repository 2.0; original polity Japan; original thousands 36972.72523570025; year 1880; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 872284825136dcee634acb398c6468fb876277944bac6ab0956300e2e463b7a8",
+          "sourceIdentifier": "ASIA:18:1880"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "ftwphd-asia",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Full five-continent original historical-border workbooks and original quality workbook acquired under user-approved CC BY 4.0 terms. Coordinator reviewed official methodology section 4.1 and Appendix I before approving explicit source-statistical-unit/entity/year crosswalks. Aggregate island groups, modern-border reconstructions, precolonial backward mappings, Napoleonic aggregates, source-quality D/E/NE, transition-year precision, incomplete mapping and unresolved territorial exceptions remain held. All observations retain exact source year, raw thousands, reconstruction grade and literal cell. Original accepted evidence takes precedence; no overwrites, no new interpolation, no point-to-interval propagation, no density inference.",
+      "preservedPackageHashes": [
+        "c2627bc23e86a6853837f63a1a9e56cc07a405ea530fcfb5c29341c8fef533ca",
+        "7420f54c25b54670e0e9d0fd0f509b38cfae35d7b1927dc88856ef2323a15a23"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "60055140daecd26a51ccc51e18c201d91af36bc18bf6066bab7123ba2cd87841",
+    "productionFingerprint": "7cdc04fc53a2e73ea804ac785ee3ce624eed737a96f022397b5c97bebca485a3",
+    "jobId": "dossier-7bbe9cb888bfabf122d4dabe",
+    "review": {
+      "reviewer": "/root original-source historical-border and quality review",
+      "packageHash": "60055140daecd26a51ccc51e18c201d91af36bc18bf6066bab7123ba2cd87841",
+      "bodyReviewed": true,
+      "rationale": "Full five-continent original historical-border workbooks and original quality workbook acquired under user-approved CC BY 4.0 terms. Coordinator reviewed official methodology section 4.1 and Appendix I before approving explicit source-statistical-unit/entity/year crosswalks. Aggregate island groups, modern-border reconstructions, precolonial backward mappings, Napoleonic aggregates, source-quality D/E/NE, transition-year precision, incomplete mapping and unresolved territorial exceptions remain held. All observations retain exact source year, raw thousands, reconstruction grade and literal cell. Original accepted evidence takes precedence; no overwrites, no new interpolation, no point-to-interval propagation, no density inference.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "ftwphd-population-2e686df56bcccdbb8c9a75f8": "accepted",
+        "ftwphd-population-a4407c1fd5e8cacb68f38bad": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "ftwphd-population-2e686df56bcccdbb8c9a75f8",
+      "ftwphd-population-a4407c1fd5e8cacb68f38bad"
+    ]
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "job": {
+    "id": "dossier-45d704eb3681dc99a8457bc2",
+    "entityId": "uruguay-late-1830-framework",
+    "period": {
+      "from": "1914",
+      "until": "1914"
+    },
+    "mapIds": [
+      "entity-uruguay"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "a5518be652482fde4b10f556548e27ac994f0192b3e37fd4141590107f08212f",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion03-ftwphd-historical-population-uruguay-late-1830-framework",
+    "jobId": "dossier-45d704eb3681dc99a8457bc2",
+    "entityId": "uruguay-late-1830-framework",
+    "mapIds": [
+      "entity-uruguay"
+    ],
+    "worker": {
+      "id": "ftwphd-literal-excel-normalizer",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "a5518be652482fde4b10f556548e27ac994f0192b3e37fd4141590107f08212f",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1914",
+      "until": "1914"
+    },
+    "claims": [
+      {
+        "id": "ftwphd-population-d3a7eec563ca26d0026b3bd9",
+        "entityId": "uruguay-late-1830-framework",
+        "category": "population-statistics",
+        "value": 1223057,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1914",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "uruguay-late-1830-framework-ftwphd-historical-statistical-territory",
+          "description": "Uruguayan national statistical territory, not the wider Rio de la Plata unit.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-america",
+            "locator": "research/completion-03/population/cache/america.xlsx, AMERICA, row 118, column 46; polity=Uruguay; year=1914; original population (000)=1223.0566043361252",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Uruguay; construction section 4.1; historical-border continental workbook.",
+            "note": "Uruguayan national statistical territory, not the wider Rio de la Plata unit. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Uruguay; year=1914; grade=C; original workbook SHA256 bound in intake certificate",
+            "note": "fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1914. No claim that a census occurred in the selected snapshot.",
+          "Source quality C — fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Uruguayan national statistical territory, not the wider Rio de la Plata unit."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/NAEF8A; 2025-v01, repository 3.0; original polity Uruguay; original thousands 1223.0566043361252; year 1914; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210",
+          "sourceIdentifier": "AMERICA:46:1914"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Full five-continent original historical-border workbooks and original quality workbook acquired under user-approved CC BY 4.0 terms. Coordinator reviewed official methodology section 4.1 and Appendix I before approving explicit source-statistical-unit/entity/year crosswalks. Aggregate island groups, modern-border reconstructions, precolonial backward mappings, Napoleonic aggregates, source-quality D/E/NE, transition-year precision, incomplete mapping and unresolved territorial exceptions remain held. All observations retain exact source year, raw thousands, reconstruction grade and literal cell. Original accepted evidence takes precedence; no overwrites, no new interpolation, no point-to-interval propagation, no density inference.",
+      "preservedPackageHashes": [
+        "c2627bc23e86a6853837f63a1a9e56cc07a405ea530fcfb5c29341c8fef533ca",
+        "7420f54c25b54670e0e9d0fd0f509b38cfae35d7b1927dc88856ef2323a15a23"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "74f1a1c92008e059f7e0d8f3d21f50fe21c6ddd03e018ba5bdfcf0b48c9e31fa",
+    "productionFingerprint": "a5518be652482fde4b10f556548e27ac994f0192b3e37fd4141590107f08212f",
+    "jobId": "dossier-45d704eb3681dc99a8457bc2",
+    "review": {
+      "reviewer": "/root original-source historical-border and quality review",
+      "packageHash": "74f1a1c92008e059f7e0d8f3d21f50fe21c6ddd03e018ba5bdfcf0b48c9e31fa",
+      "bodyReviewed": true,
+      "rationale": "Full five-continent original historical-border workbooks and original quality workbook acquired under user-approved CC BY 4.0 terms. Coordinator reviewed official methodology section 4.1 and Appendix I before approving explicit source-statistical-unit/entity/year crosswalks. Aggregate island groups, modern-border reconstructions, precolonial backward mappings, Napoleonic aggregates, source-quality D/E/NE, transition-year precision, incomplete mapping and unresolved territorial exceptions remain held. All observations retain exact source year, raw thousands, reconstruction grade and literal cell. Original accepted evidence takes precedence; no overwrites, no new interpolation, no point-to-interval propagation, no density inference.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "ftwphd-population-d3a7eec563ca26d0026b3bd9": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "ftwphd-population-d3a7eec563ca26d0026b3bd9"
+    ]
+  }
+}

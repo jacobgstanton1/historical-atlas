@@ -1,11 +1,11 @@
 # 1800–1960 dossier completion
 
-Evidence coverage: **43.03%** (6816/15840 applicable slots).
-Research resolution: **43.03%** (6816/15840 assessed slots).
+Evidence coverage: **44.38%** (7030/15840 applicable slots).
+Research resolution: **44.38%** (7030/15840 assessed slots).
 Dossiers: 1056; critically sparse: 54; completely unresolved: 52; core-supported: 225.
 Unresolved raw identity/snapshot occurrences outside the resolved-entity denominator: 717. These remain open identity work, not resolved coverage.
-Prior 14-category metric: 5848/14784. The new status category changes the denominator.
-States: {"supported":6816,"partial":389,"missing":8152,"held":483,"uncertain":0,"known-unavailable":0,"not-applicable":0,"territorially-incompatible":0}.
+Prior 14-category metric: 6062/14784. The new status category changes the denominator.
+States: {"supported":7030,"partial":389,"missing":8044,"held":377,"uncertain":0,"known-unavailable":0,"not-applicable":0,"territorially-incompatible":0}.
 
 | Category | Supported | Partial | Missing | Held | Evidence % | Resolution % |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -15,7 +15,7 @@ States: {"supported":6816,"partial":389,"missing":8152,"held":483,"uncertain":0,
 | capital | 398 | 27 | 622 | 9 | 37.69 | 37.69 |
 | currency | 205 | 13 | 835 | 3 | 19.41 | 19.41 |
 | historical-flag | 123 | 17 | 807 | 109 | 11.65 | 11.65 |
-| population-statistics | 155 | 0 | 728 | 173 | 14.68 | 14.68 |
+| population-statistics | 369 | 0 | 620 | 67 | 34.94 | 34.94 |
 | area-statistics | 985 | 0 | 0 | 71 | 93.28 | 93.28 |
 | density | 0 | 0 | 1056 | 0 | 0.00 | 0.00 |
 | economy | 105 | 0 | 951 | 0 | 9.94 | 9.94 |
@@ -27,15 +27,15 @@ States: {"supported":6816,"partial":389,"missing":8152,"held":483,"uncertain":0,
 
 | Snapshot | Dossiers | Evidence % | Resolution % | Sparse |
 | --- | ---: | ---: | ---: | ---: |
-| 1800 | 57 | 35.67 | 35.67 | 2 |
-| 1815 | 79 | 33.84 | 33.84 | 11 |
-| 1878 | 93 | 39.00 | 39.00 | 8 |
-| 1880 | 93 | 41.08 | 41.08 | 4 |
-| 1900 | 83 | 45.22 | 45.22 | 3 |
-| 1914 | 98 | 47.21 | 47.21 | 0 |
-| 1920 | 111 | 43.66 | 43.66 | 8 |
-| 1930 | 110 | 47.70 | 47.70 | 0 |
-| 1938 | 122 | 47.10 | 47.10 | 1 |
+| 1800 | 57 | 35.79 | 35.79 | 2 |
+| 1815 | 79 | 34.01 | 34.01 | 11 |
+| 1878 | 93 | 40.50 | 40.50 | 8 |
+| 1880 | 93 | 42.72 | 42.72 | 4 |
+| 1900 | 83 | 47.07 | 47.07 | 3 |
+| 1914 | 98 | 49.25 | 49.25 | 0 |
+| 1920 | 111 | 45.77 | 45.77 | 8 |
+| 1930 | 110 | 50.24 | 50.24 | 0 |
+| 1938 | 122 | 49.13 | 49.13 | 1 |
 | 1945 | 110 | 40.30 | 40.30 | 13 |
 | 1960 | 100 | 46.33 | 46.33 | 4 |
 

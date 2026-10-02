@@ -1,0 +1,452 @@
+{
+  "job": {
+    "id": "dossier-a6608431e5d721c4d628fbec",
+    "entityId": "venezuela-gomez-framework",
+    "period": {
+      "from": "1914",
+      "until": "1930"
+    },
+    "mapIds": [
+      "entity-venezuela"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "2a33c347a1072dd152602d9e09aa4c16640c3424310b560d043eca6a5bbb466a",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion03-ftwphd-historical-population-venezuela-gomez-framework",
+    "jobId": "dossier-a6608431e5d721c4d628fbec",
+    "entityId": "venezuela-gomez-framework",
+    "mapIds": [
+      "entity-venezuela"
+    ],
+    "worker": {
+      "id": "ftwphd-literal-excel-normalizer",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "2a33c347a1072dd152602d9e09aa4c16640c3424310b560d043eca6a5bbb466a",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1914",
+      "until": "1930"
+    },
+    "claims": [
+      {
+        "id": "ftwphd-population-009c9e3290f5d1fe536b2a08",
+        "entityId": "venezuela-gomez-framework",
+        "category": "population-statistics",
+        "value": 2393428,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1914",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "venezuela-gomez-framework-ftwphd-historical-statistical-territory",
+          "description": "Venezuelan national statistical territory, separated from Gran Colombia.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-america",
+            "locator": "research/completion-03/population/cache/america.xlsx, AMERICA, row 118, column 47; polity=Venezuela; year=1914; original population (000)=2393.428081554451",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Venezuela; construction section 4.1; historical-border continental workbook.",
+            "note": "Venezuelan national statistical territory, separated from Gran Colombia. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Venezuela; year=1914; grade=C; original workbook SHA256 bound in intake certificate",
+            "note": "fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1914. No claim that a census occurred in the selected snapshot.",
+          "Source quality C — fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Venezuelan national statistical territory, separated from Gran Colombia."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/NAEF8A; 2025-v01, repository 3.0; original polity Venezuela; original thousands 2393.428081554451; year 1914; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210",
+          "sourceIdentifier": "AMERICA:47:1914"
+        }
+      },
+      {
+        "id": "ftwphd-population-f3c73903c8555b1e038dc90d",
+        "entityId": "venezuela-gomez-framework",
+        "category": "population-statistics",
+        "value": 2438000,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "venezuela-gomez-framework-ftwphd-historical-statistical-territory",
+          "description": "Venezuelan national statistical territory, separated from Gran Colombia.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-america",
+            "locator": "research/completion-03/population/cache/america.xlsx, AMERICA, row 124, column 47; polity=Venezuela; year=1920; original population (000)=2438",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Venezuela; construction section 4.1; historical-border continental workbook.",
+            "note": "Venezuelan national statistical territory, separated from Gran Colombia. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Venezuela; year=1920; grade=C; original workbook SHA256 bound in intake certificate",
+            "note": "fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1920. No claim that a census occurred in the selected snapshot.",
+          "Source quality C — fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Venezuelan national statistical territory, separated from Gran Colombia."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/NAEF8A; 2025-v01, repository 3.0; original polity Venezuela; original thousands 2438; year 1920; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210",
+          "sourceIdentifier": "AMERICA:47:1920"
+        }
+      },
+      {
+        "id": "ftwphd-population-cebbff357b3930f1f1ea8d48",
+        "entityId": "venezuela-gomez-framework",
+        "category": "population-statistics",
+        "value": 2980000,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "venezuela-gomez-framework-ftwphd-historical-statistical-territory",
+          "description": "Venezuelan national statistical territory, separated from Gran Colombia.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-america",
+            "locator": "research/completion-03/population/cache/america.xlsx, AMERICA, row 134, column 47; polity=Venezuela; year=1930; original population (000)=2980",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Venezuela; construction section 4.1; historical-border continental workbook.",
+            "note": "Venezuelan national statistical territory, separated from Gran Colombia. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Venezuela; year=1930; grade=C; original workbook SHA256 bound in intake certificate",
+            "note": "fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1930. No claim that a census occurred in the selected snapshot.",
+          "Source quality C — fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Venezuelan national statistical territory, separated from Gran Colombia."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/NAEF8A; 2025-v01, repository 3.0; original polity Venezuela; original thousands 2980; year 1930; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210",
+          "sourceIdentifier": "AMERICA:47:1930"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Full five-continent original historical-border workbooks and original quality workbook acquired under user-approved CC BY 4.0 terms. Coordinator reviewed official methodology section 4.1 and Appendix I before approving explicit source-statistical-unit/entity/year crosswalks. Aggregate island groups, modern-border reconstructions, precolonial backward mappings, Napoleonic aggregates, source-quality D/E/NE, transition-year precision, incomplete mapping and unresolved territorial exceptions remain held. All observations retain exact source year, raw thousands, reconstruction grade and literal cell. Original accepted evidence takes precedence; no overwrites, no new interpolation, no point-to-interval propagation, no density inference.",
+      "preservedPackageHashes": [
+        "c2627bc23e86a6853837f63a1a9e56cc07a405ea530fcfb5c29341c8fef533ca",
+        "7420f54c25b54670e0e9d0fd0f509b38cfae35d7b1927dc88856ef2323a15a23"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "9ab1659af547929d85bf9a6dabe1267de322428550da16fde07dd7fa43bb2281",
+    "productionFingerprint": "2a33c347a1072dd152602d9e09aa4c16640c3424310b560d043eca6a5bbb466a",
+    "jobId": "dossier-a6608431e5d721c4d628fbec",
+    "review": {
+      "reviewer": "/root original-source historical-border and quality review",
+      "packageHash": "9ab1659af547929d85bf9a6dabe1267de322428550da16fde07dd7fa43bb2281",
+      "bodyReviewed": true,
+      "rationale": "Full five-continent original historical-border workbooks and original quality workbook acquired under user-approved CC BY 4.0 terms. Coordinator reviewed official methodology section 4.1 and Appendix I before approving explicit source-statistical-unit/entity/year crosswalks. Aggregate island groups, modern-border reconstructions, precolonial backward mappings, Napoleonic aggregates, source-quality D/E/NE, transition-year precision, incomplete mapping and unresolved territorial exceptions remain held. All observations retain exact source year, raw thousands, reconstruction grade and literal cell. Original accepted evidence takes precedence; no overwrites, no new interpolation, no point-to-interval propagation, no density inference.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "ftwphd-population-009c9e3290f5d1fe536b2a08": "accepted",
+        "ftwphd-population-f3c73903c8555b1e038dc90d": "accepted",
+        "ftwphd-population-cebbff357b3930f1f1ea8d48": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "ftwphd-population-009c9e3290f5d1fe536b2a08",
+      "ftwphd-population-f3c73903c8555b1e038dc90d",
+      "ftwphd-population-cebbff357b3930f1f1ea8d48"
+    ]
+  }
+}

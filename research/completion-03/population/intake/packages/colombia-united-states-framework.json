@@ -1,0 +1,376 @@
+{
+  "job": {
+    "id": "dossier-3714ff6a915f39f7b894ac56",
+    "entityId": "colombia-united-states-framework",
+    "period": {
+      "from": "1878",
+      "until": "1880"
+    },
+    "mapIds": [
+      "entity-colombia"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "b380ddb9962a44e6f7c1fc38a44156e3f67d930f0c32bc1c828e35624984d4cc",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion03-ftwphd-historical-population-colombia-united-states-framework",
+    "jobId": "dossier-3714ff6a915f39f7b894ac56",
+    "entityId": "colombia-united-states-framework",
+    "mapIds": [
+      "entity-colombia"
+    ],
+    "worker": {
+      "id": "ftwphd-literal-excel-normalizer",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "b380ddb9962a44e6f7c1fc38a44156e3f67d930f0c32bc1c828e35624984d4cc",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1878",
+      "until": "1880"
+    },
+    "claims": [
+      {
+        "id": "ftwphd-population-251b872070fc48648a5bccb1",
+        "entityId": "colombia-united-states-framework",
+        "category": "population-statistics",
+        "value": 2967159,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1878",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "colombia-united-states-framework-ftwphd-historical-statistical-territory",
+          "description": "Colombian national territory before separation of Panama; source-year whole polity rather than modern-border Colombia.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-america",
+            "locator": "research/completion-03/population/cache/america.xlsx, AMERICA, row 82, column 13; polity=Colombia; year=1878; original population (000)=2967.1590624382434",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Colombia; construction section 4.1; historical-border continental workbook.",
+            "note": "Colombian national territory before separation of Panama; source-year whole polity rather than modern-border Colombia. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Colombia; year=1878; grade=C; original workbook SHA256 bound in intake certificate",
+            "note": "fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1878. No claim that a census occurred in the selected snapshot.",
+          "Source quality C — fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Colombian national territory before separation of Panama; source-year whole polity rather than modern-border Colombia."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/NAEF8A; 2025-v01, repository 3.0; original polity Colombia; original thousands 2967.1590624382434; year 1878; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210",
+          "sourceIdentifier": "AMERICA:13:1878"
+        }
+      },
+      {
+        "id": "ftwphd-population-8a18e78443b19b65782ad78a",
+        "entityId": "colombia-united-states-framework",
+        "category": "population-statistics",
+        "value": 3036458,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1880",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "colombia-united-states-framework-ftwphd-historical-statistical-territory",
+          "description": "Colombian national territory before separation of Panama; source-year whole polity rather than modern-border Colombia.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-america",
+            "locator": "research/completion-03/population/cache/america.xlsx, AMERICA, row 84, column 13; polity=Colombia; year=1880; original population (000)=3036.4577850404376",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Colombia; construction section 4.1; historical-border continental workbook.",
+            "note": "Colombian national territory before separation of Panama; source-year whole polity rather than modern-border Colombia. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Colombia; year=1880; grade=C; original workbook SHA256 bound in intake certificate",
+            "note": "fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1880. No claim that a census occurred in the selected snapshot.",
+          "Source quality C — fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Colombian national territory before separation of Panama; source-year whole polity rather than modern-border Colombia."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/NAEF8A; 2025-v01, repository 3.0; original polity Colombia; original thousands 3036.4577850404376; year 1880; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210",
+          "sourceIdentifier": "AMERICA:13:1880"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Full five-continent original historical-border workbooks and original quality workbook acquired under user-approved CC BY 4.0 terms. Coordinator reviewed official methodology section 4.1 and Appendix I before approving explicit source-statistical-unit/entity/year crosswalks. Aggregate island groups, modern-border reconstructions, precolonial backward mappings, Napoleonic aggregates, source-quality D/E/NE, transition-year precision, incomplete mapping and unresolved territorial exceptions remain held. All observations retain exact source year, raw thousands, reconstruction grade and literal cell. Original accepted evidence takes precedence; no overwrites, no new interpolation, no point-to-interval propagation, no density inference.",
+      "preservedPackageHashes": [
+        "c2627bc23e86a6853837f63a1a9e56cc07a405ea530fcfb5c29341c8fef533ca",
+        "7420f54c25b54670e0e9d0fd0f509b38cfae35d7b1927dc88856ef2323a15a23"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "e2a69a0abd9ee48032580aed8f2716c4a5df917316f5f3cc7bfbc596705ec404",
+    "productionFingerprint": "b380ddb9962a44e6f7c1fc38a44156e3f67d930f0c32bc1c828e35624984d4cc",
+    "jobId": "dossier-3714ff6a915f39f7b894ac56",
+    "review": {
+      "reviewer": "/root original-source historical-border and quality review",
+      "packageHash": "e2a69a0abd9ee48032580aed8f2716c4a5df917316f5f3cc7bfbc596705ec404",
+      "bodyReviewed": true,
+      "rationale": "Full five-continent original historical-border workbooks and original quality workbook acquired under user-approved CC BY 4.0 terms. Coordinator reviewed official methodology section 4.1 and Appendix I before approving explicit source-statistical-unit/entity/year crosswalks. Aggregate island groups, modern-border reconstructions, precolonial backward mappings, Napoleonic aggregates, source-quality D/E/NE, transition-year precision, incomplete mapping and unresolved territorial exceptions remain held. All observations retain exact source year, raw thousands, reconstruction grade and literal cell. Original accepted evidence takes precedence; no overwrites, no new interpolation, no point-to-interval propagation, no density inference.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "ftwphd-population-251b872070fc48648a5bccb1": "accepted",
+        "ftwphd-population-8a18e78443b19b65782ad78a": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "ftwphd-population-251b872070fc48648a5bccb1",
+      "ftwphd-population-8a18e78443b19b65782ad78a"
+    ]
+  }
+}

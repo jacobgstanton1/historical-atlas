@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {screenFederico,populationClaim} from '../scripts/research-federico-tena.mjs';
+const mapping={polity:'Example',entityId:'example',year:1900,confidence:'HIGH_CONFIDENCE',scopeRationale:'Explicit matching territory',sourceLocator:'Appendix I: Example',review:{reviewer:'independent'}};
+const observation={polity:'Example',continent:'europe',year:1900,valueThousands:1234.56789,quality:'B',fileSHA256:'abc',file:'original.xlsx',sheet:'Example',row:102,column:3};
+const entity={id:'example',existence:{validFrom:'1890',validUntil:'1910'}};
+const slot={entityId:'example',snapshotYear:1900,categories:{'population-statistics':{status:'missing'}}};
+const screen=(m=mapping,r=observation,s=slot,e=entity)=>screenFederico({mappings:[m],observations:[r],matrix:{rows:[s]},entities:[e]});
+test('accepts one bounded exact-year quality-B point',()=>assert.equal(screen().accepted.length,1));
+test('missing, conjectural and poor grades are held',()=>{for(const quality of [null,'D','E','NE'])assert.equal(screen(mapping,{...observation,quality}).accepted.length,0);});
+test('a nearby observation is never retimed to a snapshot',()=>assert.equal(screen(mapping,{...observation,year:1899}).accepted.length,0));
+test('a REVIEW mapping cannot flow automatically',()=>assert.equal(screen({...mapping,confidence:'REVIEW'}).accepted.length,0));
+test('existing supported evidence is preserved',()=>assert.equal(screen(mapping,observation,{...slot,categories:{'population-statistics':{status:'supported'}}}).skipped.length,1));
+test('year-precision transition is held',()=>assert.equal(screen(mapping,observation,slot,{...entity,existence:{validFrom:'1900-05-01'}}).accepted.length,0));
+test('duplicate source rows and overlapping mappings fail closed',()=>{assert.equal(screenFederico({mappings:[mapping],observations:[observation,observation],matrix:{rows:[slot]},entities:[entity]}).accepted.length,0);assert.throws(()=>screenFederico({mappings:[mapping,mapping],observations:[observation],matrix:{rows:[slot]},entities:[entity]}),/Overlapping/);});
+test('2026 revised Africa cannot inherit old quality',()=>assert.equal(screen(mapping,{...observation,continent:'africa'}).accepted.length,0));
+test('source estimate, units, year, grade and provenance survive normalization',()=>{const c=populationClaim({mapping,row:observation});assert.equal(c.value,1234568);assert.equal(c.temporal.observationDate,'1900');assert.equal(c.temporal.kind,'observation');assert.match(c.origin.reference,/1234.56789/);assert.equal(c.evidence.length,3);assert.match(c.qualifications.join(' '),/Source quality B/);});
+test('screening is deterministic and does not mutate inputs',()=>{const before=JSON.stringify([mapping,observation,slot,entity]);assert.deepEqual(screen(),screen());assert.equal(JSON.stringify([mapping,observation,slot,entity]),before);});

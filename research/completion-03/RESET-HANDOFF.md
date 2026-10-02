@@ -1,5 +1,19 @@
 # Curated-source reset
 
+## Current population checkpoint
+
+The CC BY 4.0 acceptance was explicitly authorized by the user and completed. All five original continental workbooks, quality assessment and readmes were acquired. The complete method paper has separate CC BY-NC-ND 3.0 ES terms and remains locally ignored; cite its handle, do not redistribute it.
+
+Federico–Tena full-source intake is complete: 22,035 literal annual records, 176 series, 1,452 records at the nine configured pre-1939 snapshots. Explicit bounded crosswalks: 280 high-confidence candidate slots, 24 review-only. After existing-evidence, quality and chronological screening, 214 claims were integrated serially in 81 packages. Forty-four existing supported slots skipped; 46 candidates held; zero integration holds. All 1,181 prior accepted packages are unchanged. Ten focused tests passed and the final data audit passed 52,524 checks. Zero browser regression checks and no frontend changes.
+
+Current production: 3,702 rich claims, 504 rich-covered entities, 916 registered sources. Population 155 → 369/1,056. Supported/resolved slots 6,816 → 7,030/15,840; Evidence Coverage and Research Resolution 43.03030% → 44.38131%. Remaining unresolved 8,810. Do not repeat this ingestion or the preserved Area/Flags/income checkpoints. Full source receipts, certificate, held records, package hashes and per-snapshot/category metrics are in population/.
+
+Next exact action: UN Statistical Yearbook 1948 Table 1 for 1945. The user-specified SYB1.pdf is downloaded in un1945/cache; ten table pages extracted and five rendered. Source-wide candidate extraction yielded 168 census rows, 51 with 1940–1945 dates. These are UNREVIEWED CANDIDATES, not accepted production facts. The existing scanner allows past observations only, with its configured window; do not retime the 1937/1946/1947 estimate columns as 1945. Finland's 1940 census excludes territories ceded in 1944 and must not silently support postwar Finland. Preserve de-jure and armed-forces qualifications, non-native-only counts, entity-framework dates and other footnotes. Future 1946–1948 censuses remain excluded from 1945. The likely safe yield is modest; harvest cheap defensible observations, hold exceptions, then move through the curated stack.
+
+The preceding preserved Maddison checkpoint 453ddf58e3fca4595a8bd418203449d06866c573 was pushed and deployed successfully (Pages run 37044398427); live production and four frozen runtime hashes matched. The population checkpoint requires the same exact-SHA Pages/live verification after push. Paid balance last observed 163.9703575 credits; primary 6% used after reset, weekly 61% used. Account-shared credit movements cannot reliably establish per-tranche cost.
+
+## Preserved pre-population history
+
 The live starting checkpoint is e47caa722ccc17d74a156d481fdbc3ec65796b9e: 6,784 supported/resolved slots, 42.82828%, 3,456 rich production claims. Preserve the completed mapped-area and dated-symbol packages.
 
 Before reset, the official MPD2023 workbook supplied 32 exact-year GDP-per-capita observations using existing independently reviewed statistical-territory crosswalks. These passed five focused tests and serial production integration with 49,259 integrity checks, no integration holds, and zero browser checks. Local state is 3,488 claims, 6,816 supported/resolved slots, 43.03030%. Eleven packages; nine source countries; original country reconstruction bibliographies retained. No difficult territorial mappings were resolved. All 1,170 earlier production packages must remain byte-canonically unchanged.

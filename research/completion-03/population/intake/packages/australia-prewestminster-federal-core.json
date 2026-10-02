@@ -1,0 +1,541 @@
+{
+  "job": {
+    "id": "dossier-6e5c8ceabf3eb52072f59067",
+    "entityId": "australia-prewestminster-federal-core",
+    "period": {
+      "from": "1914",
+      "until": "1938"
+    },
+    "mapIds": [
+      "entity-australia"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "068cad98351379551894921a304f519442ddc1eca612b3ff25b85db3b479415d",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion03-ftwphd-historical-population-australia-prewestminster-federal-core",
+    "jobId": "dossier-6e5c8ceabf3eb52072f59067",
+    "entityId": "australia-prewestminster-federal-core",
+    "mapIds": [
+      "entity-australia"
+    ],
+    "worker": {
+      "id": "ftwphd-literal-excel-normalizer",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "068cad98351379551894921a304f519442ddc1eca612b3ff25b85db3b479415d",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1914",
+      "until": "1938"
+    },
+    "claims": [
+      {
+        "id": "ftwphd-population-4f8afc95e577b430bcdf1dc3",
+        "entityId": "australia-prewestminster-federal-core",
+        "category": "population-statistics",
+        "value": 5052803,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1914",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "australia-prewestminster-federal-core-ftwphd-historical-statistical-territory",
+          "description": "Australian Commonwealth statistical territory including reconstructed indigenous population; constituent pre-federation colonies not given national total.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-oceania",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-oceania",
+            "locator": "research/completion-03/population/cache/oceania-bundle/oceania_1800-1938_FTWPHD_2023_v01.xlsx, OCEANIA, row 117, column 2; polity=Australia; year=1914; original population (000)=5052.802562439871",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Australia; construction section 4.1; historical-border continental workbook.",
+            "note": "Australian Commonwealth statistical territory including reconstructed indigenous population; constituent pre-federation colonies not given national total. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Australia; year=1914; grade=A; original workbook SHA256 bound in intake certificate",
+            "note": "excellent: trustworthy census/register-based estimate. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1914. No claim that a census occurred in the selected snapshot.",
+          "Source quality A — excellent: trustworthy census/register-based estimate.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Australian Commonwealth statistical territory including reconstructed indigenous population; constituent pre-federation colonies not given national total."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/JBGFP6; 2023-v01, repository 1.0; original polity Australia; original thousands 5052.802562439871; year 1914; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 0a4ca2940419dcd78df23e7fb903f6c23a7bd89dedf714bb181adc622e42cc07",
+          "sourceIdentifier": "OCEANIA:2:1914"
+        }
+      },
+      {
+        "id": "ftwphd-population-b6a2d39287ad8136a036fd0e",
+        "entityId": "australia-prewestminster-federal-core",
+        "category": "population-statistics",
+        "value": 5487529,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "australia-prewestminster-federal-core-ftwphd-historical-statistical-territory",
+          "description": "Australian Commonwealth statistical territory including reconstructed indigenous population; constituent pre-federation colonies not given national total.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-oceania",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-oceania",
+            "locator": "research/completion-03/population/cache/oceania-bundle/oceania_1800-1938_FTWPHD_2023_v01.xlsx, OCEANIA, row 123, column 2; polity=Australia; year=1920; original population (000)=5487.529281282619",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Australia; construction section 4.1; historical-border continental workbook.",
+            "note": "Australian Commonwealth statistical territory including reconstructed indigenous population; constituent pre-federation colonies not given national total. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Australia; year=1920; grade=A; original workbook SHA256 bound in intake certificate",
+            "note": "excellent: trustworthy census/register-based estimate. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1920. No claim that a census occurred in the selected snapshot.",
+          "Source quality A — excellent: trustworthy census/register-based estimate.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Australian Commonwealth statistical territory including reconstructed indigenous population; constituent pre-federation colonies not given national total."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/JBGFP6; 2023-v01, repository 1.0; original polity Australia; original thousands 5487.529281282619; year 1920; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 0a4ca2940419dcd78df23e7fb903f6c23a7bd89dedf714bb181adc622e42cc07",
+          "sourceIdentifier": "OCEANIA:2:1920"
+        }
+      },
+      {
+        "id": "ftwphd-population-fd8cf16bc1a8440a41b9c052",
+        "entityId": "australia-prewestminster-federal-core",
+        "category": "population-statistics",
+        "value": 6574945,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "australia-prewestminster-federal-core-ftwphd-historical-statistical-territory",
+          "description": "Australian Commonwealth statistical territory including reconstructed indigenous population; constituent pre-federation colonies not given national total.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-oceania",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-oceania",
+            "locator": "research/completion-03/population/cache/oceania-bundle/oceania_1800-1938_FTWPHD_2023_v01.xlsx, OCEANIA, row 133, column 2; polity=Australia; year=1930; original population (000)=6574.9445926334965",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Australia; construction section 4.1; historical-border continental workbook.",
+            "note": "Australian Commonwealth statistical territory including reconstructed indigenous population; constituent pre-federation colonies not given national total. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Australia; year=1930; grade=A; original workbook SHA256 bound in intake certificate",
+            "note": "excellent: trustworthy census/register-based estimate. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1930. No claim that a census occurred in the selected snapshot.",
+          "Source quality A — excellent: trustworthy census/register-based estimate.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Australian Commonwealth statistical territory including reconstructed indigenous population; constituent pre-federation colonies not given national total."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/JBGFP6; 2023-v01, repository 1.0; original polity Australia; original thousands 6574.9445926334965; year 1930; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 0a4ca2940419dcd78df23e7fb903f6c23a7bd89dedf714bb181adc622e42cc07",
+          "sourceIdentifier": "OCEANIA:2:1930"
+        }
+      },
+      {
+        "id": "ftwphd-population-48d6ac7b0680763873bd729c",
+        "entityId": "australia-prewestminster-federal-core",
+        "category": "population-statistics",
+        "value": 7009027,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1938",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "australia-prewestminster-federal-core-ftwphd-historical-statistical-territory",
+          "description": "Australian Commonwealth statistical territory including reconstructed indigenous population; constituent pre-federation colonies not given national total.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "ftwphd-oceania",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-oceania",
+            "locator": "research/completion-03/population/cache/oceania-bundle/oceania_1800-1938_FTWPHD_2023_v01.xlsx, OCEANIA, row 141, column 2; polity=Australia; year=1938; original population (000)=7009.02734375",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Australia; construction section 4.1; historical-border continental workbook.",
+            "note": "Australian Commonwealth statistical territory including reconstructed indigenous population; constituent pre-federation colonies not given national total. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Australia; year=1938; grade=A; original workbook SHA256 bound in intake certificate",
+            "note": "excellent: trustworthy census/register-based estimate. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1938. No claim that a census occurred in the selected snapshot.",
+          "Source quality A — excellent: trustworthy census/register-based estimate.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Australian Commonwealth statistical territory including reconstructed indigenous population; constituent pre-federation colonies not given national total."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/JBGFP6; 2023-v01, repository 1.0; original polity Australia; original thousands 7009.02734375; year 1938; extraction 2026-10-02; mapping HIGH_CONFIDENCE; workbook SHA256 0a4ca2940419dcd78df23e7fb903f6c23a7bd89dedf714bb181adc622e42cc07",
+          "sourceIdentifier": "OCEANIA:2:1938"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "ftwphd-oceania",
+        "title": "Federico–Tena World Population Historical Database: Oceania (2023-v01, repository 1.0)",
+        "institution": "Giovanni Federico and Antonio Tena-Junguito; Universidad Carlos III de Madrid / e-cienciaDatos",
+        "url": "https://doi.org/10.21950/JBGFP6",
+        "accessed": "2026-10-02",
+        "kind": "academic-historical-population-dataset",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "Federico, Giovanni; Tena Junguito, Antonio. Federico–Tena World Population Historical Database. e-cienciaDatos; cited continental DOI/version.",
+        "usage": "Annual reconstructed historical-border population, in thousands; original polity/year cells and rounding method retained. Includes native populations where reconstructed. Not the separately published 1991-border series. Only reviewed source-unit/entity/year crosswalks and quality A/B/C accepted."
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "ftwphd-oceania",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Full five-continent original historical-border workbooks and original quality workbook acquired under user-approved CC BY 4.0 terms. Coordinator reviewed official methodology section 4.1 and Appendix I before approving explicit source-statistical-unit/entity/year crosswalks. Aggregate island groups, modern-border reconstructions, precolonial backward mappings, Napoleonic aggregates, source-quality D/E/NE, transition-year precision, incomplete mapping and unresolved territorial exceptions remain held. All observations retain exact source year, raw thousands, reconstruction grade and literal cell. Original accepted evidence takes precedence; no overwrites, no new interpolation, no point-to-interval propagation, no density inference.",
+      "preservedPackageHashes": [
+        "c2627bc23e86a6853837f63a1a9e56cc07a405ea530fcfb5c29341c8fef533ca",
+        "7420f54c25b54670e0e9d0fd0f509b38cfae35d7b1927dc88856ef2323a15a23"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "e2cac4711f96bb87c3b5e4014e2c7f74b87b6a2bca0548984864ca8b7d2a80e1",
+    "productionFingerprint": "068cad98351379551894921a304f519442ddc1eca612b3ff25b85db3b479415d",
+    "jobId": "dossier-6e5c8ceabf3eb52072f59067",
+    "review": {
+      "reviewer": "/root original-source historical-border and quality review",
+      "packageHash": "e2cac4711f96bb87c3b5e4014e2c7f74b87b6a2bca0548984864ca8b7d2a80e1",
+      "bodyReviewed": true,
+      "rationale": "Full five-continent original historical-border workbooks and original quality workbook acquired under user-approved CC BY 4.0 terms. Coordinator reviewed official methodology section 4.1 and Appendix I before approving explicit source-statistical-unit/entity/year crosswalks. Aggregate island groups, modern-border reconstructions, precolonial backward mappings, Napoleonic aggregates, source-quality D/E/NE, transition-year precision, incomplete mapping and unresolved territorial exceptions remain held. All observations retain exact source year, raw thousands, reconstruction grade and literal cell. Original accepted evidence takes precedence; no overwrites, no new interpolation, no point-to-interval propagation, no density inference.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "ftwphd-population-4f8afc95e577b430bcdf1dc3": "accepted",
+        "ftwphd-population-b6a2d39287ad8136a036fd0e": "accepted",
+        "ftwphd-population-fd8cf16bc1a8440a41b9c052": "accepted",
+        "ftwphd-population-48d6ac7b0680763873bd729c": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "ftwphd-population-4f8afc95e577b430bcdf1dc3",
+      "ftwphd-population-b6a2d39287ad8136a036fd0e",
+      "ftwphd-population-fd8cf16bc1a8440a41b9c052",
+      "ftwphd-population-48d6ac7b0680763873bd729c"
+    ]
+  }
+}
