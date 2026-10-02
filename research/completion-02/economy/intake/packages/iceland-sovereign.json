@@ -1,0 +1,471 @@
+{
+  "job": {
+    "id": "dossier-6bbf2b87c9693d5984a7ad81",
+    "entityId": "iceland-sovereign",
+    "period": {
+      "from": "1920",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-iceland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "27b6e55c709bdab9a71f13bda8dec24efe7db86478750d0afca7f511fb9df943",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-mpd2023-compatible-iceland-sovereign",
+    "jobId": "dossier-6bbf2b87c9693d5984a7ad81",
+    "entityId": "iceland-sovereign",
+    "mapIds": [
+      "entity-iceland"
+    ],
+    "worker": {
+      "id": "mpd2023-deterministic-row-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "27b6e55c709bdab9a71f13bda8dec24efe7db86478750d0afca7f511fb9df943",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1920",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "mpd2023-gdppc-965a8d4e6db982341a87b877",
+        "entityId": "iceland-sovereign",
+        "category": "economy",
+        "value": 2451,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-ISL-statistical-territory",
+          "description": "Iceland: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Whole Icelandic island sovereigncountry framework after1918transition; monarchic/republican transition does not combine Denmark into population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-isl"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=ISL, year=1920, gdppc=2450.5054958219; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-isl",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, ISL",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1920. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data ISL/1920; raw gdppc 2450.5054958219",
+          "sourceIdentifier": "ISL/1920"
+        }
+      },
+      {
+        "id": "mpd2023-gdppc-894640dd60fc2179542a1ce4",
+        "entityId": "iceland-sovereign",
+        "category": "economy",
+        "value": 4337,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-ISL-statistical-territory",
+          "description": "Iceland: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Whole Icelandic island sovereigncountry framework after1918transition; monarchic/republican transition does not combine Denmark into population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-isl"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=ISL, year=1930, gdppc=4337.2072763821; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-isl",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, ISL",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1930",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1930. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data ISL/1930; raw gdppc 4337.2072763821",
+          "sourceIdentifier": "ISL/1930"
+        }
+      },
+      {
+        "id": "mpd2023-gdppc-92886404dc082eb23285a648",
+        "entityId": "iceland-sovereign",
+        "category": "economy",
+        "value": 8282,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1945",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-ISL-statistical-territory",
+          "description": "Iceland: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Whole Icelandic island sovereigncountry framework after1918transition; monarchic/republican transition does not combine Denmark into population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-isl"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=ISL, year=1945, gdppc=8282.0798548094; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-isl",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, ISL",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1945. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data ISL/1945; raw gdppc 8282.0798548094",
+          "sourceIdentifier": "ISL/1945"
+        }
+      },
+      {
+        "id": "mpd2023-gdppc-9c34eedf6b3e7f57ffa5a004",
+        "entityId": "iceland-sovereign",
+        "category": "economy",
+        "value": 10959,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-ISL-statistical-territory",
+          "description": "Iceland: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Whole Icelandic island sovereigncountry framework after1918transition; monarchic/republican transition does not combine Denmark into population. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-isl"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=ISL, year=1960, gdppc=10959; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-isl",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, ISL",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1960. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data ISL/1960; raw gdppc 10959",
+          "sourceIdentifier": "ISL/1960"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-isl"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Original official MPD2023 workbook, Notes units, literal Full data rows and source bibliography reviewed against the existing independent statistical-territory/entity/year approvals. Only approved exact-year country units with nonconflicting missing economy slots enter this bounded intake. Names, modern ISO identity and geometry do not generate new territorial approvals. Source-country GDP estimates retain actual years, 2011 international-dollar units and original national reconstruction bibliography; no invented constitutional, currency, interval, total GDP or population claims. All unapproved mappings and unavailable years stay outside production.",
+      "preservedPackageHashes": [
+        "b08ff9cfa54540d7cc4423a4af2289537831f8a2de72883a5a574dbf0d3dd75d",
+        "e5773c4fe092fa0cdb11f26a8321a7d6607b5feff7ab6c8877e8ca48c0bf2ea2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "aa46698dcfc2ff52fa6443ba8c3617d628a061f53dcd8154d3cf43f318392128",
+    "productionFingerprint": "27b6e55c709bdab9a71f13bda8dec24efe7db86478750d0afca7f511fb9df943",
+    "jobId": "dossier-6bbf2b87c9693d5984a7ad81",
+    "review": {
+      "reviewer": "/root coordinator MPD original-workbook and bounded territorial-scope review",
+      "packageHash": "aa46698dcfc2ff52fa6443ba8c3617d628a061f53dcd8154d3cf43f318392128",
+      "bodyReviewed": true,
+      "rationale": "Original official MPD2023 workbook, Notes units, literal Full data rows and source bibliography reviewed against the existing independent statistical-territory/entity/year approvals. Only approved exact-year country units with nonconflicting missing economy slots enter this bounded intake. Names, modern ISO identity and geometry do not generate new territorial approvals. Source-country GDP estimates retain actual years, 2011 international-dollar units and original national reconstruction bibliography; no invented constitutional, currency, interval, total GDP or population claims. All unapproved mappings and unavailable years stay outside production.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "mpd2023-gdppc-965a8d4e6db982341a87b877": "accepted",
+        "mpd2023-gdppc-894640dd60fc2179542a1ce4": "accepted",
+        "mpd2023-gdppc-92886404dc082eb23285a648": "accepted",
+        "mpd2023-gdppc-9c34eedf6b3e7f57ffa5a004": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "mpd2023-gdppc-965a8d4e6db982341a87b877",
+      "mpd2023-gdppc-894640dd60fc2179542a1ce4",
+      "mpd2023-gdppc-92886404dc082eb23285a648",
+      "mpd2023-gdppc-9c34eedf6b3e7f57ffa5a004"
+    ]
+  }
+}

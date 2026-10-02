@@ -1,0 +1,11 @@
+# Curated-source reset
+
+The live starting checkpoint is e47caa722ccc17d74a156d481fdbc3ec65796b9e: 6,784 supported/resolved slots, 42.82828%, 3,456 rich production claims. Preserve the completed mapped-area and dated-symbol packages.
+
+Before reset, the official MPD2023 workbook supplied 32 exact-year GDP-per-capita observations using existing independently reviewed statistical-territory crosswalks. These passed five focused tests and serial production integration with 49,259 integrity checks, no integration holds, and zero browser checks. Local state is 3,488 claims, 6,816 supported/resolved slots, 43.03030%. Eleven packages; nine source countries; original country reconstruction bibliographies retained. No difficult territorial mappings were resolved. All 1,170 earlier production packages must remain byte-canonically unchanged.
+
+The user has replaced the prior source strategy. Stop the V-Dem leadership experiment and currency/flag retry work. Preserve its downloaded official RData/codebook locally under research/completion-02/leadership/cache (ignored); no V-Dem claims entered production. The small parser was installed only in the system temporary directory. Two source-wide Wikidata queries timed out; no claims or mappings were accepted from them.
+
+Next: Federico–Tena historical-border population, all five continental workbooks and source quality assessment, against 1800, 1815, 1878, 1880, 1900, 1914, 1920, 1930 and 1938. Do not use the 1991-border reconstruction. Source DOI identifiers: Africa 10.21950/8EWODF; America 10.21950/NAEF8A; Asia 10.21950/SSMGAY; Europe 10.21950/WZUV5E; Oceania 10.21950/JBGFP6; quality 10.21950/U6AANV. Published Europe v2 workbook fileId 34042 and readme 34043. Public APIs returned Anubis HTML, never valid source JSON/XLSX; preserve this fact and never parse those responses as data. Normal in-app browser successfully loads the repository pages. Browser download presents a CC BY 4.0 acceptance dialog; confirmation has been requested and must be received before clicking Accept.
+
+After population: UN/League 1945, contemporary UN/WPP 1960, compatible density, ICOW capitals/names, full Archigos, then remaining curated priorities. No broad source discovery, no frontend work, no agents for deterministic parsing, no browser regression checks for data-only changes.

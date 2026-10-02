@@ -1,0 +1,617 @@
+{
+  "job": {
+    "id": "dossier-b6842d515b89d66d122fd0f7",
+    "entityId": "swiss-federal-state",
+    "period": {
+      "from": "1878",
+      "until": "1945"
+    },
+    "mapIds": [
+      "entity-switzerland"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "3f76edb7a9cf527628bc109d62b5a161017ed4721a621163cb8d2efb94878567",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-mpd2023-compatible-swiss-federal-state",
+    "jobId": "dossier-b6842d515b89d66d122fd0f7",
+    "entityId": "swiss-federal-state",
+    "mapIds": [
+      "entity-switzerland"
+    ],
+    "worker": {
+      "id": "mpd2023-deterministic-row-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "3f76edb7a9cf527628bc109d62b5a161017ed4721a621163cb8d2efb94878567",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1878",
+      "until": "1945"
+    },
+    "claims": [
+      {
+        "id": "mpd2023-gdppc-4515b553bc9c23afd09dc584",
+        "entityId": "swiss-federal-state",
+        "category": "economy",
+        "value": 3486,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1878",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-CHE-statistical-territory",
+          "description": "Switzerland: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-che"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=CHE, year=1878, gdppc=3485.8369608634; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-che",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, CHE",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1878. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data CHE/1878; raw gdppc 3485.8369608634",
+          "sourceIdentifier": "CHE/1878"
+        }
+      },
+      {
+        "id": "mpd2023-gdppc-11220de9aaec4430bd2e4d1d",
+        "entityId": "swiss-federal-state",
+        "category": "economy",
+        "value": 3869,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1880",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-CHE-statistical-territory",
+          "description": "Switzerland: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-che"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=CHE, year=1880, gdppc=3869.3662814813; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-che",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, CHE",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1880",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1880. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data CHE/1880; raw gdppc 3869.3662814813",
+          "sourceIdentifier": "CHE/1880"
+        }
+      },
+      {
+        "id": "mpd2023-gdppc-1e985de73897f3445a795410",
+        "entityId": "swiss-federal-state",
+        "category": "economy",
+        "value": 6612,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1900",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-CHE-statistical-territory",
+          "description": "Switzerland: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-che"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=CHE, year=1900, gdppc=6611.7782135631; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1900",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-che",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, CHE",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1900",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1900. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data CHE/1900; raw gdppc 6611.7782135631",
+          "sourceIdentifier": "CHE/1900"
+        }
+      },
+      {
+        "id": "mpd2023-gdppc-6ca6c097a61ca792ac8e2607",
+        "entityId": "swiss-federal-state",
+        "category": "economy",
+        "value": 7595,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1914",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-CHE-statistical-territory",
+          "description": "Switzerland: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-che"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=CHE, year=1914, gdppc=7595.2855309446; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-che",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, CHE",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1914. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data CHE/1914; raw gdppc 7595.2855309446",
+          "sourceIdentifier": "CHE/1914"
+        }
+      },
+      {
+        "id": "mpd2023-gdppc-d656c0e636033670f01f7592",
+        "entityId": "swiss-federal-state",
+        "category": "economy",
+        "value": 7364,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-CHE-statistical-territory",
+          "description": "Switzerland: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-che"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=CHE, year=1920, gdppc=7363.9596412385; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-che",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, CHE",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1920. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data CHE/1920; raw gdppc 7363.9596412385",
+          "sourceIdentifier": "CHE/1920"
+        }
+      },
+      {
+        "id": "mpd2023-gdppc-26511fd2c6e26cf4978229c7",
+        "entityId": "swiss-federal-state",
+        "category": "economy",
+        "value": 8839,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1945",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-CHE-statistical-territory",
+          "description": "Switzerland: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Federal1848 framework, separated from pre1848confederation; current Swiss country core, not earlyHelvetic/unifiedproject. Conservative1849start excludes uncertain1848transition. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-che"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=CHE, year=1945, gdppc=8839.3152632394; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-che",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, CHE",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1945. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data CHE/1945; raw gdppc 8839.3152632394",
+          "sourceIdentifier": "CHE/1945"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "mpd2023",
+        "title": "Maddison Project Database 2023 — Bolt and van Zanden (2024), DOI 10.1111/joes.12618",
+        "institution": "Groningen Growth and Development Centre, University of Groningen",
+        "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023",
+        "accessed": "2026-10-02",
+        "kind": "academic-historical-economic-dataset",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "Jutta Bolt and Jan Luiten van Zanden; country-specific original papers retained in linked source entries.",
+        "usage": "MPD2023; data DOI 10.34894/INZBF2; original Excel download https://dataverse.nl/api/access/datafile/421302. GDPpc in 2011 international dollars; original country bibliographies are cited for this restricted subset."
+      },
+      {
+        "id": "mpd2023-country-sources-che",
+        "title": "MPD2023 original GDP/population source bibliography — CHE",
+        "institution": "Groningen Growth and Development Centre, University of Groningen (source bibliography editor)",
+        "url": "https://dataverse.nl/api/access/datafile/421302#country-CHE",
+        "accessed": "2026-10-02",
+        "kind": "original-country-source-bibliography",
+        "usage": "Original citations, including original reconstruction papers: Sources: 1 — Scheidel, W. and Friesen, S. J., ‘The size of the economy and the distribution of income in the Roman Empire’, Journal of Roman Studies, 99 (2009), pp. 61–91 | Sources: 1850-2011 — Stohr, Christian (2016), Trading Gains: new estimates of Swiss GDP, 1851-2008. Economic History Working Papers, 245/2016. London School of Economics and Political Science, Economic History Department, London, UK"
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-che"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Original official MPD2023 workbook, Notes units, literal Full data rows and source bibliography reviewed against the existing independent statistical-territory/entity/year approvals. Only approved exact-year country units with nonconflicting missing economy slots enter this bounded intake. Names, modern ISO identity and geometry do not generate new territorial approvals. Source-country GDP estimates retain actual years, 2011 international-dollar units and original national reconstruction bibliography; no invented constitutional, currency, interval, total GDP or population claims. All unapproved mappings and unavailable years stay outside production.",
+      "preservedPackageHashes": [
+        "b08ff9cfa54540d7cc4423a4af2289537831f8a2de72883a5a574dbf0d3dd75d",
+        "e5773c4fe092fa0cdb11f26a8321a7d6607b5feff7ab6c8877e8ca48c0bf2ea2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "ca04f56fa3922b56f3f3b7aff9ddc38951cc6a17452b103f4b36f471f18131e3",
+    "productionFingerprint": "3f76edb7a9cf527628bc109d62b5a161017ed4721a621163cb8d2efb94878567",
+    "jobId": "dossier-b6842d515b89d66d122fd0f7",
+    "review": {
+      "reviewer": "/root coordinator MPD original-workbook and bounded territorial-scope review",
+      "packageHash": "ca04f56fa3922b56f3f3b7aff9ddc38951cc6a17452b103f4b36f471f18131e3",
+      "bodyReviewed": true,
+      "rationale": "Original official MPD2023 workbook, Notes units, literal Full data rows and source bibliography reviewed against the existing independent statistical-territory/entity/year approvals. Only approved exact-year country units with nonconflicting missing economy slots enter this bounded intake. Names, modern ISO identity and geometry do not generate new territorial approvals. Source-country GDP estimates retain actual years, 2011 international-dollar units and original national reconstruction bibliography; no invented constitutional, currency, interval, total GDP or population claims. All unapproved mappings and unavailable years stay outside production.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "mpd2023-gdppc-4515b553bc9c23afd09dc584": "accepted",
+        "mpd2023-gdppc-11220de9aaec4430bd2e4d1d": "accepted",
+        "mpd2023-gdppc-1e985de73897f3445a795410": "accepted",
+        "mpd2023-gdppc-6ca6c097a61ca792ac8e2607": "accepted",
+        "mpd2023-gdppc-d656c0e636033670f01f7592": "accepted",
+        "mpd2023-gdppc-26511fd2c6e26cf4978229c7": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "mpd2023-gdppc-4515b553bc9c23afd09dc584",
+      "mpd2023-gdppc-11220de9aaec4430bd2e4d1d",
+      "mpd2023-gdppc-1e985de73897f3445a795410",
+      "mpd2023-gdppc-6ca6c097a61ca792ac8e2607",
+      "mpd2023-gdppc-d656c0e636033670f01f7592",
+      "mpd2023-gdppc-26511fd2c6e26cf4978229c7"
+    ]
+  }
+}

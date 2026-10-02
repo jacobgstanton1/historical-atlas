@@ -1,0 +1,349 @@
+{
+  "job": {
+    "id": "dossier-128ca40590a073985fcbf393",
+    "entityId": "ceylon-state-council-framework",
+    "period": {
+      "from": "1938",
+      "until": "1945"
+    },
+    "mapIds": [
+      "entity-ceylon",
+      "entity-sri-lanka"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "c84ae053dcae2f559077ebff7d9f40ed2353382016241e4f5509c610396dd4af",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-mpd2023-compatible-ceylon-state-council-framework",
+    "jobId": "dossier-128ca40590a073985fcbf393",
+    "entityId": "ceylon-state-council-framework",
+    "mapIds": [
+      "entity-ceylon",
+      "entity-sri-lanka"
+    ],
+    "worker": {
+      "id": "mpd2023-deterministic-row-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "c84ae053dcae2f559077ebff7d9f40ed2353382016241e4f5509c610396dd4af",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1938",
+      "until": "1945"
+    },
+    "claims": [
+      {
+        "id": "mpd2023-gdppc-0b52ecb56d20d29e129dfdc1",
+        "entityId": "ceylon-state-council-framework",
+        "category": "economy",
+        "value": 1953,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1938",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-LKA-statistical-territory",
+          "description": "Sri Lanka: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Whole-island Ceylon after1815 coastal/interior unification; NationalArchives1815Convention together with Parliament council chronology supports distinct government frameworks for the same island statistical scope. Modern provider labelSriLanka is citation geography only, never historical state name. No military/harbour exclusions are imported from unrelated1911census; this series is whole-population retrospective/provider annual estimate. Approve only complete requested years within actual existing framework bounds.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-lka"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=LKA, year=1938, gdppc=1953; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-lka",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, LKA",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1938. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data LKA/1938; raw gdppc 1953",
+          "sourceIdentifier": "LKA/1938"
+        }
+      },
+      {
+        "id": "mpd2023-gdppc-69d3b3c4d86e5d3dd2ad679f",
+        "entityId": "ceylon-state-council-framework",
+        "category": "economy",
+        "value": 1779,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1945",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-LKA-statistical-territory",
+          "description": "Sri Lanka: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Whole-island Ceylon after1815 coastal/interior unification; NationalArchives1815Convention together with Parliament council chronology supports distinct government frameworks for the same island statistical scope. Modern provider labelSriLanka is citation geography only, never historical state name. No military/harbour exclusions are imported from unrelated1911census; this series is whole-population retrospective/provider annual estimate. Approve only complete requested years within actual existing framework bounds.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-lka"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=LKA, year=1945, gdppc=1779; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-lka",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, LKA",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1945. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data LKA/1945; raw gdppc 1779",
+          "sourceIdentifier": "LKA/1945"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-lka"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Original official MPD2023 workbook, Notes units, literal Full data rows and source bibliography reviewed against the existing independent statistical-territory/entity/year approvals. Only approved exact-year country units with nonconflicting missing economy slots enter this bounded intake. Names, modern ISO identity and geometry do not generate new territorial approvals. Source-country GDP estimates retain actual years, 2011 international-dollar units and original national reconstruction bibliography; no invented constitutional, currency, interval, total GDP or population claims. All unapproved mappings and unavailable years stay outside production.",
+      "preservedPackageHashes": [
+        "b08ff9cfa54540d7cc4423a4af2289537831f8a2de72883a5a574dbf0d3dd75d",
+        "e5773c4fe092fa0cdb11f26a8321a7d6607b5feff7ab6c8877e8ca48c0bf2ea2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "893d68367d745dd98e34d6503aebd49a13be3199d9d262ef10659ebdab3537cc",
+    "productionFingerprint": "c84ae053dcae2f559077ebff7d9f40ed2353382016241e4f5509c610396dd4af",
+    "jobId": "dossier-128ca40590a073985fcbf393",
+    "review": {
+      "reviewer": "/root coordinator MPD original-workbook and bounded territorial-scope review",
+      "packageHash": "893d68367d745dd98e34d6503aebd49a13be3199d9d262ef10659ebdab3537cc",
+      "bodyReviewed": true,
+      "rationale": "Original official MPD2023 workbook, Notes units, literal Full data rows and source bibliography reviewed against the existing independent statistical-territory/entity/year approvals. Only approved exact-year country units with nonconflicting missing economy slots enter this bounded intake. Names, modern ISO identity and geometry do not generate new territorial approvals. Source-country GDP estimates retain actual years, 2011 international-dollar units and original national reconstruction bibliography; no invented constitutional, currency, interval, total GDP or population claims. All unapproved mappings and unavailable years stay outside production.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "mpd2023-gdppc-0b52ecb56d20d29e129dfdc1": "accepted",
+        "mpd2023-gdppc-69d3b3c4d86e5d3dd2ad679f": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "mpd2023-gdppc-0b52ecb56d20d29e129dfdc1",
+      "mpd2023-gdppc-69d3b3c4d86e5d3dd2ad679f"
+    ]
+  }
+}

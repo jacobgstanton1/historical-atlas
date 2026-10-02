@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {eligibleMaddison,maddisonClaim} from '../scripts/research-maddison.mjs';
+const row={countrycode:'CHE',country:'Switzerland',year:1900,gdppc:1234.567};
+const mapping={atlasEntityId:'swiss',confidence:'HIGH_CONFIDENCE',review:{reviewer:'independent'},scopeRationale:'Reviewed matching statistical territory',external:{owid:{code:'CHE'}},applicableSnapshotYears:[1900]};
+const matrix={rows:[{entityId:'swiss',snapshotYear:1900,categories:{economy:{status:'missing'}}}]};
+test('only bounded approved exact-year statistical territories join',()=>assert.equal(eligibleMaddison([row],[mapping],matrix).accepted.length,1));
+test('review and incompatible mappings never import automatically',()=>{for(const confidence of ['REVIEW','INCOMPATIBLE'])assert.equal(eligibleMaddison([row],[{...mapping,confidence}],matrix).accepted.length,0);});
+test('no nearby observation or duplicate-row interpolation',()=>{assert.equal(eligibleMaddison([{...row,year:1899}],[mapping],matrix).accepted.length,0);assert.equal(eligibleMaddison([row,row],[mapping],matrix).accepted.length,0);});
+test('existing supported economy is preserved without redundant claims',()=>assert.equal(eligibleMaddison([row],[mapping],{rows:[{...matrix.rows[0],categories:{economy:{status:'supported'}}}]}).accepted.length,0));
+test('GDP stays an explicitly dated estimated income observation with source units',()=>{const c=maddisonClaim({row,mapping,entityId:'swiss',year:1900});assert.equal(c.temporal.kind,'observation');assert.equal(c.temporal.observationDate,'1900');assert.equal(c.temporal.from,undefined);assert.equal(c.unit,'2011 international dollars per person');assert.equal(c.value,1235);assert.match(c.origin.reference,/1234.567/);assert.equal(c.sourceIds.length,2);});

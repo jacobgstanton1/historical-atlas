@@ -1,0 +1,295 @@
+{
+  "job": {
+    "id": "dossier-3edf0f2423690fe8397e96a0",
+    "entityId": "b11-jamaica-part-elected-crown",
+    "period": {
+      "from": "1938",
+      "until": "1938"
+    },
+    "mapIds": [
+      "entity-jamaica"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "944a25295546c380d7f9807b0a80ee6129e1df989aacba22b5531d34fcdb0a50",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-mpd2023-compatible-b11-jamaica-part-elected-crown",
+    "jobId": "dossier-3edf0f2423690fe8397e96a0",
+    "entityId": "b11-jamaica-part-elected-crown",
+    "mapIds": [
+      "entity-jamaica"
+    ],
+    "worker": {
+      "id": "mpd2023-deterministic-row-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "944a25295546c380d7f9807b0a80ee6129e1df989aacba22b5531d34fcdb0a50",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1938",
+      "until": "1938"
+    },
+    "claims": [
+      {
+        "id": "mpd2023-gdppc-ad6254c701e9383011c73b07",
+        "entityId": "b11-jamaica-part-elected-crown",
+        "category": "economy",
+        "value": 1549,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1938",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-JAM-statistical-territory",
+          "description": "Jamaica: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Jamaica domestic island/core population only. Official1911table explicitly separatesJamaica fromCayman andTurksCaicos. Administrative dependencies must not be aggregated. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-jam"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=JAM, year=1938, gdppc=1549; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-jam",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, JAM",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1938",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1938. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data JAM/1938; raw gdppc 1549",
+          "sourceIdentifier": "JAM/1938"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "mpd2023-country-sources-jam",
+        "title": "MPD2023 original GDP/population source bibliography — JAM",
+        "institution": "Groningen Growth and Development Centre, University of Groningen (source bibliography editor)",
+        "url": "https://dataverse.nl/api/access/datafile/421302#country-JAM",
+        "accessed": "2026-10-02",
+        "kind": "original-country-source-bibliography",
+        "usage": "Original citations, including original reconstruction papers: Sources: 1850 - 1938 — Prados de la Escosura, L. (2009). “Lost Decades? Economic Performance in Post-Independence Latin America,” Journal of Latin America Studies 41: 279–307 (updated data)"
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-jam"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Original official MPD2023 workbook, Notes units, literal Full data rows and source bibliography reviewed against the existing independent statistical-territory/entity/year approvals. Only approved exact-year country units with nonconflicting missing economy slots enter this bounded intake. Names, modern ISO identity and geometry do not generate new territorial approvals. Source-country GDP estimates retain actual years, 2011 international-dollar units and original national reconstruction bibliography; no invented constitutional, currency, interval, total GDP or population claims. All unapproved mappings and unavailable years stay outside production.",
+      "preservedPackageHashes": [
+        "b08ff9cfa54540d7cc4423a4af2289537831f8a2de72883a5a574dbf0d3dd75d",
+        "e5773c4fe092fa0cdb11f26a8321a7d6607b5feff7ab6c8877e8ca48c0bf2ea2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "12da2bd772557626884bff076be40e7d976f7a3f3e2abd1c9e82d08174211525",
+    "productionFingerprint": "944a25295546c380d7f9807b0a80ee6129e1df989aacba22b5531d34fcdb0a50",
+    "jobId": "dossier-3edf0f2423690fe8397e96a0",
+    "review": {
+      "reviewer": "/root coordinator MPD original-workbook and bounded territorial-scope review",
+      "packageHash": "12da2bd772557626884bff076be40e7d976f7a3f3e2abd1c9e82d08174211525",
+      "bodyReviewed": true,
+      "rationale": "Original official MPD2023 workbook, Notes units, literal Full data rows and source bibliography reviewed against the existing independent statistical-territory/entity/year approvals. Only approved exact-year country units with nonconflicting missing economy slots enter this bounded intake. Names, modern ISO identity and geometry do not generate new territorial approvals. Source-country GDP estimates retain actual years, 2011 international-dollar units and original national reconstruction bibliography; no invented constitutional, currency, interval, total GDP or population claims. All unapproved mappings and unavailable years stay outside production.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "mpd2023-gdppc-ad6254c701e9383011c73b07": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "mpd2023-gdppc-ad6254c701e9383011c73b07"
+    ]
+  }
+}

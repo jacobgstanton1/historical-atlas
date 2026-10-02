@@ -1,0 +1,419 @@
+{
+  "job": {
+    "id": "dossier-248d181b26d9b373270538f9",
+    "entityId": "sweden-kingdom",
+    "period": {
+      "from": "1914",
+      "until": "1945"
+    },
+    "mapIds": [
+      "entity-sweden"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "4173d58940f45adf2d490347c4f7db26008cd3e5d50b4fe0cf3a35c4bad9c570",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion02-mpd2023-compatible-sweden-kingdom",
+    "jobId": "dossier-248d181b26d9b373270538f9",
+    "entityId": "sweden-kingdom",
+    "mapIds": [
+      "entity-sweden"
+    ],
+    "worker": {
+      "id": "mpd2023-deterministic-row-extractor",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "4173d58940f45adf2d490347c4f7db26008cd3e5d50b4fe0cf3a35c4bad9c570",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1914",
+      "until": "1945"
+    },
+    "claims": [
+      {
+        "id": "mpd2023-gdppc-b29055b434af1d15dd64ff37",
+        "entityId": "sweden-kingdom",
+        "category": "economy",
+        "value": 4678,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1914",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-SWE-statistical-territory",
+          "description": "Sweden: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Distinct Swedish constitutional country core after documented1905Norwayunion dissolution; no Finland1800 or compositeSwedenNorway backcast. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-swe"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=SWE, year=1914, gdppc=4678; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-swe",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, SWE",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1914",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1914. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data SWE/1914; raw gdppc 4678",
+          "sourceIdentifier": "SWE/1914"
+        }
+      },
+      {
+        "id": "mpd2023-gdppc-4a3a9a65907b81bedb2f42ef",
+        "entityId": "sweden-kingdom",
+        "category": "economy",
+        "value": 4788,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1920",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-SWE-statistical-territory",
+          "description": "Sweden: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Distinct Swedish constitutional country core after documented1905Norwayunion dissolution; no Finland1800 or compositeSwedenNorway backcast. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-swe"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=SWE, year=1920, gdppc=4788; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-swe",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, SWE",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1920",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1920. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data SWE/1920; raw gdppc 4788",
+          "sourceIdentifier": "SWE/1920"
+        }
+      },
+      {
+        "id": "mpd2023-gdppc-7afaebe9e19e35a214b92c21",
+        "entityId": "sweden-kingdom",
+        "category": "economy",
+        "value": 8201,
+        "unit": "2011 international dollars per person",
+        "metric": "GDP per capita (Maddison estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1945",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "mpd2023-SWE-statistical-territory",
+          "description": "Sweden: source-country statistical territory, restricted to the existing reviewed entity/year territorial compatibility. Distinct Swedish constitutional country core after documented1905Norwayunion dissolution; no Finland1800 or compositeSwedenNorway backcast. Approval concerns matching territorial population area, not constitutional sovereignty/control or exactcartographicpixel equality. Source alwayscurrentborders; source statisticalvalue/year retained as pointobservation only.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-swe"
+        ],
+        "evidence": [
+          {
+            "sourceId": "mpd2023",
+            "locator": "MPD2023.xlsx, Full data: countrycode=SWE, year=1945, gdppc=8201; Notes: Real GDP per capita in 2011$",
+            "note": "Exact original dataset row and observation year; estimated real GDP per capita, rounded to the nearest international dollar for display. No temporal interpolation, interval expansion, total GDP derivation or modern-border fallback.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "mpd2023-country-sources-swe",
+            "locator": "Original country bibliography: Sources and Maddison original sources sheets, SWE",
+            "note": "Country-specific original bibliography retained with the frozen workbook and linked source catalogue. Original MPD national reconstruction methods apply; values are estimates rather than contemporary nominal income statements.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1945",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Estimated comparative income in 2011 international dollars; not nominal contemporary currency or a modern-equivalent GDP claim.",
+          "Observation year remains 1945. Display rounding does not change the original source value retained in provenance.",
+          "Restricted to explicitly reviewed statistical-territory/entity/snapshot matches."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Maddison Project Database 2023, DOI 10.34894/INZBF2; Full data SWE/1945; raw gdppc 8201",
+          "sourceIdentifier": "SWE/1945"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "mpd2023-country-sources-swe",
+        "title": "MPD2023 original GDP/population source bibliography — SWE",
+        "institution": "Groningen Growth and Development Centre, University of Groningen (source bibliography editor)",
+        "url": "https://dataverse.nl/api/access/datafile/421302#country-SWE",
+        "accessed": "2026-10-02",
+        "kind": "original-country-source-bibliography",
+        "usage": "Original citations, including original reconstruction papers: Sources: 1300–1560 — Krantz, O. (2017) “Swedish GDP 1300-1560 A Tentative Estimate” Lund Papers in Economic History: General Issues; No. 152. | Sources: 1560–1950 — Schön, L., and O. Krantz (2015) “New Swedish Historical National Accounts since the 16th Century in Constant and Current Prices” Lund Papers in Economic History no. 140"
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "mpd2023",
+          "mpd2023-country-sources-swe"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Original official MPD2023 workbook, Notes units, literal Full data rows and source bibliography reviewed against the existing independent statistical-territory/entity/year approvals. Only approved exact-year country units with nonconflicting missing economy slots enter this bounded intake. Names, modern ISO identity and geometry do not generate new territorial approvals. Source-country GDP estimates retain actual years, 2011 international-dollar units and original national reconstruction bibliography; no invented constitutional, currency, interval, total GDP or population claims. All unapproved mappings and unavailable years stay outside production.",
+      "preservedPackageHashes": [
+        "b08ff9cfa54540d7cc4423a4af2289537831f8a2de72883a5a574dbf0d3dd75d",
+        "e5773c4fe092fa0cdb11f26a8321a7d6607b5feff7ab6c8877e8ca48c0bf2ea2"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "7b1782a90aa466aa3f23a914610d1661e554e834bf994be08db38bebc7bf7952",
+    "productionFingerprint": "4173d58940f45adf2d490347c4f7db26008cd3e5d50b4fe0cf3a35c4bad9c570",
+    "jobId": "dossier-248d181b26d9b373270538f9",
+    "review": {
+      "reviewer": "/root coordinator MPD original-workbook and bounded territorial-scope review",
+      "packageHash": "7b1782a90aa466aa3f23a914610d1661e554e834bf994be08db38bebc7bf7952",
+      "bodyReviewed": true,
+      "rationale": "Original official MPD2023 workbook, Notes units, literal Full data rows and source bibliography reviewed against the existing independent statistical-territory/entity/year approvals. Only approved exact-year country units with nonconflicting missing economy slots enter this bounded intake. Names, modern ISO identity and geometry do not generate new territorial approvals. Source-country GDP estimates retain actual years, 2011 international-dollar units and original national reconstruction bibliography; no invented constitutional, currency, interval, total GDP or population claims. All unapproved mappings and unavailable years stay outside production.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "mpd2023-gdppc-b29055b434af1d15dd64ff37": "accepted",
+        "mpd2023-gdppc-4a3a9a65907b81bedb2f42ef": "accepted",
+        "mpd2023-gdppc-7afaebe9e19e35a214b92c21": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "mpd2023-gdppc-b29055b434af1d15dd64ff37",
+      "mpd2023-gdppc-4a3a9a65907b81bedb2f42ef",
+      "mpd2023-gdppc-7afaebe9e19e35a214b92c21"
+    ]
+  }
+}
