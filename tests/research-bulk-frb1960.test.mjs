@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readJSON,readContext,digest} from '../scripts/research-common.mjs';
+import {frb1960Intake} from '../scripts/research-bulk-frb1960.mjs';
+import {prepareCandidates,verifyContract} from '../scripts/research-bulk.mjs';
+import {presentationPeriod} from '../dossier-presentation.js';
+const {manifest,contract}=frb1960Intake();
+test('1960 preserved receipts retain all 300 decisions and 52 explicit holds',()=>{assert.equal(manifest.rows.length,300);assert.equal(manifest.rows.filter(r=>r.disposition==='historical-review').length,52);assert.equal(verifyContract(contract,manifest),true);});
+test('only January–November actual observation months enter production candidates',()=>{for(const r of manifest.rows.filter(r=>r.disposition==='candidate')){assert.match(r.temporal.observationDate,/^1960-(0[1-9]|1[01])$/);assert.equal(r.precision,'month');assert.match(presentationPeriod({temporal:r.temporal}),/1960.*observation/i);}});
+test('French new franc is explicit and never silently mixed with old units',()=>{const rows=manifest.rows.filter(r=>r.originalRow.includes('France')&&r.disposition==='candidate');assert.equal(rows.length,11);for(const r of rows)assert.ok(r.qualifications.some(q=>/100.*old.*franc|new.*franc/i.test(q)));});
+test('Argentina/Malaysia and Philippine partial April remain held',()=>{for(const r of manifest.rows.filter(r=>r.originalRow.includes('Argentina')||r.originalRow.includes('Malaysia')||(r.originalRow.includes('Philippine')&&r.temporal.observationDate==='1960-04')))assert.equal(r.disposition,'historical-review');});
+test('source approval is separate from production acceptance and retiming fails closed',()=>{const before=readContext().productionFingerprint;prepareCandidates(manifest,contract,readContext());assert.equal(readContext().productionFingerprint,before);const altered=structuredClone(manifest);altered.rows.find(r=>r.disposition==='candidate').temporal.observationDate='1960-12';assert.notEqual(digest(altered),digest(manifest));assert.throws(()=>verifyContract(contract,altered));});

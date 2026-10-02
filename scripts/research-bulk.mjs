@@ -42,8 +42,8 @@ export function verifyContract(contract,manifest){
 export function reconcile(c,context,pending=[]){
  const e=context.db.entities.find(e=>e.id===c.entityId);requireThat(e,'Unknown entity');
  const store=storeFor(context);
- const key={leadership:'leaders',capital:'capitals',currency:'currencies'}[c.category];
- const old=[...(e[key]||[]).map(r=>({category:c.category,value:r.value,role:r.role,temporal:{kind:'interval',from:r.validFrom||'1800',until:r.validUntil||'1961-01-01'}})),...store.packages.flatMap(p=>p.claims.filter(r=>r.entityId===c.entityId)),...pending];
+ const key={leadership:'leaders',capital:'capitals',currency:'currencies','population-statistics':'population','area-statistics':'area',economy:'economy'}[c.category];
+ const old=[...(e[key]||[]).map(r=>({category:c.category,value:r.value,role:r.role,metric:r.metric||(['population-statistics','area-statistics'].includes(c.category)?c.metric:undefined),temporal:r.asOf||r.observationDate?{kind:'observation',observationDate:r.asOf||r.observationDate}:{kind:'interval',from:r.validFrom||'1800',until:r.validUntil||'1961-01-01'}})),...store.packages.flatMap(p=>p.claims.filter(r=>r.entityId===c.entityId)),...pending];
  const cb=temporalBounds(c.temporal);
  if(c.role==='Effective political leader (Archigos coding)'){
   const last=normalizeName(c.value).split(' ').at(-1);
@@ -63,7 +63,7 @@ export function reconcile(c,context,pending=[]){
 const sourcesIn=context=>[...context.registry.sources,...storeFor(context).packages.flatMap(p=>p.sources)];
 export function sourceRecord(s,context){
  const existing=sourcesIn(context).find(old=>old.url===s.url);
- return existing?structuredClone(existing):{id:s.id,title:s.title,institution:s.institution,url:s.url,accessed:s.accessed||s.retrievedAt,usage:'Dated officeholder evidence; original row and scope retained in bulk acquisition provenance.',kind:s.kind||'official-officeholder-table'};
+ return existing?structuredClone(existing):{id:s.id,title:s.title,institution:s.institution,url:s.url,accessed:s.accessed||s.retrievedAt,usage:s.usage||'Dated source-table evidence; original row, observation/validity dates and scope retained in bulk acquisition provenance.',kind:s.kind||'official-officeholder-table'};
 }
 export function prepareCandidates(manifest,contract,context){
  verifyContract(contract,manifest);
