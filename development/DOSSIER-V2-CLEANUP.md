@@ -13,3 +13,9 @@ The headline political status is not repeated as an identical Government & Polit
 Validation: 27 focused automated tests passed (11 cleanup and 16 existing V2 resolver/immutability tests); syntax, UTF-8 and diff checks passed. Fifteen focused local browser checks passed for France 1960, Italy 1960, UK 1914, Russian Empire 1800, Germany across two snapshots, a Japanese census, citations and mobile scrolling. The Italy desktop screenshot was inspected. Actual Pages deployment and the same bounded live cases must pass before acceptance; detailed JSON reports are stored in this excluded development directory.
 
 After successful live verification, stop and wait for the user's inspection. Do not resume research acquisition automatically. The previous research handoff is preserved unchanged.
+
+## Actual live acceptance
+
+Implementation commit: `8ff6f23f0d7544111f75cad06a3f4391dd38ec8c`.
+
+GitHub Pages completed successfully for that exact commit: https://github.com/jacobgstanton1/historical-atlas/actions/runs/36951938970 . The authored UTF-8 workflow also passed. All 15 focused checks then passed against https://jacobgstanton1.github.io/historical-atlas/ using real year/search controls. `dossier-cleanup-live-checks.json` records the results, with a live Italy screenshot alongside it. The deployed accepted JSON matched the preserved local production file exactly after newline normalization. No production historical files, flag assets, resolver or chronology implementation changed from the preceding checkpoint. Stop after this documentation checkpoint; acquisition remains paused for user review.
