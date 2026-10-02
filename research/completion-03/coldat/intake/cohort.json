@@ -1,0 +1,82 @@
+{
+  "id": "completion03-coldat-corroborated-relationships",
+  "worker": "coldat-computational-historical-framework-join",
+  "sources": [
+    {
+      "id": "coldat-v3-2023",
+      "title": "Colonial Dates Dataset (COLDAT), version 3.0 (21 September 2023)",
+      "institution": "Bastian Becker / Harvard Dataverse",
+      "url": "https://doi.org/10.7910/DVN/T9SDEW",
+      "accessed": "2026-10-02",
+      "kind": "academic-colonial-history-summary",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "usage": "Modern-territory colonial-history summaries, including legacy of absorbed areas. Both last-date and rounded-mean aggregates retained; not a complete dependency or uninterrupted-episode database."
+    }
+  ],
+  "claims": [
+    {
+      "id": "coldat-corroborated-6bb2e756855db3d82d99244a",
+      "entityId": "paraguay-spanish-provincial-framework",
+      "category": "relationships",
+      "relatedEntityIds": [
+        "spain-political-frameworks"
+      ],
+      "value": "Paraguay — Spanish colonial province",
+      "temporal": {
+        "kind": "interval",
+        "from": "1800",
+        "until": "1805",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "paraguay-spanish-provincial-framework-documented-historical-affiliation",
+        "description": "Existing sourced historical framework, not a claim that modern COLDAT borders match the atlas polygon.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "coldat-v3-2023",
+        "b09-paraguay-colony"
+      ],
+      "evidence": [
+        {
+          "sourceId": "coldat-v3-2023",
+          "locator": "COLDAT v3 dyad {\"country\":\"Paraguay\",\"colonizer\":\"spain\",\"col\":\"1\",\"colstart_max\":\"1537\",\"colend_max\":\"1811\",\"colstart_mean\":\"1537\",\"colend_mean\":\"1811\"}",
+          "note": "Last-date and rounded mean aggregation both preserved. COLDAT is corroboration only; literal historical affiliation and bounded applicability are independently established by existing sourced atlas fact. No continuous colonial episode or specific constitutional subtype inferred from the modern-country summary.",
+          "precision": "year",
+          "temporal": {
+            "kind": "interval",
+            "from": "1537",
+            "until": "1811",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        },
+        {
+          "sourceId": "b09-paraguay-colony",
+          "locator": "Existing independently sourced atlas primary name/status paraguay-spanish-provincial-framework",
+          "note": "Paraguay — Spanish colonial province",
+          "precision": "day",
+          "temporal": {
+            "kind": "interval",
+            "from": "1800",
+            "until": "1805",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [
+        "Modern-territory colonial-history summaries, including legacy of absorbed areas. Both last-date and rounded-mean aggregates retained; not a complete dependency or uninterrupted-episode database.",
+        "COLDAT source territory Paraguay; colonial power spain; historical mapping independently corroborated, not modern-name equivalence."
+      ],
+      "origin": {
+        "kind": "bulk-candidate",
+        "reference": "COLDAT v3 Paraguay/spain",
+        "sourceIdentifier": "Paraguay/spain"
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "completion03-hcd-single-year-selected-event",
+  "worker": "hcd-single-year-source-normalizer",
+  "sources": [
+    {
+      "id": "hcd-country-year-v1-2023",
+      "title": "Historical Conflict Dataset (HCD), v1.0 country-year data and country-war verification",
+      "institution": "Joseph Noonan and Jan Teorell / Stockholm University H-DATA",
+      "url": "https://www.su.se/english/research/research-catalogue/research-projects/6/h-data--/datasets",
+      "accessed": "2026-10-02",
+      "kind": "academic-historical-conflict-dataset",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "usage": "Official DEMSCORE March 2026 Security and Violence codebook section 3.1 explicitly lists the HCD country-year data licence. Source dates describe conflict-wide duration, not national entry/exit. Only bounded single-year relevance selected; no casualty estimates or raw COW data republished."
+    }
+  ],
+  "claims": [
+    {
+      "id": "hcd-selected-381959d9b43c621ba28feb51",
+      "entityId": "turkey-1928-constitutional-framework",
+      "category": "events-context",
+      "value": "Ararat Revolt of 1930: HCD records Turkey in an intrastate conflict during 1930.",
+      "temporal": {
+        "kind": "event",
+        "date": "1930",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "turkey-1928-constitutional-framework-named-conflict-1930",
+        "description": "State-associated named intrastate conflict; no claim of uniform polygon-wide fighting or a precise daily chronology.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "hcd-country-year-v1-2023"
+      ],
+      "evidence": [
+        {
+          "sourceId": "hcd-country-year-v1-2023",
+          "locator": "HCD country-year ISD640/TUR/1930; country-war {\"isd_code\":\"640\",\"isd_country\":\"Turkey\",\"isd_region\":\"6\",\"gw_code\":\"640\",\"gw_character\":\"TUR\",\"cow_code\":\"640\",\"cow_country\":\"Turkey\",\"cow_character\":\"TUR\",\"v_dem_country\":\"Turkey\",\"v_dem_character\":\"TUR\",\"v_dem_code\":\"99\",\"war_name\":\"Ararat Revolt of  1930\",\"war_type\":\"Intra\",\"min_year\":\"1930\",\"max_year\":\"1930\",\"external_participant_intra_state\":\"0\",\"external_participant_intra_state_side\":\"NA\",\"g_deaths\":\"NA\",\"cow_state_deaths\":\"NA\",\"cow_non_state_deaths\":\"NA\"}",
+          "note": "Original country-war min_year and max_year both1930; annual intra_war=1, named Ararat Revolt of1930. Source definition requires a war-scale conflict; this named government/revolt conflict was selected in bounded review, not every dataset record. No exact day, participant entry/exit or casualty precision invented.",
+          "precision": "year",
+          "temporal": {
+            "kind": "event",
+            "date": "1930",
+            "certainty": "exact"
+          },
+          "interpretation": "direct"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [
+        "HCD conflict coding; original year precision retained. No claim that the broader revolt first began in1930.",
+        "Selected named conflict has direct country/snapshot relevance; no generic global-history filler."
+      ],
+      "origin": {
+        "kind": "bulk-candidate",
+        "reference": "HCD v1 ISD640/TUR/1930 Ararat",
+        "sourceIdentifier": "640/1930/Ararat"
+      }
+    }
+  ]
+}
