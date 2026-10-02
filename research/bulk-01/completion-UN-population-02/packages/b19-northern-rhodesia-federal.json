@@ -1,0 +1,273 @@
+{
+  "job": {
+    "id": "dossier-5e0f29eb52ad7483506f460e",
+    "entityId": "b19-northern-rhodesia-federal",
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-zambia"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "85285b8f6e6f91c4a7b10be3e4d71bf03a78c0d6534e9ee2ea65d3853e100cb0",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-UN-population-02-b19-northern-rhodesia-federal",
+    "jobId": "dossier-5e0f29eb52ad7483506f460e",
+    "entityId": "b19-northern-rhodesia-federal",
+    "mapIds": [
+      "entity-zambia"
+    ],
+    "worker": {
+      "id": "bulk-parser/historical-scope-population-observation/v2",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "85285b8f6e6f91c4a7b10be3e4d71bf03a78c0d6534e9ee2ea65d3853e100cb0",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "bulk-a0f99f364c39a6e9a278524b-54cfd08325",
+        "category": "population-statistics",
+        "value": 2430000,
+        "entityId": "b19-northern-rhodesia-federal",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "b19-northern-rhodesia-federal-UN1960-population-cohort02",
+          "description": "Territorial total within federation, not separate European population or federation aggregate.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "un-demographic-yearbook1960-table4",
+            "locator": "Table4/printed131/PDF148/1960column/Rhodesie du Nord",
+            "note": "{\"original\":{\"id\":\"completion-dyb1960-t4-b19-northern-rhodesia-federal\",\"category\":\"population\",\"countryLabel\":\"Northern Rhodesia\",\"rawTerritoryLabel\":\"Rhodesie du Nord\",\"entityIdSuggested\":\"b19-northern-rhodesia-federal\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"estimate\",\"value\":2430000,\"printedValue\":2430,\"printedUnit\":\"thousands of persons\",\"unit\":\"persons\",\"precisionQualification\":\"Published rounded to thousands; not exact headcount.\",\"dateQualification\":\"Table4 contemporary1960 estimate. Default1July or mean of consecutive31December estimates; retain conservative year precision, not census or whole-year validity.\",\"scopeClassification\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Territorial total within federation, not separate European population or federation aggregate.\",\"provisional\":false,\"questionableReliability\":true,\"qualityQualification\":\"Printed italic: estimate of questionable reliability.\",\"sourceId\":\"un-demographic-yearbook1960-table4\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"table\":4,\"pdfPageIndex\":148,\"printedPage\":131,\"locator\":\"Table4/printed131/PDF148/1960column/Rhodesie du Nord\",\"originalExtractionRecordId\":\"un-dyb1960-t4-p148-r4\",\"rawDiagnosticCandidateValue\":2430000,\"transcriptionMethod\":\"Original facsimile visual transcription; frozen OCR diagnostic preserved unchanged.\",\"renderPath\":\"research/bulk-02/population/cache/table4-page-148.png\",\"status\":\"historical-review\",\"reviewIssues\":[\"Independent source/printed-type/footnote and mapping verification required.\"]},\"verifiedSourceFields\":{\"entityId\":\"b19-northern-rhodesia-federal\",\"category\":\"population\",\"value\":2430000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Territorial total within federation, not separate European population or federation aggregate.\",\"provisional\":false,\"questionableReliability\":true,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"locator\":\"Table4/printed131/PDF148/1960column/Rhodesie du Nord\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"qualifications\":[\"Published rounded to thousands; an estimate, not exact census headcount.\",\"Conservative observation year1960; Table4 default1July or mean of end-year estimates does not establish exact day or whole-year validity.\",\"Territorial total within federation, not separate European population or federation aggregate.\",\"Printed italic: estimate of questionable reliability.\"]},\"sourceReview\":{\"observationId\":\"completion-dyb1960-t4-b19-northern-rhodesia-federal\",\"originalObservationDigest\":\"b6a1395b0962423984d9d6debaeb505949aa3e6b1784ac4b7e86224e6885b417\",\"sourceValueDateVerified\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal contemporary country/territory row, source date/type/quality and existing bounded historical framework independently reviewed. Approved overrides remain explicit; no modern-border fallback.\",\"approvedMappedFields\":{\"entityId\":\"b19-northern-rhodesia-federal\",\"category\":\"population\",\"value\":2430000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Territorial total within federation, not separate European population or federation aggregate.\",\"provisional\":false,\"questionableReliability\":true,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"locator\":\"Table4/printed131/PDF148/1960column/Rhodesie du Nord\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"qualifications\":[\"Published rounded to thousands; an estimate, not exact census headcount.\",\"Conservative observation year1960; Table4 default1July or mean of end-year estimates does not establish exact day or whole-year validity.\",\"Territorial total within federation, not separate European population or federation aggregate.\",\"Printed italic: estimate of questionable reliability.\"]},\"verifiedSourceFields\":{\"entityId\":\"b19-northern-rhodesia-federal\",\"category\":\"population\",\"value\":2430000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Territorial total within federation, not separate European population or federation aggregate.\",\"provisional\":false,\"questionableReliability\":true,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"locator\":\"Table4/printed131/PDF148/1960column/Rhodesie du Nord\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"qualifications\":[\"Published rounded to thousands; an estimate, not exact census headcount.\",\"Conservative observation year1960; Table4 default1July or mean of end-year estimates does not establish exact day or whole-year validity.\",\"Territorial total within federation, not separate European population or federation aggregate.\",\"Printed italic: estimate of questionable reliability.\"]},\"reviewOverrides\":[],\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"mappingReceipt\":{\"entityId\":\"b19-northern-rhodesia-federal\",\"entityRecordDigest\":\"31bea9b85d581978aad8b70c68fb76a60e84b1b191c949eeff1db40784da98a7\",\"names\":[{\"value\":\"Northern Rhodesia — territorial government within federation\",\"validFrom\":\"1954-01-01\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"b19-federation-constitution\",\"b15-sierra-leone-archives\",\"b19-northern-rhodesia-transfer\",\"b19-country-aliases\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existingBounds\":{\"validFrom\":\"1954-01-01\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"b19-federation-constitution\",\"b15-sierra-leone-archives\",\"b19-northern-rhodesia-transfer\",\"b19-country-aliases\"],\"note\":\"Editorial bounds delimit a partial source-supported dossier, not a complete state lifetime or universal territorial control.\"},\"confidence\":\"literal source identity against existing named historical framework\",\"scopeRationale\":\"Territorial total within federation, not separate European population or federation aggregate.\",\"reason\":\"No geometry, overlap, modern-country fallback, empire aggregation or status succession used.\"},\"renderBinding\":{\"path\":\"research/bulk-02/population/cache/table4-page-148.png\",\"sha256\":\"cdbb32765cc9354e8afb84499604326c003f4e957b732987a5a7482805a0b821\"},\"originalPdfBinding\":{\"path\":\"research/bulk-02/population/cache/un-dyb1960.pdf\",\"sha256\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\"},\"sourceLocator\":\"Table4/printed131/PDF148/1960column/Rhodesie du Nord\"},\"reviewOverrides\":[]}; All22 rows independently checked against retained original UN1960 PDF facsimiles and Table4/6 definitions. Fresh300dpi PDF renders resolve three intake value errors, two scope/footnote errors, exact Colombia date, and omitted italic markers. Original input untouched. Source publication1961/edition1960 is not substituted for observation date. Original frozen worker intake is preserved. Independent source-bound field overrides correct transcription/date/footnote issues transparently; no historical meaning guessed. Approximate and uncertain territory remains held.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Published rounded to thousands; an estimate, not exact census headcount.",
+          "Conservative observation year1960; Table4 default1July or mean of end-year estimates does not establish exact day or whole-year validity.",
+          "Printed italic: estimate of questionable reliability.",
+          "Actual observation/census date and original source precision retained; publication year and snapshot year do not retime the observation.",
+          "Territorial total within federation, not separate European population or federation aggregate."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-a0f99f364c39a6e9a278524b",
+          "sourceIdentifier": "Table4/printed131/PDF148/1960column/Rhodesie du Nord"
+        },
+        "metric": "Population (published source estimate)",
+        "unit": "persons"
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:02:33.998Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "5a3734516ded2a9cb738f4c37a7219ab3a7bb0197ef8f3abcd6474f7aa13abb9",
+        "72a0f1055fa809ee960ff09a758c5e7de030fe0ff559b81fb3f85acef83bb819"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "325bb16dff8f760c81ef0de5c0c3ad2194e8568cfe347a3ce80466da87e4ea98",
+    "productionFingerprint": "85285b8f6e6f91c4a7b10be3e4d71bf03a78c0d6534e9ee2ea65d3853e100cb0",
+    "jobId": "dossier-5e0f29eb52ad7483506f460e",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "325bb16dff8f760c81ef0de5c0c3ad2194e8568cfe347a3ce80466da87e4ea98",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent reviewer; extractor campaign2_selection; contract 72a0f1055fa809ee960ff09a758c5e7de030fe0ff559b81fb3f85acef83bb819; adapter historical-scope-population-observation/v2. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-a0f99f364c39a6e9a278524b-54cfd08325": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-a0f99f364c39a6e9a278524b-54cfd08325"
+    ]
+  }
+}

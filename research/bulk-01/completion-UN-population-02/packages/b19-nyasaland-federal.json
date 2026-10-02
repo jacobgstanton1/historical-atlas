@@ -1,0 +1,273 @@
+{
+  "job": {
+    "id": "dossier-dcef9135cab8bebde255363e",
+    "entityId": "b19-nyasaland-federal",
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-malawi"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "d57305903ebaa660efb6cf4f13f9d10e90a0f0840e0db0726fcf7b918881f718",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "completion-UN-population-02-b19-nyasaland-federal",
+    "jobId": "dossier-dcef9135cab8bebde255363e",
+    "entityId": "b19-nyasaland-federal",
+    "mapIds": [
+      "entity-malawi"
+    ],
+    "worker": {
+      "id": "bulk-parser/historical-scope-population-observation/v2",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "d57305903ebaa660efb6cf4f13f9d10e90a0f0840e0db0726fcf7b918881f718",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1960",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "bulk-32fe63e292b2c12f3d1608f2-a52dc02fce",
+        "category": "population-statistics",
+        "value": 2830000,
+        "entityId": "b19-nyasaland-federal",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "b19-nyasaland-federal-UN1960-population-cohort02",
+          "description": "Territorial total within federation, not European subgroup or federation aggregate.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "evidence": [
+          {
+            "sourceId": "un-demographic-yearbook1960-table4",
+            "locator": "Table4/printed131/PDF148/1960column/Nyassaland",
+            "note": "{\"original\":{\"id\":\"completion-dyb1960-t4-b19-nyasaland-federal\",\"category\":\"population\",\"countryLabel\":\"Nyasaland\",\"rawTerritoryLabel\":\"Nyassaland\",\"entityIdSuggested\":\"b19-nyasaland-federal\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"estimate\",\"value\":2830000,\"printedValue\":2830,\"printedUnit\":\"thousands of persons\",\"unit\":\"persons\",\"precisionQualification\":\"Published rounded to thousands; not exact headcount.\",\"dateQualification\":\"Table4 contemporary1960 estimate. Default1July or mean of consecutive31December estimates; retain conservative year precision, not census or whole-year validity.\",\"scopeClassification\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Territorial total within federation, not European subgroup or federation aggregate.\",\"provisional\":false,\"questionableReliability\":true,\"qualityQualification\":\"Printed italic: estimate of questionable reliability.\",\"sourceId\":\"un-demographic-yearbook1960-table4\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"table\":4,\"pdfPageIndex\":148,\"printedPage\":131,\"locator\":\"Table4/printed131/PDF148/1960column/Nyassaland\",\"originalExtractionRecordId\":\"un-dyb1960-t4-p148-r6\",\"rawDiagnosticCandidateValue\":2830000,\"transcriptionMethod\":\"Original facsimile visual transcription; frozen OCR diagnostic preserved unchanged.\",\"renderPath\":\"research/bulk-02/population/cache/table4-page-148.png\",\"status\":\"historical-review\",\"reviewIssues\":[\"Independent source/printed-type/footnote and mapping verification required.\"]},\"verifiedSourceFields\":{\"entityId\":\"b19-nyasaland-federal\",\"category\":\"population\",\"value\":2830000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Territorial total within federation, not European subgroup or federation aggregate.\",\"provisional\":false,\"questionableReliability\":true,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"locator\":\"Table4/printed131/PDF148/1960column/Nyassaland\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"qualifications\":[\"Published rounded to thousands; an estimate, not exact census headcount.\",\"Conservative observation year1960; Table4 default1July or mean of end-year estimates does not establish exact day or whole-year validity.\",\"Territorial total within federation, not European subgroup or federation aggregate.\",\"Printed italic: estimate of questionable reliability.\"]},\"sourceReview\":{\"observationId\":\"completion-dyb1960-t4-b19-nyasaland-federal\",\"originalObservationDigest\":\"ce889291f8db2ed69f36f0f279e04ab11202732db5d8772b872d7f5ace67761a\",\"sourceValueDateVerified\":true,\"decision\":\"source-and-mapping-approved\",\"reason\":\"Literal contemporary country/territory row, source date/type/quality and existing bounded historical framework independently reviewed. Approved overrides remain explicit; no modern-border fallback.\",\"approvedMappedFields\":{\"entityId\":\"b19-nyasaland-federal\",\"category\":\"population\",\"value\":2830000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Territorial total within federation, not European subgroup or federation aggregate.\",\"provisional\":false,\"questionableReliability\":true,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"locator\":\"Table4/printed131/PDF148/1960column/Nyassaland\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"qualifications\":[\"Published rounded to thousands; an estimate, not exact census headcount.\",\"Conservative observation year1960; Table4 default1July or mean of end-year estimates does not establish exact day or whole-year validity.\",\"Territorial total within federation, not European subgroup or federation aggregate.\",\"Printed italic: estimate of questionable reliability.\"]},\"verifiedSourceFields\":{\"entityId\":\"b19-nyasaland-federal\",\"category\":\"population\",\"value\":2830000,\"unit\":\"persons\",\"observationDate\":\"1960\",\"observationPrecision\":\"year\",\"observationType\":\"estimate\",\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"scope\":\"Territorial total within federation, not European subgroup or federation aggregate.\",\"provisional\":false,\"questionableReliability\":true,\"sourceId\":\"un-demographic-yearbook1960-table4\",\"locator\":\"Table4/printed131/PDF148/1960column/Nyassaland\",\"sourceBodyHash\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\",\"qualifications\":[\"Published rounded to thousands; an estimate, not exact census headcount.\",\"Conservative observation year1960; Table4 default1July or mean of end-year estimates does not establish exact day or whole-year validity.\",\"Territorial total within federation, not European subgroup or federation aggregate.\",\"Printed italic: estimate of questionable reliability.\"]},\"reviewOverrides\":[],\"statisticalComparability\":\"HISTORICALLY_MATCHING_SCOPE\",\"mappingReceipt\":{\"entityId\":\"b19-nyasaland-federal\",\"entityRecordDigest\":\"48b1eae950ce346ff62461eebb161882f354258a0b7d3e730eb737a58f5d7262\",\"names\":[{\"value\":\"Nyasaland Protectorate — territorial government within federation\",\"validFrom\":\"1954-01-01\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"b19-federation-constitution\",\"b15-sierra-leone-archives\",\"b19-country-aliases\"],\"confidence\":\"documented\",\"kind\":\"primary\"}],\"existingBounds\":{\"validFrom\":\"1954-01-01\",\"validUntil\":\"1961-01-01\",\"sourceIds\":[\"b19-federation-constitution\",\"b15-sierra-leone-archives\",\"b19-country-aliases\"],\"note\":\"Editorial bounds delimit a partial source-supported dossier, not a complete state lifetime or universal territorial control.\"},\"confidence\":\"literal source identity against existing named historical framework\",\"scopeRationale\":\"Territorial total within federation, not European subgroup or federation aggregate.\",\"reason\":\"No geometry, overlap, modern-country fallback, empire aggregation or status succession used.\"},\"renderBinding\":{\"path\":\"research/bulk-02/population/cache/table4-page-148.png\",\"sha256\":\"cdbb32765cc9354e8afb84499604326c003f4e957b732987a5a7482805a0b821\"},\"originalPdfBinding\":{\"path\":\"research/bulk-02/population/cache/un-dyb1960.pdf\",\"sha256\":\"8187292a0f6d67b45dc4a7430f3717722e4834f6abe825ba768bc323a98d0fbe\"},\"sourceLocator\":\"Table4/printed131/PDF148/1960column/Nyassaland\"},\"reviewOverrides\":[]}; All22 rows independently checked against retained original UN1960 PDF facsimiles and Table4/6 definitions. Fresh300dpi PDF renders resolve three intake value errors, two scope/footnote errors, exact Colombia date, and omitted italic markers. Original input untouched. Source publication1961/edition1960 is not substituted for observation date. Original frozen worker intake is preserved. Independent source-bound field overrides correct transcription/date/footnote issues transparently; no historical meaning guessed. Approximate and uncertain territory remains held.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Published rounded to thousands; an estimate, not exact census headcount.",
+          "Conservative observation year1960; Table4 default1July or mean of end-year estimates does not establish exact day or whole-year validity.",
+          "Printed italic: estimate of questionable reliability.",
+          "Actual observation/census date and original source precision retained; publication year and snapshot year do not retime the observation.",
+          "Territorial total within federation, not European subgroup or federation aggregate."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-32fe63e292b2c12f3d1608f2",
+          "sourceIdentifier": "Table4/printed131/PDF148/1960column/Nyassaland"
+        },
+        "metric": "Population (published source estimate)",
+        "unit": "persons"
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Source-first bounded table evidence; other facts and dates remain gaps.",
+        "consultedSourceIds": [
+          "un-demographic-yearbook1960-table4"
+        ],
+        "gaps": [
+          "Facts/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T12:02:37.551Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "5a3734516ded2a9cb738f4c37a7219ab3a7bb0197ef8f3abcd6474f7aa13abb9",
+        "72a0f1055fa809ee960ff09a758c5e7de030fe0ff559b81fb3f85acef83bb819"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "09698228829d80483ebcef0bf788903631da661d825c5a0422a6b8439eb04a9f",
+    "productionFingerprint": "d57305903ebaa660efb6cf4f13f9d10e90a0f0840e0db0726fcf7b918881f718",
+    "jobId": "dossier-dcef9135cab8bebde255363e",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "09698228829d80483ebcef0bf788903631da661d825c5a0422a6b8439eb04a9f",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by officeholder_sources independent reviewer; extractor campaign2_selection; contract 72a0f1055fa809ee960ff09a758c5e7de030fe0ff559b81fb3f85acef83bb819; adapter historical-scope-population-observation/v2. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-32fe63e292b2c12f3d1608f2-a52dc02fce": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-32fe63e292b2c12f3d1608f2-a52dc02fce"
+    ]
+  }
+}
