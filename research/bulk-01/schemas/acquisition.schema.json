@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Internal source-bound acquisition disposition, not production truth",
+  "type": "object",
+  "required": ["schemaVersion", "id", "adapter", "manifestHash", "sourceId", "sourceUrl", "bodySha256", "locator", "originalRow", "reviewTier", "acquisitionLayer", "statisticalComparability", "targetSnapshots", "status", "reason", "claims"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "id": {"type": "string", "minLength": 1},
+    "adapter": {"type": "string", "minLength": 1},
+    "manifestHash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "sourceId": {"type": "string", "minLength": 1},
+    "sourceUrl": {"type": "string", "pattern": "^https://"},
+    "bodySha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "locator": {"type": "string", "minLength": 1},
+    "originalRow": {"type": "object"},
+    "reviewTier": {"type": "string", "minLength": 1},
+    "acquisitionLayer": {"enum": ["source-first-bulk", "legacy-reuse", "bespoke"]},
+    "statisticalComparability": {"enum": ["not-a-statistic", "historically-matching", "approximately-comparable", "modern-border-estimate", "incompatible", "uncertain"]},
+    "targetSnapshots": {"type": "array", "items": {"type": "integer"}, "uniqueItems": true},
+    "status": {"enum": ["accepted-candidate", "duplicate", "historical-review", "rejected"]},
+    "reason": {"type": "string", "minLength": 1},
+    "claims": {"type": "array", "items": {"type": "object", "required": ["claim", "source", "status", "reason"]}}
+  }
+}

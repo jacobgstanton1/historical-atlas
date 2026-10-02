@@ -1,0 +1,273 @@
+{
+  "job": {
+    "id": "dossier-4cf92e595f6cd5fee9fd9294",
+    "entityId": "b10-nicaragua-somoza-control",
+    "period": {
+      "from": "1947-05-01",
+      "until": "1947-05-26"
+    },
+    "mapIds": [
+      "entity-nicaragua"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "105fcdf8ba050dce1804e5580a35f997809c5dcf395b1b1fc75891fcda29c065",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "archigos-officeholders-02-b10-nicaragua-somoza-control",
+    "jobId": "dossier-4cf92e595f6cd5fee9fd9294",
+    "entityId": "b10-nicaragua-somoza-control",
+    "mapIds": [
+      "entity-nicaragua"
+    ],
+    "worker": {
+      "id": "bulk-parser/dated-academic-effective-leader/v1",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "105fcdf8ba050dce1804e5580a35f997809c5dcf395b1b1fc75891fcda29c065",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1947-05-01",
+      "until": "1947-05-26"
+    },
+    "claims": [
+      {
+        "id": "bulk-7ebca76e237e9e9876959f2a-1330dd5e60",
+        "category": "leadership",
+        "value": "Arguello",
+        "role": "Effective political leader (Archigos coding)",
+        "entityId": "b10-nicaragua-somoza-control",
+        "temporal": {
+          "kind": "interval",
+          "from": "1947-05-01",
+          "until": "1947-05-26",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "b10-nicaragua-somoza-control-central-office",
+          "description": "Entity-associated effective central political leadership according to Archigos, within Nicaragua — Somoza-dominated government; country coding does not establish polygon-wide authority.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos v4.1 original DTA row NIC-1947-1; leadid 81e9893a-1e42-11e4-b4cd-db5882bf8def; idacr NIC; STARTDATE/ENDDATE",
+            "note": "Original-source parser Archigos Stata14→pandas core fields / independent 20454-field comparison; body SHA256 3e3b4092a7ac5a7e78cd86df6e6287c69027bf6fe60c9396adf136a39b1943ad; {\"obsid\":\"NIC-1947-1\",\"leadid\":\"81e9893a-1e42-11e4-b4cd-db5882bf8def\",\"idacr\":\"NIC\",\"leader\":\"Arguello\",\"startdate\":\"1947-05-01\",\"enddate\":\"1947-05-26\"}; Independent source review binds original codebook definition, exact DTA hash, all 20454 direct core-field comparisons and bounded country/entity contracts. Coordinator normalization retains literal six core fields, source spelling and dates; formal offices, nationality, succession and polygon sovereignty are not inferred. Conflicting and non-ASCII rows are held. Mapping start-year uncertainty is excluded, not rewritten.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1947-05-01",
+              "until": "1947-05-26",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source tenure: 1947-05-01 to 1947-05-26.",
+          "Research clipping to the reviewed historical framework and atlas limit; these bounds are not asserted accession/departure dates. No universal inclusive semantics asserted; use original ENDDATE as conservative exclusive cutoff, record omission of final coded day. Do not invent next-day endpoint. Empty or same-day intervals held.",
+          "Entity-associated effective central political leadership according to Archigos, within Nicaragua — Somoza-dominated government; country coding does not establish polygon-wide authority.",
+          "Effective political leader according to Archigos academic coding; not automatically a formal head of state or an office title. Country coding is not evidence of sovereignty of every map polygon. Bounded display interval may truncate a longer leader spell at an existing framework boundary; preserve original source start/end in provenance. Source ENDDATE remains unchanged: conservative exclusive display cutoff omits the final coded day instead of assuming inclusive semantics. Literal dataset leader label retained, without an invented name expansion. Uncertain framework-start years/months are excluded from research coverage."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "bulk-7ebca76e237e9e9876959f2a",
+          "sourceIdentifier": "Archigos v4.1 original DTA row NIC-1947-1; leadid 81e9893a-1e42-11e4-b4cd-db5882bf8def; idacr NIC; STARTDATE/ENDDATE"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "partial",
+        "rationale": "Source-first dated officeholder tranche; other offices and unsourced dates remain gaps.",
+        "consultedSourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Offices/dates not covered by this source remain unresolved."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "This bounded source-first tranche does not investigate this category.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Outside this tranche."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02T03:27:41.938Z",
+      "method": "Certified source-bound bulk adapter; independent coordinator review; serial existing integrator.",
+      "preservedPackageHashes": [
+        "4d3eec56bae96f274b1141c37f0c7e1a3a47c41f1d4332f3ba4a337f11de4161",
+        "b8b95076c40ee45ca358601782be2393fff3f8218f49420311865883fdae9be6"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "68193b4a967d17df4a0915785f6b4416fc849126c0f915f1ecf4b98cee76a50e",
+    "productionFingerprint": "105fcdf8ba050dce1804e5580a35f997809c5dcf395b1b1fc75891fcda29c065",
+    "jobId": "dossier-4cf92e595f6cd5fee9fd9294",
+    "review": {
+      "reviewer": "bulk-source-bound-deterministic/v1",
+      "packageHash": "68193b4a967d17df4a0915785f6b4416fc849126c0f915f1ecf4b98cee76a50e",
+      "bodyReviewed": true,
+      "rationale": "Original bodies, extraction and historical mappings independently reviewed by scale-flags-independent-archigos / coordinator-normalized-core-field-review; contract b8b95076c40ee45ca358601782be2393fff3f8218f49420311865883fdae9be6; adapter dated-academic-effective-leader/v1. All source hashes verified; ambiguous rows held outside this package.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "bulk-7ebca76e237e9e9876959f2a-1330dd5e60": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "bulk-7ebca76e237e9e9876959f2a-1330dd5e60"
+    ]
+  }
+}

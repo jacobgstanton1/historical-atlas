@@ -13,3 +13,9 @@ Preserved supplementary Victoria chair rows and official emperor genealogy remai
 Integrated 246 additional source-qualified effective-leader claims in 21 packages. Total rich production 895; net campaign381. 9169 integrity checks passed; eight academic adapter tests passed. All 209 held candidates remain preserved; 28 coded-surname duplicate controls are excluded. Country cohorts are deterministic and do not split a country across checkpoints. Source definition, original DTA/PDF and 20,454 core-field comparison proof are retained.
 
 Next action: node scripts/research-bulk-archigos.mjs 2 (preview), then --apply only after package validation/source review. Follow with cohort3. Do not rerun/integrate cohort1. Final report must include all tranches and deployed canonical registry equality. Official first checkpoint84b4526 deployed successfully with649 claims, recorded in its deployment-proof.json.
+
+## Archigos cohort02 checkpoint
+
+107 further claims integrated; rich total 1002, campaign net488. 10039 integrity checks passed; all20 current bulk adapter/recovery tests passed. 136 held and 10 duplicate rows preserved. The newly added acquisition JSON schema keeps dispositions separate from coverage, carries target snapshots and statistical comparability classes, and does not weaken production acceptance. First-write-before-ledger interruption now resumes preserved candidates by detecting the durable exact package. No new source retrieval occurred.
+
+Next: preview/validate/apply Archigos cohort3 using the existing source/independent mapping contracts, then complete aggregate reporting and live deployment verification. Do not reintegrate cohorts1–2. A worker is making a bounded source-discovery pass for the next genuinely dated capital/currency bulk source; preserve its output even if integration budget is insufficient.

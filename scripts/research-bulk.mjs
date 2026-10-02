@@ -3,7 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {readJSON,saveJSON,readContext,digest,root,isCLI} from './research-common.mjs';
-import {fields,temporalBounds,generateDossierJob,validateDossier,acceptDossier,integrateDossier,recoverDossierIntegration} from './research-comprehensive.mjs';
+import {fields,temporalBounds,schemaCheck,generateDossierJob,validateDossier,acceptDossier,integrateDossier,recoverDossierIntegration} from './research-comprehensive.mjs';
+import {readSnapshotConfig} from './research-snapshot-scan.mjs';
 import {auditRichProduction} from './research-scale-audit.mjs';
 export const bytesHash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const requireThat=(v,m)=>{if(!v)throw Error(m);};
@@ -65,10 +66,10 @@ export function sourceRecord(s,context){
 }
 export function prepareCandidates(manifest,contract,context){
  verifyContract(contract,manifest);
- const candidates=[],pending=[];
+ const candidates=[],pending=[],snapshots=readSnapshotConfig(context.directory).map(s=>s.year);
  for(const r of manifest.rows){
   const source=manifest.sources.find(s=>s.id===r.sourceId);requireThat(source,'Orphan row source');
-  const envelope={schemaVersion:1,id:'bulk-'+digest({source:source.url,locator:r.locator,row:r}).slice(0,24),adapter:contract.adapter,manifestHash:contract.manifestHash,sourceId:source.id,sourceUrl:source.url,bodySha256:source.sha256,locator:r.locator,originalRow:structuredClone(r),reviewTier:contract.tier,status:'historical-review',reason:'No approved historical mapping',claims:[]};
+  const envelope={schemaVersion:1,id:'bulk-'+digest({source:source.url,locator:r.locator,row:r}).slice(0,24),adapter:contract.adapter,manifestHash:contract.manifestHash,sourceId:source.id,sourceUrl:source.url,bodySha256:source.sha256,locator:r.locator,originalRow:structuredClone(r),reviewTier:contract.tier,acquisitionLayer:'source-first-bulk',statisticalComparability:'not-a-statistic',targetSnapshots:[],status:'historical-review',reason:'No approved historical mapping',claims:[]};
   const unresolved=(r.evidenceCautions||[]).filter(c=>!(contract.resolvedCautions||[]).includes(c));
   if(unresolved.length||r.disposition==='historical-review'){envelope.reason='Preserved source/date caution: '+unresolved.join('; ');candidates.push(envelope);continue;}
   const mappings=contract.mappings.filter(m=>m.sourceId===source.id&&(r.entityIdsSuggested||[]).includes(m.entityId));
@@ -88,17 +89,21 @@ export function prepareCandidates(manifest,contract,context){
    if(result.status==='accepted-candidate')pending.push(claim);
   }
   if(envelope.claims.length){envelope.status=envelope.claims.some(c=>c.status==='accepted-candidate')?'accepted-candidate':envelope.claims.every(c=>c.status==='duplicate')?'duplicate':'historical-review';envelope.reason=envelope.claims.map(c=>c.reason).join('; ');}
+  envelope.targetSnapshots=snapshots.filter(year=>envelope.claims.some(p=>overlaps(temporalBounds(p.claim.temporal),{lo:year*372,hi:(year+1)*372})));
   candidates.push(envelope);
  }
+ const schema=readJSON('research/bulk-01/schemas/acquisition.schema.json');
+ for(const c of candidates)requireThat(!schemaCheck(c,schema,schema).length,'Invalid acquisition envelope');
  return candidates;
 }
+export const needsResume=(saved,packages,id)=>!!saved&&(saved.integrations.some(i=>i.applied)||packages.some(p=>p.id.startsWith(id+'-')));
 export function runTranche(manifestPath,contractPath,{apply=false}={}){
  const manifest=readJSON(manifestPath),contract=readJSON(contractPath),context=readContext();
  const output='research/bulk-01/'+contract.id;
  const ledgerPath=output+'/integration-ledger.json';
  verifyContract(contract,manifest);
  const saved=fs.existsSync(path.resolve(root,ledgerPath))?readJSON(ledgerPath):null;
- const resume=saved?.integrations.some(i=>i.applied);
+ const resume=needsResume(saved,readJSON('data/comprehensive-dossiers.json').packages,contract.id);
  if(resume)requireThat(saved.manifestHash===digest(manifest)&&saved.contractHash===digest(contract),'Interrupted tranche evidence changed');
  const journal='research/comprehensive/integration-journal.json';
  if(apply&&fs.existsSync(journal)&&readJSON(journal).status==='prepared')recoverDossierIntegration();
@@ -127,7 +132,7 @@ export function runTranche(manifestPath,contractPath,{apply=false}={}){
   ledger.integrations.push({entityId,packageId:pkg.id,packageHash:digest(pkg),claims:claims.length,applied:result.applied,afterFingerprint:result.afterFingerprint||null});saveJSON(ledgerPath,ledger);
  }
  ledger.after=auditRichProduction(readContext());requireThat(ledger.after.valid,ledger.after.errors.join('; '));
- ledger.metrics={rows:candidates.length,acceptedCandidates:candidates.filter(c=>c.status==='accepted-candidate').length,duplicates:candidates.filter(c=>c.status==='duplicate').length,held:candidates.filter(c=>c.status==='historical-review').length,newClaims:apply?ledger.after.claims-ledger.before.claims:0,packages:ledger.integrations.length,sourcesRetrieved:manifest.sources.length,sourceReuse:manifest.sources.filter(s=>sourcesIn(context).some(old=>old.url===s.url)).length};
+ ledger.metrics={rows:candidates.length,acceptedCandidates:candidates.filter(c=>c.status==='accepted-candidate').length,duplicates:candidates.filter(c=>c.status==='duplicate').length,held:candidates.filter(c=>c.status==='historical-review').length,newClaims:apply||resume?ledger.after.claims-ledger.before.claims:0,packages:ledger.integrations.length,sourceDatasetsUsed:manifest.sources.length,sourceReuse:saved?.metrics?.sourceReuse??manifest.sources.filter(s=>sourcesIn(context).some(old=>old.url===s.url)).length};
  saveJSON(ledgerPath,ledger);return ledger;
 }
 if(isCLI(import.meta.url)){const [manifest,contract,flag]=process.argv.slice(2);requireThat(manifest&&contract,'Usage: node scripts/research-bulk.mjs manifest.json contract.json [--apply]');console.log(JSON.stringify(runTranche(manifest,contract,{apply:flag==='--apply'}).metrics,null,2));}
