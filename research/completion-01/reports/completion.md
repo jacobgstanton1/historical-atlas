@@ -1,17 +1,17 @@
 # Legacy resolved-entity completion — comparison only
 
-Evidence coverage: **44.35%** (7751/17475 applicable slots).
-Research resolution: **44.35%** (7751/17475 assessed slots).
-Dossiers: 1165; critically sparse: 61; completely unresolved: 50; core-supported: 271.
+Evidence coverage: **44.37%** (7754/17475 applicable slots).
+Research resolution: **44.37%** (7754/17475 assessed slots).
+Dossiers: 1165; critically sparse: 61; completely unresolved: 50; core-supported: 274.
 Unresolved raw identity/snapshot occurrences outside the resolved-entity denominator: 608. These remain open identity work, not resolved coverage.
-Prior 14-category metric: 6690/16310. The new status category changes the denominator.
-States: {"supported":7751,"partial":473,"missing":8874,"held":377,"uncertain":0,"known-unavailable":0,"not-applicable":0,"territorially-incompatible":0}.
+Prior 14-category metric: 6693/16310. The new status category changes the denominator.
+States: {"supported":7754,"partial":473,"missing":8871,"held":377,"uncertain":0,"known-unavailable":0,"not-applicable":0,"territorially-incompatible":0}.
 
 | Category | Supported | Partial | Missing | Held | Evidence % | Resolution % |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | identity | 1110 | 55 | 0 | 0 | 95.28 | 95.28 |
 | political-institutional | 1072 | 59 | 4 | 30 | 92.02 | 92.02 |
-| leadership | 432 | 61 | 669 | 3 | 37.08 | 37.08 |
+| leadership | 435 | 61 | 666 | 3 | 37.34 | 37.34 |
 | capital | 465 | 47 | 644 | 9 | 39.91 | 39.91 |
 | currency | 260 | 38 | 864 | 3 | 22.32 | 22.32 |
 | historical-flag | 126 | 17 | 913 | 109 | 10.82 | 10.82 |
@@ -29,12 +29,12 @@ States: {"supported":7751,"partial":473,"missing":8874,"held":377,"uncertain":0,
 | --- | ---: | ---: | ---: | ---: |
 | 1800 | 61 | 35.30 | 35.30 | 3 |
 | 1815 | 84 | 34.21 | 34.21 | 12 |
-| 1878 | 104 | 40.38 | 40.38 | 8 |
+| 1878 | 104 | 40.45 | 40.45 | 8 |
 | 1880 | 104 | 42.82 | 42.82 | 4 |
 | 1900 | 95 | 46.67 | 46.67 | 3 |
-| 1914 | 106 | 50.06 | 50.06 | 1 |
+| 1914 | 106 | 50.13 | 50.13 | 1 |
 | 1920 | 122 | 45.90 | 45.90 | 9 |
-| 1930 | 123 | 49.43 | 49.43 | 2 |
+| 1930 | 123 | 49.49 | 49.49 | 2 |
 | 1938 | 131 | 48.75 | 48.75 | 2 |
 | 1945 | 122 | 40.82 | 40.82 | 13 |
 | 1960 | 113 | 46.08 | 46.08 | 4 |

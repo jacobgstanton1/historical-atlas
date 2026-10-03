@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readJSON,digest} from '../scripts/research-common.mjs';
+import {flagshipAudit} from '../scripts/research-flagship-priority.mjs';
+const input=readJSON('research/completion-01/reports/occurrence-completion.json'),audit=flagshipAudit(input);
+test('tiers cover each confirmed occurrence once, protecting exclusions and pending identities',()=>{const ids=audit.rankedWorkload.flatMap(g=>g.occurrences.map(r=>r.id));assert.equal(ids.length,1588);assert.equal(new Set(ids).size,1588);assert.equal(audit.policy.protectedExclusions,585);assert.equal(audit.policy.pendingEligibility,179);});
+test('one completed snapshot cannot hide another empty snapshot',()=>{const canada=audit.rankedWorkload.find(g=>g.id==='canadian-systems');assert.ok(canada.occurrences.some(r=>r.state==='empty'));assert.ok(canada.occurrences.some(r=>['core-complete','substantially-complete'].includes(r.state)));});
+test('research grouping preserves distinct raw identities, canonical entities and dates',()=>{const china=audit.rankedWorkload.find(g=>g.id==='china');assert.ok(new Set(china.occurrences.map(r=>r.mapId)).size>1);assert.ok(china.occurrences.some(r=>r.mapId==='entity-chinese-warlords'));assert.ok(china.occurrences.every(r=>Number.isInteger(r.snapshotYear)));});
+test('Religion is explicitly unassessed, never inferred from legacy Density',()=>{assert.ok(audit.rankedWorkload.flatMap(g=>g.occurrences).every(r=>r.categories.religion.status==='unassessed'&&!r.categories.density));});
+test('priority audit is deterministic and all tier rationales are explicit',()=>{assert.equal(digest(audit),digest(flagshipAudit(input)));assert.ok(audit.rankedWorkload.every(g=>g.rationale&&g.priorityExplanation));assert.equal(Object.values(audit.tierA.states).reduce((a,b)=>a+b,0),audit.tierA.occurrences);});
