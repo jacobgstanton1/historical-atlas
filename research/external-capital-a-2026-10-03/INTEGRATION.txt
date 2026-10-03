@@ -1,0 +1,33 @@
+CAPITAL-A CHATGPT RESEARCH RETURN
+Research date: 2026-10-03
+Source commit: 9a056993c05a5606e0ae86b529df80b66a6013eb
+Production fingerprint: 851acb012ccfa2a4bfa05ea83ec2694b3f773a7a6fee8703e87969c9225e6997
+
+FILES
+- capital-A-chatgpt-2026-10-03-proposals.csv
+- capital-A-chatgpt-2026-10-03-package.json
+
+COUNTS
+- Baseline capital-A rows: 160
+- Rows with researched proposals: 102
+- Proposal objects: 103
+- Identity-review rows intentionally untouched: 43
+- Mapped edge cases intentionally left blank: 15
+
+INTEGRATION (MECHANICAL ONLY; NO HISTORICAL RESEARCH)
+1. Load exports/dossier-workload/research-batches/capital-A.csv from the matching source baseline.
+2. Verify production_fingerprint exactly equals:
+   851acb012ccfa2a4bfa05ea83ec2694b3f773a7a6fee8703e87969c9225e6997
+3. Join the sidecar CSV on exact immutable cell_id.
+4. For matched rows, copy ONLY proposals_json from the sidecar into the baseline proposals_json field.
+5. Change no other baseline column and do not alter status/mapping fields directly.
+6. Leave the 43 identity-review rows and 15 mapped edge cases untouched.
+7. Run normal repository proposal validation: stale baseline, provenance, chronology, scope, conflicts, mapping, and independent review.
+8. Integrate only accepted claims through the existing serial research-package pipeline.
+
+IMPORTANT QUALIFICATIONS
+- United States 1800: Philadelphia is supplied for 1 Jan–30 Nov; the existing Washington evidence should be validated against the National Archives' 1 Dec relocation date.
+- Brazil 1960: two dated proposals preserve Rio de Janeiro through 20 Apr and Brasília from 21 Apr.
+- Orange Free State / Transvaal 1900: British occupation dates are explicit; values are qualified because the war continued.
+- Ethiopia 1878/1880: deliberately blank because Yohannes IV had no fixed capital in his early reign.
+- China composite map regions and 1945 occupation-zone entities: deliberately not assigned a fabricated single capital.
