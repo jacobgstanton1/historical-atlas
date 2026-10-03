@@ -1,0 +1,323 @@
+{
+  "job": {
+    "id": "dossier-c7e76afddcd8a46e17ecca2d",
+    "entityId": "china-prc-framework",
+    "period": {
+      "from": "1960-01-01",
+      "until": "1961-01-01"
+    },
+    "mapIds": [
+      "entity-china"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "81bdcbfcb4b979b1f873a186a9914f03f9f8eff4561e467ab3c3b383c08b0671",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "crosswalk01-field-specific-dated-capitals-china-prc-framework",
+    "jobId": "dossier-c7e76afddcd8a46e17ecca2d",
+    "entityId": "china-prc-framework",
+    "mapIds": [
+      "entity-china"
+    ],
+    "worker": {
+      "id": "/root/southamerica_chile_sources",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "81bdcbfcb4b979b1f873a186a9914f03f9f8eff4561e467ab3c3b383c08b0671",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1960-01-01",
+      "until": "1961-01-01"
+    },
+    "claims": [
+      {
+        "id": "crosswalk01-capital-china-prc-framework",
+        "entityId": "china-prc-framework",
+        "category": "capital",
+        "value": "Beijing",
+        "temporal": {
+          "kind": "interval",
+          "from": "1960-01-01",
+          "until": "1961-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "china-prc-framework-crosswalk-capital",
+          "description": "National capital relationship of People's Republic of China within the existing sourced framework; generic capital, role unspecified.",
+          "relationship": "compatible"
+        },
+        "sourceIds": [
+          "wikidata-historical-capital-statements-20261002",
+          "b02-chinese-revolution-1949"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wikidata-historical-capital-statements-20261002",
+            "locator": "research/completion-03/capitals/wikidata-qualified-entities.json: $.entities.Q148.claims.P36[0]; original statement q148$2C0B3817-A4B6-43AD-9CD8-43E069E5983F; https://www.wikidata.org/wiki/Q148#q148$2C0B3817-A4B6-43AD-9CD8-43E069E5983F",
+            "note": "Original rank normal; original qualifiers {\"P580\":[{\"snaktype\":\"value\",\"property\":\"P580\",\"hash\":\"622ae4a55adbb421ffe429777ddf0f1b75f0481c\",\"datavalue\":{\"value\":{\"time\":\"+1949-10-01T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":11,\"calendarmodel\":\"http://www.wikidata.org/entity/Q1985727\"},\"type\":\"time\"},\"datatype\":\"time\"}]}. Exact PRC political namespace: accepted State Department registry source explicitly dates proclamation1949-10-01 and distinguishes continued ROC government on Taiwan. Beijing P36 starts that exact date. Mapping applies only to the existing PRC framework, never generic pre1949 China or ROC. Research interval is strictly bounded subset, not inception or whole regime continuity.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1960-01-01",
+              "until": "1961-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "b02-chinese-revolution-1949",
+            "locator": "data/historical-sources.json: $.sources[195]; accepted usage: PRC proclamation on 1949-10-01 and continued ROC government on Taiwan; not a simple abolition of the ROC.",
+            "note": "Exact PRC political namespace: accepted State Department registry source explicitly dates proclamation1949-10-01 and distinguishes continued ROC government on Taiwan. Beijing P36 starts that exact date. Mapping applies only to the existing PRC framework, never generic pre1949 China or ROC.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1960-01-01",
+              "until": "1961-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Exact PRC political namespace: accepted State Department registry source explicitly dates proclamation1949-10-01 and distinguishes continued ROC government on Taiwan. Beijing P36 starts that exact date. Mapping applies only to the existing PRC framework, never generic pre1949 China or ROC.",
+          "Original source qualifier precision preserved literally in evidence; exact research subset boundaries do not relabel source inception. No exclusive or constitutional role asserted."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Cached source only; original q148$2C0B3817-A4B6-43AD-9CD8-43E069E5983F; independently reviewed identity/property evidence, root content-bound mapping approved",
+          "sourceIdentifier": "Q148:q148$2C0B3817-A4B6-43AD-9CD8-43E069E5983F"
+        },
+        "compatibility": {
+          "id": "crosswalk01-capital-china-prc-framework",
+          "atlasEntityId": "china-prc-framework",
+          "external": {
+            "dataset": "Wikidata original qualified P36",
+            "id": "Q148",
+            "name": "People's Republic of China"
+          },
+          "class": "A",
+          "period": {
+            "from": "1960-01-01",
+            "until": "1961-01-01"
+          },
+          "fields": [
+            "capital"
+          ],
+          "territorial": {
+            "classification": "EXACT",
+            "sourceScope": "National capital relationship of People's Republic of China",
+            "atlasScope": "People’s Republic of China",
+            "differences": "Capital property only; no assertion of polygon congruence, territorial control, exclusive constitutional seat, or whole-government equivalence.",
+            "materialDifference": false
+          },
+          "continuityEstablished": true,
+          "competingEntity": false,
+          "rationale": "Exact PRC political namespace: accepted State Department registry source explicitly dates proclamation1949-10-01 and distinguishes continued ROC government on Taiwan. Beijing P36 starts that exact date. Mapping applies only to the existing PRC framework, never generic pre1949 China or ROC.",
+          "evidence": [
+            {
+              "sourceId": "wikidata-historical-capital-statements-20261002",
+              "locator": "research/completion-03/capitals/wikidata-qualified-entities.json: $.entities.Q148.claims.P36[0]; original statement q148$2C0B3817-A4B6-43AD-9CD8-43E069E5983F; https://www.wikidata.org/wiki/Q148#q148$2C0B3817-A4B6-43AD-9CD8-43E069E5983F"
+            },
+            {
+              "sourceId": "b02-chinese-revolution-1949",
+              "locator": "data/historical-sources.json: $.sources[195]; accepted usage: PRC proclamation on 1949-10-01 and continued ROC government on Taiwan; not a simple abolition of the ROC."
+            }
+          ],
+          "worker": "/root/southamerica_chile_sources"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "wikidata-historical-capital-statements-20261002",
+          "b02-chinese-revolution-1949"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent coordinator review of original cached P36 statement inventories, dated qualifiers, competing capitals and accepted framework source evidence. A PRC identity and six field-only B links approved within narrowed research subsets. Preserve generic capital roles, original year precision and Siam1767-versus1782 inception conflict outside subset. Research subset day boundaries are not historical transition dates. No new source retrieval, geographic sovereignty inference or current-capital fallback.",
+      "preservedPackageHashes": [
+        "000656e9256ec83f15abaffd5b978eed2154940d2864934388916107523631ac",
+        "546eded214d14dbf73d386997beb1b5431af8327432b3bd53364c53a30702da6"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "b16bccb2e27001a5291d1257adf6ba17b33a0b8b355827ba32803a396c317dce",
+    "productionFingerprint": "81bdcbfcb4b979b1f873a186a9914f03f9f8eff4561e467ab3c3b383c08b0671",
+    "jobId": "dossier-c7e76afddcd8a46e17ecca2d",
+    "review": {
+      "reviewer": "/root",
+      "packageHash": "b16bccb2e27001a5291d1257adf6ba17b33a0b8b355827ba32803a396c317dce",
+      "bodyReviewed": true,
+      "rationale": "Independent coordinator review of original cached P36 statement inventories, dated qualifiers, competing capitals and accepted framework source evidence. A PRC identity and six field-only B links approved within narrowed research subsets. Preserve generic capital roles, original year precision and Siam1767-versus1782 inception conflict outside subset. Research subset day boundaries are not historical transition dates. No new source retrieval, geographic sovereignty inference or current-capital fallback.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "crosswalk01-capital-china-prc-framework": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "crosswalk01-capital-china-prc-framework"
+    ]
+  }
+}

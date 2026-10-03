@@ -1,0 +1,387 @@
+{
+  "job": {
+    "id": "dossier-e0da660db4ac9ed8299b8d70",
+    "entityId": "b13-siam-absolute",
+    "period": {
+      "from": "1800-01-01",
+      "until": "1881-01-01"
+    },
+    "mapIds": [
+      "entity-rattanakosin-kingdom",
+      "entity-siam"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "38d810c66fb77480194235c0df564de23d18993c02d69fee9cb17062c1b345a5",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "crosswalk01-field-specific-dated-capitals-b13-siam-absolute",
+    "jobId": "dossier-e0da660db4ac9ed8299b8d70",
+    "entityId": "b13-siam-absolute",
+    "mapIds": [
+      "entity-rattanakosin-kingdom",
+      "entity-siam"
+    ],
+    "worker": {
+      "id": "/root/southamerica_chile_sources",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "38d810c66fb77480194235c0df564de23d18993c02d69fee9cb17062c1b345a5",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1800-01-01",
+      "until": "1881-01-01"
+    },
+    "claims": [
+      {
+        "id": "crosswalk01-capital-b13-siam-absolute",
+        "entityId": "b13-siam-absolute",
+        "category": "capital",
+        "value": "Bangkok",
+        "temporal": {
+          "kind": "interval",
+          "from": "1800-01-01",
+          "until": "1881-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "b13-siam-absolute-crosswalk-capital",
+          "description": "National capital relationship of Thailand within the existing sourced framework; generic capital, role unspecified.",
+          "relationship": "compatible"
+        },
+        "sourceIds": [
+          "wikidata-historical-capital-statements-20261002",
+          "b13-siam-chakkri-history",
+          "b13-siam-1932-coup",
+          "b13-thai-parliament-history",
+          "b13-rattanakosin-chronology"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wikidata-historical-capital-statements-20261002",
+            "locator": "research/completion-03/capitals/wikidata-qualified-entities.json: $.entities.Q869.claims.P36[0]; original statement q869$AABBF66D-C714-43E0-8C37-C36F24CFA208; https://www.wikidata.org/wiki/Q869#q869$AABBF66D-C714-43E0-8C37-C36F24CFA208",
+            "note": "Original rank normal; original qualifiers {\"P580\":[{\"snaktype\":\"value\",\"property\":\"P580\",\"hash\":\"f836eacb94b065812b9cd24cde4b14d7a657a208\",\"datavalue\":{\"value\":{\"time\":\"+1767-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http://www.wikidata.org/entity/Q1985727\"},\"type\":\"time\"},\"datatype\":\"time\"}]}. Historical alias mapping is established by the existing LOC Thailand Chakkri history and Thai MFA chronology source usage, explicitly describing the Siam/Bangkok dynastic framework. Original P36 alleges Bangkok from1767 (year), conflicting with the accepted registry source reporting Rama I moved court to Bangkok1782. Accept only1800–1932 framework interiors, independently later than1782; do not accept1767 as inception, repair it to1782, or infer modern Thai sovereignty. Research interval is strictly bounded subset, not inception or whole regime continuity.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1800-01-01",
+              "until": "1881-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "b13-siam-chakkri-history",
+            "locator": "data/historical-sources.json: $.sources[460]; accepted usage: Body read: Body: Rama I founded dynasty in 1782 and moved court to Bangkok; nineteenth-century royal diplomacy and monarchy. No automatic dynastic succession rule and suzerainty distinct from modern boundaries.",
+            "note": "Historical alias mapping is established by the existing LOC Thailand Chakkri history and Thai MFA chronology source usage, explicitly describing the Siam/Bangkok dynastic framework. Original P36 alleges Bangkok from1767 (year), conflicting with the accepted registry source reporting Rama I moved court to Bangkok1782. Accept only1800–1932 framework interiors, independently later than1782; do not accept1767 as inception, repair it to1782, or infer modern Thai sovereignty.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1800-01-01",
+              "until": "1881-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "b13-siam-1932-coup",
+            "locator": "data/historical-sources.json: $.sources[461]; accepted usage: Body read: Body: absolute monarchy ended 24 June 1932; provisional constitution three days later; permanent constitution before year end; National Assembly and cabinet with practical promoter/Army power; 1933 suspension/restoration and 1935 regency.",
+            "note": "Historical alias mapping is established by the existing LOC Thailand Chakkri history and Thai MFA chronology source usage, explicitly describing the Siam/Bangkok dynastic framework. Original P36 alleges Bangkok from1767 (year), conflicting with the accepted registry source reporting Rama I moved court to Bangkok1782. Accept only1800–1932 framework interiors, independently later than1782; do not accept1767 as inception, repair it to1782, or infer modern Thai sovereignty.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1800-01-01",
+              "until": "1881-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "b13-thai-parliament-history",
+            "locator": "data/historical-sources.json: $.sources[462]; accepted usage: Body read: PDF historical pages 4–5: 24 June 1932 transition, temporary act 27 June, nominated first assembly 28 June. Formal constitutional change does not by itself establish unrestricted democracy.",
+            "note": "Historical alias mapping is established by the existing LOC Thailand Chakkri history and Thai MFA chronology source usage, explicitly describing the Siam/Bangkok dynastic framework. Original P36 alleges Bangkok from1767 (year), conflicting with the accepted registry source reporting Rama I moved court to Bangkok1782. Accept only1800–1932 framework interiors, independently later than1782; do not accept1767 as inception, repair it to1782, or infer modern Thai sovereignty.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1800-01-01",
+              "until": "1881-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "b13-rattanakosin-chronology",
+            "locator": "data/historical-sources.json: $.sources[478]; accepted usage: Body read: PDF page 4 explicitly identifies accession of Rama I in 1782 as the beginning of Chakri Dynasty and Bangkok (Rattanakosin) era; establishes the historical name link, not later automatic government continuity.",
+            "note": "Historical alias mapping is established by the existing LOC Thailand Chakkri history and Thai MFA chronology source usage, explicitly describing the Siam/Bangkok dynastic framework. Original P36 alleges Bangkok from1767 (year), conflicting with the accepted registry source reporting Rama I moved court to Bangkok1782. Accept only1800–1932 framework interiors, independently later than1782; do not accept1767 as inception, repair it to1782, or infer modern Thai sovereignty.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1800-01-01",
+              "until": "1881-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Historical alias mapping is established by the existing LOC Thailand Chakkri history and Thai MFA chronology source usage, explicitly describing the Siam/Bangkok dynastic framework. Original P36 alleges Bangkok from1767 (year), conflicting with the accepted registry source reporting Rama I moved court to Bangkok1782. Accept only1800–1932 framework interiors, independently later than1782; do not accept1767 as inception, repair it to1782, or infer modern Thai sovereignty.",
+          "Original source qualifier precision preserved literally in evidence; exact research subset boundaries do not relabel source inception. No exclusive or constitutional role asserted."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Cached source only; original q869$AABBF66D-C714-43E0-8C37-C36F24CFA208; independently reviewed identity/property evidence, root content-bound mapping approved",
+          "sourceIdentifier": "Q869:q869$AABBF66D-C714-43E0-8C37-C36F24CFA208"
+        },
+        "compatibility": {
+          "id": "crosswalk01-capital-b13-siam-absolute",
+          "atlasEntityId": "b13-siam-absolute",
+          "external": {
+            "dataset": "Wikidata original qualified P36",
+            "id": "Q869",
+            "name": "Thailand"
+          },
+          "class": "B",
+          "period": {
+            "from": "1800-01-01",
+            "until": "1881-01-01"
+          },
+          "fields": [
+            "capital"
+          ],
+          "territorial": {
+            "classification": "QUALIFIED-COMPATIBLE",
+            "sourceScope": "National capital relationship of Thailand",
+            "atlasScope": "Siam — Chakkri monarchy",
+            "differences": "Capital property only; no assertion of polygon congruence, territorial control, exclusive constitutional seat, or whole-government equivalence.",
+            "materialDifference": false
+          },
+          "continuityEstablished": true,
+          "competingEntity": false,
+          "rationale": "Historical alias mapping is established by the existing LOC Thailand Chakkri history and Thai MFA chronology source usage, explicitly describing the Siam/Bangkok dynastic framework. Original P36 alleges Bangkok from1767 (year), conflicting with the accepted registry source reporting Rama I moved court to Bangkok1782. Accept only1800–1932 framework interiors, independently later than1782; do not accept1767 as inception, repair it to1782, or infer modern Thai sovereignty.",
+          "evidence": [
+            {
+              "sourceId": "wikidata-historical-capital-statements-20261002",
+              "locator": "research/completion-03/capitals/wikidata-qualified-entities.json: $.entities.Q869.claims.P36[0]; original statement q869$AABBF66D-C714-43E0-8C37-C36F24CFA208; https://www.wikidata.org/wiki/Q869#q869$AABBF66D-C714-43E0-8C37-C36F24CFA208"
+            },
+            {
+              "sourceId": "b13-siam-chakkri-history",
+              "locator": "data/historical-sources.json: $.sources[460]; accepted usage: Body read: Body: Rama I founded dynasty in 1782 and moved court to Bangkok; nineteenth-century royal diplomacy and monarchy. No automatic dynastic succession rule and suzerainty distinct from modern boundaries."
+            },
+            {
+              "sourceId": "b13-siam-1932-coup",
+              "locator": "data/historical-sources.json: $.sources[461]; accepted usage: Body read: Body: absolute monarchy ended 24 June 1932; provisional constitution three days later; permanent constitution before year end; National Assembly and cabinet with practical promoter/Army power; 1933 suspension/restoration and 1935 regency."
+            },
+            {
+              "sourceId": "b13-thai-parliament-history",
+              "locator": "data/historical-sources.json: $.sources[462]; accepted usage: Body read: PDF historical pages 4–5: 24 June 1932 transition, temporary act 27 June, nominated first assembly 28 June. Formal constitutional change does not by itself establish unrestricted democracy."
+            },
+            {
+              "sourceId": "b13-rattanakosin-chronology",
+              "locator": "data/historical-sources.json: $.sources[478]; accepted usage: Body read: PDF page 4 explicitly identifies accession of Rama I in 1782 as the beginning of Chakri Dynasty and Bangkok (Rattanakosin) era; establishes the historical name link, not later automatic government continuity."
+            }
+          ],
+          "worker": "/root/southamerica_chile_sources",
+          "review": {
+            "reviewer": "/root",
+            "decision": "accepted",
+            "contentHash": "cac4e60a81a60ed0fa9f3c1575251d16e0ef7caab7f927c8141473ff55f0dd0c"
+          }
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "wikidata-historical-capital-statements-20261002",
+          "b13-siam-chakkri-history",
+          "b13-siam-1932-coup",
+          "b13-thai-parliament-history",
+          "b13-rattanakosin-chronology"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent coordinator review of original cached P36 statement inventories, dated qualifiers, competing capitals and accepted framework source evidence. A PRC identity and six field-only B links approved within narrowed research subsets. Preserve generic capital roles, original year precision and Siam1767-versus1782 inception conflict outside subset. Research subset day boundaries are not historical transition dates. No new source retrieval, geographic sovereignty inference or current-capital fallback.",
+      "preservedPackageHashes": [
+        "000656e9256ec83f15abaffd5b978eed2154940d2864934388916107523631ac",
+        "546eded214d14dbf73d386997beb1b5431af8327432b3bd53364c53a30702da6"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "14ccc0d34b7b1f48c9cc67209e6ee6f1a67a624b62bd71a0c2cff02b33e346ee",
+    "productionFingerprint": "38d810c66fb77480194235c0df564de23d18993c02d69fee9cb17062c1b345a5",
+    "jobId": "dossier-e0da660db4ac9ed8299b8d70",
+    "review": {
+      "reviewer": "/root",
+      "packageHash": "14ccc0d34b7b1f48c9cc67209e6ee6f1a67a624b62bd71a0c2cff02b33e346ee",
+      "bodyReviewed": true,
+      "rationale": "Independent coordinator review of original cached P36 statement inventories, dated qualifiers, competing capitals and accepted framework source evidence. A PRC identity and six field-only B links approved within narrowed research subsets. Preserve generic capital roles, original year precision and Siam1767-versus1782 inception conflict outside subset. Research subset day boundaries are not historical transition dates. No new source retrieval, geographic sovereignty inference or current-capital fallback.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "crosswalk01-capital-b13-siam-absolute": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "crosswalk01-capital-b13-siam-absolute"
+    ]
+  }
+}

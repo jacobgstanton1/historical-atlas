@@ -1,0 +1,328 @@
+{
+  "job": {
+    "id": "dossier-3444a4d4a0165bef033f74aa",
+    "entityId": "lithuanian-no-seimas-framework",
+    "period": {
+      "from": "1930-01-01",
+      "until": "1931-01-01"
+    },
+    "mapIds": [
+      "entity-lithuania"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "6232f91c2e0cefefb76ed63fb3cef4f7eb33aa7e8c031ae917503df7f35c0d1d",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "crosswalk01-field-specific-dated-capitals-lithuanian-no-seimas-framework",
+    "jobId": "dossier-3444a4d4a0165bef033f74aa",
+    "entityId": "lithuanian-no-seimas-framework",
+    "mapIds": [
+      "entity-lithuania"
+    ],
+    "worker": {
+      "id": "/root/southamerica_chile_sources",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "6232f91c2e0cefefb76ed63fb3cef4f7eb33aa7e8c031ae917503df7f35c0d1d",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1930-01-01",
+      "until": "1931-01-01"
+    },
+    "claims": [
+      {
+        "id": "crosswalk01-capital-lithuanian-no-seimas-framework",
+        "entityId": "lithuanian-no-seimas-framework",
+        "category": "capital",
+        "value": "Kaunas",
+        "temporal": {
+          "kind": "interval",
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "lithuanian-no-seimas-framework-crosswalk-capital",
+          "description": "National capital relationship of Lithuania within the existing sourced framework; generic capital, role unspecified.",
+          "relationship": "compatible"
+        },
+        "sourceIds": [
+          "wikidata-historical-capital-statements-20261002",
+          "b06-lithuanian-elections"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wikidata-historical-capital-statements-20261002",
+            "locator": "research/completion-03/capitals/wikidata-qualified-entities.json: $.entities.Q37.claims.P36[1]; original statement Q37$7C5EE64F-EC33-4FBE-A9AF-F1B5DEE64FA0; https://www.wikidata.org/wiki/Q37#Q37$7C5EE64F-EC33-4FBE-A9AF-F1B5DEE64FA0",
+            "note": "Original rank normal; original qualifiers {\"P582\":[{\"snaktype\":\"value\",\"property\":\"P582\",\"hash\":\"d8396dc87de14e2efdb94abb995438c460e38886\",\"datavalue\":{\"value\":{\"time\":\"+1939-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http://www.wikidata.org/entity/Q1985727\"},\"type\":\"time\"},\"datatype\":\"time\"}],\"P580\":[{\"snaktype\":\"value\",\"property\":\"P580\",\"hash\":\"11eb99420e40a99570c9de17a0aba5420f91b7bf\",\"datavalue\":{\"value\":{\"time\":\"+1920-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http://www.wikidata.org/entity/Q1985727\"},\"type\":\"time\"},\"datatype\":\"time\"}]}. The accepted Seimas source establishes the Republic of Lithuania framework without a Seimas1928–1936. Historical normal-rank Kaunas statement explicitly spans1920–1939; current preferred Vilnius begins1939 and cannot supersede an earlier nonoverlapping historical claim. The original historical statement has no capital-role qualifier: authorize generic sourced capital only, never sole constitutional capital or denial of claimed Vilnius. Hold any output whose wording requires a de jure/de facto distinction not supplied by this cached statement. Research interval is strictly bounded subset, not inception or whole regime continuity.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-01-01",
+              "until": "1931-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "b06-lithuanian-elections",
+            "locator": "data/historical-sources.json: $.sources[299]; accepted usage: Constituent Seimas from 15 May 1920; 12 April 1927 dissolution and absence of elections until 1936; closure of other political parties. No inferred constitutional commencement dates.",
+            "note": "The accepted Seimas source establishes the Republic of Lithuania framework without a Seimas1928–1936. Historical normal-rank Kaunas statement explicitly spans1920–1939; current preferred Vilnius begins1939 and cannot supersede an earlier nonoverlapping historical claim. The original historical statement has no capital-role qualifier: authorize generic sourced capital only, never sole constitutional capital or denial of claimed Vilnius. Hold any output whose wording requires a de jure/de facto distinction not supplied by this cached statement.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-01-01",
+              "until": "1931-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "The accepted Seimas source establishes the Republic of Lithuania framework without a Seimas1928–1936. Historical normal-rank Kaunas statement explicitly spans1920–1939; current preferred Vilnius begins1939 and cannot supersede an earlier nonoverlapping historical claim. The original historical statement has no capital-role qualifier: authorize generic sourced capital only, never sole constitutional capital or denial of claimed Vilnius. Hold any output whose wording requires a de jure/de facto distinction not supplied by this cached statement.",
+          "Original source qualifier precision preserved literally in evidence; exact research subset boundaries do not relabel source inception. No exclusive or constitutional role asserted."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Cached source only; original Q37$7C5EE64F-EC33-4FBE-A9AF-F1B5DEE64FA0; independently reviewed identity/property evidence, root content-bound mapping approved",
+          "sourceIdentifier": "Q37:Q37$7C5EE64F-EC33-4FBE-A9AF-F1B5DEE64FA0"
+        },
+        "compatibility": {
+          "id": "crosswalk01-capital-lithuanian-no-seimas-framework",
+          "atlasEntityId": "lithuanian-no-seimas-framework",
+          "external": {
+            "dataset": "Wikidata original qualified P36",
+            "id": "Q37",
+            "name": "Lithuania"
+          },
+          "class": "B",
+          "period": {
+            "from": "1930-01-01",
+            "until": "1931-01-01"
+          },
+          "fields": [
+            "capital"
+          ],
+          "territorial": {
+            "classification": "QUALIFIED-COMPATIBLE",
+            "sourceScope": "National capital relationship of Lithuania",
+            "atlasScope": "Republic of Lithuania — government without a Seimas",
+            "differences": "Capital property only; no assertion of polygon congruence, territorial control, exclusive constitutional seat, or whole-government equivalence.",
+            "materialDifference": false
+          },
+          "continuityEstablished": true,
+          "competingEntity": false,
+          "rationale": "The accepted Seimas source establishes the Republic of Lithuania framework without a Seimas1928–1936. Historical normal-rank Kaunas statement explicitly spans1920–1939; current preferred Vilnius begins1939 and cannot supersede an earlier nonoverlapping historical claim. The original historical statement has no capital-role qualifier: authorize generic sourced capital only, never sole constitutional capital or denial of claimed Vilnius. Hold any output whose wording requires a de jure/de facto distinction not supplied by this cached statement.",
+          "evidence": [
+            {
+              "sourceId": "wikidata-historical-capital-statements-20261002",
+              "locator": "research/completion-03/capitals/wikidata-qualified-entities.json: $.entities.Q37.claims.P36[1]; original statement Q37$7C5EE64F-EC33-4FBE-A9AF-F1B5DEE64FA0; https://www.wikidata.org/wiki/Q37#Q37$7C5EE64F-EC33-4FBE-A9AF-F1B5DEE64FA0"
+            },
+            {
+              "sourceId": "b06-lithuanian-elections",
+              "locator": "data/historical-sources.json: $.sources[299]; accepted usage: Constituent Seimas from 15 May 1920; 12 April 1927 dissolution and absence of elections until 1936; closure of other political parties. No inferred constitutional commencement dates."
+            }
+          ],
+          "worker": "/root/southamerica_chile_sources",
+          "review": {
+            "reviewer": "/root",
+            "decision": "accepted",
+            "contentHash": "74e8ebeccfe190aa8bed547aad5b8e6f640937741f41bf67928584e049fc0e64"
+          }
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "wikidata-historical-capital-statements-20261002",
+          "b06-lithuanian-elections"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent coordinator review of original cached P36 statement inventories, dated qualifiers, competing capitals and accepted framework source evidence. A PRC identity and six field-only B links approved within narrowed research subsets. Preserve generic capital roles, original year precision and Siam1767-versus1782 inception conflict outside subset. Research subset day boundaries are not historical transition dates. No new source retrieval, geographic sovereignty inference or current-capital fallback.",
+      "preservedPackageHashes": [
+        "000656e9256ec83f15abaffd5b978eed2154940d2864934388916107523631ac",
+        "546eded214d14dbf73d386997beb1b5431af8327432b3bd53364c53a30702da6"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "e23c6c33088a8c1a1d631aafe7031972ceb6d78cf0d30ae6f950662af0ad11d9",
+    "productionFingerprint": "6232f91c2e0cefefb76ed63fb3cef4f7eb33aa7e8c031ae917503df7f35c0d1d",
+    "jobId": "dossier-3444a4d4a0165bef033f74aa",
+    "review": {
+      "reviewer": "/root",
+      "packageHash": "e23c6c33088a8c1a1d631aafe7031972ceb6d78cf0d30ae6f950662af0ad11d9",
+      "bodyReviewed": true,
+      "rationale": "Independent coordinator review of original cached P36 statement inventories, dated qualifiers, competing capitals and accepted framework source evidence. A PRC identity and six field-only B links approved within narrowed research subsets. Preserve generic capital roles, original year precision and Siam1767-versus1782 inception conflict outside subset. Research subset day boundaries are not historical transition dates. No new source retrieval, geographic sovereignty inference or current-capital fallback.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "crosswalk01-capital-lithuanian-no-seimas-framework": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "crosswalk01-capital-lithuanian-no-seimas-framework"
+    ]
+  }
+}

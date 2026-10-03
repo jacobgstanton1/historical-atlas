@@ -4,6 +4,7 @@ import {digest,readJSON,saveJSON,productionFingerprint,root,isCLI} from './resea
 import {withLock,atomicWrite} from './research-queue.mjs';
 import {validateFlagClaim} from './research-flags.mjs';
 import {validateLiteralRelationshipReuse} from './research-completion-reuse.mjs';
+import {assessCompatibility,qualifiedCompatibility} from './research-crosswalk.mjs';
 export const fields=['identity','political-institutional','leadership','capital','currency','historical-flag','population-statistics','area-statistics','density','economy','events-context','relationships','overview','important-figures'];
 export const fingerprint=(directory=root)=>{
  const store=fs.existsSync(path.join(directory,'data/comprehensive-dossiers.json'))?readJSON(path.join(directory,'data/comprehensive-dossiers.json')):null;
@@ -84,7 +85,8 @@ export function validateDossier(pkg,job,context){
  try{const b=temporalBounds(c.temporal);check('Within requested research period '+c.id,period&&b.lo>=period.lo&&b.hi<=period.hi);
  const stats=['population-statistics','area-statistics','economy','density'];check('Observation distinct from validity '+c.id,!stats.includes(c.category)||c.temporal.kind==='observation');
  if(c.temporal.certainty!=='exact')review.push(c.id+': uncertain/disputed chronology requires review');
- if(c.scope.relationship!=='same')review.push(c.id+': geographic comparability requires review');
+ if(c.compatibility){const decision=assessCompatibility(c.compatibility,c);check('Certified field-specific historical compatibility '+c.id,decision.accepted);check('Mapping evidence sources resolve '+c.id,c.compatibility.evidence.every(e=>sourceMap.has(e.sourceId)&&c.sourceIds.includes(e.sourceId)));}
+ if(c.scope.relationship!=='same'&&!qualifiedCompatibility(c))review.push(c.id+': geographic comparability requires review');
  if(c.status!=='supported')review.push(c.id+': partial/unresolved support');
  for(const e of c.evidence){const eb=temporalBounds(e.temporal);check('Evidence bounds claimed date '+c.id,b.lo>=eb.lo&&b.hi<=eb.hi);if(c.temporal.kind==='observation')check('Observation date unchanged '+c.id,e.temporal.kind==='observation'&&e.temporal.observationDate===c.temporal.observationDate);const rank={year:1,month:2,day:3},precision=c.temporal.kind==='interval'?Math.max(rank[dateBounds(c.temporal.from).precision],rank[dateBounds(c.temporal.until).precision]):rank[b.precision];check('No invented precision '+c.id,precision<=rank[e.precision]);}
  if(stats.includes(c.category))check('Statistic methodology/unit '+c.id,typeof c.value==='number'&&c.value>=0&&!!c.metric&&!!c.unit&&c.qualifications.length>0);
@@ -113,7 +115,7 @@ export function selectForYear(claims,year,{nearbyObservations=false}={}){
 export function acceptDossier(pkg,job,context,review){
  const v=validateDossier(pkg,job,context);required(v.valid,'Invalid comprehensive dossier');required(review.reviewer&&review.reviewer!==pkg.worker.id&&review.packageHash===digest(pkg)&&review.bodyReviewed&&review.rationale?.trim(),'Independent exact-package body review required');required(digest([...(review.reviewedIssues||[])].sort())===digest(v.review),'Every historical review issue must be bound');
  required(review.decisions&&pkg.claims.every(c=>['accepted','held','rejected'].includes(review.decisions[c.id])),'Every claim needs explicit disposition');
- for(const c of pkg.claims.filter(c=>review.decisions[c.id]==='accepted')){required(c.status==='supported'&&c.temporal.certainty==='exact'&&c.scope.relationship==='same'&&!(c.risks||[]).length,'Unsafe claims cannot automatically be accepted');required(!v.review.some(issue=>(issue.startsWith('Conflicting records ')||issue.startsWith('Conflicting legacy record '))&&issue.includes(c.id))&&!pkg.conflicts.some(x=>typeof x==='string'||x.claimIds.includes(c.id)),'Conflicting claims must remain held');if(c.category==='density')required([c.derivation.populationClaimId,c.derivation.areaClaimId].every(id=>review.decisions[id]==='accepted'),'Derived dependencies must also be accepted');}
+ for(const c of pkg.claims.filter(c=>review.decisions[c.id]==='accepted')){required(c.status==='supported'&&c.temporal.certainty==='exact'&&(c.scope.relationship==='same'||c.scope.relationship==='compatible'&&qualifiedCompatibility(c))&&!(c.risks||[]).length,'Unsafe claims cannot automatically be accepted');required(!v.review.some(issue=>(issue.startsWith('Conflicting records ')||issue.startsWith('Conflicting legacy record '))&&issue.includes(c.id))&&!pkg.conflicts.some(x=>typeof x==='string'||x.claimIds.includes(c.id)),'Conflicting claims must remain held');if(c.category==='density')required([c.derivation.populationClaimId,c.derivation.areaClaimId].every(id=>review.decisions[id]==='accepted'),'Derived dependencies must also be accepted');}
  return {status:'accepted',packageHash:digest(pkg),productionFingerprint:pkg.productionFingerprint,jobId:job.id,review:structuredClone(review),acceptedClaimIds:pkg.claims.filter(c=>review.decisions[c.id]==='accepted').map(c=>c.id)};
 }
 // Rich claims enter a separate reviewed production store for a future reader, not silently

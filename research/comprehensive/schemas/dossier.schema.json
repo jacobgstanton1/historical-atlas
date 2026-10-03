@@ -382,7 +382,8 @@
               "enum": [
                 "same",
                 "different",
-                "uncertain"
+                "uncertain",
+                "compatible"
               ]
             }
           },
@@ -751,6 +752,81 @@
             "kind",
             "reference"
           ],
+          "additionalProperties": false
+        },
+        "compatibility": {
+          "type": "object",
+          "required": [
+            "id",
+            "atlasEntityId",
+            "external",
+            "class",
+            "period",
+            "fields",
+            "territorial",
+            "rationale",
+            "evidence"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "atlasEntityId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "class": {
+              "enum": [
+                "A",
+                "B",
+                "C",
+                "D"
+              ]
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "external": {
+              "type": "object"
+            },
+            "period": {
+              "type": "object"
+            },
+            "territorial": {
+              "type": "object"
+            },
+            "rationale": {
+              "type": "string"
+            },
+            "evidence": {
+              "type": "array",
+              "minItems": 1
+            },
+            "worker": {
+              "type": "string"
+            },
+            "review": {
+              "type": "object"
+            },
+            "continuityEstablished": {
+              "type": "boolean"
+            },
+            "competingEntity": {
+              "type": "boolean"
+            },
+            "mutualScopeEvidence": {
+              "type": "string"
+            },
+            "directAssociationEvidence": {
+              "type": "string"
+            }
+          },
           "additionalProperties": false
         }
       },

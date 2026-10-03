@@ -1,0 +1,328 @@
+{
+  "job": {
+    "id": "dossier-e607b2a487b1ad631c039373",
+    "entityId": "greek-1864-crowned-framework",
+    "period": {
+      "from": "1878-01-01",
+      "until": "1909-01-01"
+    },
+    "mapIds": [
+      "entity-greece"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "92f833ad1a86324d3b9358c4cc6de14c72a3cd8b8fc2e532337df5fab4770bbf",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "crosswalk01-field-specific-dated-capitals-greek-1864-crowned-framework",
+    "jobId": "dossier-e607b2a487b1ad631c039373",
+    "entityId": "greek-1864-crowned-framework",
+    "mapIds": [
+      "entity-greece"
+    ],
+    "worker": {
+      "id": "/root/southamerica_chile_sources",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "92f833ad1a86324d3b9358c4cc6de14c72a3cd8b8fc2e532337df5fab4770bbf",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1878-01-01",
+      "until": "1909-01-01"
+    },
+    "claims": [
+      {
+        "id": "crosswalk01-capital-greek-1864-crowned-framework",
+        "entityId": "greek-1864-crowned-framework",
+        "category": "capital",
+        "value": "Athens",
+        "temporal": {
+          "kind": "interval",
+          "from": "1878-01-01",
+          "until": "1909-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "greek-1864-crowned-framework-crosswalk-capital",
+          "description": "National capital relationship of Greece within the existing sourced framework; generic capital, role unspecified.",
+          "relationship": "compatible"
+        },
+        "sourceIds": [
+          "wikidata-historical-capital-statements-20261002",
+          "b06-greek-constitutional-history"
+        ],
+        "evidence": [
+          {
+            "sourceId": "wikidata-historical-capital-statements-20261002",
+            "locator": "research/completion-03/capitals/wikidata-qualified-entities.json: $.entities.Q41.claims.P36[0]; original statement q41$E6C6BEA5-EAFC-4AE3-950C-2FE16E11F910; https://www.wikidata.org/wiki/Q41#q41$E6C6BEA5-EAFC-4AE3-950C-2FE16E11F910",
+            "note": "Original rank preferred; original qualifiers {\"P580\":[{\"snaktype\":\"value\",\"property\":\"P580\",\"hash\":\"305a9e71b2d6d951555013ffabc8a5cd14c236fd\",\"datavalue\":{\"value\":{\"time\":\"+1834-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http://www.wikidata.org/entity/Q1985727\"},\"type\":\"time\"},\"datatype\":\"time\"}]}. The sourced parliamentary registry distinguishes three constitutional frameworks of Greece. Mapping only their national capital property does not merge constitutional governments. Athens has an explicit year-dated P36 beginning1834; all mapped interiors follow that year. Earlier competing capitals terminate before these envelopes. Exclude the separate wholly undated Athens statement. Research interval is strictly bounded subset, not inception or whole regime continuity.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1878-01-01",
+              "until": "1909-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "b06-greek-constitutional-history",
+            "locator": "data/historical-sources.json: $.sources[289]; accepted usage: Unicameral 1864 framework; confidence convention; 1927 republican bicameralism; 1952 crowned parliamentary framework. Erroneous 1922 republican proclamation chronology excluded.",
+            "note": "The sourced parliamentary registry distinguishes three constitutional frameworks of Greece. Mapping only their national capital property does not merge constitutional governments. Athens has an explicit year-dated P36 beginning1834; all mapped interiors follow that year. Earlier competing capitals terminate before these envelopes. Exclude the separate wholly undated Athens statement.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1878-01-01",
+              "until": "1909-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "The sourced parliamentary registry distinguishes three constitutional frameworks of Greece. Mapping only their national capital property does not merge constitutional governments. Athens has an explicit year-dated P36 beginning1834; all mapped interiors follow that year. Earlier competing capitals terminate before these envelopes. Exclude the separate wholly undated Athens statement.",
+          "Original source qualifier precision preserved literally in evidence; exact research subset boundaries do not relabel source inception. No exclusive or constitutional role asserted."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Cached source only; original q41$E6C6BEA5-EAFC-4AE3-950C-2FE16E11F910; independently reviewed identity/property evidence, root content-bound mapping approved",
+          "sourceIdentifier": "Q41:q41$E6C6BEA5-EAFC-4AE3-950C-2FE16E11F910"
+        },
+        "compatibility": {
+          "id": "crosswalk01-capital-greek-1864-crowned-framework",
+          "atlasEntityId": "greek-1864-crowned-framework",
+          "external": {
+            "dataset": "Wikidata original qualified P36",
+            "id": "Q41",
+            "name": "Greece"
+          },
+          "class": "B",
+          "period": {
+            "from": "1878-01-01",
+            "until": "1909-01-01"
+          },
+          "fields": [
+            "capital"
+          ],
+          "territorial": {
+            "classification": "QUALIFIED-COMPATIBLE",
+            "sourceScope": "National capital relationship of Greece",
+            "atlasScope": "Kingdom of Greece — 1864 framework",
+            "differences": "Capital property only; no assertion of polygon congruence, territorial control, exclusive constitutional seat, or whole-government equivalence.",
+            "materialDifference": false
+          },
+          "continuityEstablished": true,
+          "competingEntity": false,
+          "rationale": "The sourced parliamentary registry distinguishes three constitutional frameworks of Greece. Mapping only their national capital property does not merge constitutional governments. Athens has an explicit year-dated P36 beginning1834; all mapped interiors follow that year. Earlier competing capitals terminate before these envelopes. Exclude the separate wholly undated Athens statement.",
+          "evidence": [
+            {
+              "sourceId": "wikidata-historical-capital-statements-20261002",
+              "locator": "research/completion-03/capitals/wikidata-qualified-entities.json: $.entities.Q41.claims.P36[0]; original statement q41$E6C6BEA5-EAFC-4AE3-950C-2FE16E11F910; https://www.wikidata.org/wiki/Q41#q41$E6C6BEA5-EAFC-4AE3-950C-2FE16E11F910"
+            },
+            {
+              "sourceId": "b06-greek-constitutional-history",
+              "locator": "data/historical-sources.json: $.sources[289]; accepted usage: Unicameral 1864 framework; confidence convention; 1927 republican bicameralism; 1952 crowned parliamentary framework. Erroneous 1922 republican proclamation chronology excluded."
+            }
+          ],
+          "worker": "/root/southamerica_chile_sources",
+          "review": {
+            "reviewer": "/root",
+            "decision": "accepted",
+            "contentHash": "5c11ec506d052449c5d2fdedeb4a2b2347302718171558cc48accf2085101b9a"
+          }
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "wikidata-historical-capital-statements-20261002",
+          "b06-greek-constitutional-history"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent coordinator review of original cached P36 statement inventories, dated qualifiers, competing capitals and accepted framework source evidence. A PRC identity and six field-only B links approved within narrowed research subsets. Preserve generic capital roles, original year precision and Siam1767-versus1782 inception conflict outside subset. Research subset day boundaries are not historical transition dates. No new source retrieval, geographic sovereignty inference or current-capital fallback.",
+      "preservedPackageHashes": [
+        "000656e9256ec83f15abaffd5b978eed2154940d2864934388916107523631ac",
+        "546eded214d14dbf73d386997beb1b5431af8327432b3bd53364c53a30702da6"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "09a56a0c9d8023fc0ca5c629ce3a9ed691e71c47a6db9f57175ceb60f182f5ef",
+    "productionFingerprint": "92f833ad1a86324d3b9358c4cc6de14c72a3cd8b8fc2e532337df5fab4770bbf",
+    "jobId": "dossier-e607b2a487b1ad631c039373",
+    "review": {
+      "reviewer": "/root",
+      "packageHash": "09a56a0c9d8023fc0ca5c629ce3a9ed691e71c47a6db9f57175ceb60f182f5ef",
+      "bodyReviewed": true,
+      "rationale": "Independent coordinator review of original cached P36 statement inventories, dated qualifiers, competing capitals and accepted framework source evidence. A PRC identity and six field-only B links approved within narrowed research subsets. Preserve generic capital roles, original year precision and Siam1767-versus1782 inception conflict outside subset. Research subset day boundaries are not historical transition dates. No new source retrieval, geographic sovereignty inference or current-capital fallback.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "crosswalk01-capital-greek-1864-crowned-framework": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "crosswalk01-capital-greek-1864-crowned-framework"
+    ]
+  }
+}

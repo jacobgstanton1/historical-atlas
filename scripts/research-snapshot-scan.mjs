@@ -4,6 +4,7 @@ import path from 'node:path';
 import {fields,dateBounds,temporalBounds} from './research-comprehensive.mjs';
 import {root,readContext,readJSON,saveJSON,digest,isCLI} from './research-common.mjs';
 import {inspectFlagAsset} from './research-flags.mjs';
+import {qualifiedCompatibility,assessCompatibility} from './research-crosswalk.mjs';
 export function readSnapshotConfig(directory=root){
  const text=fs.readFileSync(path.join(directory,'app.js'),'utf8');
  const block=text.match(/const\s+SNAPSHOTS\s*=\s*\[([\s\S]*?)\];/);
@@ -124,8 +125,10 @@ export function scanSnapshots(context,{snapshots,entityIds,rich,queue,observatio
     if(category==='historical-flag'){try{if(!c.flag?.asset||!c.flag.license||!c.flag.attribution||inspectFlagAsset(c.flag.asset,context.directory||root,c.flag.sha256).length){issues.push('Flag asset/license requires review: '+c.id);continue;}}catch{issues.push('Flag asset unavailable: '+c.id);continue;}}
     const statistical=['population-statistics','area-statistics','density','economy'].includes(category);
     if(statistical&&(!c.scope||typeof c.scope==='string'&&!c.scope.trim())){issues.push('Missing statistical scope: '+c.id);continue;}
-    if((m.mode==='nearby-observation'||m.mode==='dated-context'||statistical&&!c.legacy)&&!compatible(c)){issues.push('Scope compatibility requires review: '+c.id);continue;}
-    if(c.scope?.relationship&&c.scope.relationship!=='same'){issues.push('Different territorial scope: '+c.id);continue;}
+    const fieldCompatible=qualifiedCompatibility(c);
+    if(c.compatibility&&!assessCompatibility(c.compatibility,c,{requestedYear:year}).accepted){issues.push('Field/interval mapping permission requires review: '+c.id);continue;}
+    if((m.mode==='nearby-observation'||m.mode==='dated-context'||statistical&&!c.legacy)&&!compatible(c)&&!fieldCompatible){issues.push('Scope compatibility requires review: '+c.id);continue;}
+    if(c.scope?.relationship&&c.scope.relationship!=='same'&&!(c.scope.relationship==='compatible'&&fieldCompatible)){issues.push('Different territorial scope: '+c.id);continue;}
     supported.push({claimId:c.id,value:c.value,sourceIds:c.sourceIds,actualTemporal:m.actualTemporal,mode:m.mode,scope:c.scope,qualifications:c.qualifications||[]});
     eligible.push(c);
    }

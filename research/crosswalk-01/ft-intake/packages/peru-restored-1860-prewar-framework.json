@@ -1,0 +1,342 @@
+{
+  "job": {
+    "id": "dossier-83489900a5ead42fa8e209f4",
+    "entityId": "peru-restored-1860-prewar-framework",
+    "period": {
+      "from": "1878",
+      "until": "1878"
+    },
+    "mapIds": [
+      "entity-peru"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "1e0f8b689988facc57f4e200a460103368fa6b3f28b40c844540c555ec481673",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "crosswalk01-ft-reviewed-historical-equivalence-peru-restored-1860-prewar-framework",
+    "jobId": "dossier-83489900a5ead42fa8e209f4",
+    "entityId": "peru-restored-1860-prewar-framework",
+    "mapIds": [
+      "entity-peru"
+    ],
+    "worker": {
+      "id": "/root-ft-graded-normalizer",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "1e0f8b689988facc57f4e200a460103368fa6b3f28b40c844540c555ec481673",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1878",
+      "until": "1878"
+    },
+    "claims": [
+      {
+        "id": "ftwphd-population-c6a68abe4b8e3e327e7d1d83",
+        "entityId": "peru-restored-1860-prewar-framework",
+        "category": "population-statistics",
+        "value": 2746000,
+        "unit": "persons",
+        "metric": "Population (Federico–Tena historical-border estimate)",
+        "temporal": {
+          "kind": "observation",
+          "observationDate": "1878",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "peru-restored-1860-prewar-framework-ftwphd-historical-statistical-territory",
+          "description": "Federico–Tena 1878 Peru national population reconstruction. Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged. Prewar source-year Peruvian national estimate only, not permission for postwar disputed years or area/density.",
+          "relationship": "compatible"
+        },
+        "sourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "evidence": [
+          {
+            "sourceId": "ftwphd-america",
+            "locator": "research/completion-03/population/cache/america.xlsx, AMERICA, row 82, column 36; polity=Peru; year=1878; original population (000)=2746",
+            "note": "Literal original annual historical-border reconstruction. Multiply original thousands by 1000 and round for persons-unit display; original value retained. Source-derived estimate, not proof of a census in this year. No atlas interpolation or observation-to-interval conversion.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-methodology-2025",
+            "locator": "Federico–Tena (2025), Appendix I: Peru; construction section 4.1; historical-border continental workbook.",
+            "note": "Federico–Tena 1878 Peru national population reconstruction. Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged. Prewar source-year Peruvian national estimate only, not permission for postwar disputed years or area/density. Source unit matched to this registry framework; no modern ISO or geometry-derived sovereignty.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          },
+          {
+            "sourceId": "ftwphd-quality-2025",
+            "locator": "Quality Assessment worksheet; source polity=Peru; year=1878; grade=C; original workbook SHA256 bound in intake certificate",
+            "note": "fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence. Quality grades describe the source reconstruction, not historical certainty of an exact headcount.",
+            "precision": "year",
+            "temporal": {
+              "kind": "observation",
+              "observationDate": "1878",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Source-produced historical estimate; observation year 1878. No claim that a census occurred in the selected snapshot.",
+          "Source quality C — fair: scholarly reconstruction or imperfect-census interpolation with supporting evidence.",
+          "Source historical-border series, not the separate 1991-border reconstruction.",
+          "Federico–Tena 1878 Peru national population reconstruction. Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged. Prewar source-year Peruvian national estimate only, not permission for postwar disputed years or area/density.",
+          "Federico–Tena 1878 Peru national population reconstruction",
+          "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged.",
+          "Prewar source-year Peruvian national estimate only, not permission for postwar disputed years or area/density."
+        ],
+        "origin": {
+          "kind": "bulk-candidate",
+          "reference": "Federico and Tena-Junguito; DOI 10.21950/NAEF8A; 2025-v01, repository 3.0; original polity Peru; original thousands 2746; year 1878; extraction 2026-10-02; mapping B; workbook SHA256 b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210; compatibility B; source scope NEAR-EQUIVALENT; population-only permission",
+          "sourceIdentifier": "AMERICA:36:1878"
+        },
+        "compatibility": {
+          "id": "ft-graded-9666829ca0676b8b56ef",
+          "atlasEntityId": "peru-restored-1860-prewar-framework",
+          "external": {
+            "dataset": "Federico–Tena historical-border population 2025",
+            "id": "AMERICA:36",
+            "name": "Peru"
+          },
+          "class": "B",
+          "period": {
+            "from": "1878-01-01",
+            "until": "1879-01-01"
+          },
+          "fields": [
+            "population-statistics"
+          ],
+          "territorial": {
+            "classification": "NEAR-EQUIVALENT",
+            "sourceScope": "Federico–Tena 1878 Peru national population reconstruction",
+            "atlasScope": "Peru — restored 1860 constitutional framework",
+            "differences": "Source-year national statistical scope retained; no claim of exact map polygon congruence. Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged. Prewar source-year Peruvian national estimate only, not permission for postwar disputed years or area/density.",
+            "materialDifference": false
+          },
+          "continuityEstablished": true,
+          "competingEntity": false,
+          "rationale": "1878 population precedes Pacific-war territorial disruption; source-year Peru is the same national polity as the restored 1860 prewar framework. Dates lie fully inside registry coverage. Source Seminario reconstruction remains attributed, without asserting polygon identity.",
+          "evidence": [
+            {
+              "sourceId": "ftwphd-methodology-2025",
+              "locator": "Peru, lines 2934–2940; section 4.1, lines 684–701"
+            }
+          ],
+          "worker": "/root-ft-graded-normalizer",
+          "review": {
+            "reviewer": "/root/southamerica_colombia_sources",
+            "decision": "accepted",
+            "contentHash": "201e11b677876c07a9eede4ea11edb06989079a17995bee41a16083697c5fd9a"
+          }
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "ftwphd-america",
+          "ftwphd-methodology-2025",
+          "ftwphd-quality-2025"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Two content-bound population-only B NEAR-EQUIVALENT mappings and exact source-year observations independently accepted for candidate serial validation. Unchanged quality gate; existing integrator alone may accept production. All other holds preserved.",
+      "preservedPackageHashes": [
+        "ee24f8c5b8607769f15ee651035306015f65f13c96608334aaa8b676fc1702c7",
+        "36ea5a942ef6db0294d74aacb210a1e039472bb229eab9f9a4cb8badc2f95340"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "9995c82baadec74ac38c40de89bdaad4792b80816b3979a8c5689a7eab28ce41",
+    "productionFingerprint": "1e0f8b689988facc57f4e200a460103368fa6b3f28b40c844540c555ec481673",
+    "jobId": "dossier-83489900a5ead42fa8e209f4",
+    "review": {
+      "reviewer": "/root/southamerica_colombia_sources",
+      "packageHash": "9995c82baadec74ac38c40de89bdaad4792b80816b3979a8c5689a7eab28ce41",
+      "bodyReviewed": true,
+      "rationale": "Two content-bound population-only B NEAR-EQUIVALENT mappings and exact source-year observations independently accepted for candidate serial validation. Unchanged quality gate; existing integrator alone may accept production. All other holds preserved.",
+      "reviewedIssues": [
+        "Candidate claims require independent original-source review"
+      ],
+      "decisions": {
+        "ftwphd-population-c6a68abe4b8e3e327e7d1d83": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "ftwphd-population-c6a68abe4b8e3e327e7d1d83"
+    ]
+  }
+}

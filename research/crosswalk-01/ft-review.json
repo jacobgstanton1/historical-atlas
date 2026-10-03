@@ -1,0 +1,2478 @@
+{
+  "reviewer": "/root/southamerica_colombia_sources",
+  "reviewedAt": "2026-10-03",
+  "independentMappingReview": true,
+  "productionAcceptance": false,
+  "policy": "A exact same historical polity/unit; B clear continuing entity with naming/framework distinction; C population-only demonstrable quantitative compatibility; D materially different/aggregated/unclear. Quality and dates independently gated. No fabricated adjustments.",
+  "method": "All 46 prior holds joined one-to-one to cached original observations; source-wide methodology/readme and high-value exceptions reviewed. Two workbook header/source sheets checked read-only. No web research or old-file edits.",
+  "inputBindings": [
+    {
+      "path": "research/completion-03/population/intake/screening.json",
+      "sha256": "d644306aaae6a85e562ac806ad30cfb09f894b77963f6ef6a671058ae1fee1c0"
+    },
+    {
+      "path": "research/completion-03/population/historical-crosswalk.json",
+      "sha256": "1108f16c90329ca3534135ccd763d2084518a89d69c1abe51e4353564c224e40"
+    },
+    {
+      "path": "research/completion-03/population/observations.json",
+      "sha256": "cdadf5c61bab739240115e8851fb5326fd74e435779c329921ef098048984d73"
+    },
+    {
+      "path": "research/completion-03/population/cache/methodology-2025.txt",
+      "sha256": "35f2879358cb8e612581cf8ce15bc8b7d5a2b1f5f66c568e2727bc5c1fb2ad24"
+    },
+    {
+      "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+      "sha256": "088bcc416530a6532237618b100c910ec248cc099a7efb83ea70968a16a740a2"
+    },
+    {
+      "path": "data/historical-entities.json",
+      "sha256": "a728b170e323e9fefeb47eb0799cb7e44096f21a5d84290a9a9e9866e24802d6"
+    }
+  ],
+  "summary": {
+    "holdsReviewed": 46,
+    "mappingClasses": {
+      "D": 20,
+      "B": 24,
+      "C": 2
+    },
+    "populationCompatibility": {
+      "INCOMPATIBLE": 20,
+      "EXACT": 22,
+      "NEAR-EQUIVALENT": 2,
+      "QUALIFIED-COMPATIBLE": 2
+    },
+    "rowDispositions": {
+      "HELD_SCOPE": 18,
+      "HELD_DATE_VALIDATION": 1,
+      "MAPPING_REVIEW_ELIGIBLE": 3,
+      "HELD_SOURCE_QUALITY": 24
+    },
+    "mappingPermitted": 26,
+    "eligibleMappingRows": [
+      {
+        "entityId": "chile-restored-presidential-framework",
+        "year": 1938,
+        "class": "B"
+      },
+      {
+        "entityId": "peru-restored-1860-prewar-framework",
+        "year": 1878,
+        "class": "B"
+      },
+      {
+        "entityId": "united-states",
+        "year": 1800,
+        "class": "C"
+      }
+    ],
+    "newlyUnmaskedQualityFailures": [
+      {
+        "polity": "United states",
+        "year": 1815,
+        "grade": "D"
+      },
+      {
+        "polity": "United states",
+        "year": 1878,
+        "grade": "D"
+      },
+      {
+        "polity": "Palestine (Otoman Empire)",
+        "year": 1938,
+        "grade": "D"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "polity": "Austria-Hungary",
+      "entityId": "austria-hungary-dual-framework",
+      "observationYear": 1878,
+      "observationDate": "1878",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Appendix I expressly adds Bosnia in 1878–1918; registry has a separate Bosnia-Herzegovina Habsburg administration and says Bosnia belonged to neither dual-monarchy half. This aggregate combines atlas entities. No subtraction or new constituent series invented.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "lines 3955–3970; 4533–4539; 4653–4659; Appendix I Ottoman grouping and Austria-Hungary/Bosnia entries"
+        },
+        {
+          "path": "data/historical-entities.json",
+          "locator": "austria-hungary-dual-framework and bosnia-habsburg-administration"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "A",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 37491.46517122852,
+        "file": "research/completion-03/population/cache/europe.xlsx",
+        "sheet": "EUROPA",
+        "row": 81,
+        "column": 5,
+        "fileSHA256": "dc9c470b91351c01f56e8e95516d9fc87f2f3f072fe2b04b4b6911bdbc1a764b"
+      },
+      "entityEnvelope": {
+        "validFrom": "1867",
+        "validUntil": "1918-01-01",
+        "sourceIds": [
+          "b03-compromise",
+          "b03-dual-institutions"
+        ],
+        "note": "Bounds delimit curated coverage; they do not by themselves establish the full lifetime of a state or administration."
+      }
+    },
+    {
+      "polity": "Austria-Hungary",
+      "entityId": "austria-hungary-dual-framework",
+      "observationYear": 1880,
+      "observationDate": "1880",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Appendix I expressly adds Bosnia in 1878–1918; registry has a separate Bosnia-Herzegovina Habsburg administration and says Bosnia belonged to neither dual-monarchy half. This aggregate combines atlas entities. No subtraction or new constituent series invented.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "lines 3955–3970; 4533–4539; 4653–4659; Appendix I Ottoman grouping and Austria-Hungary/Bosnia entries"
+        },
+        {
+          "path": "data/historical-entities.json",
+          "locator": "austria-hungary-dual-framework and bosnia-habsburg-administration"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "A",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 39154.375425546146,
+        "file": "research/completion-03/population/cache/europe.xlsx",
+        "sheet": "EUROPA",
+        "row": 83,
+        "column": 5,
+        "fileSHA256": "dc9c470b91351c01f56e8e95516d9fc87f2f3f072fe2b04b4b6911bdbc1a764b"
+      },
+      "entityEnvelope": {
+        "validFrom": "1867",
+        "validUntil": "1918-01-01",
+        "sourceIds": [
+          "b03-compromise",
+          "b03-dual-institutions"
+        ],
+        "note": "Bounds delimit curated coverage; they do not by themselves establish the full lifetime of a state or administration."
+      }
+    },
+    {
+      "polity": "Austria-Hungary",
+      "entityId": "austria-hungary-dual-framework",
+      "observationYear": 1900,
+      "observationDate": "1900",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Appendix I expressly adds Bosnia in 1878–1918; registry has a separate Bosnia-Herzegovina Habsburg administration and says Bosnia belonged to neither dual-monarchy half. This aggregate combines atlas entities. No subtraction or new constituent series invented.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "lines 3955–3970; 4533–4539; 4653–4659; Appendix I Ottoman grouping and Austria-Hungary/Bosnia entries"
+        },
+        {
+          "path": "data/historical-entities.json",
+          "locator": "austria-hungary-dual-framework and bosnia-habsburg-administration"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "A",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 47005.98798060381,
+        "file": "research/completion-03/population/cache/europe.xlsx",
+        "sheet": "EUROPA",
+        "row": 103,
+        "column": 5,
+        "fileSHA256": "dc9c470b91351c01f56e8e95516d9fc87f2f3f072fe2b04b4b6911bdbc1a764b"
+      },
+      "entityEnvelope": {
+        "validFrom": "1867",
+        "validUntil": "1918-01-01",
+        "sourceIds": [
+          "b03-compromise",
+          "b03-dual-institutions"
+        ],
+        "note": "Bounds delimit curated coverage; they do not by themselves establish the full lifetime of a state or administration."
+      }
+    },
+    {
+      "polity": "Austria-Hungary",
+      "entityId": "austria-hungary-dual-framework",
+      "observationYear": 1914,
+      "observationDate": "1914",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Appendix I expressly adds Bosnia in 1878–1918; registry has a separate Bosnia-Herzegovina Habsburg administration and says Bosnia belonged to neither dual-monarchy half. This aggregate combines atlas entities. No subtraction or new constituent series invented.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "lines 3955–3970; 4533–4539; 4653–4659; Appendix I Ottoman grouping and Austria-Hungary/Bosnia entries"
+        },
+        {
+          "path": "data/historical-entities.json",
+          "locator": "austria-hungary-dual-framework and bosnia-habsburg-administration"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "C",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 53042.70264276648,
+        "file": "research/completion-03/population/cache/europe.xlsx",
+        "sheet": "EUROPA",
+        "row": 117,
+        "column": 5,
+        "fileSHA256": "dc9c470b91351c01f56e8e95516d9fc87f2f3f072fe2b04b4b6911bdbc1a764b"
+      },
+      "entityEnvelope": {
+        "validFrom": "1867",
+        "validUntil": "1918-01-01",
+        "sourceIds": [
+          "b03-compromise",
+          "b03-dual-institutions"
+        ],
+        "note": "Bounds delimit curated coverage; they do not by themselves establish the full lifetime of a state or administration."
+      }
+    },
+    {
+      "polity": "Denmark",
+      "entityId": "denmark-post-kiel",
+      "observationYear": 1920,
+      "observationDate": "1920",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Source entry excludes Schleswig-Holstein while the 1920 transfer changes national territorial scope. Cached source-year component definition does not reconcile Northern Schleswig; annual observation cannot be reassigned before/after transfer.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Denmark, lines 4783–4794; Germany territorial changes, line 4911"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "A",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 3113.8150887842476,
+        "file": "research/completion-03/population/cache/europe.xlsx",
+        "sheet": "EUROPA",
+        "row": 123,
+        "column": 11,
+        "fileSHA256": "dc9c470b91351c01f56e8e95516d9fc87f2f3f072fe2b04b4b6911bdbc1a764b"
+      },
+      "entityEnvelope": {
+        "validFrom": "1814-01-14",
+        "sourceIds": [
+          "b01-norway-democracy",
+          "b01-denmark-monarchy"
+        ],
+        "note": "Curated Danish kingdom after separation of Norway, not the beginning of Denmark as a kingdom."
+      }
+    },
+    {
+      "polity": "Estonia",
+      "entityId": "estonian-1938-presidential-framework",
+      "observationYear": 1938,
+      "observationDate": "1938",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_DATE_VALIDATION",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Estonian Republic statistical unit continues into 1938 presidential framework; source uses League of Nations annual estimates 1929–1938. Same continuing country, no competing territorial entity or documented territorial change.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Estonia (1919–1938), lines 4799–4803"
+        },
+        {
+          "path": "research/completion-03/population/cache/europe-readme.txt",
+          "locator": "General dataset definition: estimates adjusted to mid-year"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "B",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": "Annual observation is described as mid-year, after entity start 7 April 1938, but year-only temporal bounds straddle that start. No invented 1 July date; production validator compatibility still requires coordinator resolution.",
+      "sourceObservation": {
+        "valueThousands": 1134,
+        "file": "research/completion-03/population/cache/europe.xlsx",
+        "sheet": "EUROPA",
+        "row": 141,
+        "column": 13,
+        "fileSHA256": "dc9c470b91351c01f56e8e95516d9fc87f2f3f072fe2b04b4b6911bdbc1a764b"
+      },
+      "entityEnvelope": {
+        "validFrom": "1938-04-07",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b06-estonian-sixth-riigikogu"
+        ],
+        "note": "Bounds delimit researched dossier coverage, not the full lifetime of a state or administration."
+      }
+    },
+    {
+      "polity": "Serbia/Yugoslavia",
+      "entityId": "serbian-independent-principality-framework",
+      "observationYear": 1878,
+      "observationDate": "1878",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Series is explicitly pre-Berlin territory through 1878, post-Berlin from 1879. Target independent framework starts 13 July 1878 while source estimates are mid-year. Source 1878 must not become a post-Berlin population.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Serbia/Yugoslavia, lines 5221–5232"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "B",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": "Mid-year 1878 precedes 13 July framework start; no snapshot retiming.",
+      "sourceObservation": {
+        "valueThousands": 1384.8,
+        "file": "research/completion-03/population/cache/europe.xlsx",
+        "sheet": "EUROPA",
+        "row": 81,
+        "column": 37,
+        "fileSHA256": "dc9c470b91351c01f56e8e95516d9fc87f2f3f072fe2b04b4b6911bdbc1a764b"
+      },
+      "entityEnvelope": {
+        "validFrom": "1878-07-13",
+        "validUntil": "1881-01-01",
+        "sourceIds": [
+          "b06-berlin-treaty",
+          "b06-serbian-1869-parliament"
+        ],
+        "note": "Bounds delimit researched dossier coverage, not the full lifetime of a state or administration."
+      }
+    },
+    {
+      "polity": "Chile",
+      "entityId": "chile-parliamentary-practice-framework",
+      "observationYear": 1900,
+      "observationDate": "1900",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Appendix I names underlying censuses but gives no Tacna/Arica component inclusion rule. Historical-border label alone does not establish compatibility during the disputed-territory years.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Chile, lines 2690–2704; section 4.1, lines 684–701"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "B",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 2912.208945785047,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 104,
+        "column": 12,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1892-01-01",
+        "validUntil": "1924-01-01",
+        "sourceIds": [
+          "b09-chile-parliament"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Chile",
+      "entityId": "chile-parliamentary-practice-framework",
+      "observationYear": 1914,
+      "observationDate": "1914",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Appendix I names underlying censuses but gives no Tacna/Arica component inclusion rule. Historical-border label alone does not establish compatibility during the disputed-territory years.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Chile, lines 2690–2704; section 4.1, lines 684–701"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "B",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 3510.3375906895662,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 118,
+        "column": 12,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1892-01-01",
+        "validUntil": "1924-01-01",
+        "sourceIds": [
+          "b09-chile-parliament"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Chile",
+      "entityId": "chile-parliamentary-practice-framework",
+      "observationYear": 1920,
+      "observationDate": "1920",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Appendix I names underlying censuses but gives no Tacna/Arica component inclusion rule. Historical-border label alone does not establish compatibility during the disputed-territory years.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Chile, lines 2690–2704; section 4.1, lines 684–701"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "B",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 3754,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 124,
+        "column": 12,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1892-01-01",
+        "validUntil": "1924-01-01",
+        "sourceIds": [
+          "b09-chile-parliament"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Chile",
+      "entityId": "chile-restored-presidential-framework",
+      "observationYear": 1938,
+      "observationDate": "1938",
+      "mappingClass": "B",
+      "populationCompatibility": "NEAR-EQUIVALENT",
+      "mappingPermission": true,
+      "rowReviewClass": "B",
+      "rowDisposition": "MAPPING_REVIEW_ELIGIBLE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "1938 source-year Chile maps to continuing restored-presidential Chile framework. The previous hold refers to earlier disputed Tacna period; neither cached appendix nor atlas identifies a distinct competing 1938 Chile. General historical-border rule supports reviewed population naming link; do not infer exact polygon equivalence.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged.",
+        "Scope is the source 1938 Chile national estimate. No proof of exact atlas polygon congruence or area/density reuse; no Tacna adjustment."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Chile, lines 2690–2704; section 4.1, lines 684–701"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "B",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 4861.493424054121,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 142,
+        "column": 12,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1933-01-01",
+        "validUntil": "1961-01-01",
+        "sourceIds": [
+          "b09-chile-1925"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Panama",
+      "entityId": "b10-panama-1904-core",
+      "observationYear": 1914,
+      "observationDate": "1914",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Named census/CELADE construction does not state Canal Zone inclusion. Source administrative aggregate may include a separately represented jurisdiction; qualification alone cannot establish compatibility.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Panama, lines 2920–2923"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "B",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 405.80387336668076,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 118,
+        "column": 34,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1914-01-01",
+        "validUntil": "1915-01-01",
+        "sourceIds": [
+          "b10-panama-1904-constitution"
+        ],
+        "note": "Editorial bounds delimit source-supported partial dossier coverage, not the complete life of a state or administration."
+      }
+    },
+    {
+      "polity": "Paraguay",
+      "entityId": "paraguay-1870-constitutional-framework",
+      "observationYear": 1878,
+      "observationDate": "1878",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Paraguay; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 324.8612556917628,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 82,
+        "column": 35,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1871-01-01",
+        "validUntil": "1935-01-01",
+        "sourceIds": [
+          "b09-paraguay-charters"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Paraguay",
+      "entityId": "paraguay-1870-constitutional-framework",
+      "observationYear": 1880,
+      "observationDate": "1880",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Paraguay; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 337.8952358714953,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 84,
+        "column": 35,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1871-01-01",
+        "validUntil": "1935-01-01",
+        "sourceIds": [
+          "b09-paraguay-charters"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Paraguay",
+      "entityId": "paraguay-1870-constitutional-framework",
+      "observationYear": 1900,
+      "observationDate": "1900",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Paraguay; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 500.72701607440234,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 104,
+        "column": 35,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1871-01-01",
+        "validUntil": "1935-01-01",
+        "sourceIds": [
+          "b09-paraguay-charters"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Paraguay",
+      "entityId": "paraguay-1870-constitutional-framework",
+      "observationYear": 1914,
+      "observationDate": "1914",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Paraguay; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 632.4327190566007,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 118,
+        "column": 35,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1871-01-01",
+        "validUntil": "1935-01-01",
+        "sourceIds": [
+          "b09-paraguay-charters"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Peru",
+      "entityId": "peru-restored-1860-prewar-framework",
+      "observationYear": 1878,
+      "observationDate": "1878",
+      "mappingClass": "B",
+      "populationCompatibility": "NEAR-EQUIVALENT",
+      "mappingPermission": true,
+      "rowReviewClass": "B",
+      "rowDisposition": "MAPPING_REVIEW_ELIGIBLE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "1878 population precedes Pacific-war territorial disruption; source-year Peru is the same national polity as the restored 1860 prewar framework. Dates lie fully inside registry coverage. Source Seminario reconstruction remains attributed, without asserting polygon identity.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged.",
+        "Prewar source-year Peruvian national estimate only, not permission for postwar disputed years or area/density."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Peru, lines 2934–2940; section 4.1, lines 684–701"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "C",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 2746,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 82,
+        "column": 36,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1869-01-01",
+        "validUntil": "1879-12-27",
+        "sourceIds": [
+          "b09-peru-periods",
+          "b09-peru-1860"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Peru",
+      "entityId": "peru-later-1860-framework",
+      "observationYear": 1900,
+      "observationDate": "1900",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Seminario source is identified but cached appendix does not resolve later Pacific-war disputed Tacna/Arica inclusion. Do not transform a historical-border label into territorial proof.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Peru, lines 2934–2940; section 4.1, lines 684–701"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "C",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 3616,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 104,
+        "column": 36,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1890-01-01",
+        "validUntil": "1919-01-01",
+        "sourceIds": [
+          "b09-peru-periods",
+          "b09-peru-1860"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Peru",
+      "entityId": "peru-later-1860-framework",
+      "observationYear": 1914,
+      "observationDate": "1914",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Seminario source is identified but cached appendix does not resolve later Pacific-war disputed Tacna/Arica inclusion. Do not transform a historical-border label into territorial proof.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Peru, lines 2934–2940; section 4.1, lines 684–701"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "C",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 4134,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 118,
+        "column": 36,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1890-01-01",
+        "validUntil": "1919-01-01",
+        "sourceIds": [
+          "b09-peru-periods",
+          "b09-peru-1860"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "United states",
+      "entityId": "united-states",
+      "observationYear": 1800,
+      "observationDate": "1800",
+      "mappingClass": "C",
+      "populationCompatibility": "QUALIFIED-COMPATIBLE",
+      "mappingPermission": true,
+      "rowReviewClass": "C",
+      "rowDisposition": "MAPPING_REVIEW_ELIGIBLE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "FT source-native reconstruction and Historical Statistics Aa9 base are population-specific and source-produced. Before 1867, Alaska and Hawaii exclusions do not exclude U.S. territory; this permits source-labelled national population reuse without inventing corrections.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged.",
+        "Explicitly attribute FT/HS Aa9 reconstruction, including source-native series; Hawaii is a separate FT polity. No permission for leadership, capital or sovereignty."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "United States, lines 3012–3030; footnotes 37–38"
+        },
+        {
+          "path": "research/completion-03/population/cache/america.xlsx",
+          "locator": "AMERICA AS column; published aggregate has no separate Alaska column"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "C",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 5930.4,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 4,
+        "column": 45,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1776-07-04",
+        "sourceIds": [
+          "archives-independence"
+        ],
+        "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+      }
+    },
+    {
+      "polity": "United states",
+      "entityId": "united-states",
+      "observationYear": 1815,
+      "observationDate": "1815",
+      "mappingClass": "C",
+      "populationCompatibility": "QUALIFIED-COMPATIBLE",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "FT source-native reconstruction and Historical Statistics Aa9 base are population-specific and source-produced. Before 1867, Alaska and Hawaii exclusions do not exclude U.S. territory; this permits source-labelled national population reuse without inventing corrections.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged.",
+        "Explicitly attribute FT/HS Aa9 reconstruction, including source-native series; Hawaii is a separate FT polity. No permission for leadership, capital or sovereignty."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "United States, lines 3012–3030; footnotes 37–38"
+        },
+        {
+          "path": "research/completion-03/population/cache/america.xlsx",
+          "locator": "AMERICA AS column; published aggregate has no separate Alaska column"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 8841.230136084312,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 19,
+        "column": 45,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1776-07-04",
+        "sourceIds": [
+          "archives-independence"
+        ],
+        "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+      }
+    },
+    {
+      "polity": "United states",
+      "entityId": "united-states",
+      "observationYear": 1878,
+      "observationDate": "1878",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Methodology reconstructs Alaska separately but does not state whether it is added to the published United states column. Hawaii is separate. Actual post-1867 territorial component membership cannot be certified from cached documents; smallness or additions must not be guessed.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged.",
+        "Explicitly attribute FT/HS Aa9 reconstruction, including source-native series; Hawaii is a separate FT polity. No permission for leadership, capital or sovereignty."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "United States, lines 3012–3030; footnotes 37–38"
+        },
+        {
+          "path": "research/completion-03/population/cache/america.xlsx",
+          "locator": "AMERICA AS column; published aggregate has no separate Alaska column"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 48602.67795145528,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 82,
+        "column": 45,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1776-07-04",
+        "sourceIds": [
+          "archives-independence"
+        ],
+        "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+      }
+    },
+    {
+      "polity": "United states",
+      "entityId": "united-states",
+      "observationYear": 1880,
+      "observationDate": "1880",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Methodology reconstructs Alaska separately but does not state whether it is added to the published United states column. Hawaii is separate. Actual post-1867 territorial component membership cannot be certified from cached documents; smallness or additions must not be guessed.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged.",
+        "Explicitly attribute FT/HS Aa9 reconstruction, including source-native series; Hawaii is a separate FT polity. No permission for leadership, capital or sovereignty."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "United States, lines 3012–3030; footnotes 37–38"
+        },
+        {
+          "path": "research/completion-03/population/cache/america.xlsx",
+          "locator": "AMERICA AS column; published aggregate has no separate Alaska column"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "C",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 50539.4,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 84,
+        "column": 45,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1776-07-04",
+        "sourceIds": [
+          "archives-independence"
+        ],
+        "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+      }
+    },
+    {
+      "polity": "United states",
+      "entityId": "united-states",
+      "observationYear": 1900,
+      "observationDate": "1900",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Methodology reconstructs Alaska separately but does not state whether it is added to the published United states column. Hawaii is separate. Actual post-1867 territorial component membership cannot be certified from cached documents; smallness or additions must not be guessed.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged.",
+        "Explicitly attribute FT/HS Aa9 reconstruction, including source-native series; Hawaii is a separate FT polity. No permission for leadership, capital or sovereignty."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "United States, lines 3012–3030; footnotes 37–38"
+        },
+        {
+          "path": "research/completion-03/population/cache/america.xlsx",
+          "locator": "AMERICA AS column; published aggregate has no separate Alaska column"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "C",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 76157.6,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 104,
+        "column": 45,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1776-07-04",
+        "sourceIds": [
+          "archives-independence"
+        ],
+        "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+      }
+    },
+    {
+      "polity": "United states",
+      "entityId": "united-states",
+      "observationYear": 1914,
+      "observationDate": "1914",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Methodology reconstructs Alaska separately but does not state whether it is added to the published United states column. Hawaii is separate. Actual post-1867 territorial component membership cannot be certified from cached documents; smallness or additions must not be guessed.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged.",
+        "Explicitly attribute FT/HS Aa9 reconstruction, including source-native series; Hawaii is a separate FT polity. No permission for leadership, capital or sovereignty."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "United States, lines 3012–3030; footnotes 37–38"
+        },
+        {
+          "path": "research/completion-03/population/cache/america.xlsx",
+          "locator": "AMERICA AS column; published aggregate has no separate Alaska column"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "C",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 99171.43076083265,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 118,
+        "column": 45,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1776-07-04",
+        "sourceIds": [
+          "archives-independence"
+        ],
+        "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+      }
+    },
+    {
+      "polity": "United states",
+      "entityId": "united-states",
+      "observationYear": 1920,
+      "observationDate": "1920",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Methodology reconstructs Alaska separately but does not state whether it is added to the published United states column. Hawaii is separate. Actual post-1867 territorial component membership cannot be certified from cached documents; smallness or additions must not be guessed.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged.",
+        "Explicitly attribute FT/HS Aa9 reconstruction, including source-native series; Hawaii is a separate FT polity. No permission for leadership, capital or sovereignty."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "United States, lines 3012–3030; footnotes 37–38"
+        },
+        {
+          "path": "research/completion-03/population/cache/america.xlsx",
+          "locator": "AMERICA AS column; published aggregate has no separate Alaska column"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "B",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 106516,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 124,
+        "column": 45,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1776-07-04",
+        "sourceIds": [
+          "archives-independence"
+        ],
+        "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+      }
+    },
+    {
+      "polity": "United states",
+      "entityId": "united-states",
+      "observationYear": 1938,
+      "observationDate": "1938",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Methodology reconstructs Alaska separately but does not state whether it is added to the published United states column. Hawaii is separate. Actual post-1867 territorial component membership cannot be certified from cached documents; smallness or additions must not be guessed.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged.",
+        "Explicitly attribute FT/HS Aa9 reconstruction, including source-native series; Hawaii is a separate FT polity. No permission for leadership, capital or sovereignty."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "United States, lines 3012–3030; footnotes 37–38"
+        },
+        {
+          "path": "research/completion-03/population/cache/america.xlsx",
+          "locator": "AMERICA AS column; published aggregate has no separate Alaska column"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "B",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 129894.5326733915,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 142,
+        "column": 45,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1776-07-04",
+        "sourceIds": [
+          "archives-independence"
+        ],
+        "note": "Declaration of independence; the date of declaration is distinct from subsequent recognition."
+      }
+    },
+    {
+      "polity": "Uruguay",
+      "entityId": "uruguay-late-1830-framework",
+      "observationYear": 1900,
+      "observationDate": "1900",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Uruguay; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 919,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 104,
+        "column": 46,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1890-01-01",
+        "validUntil": "1917-01-01",
+        "sourceIds": [
+          "b09-uruguay-1830",
+          "b09-uruguay-executive"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Venezuela",
+      "entityId": "venezuela-guzman-framework",
+      "observationYear": 1878,
+      "observationDate": "1878",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Venezuela; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 1497,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 82,
+        "column": 47,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1871-01-01",
+        "validUntil": "1888-01-01",
+        "sourceIds": [
+          "b09-venezuela-caudillos"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Venezuela",
+      "entityId": "venezuela-guzman-framework",
+      "observationYear": 1880,
+      "observationDate": "1880",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Venezuela; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 1530,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 84,
+        "column": 47,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1871-01-01",
+        "validUntil": "1888-01-01",
+        "sourceIds": [
+          "b09-venezuela-caudillos"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Venezuela",
+      "entityId": "venezuela-castro-framework",
+      "observationYear": 1900,
+      "observationDate": "1900",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Venezuela; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 1964,
+        "file": "research/completion-03/population/cache/america.xlsx",
+        "sheet": "AMERICA",
+        "row": 104,
+        "column": 47,
+        "fileSHA256": "b6d17f34ae3e7841039a9dc8ee4ae16bedcd2851a2242234fe1df1afbc8b0210"
+      },
+      "entityEnvelope": {
+        "validFrom": "1900-01-01",
+        "validUntil": "1908-01-01",
+        "sourceIds": [
+          "b09-venezuela-caudillos"
+        ],
+        "note": "Bounds delimit accepted researched dossier coverage, not the full political lifetime."
+      }
+    },
+    {
+      "polity": "Dutch East Indies (Indonesia)",
+      "entityId": "b13-indies-early-volksraad",
+      "observationYear": 1920,
+      "observationDate": "1920",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Dutch East Indies (Indonesia); construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 54341.721274801705,
+        "file": "research/completion-03/population/cache/asia-bundle/asia_1800-1938_FTWPHD_2025_v01.xlsx",
+        "sheet": "ASIA",
+        "row": 123,
+        "column": 11,
+        "fileSHA256": "872284825136dcee634acb398c6468fb876277944bac6ab0956300e2e463b7a8"
+      },
+      "entityEnvelope": {
+        "validFrom": "1919-01-01",
+        "validUntil": "1925-01-01",
+        "sourceIds": [
+          "b13-indies-constitutional-archives"
+        ],
+        "note": "Editorial bounds delimit a partial source-supported dossier, not a complete state lifetime or universal territorial control."
+      }
+    },
+    {
+      "polity": "Nepal",
+      "entityId": "nepal-rana-framework",
+      "observationYear": 1878,
+      "observationDate": "1878",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Nepal; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "E",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "E"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 4789.049304828631,
+        "file": "research/completion-03/population/cache/asia-bundle/asia_1800-1938_FTWPHD_2025_v01.xlsx",
+        "sheet": "ASIA",
+        "row": 81,
+        "column": 25,
+        "fileSHA256": "872284825136dcee634acb398c6468fb876277944bac6ab0956300e2e463b7a8"
+      },
+      "entityEnvelope": {
+        "validFrom": "1857-01-01",
+        "validUntil": "1950-01-01",
+        "sourceIds": [
+          "b07-nepal-historical-profile",
+          "b07-nepal-rana-constitutional-history"
+        ],
+        "note": "Bounds delimit researched dossier coverage, not the full lifetime of a state or administration."
+      }
+    },
+    {
+      "polity": "Nepal",
+      "entityId": "nepal-rana-framework",
+      "observationYear": 1880,
+      "observationDate": "1880",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Nepal; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "E",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "E"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 4827.438324056137,
+        "file": "research/completion-03/population/cache/asia-bundle/asia_1800-1938_FTWPHD_2025_v01.xlsx",
+        "sheet": "ASIA",
+        "row": 83,
+        "column": 25,
+        "fileSHA256": "872284825136dcee634acb398c6468fb876277944bac6ab0956300e2e463b7a8"
+      },
+      "entityEnvelope": {
+        "validFrom": "1857-01-01",
+        "validUntil": "1950-01-01",
+        "sourceIds": [
+          "b07-nepal-historical-profile",
+          "b07-nepal-rana-constitutional-history"
+        ],
+        "note": "Bounds delimit researched dossier coverage, not the full lifetime of a state or administration."
+      }
+    },
+    {
+      "polity": "Nepal",
+      "entityId": "nepal-rana-framework",
+      "observationYear": 1900,
+      "observationDate": "1900",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Nepal; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "E",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "E"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 5228.66707736764,
+        "file": "research/completion-03/population/cache/asia-bundle/asia_1800-1938_FTWPHD_2025_v01.xlsx",
+        "sheet": "ASIA",
+        "row": 103,
+        "column": 25,
+        "fileSHA256": "872284825136dcee634acb398c6468fb876277944bac6ab0956300e2e463b7a8"
+      },
+      "entityEnvelope": {
+        "validFrom": "1857-01-01",
+        "validUntil": "1950-01-01",
+        "sourceIds": [
+          "b07-nepal-historical-profile",
+          "b07-nepal-rana-constitutional-history"
+        ],
+        "note": "Bounds delimit researched dossier coverage, not the full lifetime of a state or administration."
+      }
+    },
+    {
+      "polity": "Nepal",
+      "entityId": "nepal-rana-framework",
+      "observationYear": 1914,
+      "observationDate": "1914",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Nepal; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 5799.47478931278,
+        "file": "research/completion-03/population/cache/asia-bundle/asia_1800-1938_FTWPHD_2025_v01.xlsx",
+        "sheet": "ASIA",
+        "row": 117,
+        "column": 25,
+        "fileSHA256": "872284825136dcee634acb398c6468fb876277944bac6ab0956300e2e463b7a8"
+      },
+      "entityEnvelope": {
+        "validFrom": "1857-01-01",
+        "validUntil": "1950-01-01",
+        "sourceIds": [
+          "b07-nepal-historical-profile",
+          "b07-nepal-rana-constitutional-history"
+        ],
+        "note": "Bounds delimit researched dossier coverage, not the full lifetime of a state or administration."
+      }
+    },
+    {
+      "polity": "Nepal",
+      "entityId": "nepal-rana-framework",
+      "observationYear": 1938,
+      "observationDate": "1938",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Nepal; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 7345.607180304355,
+        "file": "research/completion-03/population/cache/asia-bundle/asia_1800-1938_FTWPHD_2025_v01.xlsx",
+        "sheet": "ASIA",
+        "row": 141,
+        "column": 25,
+        "fileSHA256": "872284825136dcee634acb398c6468fb876277944bac6ab0956300e2e463b7a8"
+      },
+      "entityEnvelope": {
+        "validFrom": "1857-01-01",
+        "validUntil": "1950-01-01",
+        "sourceIds": [
+          "b07-nepal-historical-profile",
+          "b07-nepal-rana-constitutional-history"
+        ],
+        "note": "Bounds delimit researched dossier coverage, not the full lifetime of a state or administration."
+      }
+    },
+    {
+      "polity": "Palestine (Otoman Empire)",
+      "entityId": "palestine-british-mandate-core",
+      "observationYear": 1930,
+      "observationDate": "1930",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SCOPE",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Stale Ottoman series label could be B naming only, but original entry defines Palestine broadly with Jordan and does not explicitly separate Transjordan in final annual values. Registry separately represents Transjordan; potential aggregate mismatch remains D.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Palestine (1919–1938), lines 4172–4196"
+        },
+        {
+          "path": "data/historical-entities.json",
+          "locator": "palestine-british-mandate-core and transjordan-1928-basic-law-core"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "C",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": true,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 1033,
+        "file": "research/completion-03/population/cache/asia-bundle/asia_1800-1938_FTWPHD_2025_v01.xlsx",
+        "sheet": "ASIA",
+        "row": 133,
+        "column": 29,
+        "fileSHA256": "872284825136dcee634acb398c6468fb876277944bac6ab0956300e2e463b7a8"
+      },
+      "entityEnvelope": {
+        "validFrom": "1923-09-29",
+        "validUntil": "1948-05-15",
+        "sourceIds": [
+          "b12-mandates-entry-1923",
+          "b12-palestine-mandate-primary",
+          "b12-israel-declaration-primary"
+        ],
+        "note": "Editorial partial coverage bounds, not full lifetime or exhaustive institutional history."
+      }
+    },
+    {
+      "polity": "Palestine (Otoman Empire)",
+      "entityId": "palestine-british-mandate-core",
+      "observationYear": 1938,
+      "observationDate": "1938",
+      "mappingClass": "D",
+      "populationCompatibility": "INCOMPATIBLE",
+      "mappingPermission": false,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Unapproved or partial identity/territorial mapping",
+      "rationale": "Stale Ottoman series label could be B naming only, but original entry defines Palestine broadly with Jordan and does not explicitly separate Transjordan in final annual values. Registry separately represents Transjordan; potential aggregate mismatch remains D.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Palestine (1919–1938), lines 4172–4196"
+        },
+        {
+          "path": "data/historical-entities.json",
+          "locator": "palestine-british-mandate-core and transjordan-1928-basic-law-core"
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": null
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 1462,
+        "file": "research/completion-03/population/cache/asia-bundle/asia_1800-1938_FTWPHD_2025_v01.xlsx",
+        "sheet": "ASIA",
+        "row": 141,
+        "column": 29,
+        "fileSHA256": "872284825136dcee634acb398c6468fb876277944bac6ab0956300e2e463b7a8"
+      },
+      "entityEnvelope": {
+        "validFrom": "1923-09-29",
+        "validUntil": "1948-05-15",
+        "sourceIds": [
+          "b12-mandates-entry-1923",
+          "b12-palestine-mandate-primary",
+          "b12-israel-declaration-primary"
+        ],
+        "note": "Editorial partial coverage bounds, not full lifetime or exhaustive institutional history."
+      }
+    },
+    {
+      "polity": "Egypt",
+      "entityId": "egypt-late-khedival-framework",
+      "observationYear": 1878,
+      "observationDate": "1878",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Egypt; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 7474.704232244485,
+        "file": "research/completion-03/population/cache/africa.xlsx",
+        "sheet": "AFRICA26",
+        "row": 82,
+        "column": 12,
+        "fileSHA256": "bf605ebcfe4ff108260ac86d0d736f28f7d7f4b2ccc6da6059c11cf0c3f525b4"
+      },
+      "entityEnvelope": {
+        "validFrom": "1878-01-01",
+        "validUntil": "1881-01-01",
+        "sourceIds": [
+          "b14-egypt-khedive",
+          "b14-egypt-fiscal"
+        ],
+        "note": "Bounds delimit accepted researched coverage, not full political lifetime."
+      }
+    },
+    {
+      "polity": "Egypt",
+      "entityId": "egypt-late-khedival-framework",
+      "observationYear": 1880,
+      "observationDate": "1880",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Egypt; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 7655.173491227796,
+        "file": "research/completion-03/population/cache/africa.xlsx",
+        "sheet": "AFRICA26",
+        "row": 84,
+        "column": 12,
+        "fileSHA256": "bf605ebcfe4ff108260ac86d0d736f28f7d7f4b2ccc6da6059c11cf0c3f525b4"
+      },
+      "entityEnvelope": {
+        "validFrom": "1878-01-01",
+        "validUntil": "1881-01-01",
+        "sourceIds": [
+          "b14-egypt-khedive",
+          "b14-egypt-fiscal"
+        ],
+        "note": "Bounds delimit accepted researched coverage, not full political lifetime."
+      }
+    },
+    {
+      "polity": "Tunisia",
+      "entityId": "tunisia-french-protectorate-framework",
+      "observationYear": 1900,
+      "observationDate": "1900",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Tunisia; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "E",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "E"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 1719.7817680681146,
+        "file": "research/completion-03/population/cache/africa.xlsx",
+        "sheet": "AFRICA26",
+        "row": 104,
+        "column": 46,
+        "fileSHA256": "bf605ebcfe4ff108260ac86d0d736f28f7d7f4b2ccc6da6059c11cf0c3f525b4"
+      },
+      "entityEnvelope": {
+        "validFrom": "1884-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b14-french-protectorates",
+          "b14-tunis-resident"
+        ],
+        "note": "Bounds delimit accepted researched coverage, not full political lifetime."
+      }
+    },
+    {
+      "polity": "Tunisia",
+      "entityId": "tunisia-french-protectorate-framework",
+      "observationYear": 1914,
+      "observationDate": "1914",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Tunisia; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "E",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "E"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 1976.8873334408972,
+        "file": "research/completion-03/population/cache/africa.xlsx",
+        "sheet": "AFRICA26",
+        "row": 118,
+        "column": 46,
+        "fileSHA256": "bf605ebcfe4ff108260ac86d0d736f28f7d7f4b2ccc6da6059c11cf0c3f525b4"
+      },
+      "entityEnvelope": {
+        "validFrom": "1884-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b14-french-protectorates",
+          "b14-tunis-resident"
+        ],
+        "note": "Bounds delimit accepted researched coverage, not full political lifetime."
+      }
+    },
+    {
+      "polity": "Tunisia",
+      "entityId": "tunisia-french-protectorate-framework",
+      "observationYear": 1920,
+      "observationDate": "1920",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Tunisia; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "E",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "E"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 2076.2579145847817,
+        "file": "research/completion-03/population/cache/africa.xlsx",
+        "sheet": "AFRICA26",
+        "row": 124,
+        "column": 46,
+        "fileSHA256": "bf605ebcfe4ff108260ac86d0d736f28f7d7f4b2ccc6da6059c11cf0c3f525b4"
+      },
+      "entityEnvelope": {
+        "validFrom": "1884-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b14-french-protectorates",
+          "b14-tunis-resident"
+        ],
+        "note": "Bounds delimit accepted researched coverage, not full political lifetime."
+      }
+    },
+    {
+      "polity": "Tunisia",
+      "entityId": "tunisia-french-protectorate-framework",
+      "observationYear": 1930,
+      "observationDate": "1930",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Tunisia; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 2318.403330464619,
+        "file": "research/completion-03/population/cache/africa.xlsx",
+        "sheet": "AFRICA26",
+        "row": 134,
+        "column": 46,
+        "fileSHA256": "bf605ebcfe4ff108260ac86d0d736f28f7d7f4b2ccc6da6059c11cf0c3f525b4"
+      },
+      "entityEnvelope": {
+        "validFrom": "1884-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b14-french-protectorates",
+          "b14-tunis-resident"
+        ],
+        "note": "Bounds delimit accepted researched coverage, not full political lifetime."
+      }
+    },
+    {
+      "polity": "Tunisia",
+      "entityId": "tunisia-french-protectorate-framework",
+      "observationYear": 1938,
+      "observationDate": "1938",
+      "mappingClass": "B",
+      "populationCompatibility": "EXACT",
+      "mappingPermission": true,
+      "rowReviewClass": "D",
+      "rowDisposition": "HELD_SOURCE_QUALITY",
+      "productionAcceptance": false,
+      "originalHoldReason": "Source quality D/E/NE, missing grade, or zero/invalid value",
+      "rationale": "Existing reviewed historical statistical-unit link preserved; source country name versus period-specific atlas constitutional label is a naming/administrative-framework distinction.",
+      "qualifications": [
+        "Population only; retain annual source estimate, not relabelled census. Original source interpolation/corrections unchanged."
+      ],
+      "sourceLocators": [
+        {
+          "path": "research/completion-03/population/cache/methodology-2025.txt",
+          "locator": "Federico–Tena (2025), Appendix I: Tunisia; construction section 4.1; historical-border continental workbook."
+        }
+      ],
+      "sourceQuality": {
+        "grade": "D",
+        "version": "2025-v01",
+        "passesUnchangedABCQualityGate": false,
+        "locator": {
+          "path": "research/completion-03/population/cache/quality-bundle/assesment_1800-1938_FTWPHD_2025_v01_readme.txt",
+          "section": "Sources: quality classes A–E; per-year/polity grades"
+        },
+        "originalScreeningGrade": "D"
+      },
+      "dateProblem": null,
+      "sourceObservation": {
+        "valueThousands": 2713.3632,
+        "file": "research/completion-03/population/cache/africa.xlsx",
+        "sheet": "AFRICA26",
+        "row": 142,
+        "column": 46,
+        "fileSHA256": "bf605ebcfe4ff108260ac86d0d736f28f7d7f4b2ccc6da6059c11cf0c3f525b4"
+      },
+      "entityEnvelope": {
+        "validFrom": "1884-01-01",
+        "validUntil": "1939-01-01",
+        "sourceIds": [
+          "b14-french-protectorates",
+          "b14-tunis-resident"
+        ],
+        "note": "Bounds delimit accepted researched coverage, not full political lifetime."
+      }
+    }
+  ]
+}
