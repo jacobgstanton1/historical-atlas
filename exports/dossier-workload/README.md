@@ -1,6 +1,6 @@
 # External dossier research workload
 
-Production commit: 51c18680e710ef3cc3021860c668b2262d95d408. Confirmed eligible occurrences: 1588; cells: 23820; missing/partial: 15434.
+Production commit: 5a59fac49bfe9139e3299beb7abcff438fc31029. Confirmed eligible occurrences: 1588; cells: 23820; missing/partial: 15405.
 Pending eligibility (179) and protected exclusions (585) are outside this export.
 
 ## Files
