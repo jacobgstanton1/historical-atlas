@@ -4,11 +4,11 @@
   "coverageDefinition": "Covered means the existing production resolver returns a curated entity in at least one snapshot where this map ID is selectable. It does not mean core completeness or coverage throughout 1800–1960. All other IDs still have map-derived fallback panels.",
   "summary": {
     "totalIdentities": 880,
-    "curatedMetadataEntities": 617,
-    "mappedIdentities": 376,
-    "coveredIdentities": 367,
-    "uncoveredIdentities": 513,
-    "percentage": 41.7,
+    "curatedMetadataEntities": 622,
+    "mappedIdentities": 378,
+    "coveredIdentities": 369,
+    "uncoveredIdentities": 511,
+    "percentage": 41.93,
     "multipleSnapshotIdentities": 519,
     "singleSnapshotIdentities": 361,
     "unresolvedQuestions": 260,
@@ -21,37 +21,37 @@
     {
       "year": 1800,
       "selectableIdentities": 547,
-      "covered": 60,
-      "uncovered": 487,
-      "percentage": 10.97
+      "covered": 61,
+      "uncovered": 486,
+      "percentage": 11.15
     },
     {
       "year": 1815,
       "selectableIdentities": 313,
-      "covered": 83,
-      "uncovered": 230,
-      "percentage": 26.52
+      "covered": 84,
+      "uncovered": 229,
+      "percentage": 26.84
     },
     {
       "year": 1878,
       "selectableIdentities": 173,
-      "covered": 103,
-      "uncovered": 70,
-      "percentage": 59.54
+      "covered": 104,
+      "uncovered": 69,
+      "percentage": 60.12
     },
     {
       "year": 1880,
       "selectableIdentities": 170,
-      "covered": 104,
-      "uncovered": 66,
-      "percentage": 61.18
+      "covered": 105,
+      "uncovered": 65,
+      "percentage": 61.76
     },
     {
       "year": 1900,
       "selectableIdentities": 166,
-      "covered": 94,
-      "uncovered": 72,
-      "percentage": 56.63
+      "covered": 95,
+      "uncovered": 71,
+      "percentage": 57.23
     },
     {
       "year": 1914,
@@ -63,23 +63,23 @@
     {
       "year": 1920,
       "selectableIdentities": 164,
-      "covered": 121,
-      "uncovered": 43,
-      "percentage": 73.78
+      "covered": 123,
+      "uncovered": 41,
+      "percentage": 75
     },
     {
       "year": 1930,
       "selectableIdentities": 164,
-      "covered": 120,
-      "uncovered": 44,
-      "percentage": 73.17
+      "covered": 122,
+      "uncovered": 42,
+      "percentage": 74.39
     },
     {
       "year": 1938,
       "selectableIdentities": 172,
-      "covered": 129,
-      "uncovered": 43,
-      "percentage": 75
+      "covered": 130,
+      "uncovered": 42,
+      "percentage": 75.58
     },
     {
       "year": 1945,
@@ -8821,8 +8821,8 @@
         "entity-greece"
       ],
       "totalIdentities": 12,
-      "uncuratedIdentities": 5,
-      "existingProfilesToReview": 7,
+      "uncuratedIdentities": 4,
+      "existingProfilesToReview": 8,
       "requiresHistoricalResearch": 12,
       "sourceStrategy": "National archives and constitutional treaties; occupation, federation and regime continuity require separate evidence.",
       "questionIds": [
@@ -9764,8 +9764,8 @@
         "entity-mongolia"
       ],
       "totalIdentities": 21,
-      "uncuratedIdentities": 5,
-      "existingProfilesToReview": 16,
+      "uncuratedIdentities": 4,
+      "existingProfilesToReview": 17,
       "requiresHistoricalResearch": 21,
       "sourceStrategy": "National archives, official cabinet chronologies and occupation records; constitutional continuity cannot be inferred from labels.",
       "questionIds": [
@@ -38868,17 +38868,59 @@
       ],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1938,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-chinese-warlords",
+          "entityId": "chinese-composite-map-region-1920",
+          "validFrom": "1920-01-01",
+          "validUntil": "1921-01-01",
+          "sourceIds": [
+            "qa-frus1920-v1-d437",
+            "b02-china-recognition"
+          ],
+          "displayName": "China — Peking government and regional military authorities",
+          "note": "Composite map region, not one historical state or a single warlord clique. Separately mapped Manchuria, Xinjiang and Tibet and omitted Taiwan must remain outside this feature’s facts."
+        },
+        {
+          "mapId": "entity-chinese-warlords",
+          "entityId": "chinese-composite-map-region-1930",
+          "validFrom": "1930-01-01",
+          "validUntil": "1931-01-01",
+          "sourceIds": [
+            "qa-frus1930-v2-d1",
+            "qa-frus1930-v2-d26",
+            "b02-china-recognition"
+          ],
+          "displayName": "China — Nationalist government and regional military authorities",
+          "note": "Composite map region; no claim of uniform Nanjing control. The 1945–1960 existing Nationalist framework must not be silently extended backward to 1930."
+        },
+        {
+          "mapId": "entity-chinese-warlords",
+          "entityId": "chinese-composite-map-region-1938",
+          "validFrom": "1938-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "basemaps"
+          ],
+          "displayName": "China — schematic map region",
+          "note": "Source-label qualification only. No 1930 political context, leaders or national statistics are transferred to 1938."
+        }
+      ],
+      "curatedEntityIds": [
+        "chinese-composite-map-region-1920",
+        "chinese-composite-map-region-1930",
+        "chinese-composite-map-region-1938"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "chinese-composite-map-region-1920",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -38889,12 +38931,13 @@
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "chinese-composite-map-region-1930",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -38905,12 +38948,13 @@
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "chinese-composite-map-region-1938",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -38920,9 +38964,9 @@
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "existing-enriched",
+      "coverageTier": "existing-enriched",
       "researchDecision": null,
       "planningFamily": "chinese",
       "planningRegion": "east-asia",
@@ -133475,20 +133519,34 @@
             "b06-russian-fundamental-laws"
           ],
           "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-russian-empire",
+          "entityId": "russian-imperial-core-pre1906",
+          "validFrom": "1800-01-01",
+          "validUntil": "1906-01-01",
+          "sourceIds": [
+            "qa01-romanov-reigns",
+            "qa01-petersburg-capital"
+          ],
+          "displayName": "Russian Empire",
+          "note": "Reviewed imperial identity; geometry remains a source snapshot, not proof of imperial territorial control."
         }
       ],
       "curatedEntityIds": [
+        "russian-imperial-core-pre1906",
         "russian-imperial-fundamental-laws-framework"
       ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "russian-imperial-core-pre1906",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -133499,12 +133557,13 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "russian-imperial-core-pre1906",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -133515,12 +133574,13 @@
         },
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "russian-imperial-core-pre1906",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -133531,12 +133591,13 @@
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "russian-imperial-core-pre1906",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -133547,12 +133608,13 @@
         },
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "russian-imperial-core-pre1906",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -142639,20 +142701,67 @@
             "ussr-dissolution"
           ],
           "note": "Batch 06 correction: Union formation bounds match independently sourced existence; the unresolved 1920 source label is not assigned to a guessed predecessor."
+        },
+        {
+          "mapId": "entity-soviet-union",
+          "entityId": "russian-soviet-civilwar-core-1920",
+          "validFrom": "1920-01-01",
+          "validUntil": "1921-01-01",
+          "sourceIds": [
+            "qa01-prlib-rsfsr",
+            "cp-cbr-imperial-history"
+          ],
+          "displayName": "Soviet Russia — RSFSR (schematic region)",
+          "note": "Upstream NAME is USSR, which predates Union formation. The schematic outline is not an assertion of uniform RSFSR control or inclusion of every separately mapped Soviet republic."
+        },
+        {
+          "mapId": "entity-soviet-union",
+          "entityId": "soviet-union",
+          "validFrom": "1938-01-01",
+          "validUntil": "1939-01-01",
+          "sourceIds": [
+            "b06-union-formation-treaty"
+          ],
+          "displayName": "Soviet Union",
+          "note": "Consistent short canonical title, alongside the existing dated Union mapping."
+        },
+        {
+          "mapId": "entity-soviet-union",
+          "entityId": "soviet-union",
+          "validFrom": "1945-01-01",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "b06-union-formation-treaty"
+          ],
+          "displayName": "Soviet Union",
+          "note": "Consistent short canonical title, alongside the existing dated Union mapping."
+        },
+        {
+          "mapId": "entity-soviet-union",
+          "entityId": "soviet-union",
+          "validFrom": "1960-01-01",
+          "validUntil": "1961-01-01",
+          "sourceIds": [
+            "b06-union-formation-treaty"
+          ],
+          "displayName": "Soviet Union",
+          "note": "Consistent short canonical title, alongside the existing dated Union mapping."
         }
       ],
       "curatedEntityIds": [
+        "russian-soviet-civilwar-core-1920",
         "soviet-union"
       ],
       "snapshotCoverage": [
         {
           "year": 1920,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "russian-soviet-civilwar-core-1920",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -167496,8 +167605,24 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1920,
       "lastAvailableSnapshot": 1930,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "mapId": "entity-white-russia",
+          "entityId": "soviet-union",
+          "validFrom": "1930-01-01",
+          "validUntil": "1931-01-01",
+          "sourceIds": [
+            "b06-union-formation-treaty",
+            "qa01-ussr-1924-constitution",
+            "cp-cbr-imperial-history"
+          ],
+          "displayName": "Soviet Union",
+          "note": "The large 1930 Soviet-region polygon is misnamed White Russia upstream. This correction does not identify the separate 1920 Belarus-region polygon as the USSR."
+        }
+      ],
+      "curatedEntityIds": [
+        "soviet-union"
+      ],
       "snapshotCoverage": [
         {
           "year": 1920,
@@ -167517,24 +167642,25 @@
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
-          "missingCoreFields": [
+          "entityId": "soviet-union",
+          "availableFields": [
             "names",
+            "leaders"
+          ],
+          "missingCoreFields": [
             "politicalStatus",
             "capitals",
             "governments",
-            "leaders",
             "currencies",
             "descriptions"
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
-      "researchStatus": "identity-review",
-      "coverageTier": "none",
+      "currentlyResolvesToDossier": true,
+      "researchStatus": "existing-enriched",
+      "coverageTier": "existing-enriched",
       "researchDecision": null,
       "planningFamily": "russian",
       "planningRegion": "east-europe",
@@ -176718,9 +176844,9 @@
           "unresolved": 31
         },
         "politicalCandidates": 121,
-        "politicalCovered": 59,
-        "politicalUncovered": 62,
-        "politicalPercentage": 48.76
+        "politicalCovered": 60,
+        "politicalUncovered": 61,
+        "politicalPercentage": 49.59
       },
       {
         "year": 1815,
@@ -176734,9 +176860,9 @@
           "unresolved": 24
         },
         "politicalCandidates": 124,
-        "politicalCovered": 83,
-        "politicalUncovered": 41,
-        "politicalPercentage": 66.94
+        "politicalCovered": 84,
+        "politicalUncovered": 40,
+        "politicalPercentage": 67.74
       },
       {
         "year": 1878,
@@ -176750,9 +176876,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 142,
-        "politicalCovered": 101,
-        "politicalUncovered": 41,
-        "politicalPercentage": 71.13
+        "politicalCovered": 102,
+        "politicalUncovered": 40,
+        "politicalPercentage": 71.83
       },
       {
         "year": 1880,
@@ -176766,9 +176892,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 143,
-        "politicalCovered": 103,
-        "politicalUncovered": 40,
-        "politicalPercentage": 72.03
+        "politicalCovered": 104,
+        "politicalUncovered": 39,
+        "politicalPercentage": 72.73
       },
       {
         "year": 1900,
@@ -176782,9 +176908,9 @@
           "unresolved": 21
         },
         "politicalCandidates": 139,
-        "politicalCovered": 93,
-        "politicalUncovered": 46,
-        "politicalPercentage": 66.91
+        "politicalCovered": 94,
+        "politicalUncovered": 45,
+        "politicalPercentage": 67.63
       },
       {
         "year": 1914,
@@ -176814,9 +176940,9 @@
           "unresolved": 11
         },
         "politicalCandidates": 150,
-        "politicalCovered": 119,
-        "politicalUncovered": 31,
-        "politicalPercentage": 79.33
+        "politicalCovered": 120,
+        "politicalUncovered": 30,
+        "politicalPercentage": 80
       },
       {
         "year": 1930,
@@ -181103,10 +181229,10 @@
         "sha256": "6067386755f8fc120a4fca44f198952a18da89cd062aa8013d5a0d08cbad8988"
       }
     ],
-    "pipelineSha256": "3c1cd4c196d1b7c52e603ad810a8b5cfb6b8c74b49afd099b9807a1e3781a53b",
-    "resolverSha256": "c819d2aa42c04fa01c39b53bd299b0dba23eb4abc91619352d75d1c78dca1210",
-    "metadataSha256": "a728b170e323e9fefeb47eb0799cb7e44096f21a5d84290a9a9e9866e24802d6",
-    "sourcesSha256": "8f3116114faaff1604eab6faffc179c517de92be11b07141baaf64148d7f3299",
+    "pipelineSha256": "6930aaf5e7b7d2f4bb4251b1331c4d5892ec3db1f3230d5f2d072f4c341ebe91",
+    "resolverSha256": "ef2543f8fc7082f3b1f539be0761ba90c3fe71969bd1ad1dbe3ac43241ac855b",
+    "metadataSha256": "b244d63eb91257e669294fa29087e1037e810b1ba48f7268dc29df95804bfc80",
+    "sourcesSha256": "c4ee60acbba0a95beea5dab31c13224d65c7954e7b0a415cc00b17df7c22989b",
     "planSha256": "e76fb23e4eefe1680f4698e0345f574a1d5f41d69f34ad08e08a0dba402ad23d",
     "classificationPlanSha256": "260036271b0aaec99acf6f41da9b8d82c0c018988744ab2cb655ed85104198fc",
     "classificationModuleSha256": "c8eee902a88feef8ace890a7f776ade411c40af4473611d47decac2a7a5e9231"

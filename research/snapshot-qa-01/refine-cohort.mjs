@@ -1,0 +1,22 @@
+// Archived construction step: certified outputs must never be overwritten.
+throw new Error('Certified QA inputs already preserved; create a separately reviewed recovery package instead of replaying this constructor.');
+// Reviewed calendar-window precision, not invented source-event dates.
+import {readJSON,saveJSON,digest} from '../../scripts/research-common.mjs';
+const file='research/snapshot-qa-01/cohort.json',c=readJSON(file);
+saveJSON('research/snapshot-qa-01/cohort-v1-preserved.json',c);
+for(const claim of c.claims)for(const ev of claim.evidence){ev.precision='day';ev.note+=' Exact-day boundaries delimit a verified whole-year research subset, not a historical accession, adoption, creation or dissolution date. Original source reign/date precision remains as stated in the locator and source review.';}
+const source=(id)=>c.sources.find(s=>s.id===id),romanov=c.sources.find(s=>s.url.endsWith('/PavelI.html')).id,capital=c.sources.find(s=>s.url.includes('2804019776')).id,bank=c.sources.find(s=>s.url.includes('/about_br/history/')).id;
+const rename={id:'qa01-petrograd-name-1914',url:'https://www.prlib.ru/history/1983280',title:'Saint Petersburg renamed Petrograd',institution:'Presidential Library',accessed:'2026-10-03',usage:'Body-reviewed 31 August 1914 Gregorian / 18 August Julian renaming. Both city names retained in the calendar-year dossier.'};
+c.sources.push(rename);
+function add(entityId,category,value,from,until,ids,note,extra={}){const temporal={kind:'interval',from,until,certainty:'exact'};c.claims.push({id:'qa01-'+digest({entityId,category,value,from,until}).slice(0,24),entityId,category,value,temporal,scope:{id:entityId+'-institutional-core',description:note,relationship:'same'},sourceIds:ids,evidence:ids.map(sourceId=>({sourceId,locator:sourceId===rename.id?'31 August 1914 renaming; Gregorian date':source(sourceId)?.usage||'Reviewed source body',note,precision:'day',temporal,interpretation:'contextual'})),status:'supported',risks:[],qualifications:[note],origin:{kind:'new-research',reference:'Bounded flagship QA core recovery',sourceIdentifier:ids.join(',')},...extra});}
+const imperial='russian-imperial-core-pre1906',frame='russian-imperial-fundamental-laws-framework';
+add(imperial,'political-institutional','Imperial state under the Romanov dynasty','1800-01-01','1906-01-01',[romanov],'Dynastic imperial status; exact endpoints are curated coverage bounds, not polity inception or dynasty transitions.',{metric:'political-status'});
+add('russian-soviet-civilwar-core-1920','political-institutional','Russian Socialist Federative Soviet Republic (constitutional identity)','1920-01-01','1921-01-01',['qa01-prlib-rsfsr'],'Formal Soviet Russian republic; no uniform control over the schematic Civil War map region is asserted.',{metric:'political-status'});
+add('soviet-union','political-institutional','Federal Union of Soviet republics (constitutional description)','1930-01-01','1931-01-01',['qa01-ussr-1924-constitution'],'The 1924 constitutional Union framework, not a claim of competitive democracy or a fixed four-republic composition in 1930.',{metric:'political-status'});
+add(frame,'leadership','Nicholas II','1914-01-01','1915-01-01',[romanov],'Verified calendar-year interior of the sourced 1894–1917 reign; these research bounds are not accession or abdication dates.',{role:'Emperor'});
+add(frame,'capital','Saint Petersburg','1914-01-01','1914-08-31',[capital,rename.id],'Same capital city; renamed Petrograd on 31 August 1914 Gregorian. The calendar-year dossier retains both dated names.');
+add(frame,'capital','Petrograd','1914-08-31','1915-01-01',[capital,rename.id],'Same capital city, renamed from Saint Petersburg on 31 August 1914 Gregorian. No capital relocation is asserted.');
+add(frame,'currency','Ruble','1914-01-01','1915-01-01',[bank],'Generic imperial monetary unit; suspension of gold conversion during the war does not mean a different currency unit. No constant convertibility is asserted.');
+const laws=readJSON('data/historical-sources.json').sources.find(s=>s.id==='b06-russian-fundamental-laws');c.sources.push(laws);
+add(frame,'overview','In 1914, Nicholas II ruled the Russian Empire under its Fundamental Laws framework. Its capital, Saint Petersburg, was renamed Petrograd during the year.','1914-01-01','1915-01-01',[romanov,laws.id,rename.id],'Selected-year core summary only; city-name transition retained within 1914, rather than projecting one name across the complete year.');
+saveJSON(file,c);console.log(digest(c));

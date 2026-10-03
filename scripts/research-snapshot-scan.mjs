@@ -72,7 +72,15 @@ function conflict(a,b){
  if(a.category==='capital'||a.category==='currency')return (a.role||a.metric||'default')===(b.role||b.metric||'default');
  return a.category==='political-institutional'&&a.legacy&&b.legacy&&a.field===b.field&&a.field==='governments';
 }
-export function scanSnapshots(context,{snapshots,entityIds,rich,queue,observationWindowYears=5,contextWindowYears=5}={}){
+export function datedMappingReviewAllows(review,mappings,entityIds,year,sources){
+ if(review?.status!=='mapping-review')return true;
+ if(entityIds.length!==1)return false;
+ const id=entityIds[0];
+ return (review.intervals||[]).some(r=>r.entityId===id&&r.sourceIds?.length&&r.sourceIds.every(s=>sources.has(s))&&
+   fullYear({temporal:{kind:'interval',from:r.validFrom,until:r.validUntil}},year)&&
+   mappings.some(m=>m.entityId===id&&m.sourceIds?.length&&m.sourceIds.every(s=>sources.has(s))));
+}
+export function scanSnapshots(context,{snapshots,entityIds,rich,queue,eligibility,observationWindowYears=5,contextWindowYears=5}={}){
  snapshots=snapshots||readSnapshotConfig(context.directory||root);
  if(!snapshots.length||snapshots.some(s=>!Number.isInteger(s.year))||new Set(snapshots.map(s=>s.year)).size!==snapshots.length)throw Error('Unique integer snapshots required.');
  if(!Number.isInteger(observationWindowYears)||observationWindowYears<0||!Number.isInteger(contextWindowYears)||contextWindowYears<0)throw Error('Nonnegative integer contextual windows required.');
@@ -81,6 +89,8 @@ export function scanSnapshots(context,{snapshots,entityIds,rich,queue,observatio
  const file=path.join(context.directory||root,'data/comprehensive-dossiers.json');
  rich=rich||context.rich||(fs.existsSync(file)?readJSON(file):{packages:[]});
  const sources=new Map([...context.registry.sources,...rich.packages.flatMap(p=>p.sources||[])].map(s=>[s.id,s]));
+ const ledgerPath=path.join(context.directory||root,'research/completion/occurrence-eligibility.json');
+ const ledger=eligibility|| (fs.existsSync(ledgerPath)?readJSON(ledgerPath):{occurrences:[]});
  const allClaims=new Map(),byEntity=new Map(),errors=[];
  const add=c=>{try{bounds(c.temporal);if(c.temporal.kind==='interval'&&!c.temporal.from&&!c.temporal.until)throw Error('Undated');}catch{errors.push({claimId:c.id,entityId:c.entityId,category:c.category,reason:'Invalid or absent temporal bounds'});return;}const temporal={...c.temporal};delete temporal.certainty;const key=digest({entityId:c.entityId,category:c.category,value:c.value,temporal,role:c.role,metric:c.metric});if(!allClaims.has(key)){allClaims.set(key,c);if(!byEntity.has(c.entityId))byEntity.set(c.entityId,[]);byEntity.get(c.entityId).push(c);}};
  // Rich records first: production store contains only serially accepted claims.
@@ -92,16 +102,18 @@ export function scanSnapshots(context,{snapshots,entityIds,rich,queue,observatio
   for(const raw of context.manifest.identities){
    if(!(raw.snapshotYears||raw.occurrences?.map(o=>o.year)||[]).includes(s.year))continue;
    occurrences++;
-   const classification=raw.classification?.classification||'unresolved';
+   const reviewed=ledger.occurrences.find(r=>r.mapId===raw.stableMapId&&r.snapshotYear===s.year);
+   if(reviewed){const certificate=readJSON(path.join(context.directory||root,reviewed.review.path));if(digest(certificate)!==reviewed.review.hash||certificate.reviewer!==reviewed.review.reviewer||reviewed.review.decision!=='accepted'||reviewed.sourceIds.some(id=>!sources.has(id)))throw Error('Uncertified occurrence eligibility');}
+   const classification=reviewed?.classification||raw.classification?.classification||'unresolved';
    if(classification==='community-people'||/antarctica/i.test(raw.stableMapId+' '+raw.displayName)){excluded.add(raw.stableMapId);continue;}
    const issues=[];
-   if(!['political-polity','dependent-administration','name-variant-or-duplicate'].includes(classification))issues.push('Unresolved or non-political classification');
+   if(!['political-polity','dependent-administration','name-variant-or-duplicate','composite-political-region'].includes(classification))issues.push('Unresolved or non-political classification');
    const mappings=context.db.mappings.filter(m=>m.mapId===raw.stableMapId).filter(m=>{try{return overlaps(bounds({kind:'interval',from:m.validFrom,until:m.validUntil}),y);}catch{issues.push('Invalid mapping date');return false;}});
    const ids=unique(mappings.map(m=>m.entityId));
    if(ids.length!==1)issues.push(ids.length?'Competing dated entity mappings':'No dated entity mapping');
    if(ids.some(id=>!entities.has(id)))issues.push('Broken entity mapping');
    const planReview=(Array.isArray(context.plan?.reviews)?context.plan.reviews.find(r=>(r.mapId||r.stableMapId)===raw.stableMapId):context.plan?.reviews?.[raw.stableMapId])||raw.researchDecision;
-   if(planReview?.status==='mapping-review')issues.push('Explicit mapping-review decision');
+   if(!reviewed&&!datedMappingReviewAllows(planReview,mappings,ids,s.year,sources))issues.push('Explicit unresolved mapping-review interval');
    if(issues.length){if(!selected||ids.some(id=>selected.has(id)))rawReview.push({snapshotYear:s.year,boundarySnapshot:s.file,rawMapId:raw.stableMapId,candidateEntityIds:ids,status:'historical-review',issues:unique(issues)});continue;}
    const id=ids[0];if(selected&&!selected.has(id))continue;
    const e=entities.get(id);

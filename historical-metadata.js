@@ -1,4 +1,6 @@
-// Metadata never changes map identity or geometry. All intervals are half-open.
+// Metadata never changes source identity or geometry. Reviewed dated display
+// names may correct source-map titles without replacing their stable map IDs.
+// All intervals are half-open.
 // Partial dates retain their precision; resolution intersects the whole selected
 // calendar year, so an intra-year transition can show more than one record.
 export function dateBounds(date) {
@@ -127,9 +129,22 @@ export function createMetadataIndex(database, sources) {
   };
 }
 let pending;
+export function reviewedMapName(metadata, mapId, year, fallback, boundaryYear = year) {
+  const result = metadata?.resolve(mapId, year);
+  if (!result?.entity || result.ambiguous) {
+    const boundary = metadata?.resolve(mapId, boundaryYear);
+    const reviewedBoundary = boundary?.mappings?.some(m => m.displayName &&
+      m.sourceIds?.length && m.sourceIds.every(id => metadata.registry.has(id)));
+    return reviewedBoundary && boundaryYear !== year ? `Mapped region — identity unresolved for ${year}` : fallback;
+  }
+  const names = [...new Set((result.mappings || []).filter(m => m.displayName &&
+    m.sourceIds?.length && m.sourceIds.every(id => metadata.registry.has(id)))
+    .map(m => m.displayName))];
+  return names.length === 1 ? names[0] : fallback;
+}
 export function loadMetadata() {
-  return pending ||= Promise.all(['./data/historical-entities.json?v=0.6.1&data=b21',
-    './data/historical-sources.json?v=0.6.1&data=b21'].map(async url => {
+  return pending ||= Promise.all(['./data/historical-entities.json?v=0.6.1&data=qa01',
+    './data/historical-sources.json?v=0.6.1&data=qa01'].map(async url => {
       const r = await fetch(url); if (!r.ok) throw new Error('Metadata HTTP ' + r.status); return r.json();
     })).then(([db, sources]) => createMetadataIndex(db, sources));
 }

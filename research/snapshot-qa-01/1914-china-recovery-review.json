@@ -1,0 +1,105 @@
+{
+  "reviewer": "/root/southamerica_colombia_sources",
+  "reviewedAt": "2026-10-03",
+  "status": "qualified-context-recovery-supported; territorial-polity-equivalence-held",
+  "snapshotYear": 1914,
+  "mapId": "entity-manchu-empire",
+  "geometry": {
+    "path": "research/completion-02/area/cache/world_1914.geojson",
+    "rawName": "Manchu Empire",
+    "properties": {
+      "NAME": "Manchu Empire",
+      "ABBREVN": "ManchuEmpire",
+      "SUBJECTO": "Manchu Empire",
+      "BORDERPRECISION": 3,
+      "PARTOF": "Manchu Empire"
+    },
+    "geometrySha256": "d2f9d00f8ed48c9b352a5178049419266584411020184f339fdb2dca6e5d354f",
+    "polygons": 2,
+    "pointChecks": [
+      {
+        "place": "Hainan",
+        "point": [
+          109.6,
+          19.2
+        ],
+        "inside": true
+      },
+      {
+        "place": "Taiwan",
+        "point": [
+          121,
+          24
+        ],
+        "inside": false
+      },
+      {
+        "place": "Manchuria interior",
+        "point": [
+          126,
+          46
+        ],
+        "inside": true
+      }
+    ],
+    "separateLabels": [
+      "Xinjiang",
+      "Tibet"
+    ],
+    "modified": false
+  },
+  "sources": [
+    {
+      "id": "b02-china-recognition",
+      "url": "https://history.state.gov/countries/china",
+      "bodyRead": true,
+      "locators": [
+        "Relations Interrupted, 1912",
+        "Relations Resumed, 1913",
+        "Relations Interrupted, 1924"
+      ],
+      "evidence": "Manchu emperor abdicated on 12 February 1912 in favour of a provisional republican government. Diplomatic relations resumed on 2 May 1913 when the Beijing legation addressed Yuan Shikai as president of the new Republic of China. The next recorded interruption is December 1924. This supports republican institutional context in 1914, not Qing identity or proof of territorial control."
+    },
+    {
+      "id": "b02-chinese-revolution-1911",
+      "url": "https://history.state.gov/milestones/1899-1913/chinese-rev",
+      "bodyRead": true,
+      "locators": [
+        "February 1912 abdication paragraph",
+        "Paragraph beginning The 1911 revolution was only the first steps",
+        "Final paragraph: full diplomatic relations with the new Republic in 1913"
+      ],
+      "evidence": "The body describes replacement of Qing rule by the Republic, February 1912 abdication, and failure to unify the country under central control. Its early Nanjing seat statement refers to initial revolutionary government and must not be turned into a 1914 capital. Its retrospective warlord account does not name a uniform 1914 administration."
+    }
+  ],
+  "registry": {
+    "qingEntity": "qing-imperial-framework",
+    "qingValidUntil": "1912-02-12",
+    "republicNationalistEntity": "china-republic-nationalist-framework",
+    "nationalistValidFrom": "1945-01-01",
+    "decision": "Neither dated existing framework may be automatically applied to 1914. A separate one-year qualified map-region identity is needed."
+  },
+  "proposal": {
+    "entityId": "chinese-republic-map-region-1914",
+    "displayName": "Republic of China — schematic map region",
+    "coverageFrom": "1914-01-01",
+    "coverageUntil": "1915-01-01",
+    "mappingType": "qualified-institutional-context-not-territorial-equivalence",
+    "sourceIds": [
+      "b02-china-recognition",
+      "b02-chinese-revolution-1911"
+    ],
+    "qualification": "The upstream Manchu Empire label is anachronistic after the 1912 abdication. Republican institutional context is supported; this generalized outline is not proof of uniform government control. Separately mapped Xinjiang and Tibet and omitted Taiwan remain outside this feature’s facts.",
+    "overview": "The source map labels this region Manchu Empire, although the Qing emperor had abdicated in February 1912. The Republic of China received full US diplomatic recognition in 1913. The republican government had not unified all of China under its control; the generalized 1914 outline should therefore be read as a schematic region rather than a verified boundary of central authority."
+  },
+  "held": [
+    "one-to-one territorial identity",
+    "capital for 1914 from revolutionary Nanjing seat",
+    "1914 leader office interval from 1913 recognition address",
+    "currency or population transfer",
+    "full-polygon central government control",
+    "backward extension of 1945 Nationalist framework"
+  ],
+  "noNewSourceDiscovery": true,
+  "productionModified": false
+}

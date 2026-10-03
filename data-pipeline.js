@@ -119,6 +119,20 @@ export function prepareCollection(collection, snapshotYear) {
   return { type: 'FeatureCollection', features };
 }
 
+// Correct reviewed titles only. Geometry, stable IDs, source authority and colours
+// stay exactly as prepared; the cached boundary collection remains immutable.
+export function applyReviewedNames(collection, displayNameFor) {
+  const features = collection.features.map(f => ({...f, properties: {...f.properties,
+    _name: clean(displayNameFor(f.properties._stableId, f.properties._name)) || f.properties._name}}));
+  for (const group of groupByStableId(features).values()) {
+    const p = group.features[0].properties;
+    const label = labelData(group.name, p._entityArea, group.features.every(f => f.properties._presentationRole === 'dependent'));
+    for (const f of group.features) Object.assign(f.properties, {_labelFull:label.full,
+      _labelShort:label.short, _label:label.display, _labelScale:label.scale,
+      _labelClass:label.kind, _labelMinZoom:label.minZoom});
+  }
+  return {...collection, features};
+}
 export function buildLabelCollection(collection) {
   const groups = groupByStableId(collection?.features || []);
   const labels = [];

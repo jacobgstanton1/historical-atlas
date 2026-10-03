@@ -1,0 +1,83 @@
+{
+  "id": "snapshot-qa01-china-1914",
+  "worker": "snapshot-qa-root-integration",
+  "sources": [
+    {
+      "id": "b02-china-recognition",
+      "institution": "United States Department of State, Office of the Historian",
+      "title": "China: historical recognition and diplomatic relations",
+      "url": "https://history.state.gov/countries/china",
+      "accessed": "2026-10-01",
+      "usage": "Imperial recognition; Beijing capital; abdication on 1912-02-12. Consular posts do not establish capitals."
+    },
+    {
+      "id": "b02-chinese-revolution-1911",
+      "institution": "United States Department of State, Office of the Historian",
+      "title": "The Chinese Revolution of 1911",
+      "url": "https://history.state.gov/milestones/1899-1913/chinese-rev",
+      "accessed": "2026-10-01",
+      "usage": "Qing imperial framework and transition; warlords are not treated as a single successor state."
+    }
+  ],
+  "claims": [
+    {
+      "id": "qa01-china-1914-qualified-overview",
+      "entityId": "chinese-republic-map-region-1914",
+      "category": "overview",
+      "value": "The source map labels this region Manchu Empire, although the Qing emperor had abdicated in February 1912. The Republic of China received full US diplomatic recognition in 1913. The republican government had not unified all of China under its control; the generalized 1914 outline should therefore be read as a schematic region rather than a verified boundary of central authority.",
+      "temporal": {
+        "kind": "interval",
+        "from": "1914-01-01",
+        "until": "1915-01-01",
+        "certainty": "exact"
+      },
+      "scope": {
+        "id": "china-1914-schematic-institutional-context",
+        "description": "The upstream Manchu Empire label is anachronistic after the 1912 abdication. Republican institutional context is supported; this generalized outline is not proof of uniform government control. Separately mapped Xinjiang and Tibet and omitted Taiwan remain outside this feature’s facts.",
+        "relationship": "same"
+      },
+      "sourceIds": [
+        "b02-china-recognition",
+        "b02-chinese-revolution-1911"
+      ],
+      "evidence": [
+        {
+          "sourceId": "b02-china-recognition",
+          "locator": "Department of State source body: February1912 abdication,1913 recognition and incomplete central unification",
+          "note": "The upstream Manchu Empire label is anachronistic after the 1912 abdication. Republican institutional context is supported; this generalized outline is not proof of uniform government control. Separately mapped Xinjiang and Tibet and omitted Taiwan remain outside this feature’s facts.",
+          "precision": "day",
+          "temporal": {
+            "kind": "interval",
+            "from": "1914-01-01",
+            "until": "1915-01-01",
+            "certainty": "exact"
+          },
+          "interpretation": "contextual"
+        },
+        {
+          "sourceId": "b02-chinese-revolution-1911",
+          "locator": "Department of State source body: February1912 abdication,1913 recognition and incomplete central unification",
+          "note": "The upstream Manchu Empire label is anachronistic after the 1912 abdication. Republican institutional context is supported; this generalized outline is not proof of uniform government control. Separately mapped Xinjiang and Tibet and omitted Taiwan remain outside this feature’s facts.",
+          "precision": "day",
+          "temporal": {
+            "kind": "interval",
+            "from": "1914-01-01",
+            "until": "1915-01-01",
+            "certainty": "exact"
+          },
+          "interpretation": "contextual"
+        }
+      ],
+      "status": "supported",
+      "risks": [],
+      "qualifications": [
+        "The upstream Manchu Empire label is anachronistic after the 1912 abdication. Republican institutional context is supported; this generalized outline is not proof of uniform government control. Separately mapped Xinjiang and Tibet and omitted Taiwan remain outside this feature’s facts."
+      ],
+      "origin": {
+        "kind": "new-research",
+        "reference": "research/snapshot-qa-01/1914-china-recovery-review.json",
+        "sourceIdentifier": "Department of State China history and1911 Revolution"
+      }
+    }
+  ]
+}

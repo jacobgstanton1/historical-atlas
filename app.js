@@ -2,12 +2,13 @@ import * as maplibregl from 'https://unpkg.com/maplibre-gl@6.11.2/dist/maplibre-
 import { geoCentroid } from 'https://cdn.jsdelivr.net/npm/d3-geo@3.1.1/+esm';
 import {
   prepareCollection,
+  applyReviewedNames,
   buildLabelCollection,
   buildPresenceIndex,
   presenceSummary,
   clean,
-} from './data-pipeline.js?v=0.6.1';
-import { loadMetadata } from './historical-metadata.js?v=canonical-cleanup1';
+} from './data-pipeline.js?v=qa01';
+import { loadMetadata, reviewedMapName } from './historical-metadata.js?v=qa01';
 import { renderDossier } from './dossier.js?v=visual-cleanup2';
 import { loadRichDossiers } from './rich-dossier.js?v=canonical-cleanup1';
 import {readAtlasState,atlasUrl,createAtlasHistory} from './atlas-state.js?v=product1';
@@ -86,6 +87,7 @@ const atlasHistory = createAtlasHistory(window, () => { if(mapReady)restoreLocat
 const findBoundaries = createBoundaryHistory(SNAPSHOTS, snapshot => loadSnapshotData(snapshot));
 loadMetadata().then(value => {
   metadata = value;
+  refreshIdentityNames();
   if (selectedStableId) renderInspector(selectedStableId);
   updateSearchResults();
 }).catch(error => {
@@ -415,8 +417,9 @@ async function setSnapshot(index, { resetSelection = false, requested = null, hi
   closeSearchResults();
 
   try {
-    const prepared = await loadSnapshotData(snapshot, activeAbort.signal);
+    const boundaries = await loadSnapshotData(snapshot, activeAbort.signal);
     if (serial !== loadSerial) return;
+    const prepared = applyReviewedNames(boundaries, (id, fallback) => reviewedMapName(metadata, id, requestedYear, fallback, snapshot.year));
 
     currentFeatures = prepared.features;
     displayedIndex = index;
@@ -469,6 +472,16 @@ async function loadSnapshotData(snapshot, signal) {
   return prepared;
 }
 
+function refreshIdentityNames() {
+  const cached = snapshotCache.get(SNAPSHOTS[displayedIndex].year);
+  if (!cached || !mapReady || boundaryLoadFailed) return;
+  const prepared = applyReviewedNames(cached, (id, fallback) => reviewedMapName(metadata, id, requestedYear, fallback, SNAPSHOTS[displayedIndex].year));
+  currentFeatures = prepared.features;
+  map.getSource('historical')?.setData(prepared);
+  map.getSource('historical-labels')?.setData(buildLabelCollection(prepared));
+  lastLabelZoom = null;
+  updateLabelZoomFilter();
+}
 function prefetchNeighbours(index) {
   const neighbours = [index - 1, index + 1]
     .filter(i => i >= 0 && i < SNAPSHOTS.length)
@@ -678,6 +691,7 @@ function goToRequestedYear(year, {historyMode = 'push'} = {}) {
   const index = nearestSnapshotIndex(clampedYear);
   if (index === currentIndex && displayedIndex === index && snapshotCache.has(SNAPSHOTS[index].year)) {
     requestedYear = clampedYear;
+    refreshIdentityNames();
     syncUrl(historyMode);
     updateTimelineUi(SNAPSHOTS[index], requestedYear);
     if (els.loading.hidden) updateMapStatus();

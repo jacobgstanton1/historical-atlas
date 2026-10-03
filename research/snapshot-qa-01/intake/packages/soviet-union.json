@@ -1,0 +1,488 @@
+{
+  "job": {
+    "id": "dossier-284761ff9b8ce564b6426fe4",
+    "entityId": "soviet-union",
+    "period": {
+      "from": "1930-01-01",
+      "until": "1931-01-01"
+    },
+    "mapIds": [
+      "entity-soviet-union",
+      "entity-white-russia"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "cca794552d4c5b22dd1dcbf269a45649c628c0ca225567a478a9c4035a34e3ed",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "snapshot-qa01-core-soviet-union",
+    "jobId": "dossier-284761ff9b8ce564b6426fe4",
+    "entityId": "soviet-union",
+    "mapIds": [
+      "entity-soviet-union",
+      "entity-white-russia"
+    ],
+    "worker": {
+      "id": "snapshot-qa-coordinator",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "cca794552d4c5b22dd1dcbf269a45649c628c0ca225567a478a9c4035a34e3ed",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1930-01-01",
+      "until": "1931-01-01"
+    },
+    "claims": [
+      {
+        "id": "qa01-f1434297f3c354523338764b",
+        "entityId": "soviet-union",
+        "category": "political-institutional",
+        "value": "Federal Soviet state: Congress of Soviets, Central Executive Committee and Council of People’s Commissars",
+        "temporal": {
+          "kind": "interval",
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "soviet-union-institutional-core",
+          "description": "Formal 1924 constitutional framework only; not the later Supreme Soviet or evidence of competitive democracy.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "qa01-ussr-1924-constitution"
+        ],
+        "evidence": [
+          {
+            "sourceId": "qa01-ussr-1924-constitution",
+            "locator": "1924 Constitution introduction; Articles 8, 13 and 37",
+            "note": "Formal 1924 constitutional framework only; not the later Supreme Soviet or evidence of competitive democracy. Exact-day boundaries delimit a verified whole-year research subset, not a historical accession, adoption, creation or dissolution date. Original source reign/date precision remains as stated in the locator and source review.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-01-01",
+              "until": "1931-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Formal 1924 constitutional framework only; not the later Supreme Soviet or evidence of competitive democracy."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Bounded snapshot identity/flagship QA; reviewed institutional source bodies",
+          "sourceIdentifier": "1924 Constitution introduction; Articles 8, 13 and 37"
+        },
+        "metric": "government-system"
+      },
+      {
+        "id": "qa01-b8d5d0a21db68e104c048ad9",
+        "entityId": "soviet-union",
+        "category": "capital",
+        "value": "Moscow",
+        "temporal": {
+          "kind": "interval",
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "soviet-union-institutional-core",
+          "description": "Constitutional federal capital; source name White Russia is retained in mapping provenance.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "qa01-ussr-1924-constitution"
+        ],
+        "evidence": [
+          {
+            "sourceId": "qa01-ussr-1924-constitution",
+            "locator": "1924 Constitution, Article 72",
+            "note": "Constitutional federal capital; source name White Russia is retained in mapping provenance. Exact-day boundaries delimit a verified whole-year research subset, not a historical accession, adoption, creation or dissolution date. Original source reign/date precision remains as stated in the locator and source review.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-01-01",
+              "until": "1931-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Constitutional federal capital; source name White Russia is retained in mapping provenance."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Bounded snapshot identity/flagship QA; reviewed institutional source bodies",
+          "sourceIdentifier": "1924 Constitution, Article 72"
+        }
+      },
+      {
+        "id": "qa01-0ebc1a97ef8689a410ee1b1b",
+        "entityId": "soviet-union",
+        "category": "overview",
+        "value": "In 1930, the Soviet Union had its federal capital at Moscow and operated under the 1924 constitutional framework. The Union had been formed in December 1922.",
+        "temporal": {
+          "kind": "interval",
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "soviet-union-institutional-core",
+          "description": "The source map’s large White Russia label is corrected as an identity error; geometry is unchanged.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "qa01-ussr-1924-constitution",
+          "b06-union-formation-treaty"
+        ],
+        "evidence": [
+          {
+            "sourceId": "qa01-ussr-1924-constitution",
+            "locator": "1924 Constitution and 1922 formation documents",
+            "note": "The source map’s large White Russia label is corrected as an identity error; geometry is unchanged. Exact-day boundaries delimit a verified whole-year research subset, not a historical accession, adoption, creation or dissolution date. Original source reign/date precision remains as stated in the locator and source review.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-01-01",
+              "until": "1931-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          },
+          {
+            "sourceId": "b06-union-formation-treaty",
+            "locator": "1924 Constitution and 1922 formation documents",
+            "note": "The source map’s large White Russia label is corrected as an identity error; geometry is unchanged. Exact-day boundaries delimit a verified whole-year research subset, not a historical accession, adoption, creation or dissolution date. Original source reign/date precision remains as stated in the locator and source review.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-01-01",
+              "until": "1931-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "The source map’s large White Russia label is corrected as an identity error; geometry is unchanged."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Bounded snapshot identity/flagship QA; reviewed institutional source bodies",
+          "sourceIdentifier": "1924 Constitution and 1922 formation documents"
+        }
+      },
+      {
+        "id": "qa01-db0bb991d89dcb02d8c0140a",
+        "entityId": "soviet-union",
+        "category": "leadership",
+        "value": "Stalin",
+        "temporal": {
+          "kind": "interval",
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "soviet-union-institutional-core",
+          "description": "Effective central political leader under Archigos coding, not a formal head-of-state office or uniform territorial control.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos original RUS-1923, 1923-03-10 to 1953-03-05",
+            "note": "Effective central political leader under Archigos coding, not a formal head-of-state office or uniform territorial control. Exact-day boundaries delimit a verified whole-year research subset, not a historical accession, adoption, creation or dissolution date. Original source reign/date precision remains as stated in the locator and source review.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-01-01",
+              "until": "1931-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Effective central political leader under Archigos coding, not a formal head-of-state office or uniform territorial control."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Bounded snapshot identity/flagship QA; reviewed institutional source bodies",
+          "sourceIdentifier": "Archigos original RUS-1923, 1923-03-10 to 1953-03-05"
+        },
+        "role": "Effective political leader (Archigos coding)"
+      },
+      {
+        "id": "qa01-50b6c50f0b278f6c559b188d",
+        "entityId": "soviet-union",
+        "category": "political-institutional",
+        "value": "Federal Union of Soviet republics (constitutional description)",
+        "temporal": {
+          "kind": "interval",
+          "from": "1930-01-01",
+          "until": "1931-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "soviet-union-institutional-core",
+          "description": "The 1924 constitutional Union framework, not a claim of competitive democracy or a fixed four-republic composition in 1930.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "qa01-ussr-1924-constitution"
+        ],
+        "evidence": [
+          {
+            "sourceId": "qa01-ussr-1924-constitution",
+            "locator": "Read primary text introduction and Articles 8, 13, 37, 72; formal constitutional framework only.",
+            "note": "The 1924 constitutional Union framework, not a claim of competitive democracy or a fixed four-republic composition in 1930.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1930-01-01",
+              "until": "1931-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "The 1924 constitutional Union framework, not a claim of competitive democracy or a fixed four-republic composition in 1930."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Bounded flagship QA core recovery",
+          "sourceIdentifier": "qa01-ussr-1924-constitution"
+        },
+        "metric": "political-status"
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "qa01-ussr-1924-constitution",
+          "b06-union-formation-treaty",
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "qa01-ussr-1924-constitution",
+          "b06-union-formation-treaty",
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "qa01-ussr-1924-constitution",
+          "b06-union-formation-treaty",
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "qa01-ussr-1924-constitution",
+          "b06-union-formation-treaty",
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent institutional/primary-source reviews, source-map qualifications and dated core facts; no geometry-based sovereignty/succession. Original accepted data remains unchanged.",
+      "preservedPackageHashes": [
+        "790759071c5aad0a3a81779298e3e4c0d5133b1ebc2b4ebe959566040d7224e2",
+        "773b1c1d6014f2812a583ec8c496bf78513210d063afbcccee3ebaf96c24e7c3"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "9e16b6d7ca85d3567dd1fe4d5a1e10755e5d32f31069b6cb230a2b1ce6cbec7a",
+    "productionFingerprint": "cca794552d4c5b22dd1dcbf269a45649c628c0ca225567a478a9c4035a34e3ed",
+    "jobId": "dossier-284761ff9b8ce564b6426fe4",
+    "review": {
+      "reviewer": "qa01-independent-russia-and-china-review",
+      "packageHash": "9e16b6d7ca85d3567dd1fe4d5a1e10755e5d32f31069b6cb230a2b1ce6cbec7a",
+      "bodyReviewed": true,
+      "rationale": "Independent institutional/primary-source reviews, source-map qualifications and dated core facts; no geometry-based sovereignty/succession. Original accepted data remains unchanged.",
+      "reviewedIssues": [],
+      "decisions": {
+        "qa01-f1434297f3c354523338764b": "accepted",
+        "qa01-b8d5d0a21db68e104c048ad9": "accepted",
+        "qa01-0ebc1a97ef8689a410ee1b1b": "accepted",
+        "qa01-db0bb991d89dcb02d8c0140a": "accepted",
+        "qa01-50b6c50f0b278f6c559b188d": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "qa01-f1434297f3c354523338764b",
+      "qa01-b8d5d0a21db68e104c048ad9",
+      "qa01-0ebc1a97ef8689a410ee1b1b",
+      "qa01-db0bb991d89dcb02d8c0140a",
+      "qa01-50b6c50f0b278f6c559b188d"
+    ]
+  }
+}

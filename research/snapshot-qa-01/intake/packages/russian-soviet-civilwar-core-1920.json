@@ -1,0 +1,490 @@
+{
+  "job": {
+    "id": "dossier-3f9922deb5b2106cc8e247f6",
+    "entityId": "russian-soviet-civilwar-core-1920",
+    "period": {
+      "from": "1920-01-01",
+      "until": "1921-01-01"
+    },
+    "mapIds": [
+      "entity-soviet-union"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "7c74d036067a5ab2eb7543a901e6c535f80e52767104c0a12c5607bababbaa1d",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "snapshot-qa01-core-russian-soviet-civilwar-core-1920",
+    "jobId": "dossier-3f9922deb5b2106cc8e247f6",
+    "entityId": "russian-soviet-civilwar-core-1920",
+    "mapIds": [
+      "entity-soviet-union"
+    ],
+    "worker": {
+      "id": "snapshot-qa-coordinator",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "7c74d036067a5ab2eb7543a901e6c535f80e52767104c0a12c5607bababbaa1d",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1920-01-01",
+      "until": "1921-01-01"
+    },
+    "claims": [
+      {
+        "id": "qa01-b94fa14fc83b641981cfe9bb",
+        "entityId": "russian-soviet-civilwar-core-1920",
+        "category": "political-institutional",
+        "value": "All-Russian Congress of Soviets; Central Executive Committee between congresses; Council of People’s Commissars",
+        "temporal": {
+          "kind": "interval",
+          "from": "1920-01-01",
+          "until": "1921-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "russian-soviet-civilwar-core-1920-institutional-core",
+          "description": "Formal RSFSR institutions during the Civil War; military control and competing administrations are not resolved by the map.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "qa01-prlib-rsfsr"
+        ],
+        "evidence": [
+          {
+            "sourceId": "qa01-prlib-rsfsr",
+            "locator": "1918 Constitution institutional hierarchy",
+            "note": "Formal RSFSR institutions during the Civil War; military control and competing administrations are not resolved by the map. Exact-day boundaries delimit a verified whole-year research subset, not a historical accession, adoption, creation or dissolution date. Original source reign/date precision remains as stated in the locator and source review.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-01-01",
+              "until": "1921-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Formal RSFSR institutions during the Civil War; military control and competing administrations are not resolved by the map."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Bounded snapshot identity/flagship QA; reviewed institutional source bodies",
+          "sourceIdentifier": "1918 Constitution institutional hierarchy"
+        },
+        "metric": "government-system"
+      },
+      {
+        "id": "qa01-8e5891ba418f7f75cb89918a",
+        "entityId": "russian-soviet-civilwar-core-1920",
+        "category": "overview",
+        "value": "In 1920, Soviet Russia operated under the RSFSR constitutional framework. The Soviet Union had not yet been formed. This generalized map region does not establish uniform control during the Civil War.",
+        "temporal": {
+          "kind": "interval",
+          "from": "1920-01-01",
+          "until": "1921-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "russian-soviet-civilwar-core-1920-institutional-core",
+          "description": "Institutional chronology is separate from the generalized territorial outline.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "qa01-prlib-rsfsr",
+          "b06-union-formation-treaty"
+        ],
+        "evidence": [
+          {
+            "sourceId": "qa01-prlib-rsfsr",
+            "locator": "1918 Constitution and 30 December 1922 Union formation",
+            "note": "Institutional chronology is separate from the generalized territorial outline. Exact-day boundaries delimit a verified whole-year research subset, not a historical accession, adoption, creation or dissolution date. Original source reign/date precision remains as stated in the locator and source review.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-01-01",
+              "until": "1921-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          },
+          {
+            "sourceId": "b06-union-formation-treaty",
+            "locator": "1918 Constitution and 30 December 1922 Union formation",
+            "note": "Institutional chronology is separate from the generalized territorial outline. Exact-day boundaries delimit a verified whole-year research subset, not a historical accession, adoption, creation or dissolution date. Original source reign/date precision remains as stated in the locator and source review.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-01-01",
+              "until": "1921-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Institutional chronology is separate from the generalized territorial outline."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Bounded snapshot identity/flagship QA; reviewed institutional source bodies",
+          "sourceIdentifier": "1918 Constitution and 30 December 1922 Union formation"
+        }
+      },
+      {
+        "id": "qa01-d2e381ffe31d47311f47e8d8",
+        "entityId": "russian-soviet-civilwar-core-1920",
+        "category": "capital",
+        "value": "Moscow",
+        "temporal": {
+          "kind": "interval",
+          "from": "1920-01-01",
+          "until": "1921-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "russian-soviet-civilwar-core-1920-institutional-core",
+          "description": "Seat of the Soviet Russian central government; not the capital of every administration within the generalized source outline.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "qa01-petersburg-capital"
+        ],
+        "evidence": [
+          {
+            "sourceId": "qa01-petersburg-capital",
+            "locator": "Capital entry: March 1918 move of the Council of People’s Commissars to Moscow",
+            "note": "Seat of the Soviet Russian central government; not the capital of every administration within the generalized source outline. Exact-day boundaries delimit a verified whole-year research subset, not a historical accession, adoption, creation or dissolution date. Original source reign/date precision remains as stated in the locator and source review.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-01-01",
+              "until": "1921-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Seat of the Soviet Russian central government; not the capital of every administration within the generalized source outline."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Bounded snapshot identity/flagship QA; reviewed institutional source bodies",
+          "sourceIdentifier": "Capital entry: March 1918 move of the Council of People’s Commissars to Moscow"
+        }
+      },
+      {
+        "id": "qa01-8b1db6d03ef3d7c2d8f7ecb6",
+        "entityId": "russian-soviet-civilwar-core-1920",
+        "category": "leadership",
+        "value": "Lenin",
+        "temporal": {
+          "kind": "interval",
+          "from": "1920-01-01",
+          "until": "1921-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "russian-soviet-civilwar-core-1920-institutional-core",
+          "description": "Effective central political leader under Archigos coding, not a formal head-of-state office or uniform territorial control.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "bulk01-archigos-v41"
+        ],
+        "evidence": [
+          {
+            "sourceId": "bulk01-archigos-v41",
+            "locator": "Archigos original RUS-1917, 1917-11-07 to 1923-03-10",
+            "note": "Effective central political leader under Archigos coding, not a formal head-of-state office or uniform territorial control. Exact-day boundaries delimit a verified whole-year research subset, not a historical accession, adoption, creation or dissolution date. Original source reign/date precision remains as stated in the locator and source review.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-01-01",
+              "until": "1921-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Effective central political leader under Archigos coding, not a formal head-of-state office or uniform territorial control."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Bounded snapshot identity/flagship QA; reviewed institutional source bodies",
+          "sourceIdentifier": "Archigos original RUS-1917, 1917-11-07 to 1923-03-10"
+        },
+        "role": "Effective political leader (Archigos coding)"
+      },
+      {
+        "id": "qa01-b2ba60c1214e436620951823",
+        "entityId": "russian-soviet-civilwar-core-1920",
+        "category": "political-institutional",
+        "value": "Russian Socialist Federative Soviet Republic (constitutional identity)",
+        "temporal": {
+          "kind": "interval",
+          "from": "1920-01-01",
+          "until": "1921-01-01",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "russian-soviet-civilwar-core-1920-institutional-core",
+          "description": "Formal Soviet Russian republic; no uniform control over the schematic Civil War map region is asserted.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "qa01-prlib-rsfsr"
+        ],
+        "evidence": [
+          {
+            "sourceId": "qa01-prlib-rsfsr",
+            "locator": "Read 1918 institutional hierarchy and later Union distinction. Constitutional institutions do not establish uniform civil-war control.",
+            "note": "Formal Soviet Russian republic; no uniform control over the schematic Civil War map region is asserted.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1920-01-01",
+              "until": "1921-01-01",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Formal Soviet Russian republic; no uniform control over the schematic Civil War map region is asserted."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Bounded flagship QA core recovery",
+          "sourceIdentifier": "qa01-prlib-rsfsr"
+        },
+        "metric": "political-status"
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "qa01-prlib-rsfsr",
+          "b06-union-formation-treaty",
+          "qa01-petersburg-capital",
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "qa01-prlib-rsfsr",
+          "b06-union-formation-treaty",
+          "qa01-petersburg-capital",
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "qa01-prlib-rsfsr",
+          "b06-union-formation-treaty",
+          "qa01-petersburg-capital",
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "qa01-prlib-rsfsr",
+          "b06-union-formation-treaty",
+          "qa01-petersburg-capital",
+          "bulk01-archigos-v41"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent institutional/primary-source reviews, source-map qualifications and dated core facts; no geometry-based sovereignty/succession. Original accepted data remains unchanged.",
+      "preservedPackageHashes": [
+        "790759071c5aad0a3a81779298e3e4c0d5133b1ebc2b4ebe959566040d7224e2",
+        "773b1c1d6014f2812a583ec8c496bf78513210d063afbcccee3ebaf96c24e7c3"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "ff7ca9768dc8390d456d49f17106b557d7d0cc48f072d6f0d71c8b35c6ed7e80",
+    "productionFingerprint": "7c74d036067a5ab2eb7543a901e6c535f80e52767104c0a12c5607bababbaa1d",
+    "jobId": "dossier-3f9922deb5b2106cc8e247f6",
+    "review": {
+      "reviewer": "qa01-independent-russia-and-china-review",
+      "packageHash": "ff7ca9768dc8390d456d49f17106b557d7d0cc48f072d6f0d71c8b35c6ed7e80",
+      "bodyReviewed": true,
+      "rationale": "Independent institutional/primary-source reviews, source-map qualifications and dated core facts; no geometry-based sovereignty/succession. Original accepted data remains unchanged.",
+      "reviewedIssues": [],
+      "decisions": {
+        "qa01-b94fa14fc83b641981cfe9bb": "accepted",
+        "qa01-8e5891ba418f7f75cb89918a": "accepted",
+        "qa01-d2e381ffe31d47311f47e8d8": "accepted",
+        "qa01-8b1db6d03ef3d7c2d8f7ecb6": "accepted",
+        "qa01-b2ba60c1214e436620951823": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "qa01-b94fa14fc83b641981cfe9bb",
+      "qa01-8e5891ba418f7f75cb89918a",
+      "qa01-d2e381ffe31d47311f47e8d8",
+      "qa01-8b1db6d03ef3d7c2d8f7ecb6",
+      "qa01-b2ba60c1214e436620951823"
+    ]
+  }
+}
