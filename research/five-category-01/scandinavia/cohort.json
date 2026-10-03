@@ -1,0 +1,222 @@
+{
+  "id": "five-category-01-scandinavia",
+  "worker": "scandinavia-five-category",
+  "sources": [
+    {
+      "id": "b01-norwegian-units",
+      "institution": "Norges Bank",
+      "title": "Units of account in Norway from 1514",
+      "url": "https://www.norges-bank.no/en/topics/statistics/Price-calculator-/Units-of-account-in-Norway-from-1514/",
+      "accessed": "2026-10-01",
+      "usage": "Dated historical facts paraphrased from the cited institutional text; no illustrations reproduced."
+    },
+    {
+      "id": "fc01-sweden-riksgald-1789",
+      "institution": "Sveriges Riksbank",
+      "title": "1789 — Riksgäldskontoret grundas",
+      "url": "https://www.riksbank.se/sv/om-riksbanken/historia/historisk-tidslinje/1700-1799/riksgaldskontoret-grundas/",
+      "accessed": "2026-10-03",
+      "kind": "institutional-history",
+      "usage": "Two historical monetary units and1789–1802note-issuance period paraphrased; unrelated narrative chronology not reused."
+    },
+    {
+      "id": "r01-nordic-danish-coins",
+      "title": "Historical coins",
+      "institution": "Danmarks Nationalbank",
+      "url": "https://www.nationalbanken.dk/en/what-we-do/notes-and-coins/historical-coins",
+      "accessed": "2026-10-02",
+      "kind": "institutional-history",
+      "usage": "Individual factual paraphrases only; no images or full copyrighted source copied."
+    }
+  ],
+  "claims": [
+    {
+      "id": "fc01-sweden-two-riksdaler",
+      "entityId": "sweden-kingdom",
+      "category": "currency",
+      "value": "Riksdaler riksgälds and riksdaler banco",
+      "status": "supported",
+      "temporal": {
+        "kind": "interval",
+        "from": "1800",
+        "until": "1801",
+        "certainty": "exact"
+      },
+      "sourceIds": [
+        "fc01-sweden-riksgald-1789"
+      ],
+      "scope": {
+        "id": "sweden-kingdom-fc01-currency",
+        "relationship": "same",
+        "description": "Swedish kingdom monetary units; two contemporaryunits retained rather than a fabricated singleunit."
+      },
+      "evidence": [
+        {
+          "sourceId": "fc01-sweden-riksgald-1789",
+          "locator": "1789 historical timeline final paragraph; lines1570–1575",
+          "note": "Riksbank explicitly describes1789–1802DebtOffice note issues and two currencies,riksgälds/banco. Interior1790–1801 avoids transitionyearprecision; full1800covered.",
+          "precision": "year",
+          "interpretation": "contextual",
+          "temporal": {
+            "kind": "interval",
+            "from": "1790",
+            "until": "1801",
+            "certainty": "exact"
+          }
+        }
+      ],
+      "qualifications": [
+        "Year-precision researched interior; broad source interval retained separately. Boundaries describe curation, not historical creation/dissolution.",
+        "Composite monarchies retain constituent monetary systems; no single uniform union currency or same silver value inferred."
+      ],
+      "origin": {
+        "kind": "new-research",
+        "reference": "five-category-01/scandinavia/source-review.json",
+        "sourceIdentifier": "1789 historical timeline final paragraph; lines1570–1575",
+        "temporalBasis": "bounded-research-subset"
+      },
+      "risks": []
+    },
+    {
+      "id": "fc01-denmark-rigsbankdaler1815",
+      "entityId": "denmark-post-kiel",
+      "category": "currency",
+      "value": "Rigsbankdaler",
+      "status": "supported",
+      "temporal": {
+        "kind": "interval",
+        "from": "1815",
+        "until": "1817",
+        "certainty": "exact"
+      },
+      "sourceIds": [
+        "r01-nordic-danish-coins"
+      ],
+      "scope": {
+        "id": "denmark-post-kiel-fc01-currency",
+        "relationship": "same",
+        "description": "Danish kingdom monetarydenomination afterKiel; duchies retained distinct currencyrelationships."
+      },
+      "evidence": [
+        {
+          "sourceId": "r01-nordic-danish-coins",
+          "locator": "Historical coin series paragraphs;lines15–18",
+          "note": "1813reformestablishedRigsbankcurrency;1818Nationalbanktransitionstillcalledrigsbankdaler. Fullinterior1814–1817 supports1815withoutprojecting1819notesbackward.",
+          "precision": "year",
+          "interpretation": "contextual",
+          "temporal": {
+            "kind": "interval",
+            "from": "1814",
+            "until": "1817",
+            "certainty": "exact"
+          }
+        }
+      ],
+      "qualifications": [
+        "Year-precision researched interior; broad source interval retained separately. Boundaries describe curation, not historical creation/dissolution.",
+        "Composite monarchies retain constituent monetary systems; no single uniform union currency or same silver value inferred."
+      ],
+      "origin": {
+        "kind": "new-research",
+        "reference": "five-category-01/scandinavia/source-review.json",
+        "sourceIdentifier": "Historical coin series paragraphs;lines15–18",
+        "temporalBasis": "bounded-research-subset"
+      },
+      "risks": []
+    },
+    {
+      "id": "fc01-union-norwegian-riksbankdaler",
+      "entityId": "sweden-norway-union",
+      "category": "currency",
+      "value": "Riksbankdaler (Norwegian constituent unit)",
+      "status": "supported",
+      "temporal": {
+        "kind": "interval",
+        "from": "1815",
+        "until": "1815",
+        "certainty": "exact"
+      },
+      "sourceIds": [
+        "b01-norwegian-units"
+      ],
+      "scope": {
+        "id": "sweden-norway-union-fc01-currency",
+        "relationship": "same",
+        "description": "Norwegian constituent monetaryunit withinpersonalunion; excludesSwedishcurrency; usefulpartial whole-polityevidence."
+      },
+      "evidence": [
+        {
+          "sourceId": "b01-norwegian-units",
+          "locator": "Units of account table1813 and1816;lines24–28",
+          "note": "Norwaytable gives1813riksbankdaler and1816speciedaler; interior1814–1815 establishesfull1815. DoesnotestablishSwedishconstituentcurrency.",
+          "precision": "year",
+          "interpretation": "contextual",
+          "temporal": {
+            "kind": "interval",
+            "from": "1814",
+            "until": "1815",
+            "certainty": "exact"
+          }
+        }
+      ],
+      "qualifications": [
+        "Year-precision researched interior; broad source interval retained separately. Boundaries describe curation, not historical creation/dissolution.",
+        "Composite monarchies retain constituent monetary systems; no single uniform union currency or same silver value inferred."
+      ],
+      "origin": {
+        "kind": "new-research",
+        "reference": "five-category-01/scandinavia/source-review.json",
+        "sourceIdentifier": "Units of account table1813 and1816;lines24–28",
+        "temporalBasis": "bounded-research-subset"
+      },
+      "risks": []
+    },
+    {
+      "id": "fc01-dano-norwegian-riksdaler",
+      "entityId": "denmark-norway-monarchy",
+      "category": "currency",
+      "value": "Riksdaler courant (Norwegian constituent unit)",
+      "status": "supported",
+      "temporal": {
+        "kind": "interval",
+        "from": "1800",
+        "until": "1812",
+        "certainty": "exact"
+      },
+      "sourceIds": [
+        "b01-norwegian-units"
+      ],
+      "scope": {
+        "id": "denmark-norway-monarchy-fc01-currency",
+        "relationship": "same",
+        "description": "Norwegian constituent unit withinDanish–Norwegiancompositemonarchy; notuniformallkingdom/dependencycurrency."
+      },
+      "evidence": [
+        {
+          "sourceId": "b01-norwegian-units",
+          "locator": "Units of account table1795 and1813;lines21–25",
+          "note": "Norwegian1795riksdalercourant relation4:5 withspecies; next1813riksbankdaler. Interior1796–1812 established; Danishcoinageandmonopoly notinferred.",
+          "precision": "year",
+          "interpretation": "contextual",
+          "temporal": {
+            "kind": "interval",
+            "from": "1796",
+            "until": "1812",
+            "certainty": "exact"
+          }
+        }
+      ],
+      "qualifications": [
+        "Year-precision researched interior; broad source interval retained separately. Boundaries describe curation, not historical creation/dissolution.",
+        "Composite monarchies retain constituent monetary systems; no single uniform union currency or same silver value inferred."
+      ],
+      "origin": {
+        "kind": "new-research",
+        "reference": "five-category-01/scandinavia/source-review.json",
+        "sourceIdentifier": "Units of account table1795 and1813;lines21–25",
+        "temporalBasis": "bounded-research-subset"
+      },
+      "risks": []
+    }
+  ]
+}
