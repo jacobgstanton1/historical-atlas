@@ -457,3 +457,22 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
 .dossier-header .citation-group > summary { margin-left: 2px; }
 .dossier-header .citation-links { font-family: ui-sans-serif, "Segoe UI", sans-serif; font-size: 11px; font-weight: 400; line-height: 1.5; }
 .dossier-header .citation-links .fact-source { font-size: 11px; vertical-align: baseline; white-space: normal; }
+
+/* Small product controls; approved atlas layout stays unchanged. */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.inspector-actions { position: absolute; top: 12px; right: 64px; z-index: 3; }
+.dossier-share { display: inline-flex; align-items: center; gap: 5px; min-height: 32px; padding: 0 6px; border: 0; border-radius: 4px; background: var(--panel); color: #334b5a; font-size: 11px; cursor: pointer; }
+.dossier-share svg { width: 15px; height: 15px; }
+.dossier-share:hover { background: #e9eff2; }
+.share-fallback { padding: 54px 18px 10px; font-size: 12px; }
+.share-fallback[hidden] { display: none; }
+.share-fallback input { width: 100%; margin-top: 5px; padding: 8px; color: var(--ink); border: 1px solid #cbd7de; border-radius: 4px; background: #fff; }
+.about-dialog { width: min(480px,calc(100% - 28px)); max-height: calc(100dvh - 36px); overflow-y: auto; padding: 24px; border: 1px solid #cbd7de; border-radius: 6px; background: var(--panel); color: var(--ink); font-size: 13px; line-height: 1.6; }
+.about-dialog::backdrop { background: rgba(17,22,27,.4); }
+.about-dialog h2 { font-family: Georgia,"Times New Roman",serif; font-weight: 500; font-size: 25px; margin: 0 36px 18px 0; }
+.about-dialog dl { margin: 18px 0; }
+.about-dialog dt { font-weight: 600; margin-top: 13px; color: #233e50; }
+.about-dialog dd { margin: 3px 0 0; color: #53636d; }
+.about-dialog a { color: #245672; }
+.about-close { position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; border: 1px solid #cbd7de; border-radius: 4px; background: var(--panel); color: #334b5a; font-size: 22px; cursor: pointer; }
+.about-dialog :is(a,button,input):focus-visible,.share-fallback input:focus-visible { outline: 2px solid #245672; outline-offset: 3px; }

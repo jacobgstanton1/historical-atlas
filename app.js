@@ -10,6 +10,7 @@ import {
 import { loadMetadata } from './historical-metadata.js?v=canonical-cleanup1';
 import { renderDossier } from './dossier.js?v=visual-cleanup2';
 import { loadRichDossiers } from './rich-dossier.js?v=canonical-cleanup1';
+import {readAtlasState,atlasUrl,createAtlasHistory} from './atlas-state.js?v=product1';
 import { createBoundaryHistory } from './boundary-history.js?v=0.6.1';
 
 const SNAPSHOTS = [
@@ -28,7 +29,7 @@ const SNAPSHOTS = [
 
 const TEST_MIN_YEAR = SNAPSHOTS[0].year;
 const TEST_MAX_YEAR = SNAPSHOTS[SNAPSHOTS.length - 1].year;
-const INITIAL_YEAR = 1938;
+const INITIAL_YEAR = readAtlasState(window.location.href).year;
 const WORLD_BOUNDS = [[-179, -56], [179, 74]];
 const HISTORICAL_BASE = 'https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/';
 const INDEX_URL = 'https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/index.json';
@@ -78,6 +79,10 @@ let selectedName = '';
 let renderedDossierId = null;
 let displayedIndex = currentIndex;
 let boundaryLoadFailed = false;
+let mapReady = false;
+let restoreSerial = 0;
+let shareFeedbackTimer;
+const atlasHistory = createAtlasHistory(window, () => { if(mapReady)restoreLocation(); });
 const findBoundaries = createBoundaryHistory(SNAPSHOTS, snapshot => loadSnapshotData(snapshot));
 loadMetadata().then(value => {
   metadata = value;
@@ -133,6 +138,7 @@ const map = new maplibregl.Map({
 map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'bottom-right');
 
 map.on('load', async () => {
+  mapReady = true;
   installMapLayers();
   wireMapInteractions();
   resetView({ duration: 0 });
@@ -142,7 +148,7 @@ map.on('load', async () => {
   const initialTasks = [
     loadLandMask(),
     loadPresenceRegistry(),
-    setSnapshot(currentIndex, { resetSelection: false, requested: INITIAL_YEAR }),
+    restoreLocation(),
   ];
   await Promise.allSettled(initialTasks);
   hideLoading();
@@ -388,7 +394,7 @@ function chooseMostSpecificFeature(features) {
     .sort((a, b) => Number(a.properties?._area || Infinity) - Number(b.properties?._area || Infinity))[0] || null;
 }
 
-async function setSnapshot(index, { resetSelection = false, requested = null } = {}) {
+async function setSnapshot(index, { resetSelection = false, requested = null, historyMode = 'push' } = {}) {
   index = clamp(index, 0, SNAPSHOTS.length - 1);
   const snapshot = SNAPSHOTS[index];
   if (!snapshot) return;
@@ -403,6 +409,7 @@ async function setSnapshot(index, { resetSelection = false, requested = null } =
   activeAbort = new AbortController();
 
   updateTimelineUi(snapshot, requestedYear);
+  syncUrl(historyMode);
   els.status.textContent = `Loading ${snapshot.year}…`;
   showLoading(`Loading ${snapshot.year} boundaries…`);
   closeSearchResults();
@@ -474,7 +481,7 @@ function prefetchNeighbours(index) {
   }
 }
 
-function selectFeature(stableId, { zoomTo = false } = {}) {
+function selectFeature(stableId, { zoomTo = false, historyMode = 'push' } = {}) {
   if (!stableId) return;
   const matches = currentFeatures.filter(item => item.properties?._stableId === stableId);
   if (!matches.length) return;
@@ -482,6 +489,7 @@ function selectFeature(stableId, { zoomTo = false } = {}) {
   const newlyOpened = !selectedStableId;
   selectedStableId = stableId;
   selectedName = clean(matches[0].properties?._name);
+  syncUrl(historyMode);
   if (newlyOpened) requestAnimationFrame(() => els.closeInspector.focus({ preventScroll: true }));
   map.setFilter('selected-outline', ['==', ['get', '_stableId'], stableId]);
   renderInspector(stableId);
@@ -514,8 +522,10 @@ function renderInspector(stableId) {
   body.scrollTop = scroll;
 }
 
-function clearSelection() {
+function clearSelection({historyMode = 'push'} = {}) {
   selectedStableId = null;
+  syncUrl(historyMode);
+  document.querySelector('#share-fallback').hidden = true;
   renderedDossierId = null;
   if (map.getLayer('selected-outline')) {
     map.setFilter('selected-outline', ['==', ['get', '_stableId'], '__none__']);
@@ -661,20 +671,21 @@ function nearestSnapshotIndex(year) {
   return bestIndex;
 }
 
-function goToRequestedYear(year) {
+function goToRequestedYear(year, {historyMode = 'push'} = {}) {
   const clampedYear = clamp(Math.round(Number(year)), TEST_MIN_YEAR, TEST_MAX_YEAR);
   if (!Number.isFinite(clampedYear)) return;
-  stopPlay();
+  if(playTimer)stopPlay();
   const index = nearestSnapshotIndex(clampedYear);
   if (index === currentIndex && displayedIndex === index && snapshotCache.has(SNAPSHOTS[index].year)) {
     requestedYear = clampedYear;
+    syncUrl(historyMode);
     updateTimelineUi(SNAPSHOTS[index], requestedYear);
     if (els.loading.hidden) updateMapStatus();
     if (selectedStableId) renderInspector(selectedStableId);
     updateSearchResults();
     return;
   }
-  setSnapshot(index, { resetSelection: false, requested: clampedYear });
+  setSnapshot(index, { resetSelection: false, requested: clampedYear, historyMode });
 }
 
 function worldPadding() {
@@ -725,13 +736,14 @@ function togglePlay() {
       return;
     }
     const nextIndex = currentIndex + 1;
-    setSnapshot(nextIndex, { resetSelection: false, requested: SNAPSHOTS[nextIndex].year });
+    setSnapshot(nextIndex, { resetSelection: false, requested: SNAPSHOTS[nextIndex].year, historyMode: 'transient' });
   }, 1700);
 }
 
 function stopPlay() {
   if (playTimer) window.clearInterval(playTimer);
   playTimer = null;
+  if(mapReady)syncUrl('commit');
   els.play.dataset.playing = 'false';
   els.play.setAttribute('aria-label', 'Play timeline');
   els.play.title = 'Play timeline';
@@ -760,11 +772,11 @@ function isEditableTarget(target) {
 }
 
 els.timeline.addEventListener('input', event => {
-  goToRequestedYear(Number(event.target.value));
+  goToRequestedYear(Number(event.target.value), {historyMode: 'transient'});
 });
 
 els.timeline.addEventListener('change', event => {
-  goToRequestedYear(Number(event.target.value));
+  goToRequestedYear(Number(event.target.value), {historyMode: 'commit'});
 });
 els.yearForm.addEventListener('submit', event => {
   event.preventDefault();
@@ -796,7 +808,7 @@ document.addEventListener('pointerdown', event => {
 });
 
 document.addEventListener('keydown', event => {
-  if (isEditableTarget(event.target)) return;
+  if (document.querySelector('#about-dialog').open || isEditableTarget(event.target)) return;
   if (event.key !== 'Escape' && event.target.closest?.('button, a, #inspector')) return;
   if (event.key === 'ArrowLeft') {
     event.preventDefault(); stopPlay(); step(-1);
@@ -811,4 +823,43 @@ document.addEventListener('keydown', event => {
   } else if (event.key === 'Escape') {
     clearSelection(); closeSearchResults();
   }
+});
+
+function syncUrl(mode='push') {
+  if(mode==='none')return;
+  ++restoreSerial;
+  atlasHistory.navigate({year:requestedYear,territory:selectedStableId},mode);
+}
+async function restoreLocation() {
+  const serial=++restoreSerial,state=readAtlasState(window.location.href);
+  // Restoration must not create another navigation entry or finalize a slider/play transaction.
+  if(playTimer){window.clearInterval(playTimer);playTimer=null;els.play.dataset.playing='false';els.play.setAttribute('aria-label','Play timeline');els.play.title='Play timeline';}
+  clearSelection({historyMode:'none'});
+  await setSnapshot(nearestSnapshotIndex(state.year),{requested:state.year,historyMode:'none'});
+  if(serial!==restoreSerial)return;
+  if(boundaryLoadFailed){atlasHistory.navigate(state,'replace');return;}
+  if(state.territory)selectFeature(state.territory,{zoomTo:true,historyMode:'none'});
+  syncUrl('replace');
+}
+const aboutDialog=document.querySelector('#about-dialog');
+document.querySelector('#about-toggle').addEventListener('click',()=>aboutDialog.showModal());
+document.querySelector('#about-close').addEventListener('click',()=>aboutDialog.close());
+aboutDialog.addEventListener('click',event=>{if(event.target===aboutDialog){const b=aboutDialog.getBoundingClientRect();if(event.clientX<b.left||event.clientX>b.right||event.clientY<b.top||event.clientY>b.bottom)aboutDialog.close();}});
+const shareButton=document.querySelector('#share-territory'),shareLabel=document.querySelector('#share-label'),shareStatus=document.querySelector('#share-status');
+function shareFeedback(message) {
+  clearTimeout(shareFeedbackTimer);shareLabel.textContent=message;shareStatus.textContent=message;
+  shareFeedbackTimer=setTimeout(()=>{shareLabel.textContent='Share';},3500);
+}
+shareButton.addEventListener('click',async()=>{
+  if(!selectedStableId)return;
+  const url=atlasUrl(window.location.href,{year:requestedYear,territory:selectedStableId});
+  clearTimeout(shareFeedbackTimer);shareLabel.textContent='Share';shareStatus.textContent='';
+  shareButton.disabled=true;document.querySelector('#share-fallback').hidden=true;
+  try {
+    if(navigator.share){try{await navigator.share({title:'Historical Atlas — '+selectedName,text:selectedName+' · '+requestedYear,url});shareFeedback('Link shared');return;}catch(error){if(error.name==='AbortError')return;}}
+    if(!navigator.clipboard?.writeText)throw Error('Clipboard unavailable');
+    await navigator.clipboard.writeText(url);shareFeedback('Link copied');
+  } catch {
+    const input=document.querySelector('#share-url');input.value=url;document.querySelector('#share-fallback').hidden=false;input.focus();input.select();shareFeedback('Copy link below');
+  } finally {shareButton.disabled=false;}
 });

@@ -47,5 +47,6 @@ try{
  await page.screenshot({path:path.join(os.tmpdir(),'atlas-polish-mobile-rich.png')});
  await page.setViewportSize({width:768,height:1024});check('tablet panel and controls stay within viewport',await page.locator('.topbar').boundingBox().then(b=>b.x>=0&&b.x+b.width<=768)&&await page.locator('.timeline-shell').boundingBox().then(b=>b.x>=0&&b.x+b.width<=768));
  await page.emulateMedia({reducedMotion:'reduce'});check('reduced motion disables panel and control transitions',await page.locator('#inspector').evaluate(e=>getComputedStyle(e).transitionDuration==='0s'));
+ if(process.argv.includes('--product'))await (await import('./frontend-product-checks.mjs')).checkProduct({page,url,ready,year,check});
  console.log(JSON.stringify({errors}));check('no runtime or console errors',errors.length===0);console.log(JSON.stringify({url,checks:checks.length,errors,screenshots:os.tmpdir()}));
 }finally{await browser.close();if(server)await new Promise(r=>server.close(r));}

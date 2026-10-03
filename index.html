@@ -5,11 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#11161b" />
   <title>Historical Atlas</title>
+  <meta name="description" content="Interactive political world map and historical territory dossiers across selected historical snapshots from 1800 to 1960." />
+  <link rel="canonical" href="https://jacobgstanton1.github.io/historical-atlas/" />
+  <meta property="og:title" content="Historical Atlas" />
+  <meta property="og:description" content="Interactive political world map and historical territory dossiers across selected historical snapshots from 1800 to 1960." />
+  <meta property="og:site_name" content="Historical Atlas" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jacobgstanton1.github.io/historical-atlas/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Historical Atlas" />
+  <meta name="twitter:description" content="Interactive political world map and historical territory dossiers across selected historical snapshots from 1800 to 1960." />
   <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzExMTYxYiIvPjxwYXRoIGQ9Im04IDI0IDgtMTcgOCAxN00xMSAxOWgxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjRmNWYzIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" />
   <link rel="preconnect" href="https://unpkg.com" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.11.2/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="./styles.css?v=visual-cleanup2" />
+  <link rel="stylesheet" href="./styles.css?v=product1" />
 </head>
 <body>
   <main id="app" class="app-shell">
@@ -30,6 +40,7 @@
         <div class="top-actions">
           <button id="labels-toggle" class="ui-button" type="button" aria-pressed="true" title="Toggle map labels" aria-label="Toggle map labels"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16M12 5v14M8 19h8"/></svg><span class="control-text">Labels</span></button>
           <button id="reset-view" class="ui-button" type="button" title="Reset world view" aria-label="Reset world view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></svg><span class="control-text">Reset</span></button>
+          <button id="about-toggle" class="ui-button" type="button" aria-label="About Historical Atlas" title="About & methodology"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v1"/></svg></button>
         </div>
       </header>
 
@@ -40,6 +51,11 @@
 
       <aside id="inspector" class="inspector" aria-label="Historical Territory Dossier" aria-hidden="true" inert>
         <button id="close-inspector" class="inspector-close" type="button" aria-label="Close historical territory dossier" title="Close dossier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+        <div class="inspector-actions">
+          <button id="share-territory" class="dossier-share" type="button" title="Share territory and year" aria-label="Share selected territory and year"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 16V3m-4 4 4-4 4 4M5 13v7h14v-7"/></svg><span id="share-label">Share</span></button>
+          <span id="share-status" class="sr-only" role="status" aria-live="polite"></span>
+        </div>
+        <div id="share-fallback" class="share-fallback" hidden><label for="share-url">Copy this link</label><input id="share-url" type="url" readonly /></div>
         <div id="dossier-content"></div>
       </aside>
 
@@ -76,10 +92,24 @@
         </div>
       </section>
 
+      <dialog id="about-dialog" class="about-dialog" aria-labelledby="about-title">
+        <button id="about-close" type="button" class="about-close" aria-label="Close About">×</button>
+        <h2 id="about-title">About Historical Atlas</h2>
+        <p>Explore political territories and their historical dossiers across selected world-map snapshots from 1800 to 1960.</p>
+        <dl>
+          <dt>Selected year</dt><dd>The historical year you are exploring. Dossier facts are shown in that year's context.</dd>
+          <dt>Boundary snapshot</dt><dd>The map uses the nearest available snapshot. Its date is shown separately when it differs from your selected year.</dd>
+          <dt>Fact applicability</dt><dd>Names, offices and other facts have their own dated periods. Transition-year entries retain those qualifications.</dd>
+          <dt>Observation date</dt><dd>A census or estimate may have a different date. Statistics retain that date and the territory they measure.</dd>
+        </dl>
+        <p>Historical borders and political status can be uncertain or disputed. Map geometry alone does not establish sovereignty, and statistical territories may differ from mapped boundaries.</p>
+        <p>Substantive dossier facts retain citations. Open <strong>Sources &amp; Methodology</strong> in an entry to inspect its references, dates and qualifications.</p>
+        <p class="dossier-muted">Boundary maps: <a href="https://github.com/aourednik/historical-basemaps" target="_blank" rel="noopener noreferrer">Historical Basemaps</a>. The atlas presents selected snapshots, not a continuous reconstruction of every border change.</p>
+      </dialog>
       <div class="source-credit">Historical boundaries: Historical Basemaps · v0.6.1</div>
     </section>
   </main>
 
-  <script type="module" src="./app.js?v=visual-cleanup2"></script>
+  <script type="module" src="./app.js?v=product1"></script>
 </body>
 </html>
