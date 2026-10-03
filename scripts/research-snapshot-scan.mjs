@@ -33,6 +33,12 @@ function legacyClaim(e,field,r){
 export function fullYear(c,year){
  if(c.temporal.kind!=='interval')return true;
  const y=dateBounds(yearDate(year));let b=bounds(c.temporal);
+ // A certified research subset is not a historical introduction/dissolution date.
+ // Keep source precision, and require EVERY cited interval to prove the whole year.
+ // Existing unmarked records and source transition boundaries remain conservative.
+ if(c.origin?.temporalBasis==='bounded-research-subset'&&b.lo<=y.lo&&b.hi>=y.hi&&
+    c.evidence?.length&&c.evidence.every(e=>e.temporal?.kind==='interval'&&
+      e.temporal.certainty==='exact'&&fullYear({temporal:e.temporal},year)))return true;
  // Unknown endpoint precision stays partial at that boundary; never invent a day.
  const from=c.temporal.from,until=c.temporal.until;
  if(from&&dateBounds(from).precision!=='day')b={...b,lo:dateBounds(from).hi};

@@ -85,6 +85,10 @@ export function validateDossier(pkg,job,context){
  try{const b=temporalBounds(c.temporal);check('Within requested research period '+c.id,period&&b.lo>=period.lo&&b.hi<=period.hi);
  const stats=['population-statistics','area-statistics','economy','density'];check('Observation distinct from validity '+c.id,!stats.includes(c.category)||c.temporal.kind==='observation');
  if(c.temporal.certainty!=='exact')review.push(c.id+': uncertain/disputed chronology requires review');
+ if(c.origin?.temporalBasis==='bounded-research-subset')check('Explicit sourced research subset '+c.id,
+  c.temporal.kind==='interval'&&c.temporal.certainty==='exact'&&c.evidence.length>0&&
+  c.evidence.every(e=>e.temporal.kind==='interval'&&e.temporal.certainty==='exact')&&
+  c.qualifications.length>0);
  if(c.compatibility){const decision=assessCompatibility(c.compatibility,c);check('Certified field-specific historical compatibility '+c.id,decision.accepted);check('Mapping evidence sources resolve '+c.id,c.compatibility.evidence.every(e=>sourceMap.has(e.sourceId)&&c.sourceIds.includes(e.sourceId)));}
  if(c.scope.relationship!=='same'&&!qualifiedCompatibility(c))review.push(c.id+': geographic comparability requires review');
  if(c.status!=='supported')review.push(c.id+': partial/unresolved support');

@@ -1,8 +1,8 @@
 # Selectable entity × snapshot completion — authoritative workload
 
 Raw selectable occurrences: **2352**. Assessment dossiers: **1767** (1588 confirmed eligible; 179 provisional classification candidates). Protected exclusions: 585.
-Evidence coverage: **29.44%** (7803/26505). Research resolution: **29.44%**.
-Core coverage: **43.89%** (3102/7068). Empty: 567; identity-only: 1; core distribution: {"0":649,"1":10,"2":508,"3":324,"4":276}.
+Evidence coverage: **29.87%** (7916/26505). Research resolution: **29.87%**.
+Core coverage: **44.55%** (3149/7068). Empty: 567; identity-only: 1; core distribution: {"0":649,"1":10,"2":495,"3":303,"4":310}.
 Every empty eligible occurrence stays in this denominator. Provisional candidates are visible assessment rows, not fabricated production polities. One covered snapshot never masks another. Derived mapped area is excluded from the substantive-empty test only; it remains a measured category.
 Legacy entity-level availability: {"candidates":401,"covered":363,"uncovered":38,"percentage":90.52}. Legacy filtered matrix: 1165 dossiers; 17475 slots. These are comparison diagnostics, not the new completeness headline.
 
@@ -10,10 +10,10 @@ Legacy entity-level availability: {"candidates":401,"covered":363,"uncovered":38
 | --- | ---: | ---: | ---: | ---: | ---: |
 | identity | 1117 | 55 | 159 | 436 | 1767 |
 | political-institutional | 1079 | 59 | 30 | 599 | 1767 |
-| leadership | 438 | 62 | 3 | 1264 | 1767 |
-| capital | 468 | 47 | 9 | 1243 | 1767 |
-| currency | 262 | 38 | 3 | 1464 | 1767 |
-| historical-flag | 127 | 17 | 109 | 1514 | 1767 |
+| leadership | 442 | 62 | 3 | 1260 | 1767 |
+| capital | 511 | 46 | 9 | 1201 | 1767 |
+| currency | 321 | 35 | 6 | 1405 | 1767 |
+| historical-flag | 134 | 18 | 109 | 1506 | 1767 |
 | population-statistics | 389 | 0 | 60 | 1318 | 1767 |
 | area-statistics | 992 | 0 | 72 | 703 | 1767 |
 | density | 0 | 0 | 0 | 1767 | 1767 |

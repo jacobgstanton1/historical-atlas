@@ -1,0 +1,279 @@
+{
+  "id": "five-category-01-italy-spain",
+  "worker": "italy-spain-five-category",
+  "sources": [
+    {
+      "id": "c02-bankitaly-unification",
+      "url": "https://www.bancaditalia.it/servizi-cittadino/mostre-ed-eventi/mostra-moneta/esplora/stanza-a/index.html",
+      "title": "StanzaA: L’unificazione monetaria",
+      "institution": "Banca d’Italia",
+      "kind": "institutional-historical",
+      "accessed": "2026-10-01",
+      "usage": "Fullmainexhibitionbody identifies1862liraunification andcontinuationtoeuro."
+    },
+    {
+      "id": "c02-italy-capital-law",
+      "url": "https://www.normattiva.it/eli/id/1871/02/04/071U0033/ORIGINAL",
+      "title": "Law3February1871,no33: transfer of capital to Rome",
+      "institution": "Italian official legislation portal Normattiva",
+      "kind": "primary-document",
+      "accessed": "2026-10-01",
+      "usage": "OriginalArticle1bodyexplicitRomecapital; effective1871-02-19; assignmentafterboth."
+    },
+    {
+      "id": "fc01-madrid-capital-history",
+      "institution": "Ayuntamiento de Madrid",
+      "title": "Ley de capitalidad y de régimen especial de Madrid: historical presentation",
+      "url": "https://www.madrid.es/UnidadWeb/UGNormativas/NormativaNoMunicipal/LEY_DE_CAPITALIDAD.pdf",
+      "kind": "official-institutional",
+      "accessed": "2026-10-03",
+      "usage": "Historical capital-status chronology paraphrased from presentation; modern municipal area statistics and contemporary law not retrospectively applied."
+    }
+  ],
+  "claims": [
+    {
+      "id": "fc01-italy-lira-liberal",
+      "entityId": "italy-liberal-monarchy-framework",
+      "category": "currency",
+      "value": "Italian lira",
+      "status": "supported",
+      "temporal": {
+        "kind": "interval",
+        "from": "1863",
+        "until": "1921",
+        "certainty": "exact"
+      },
+      "sourceIds": [
+        "c02-bankitaly-unification"
+      ],
+      "scope": {
+        "id": "italy-liberal-monarchy-framework-fc01-currency",
+        "relationship": "same",
+        "description": "National monetary denomination; changing note issuers, convertibility and purchasing value remain distinct."
+      },
+      "evidence": [
+        {
+          "sourceId": "c02-bankitaly-unification",
+          "locator": "Stanza A opening paragraph, line215; conversion qualification221",
+          "note": "Central bank explicitly dates unification law24August1862 and lira continuation until euro. Researched interior1863–1998 excludes creation and euro-transitionyears; denominations remained lira despite changes in issuance/convertibility.",
+          "precision": "year",
+          "interpretation": "contextual",
+          "temporal": {
+            "kind": "interval",
+            "from": "1863",
+            "until": "1998",
+            "certainty": "exact"
+          }
+        }
+      ],
+      "qualifications": [
+        "Year-precision researched interior subset; evidence retains the broader source period. Calendar boundaries are not establishment or dissolution dates.",
+        "Napoleonic and Spanish Civil War intervals excluded. Italian1945office continuity and entity-envelope clipping separately held.",
+        "Claim bounds delimit this reviewed research subset, not a historical introduction or abolition date. The original cited applicability interval and its precision remain in evidence."
+      ],
+      "risks": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "five-category-01/italy-spain/source-review.json",
+        "sourceIdentifier": "Stanza A opening paragraph, line215; conversion qualification221",
+        "temporalBasis": "bounded-research-subset"
+      }
+    },
+    {
+      "id": "fc01-italy-rome-liberal",
+      "entityId": "italy-liberal-monarchy-framework",
+      "category": "capital",
+      "value": "Rome",
+      "status": "supported",
+      "temporal": {
+        "kind": "interval",
+        "from": "1872",
+        "until": "1921",
+        "certainty": "exact"
+      },
+      "sourceIds": [
+        "c02-italy-capital-law"
+      ],
+      "scope": {
+        "id": "italy-liberal-monarchy-framework-fc01-capital",
+        "relationship": "same",
+        "description": "National capital designation; no inference of uniform territorial administration or wartime actual government presence."
+      },
+      "evidence": [
+        {
+          "sourceId": "c02-italy-capital-law",
+          "locator": "Article1; entry-in-force note19February1871; lines49,77–84",
+          "note": "Statute designatesRomecapital ofKingdom; researched post-law interior through this pre-fascistKingdom framework. Original law does not establish wartime governmentoperatinglocation.",
+          "precision": "day",
+          "interpretation": "contextual",
+          "temporal": {
+            "kind": "interval",
+            "from": "1871-02-19",
+            "until": "1945",
+            "certainty": "exact"
+          }
+        }
+      ],
+      "qualifications": [
+        "Year-precision researched interior subset; evidence retains the broader source period. Calendar boundaries are not establishment or dissolution dates.",
+        "Napoleonic and Spanish Civil War intervals excluded. Italian1945office continuity and entity-envelope clipping separately held.",
+        "Article1 legal designation from official19February1871 commencement; evidence end is conservative pre-Republic interior, not a repeal or government-location event.",
+        "Claim bounds delimit this reviewed research subset, not a historical introduction or abolition date. The original cited applicability interval and its precision remain in evidence."
+      ],
+      "risks": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "five-category-01/italy-spain/source-review.json",
+        "sourceIdentifier": "Article1; entry-in-force note19February1871; lines49,77–84",
+        "temporalBasis": "bounded-research-subset"
+      }
+    },
+    {
+      "id": "fc01-spain-madrid-prewar",
+      "entityId": "spain-political-frameworks",
+      "category": "capital",
+      "value": "Madrid",
+      "status": "supported",
+      "temporal": {
+        "kind": "interval",
+        "from": "1800",
+        "until": "1807",
+        "certainty": "exact"
+      },
+      "sourceIds": [
+        "fc01-madrid-capital-history"
+      ],
+      "scope": {
+        "id": "spain-political-frameworks-fc01-capital",
+        "relationship": "same",
+        "description": "National capital designation; no inference of uniform territorial administration or wartime actual government presence."
+      },
+      "evidence": [
+        {
+          "sourceId": "fc01-madrid-capital-history",
+          "locator": "Historical presentation sectionII printedpp8–10; PDFpages3–5; lines34–38,58–96",
+          "note": "Historical account saysMadridcapital since1561,confirmed1931;1941planexplicitcapitalfunction and1955/1963specialcapitallegislation. Candidate deliberately excludes1808–1814and1936–1940 rather than implyingcontinuouswartime governmentseat. Broad retrospective designation applies toselectedpeace-timeinteriors only.",
+          "precision": "year",
+          "interpretation": "contextual",
+          "temporal": {
+            "kind": "interval",
+            "from": "1561",
+            "until": "2006",
+            "certainty": "exact"
+          }
+        }
+      ],
+      "qualifications": [
+        "Year-precision researched interior subset; evidence retains the broader source period. Calendar boundaries are not establishment or dissolution dates.",
+        "Napoleonic and Spanish Civil War intervals excluded. Italian1945office continuity and entity-envelope clipping separately held.",
+        "Broad source retrospective capital-status envelope is not uninterrupted physical government residence. Conflicting-war years are intentionally outside all candidates.",
+        "Claim bounds delimit this reviewed research subset, not a historical introduction or abolition date. The original cited applicability interval and its precision remain in evidence."
+      ],
+      "risks": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "five-category-01/italy-spain/source-review.json",
+        "sourceIdentifier": "Historical presentation sectionII printedpp8–10; PDFpages3–5; lines34–38,58–96",
+        "temporalBasis": "bounded-research-subset"
+      }
+    },
+    {
+      "id": "fc01-spain-madrid-restored",
+      "entityId": "spain-political-frameworks",
+      "category": "capital",
+      "value": "Madrid",
+      "status": "supported",
+      "temporal": {
+        "kind": "interval",
+        "from": "1815",
+        "until": "1930",
+        "certainty": "exact"
+      },
+      "sourceIds": [
+        "fc01-madrid-capital-history"
+      ],
+      "scope": {
+        "id": "spain-political-frameworks-fc01-capital",
+        "relationship": "same",
+        "description": "National capital designation; no inference of uniform territorial administration or wartime actual government presence."
+      },
+      "evidence": [
+        {
+          "sourceId": "fc01-madrid-capital-history",
+          "locator": "Historical presentation sectionII printedpp8–10; PDFpages3–5; lines34–38,58–96",
+          "note": "Historical account saysMadridcapital since1561,confirmed1931;1941planexplicitcapitalfunction and1955/1963specialcapitallegislation. Candidate deliberately excludes1808–1814and1936–1940 rather than implyingcontinuouswartime governmentseat. Broad retrospective designation applies toselectedpeace-timeinteriors only.",
+          "precision": "year",
+          "interpretation": "contextual",
+          "temporal": {
+            "kind": "interval",
+            "from": "1561",
+            "until": "2006",
+            "certainty": "exact"
+          }
+        }
+      ],
+      "qualifications": [
+        "Year-precision researched interior subset; evidence retains the broader source period. Calendar boundaries are not establishment or dissolution dates.",
+        "Napoleonic and Spanish Civil War intervals excluded. Italian1945office continuity and entity-envelope clipping separately held.",
+        "Broad source retrospective capital-status envelope is not uninterrupted physical government residence. Conflicting-war years are intentionally outside all candidates.",
+        "Claim bounds delimit this reviewed research subset, not a historical introduction or abolition date. The original cited applicability interval and its precision remain in evidence."
+      ],
+      "risks": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "five-category-01/italy-spain/source-review.json",
+        "sourceIdentifier": "Historical presentation sectionII printedpp8–10; PDFpages3–5; lines34–38,58–96",
+        "temporalBasis": "bounded-research-subset"
+      }
+    },
+    {
+      "id": "fc01-spain-madrid-postwar",
+      "entityId": "spain-political-frameworks",
+      "category": "capital",
+      "value": "Madrid",
+      "status": "supported",
+      "temporal": {
+        "kind": "interval",
+        "from": "1941",
+        "until": "1960",
+        "certainty": "exact"
+      },
+      "sourceIds": [
+        "fc01-madrid-capital-history"
+      ],
+      "scope": {
+        "id": "spain-political-frameworks-fc01-capital",
+        "relationship": "same",
+        "description": "National capital designation; no inference of uniform territorial administration or wartime actual government presence."
+      },
+      "evidence": [
+        {
+          "sourceId": "fc01-madrid-capital-history",
+          "locator": "Historical presentation sectionII printedpp8–10; PDFpages3–5; lines34–38,58–96",
+          "note": "Historical account saysMadridcapital since1561,confirmed1931;1941planexplicitcapitalfunction and1955/1963specialcapitallegislation. Candidate deliberately excludes1808–1814and1936–1940 rather than implyingcontinuouswartime governmentseat. Broad retrospective designation applies toselectedpeace-timeinteriors only.",
+          "precision": "year",
+          "interpretation": "contextual",
+          "temporal": {
+            "kind": "interval",
+            "from": "1561",
+            "until": "2006",
+            "certainty": "exact"
+          }
+        }
+      ],
+      "qualifications": [
+        "Year-precision researched interior subset; evidence retains the broader source period. Calendar boundaries are not establishment or dissolution dates.",
+        "Napoleonic and Spanish Civil War intervals excluded. Italian1945office continuity and entity-envelope clipping separately held.",
+        "Broad source retrospective capital-status envelope is not uninterrupted physical government residence. Conflicting-war years are intentionally outside all candidates.",
+        "Claim bounds delimit this reviewed research subset, not a historical introduction or abolition date. The original cited applicability interval and its precision remain in evidence."
+      ],
+      "risks": [],
+      "origin": {
+        "kind": "new-research",
+        "reference": "five-category-01/italy-spain/source-review.json",
+        "sourceIdentifier": "Historical presentation sectionII printedpp8–10; PDFpages3–5; lines34–38,58–96",
+        "temporalBasis": "bounded-research-subset"
+      }
+    }
+  ]
+}

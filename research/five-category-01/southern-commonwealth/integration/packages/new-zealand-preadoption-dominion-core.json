@@ -1,0 +1,342 @@
+{
+  "job": {
+    "id": "dossier-f3e6dab872e2eecadd1ccdb1",
+    "entityId": "new-zealand-preadoption-dominion-core",
+    "period": {
+      "from": "1914",
+      "until": "1945"
+    },
+    "mapIds": [
+      "entity-new-zealand"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "e9d849a610b8cdb8bc47f83d16427e3e3fe861e1f74bd0d83fd56ec6dcc55480",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "five-category01-southern-commonwealth-new-zealand-preadoption-dominion-core",
+    "jobId": "dossier-f3e6dab872e2eecadd1ccdb1",
+    "entityId": "new-zealand-preadoption-dominion-core",
+    "mapIds": [
+      "entity-new-zealand"
+    ],
+    "worker": {
+      "id": "five-category01-southern-commonwealth",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "e9d849a610b8cdb8bc47f83d16427e3e3fe861e1f74bd0d83fd56ec6dcc55480",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1914",
+      "until": "1945"
+    },
+    "claims": [
+      {
+        "id": "fc01-sc-nz-pre1933-sterling",
+        "entityId": "new-zealand-preadoption-dominion-core",
+        "category": "currency",
+        "value": "Pounds sterling issued in New Zealand",
+        "temporal": {
+          "kind": "interval",
+          "from": "1914",
+          "until": "1930",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "new-zealand-preadoption-dominion-core-nz-pre1933-sterling",
+          "description": "Named metropolitan parliamentary seat or currency unit; no assertion of uniform authority, equal political rights or currency circulation over every mapped colonial possession.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "fc01-rbnz-money-law"
+        ],
+        "evidence": [
+          {
+            "sourceId": "fc01-rbnz-money-law",
+            "locator": "PDF printed pages45–48; web2919–2922 and3525–3532 distinguish pre1933 pounds sterling from later New Zealand pounds",
+            "note": "Local trading-bank sterling notes and British coinage; not the distinctive post1933 New Zealand currency projected backward.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1893",
+              "until": "1933",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Local trading-bank sterling notes and British coinage; not the distinctive post1933 New Zealand currency projected backward.",
+          "Research bounds select whole calendar years inside broader sourced periods; they do not assert accession, reform or seat-transfer dates. Existing accepted evidence preserved.",
+          "Claim bounds delimit this reviewed research subset, not a historical introduction or abolition date. The original cited applicability interval and its precision remain in evidence."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Five-category southern Commonwealth bounded official-source review",
+          "sourceIdentifier": "nz-pre1933-sterling",
+          "temporalBasis": "bounded-research-subset"
+        },
+        "metric": "monetary-unit"
+      },
+      {
+        "id": "fc01-sc-nz-1945-pound",
+        "entityId": "new-zealand-preadoption-dominion-core",
+        "category": "currency",
+        "value": "New Zealand pound",
+        "temporal": {
+          "kind": "interval",
+          "from": "1945",
+          "until": "1945",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "new-zealand-preadoption-dominion-core-nz-1945-pound",
+          "description": "Named metropolitan parliamentary seat or currency unit; no assertion of uniform authority, equal political rights or currency circulation over every mapped colonial possession.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "fc01-rbnz-currency-evolution"
+        ],
+        "evidence": [
+          {
+            "sourceId": "fc01-rbnz-currency-evolution",
+            "locator": "Speech web24–26:1940 second issue including10-pound note continued until1967 decimalization",
+            "note": "Named pound unit; no sterling convertibility assertion. Accepted1938 and1960 observations unchanged.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1940",
+              "until": "1967",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Named pound unit; no sterling convertibility assertion. Accepted1938 and1960 observations unchanged.",
+          "Research bounds select whole calendar years inside broader sourced periods; they do not assert accession, reform or seat-transfer dates. Existing accepted evidence preserved.",
+          "Claim bounds delimit this reviewed research subset, not a historical introduction or abolition date. The original cited applicability interval and its precision remain in evidence."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Five-category southern Commonwealth bounded official-source review",
+          "sourceIdentifier": "nz-1945-pound",
+          "temporalBasis": "bounded-research-subset"
+        },
+        "metric": "monetary-unit"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fc01-rbnz-money-law",
+        "url": "https://www.rbnz.govt.nz/-/media/7512a994a3aa446aa8794e06e755f3d7.ashx",
+        "title": "The legal history of money in New Zealand — Bulletin Vol.66 No.1 March2003",
+        "institution": "Reserve Bank of New Zealand; Ken Matthews",
+        "accessed": "2026-10-03",
+        "kind": "official",
+        "usage": "Official historical source body reviewed; factual paraphrases only. No media or extended source text redistributed."
+      },
+      {
+        "id": "fc01-rbnz-currency-evolution",
+        "url": "https://www.rbnz.govt.nz/hub/publications/speech/2014/speech2014-07-05",
+        "title": "The evolution of New Zealand currency —5July2014",
+        "institution": "Reserve Bank of New Zealand; Geoff Bascand",
+        "accessed": "2026-10-03",
+        "kind": "official",
+        "usage": "Official historical source body reviewed; factual paraphrases only. No media or extended source text redistributed."
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "fc01-rbnz-money-law",
+          "fc01-rbnz-currency-evolution"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Original South African Parliament seat chronology, SARB monetary history and RBNZ currency/legal history. Only monetary paragraphs used from SARB; multiple capital roles kept qualified. Source-year intervals independently checked; explicit research-subset coverage requires every supporting interval to cover the entire selected year. No original source precision increased.",
+      "preservedPackageHashes": [
+        "aa4ad35ca3978fbaa0f0e6d6dca42cfc511c39f57981ce9c6a641aef12fc401f",
+        "1af58e633325e0fd9b6d841896fe7d1dc36c5d4a1ec726aeb4fbde6b3969935d"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "255cc3434508573b3073e0e2410cac08bd3353802368d1e898e14f1ea519aa57",
+    "productionFingerprint": "e9d849a610b8cdb8bc47f83d16427e3e3fe861e1f74bd0d83fd56ec6dcc55480",
+    "jobId": "dossier-f3e6dab872e2eecadd1ccdb1",
+    "review": {
+      "reviewer": "coordinator-original-body-review",
+      "packageHash": "255cc3434508573b3073e0e2410cac08bd3353802368d1e898e14f1ea519aa57",
+      "bodyReviewed": true,
+      "rationale": "Original South African Parliament seat chronology, SARB monetary history and RBNZ currency/legal history. Only monetary paragraphs used from SARB; multiple capital roles kept qualified. Source-year intervals independently checked; explicit research-subset coverage requires every supporting interval to cover the entire selected year. No original source precision increased.",
+      "reviewedIssues": [],
+      "decisions": {
+        "fc01-sc-nz-pre1933-sterling": "accepted",
+        "fc01-sc-nz-1945-pound": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "fc01-sc-nz-pre1933-sterling",
+      "fc01-sc-nz-1945-pound"
+    ]
+  }
+}
