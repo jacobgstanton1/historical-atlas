@@ -1,0 +1,383 @@
+{
+  "job": {
+    "id": "dossier-10e45af26529294f6174ca7d",
+    "entityId": "brazil-portuguese-colonial-framework",
+    "period": {
+      "from": "1800",
+      "until": "1806"
+    },
+    "mapIds": [
+      "entity-viceroyalty-of-brazil"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "1cf48281056854c779befc975f428b2af9a318ee1fee61e546636a9d0c1ec266",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "regional09-brazil-institutional-cohort-brazil-portuguese-colonial-framework",
+    "jobId": "dossier-10e45af26529294f6174ca7d",
+    "entityId": "brazil-portuguese-colonial-framework",
+    "mapIds": [
+      "entity-viceroyalty-of-brazil"
+    ],
+    "worker": {
+      "id": "regional09-brazil-source-worker",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "1cf48281056854c779befc975f428b2af9a318ee1fee61e546636a9d0c1ec266",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1800",
+      "until": "1806"
+    },
+    "claims": [
+      {
+        "id": "r09-brazil-colonial-rio",
+        "entityId": "brazil-portuguese-colonial-framework",
+        "category": "capital",
+        "value": "Rio de Janeiro",
+        "temporal": {
+          "kind": "interval",
+          "from": "1800",
+          "until": "1806",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "brazil-portuguese-colonial-framework-colonial-rio",
+          "description": "Named historical Brazilian framework and institutional/person association; no modern-border statistical fallback or geometry inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "c02-brazil-rio-capital-bn"
+        ],
+        "evidence": [
+          {
+            "sourceId": "c02-brazil-rio-capital-bn",
+            "locator": "Historical narrative paragraphs1,3–5",
+            "note": "National Library documents1763 transfer, royal governmental seat and continuing capitality; bounded pre-court framework only.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1800",
+              "until": "1806",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Intervals are bounded research subsets. Entity-window day cutoffs do not date the introduction or abolition of a historical fact. Source year precision is retained for historical changes known only by year."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional09 Brazilian institutional source packet; coordinator review required",
+          "sourceIdentifier": "colonial-rio"
+        },
+        "role": "Capital"
+      },
+      {
+        "id": "r09-brazil-colonial-reis",
+        "entityId": "brazil-portuguese-colonial-framework",
+        "category": "currency",
+        "value": "Réis (mil-réis monetary unit)",
+        "temporal": {
+          "kind": "interval",
+          "from": "1800",
+          "until": "1806",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "brazil-portuguese-colonial-framework-colonial-reis",
+          "description": "Named historical Brazilian framework and institutional/person association; no modern-border statistical fallback or geometry inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "c01-bcb-monetary-standards"
+        ],
+        "evidence": [
+          {
+            "sourceId": "c01-bcb-monetary-standards",
+            "locator": "Single-page table,Réis row:period,unit and legal chronology",
+            "note": "BCB dates this standard from early colonization to30October1942;1645 official naming is expressly documented. Not the post1994real.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1800",
+              "until": "1806",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Intervals are bounded research subsets. Entity-window day cutoffs do not date the introduction or abolition of a historical fact. Source year precision is retained for historical changes known only by year."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional09 Brazilian institutional source packet; coordinator review required",
+          "sourceIdentifier": "colonial-reis"
+        }
+      },
+      {
+        "id": "r09-brazil-resende-viceroy",
+        "entityId": "brazil-portuguese-colonial-framework",
+        "category": "leadership",
+        "value": "José Luís de Castro,2nd Count of Resende",
+        "temporal": {
+          "kind": "interval",
+          "from": "1800",
+          "until": "1801-10-14",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "brazil-portuguese-colonial-framework-resende-viceroy",
+          "description": "Named historical Brazilian framework and institutional/person association; no modern-border statistical fallback or geometry inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r09-brazil-funag-viceroys"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r09-brazil-funag-viceroys",
+            "locator": "Printed p79,chapterIX,José Luiz de Castro term9May1790–14October1801",
+            "note": "Curated start covers1800 within explicitly dated tenure. Source distinguishes the governorship/viceroy title from Spanish-style vice-kingdom institutions.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1800",
+              "until": "1801-10-14",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Intervals are bounded research subsets. Entity-window day cutoffs do not date the introduction or abolition of a historical fact. Source year precision is retained for historical changes known only by year."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional09 Brazilian institutional source packet; coordinator review required",
+          "sourceIdentifier": "resende-viceroy"
+        },
+        "role": "Governor and Viceroy of the State of Brazil"
+      }
+    ],
+    "sources": [
+      {
+        "id": "r09-brazil-funag-viceroys",
+        "title": "Notas para uma história do Judiciário no Brasil — Carlos Fernando Mathias",
+        "institution": "Fundação Alexandre de Gusmão, Ministry of Foreign Affairs",
+        "url": "https://funag.gov.br/loja/download/535-notas_para_uma_historia_do_judiciario_no_brasil.pdf",
+        "accessed": "2026-10-03",
+        "kind": "official-published-scholarly-history",
+        "usage": "Factual paraphrases and precise original-source locators only; no source images or complete copyrighted texts redistributed."
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "c02-brazil-rio-capital-bn",
+          "c01-bcb-monetary-standards",
+          "r09-brazil-funag-viceroys"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "c02-brazil-rio-capital-bn",
+          "c01-bcb-monetary-standards",
+          "r09-brazil-funag-viceroys"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "c02-brazil-rio-capital-bn",
+          "c01-bcb-monetary-standards",
+          "r09-brazil-funag-viceroys"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Original institutional, archival or scholarly bodies reviewed independently. Bounded intervals retained; year precision not promoted to invented days. Observation dates, source estimates and cultural associations retained. Scope-uncertain proposals remain in held artifacts.",
+      "preservedPackageHashes": [
+        "3f6edadb9023f2abf0048e35423b3c7a89a0eebd225f051df3542a5f26dc3774",
+        "33375903b883f1c76dbee8df585eb167f21efb9c0490051aeea1a55d586d1dae"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "17db76ef15ce53ee5c7d85c49b2a98fa80b1f0bdfac4b52adcdf55bb3d65df7b",
+    "productionFingerprint": "1cf48281056854c779befc975f428b2af9a318ee1fee61e546636a9d0c1ec266",
+    "jobId": "dossier-10e45af26529294f6174ca7d",
+    "review": {
+      "reviewer": "/root",
+      "packageHash": "17db76ef15ce53ee5c7d85c49b2a98fa80b1f0bdfac4b52adcdf55bb3d65df7b",
+      "bodyReviewed": true,
+      "rationale": "Original institutional, archival or scholarly bodies reviewed independently. Bounded intervals retained; year precision not promoted to invented days. Observation dates, source estimates and cultural associations retained. Scope-uncertain proposals remain in held artifacts.",
+      "reviewedIssues": [],
+      "decisions": {
+        "r09-brazil-colonial-rio": "accepted",
+        "r09-brazil-colonial-reis": "accepted",
+        "r09-brazil-resende-viceroy": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "r09-brazil-colonial-rio",
+      "r09-brazil-colonial-reis",
+      "r09-brazil-resende-viceroy"
+    ]
+  }
+}

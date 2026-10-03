@@ -1,0 +1,319 @@
+{
+  "job": {
+    "id": "dossier-0a5e621bea5e0d9ad983f997",
+    "entityId": "brazil-royal-court-framework",
+    "period": {
+      "from": "1809",
+      "until": "1815-12-16"
+    },
+    "mapIds": [
+      "entity-viceroyalty-of-brazil"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "00403c9031bb7082430c3f859df79ba2b31edd8e441aaea049663780fd6cf7e9",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "regional09-brazil-institutional-cohort-brazil-royal-court-framework",
+    "jobId": "dossier-0a5e621bea5e0d9ad983f997",
+    "entityId": "brazil-royal-court-framework",
+    "mapIds": [
+      "entity-viceroyalty-of-brazil"
+    ],
+    "worker": {
+      "id": "regional09-brazil-source-worker",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "00403c9031bb7082430c3f859df79ba2b31edd8e441aaea049663780fd6cf7e9",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1809",
+      "until": "1815-12-16"
+    },
+    "claims": [
+      {
+        "id": "r09-brazil-court-rio",
+        "entityId": "brazil-royal-court-framework",
+        "category": "capital",
+        "value": "Rio de Janeiro",
+        "temporal": {
+          "kind": "interval",
+          "from": "1809",
+          "until": "1815-12-16",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "brazil-royal-court-framework-court-rio",
+          "description": "Named historical Brazilian framework and institutional/person association; no modern-border statistical fallback or geometry inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "c02-brazil-rio-capital-bn"
+        ],
+        "evidence": [
+          {
+            "sourceId": "c02-brazil-rio-capital-bn",
+            "locator": "Historical narrative:capital as vice-regal residence and seat of Portuguese empire",
+            "note": "Clipped to existing court framework.16December cutoff belongs to registered framework transition; not a capital move.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1809",
+              "until": "1815-12-16",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Intervals are bounded research subsets. Entity-window day cutoffs do not date the introduction or abolition of a historical fact. Source year precision is retained for historical changes known only by year."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional09 Brazilian institutional source packet; coordinator review required",
+          "sourceIdentifier": "court-rio"
+        },
+        "role": "Seat of the Portuguese court"
+      },
+      {
+        "id": "r09-brazil-court-reis",
+        "entityId": "brazil-royal-court-framework",
+        "category": "currency",
+        "value": "Réis (mil-réis monetary unit)",
+        "temporal": {
+          "kind": "interval",
+          "from": "1809",
+          "until": "1815-12-16",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "brazil-royal-court-framework-court-reis",
+          "description": "Named historical Brazilian framework and institutional/person association; no modern-border statistical fallback or geometry inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "c01-bcb-monetary-standards"
+        ],
+        "evidence": [
+          {
+            "sourceId": "c01-bcb-monetary-standards",
+            "locator": "Single-page table,Réis row",
+            "note": "Continuous monetary standard; clipped court framework,not an inferred modern country identity.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1809",
+              "until": "1815-12-16",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Intervals are bounded research subsets. Entity-window day cutoffs do not date the introduction or abolition of a historical fact. Source year precision is retained for historical changes known only by year."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Regional09 Brazilian institutional source packet; coordinator review required",
+          "sourceIdentifier": "court-reis"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "c02-brazil-rio-capital-bn",
+          "c01-bcb-monetary-standards"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "c02-brazil-rio-capital-bn",
+          "c01-bcb-monetary-standards"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Original institutional, archival or scholarly bodies reviewed independently. Bounded intervals retained; year precision not promoted to invented days. Observation dates, source estimates and cultural associations retained. Scope-uncertain proposals remain in held artifacts.",
+      "preservedPackageHashes": [
+        "3f6edadb9023f2abf0048e35423b3c7a89a0eebd225f051df3542a5f26dc3774",
+        "33375903b883f1c76dbee8df585eb167f21efb9c0490051aeea1a55d586d1dae"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "e6c368bc8f6520281423c0d6dab30b9b7d94d07a14d08985e0e26beeebfd90a2",
+    "productionFingerprint": "00403c9031bb7082430c3f859df79ba2b31edd8e441aaea049663780fd6cf7e9",
+    "jobId": "dossier-0a5e621bea5e0d9ad983f997",
+    "review": {
+      "reviewer": "/root",
+      "packageHash": "e6c368bc8f6520281423c0d6dab30b9b7d94d07a14d08985e0e26beeebfd90a2",
+      "bodyReviewed": true,
+      "rationale": "Original institutional, archival or scholarly bodies reviewed independently. Bounded intervals retained; year precision not promoted to invented days. Observation dates, source estimates and cultural associations retained. Scope-uncertain proposals remain in held artifacts.",
+      "reviewedIssues": [],
+      "decisions": {
+        "r09-brazil-court-rio": "accepted",
+        "r09-brazil-court-reis": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "r09-brazil-court-rio",
+      "r09-brazil-court-reis"
+    ]
+  }
+}

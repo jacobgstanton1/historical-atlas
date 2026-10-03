@@ -1,0 +1,15 @@
+Candidate-only Andean packet; no production, frontend, acceptance or integration edits.
+
+26 claims across 16 existing frames: 15 currency intervals, 10 dated contextual events and 1 viceregal capital interval. All are pending independent historical/source review. Year boundaries remain partial; no day precision manufactured to improve scanner coverage. A prior 32-claim research cohort is retained separately for provenance; six scope-uncertain observations/associations were withdrawn before independent review.
+
+Source families and original-body locators are embedded in each claim. Central-bank bodies provide Chile peso/escudo and old-peso coexistence, Ecuador sucre1884–2000, and Bolivia1863 boliviano/1962renaming plus bank milestones. The authored Fundación Empresas Polar dictionary supplies Venezuela monetary chronology with explicit1871/1872venezolano and1879bolivar distinction; gold backing/physical circulation/issuer changes remain separate. Existing exact registry source objects are reused for Venezuela country studies and Peru independence.
+
+Original BCRPData CD12050DA money-supply values are literal 12.3 (1878), 18.2 (1880), 78.5 (1900), 180.3 (1914), unit millions of silver soles. They are preserved as held observations because the display table does not establish the represented historical monetary jurisdiction, particularly during wartime. No interpolation, rounding, conversion or invented observation day.
+
+The Library of Congress country-study transcription identifies Lima as the viceregal administrative hub; its independence narrative follows the viceroy's withdrawal from Lima in 1821. Colonial administration is kept distinct from modern Peru. Both Chile–Bolivia treaty interval associations are held: exact signature/publication and article I are documented, but this source alone does not establish interval persistence through 1923/1934. No territorial clause is translated into ownership.
+
+Private source evidence: cache/source-bodies-wave1…wave6.json contain exact web-tool-rendered historical bodies/search output. These are not raw HTTPbytes. Direct local sockets are restricted; BCRPbrochure and one official Venezuelan PDF were inaccessible and are not treated as complete inspected bodies. Hashes and exact existing entity record digests are in source-bindings.json. No images/manuscript reproductions imported.
+
+Residual decisions are in held.json. The federal Colombian peso candidate was removed because the mint object/law packet does not demonstrate the entire proposed interval. SafeMarch1880 bank proposal andOctober1959printing event remain. GranColombia/NewGranada were explicitly checked: no corresponding existing historical entity frameworks occur in this configured batch or registry name/alias search, so no entity or continuity was invented. All configured assigned frames and their unfilled categories were considered; untouched gaps remain explicit.
+
+Reproduce: node research/regional-09/andean/build.mjs. Schema-only check: node research/regional-09/andean/check.mjs. This check never accepts or integrates a dossier. The parent coordinator performs independent review and serial production intake.

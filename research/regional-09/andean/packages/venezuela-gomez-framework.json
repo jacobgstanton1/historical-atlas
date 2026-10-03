@@ -1,0 +1,315 @@
+{
+  "job": {
+    "id": "dossier-30ca324812d90644b64797d1",
+    "entityId": "venezuela-gomez-framework",
+    "period": {
+      "from": "1909",
+      "until": "1928"
+    },
+    "mapIds": [
+      "entity-venezuela"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "3beca2035b92f14c6314f0730d210ea47195269492182166d695e53e45dfa665",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "regional09-andean-source-families-venezuela-gomez-framework",
+    "jobId": "dossier-30ca324812d90644b64797d1",
+    "entityId": "venezuela-gomez-framework",
+    "mapIds": [
+      "entity-venezuela"
+    ],
+    "worker": {
+      "id": "regional09-andean-officeholder-sources",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "3beca2035b92f14c6314f0730d210ea47195269492182166d695e53e45dfa665",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1909",
+      "until": "1928"
+    },
+    "claims": [
+      {
+        "id": "r09-andean-venezuela-gomez-bolivar",
+        "entityId": "venezuela-gomez-framework",
+        "category": "currency",
+        "value": "Bolívar",
+        "temporal": {
+          "kind": "interval",
+          "from": "1909",
+          "until": "1921",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "venezuela-gomez-framework-r09-currency",
+          "description": "Named historical polity, monetary institution or bilateral treaty only; no modern-border, nationality or successor-state inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r09-andean-venezuela-money"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r09-andean-venezuela-money",
+            "locator": "31 March 1879 unit decree; Siglo XX gold-standard and 1937–1960 parities",
+            "note": "The named unit persists across changes in metal backing and issuance; no later redenomination applied.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1909",
+              "until": "1921",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Bounds are conservative editorial research coverage inside the existing entity envelope, not invented historical adoption or transition dates. Year endpoints remain partial.",
+          "Monetary unit is distinguished from minting, metal standard, physical coin replacement and exclusive issuer. No claim of sole circulating currency."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "r09-andean-venezuela-money"
+        }
+      },
+      {
+        "id": "r09-andean-venezuela-1928-student-revolt",
+        "entityId": "venezuela-gomez-framework",
+        "category": "events-context",
+        "value": "Student antigovernment speeches and arrests triggered protests in February 1928.",
+        "temporal": {
+          "kind": "event",
+          "date": "1928-02",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "venezuela-gomez-framework-r09-events-context",
+          "description": "Named historical polity, monetary institution or bilateral treaty only; no modern-border, nationality or successor-state inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "b09-venezuela-caudillos"
+        ],
+        "evidence": [
+          {
+            "sourceId": "b09-venezuela-caudillos",
+            "locator": "Student movement paragraph: revolt began in February",
+            "note": "Month binds initiating speeches/arrests; later palace action is not assigned an invented day.",
+            "precision": "month",
+            "temporal": {
+              "kind": "event",
+              "date": "1928-02",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Actual source date and precision retained, including preceding context; no snapshot retiming or future event projection."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "b09-venezuela-caudillos"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r09-andean-venezuela-money",
+          "b09-venezuela-caudillos"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r09-andean-venezuela-money",
+          "b09-venezuela-caudillos"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Original institutional, archival or scholarly bodies reviewed independently. Bounded intervals retained; year precision not promoted to invented days. Observation dates, source estimates and cultural associations retained. Scope-uncertain proposals remain in held artifacts.",
+      "preservedPackageHashes": [
+        "0e4e0769f6fe7c94377992d7e2fd96bc30681cfcd7189a8f2270edffafcec23d",
+        "5d8f9c883061b7b39cd8b77bf729669d17458d5a0940816ccaf8d3e21e1847f4"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "82db57ec3833b7b1b6b153e5946fb0bc79443a2175474340f75aafbee38019b4",
+    "productionFingerprint": "3beca2035b92f14c6314f0730d210ea47195269492182166d695e53e45dfa665",
+    "jobId": "dossier-30ca324812d90644b64797d1",
+    "review": {
+      "reviewer": "/root",
+      "packageHash": "82db57ec3833b7b1b6b153e5946fb0bc79443a2175474340f75aafbee38019b4",
+      "bodyReviewed": true,
+      "rationale": "Original institutional, archival or scholarly bodies reviewed independently. Bounded intervals retained; year precision not promoted to invented days. Observation dates, source estimates and cultural associations retained. Scope-uncertain proposals remain in held artifacts.",
+      "reviewedIssues": [],
+      "decisions": {
+        "r09-andean-venezuela-gomez-bolivar": "accepted",
+        "r09-andean-venezuela-1928-student-revolt": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "r09-andean-venezuela-gomez-bolivar",
+      "r09-andean-venezuela-1928-student-revolt"
+    ]
+  }
+}

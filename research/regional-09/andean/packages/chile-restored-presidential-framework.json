@@ -1,0 +1,372 @@
+{
+  "job": {
+    "id": "dossier-586d798f51063c547405bad4",
+    "entityId": "chile-restored-presidential-framework",
+    "period": {
+      "from": "1944",
+      "until": "1960"
+    },
+    "mapIds": [
+      "entity-chile"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "9225558c299f5355aa5cd8a359dab12726c03f063bfacdf9d4f3fceb968271bf",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "regional09-andean-source-families-chile-restored-presidential-framework",
+    "jobId": "dossier-586d798f51063c547405bad4",
+    "entityId": "chile-restored-presidential-framework",
+    "mapIds": [
+      "entity-chile"
+    ],
+    "worker": {
+      "id": "regional09-andean-officeholder-sources",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "9225558c299f5355aa5cd8a359dab12726c03f063bfacdf9d4f3fceb968271bf",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1944",
+      "until": "1960"
+    },
+    "claims": [
+      {
+        "id": "r09-andean-chile-1945-peso",
+        "entityId": "chile-restored-presidential-framework",
+        "category": "currency",
+        "value": "Peso",
+        "temporal": {
+          "kind": "interval",
+          "from": "1944",
+          "until": "1946",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "chile-restored-presidential-framework-r09-currency",
+          "description": "Named historical polity, monetary institution or bilateral treaty only; no modern-border, nationality or successor-state inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r09-andean-chile-money"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r09-andean-chile-money",
+            "locator": "1925–1959 Central Bank emissions;1959 replacement paragraph",
+            "note": "Conservative coverage around 1945 before escudo reform; no unchanged metal standard implied.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1944",
+              "until": "1946",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Bounds are conservative editorial research coverage inside the existing entity envelope, not invented historical adoption or transition dates. Year endpoints remain partial.",
+          "Monetary unit is distinguished from minting, metal standard, physical coin replacement and exclusive issuer. No claim of sole circulating currency."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "r09-andean-chile-money"
+        }
+      },
+      {
+        "id": "r09-andean-chile-1960-escudo",
+        "entityId": "chile-restored-presidential-framework",
+        "category": "currency",
+        "value": "Escudo",
+        "temporal": {
+          "kind": "interval",
+          "from": "1960",
+          "until": "1960",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "chile-restored-presidential-framework-r09-currency",
+          "description": "Named historical polity, monetary institution or bilateral treaty only; no modern-border, nationality or successor-state inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r09-andean-chile-escudo"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r09-andean-chile-escudo",
+            "locator": "1959 Banco Central: Establecimiento del escudo",
+            "note": "The source explicitly says circulation began 1960 and old pesos persisted until around 1964.",
+            "precision": "year",
+            "temporal": {
+              "kind": "interval",
+              "from": "1960",
+              "until": "1960",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Year-level onset 1960 remains partial. Old pesos co-circulated; no exclusive instantaneous physical replacement.",
+          "Conversion1 escudo=1000 old pesos is contextual, not a current exchange-rate observation."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "r09-andean-chile-escudo"
+        }
+      },
+      {
+        "id": "r09-andean-chile-1959-escudo-law",
+        "entityId": "chile-restored-presidential-framework",
+        "category": "events-context",
+        "value": "Chile established the escudo as a new monetary unit in 1959; circulation began in 1960.",
+        "temporal": {
+          "kind": "event",
+          "date": "1959",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "chile-restored-presidential-framework-r09-events-context",
+          "description": "Named historical polity, monetary institution or bilateral treaty only; no modern-border, nationality or successor-state inference.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "r09-andean-chile-escudo"
+        ],
+        "evidence": [
+          {
+            "sourceId": "r09-andean-chile-escudo",
+            "locator": "1959 Banco Central: Establecimiento del escudo",
+            "note": "Legislation 1959 and circulation 1960 are separate dates.",
+            "precision": "year",
+            "temporal": {
+              "kind": "event",
+              "date": "1959",
+              "certainty": "exact"
+            },
+            "interpretation": "direct"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Actual source date and precision retained, including preceding context; no snapshot retiming or future event projection."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "r09-andean-chile-escudo"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "r09-andean-chile-escudo",
+        "title": "1945–1959: Establecimiento del escudo",
+        "institution": "Banco Central de Chile centenary history",
+        "url": "https://centenario.bcentral.cl/1945-1959.html",
+        "accessed": "2026-10-03",
+        "kind": "historical-institutional-evidence",
+        "usage": "Original historical body read; attributed concise factual paraphrases only. Rendered-source evidence retained privately; no image or manuscript reproduction imported."
+      }
+    ],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r09-andean-chile-money",
+          "r09-andean-chile-escudo"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "r09-andean-chile-money",
+          "r09-andean-chile-escudo"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Original institutional, archival or scholarly bodies reviewed independently. Bounded intervals retained; year precision not promoted to invented days. Observation dates, source estimates and cultural associations retained. Scope-uncertain proposals remain in held artifacts.",
+      "preservedPackageHashes": [
+        "0e4e0769f6fe7c94377992d7e2fd96bc30681cfcd7189a8f2270edffafcec23d",
+        "5d8f9c883061b7b39cd8b77bf729669d17458d5a0940816ccaf8d3e21e1847f4"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "13f16033fc0a2f515524c98e3b440c15122d62bfa57b6d368ee9152e3f955957",
+    "productionFingerprint": "9225558c299f5355aa5cd8a359dab12726c03f063bfacdf9d4f3fceb968271bf",
+    "jobId": "dossier-586d798f51063c547405bad4",
+    "review": {
+      "reviewer": "/root",
+      "packageHash": "13f16033fc0a2f515524c98e3b440c15122d62bfa57b6d368ee9152e3f955957",
+      "bodyReviewed": true,
+      "rationale": "Original institutional, archival or scholarly bodies reviewed independently. Bounded intervals retained; year precision not promoted to invented days. Observation dates, source estimates and cultural associations retained. Scope-uncertain proposals remain in held artifacts.",
+      "reviewedIssues": [],
+      "decisions": {
+        "r09-andean-chile-1945-peso": "accepted",
+        "r09-andean-chile-1960-escudo": "accepted",
+        "r09-andean-chile-1959-escudo-law": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "r09-andean-chile-1945-peso",
+      "r09-andean-chile-1960-escudo",
+      "r09-andean-chile-1959-escudo-law"
+    ]
+  }
+}
