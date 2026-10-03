@@ -4,11 +4,11 @@
   "coverageDefinition": "Covered means the existing production resolver returns a curated entity in at least one snapshot where this map ID is selectable. It does not mean core completeness or coverage throughout 1800–1960. All other IDs still have map-derived fallback panels.",
   "summary": {
     "totalIdentities": 880,
-    "curatedMetadataEntities": 632,
-    "mappedIdentities": 378,
-    "coveredIdentities": 369,
-    "uncoveredIdentities": 511,
-    "percentage": 41.93,
+    "curatedMetadataEntities": 634,
+    "mappedIdentities": 379,
+    "coveredIdentities": 370,
+    "uncoveredIdentities": 510,
+    "percentage": 42.05,
     "multipleSnapshotIdentities": 519,
     "singleSnapshotIdentities": 361,
     "unresolvedQuestions": 260,
@@ -21,16 +21,16 @@
     {
       "year": 1800,
       "selectableIdentities": 547,
-      "covered": 61,
-      "uncovered": 486,
-      "percentage": 11.15
+      "covered": 62,
+      "uncovered": 485,
+      "percentage": 11.33
     },
     {
       "year": 1815,
       "selectableIdentities": 313,
-      "covered": 84,
-      "uncovered": 229,
-      "percentage": 26.84
+      "covered": 85,
+      "uncovered": 228,
+      "percentage": 27.16
     },
     {
       "year": 1878,
@@ -9070,8 +9070,8 @@
         "entity-guyana"
       ],
       "totalIdentities": 15,
-      "uncuratedIdentities": 3,
-      "existingProfilesToReview": 12,
+      "uncuratedIdentities": 2,
+      "existingProfilesToReview": 13,
       "requiresHistoricalResearch": 15,
       "sourceStrategy": "National archives, independence-era documents and historical censuses; do not equate viceroyalties with modern states.",
       "questionIds": [
@@ -161074,17 +161074,45 @@
       "alternativeSourceNames": [],
       "firstAvailableSnapshot": 1800,
       "lastAvailableSnapshot": 1815,
-      "mappings": [],
-      "curatedEntityIds": [],
+      "mappings": [
+        {
+          "note": "Full1800 institutional subset inside researched1739–1810 period; not full polity lifetime or proof of uniform administration across raw outline.",
+          "sourceIds": [
+            "dr02-ng-jurisdiction",
+            "b09-new-granada-colony"
+          ],
+          "validUntil": "1801-01-01",
+          "validFrom": "1800-01-01",
+          "mapId": "entity-viceroyalty-of-new-granada",
+          "displayName": "Viceroyalty of New Granada — institutional context",
+          "entityId": "new-granada-recovery-1800"
+        },
+        {
+          "note": "Raw Viceroyalty label qualified throughout calendar1815. Contextual region only: republican provincial institutions and royalist military reconquest; no single uniformly governed polity. Cartagena fell by end1815 while Bogotá fell1816. Modern Colombian boundaries and other separately mapped territories are not projected into this outline.",
+          "sourceIds": [
+            "b09-new-granada-independence"
+          ],
+          "validUntil": "1816-01-01",
+          "validFrom": "1815-01-01",
+          "mapId": "entity-viceroyalty-of-new-granada",
+          "displayName": "New Granada — fragmented authority and reconquest context",
+          "entityId": "new-granada-recovery-1815"
+        }
+      ],
+      "curatedEntityIds": [
+        "new-granada-recovery-1800",
+        "new-granada-recovery-1815"
+      ],
       "snapshotCoverage": [
         {
           "year": 1800,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "new-granada-recovery-1800",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -161095,12 +161123,13 @@
         },
         {
           "year": 1815,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "new-granada-recovery-1815",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -161110,7 +161139,7 @@
           ]
         }
       ],
-      "currentlyResolvesToDossier": false,
+      "currentlyResolvesToDossier": true,
       "researchStatus": "mapping-review",
       "coverageTier": "none",
       "researchDecision": {
@@ -176959,9 +176988,9 @@
     },
     "politicalCoverage": {
       "candidates": 401,
-      "covered": 362,
-      "uncovered": 39,
-      "percentage": 90.27
+      "covered": 363,
+      "uncovered": 38,
+      "percentage": 90.52
     },
     "nonStateTemplateIdentities": 400,
     "bySnapshot": [
@@ -176977,9 +177006,9 @@
           "unresolved": 31
         },
         "politicalCandidates": 121,
-        "politicalCovered": 60,
-        "politicalUncovered": 61,
-        "politicalPercentage": 49.59
+        "politicalCovered": 61,
+        "politicalUncovered": 60,
+        "politicalPercentage": 50.41
       },
       {
         "year": 1815,
@@ -176993,9 +177022,9 @@
           "unresolved": 24
         },
         "politicalCandidates": 124,
-        "politicalCovered": 84,
-        "politicalUncovered": 40,
-        "politicalPercentage": 67.74
+        "politicalCovered": 85,
+        "politicalUncovered": 39,
+        "politicalPercentage": 68.55
       },
       {
         "year": 1878,
@@ -180644,8 +180673,8 @@
       "totalIdentities": 20,
       "politicalCandidates": 20,
       "nameReviews": 0,
-      "uncoveredPoliticalCandidates": 1,
-      "coveredPoliticalCandidates": 19,
+      "uncoveredPoliticalCandidates": 0,
+      "coveredPoliticalCandidates": 20,
       "sourceStrategy": "National archives, independence-era documents and historical censuses; do not equate viceroyalties with modern states.",
       "priorityRationale": "Early source-family batches prioritise long snapshot presence, broad period potential and national archival/constitutional collections. Source availability is a planning expectation, not an entity-by-entity research finding. Families remain indivisible; no periods are researched now.",
       "highValueMapIds": [
@@ -181364,8 +181393,8 @@
     ],
     "pipelineSha256": "6930aaf5e7b7d2f4bb4251b1331c4d5892ec3db1f3230d5f2d072f4c341ebe91",
     "resolverSha256": "ef2543f8fc7082f3b1f539be0761ba90c3fe71969bd1ad1dbe3ac43241ac855b",
-    "metadataSha256": "4cd3f07cb88d8a40873c977d5e1d8173314026be246054f5869115851368a69d",
-    "sourcesSha256": "c42304ddc53006ffdc1e2def7d9e9994c4cfcedc839f8c5efc65637021be26e0",
+    "metadataSha256": "54ccc5e8431327db27523fd21e20722fdb73009abbb19c87cde64866adcc44ac",
+    "sourcesSha256": "f6397b7edc5ecc0e6b37ddce4d314a0347247119065fbcdaa53c6d3580864844",
     "planSha256": "e76fb23e4eefe1680f4698e0345f574a1d5f41d69f34ad08e08a0dba402ad23d",
     "classificationPlanSha256": "260036271b0aaec99acf6f41da9b8d82c0c018988744ab2cb655ed85104198fc",
     "classificationModuleSha256": "c8eee902a88feef8ace890a7f776ade411c40af4473611d47decac2a7a5e9231"
