@@ -1,17 +1,17 @@
 # Selectable entity × snapshot completion — authoritative workload
 
 Raw selectable occurrences: **2352**. Assessment dossiers: **1767** (1588 confirmed eligible; 179 provisional classification candidates). Protected exclusions: 585.
-Evidence coverage: **29.27%** (7759/26505). Research resolution: **29.27%**.
-Core coverage: **43.44%** (3070/7068). Empty: 657; identity-only: 1; core distribution: {"0":660,"1":7,"2":508,"3":321,"4":271}.
+Evidence coverage: **29.42%** (7797/26505). Research resolution: **29.42%**.
+Core coverage: **43.82%** (3097/7068). Empty: 569; identity-only: 1; core distribution: {"0":651,"1":8,"2":508,"3":327,"4":273}.
 Every empty eligible occurrence stays in this denominator. Provisional candidates are visible assessment rows, not fabricated production polities. One covered snapshot never masks another. Derived mapped area is excluded from the substantive-empty test only; it remains a measured category.
-Legacy entity-level availability: {"candidates":401,"covered":362,"uncovered":39,"percentage":90.27}. Legacy filtered matrix: 1154 dossiers; 17310 slots. These are comparison diagnostics, not the new completeness headline.
+Legacy entity-level availability: {"candidates":401,"covered":362,"uncovered":39,"percentage":90.27}. Legacy filtered matrix: 1163 dossiers; 17445 slots. These are comparison diagnostics, not the new completeness headline.
 
 | Category | Supported | Partial | Held | Missing | Total |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| identity | 1106 | 55 | 163 | 443 | 1767 |
-| political-institutional | 1071 | 56 | 30 | 610 | 1767 |
-| leadership | 428 | 60 | 3 | 1276 | 1767 |
-| capital | 465 | 46 | 9 | 1247 | 1767 |
+| identity | 1115 | 55 | 161 | 436 | 1767 |
+| political-institutional | 1079 | 57 | 30 | 601 | 1767 |
+| leadership | 435 | 62 | 3 | 1267 | 1767 |
+| capital | 468 | 46 | 9 | 1244 | 1767 |
 | currency | 262 | 38 | 3 | 1464 | 1767 |
 | historical-flag | 127 | 17 | 109 | 1514 | 1767 |
 | population-statistics | 389 | 0 | 60 | 1318 | 1767 |
@@ -20,27 +20,20 @@ Legacy entity-level availability: {"candidates":401,"covered":362,"uncovered":39
 | economy | 120 | 0 | 0 | 1647 | 1767 |
 | events-context | 103 | 0 | 61 | 1603 | 1767 |
 | relationships | 505 | 38 | 1 | 1223 | 1767 |
-| overview | 1089 | 60 | 0 | 618 | 1767 |
+| overview | 1098 | 60 | 0 | 609 | 1767 |
 | important-figures | 36 | 32 | 0 | 1699 | 1767 |
-| historical-context-status | 1066 | 61 | 30 | 610 | 1767 |
+| historical-context-status | 1068 | 62 | 30 | 607 | 1767 |
 
 ## Worst high-visibility core gaps
 
 - Canada — 1815: 0/4 core fields; Resolve source-map historical identity before factual integration.
-- Brazil — 1930: 0/4 core fields; Resolve source-map historical identity before factual integration.
 - Brazil — 1945: 0/4 core fields; Resolve source-map historical identity before factual integration.
 - Viceroyalty of Brazil — 1815: 0/4 core fields; Resolve source-map historical identity before factual integration.
 - central Asian khanates — 1800: 0/4 core fields; Resolve source-map historical identity before factual integration.
-- India — 1945: 0/4 core fields; Resolve source-map historical identity before factual integration.
 - Ottoman Empire — 1878: 0/4 core fields; Resolve source-map historical identity before factual integration.
 - Louisiana — Spanish colonial administration before retrocession — 1800: 0/4 core fields; Recover missing dated core fields.
 - Viceroyalty of New Granada — 1800: 0/4 core fields; Resolve source-map historical identity before factual integration.
 - Viceroyalty of New Granada — 1815: 0/4 core fields; Resolve source-map historical identity before factual integration.
-- Argentina — 1880: 0/4 core fields; Resolve source-map historical identity before factual integration.
-- Argentina — 1960: 0/4 core fields; Resolve source-map historical identity before factual integration.
-- Argentina — 1930: 0/4 core fields; Resolve source-map historical identity before factual integration.
-- Argentina — 1938: 0/4 core fields; Resolve source-map historical identity before factual integration.
-- Argentina — 1945: 0/4 core fields; Resolve source-map historical identity before factual integration.
 - Maratha Confederacy — 1815: 0/4 core fields; Resolve source-map historical identity before factual integration.
 - Zaire — 1945: 0/4 core fields; Resolve source-map historical identity before factual integration.
 - Zaire — 1960: 0/4 core fields; Resolve source-map historical identity before factual integration.
@@ -56,9 +49,16 @@ Legacy entity-level availability: {"candidates":401,"covered":362,"uncovered":39
 - Japan — initial Allied occupation framework — 1945: 0/4 core fields; Recover missing dated core fields.
 - Syria (France) — 1930: 0/4 core fields; Resolve source-map historical identity before factual integration.
 - Syria (France) — 1920: 0/4 core fields; Resolve source-map historical identity before factual integration.
+- Italy — postwar monarchical framework — 1945: 0/4 core fields; Recover missing dated core fields.
+- Ottoman Sultanate — 1920: 0/4 core fields; Resolve source-map historical identity before factual integration.
+- French Indochina — 1880: 0/4 core fields; Resolve source-map historical identity before factual integration.
+- French Indochina — 1878: 0/4 core fields; Resolve source-map historical identity before factual integration.
+- Northern Korea — Soviet occupation — 1945: 0/4 core fields; Recover missing dated core fields.
+- White Russia — 1920: 0/4 core fields; Resolve source-map historical identity before factual integration.
+- Germany — Soviet occupation zone — 1945: 0/4 core fields; Recover missing dated core fields.
 
 ## Exclusion review
 
-{"previouslyUnresolved":72,"mappingReview":62,"tierNone":861,"previouslyOutsidePoliticalClass":479,"totalAuditedIdentities":880,"reviewedExcludedOrDeferred":863,"outcomes":{"political-polity":209,"dependent-administration":176,"composite-political-region":2,"non-political":400,"duplicate":1,"still-unresolved":71,"variant-review":6}}
+{"previouslyUnresolved":72,"mappingReview":62,"tierNone":861,"previouslyOutsidePoliticalClass":479,"totalAuditedIdentities":880,"reviewedExcludedOrDeferred":863,"outcomes":{"political-polity":209,"dependent-administration":177,"composite-political-region":2,"non-political":400,"duplicate":1,"still-unresolved":71,"variant-review":6}}
 
 All excluded/deferred identities have occurrence-level decisions and evidence/review reasons in exclusion-audit.json. Unresolved rows require historical review; this computational audit does not pretend to certify their historical meaning. Existing community protections remain.

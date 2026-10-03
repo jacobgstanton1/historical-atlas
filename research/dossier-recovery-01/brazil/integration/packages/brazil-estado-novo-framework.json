@@ -1,0 +1,335 @@
+{
+  "job": {
+    "id": "dossier-65d6f1bbda59399ba945fd00",
+    "entityId": "brazil-estado-novo-framework",
+    "period": {
+      "from": "1945-01-01",
+      "until": "1945-10-29"
+    },
+    "mapIds": [
+      "entity-brazil"
+    ],
+    "category": "comprehensive-dossier",
+    "productionFingerprint": "5e86772d857d8d1b4fee896185317e2f8ccce57fee7494b551f6eeda8eb93988",
+    "categories": [
+      "identity",
+      "political-institutional",
+      "leadership",
+      "capital",
+      "currency",
+      "historical-flag",
+      "population-statistics",
+      "area-statistics",
+      "density",
+      "economy",
+      "events-context",
+      "relationships",
+      "overview",
+      "important-figures"
+    ],
+    "status": "queued",
+    "requiredInvestigation": "All applicable categories, with explicit gaps, conflicts and applicability decisions",
+    "prohibitedAssumptions": [
+      "geometry sovereignty/succession",
+      "modern fallback/nationality",
+      "statistical interpolation"
+    ],
+    "integrationConcurrency": 1
+  },
+  "package": {
+    "schemaVersion": 2,
+    "id": "dossier-recovery01-brazil-core-brazil-estado-novo-framework",
+    "jobId": "dossier-65d6f1bbda59399ba945fd00",
+    "entityId": "brazil-estado-novo-framework",
+    "mapIds": [
+      "entity-brazil"
+    ],
+    "worker": {
+      "id": "dossier-recovery01-brazil",
+      "assignmentType": "comprehensive-entity-period"
+    },
+    "productionFingerprint": "5e86772d857d8d1b4fee896185317e2f8ccce57fee7494b551f6eeda8eb93988",
+    "chronology": {
+      "calendar": "proleptic-gregorian",
+      "yearConvention": "astronomical"
+    },
+    "period": {
+      "from": "1945-01-01",
+      "until": "1945-10-29"
+    },
+    "claims": [
+      {
+        "id": "dr01-brazil-1945-estado-capital",
+        "entityId": "brazil-estado-novo-framework",
+        "category": "capital",
+        "value": "Rio de Janeiro",
+        "temporal": {
+          "kind": "interval",
+          "from": "1945-01-01",
+          "until": "1945-10-29",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "brazil-estado-novo-framework-central-institutions",
+          "description": "Brazilian republican central institutions and national governmental seat; bounded researched subset. No claim of unchanged regime or leader throughout a transition year.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "c02-brazil-rio-capital-bn"
+        ],
+        "evidence": [
+          {
+            "sourceId": "c02-brazil-rio-capital-bn",
+            "locator": "Accepted National Library capital continuity 1763–1960; clipped to existing dated framework",
+            "note": "Calendar January 1 bounds delimit researched snapshot coverage, not historical creation, accession, dissolution or departure. Actual within-year handoffs retain source day precision. Central republican institutions only; no polygon-derived territorial control.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1945-01-01",
+              "until": "1945-10-29",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Calendar January1 bounds delimit researched snapshot coverage, not historical creation, accession, dissolution or departure. Actual within-year handoffs retain source day precision. Central republican institutions only; no polygon-derived territorial control."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Dossier recovery01 bounded Brazil republican transition source packet",
+          "sourceIdentifier": "1945-estado-capital"
+        },
+        "role": "Capital"
+      },
+      {
+        "id": "dr01-brazil-1945-estado-overview",
+        "entityId": "brazil-estado-novo-framework",
+        "category": "overview",
+        "value": "Brazil entered 1945 under the Estado Novo established in 1937. Vargas governed until his deposition on 29 October 1945. This phase ended within the year and was followed by the interim presidency of José Linhares.",
+        "temporal": {
+          "kind": "interval",
+          "from": "1945-01-01",
+          "until": "1945-10-29",
+          "certainty": "exact"
+        },
+        "scope": {
+          "id": "brazil-estado-novo-framework-central-institutions",
+          "description": "Brazilian republican central institutions and national governmental seat; bounded researched subset. No claim of unchanged regime or leader throughout a transition year.",
+          "relationship": "same"
+        },
+        "sourceIds": [
+          "dr01-brazil-vargas",
+          "b09-brazil-estado"
+        ],
+        "evidence": [
+          {
+            "sourceId": "dr01-brazil-vargas",
+            "locator": "Vargas biography 1937 constitution/Congress dissolution and 29 October 1945 removal; existing accepted Estado Novo framework",
+            "note": "Calendar January 1 bounds delimit researched snapshot coverage, not historical creation, accession, dissolution or departure. Actual within-year handoffs retain source day precision. Central republican institutions only; no polygon-derived territorial control.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1945-01-01",
+              "until": "1945-10-29",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          },
+          {
+            "sourceId": "b09-brazil-estado",
+            "locator": "Vargas biography 1937 constitution/Congress dissolution and 29 October 1945 removal; existing accepted Estado Novo framework",
+            "note": "Calendar January 1 bounds delimit researched snapshot coverage, not historical creation, accession, dissolution or departure. Actual within-year handoffs retain source day precision. Central republican institutions only; no polygon-derived territorial control.",
+            "precision": "day",
+            "temporal": {
+              "kind": "interval",
+              "from": "1945-01-01",
+              "until": "1945-10-29",
+              "certainty": "exact"
+            },
+            "interpretation": "contextual"
+          }
+        ],
+        "status": "supported",
+        "risks": [],
+        "qualifications": [
+          "Calendar January1 bounds delimit researched snapshot coverage, not historical creation, accession, dissolution or departure. Actual within-year handoffs retain source day precision. Central republican institutions only; no polygon-derived territorial control."
+        ],
+        "origin": {
+          "kind": "new-research",
+          "reference": "Dossier recovery01 bounded Brazil republican transition source packet",
+          "sourceIdentifier": "1945-estado-overview"
+        }
+      }
+    ],
+    "sources": [],
+    "investigation": [
+      {
+        "category": "identity",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "political-institutional",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "leadership",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "capital",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "c02-brazil-rio-capital-bn",
+          "dr01-brazil-vargas",
+          "b09-brazil-estado"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "currency",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "historical-flag",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "population-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "area-statistics",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "density",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "economy",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "events-context",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "relationships",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "overview",
+        "status": "partial",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [
+          "c02-brazil-rio-capital-bn",
+          "dr01-brazil-vargas",
+          "b09-brazil-estado"
+        ],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      },
+      {
+        "category": "important-figures",
+        "status": "unresolved",
+        "rationale": "Bounded source-wide intake; no assertion of exhaustive category research.",
+        "consultedSourceIds": [],
+        "gaps": [
+          "Uncovered facts and periods remain open."
+        ]
+      }
+    ],
+    "conflicts": [],
+    "provenance": {
+      "createdAt": "2026-10-02",
+      "method": "Independent coordinator review of original official source bodies and previously accepted source objects. Calendar bounds are research subsets; source-dated transitions and institutional/geographical qualifications remain explicit. No modern fallback, geometry sovereignty inference or full-year promotion of partial facts.",
+      "preservedPackageHashes": [
+        "c85d56fb937720a609bae17f2205d7fc9754632e4d11e26c218469a80fd57600",
+        "90c6e54821a591d25aff6b7d9a09c3566df8009b8a7e6aae97ae953aee8e7eea"
+      ]
+    }
+  },
+  "receipt": {
+    "status": "accepted",
+    "packageHash": "12d98a5ca2d30f90713c73e652240ca4a009c02c4811b6d43ab17639f62e5992",
+    "productionFingerprint": "5e86772d857d8d1b4fee896185317e2f8ccce57fee7494b551f6eeda8eb93988",
+    "jobId": "dossier-65d6f1bbda59399ba945fd00",
+    "review": {
+      "reviewer": "dossier-recovery01-coordinator",
+      "packageHash": "12d98a5ca2d30f90713c73e652240ca4a009c02c4811b6d43ab17639f62e5992",
+      "bodyReviewed": true,
+      "rationale": "Independent coordinator review of original official source bodies and previously accepted source objects. Calendar bounds are research subsets; source-dated transitions and institutional/geographical qualifications remain explicit. No modern fallback, geometry sovereignty inference or full-year promotion of partial facts.",
+      "reviewedIssues": [],
+      "decisions": {
+        "dr01-brazil-1945-estado-capital": "accepted",
+        "dr01-brazil-1945-estado-overview": "accepted"
+      }
+    },
+    "acceptedClaimIds": [
+      "dr01-brazil-1945-estado-capital",
+      "dr01-brazil-1945-estado-overview"
+    ]
+  }
+}

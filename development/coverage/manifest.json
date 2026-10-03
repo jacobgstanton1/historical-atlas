@@ -4,7 +4,7 @@
   "coverageDefinition": "Covered means the existing production resolver returns a curated entity in at least one snapshot where this map ID is selectable. It does not mean core completeness or coverage throughout 1800–1960. All other IDs still have map-derived fallback panels.",
   "summary": {
     "totalIdentities": 880,
-    "curatedMetadataEntities": 622,
+    "curatedMetadataEntities": 632,
     "mappedIdentities": 378,
     "coveredIdentities": 369,
     "uncoveredIdentities": 511,
@@ -35,30 +35,30 @@
     {
       "year": 1878,
       "selectableIdentities": 173,
-      "covered": 104,
-      "uncovered": 69,
-      "percentage": 60.12
+      "covered": 105,
+      "uncovered": 68,
+      "percentage": 60.69
     },
     {
       "year": 1880,
       "selectableIdentities": 170,
-      "covered": 105,
-      "uncovered": 65,
-      "percentage": 61.76
+      "covered": 106,
+      "uncovered": 64,
+      "percentage": 62.35
     },
     {
       "year": 1900,
       "selectableIdentities": 166,
-      "covered": 95,
-      "uncovered": 71,
-      "percentage": 57.23
+      "covered": 96,
+      "uncovered": 70,
+      "percentage": 57.83
     },
     {
       "year": 1914,
       "selectableIdentities": 143,
-      "covered": 105,
-      "uncovered": 38,
-      "percentage": 73.43
+      "covered": 106,
+      "uncovered": 37,
+      "percentage": 74.13
     },
     {
       "year": 1920,
@@ -70,30 +70,30 @@
     {
       "year": 1930,
       "selectableIdentities": 164,
-      "covered": 122,
-      "uncovered": 42,
-      "percentage": 74.39
+      "covered": 124,
+      "uncovered": 40,
+      "percentage": 75.61
     },
     {
       "year": 1938,
       "selectableIdentities": 172,
-      "covered": 130,
-      "uncovered": 42,
-      "percentage": 75.58
+      "covered": 131,
+      "uncovered": 41,
+      "percentage": 76.16
     },
     {
       "year": 1945,
       "selectableIdentities": 183,
-      "covered": 120,
-      "uncovered": 63,
-      "percentage": 65.57
+      "covered": 122,
+      "uncovered": 61,
+      "percentage": 66.67
     },
     {
       "year": 1960,
       "selectableIdentities": 157,
-      "covered": 115,
-      "uncovered": 42,
-      "percentage": 73.25
+      "covered": 116,
+      "uncovered": 41,
+      "percentage": 73.89
     }
   ],
   "brokenMappings": [],
@@ -18156,21 +18156,94 @@
             "b09-argentina-1949"
           ],
           "note": "Partial framework independently sourced; requested year and boundary seed distinct. No geometry-derived sovereignty or succession."
+        },
+        {
+          "validFrom": "1878-01-01",
+          "note": "Institutional association only for researched full year; no uniform sovereignty/control inference from geometry.",
+          "displayName": "Argentina",
+          "sourceIds": [
+            "dr01-ar-avellaneda"
+          ],
+          "validUntil": "1879-01-01",
+          "mapId": "entity-argentina",
+          "entityId": "argentina-recovery-1878"
+        },
+        {
+          "validFrom": "1880-01-01",
+          "note": "Institutional association only for researched full year; no uniform sovereignty/control inference from geometry.",
+          "displayName": "Argentina",
+          "sourceIds": [
+            "dr01-ar-avellaneda"
+          ],
+          "validUntil": "1881-01-01",
+          "mapId": "entity-argentina",
+          "entityId": "argentina-recovery-1880"
+        },
+        {
+          "validFrom": "1930-01-01",
+          "note": "Institutional association only for researched full year; no uniform sovereignty/control inference from geometry.",
+          "displayName": "Argentina",
+          "sourceIds": [
+            "dr01-ar-yrigoyen2"
+          ],
+          "validUntil": "1931-01-01",
+          "mapId": "entity-argentina",
+          "entityId": "argentina-recovery-1930"
+        },
+        {
+          "validFrom": "1938-01-01",
+          "note": "Institutional association only for researched full year; no uniform sovereignty/control inference from geometry.",
+          "displayName": "Argentina",
+          "sourceIds": [
+            "dr01-ar-justo"
+          ],
+          "validUntil": "1939-01-01",
+          "mapId": "entity-argentina",
+          "entityId": "argentina-recovery-1938"
+        },
+        {
+          "validFrom": "1945-01-01",
+          "note": "Institutional association only for researched full year; no uniform sovereignty/control inference from geometry.",
+          "displayName": "Argentina",
+          "sourceIds": [
+            "dr01-ar-farrell"
+          ],
+          "validUntil": "1946-01-01",
+          "mapId": "entity-argentina",
+          "entityId": "argentina-recovery-1945"
+        },
+        {
+          "validFrom": "1960-01-01",
+          "note": "Institutional association only for researched full year; no uniform sovereignty/control inference from geometry.",
+          "displayName": "Argentina",
+          "sourceIds": [
+            "dr01-ar-frondizi"
+          ],
+          "validUntil": "1961-01-01",
+          "mapId": "entity-argentina",
+          "entityId": "argentina-recovery-1960"
         }
       ],
       "curatedEntityIds": [
         "argentina-1949-constitutional-framework",
-        "argentina-pre-1930-federal-framework"
+        "argentina-pre-1930-federal-framework",
+        "argentina-recovery-1878",
+        "argentina-recovery-1880",
+        "argentina-recovery-1930",
+        "argentina-recovery-1938",
+        "argentina-recovery-1945",
+        "argentina-recovery-1960"
       ],
       "snapshotCoverage": [
         {
           "year": 1878,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "argentina-recovery-1878",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -18181,12 +18254,13 @@
         },
         {
           "year": 1880,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "argentina-recovery-1880",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -18248,12 +18322,13 @@
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "argentina-recovery-1930",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -18264,12 +18339,13 @@
         },
         {
           "year": 1938,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "argentina-recovery-1938",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -18280,12 +18356,13 @@
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "argentina-recovery-1945",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -18296,12 +18373,13 @@
         },
         {
           "year": 1960,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "argentina-recovery-1960",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -29621,13 +29699,27 @@
             "b09-brazil-1946"
           ],
           "note": "Partial framework independently sourced; requested year and boundary seed distinct. No geometry-derived sovereignty or succession."
+        },
+        {
+          "mapId": "entity-brazil",
+          "entityId": "brazil-republican-transition-1930-context",
+          "validFrom": "1930-01-01",
+          "validUntil": "1931-01-01",
+          "sourceIds": [
+            "b09-brazil-1891",
+            "dr01-brazil-washington",
+            "dr01-brazil-junta",
+            "dr01-brazil-vargas"
+          ],
+          "note": "Fills confirmed 1930 mapping gap using continued republican institutional identity; within-year regimes and leaders separately dated."
         }
       ],
       "curatedEntityIds": [
         "brazil-1946-federal-framework",
         "brazil-early-federal-republic-framework",
         "brazil-estado-novo-framework",
-        "brazil-linhares-interim-framework"
+        "brazil-linhares-interim-framework",
+        "brazil-republican-transition-1930-context"
       ],
       "snapshotCoverage": [
         {
@@ -29666,12 +29758,13 @@
         },
         {
           "year": 1930,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "brazil-republican-transition-1930-context",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -73119,20 +73212,45 @@
             "b07-rajendra-prasad"
           ],
           "note": "Independently sourced partial historical interval; no snapshot-derived chronology, automatic succession or modern fallback."
+        },
+        {
+          "mapId": "entity-india",
+          "entityId": "british-indian-government-core-1900",
+          "validFrom": "1900-01-01",
+          "validUntil": "1901-01-01",
+          "sourceIds": [
+            "raj-parliament"
+          ],
+          "displayName": "India — British Indian institutional context",
+          "note": "British Indian central institutional government for the represented subcontinental regions. British India in the narrow administrative sense comprises directly administered territories; princely states retained distinct administrations under imperial relationships. This dossier does not equate the source polygon with uniform sovereignty, direct administration, or one territorial legal unit. Exact January boundaries delimit a verified whole-year research subset; they are not an appointment, creation, dissolution or constitutional commencement date."
+        },
+        {
+          "mapId": "entity-india",
+          "entityId": "british-indian-government-core-1945",
+          "validFrom": "1945-01-01",
+          "validUntil": "1946-01-01",
+          "sourceIds": [
+            "raj-parliament"
+          ],
+          "displayName": "India — British Indian institutional context",
+          "note": "British Indian central institutional government for the represented subcontinental regions. British India in the narrow administrative sense comprises directly administered territories; princely states retained distinct administrations under imperial relationships. This dossier does not equate the source polygon with uniform sovereignty, direct administration, or one territorial legal unit. Exact January boundaries delimit a verified whole-year research subset; they are not an appointment, creation, dissolution or constitutional commencement date."
         }
       ],
       "curatedEntityIds": [
+        "british-indian-government-core-1900",
+        "british-indian-government-core-1945",
         "india-republic-1950-framework"
       ],
       "snapshotCoverage": [
         {
           "year": 1900,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "british-indian-government-core-1900",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -73159,12 +73277,13 @@
         },
         {
           "year": 1945,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "british-indian-government-core-1945",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -96260,9 +96379,22 @@
             "b02-china-recognition"
           ],
           "note": "Qing/Manchu dynastic naming variants only within the supported imperial interval."
+        },
+        {
+          "mapId": "entity-manchu-empire",
+          "entityId": "chinese-republic-map-region-1914",
+          "validFrom": "1914-01-01",
+          "validUntil": "1915-01-01",
+          "sourceIds": [
+            "b02-china-recognition",
+            "b02-chinese-revolution-1911"
+          ],
+          "displayName": "Republic of China — schematic map region",
+          "note": "The upstream Manchu Empire label is anachronistic after the 1912 abdication. Republican institutional context is supported; this generalized outline is not proof of uniform government control. Separately mapped Xinjiang and Tibet and omitted Taiwan remain outside this feature’s facts."
         }
       ],
       "curatedEntityIds": [
+        "chinese-republic-map-region-1914",
         "qing-imperial-framework"
       ],
       "snapshotCoverage": [
@@ -96336,12 +96468,13 @@
         },
         {
           "year": 1914,
-          "receivesCuratedDossier": false,
+          "receivesCuratedDossier": true,
           "ambiguous": false,
-          "entityId": null,
-          "availableFields": [],
+          "entityId": "chinese-republic-map-region-1914",
+          "availableFields": [
+            "names"
+          ],
           "missingCoreFields": [
-            "names",
             "politicalStatus",
             "capitals",
             "governments",
@@ -176876,9 +177009,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 142,
-        "politicalCovered": 102,
-        "politicalUncovered": 40,
-        "politicalPercentage": 71.83
+        "politicalCovered": 103,
+        "politicalUncovered": 39,
+        "politicalPercentage": 72.54
       },
       {
         "year": 1880,
@@ -176892,9 +177025,9 @@
           "unresolved": 20
         },
         "politicalCandidates": 143,
-        "politicalCovered": 104,
-        "politicalUncovered": 39,
-        "politicalPercentage": 72.73
+        "politicalCovered": 105,
+        "politicalUncovered": 38,
+        "politicalPercentage": 73.43
       },
       {
         "year": 1900,
@@ -176908,9 +177041,9 @@
           "unresolved": 21
         },
         "politicalCandidates": 139,
-        "politicalCovered": 94,
-        "politicalUncovered": 45,
-        "politicalPercentage": 67.63
+        "politicalCovered": 95,
+        "politicalUncovered": 44,
+        "politicalPercentage": 68.35
       },
       {
         "year": 1914,
@@ -176924,9 +177057,9 @@
           "unresolved": 5
         },
         "politicalCandidates": 136,
-        "politicalCovered": 104,
-        "politicalUncovered": 32,
-        "politicalPercentage": 76.47
+        "politicalCovered": 105,
+        "politicalUncovered": 31,
+        "politicalPercentage": 77.21
       },
       {
         "year": 1920,
@@ -176956,9 +177089,9 @@
           "unresolved": 10
         },
         "politicalCandidates": 151,
-        "politicalCovered": 118,
-        "politicalUncovered": 33,
-        "politicalPercentage": 78.15
+        "politicalCovered": 120,
+        "politicalUncovered": 31,
+        "politicalPercentage": 79.47
       },
       {
         "year": 1938,
@@ -176972,9 +177105,9 @@
           "unresolved": 6
         },
         "politicalCandidates": 162,
-        "politicalCovered": 127,
-        "politicalUncovered": 35,
-        "politicalPercentage": 78.4
+        "politicalCovered": 128,
+        "politicalUncovered": 34,
+        "politicalPercentage": 79.01
       },
       {
         "year": 1945,
@@ -176988,9 +177121,9 @@
           "unresolved": 12
         },
         "politicalCandidates": 169,
-        "politicalCovered": 119,
-        "politicalUncovered": 50,
-        "politicalPercentage": 70.41
+        "politicalCovered": 121,
+        "politicalUncovered": 48,
+        "politicalPercentage": 71.6
       },
       {
         "year": 1960,
@@ -177004,9 +177137,9 @@
           "unresolved": 8
         },
         "politicalCandidates": 147,
-        "politicalCovered": 114,
-        "politicalUncovered": 33,
-        "politicalPercentage": 77.55
+        "politicalCovered": 115,
+        "politicalUncovered": 32,
+        "politicalPercentage": 78.23
       }
     ],
     "questionAudit": {
@@ -181231,8 +181364,8 @@
     ],
     "pipelineSha256": "6930aaf5e7b7d2f4bb4251b1331c4d5892ec3db1f3230d5f2d072f4c341ebe91",
     "resolverSha256": "ef2543f8fc7082f3b1f539be0761ba90c3fe71969bd1ad1dbe3ac43241ac855b",
-    "metadataSha256": "b244d63eb91257e669294fa29087e1037e810b1ba48f7268dc29df95804bfc80",
-    "sourcesSha256": "c4ee60acbba0a95beea5dab31c13224d65c7954e7b0a415cc00b17df7c22989b",
+    "metadataSha256": "4cd3f07cb88d8a40873c977d5e1d8173314026be246054f5869115851368a69d",
+    "sourcesSha256": "c42304ddc53006ffdc1e2def7d9e9994c4cfcedc839f8c5efc65637021be26e0",
     "planSha256": "e76fb23e4eefe1680f4698e0345f574a1d5f41d69f34ad08e08a0dba402ad23d",
     "classificationPlanSha256": "260036271b0aaec99acf6f41da9b8d82c0c018988744ab2cb655ed85104198fc",
     "classificationModuleSha256": "c8eee902a88feef8ace890a7f776ade411c40af4473611d47decac2a7a5e9231"

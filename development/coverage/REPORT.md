@@ -6,7 +6,7 @@ Development-only classification overlay. Visible site remains v0.6.1. Reviewed P
 
 Raw selectable identities: **880**; raw IDs receiving a curated dossier in at least one present snapshot: **369 (41.93%)**; raw fallback-only IDs: **511**. The original identity/source/presence/mapping inventory remains intact.
 
-Political dossier candidates: **401**; currently covered: **362 (90.27%)**; uncovered political candidates: **39**. Existing curated metadata entities: **622**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
+Political dossier candidates: **401**; currently covered: **362 (90.27%)**; uncovered political candidates: **39**. Existing curated metadata entities: **632**. Coverage is resolver availability, not completeness throughout 1800–1960. This is a provisional template-eligibility denominator of distinct raw IDs, not a deduplicated count of historical states. It may change after classification/mapping review; no claim of complete political coverage is possible while unresolved cases remain.
 
 | Classification | Raw IDs |
 | --- | ---: |
@@ -33,15 +33,15 @@ The [upstream documentation](https://github.com/aourednik/historical-basemaps) d
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | 1800 | 547 | 90 | 31 | 392 | 2 | 1 | 31 | 121 | 60 | 61 | 49.59% |
 | 1815 | 313 | 86 | 38 | 164 | 1 | 0 | 24 | 124 | 84 | 40 | 67.74% |
-| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 102 | 40 | 71.83% |
-| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 104 | 39 | 72.73% |
-| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 94 | 45 | 67.63% |
-| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 104 | 32 | 76.47% |
+| 1878 | 173 | 87 | 55 | 7 | 1 | 3 | 20 | 142 | 103 | 39 | 72.54% |
+| 1880 | 170 | 88 | 55 | 5 | 1 | 1 | 20 | 143 | 105 | 38 | 73.43% |
+| 1900 | 166 | 86 | 53 | 4 | 1 | 1 | 21 | 139 | 95 | 44 | 68.35% |
+| 1914 | 143 | 72 | 64 | 0 | 1 | 1 | 5 | 136 | 105 | 31 | 77.21% |
 | 1920 | 164 | 82 | 68 | 0 | 1 | 2 | 11 | 150 | 120 | 30 | 80% |
-| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 118 | 33 | 78.15% |
-| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 127 | 35 | 78.4% |
-| 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 119 | 50 | 70.41% |
-| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 114 | 33 | 77.55% |
+| 1930 | 164 | 82 | 69 | 0 | 1 | 2 | 10 | 151 | 120 | 31 | 79.47% |
+| 1938 | 172 | 85 | 77 | 0 | 1 | 3 | 6 | 162 | 128 | 34 | 79.01% |
+| 1945 | 183 | 89 | 80 | 0 | 1 | 1 | 12 | 169 | 121 | 48 | 71.6% |
+| 1960 | 157 | 97 | 50 | 0 | 1 | 1 | 8 | 147 | 115 | 32 | 78.23% |
 
 The 1800 denominator is explained by its classification table, not modern-country assumptions. Of the 377 explicitly recorded Australian community cohort IDs, 377 appear in 1800. None is counted as an uncovered political dossier or assigned a political research batch. All remain selectable in production. They are deferred to a separately designed, community-appropriate profile project; this says nothing about political significance or organisation.
 
@@ -439,7 +439,7 @@ Covered means the existing production resolver returns a curated entity in at le
 | Measure | Count |
 | --- | ---: |
 | totalIdentities | 880 |
-| curatedMetadataEntities | 622 |
+| curatedMetadataEntities | 632 |
 | mappedIdentities | 378 |
 | coveredIdentities | 369 |
 | uncoveredIdentities | 511 |
@@ -460,15 +460,15 @@ The denominator includes selectable unlabeled/composite/community identities, no
 | --- | ---: | ---: | ---: | ---: |
 | 1800 | 547 | 61 | 486 | 11.15% |
 | 1815 | 313 | 84 | 229 | 26.84% |
-| 1878 | 173 | 104 | 69 | 60.12% |
-| 1880 | 170 | 105 | 65 | 61.76% |
-| 1900 | 166 | 95 | 71 | 57.23% |
-| 1914 | 143 | 105 | 38 | 73.43% |
+| 1878 | 173 | 105 | 68 | 60.69% |
+| 1880 | 170 | 106 | 64 | 62.35% |
+| 1900 | 166 | 96 | 70 | 57.83% |
+| 1914 | 143 | 106 | 37 | 74.13% |
 | 1920 | 164 | 123 | 41 | 75% |
-| 1930 | 164 | 122 | 42 | 74.39% |
-| 1938 | 172 | 130 | 42 | 75.58% |
-| 1945 | 183 | 120 | 63 | 65.57% |
-| 1960 | 157 | 115 | 42 | 73.25% |
+| 1930 | 164 | 124 | 40 | 75.61% |
+| 1938 | 172 | 131 | 41 | 76.16% |
+| 1945 | 183 | 122 | 61 | 66.67% |
+| 1960 | 157 | 116 | 41 | 73.89% |
 
 ## Persistent and briefly represented identities
 

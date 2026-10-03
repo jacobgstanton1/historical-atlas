@@ -1,0 +1,32 @@
+// Coordinator-only, append-only intake of independently reviewed recovery packets.
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {readJSON,saveJSON,digest,readContext} from './research-common.mjs';
+import {withLock,atomicWrite} from './research-queue.mjs';
+import {integrateCertified} from './research-completion-integrate.mjs';
+import {temporalBounds} from './research-comprehensive.mjs';
+const root='research/dossier-recovery-01',reviewer='dossier-recovery01-coordinator';
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+for(const group of ['argentina','india','brazil']){
+ if(fs.existsSync(root+'/'+group+'/integration/integration.json')){const prior=readJSON(root+'/'+group+'/integration/integration.json'),ledger=readJSON('research/completion/occurrence-eligibility.json');if(prior.after?.valid&&!prior.held.length&&ledger.occurrences.some(x=>x.review?.path===root+'/'+group+'/coordinator-review.json')){console.log('Preserved completed '+group);continue;}}
+ const folder=root+'/'+group,original=readJSON(folder+'/cohort.json'),proposal=readJSON(folder+'/registry-patch.json'),cohort=structuredClone(original),notes=[];
+ const context=readContext(),store=readJSON('data/comprehensive-dossiers.json'),known=[...context.registry.sources,...store.packages.flatMap(p=>p.sources)],aliases={};
+ for(const s of cohort.sources){const old=known.find(x=>x.id===s.id)||known.find(x=>x.url===s.url);if(old){aliases[s.id]=old.id;if(digest(old)!==digest(s))notes.push('Reuse exact accepted source object: '+s.id+' -> '+old.id);}}
+ const remap=v=>Array.isArray(v)?v.map(remap):v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,k==='sourceId'?(aliases[x]||x):k==='sourceIds'?x.map(id=>aliases[id]||id):remap(x)])):v;
+ cohort.claims=remap(cohort.claims);cohort.sources=cohort.sources.map(s=>known.find(x=>x.id===(aliases[s.id]||s.id))||s);
+ cohort.sources=[...new Map(cohort.sources.map(s=>[s.id,s])).values()];
+ for(const c of cohort.claims){if(group==='argentina'&&c.metric==='description'){c.category='overview';delete c.metric;notes.push(c.id+': overview category, unchanged historical text');}if(c.metric==='politicalStatus')c.metric='political-status';if(c.id==='dr01-india-1945-legislature'){c.metric='legislature';notes.push(c.id+': legislature field, separate from government-system');}if(typeof c.value==='string')c.value=c.value.replace(/\bIn(1900|1945)\b/g,'In $1').replace(/\bthe(1919|1935)Act\b/g,'the $1 Act').replace(/\b(Argentinas|Yrigoyens|Justos)\b/g,x=>x.slice(0,-1)+"'s");}
+ const patch={before:{db:digest(context.db),sources:digest(context.registry)},addEntities:remap(proposal.addEntities||proposal.entities),addMappings:remap(proposal.addMappings||proposal.mappings),sources:cohort.sources,notes};
+ const accepted=folder+'/accepted-cohort.json',patchPath=folder+'/accepted-registry-patch.json';saveJSON(accepted,cohort);saveJSON(patchPath,patch);
+ const certificate={reviewer,bodyReviewed:true,cohortHash:digest(cohort),acceptedClaimIds:cohort.claims.map(c=>c.id),rationale:'Independent coordinator review of original official source bodies and previously accepted source objects. Calendar bounds are research subsets; source-dated transitions and institutional/geographical qualifications remain explicit. No modern fallback, geometry sovereignty inference or full-year promotion of partial facts.',normalizations:notes,inputBindings:[accepted,patchPath,folder+'/source-review.json'].map(path=>({path,sha256:sha(path)}))};
+ const certPath=folder+'/coordinator-review.json';saveJSON(certPath,certificate);
+ const db=structuredClone(context.db),registry=structuredClone(context.registry);
+ for(const s of patch.sources){const old=registry.sources.find(x=>x.id===s.id);if(old&&digest(old)!==digest(s))throw Error('Source overwrite '+s.id);if(!old)registry.sources.push(s);}
+ const sourceIds=new Set(registry.sources.map(s=>s.id));
+ for(const e of patch.addEntities){const old=db.entities.find(x=>x.id===e.id);if(old){if(digest(old)!==digest(e))throw Error('Existing recovery entity changed '+e.id);continue;}if(!e.names?.length||e.existence.sourceIds.some(s=>!sourceIds.has(s)))throw Error('Invalid entity '+e.id);db.entities.push(e);}
+ for(const m of patch.addMappings){if(db.mappings.some(x=>digest(x)===digest(m)))continue;if(!db.entities.some(e=>e.id===m.entityId)||m.sourceIds.some(s=>!sourceIds.has(s)))throw Error('Invalid mapping');const span=temporalBounds({kind:'interval',from:m.validFrom,until:m.validUntil});for(const old of db.mappings.filter(x=>x.mapId===m.mapId)){const other=temporalBounds({kind:'interval',from:old.validFrom,until:old.validUntil});if(Math.max(span.lo,other.lo)<Math.min(span.hi,other.hi))throw Error('Overlapping mapping '+m.mapId);}db.mappings.push(m);}
+ withLock('research/.integration-state',()=>{const current=readContext();if(digest(current.db)!==patch.before.db||digest(current.registry)!==patch.before.sources)throw Error('Stale registry fingerprint');saveJSON(folder+'/registry-journal.json',{status:'prepared',before:patch.before,after:{db:digest(db),sources:digest(registry)}});atomicWrite('data/historical-sources.json',registry);atomicWrite('data/historical-entities.json',db);saveJSON(folder+'/registry-journal.json',{status:'completed',before:patch.before,after:{db:digest(db),sources:digest(registry)}});});
+ const result=integrateCertified(cohort,certificate,{apply:true,output:folder+'/integration'});if(result.held.length)throw Error(JSON.stringify(result.held));
+ const overlay=readJSON('research/completion/occurrence-eligibility.json');for(const m of patch.addMappings){const year=Number(m.validFrom.slice(0,4));if(overlay.occurrences.some(x=>x.mapId===m.mapId&&x.snapshotYear===year))throw Error('Existing eligibility decision');overlay.occurrences.push({mapId:m.mapId,snapshotYear:year,classification:group==='india'?'dependent-administration':'political-polity',canonicalEntityId:m.entityId,sourceIds:m.sourceIds,rationale:m.note||'Reviewed dated institutional association; not a claim of uniform control across map geometry.',review:{path:certPath,hash:digest(certificate),reviewer,decision:'accepted'}});}atomicWrite('research/completion/occurrence-eligibility.json',overlay);
+ console.log(JSON.stringify({group,claims:result.integrations.reduce((n,x)=>n+x.claims,0),held:result.held}));
+}
