@@ -1,0 +1,51 @@
+CAPITAL-A REVISED EXTERNAL RETURN — V2
+
+Why V1 was held
+- V1 incorrectly used `year-precision` / `day-precision` as temporal certainty values.
+- The repository certainty enum is exact | approximate | disputed.
+- Evidence precision is separate: year | month | day.
+- V1 expanded year-precision evidence to day endpoints.
+- V1 did not state the repository's exclusive day-level `until` convention.
+- V1 did not and must not fabricate an independent review certificate.
+
+What V2 changes
+- All claim temporal.certainty values are repository-valid.
+- Ordinary snapshot claims retain YEAR precision: from='YYYY', until='YYYY', certainty='exact'.
+- evidencePrecision is explicitly supplied separately.
+- Day-sensitive claims use repository-native EXCLUSIVE `until` dates.
+- United States 1800: Philadelphia interval ends at 1800-12-01 exclusive.
+- Brazil 1960: Rio ends 1960-04-21 exclusive; Brasília begins 1960-04-21.
+- Orange Free State / Transvaal occupation proposals retain exact occupation start dates and qualified scope.
+- origin.temporalBasis must be mapped to bounded-research-subset by the importer.
+
+Required Codex role
+Codex may retrieve/read ONLY the source URLs already supplied in this package in order to perform the repository-required independent exact-package/original-source-body review. That is validation, not historical discovery.
+
+Codex must NOT:
+- search for new historical facts or new sources;
+- change identities/mappings merely to make claims pass;
+- infer unsupported dates;
+- fabricate review certificates;
+- auto-resolve conflicts.
+
+Codex should:
+1. Load V2 package + V2 sidecar.
+2. Verify exact fingerprint and cell IDs.
+3. Convert proposals using evidencePrecision separately from certainty.
+4. Preserve year-only endpoints as year precision.
+5. Preserve exclusive day `until` semantics exactly.
+6. Set origin.temporalBasis='bounded-research-subset' for these snapshot-only claims.
+7. Run schema/chronology/mapping/scope/conflict checks.
+8. Independently read the supplied source body for each claim or reusable source-group.
+9. Produce a real review object satisfying acceptDossier:
+   - reviewer different from package worker
+   - exact packageHash
+   - bodyReviewed=true
+   - rationale present
+   - reviewedIssues exactly bound
+   - explicit accepted/held/rejected decision for every claim
+10. Accept only safe claims. Hold mapping failures, unresolved conflicts, or weak-source claims.
+11. Integrate accepted claims through the existing serial integration path.
+12. Regenerate coverage exports and report before/after counts.
+
+Do not begin Currency-A yet.

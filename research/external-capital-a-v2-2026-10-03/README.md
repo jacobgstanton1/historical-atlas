@@ -1,0 +1,19 @@
+# Capital-A V2 external-return integration
+
+Mechanical V2-only intake, independent review of the 55 supplied source URLs, and serial existing-validator integration. No historical discovery, additional sources, identity changes, mapping changes, frontend changes or Currency-A work. V1 proposal objects were not reused.
+
+The immutable 160-cell Capital-A baseline was checked against the pre-V1 export and fingerprint 851acb012ccfa2a4bfa05ea83ec2694b3f773a7a6fee8703e87969c9225e6997. baseline-before-v2.csv preserves the starting file; baseline-merged-v2.csv changes only proposals_json using the exact V2 cell_id join. The original V2 sidecar/package/instructions are preserved. All 43 identity-blocked and 15 mapped edge-case rows remain without proposals.
+
+source-manifest.json enumerates only supplied URLs. source-retrieval.json records retrieval results/hashes. Original bodies remain in ignored local cache; no wholesale source redistribution. source-review-initial.json preserves the exact initial source-review manifest referenced by converted packages. source-review.json includes the readable original Newfoundland PDF extraction review. Supplied-URL web fallback review methods are explicit; failed HTTP-body hashes are retrieval metadata, not hashes of the successful fallback body. review-amendments.json independently records the redundant Brasília/Brasilia spelling reconciliation against the supplied law and unchanged accepted record. No fabricated source-body certificate is used.
+
+preflight-validation.json retains all original deterministic preflight decisions. validation.json contains all 103 explicit final dispositions, exact converted packages, jobs, validator output, reviewed issues, independent reviews, refreshed acceptance receipts and serial integration results. Original claim dates, year-only endpoints and exclusive day endpoints are unchanged; evidence precision is separate, and origin.temporalBasis is bounded-research-subset. Insufficient bodies, date/mapping envelope failures, unresolved scope and real conflicts are held. The additional Brasília corroboration is held as already-supported redundant evidence, not counted as a historical conflict.
+
+42 claims were integrated; 61 are held; none rejected. Existing production packages are byte-equivalent as parsed records. The production claim count is 4,118 → 4,160. No other production files changed. The existing integration journal is completed.
+
+completion-report.json records counts over the original 160 Capital-A cell IDs and the complete current occurrence matrix. Capital-A: supported 0 → 0; partial 13 → 51; missing 147 → 109. Site-wide: supported 7,851 → 7,851; partial 465 → 503; missing 14,969 → 14,931; held 535 unchanged. 38 cells gained evidence but remain PARTIAL: the existing scanner conservatively treats year-precision evidence endpoints as incomplete boundary years. This rule was not relaxed, and partial evidence was not counted as fully supported coverage.
+
+MASTER.csv, MISSING-ONLY.csv, summary.json, README.md and all 45 lean partitions/index were regenerated from current production. The local lossless workload.json exceeds GitHub's 100 MB file limit and is ignored; the public CSVs retain full evidence/provenance. The old fingerprint is not reused for new external returns.
+
+Validation: all 11 focused intake/export tests passed (scripts/integrate-external-capital-a-v2.test.mjs and scripts/export-dossier-workload.test.mjs). They verify the immutable join, V2 objects, exact temporal preservation, all dispositions, original source-review associations, exact receipt hashes, existing production immutability, and the complete export/CSV projection. No browser regression or acquisition pipeline ran.
+
+This is a completed one-off intake. Do not rerun the application scripts against changed production; their baseline fingerprint guards intentionally fail. Future returns require fresh export keys/fingerprints and new independent review.
