@@ -8,7 +8,7 @@ import {
   clean,
 } from './data-pipeline.js?v=0.6.1';
 import { loadMetadata } from './historical-metadata.js?v=canonical-cleanup1';
-import { renderDossier } from './dossier.js?v=visual-polish1';
+import { renderDossier } from './dossier.js?v=visual-cleanup2';
 import { loadRichDossiers } from './rich-dossier.js?v=canonical-cleanup1';
 import { createBoundaryHistory } from './boundary-history.js?v=0.6.1';
 
@@ -699,8 +699,8 @@ function resetView({ duration = 200 } = {}) {
 function updateMapStatus() {
   const snapshotYear = SNAPSHOTS[currentIndex].year;
   els.status.textContent = requestedYear === snapshotYear
-    ? requestedYear + ' CE · ' + currentFeatures.length + ' mapped regions'
-    : requestedYear + ' CE · boundary data ' + snapshotYear + ' · ' + currentFeatures.length + ' regions';
+    ? requestedYear + ' CE · ' + currentFeatures.length + ' territories'
+    : requestedYear + ' CE · boundary data ' + snapshotYear + ' · ' + currentFeatures.length + ' territories';
 }
 
 function step(delta) {

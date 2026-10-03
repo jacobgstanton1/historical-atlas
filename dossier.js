@@ -54,7 +54,7 @@ export function renderDossier(container,context){
     for(const id of valid)if(!used.has(id))used.set(id,used.size+1);
     const link=(id,text)=>{const a=node('a',text,'fact-source');a.href='#dossier-source-'+id;a.setAttribute('aria-label','Source '+used.get(id)+': '+registry.get(id).title);a.addEventListener('click',()=>{if(sourceDetails)sourceDetails.open=true;});return a;};
     if(valid.length===1)element.append(' ',link(valid[0],String(used.get(valid[0]))));
-    else if(valid.length>1){const group=node('details',undefined,'citation-group'),summary=node('summary','Sources ('+valid.length+')','fact-source'),links=node('span',undefined,'citation-links');summary.setAttribute('aria-label',valid.length+' supporting sources');for(const id of valid)links.append(link(id,registry.get(id).title));group.append(summary,links);element.append(' ',group);}return element;
+    else if(valid.length>1){const group=node('details',undefined,'citation-group'),summary=node('summary',['h1','figcaption'].includes(element.tagName.toLowerCase())?String(used.get(valid[0]))+'+':'Sources ('+valid.length+')','fact-source'),links=node('span',undefined,'citation-links');summary.setAttribute('aria-label',valid.length+' supporting sources');for(const id of valid)links.append(link(id,registry.get(id).title));group.append(summary,links);element.append(' ',group);}return element;
   };
   const sections=new Map();let currentFramework='';
   const canonical=!communityIds.has(stableId)&&(politicalIds.has(stableId)||!!resolved.entity||!!resolved.ambiguous);

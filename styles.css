@@ -4,7 +4,7 @@
   --land: #e3e3dc;
   --ink: #11161b;
   --muted: #69737a;
-  --panel: rgba(249, 250, 248, 0.97);
+  --panel: #f9faf8;
   --panel-strong: #f7f8f6;
   --border: rgba(17, 22, 27, 0.16);
   --dark-panel: rgba(17, 22, 27, 0.93);
@@ -159,7 +159,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
 }
 .timeline-controls {
   display: grid; grid-template-columns: 44px 44px minmax(0,1fr) 44px;
-  align-items: center; gap: 8px; padding: 8px 12px;
+  align-items: center; gap: 8px; padding: 4px 12px;
   border: 1px solid rgba(255,255,255,.16); border-radius: 5px;
   background: var(--dark-panel); color: var(--dark-text); pointer-events: auto;
 }
@@ -173,7 +173,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
 .play-button { font-size: 15px; }
 .timeline-main { min-width: 0; }
 .timeline-heading {
-  display: flex; justify-content: center; text-align: center; margin: 0 0 3px;
+  display: flex; justify-content: center; text-align: center; margin: 0;
 }
 .timeline-heading > div {
   display: flex; flex-direction: column; align-items: center; gap: 0; min-width: 0;
@@ -185,8 +185,8 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
   color: var(--dark-muted); font-size: 10px; line-height: 1.4;
 }
 
-.timeline-track-wrap { position: relative; padding: 0 1px 8px; }
-#timeline { width: 100%; height: 24px; margin: 0; appearance: none; background: transparent; cursor: pointer; }
+.timeline-track-wrap { position: relative; padding: 0 1px 6px; }
+#timeline { width: 100%; height: 22px; margin: 0; appearance: none; background: transparent; cursor: pointer; }
 #timeline::-webkit-slider-runnable-track { height: 3px; border-radius: 2px; background: #7f929c; }
 #timeline::-webkit-slider-thumb { appearance: none; width: 12px; height: 12px; margin-top: -4.5px; border-radius: 50%; border: 2px solid #f4f5f3; background: #f4f5f3; }
 #timeline::-moz-range-track { height: 3px; border-radius: 2px; background: #7f929c; }
@@ -308,7 +308,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
 .inspector h1 { margin-right: 24px; line-height: 1.15; overflow-wrap: anywhere; }
 .dossier-year { margin: 8px 0; font-weight: 600; }
 .dossier-alternate { margin: 4px 0; color: #49535c; }
-.dossier-section { border-top: 1px solid #d8dfe3; margin-top: 18px; padding-top: 13px; }
+.dossier-section { border-top: 1px solid #cdd6da; margin-top: 18px; padding-top: 13px; }
 .dossier-section h2 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 10px; }
 .dossier-section p { font-size: 13px; line-height: 1.6; }
 .dossier-section dl { margin: 0; }
@@ -335,7 +335,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
 .dossier-sources li { margin: 10px 0; scroll-margin-top: 15px; }
 .boundary-navigation { display: grid; gap: 6px; font-size: 13px; }
 @media (max-width: 760px) {
-  .inspector { left: 12px; right: 12px; top: auto; bottom: calc(151px + var(--safe-bottom)); width: auto; max-height: min(48vh,calc(100% - 220px));
+  .inspector { left: 12px; right: 12px; top: auto; bottom: calc(136px + var(--safe-bottom)); width: auto; max-height: min(48vh,calc(100% - 220px));
     transform: translateY(calc(100vh + 20px)); padding: 16px; }
   .inspector.is-open { transform: translateY(0); }
   .inspector h1 { font-size: 20px; }
@@ -356,7 +356,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
 .dossier-glance dt { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #58636b; margin-bottom: 5px; }
 .dossier-glance dd { margin: 0; font-size: 14px; line-height: 1.45; font-weight: 580; overflow-wrap: anywhere; }
 .dossier-section h2 { font-size: 15px; font-weight: 650; letter-spacing: -.015em; text-transform: none; color: #233e50; }
-.dossier-section { margin-top: 22px; }
+.dossier-section { margin-top: 26px; }
 .dossier-row { grid-template-columns: minmax(85px, .7fr) minmax(0,1.7fr); gap: 12px; border-bottom: 1px solid #e2e8eb; padding: 10px 0; }
 .dossier-row:last-child { border-bottom: 0; }
 .dossier-row dt { font-size: 12px; line-height: 1.5; }
@@ -423,8 +423,8 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
 .ui-button[aria-pressed="true"] { background: rgba(255,255,255,.07); }
 .ui-button,.timeline-button { transition: background-color 160ms ease,color 160ms ease; }
 .dossier-status-line { color: #53636d; font-size: 12px; line-height: 1.5; margin: 0 0 10px; }
-.dossier-flags .dossier-flag { flex: 0 1 auto; margin: 6px 0 12px; }
-.dossier-flags img { width: 88px; height: 50px; }
+.dossier-flags .dossier-flag { flex: 0 1 auto; margin: 10px 0 16px; }
+.dossier-flags img { width: 106px; height: 60px; }
 .dossier-glance { gap: 14px 18px; margin-bottom: 16px; }
 .dossier-glance dd { font-variant-numeric: tabular-nums; font-size: 14px; font-weight: 550; }
 .dossier-section { padding-top: 15px; }
@@ -443,7 +443,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
   .top-actions .control-text { display: none; }
   .ui-button { width: 44px; padding: 0; }
   .timeline-shell { width: calc(100% - 16px); bottom: calc(18px + var(--safe-bottom)); }
-  .timeline-controls { grid-template-columns: 44px 44px minmax(0,1fr) 44px; gap: 5px; padding: 8px; }
+  .timeline-controls { grid-template-columns: 44px 44px minmax(0,1fr) 44px; gap: 5px; padding: 4px 8px; }
   .timeline-button { width: 44px; height: 44px; }
   .timeline-heading strong { font-size: 26px; }
   .year-form input,.year-form button { height: 32px; }
@@ -452,3 +452,8 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
 @media (prefers-reduced-motion:reduce) {
   *,*::before,*::after { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Expanded header references remain readable without competing with identity. */
+.dossier-header .citation-group > summary { margin-left: 2px; }
+.dossier-header .citation-links { font-family: ui-sans-serif, "Segoe UI", sans-serif; font-size: 11px; font-weight: 400; line-height: 1.5; }
+.dossier-header .citation-links .fact-source { font-size: 11px; vertical-align: baseline; white-space: normal; }
