@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#11161b" />
   <title>Historical Atlas</title>
-  <meta name="description" content="Interactive political world map and historical territory dossiers across selected historical snapshots from 1800 to 1960." />
+  <meta name="description" content="Interactive political world map and historical territory dossiers across selected historical snapshots from 4000 BCE to 2026 CE; populated maps currently cover 1800–1960." />
   <link rel="canonical" href="https://jacobgstanton1.github.io/historical-atlas/" />
   <meta property="og:title" content="Historical Atlas" />
-  <meta property="og:description" content="Interactive political world map and historical territory dossiers across selected historical snapshots from 1800 to 1960." />
+  <meta property="og:description" content="Interactive political world map and historical territory dossiers across selected historical snapshots from 4000 BCE to 2026 CE; populated maps currently cover 1800–1960." />
   <meta property="og:site_name" content="Historical Atlas" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://jacobgstanton1.github.io/historical-atlas/" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Historical Atlas" />
-  <meta name="twitter:description" content="Interactive political world map and historical territory dossiers across selected historical snapshots from 1800 to 1960." />
+  <meta name="twitter:description" content="Interactive political world map and historical territory dossiers across selected historical snapshots from 4000 BCE to 2026 CE; populated maps currently cover 1800–1960." />
   <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzExMTYxYiIvPjxwYXRoIGQ9Im04IDI0IDgtMTcgOCAxN00xMSAxOWgxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjRmNWYzIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" />
   <link rel="preconnect" href="https://unpkg.com" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.11.2/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="./styles.css?v=product1" />
+  <link rel="stylesheet" href="./styles.css?v=timeline1" />
 </head>
 <body>
   <main id="app" class="app-shell">
@@ -73,18 +73,18 @@
             </div>
 
             <div class="timeline-track-wrap">
-              <input id="timeline" type="range" min="1800" max="1960" step="1" value="1938" aria-label="Historical year" />
+              <input id="timeline" type="range" min="0" max="0" step="1" value="0" aria-label="Historical snapshot" />
               <div id="snapshot-marks" class="snapshot-marks" aria-label="Available boundary snapshots"></div>
             </div>
 
             <div class="timeline-footer">
-              <span>1800</span>
+              <span id="timeline-start"></span>
               <form id="year-form" class="year-form">
-                <label for="year-jump">Jump to year</label>
-                <input id="year-jump" type="number" min="1800" max="1960" inputmode="numeric" value="1938" aria-label="Jump to year" />
+                <label for="year-jump">Snapshot</label>
+                <select id="year-jump" aria-label="Choose snapshot"></select>
                 <button type="submit">Go</button>
               </form>
-              <span>1960</span>
+              <span id="timeline-end"></span>
             </div>
           </div>
 
@@ -95,7 +95,7 @@
       <dialog id="about-dialog" class="about-dialog" aria-labelledby="about-title">
         <button id="about-close" type="button" class="about-close" aria-label="Close About">×</button>
         <h2 id="about-title">About Historical Atlas</h2>
-        <p>Explore political territories and their historical dossiers across selected world-map snapshots from 1800 to 1960.</p>
+        <p>Explore political territories and their historical dossiers across selected world-map snapshots from 4000 BCE to 2026 CE; populated maps currently cover 1800–1960.</p>
         <dl>
           <dt>Selected year</dt><dd>The historical year you are exploring. Dossier facts are shown in that year's context.</dd>
           <dt>Boundary snapshot</dt><dd>The map uses the nearest available snapshot. Its date is shown separately when it differs from your selected year.</dd>
@@ -110,6 +110,6 @@
     </section>
   </main>
 
-  <script type="module" src="./app.js?v=qa01"></script>
+  <script type="module" src="./app.js?v=timeline1"></script>
 </body>
 </html>

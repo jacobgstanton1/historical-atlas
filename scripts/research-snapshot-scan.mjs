@@ -5,7 +5,12 @@ import {fields,dateBounds,temporalBounds} from './research-comprehensive.mjs';
 import {root,readContext,readJSON,saveJSON,digest,isCLI} from './research-common.mjs';
 import {inspectFlagAsset} from './research-flags.mjs';
 import {qualifiedCompatibility,assessCompatibility} from './research-crosswalk.mjs';
-export function readSnapshotConfig(directory=root){
+import {SNAPSHOTS,LEGACY_SNAPSHOTS} from '../snapshots.js';
+export function readSnapshotConfig(directory=root,{populatedOnly=true}={}){
+ // Existing research/inventory operates on populated geometry only. Empty targets
+ // have no selectable occurrences; callers may explicitly request the full catalogue.
+ if(path.resolve(directory)===path.resolve(root)&&fs.existsSync(path.join(directory,'snapshots.js')))
+  return (populatedOnly?LEGACY_SNAPSHOTS:SNAPSHOTS).map(s=>({year:s.year,file:s.file}));
  const text=fs.readFileSync(path.join(directory,'app.js'),'utf8');
  const block=text.match(/const\s+SNAPSHOTS\s*=\s*\[([\s\S]*?)\];/);
  if(!block)throw Error('Authoritative SNAPSHOTS configuration not found.');
