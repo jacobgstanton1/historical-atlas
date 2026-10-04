@@ -44,7 +44,6 @@ const SNAPSHOTS = [
   { year: 1279, file: 'world_1279.geojson' },
   { year: 1300, file: 'world_1300.geojson' },
   { year: 1400, file: 'world_1400.geojson' },
-  { year: 1492, file: 'world_1492.geojson' },
   { year: 1500, file: 'world_1500.geojson' },
   { year: 1530, file: 'world_1530.geojson' },
   { year: 1600, file: 'world_1600.geojson' },
@@ -69,8 +68,8 @@ const TEST_MIN_YEAR = SNAPSHOTS[0].year;
 const TEST_MAX_YEAR = SNAPSHOTS[SNAPSHOTS.length - 1].year;
 const INITIAL_YEAR = selectableYear(readAtlasState(window.location.href).year, SNAPSHOTS);
 const WORLD_BOUNDS = [[-179, -56], [179, 74]];
-const HISTORICAL_BASE = 'https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/';
-const INDEX_URL = 'https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/index.json';
+const HISTORICAL_BASE = 'https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/';
+const INDEX_URL = 'https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@da7a4b735ecef70aebdc9c73e409d8a2500d50f3/index.json';
 const LAND_URL = 'https://cdn.jsdelivr.net/gh/nvkelso/natural-earth-vector@ca96624a/geojson/ne_50m_land.geojson';
 
 const els = {

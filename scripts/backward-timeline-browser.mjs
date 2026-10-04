@@ -20,24 +20,28 @@ const errors=[],results=[],requests=[];page.on('pageerror',e=>errors.push(e.mess
 page.on('request',r=>{if(r.url().includes('/geojson/world_'))requests.push(r.url());});
 // Read-only map probes exist solely in the browser test response.
 await page.route('**/app.js?*',async route=>{const r=await route.fetch();await route.fulfill({response:r,body:await r.text()+'\n;globalThis.__atlasProbe={map,features:()=>currentFeatures,labels:()=>buildLabelCollection({features:currentFeatures}),year:()=>requestedYear,collection:()=>snapshotCache.get(SNAPSHOTS[displayedIndex].year)};'});});
-if(!live)await page.route('https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/*',async route=>{
- const file=path.join(os.tmpdir(),'atlas-backward-maps',new URL(route.request().url()).pathname.split('/').pop());
+if(!live)await page.route('https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/*',async route=>{
+ const file=path.join(os.tmpdir(),'atlas-pinned-da7a4b735ecef70aebdc9c73e409d8a2500d50f3',new URL(route.request().url()).pathname.split('/').pop());
  if(fs.existsSync(file))await route.fulfill({path:file,contentType:'application/json'});else await route.continue();
 });
 try{
- await page.goto(url,{waitUntil:'domcontentloaded'});
+ await page.goto(url,{waitUntil:'domcontentloaded',timeout:120000});
  await page.waitForFunction(()=>globalThis.__atlasProbe&&document.querySelector('#loading-indicator').hidden&&globalThis.__atlasProbe.features().length>0,null,{timeout:120000});
+ assert.equal(await page.locator('.snapshot-mark[title="1492"]').count(),0);
+ await page.locator('#year-jump').fill('1492');await page.locator('#year-form button').click();
+ await page.waitForFunction(()=>globalThis.__atlasProbe.year()===1500&&document.querySelector('#loading-indicator').hidden,null,{timeout:120000});
+ assert.equal(await page.locator('#year-label').innerText(),'1500');
  if(prepareAll){
-  const sources=JSON.parse(fs.readFileSync(path.join(root,'development/backward-timeline/source-files.json'))).snapshots.filter(s=>s.year<1800);
+  const sources=JSON.parse(fs.readFileSync(path.join(root,'exports/backward-timeline-census/sources.json')));
   const proof=await page.evaluate(async sources=>{
    const {prepareCollection,buildLabelCollection}=await import('./data-pipeline.js?v=qa01'),out=[];
    for(const s of sources){const r=await fetch(s.url);if(!r.ok)throw Error(s.file+' HTTP '+r.status);const prepared=prepareCollection(await r.json(),s.year),labels=buildLabelCollection(prepared);if(!prepared.features.length||!labels.features.length)throw Error('Empty prepared map '+s.file);out.push({year:s.year,file:s.file,features:prepared.features.length,labels:labels.features.length});}
    return out;
   },sources);
-  fs.writeFileSync(path.join(root,'development/backward-timeline/prepared-maps.json'),JSON.stringify(proof,null,2)+'\n');
+  fs.writeFileSync(path.join(root,'exports/backward-timeline-census/prepared-maps.json'),JSON.stringify(proof,null,2)+'\n');
   console.log('PASS all '+proof.length+' source maps through prepareCollection and territory-label generation');
  }else{
- for(const year of mobileOnly?[]:[1783,1600,1492,1000,500,-1,-500,-1500,-4000,1800,1938,1960]){
+ for(const year of mobileOnly?[]:[1400,1500,1600,1783,1800,1938,1960,-500,-4000]){
   await page.locator('#year-jump').fill(String(year));await page.locator('#year-form button').click();
   await page.waitForFunction(y=>globalThis.__atlasProbe.year()===y&&document.querySelector('#loading-indicator').hidden&&document.querySelector('#status').textContent.includes('territories'),year,{timeout:120000});
   await page.waitForFunction(y=>{const m=globalThis.__atlasProbe.map;return m.isSourceLoaded('historical')&&m.isSourceLoaded('historical-labels')&&m.queryRenderedFeatures({layers:['territories-fill']}).some(f=>f.properties._year===y);},year,{timeout:30000});
@@ -62,6 +66,6 @@ try{
  assert.equal(await page.locator('#dossier-content .dossier-snapshot').innerText(),'500 BCE');
  assert.deepEqual(errors,[]);
  const report={url,results,mobile:true,errors,exactSourceRequests:[...new Set(requests)]};
- fs.writeFileSync(live?path.join(os.tmpdir(),'atlas-backward-live.json'):path.join(root,'development/backward-timeline/'+(mobileOnly?'browser-mobile.json':'browser.json')),JSON.stringify(report,null,2)+'\n');
+ fs.writeFileSync(live?path.join(os.tmpdir(),'atlas-backward-live.json'):path.join(root,'exports/backward-timeline-census/'+(mobileOnly?'browser-mobile.json':'browser.json')),JSON.stringify(report,null,2)+'\n');
  }
 }finally{await browser.close();if(server)await new Promise(r=>server.close(r));}

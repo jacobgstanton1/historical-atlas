@@ -1,5 +1,7 @@
 # Backward timeline expansion
 
+Historical verification record for commit 56ba291. Current selectable catalogue has 46 snapshots: 1492 is temporarily deferred, and Historical Basemaps is pinned to da7a4b735ecef70aebdc9c73e409d8a2500d50f3. See exports/backward-timeline-census for the current read-only census. The original verification records below are preserved.
+
 The 47 configured snapshots use real Historical Basemaps GeoJSON. 1960 remains the hard maximum. No placeholder maps or historical dossier claims were added.
 
 ## Model and loading
