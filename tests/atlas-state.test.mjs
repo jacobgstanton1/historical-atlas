@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readAtlasState,atlasUrl,createAtlasHistory} from '../atlas-state.js';
 const root='https://example.org/atlas/';
-test('normal landing and malformed years use 1938',()=>{for(const q of ['','?year=hello','?year=1938.5','?year=-4000','?year=2027','?year='])assert.equal(readAtlasState(root+q).year,1938);});
+test('normal landing and malformed years use 1938',()=>{for(const q of ['','?year=hello','?year=1938.5','?year=1799','?year=1961','?year='])assert.equal(readAtlasState(root+q).year,1938);});
 test('exact and between-snapshot years retain requested year',()=>{for(const year of [1800,1815,1939,1960])assert.equal(readAtlasState(root+'?year='+year).year,year);});
 test('only bounded stable map IDs are accepted syntactically',()=>{assert.equal(readAtlasState(root+'?territory=entity-france').territory,'entity-france');for(const raw of ['France','<script>','entity-','entity-'+ 'a'.repeat(200)])assert.equal(readAtlasState(root+'?territory='+encodeURIComponent(raw)).territory,null);});
 test('URL generation preserves unrelated queries and non-source fragments',()=>{const u=new URL(atlasUrl(root+'?campaign=demo&year=1938&territory=entity-france#notes',{year:1960,territory:'entity-italy'}));assert.equal(u.searchParams.get('campaign'),'demo');assert.equal(u.searchParams.get('year'),'1960');assert.equal(u.searchParams.get('territory'),'entity-italy');assert.equal(u.hash,'#notes');});

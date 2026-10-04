@@ -3,15 +3,15 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {buildCoverage} from '../scripts/coverage-model.mjs';
 import {combinedReport} from '../scripts/classification.mjs';
-import {LEGACY_SNAPSHOTS} from '../snapshots.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
 const manifest=read('development/coverage/manifest.json');
 const plan=read('development/coverage/research-plan.json');
 const db=read('data/historical-entities.json'),sources=read('data/historical-sources.json');
 const snapshot=(year,ids)=>({year,features:ids.map((id,i)=>({id:id+'-'+year+'-'+i,properties:{_stableId:id,_name:id,_area:1}}))});
 test('inventory includes all configured snapshots and reconciles snapshot/identity totals',()=>{
- // The research inventory describes populated snapshots, not empty timeline targets.
- const years=LEGACY_SNAPSHOTS.map(s=>s.year);
+ const app=fs.readFileSync(new URL('../app.js',import.meta.url),'utf8');
+ const block=app.match(/const SNAPSHOTS = \[([\s\S]*?)\];/)[1];
+ const years=[...block.matchAll(/year:\s*(\d+)/g)].map(m=>Number(m[1]));
  assert.deepEqual(manifest.bySnapshot.map(r=>r.year),years);assert.equal(years.length,11);
  assert.equal(new Set(manifest.identities.map(r=>r.stableMapId)).size,manifest.summary.totalIdentities);
  assert.equal(manifest.summary.curatedMetadataEntities,db.entities.length);

@@ -239,7 +239,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
   gap: 5px;
 }
 .year-form label { color: var(--dark-muted); font-size: 9px; }
-.year-form select {
+.year-form input {
   width: 78px;
   height: 28px;
   border: 1px solid rgba(255,255,255,0.14);
@@ -292,7 +292,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
 
   .timeline-footer { grid-template-columns: 22px minmax(0, 1fr) 22px; gap: 2px; }
   .year-form label { display: none; }
-  .year-form select { width: 56px; }
+  .year-form input { width: 56px; }
   .year-form button { padding: 0 6px; }
 }
 
@@ -446,7 +446,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
   .timeline-controls { grid-template-columns: 44px 44px minmax(0,1fr) 44px; gap: 5px; padding: 4px 8px; }
   .timeline-button { width: 44px; height: 44px; }
   .timeline-heading strong { font-size: 26px; }
-  .year-form select,.year-form button { height: 32px; }
+  .year-form input,.year-form button { height: 32px; }
   .maplibregl-ctrl-bottom-right { bottom: 150px; }
 }
 @media (prefers-reduced-motion:reduce) {
@@ -476,9 +476,3 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
 .about-dialog a { color: #245672; }
 .about-close { position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; border: 1px solid #cbd7de; border-radius: 4px; background: var(--panel); color: #334b5a; font-size: 22px; cursor: pointer; }
 .about-dialog :is(a,button,input):focus-visible,.share-fallback input:focus-visible { outline: 2px solid #245672; outline-offset: 3px; }
-
-/* Equal-spaced snapshot navigation; only progressive ticks are visible. */
-.year-form select { width: 106px; min-width: 0; }
-.year-form option, .year-form optgroup { background: #263844; color: #f1f3f2; }
-.timeline-footer { grid-template-columns: 68px minmax(0,1fr) 54px; }
-@media (max-width: 600px) { .timeline-footer { grid-template-columns: 48px minmax(0,1fr) 42px; gap: 2px; } .timeline-footer > span { font-size: 8px; } .year-form select { width: 89px; padding: 0 2px; } .year-form { gap: 2px; } }

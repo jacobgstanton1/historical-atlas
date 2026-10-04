@@ -1,8 +1,7 @@
-import {MIN_YEAR,MAX_YEAR} from './snapshots.js';
 // URL state is presentation/navigation only; it never resolves historical identities.
-export function readAtlasState(href,{defaultYear=1938,minYear=MIN_YEAR,maxYear=MAX_YEAR}={}) {
+export function readAtlasState(href,{defaultYear=1938,minYear=1800,maxYear=1960}={}) {
   const url=new URL(href),value=url.searchParams.get('year');
-  const year=/^-?\d{1,4}$/.test(value||'')&&Number(value)>=minYear&&Number(value)<=maxYear?Number(value):defaultYear;
+  const year=/^\d{4}$/.test(value||'')&&Number(value)>=minYear&&Number(value)<=maxYear?Number(value):defaultYear;
   const raw=url.searchParams.get('territory');
   return {year,territory:/^entity-[a-z0-9]+(?:-[a-z0-9]+)*$/.test(raw||'')&&raw.length<=180?raw:null};
 }
