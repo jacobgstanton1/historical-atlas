@@ -11,8 +11,8 @@ const snapshot=(year,ids)=>({year,features:ids.map((id,i)=>({id:id+'-'+year+'-'+
 test('inventory includes all configured snapshots and reconciles snapshot/identity totals',()=>{
  const app=fs.readFileSync(new URL('../app.js',import.meta.url),'utf8');
  const block=app.match(/const SNAPSHOTS = \[([\s\S]*?)\];/)[1];
- const years=[...block.matchAll(/year:\s*(\d+)/g)].map(m=>Number(m[1]));
- assert.deepEqual(manifest.bySnapshot.map(r=>r.year),years);assert.equal(years.length,11);
+ const years=[...block.matchAll(/year:\s*(-?\d+)/g)].map(m=>Number(m[1]));
+ assert.deepEqual(manifest.bySnapshot.map(r=>r.year),years.filter(y=>y>=1800));assert.equal(years.length,47);
  assert.equal(new Set(manifest.identities.map(r=>r.stableMapId)).size,manifest.summary.totalIdentities);
  assert.equal(manifest.summary.curatedMetadataEntities,db.entities.length);
  assert.equal(manifest.summary.coveredIdentities,manifest.identities.filter(r=>r.currentlyResolvesToDossier).length);

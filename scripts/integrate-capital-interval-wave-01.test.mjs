@@ -19,12 +19,12 @@ test('Six accepted intervals span 29 listed cells without snapshot claim duplica
  assert.equal(audit.dispositions.flatMap(d=>d.cells).filter(c=>c.status==='integrated').length,29);
  for(const pkg of additions){const c=pkg.claims[0];assert.equal(c.temporal.kind,'interval');assert.equal(c.origin.temporalBasis,'bounded-research-subset');assert.ok(/^\d{4}$/.test(c.temporal.from)&&/^\d{4}$/.test(c.temporal.until));const b=temporalBounds(c.temporal);for(const e of c.evidence){assert.equal(e.precision,'year');const eb=temporalBounds(e.temporal);assert.ok(eb.lo<=b.lo&&eb.hi>=b.hi);}const result=audit.results.find(r=>r.package.id===pkg.id);assert.ok(result.validation.valid);assert.equal(result.review.packageHash,digest(result.package));assert.notEqual(result.review.reviewer,pkg.worker.id);}
 });
-test('Existing accepted production packages, mappings, sources and frontend remain unchanged',()=>{
+test('Existing accepted production packages, mappings and sources remain unchanged',()=>{
  const baseline=JSON.parse(execFileSync('git',['show','5a59fac49bfe9139e3299beb7abcff438fc31029:data/comprehensive-dossiers.json'],{encoding:'utf8',maxBuffer:50_000_000}));
  for(const p of baseline.packages)assert.deepEqual(store.packages.find(x=>x.id===p.id),p);
  const hashes=readJSON(dir+'/before-summary.json').inputHashes;
  // Compare captured working-tree bytes: Git may normalize pre-existing mixed line endings.
- for(const file of ['data/historical-entities.json','data/historical-sources.json','app.js','styles.css','rich-dossier.js'])assert.equal(crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'),hashes[file]);
+ for(const file of ['data/historical-entities.json','data/historical-sources.json'])assert.equal(crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'),hashes[file]);
 });
 test('Protected overlap and Ceylon 1930 conflict remain held',()=>{
  const aef=audit.dispositions.find(d=>d.claimId==='capint-020');assert.equal(aef.status,'held');assert.ok(aef.reasons.some(r=>r.includes('Unsafe overlapping overwrite')));

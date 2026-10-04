@@ -1,3 +1,4 @@
+import { formatSnapshotYear, selectableYear } from './snapshot-years.js';
 import * as maplibregl from 'https://unpkg.com/maplibre-gl@6.11.2/dist/maplibre-gl.mjs';
 import { geoCentroid } from 'https://cdn.jsdelivr.net/npm/d3-geo@3.1.1/+esm';
 import {
@@ -9,12 +10,48 @@ import {
   clean,
 } from './data-pipeline.js?v=qa01';
 import { loadMetadata, reviewedMapName } from './historical-metadata.js?v=qa01';
-import { renderDossier } from './dossier.js?v=visual-cleanup2';
+import { renderDossier } from './dossier.js?v=backward1';
 import { loadRichDossiers } from './rich-dossier.js?v=canonical-cleanup1';
-import {readAtlasState,atlasUrl,createAtlasHistory} from './atlas-state.js?v=product1';
+import {readAtlasState,atlasUrl,createAtlasHistory} from './atlas-state.js?v=backward1';
 import { createBoundaryHistory } from './boundary-history.js?v=0.6.1';
 
 const SNAPSHOTS = [
+  { year: -4000, file: 'world_bc4000.geojson' },
+  { year: -3000, file: 'world_bc3000.geojson' },
+  { year: -2000, file: 'world_bc2000.geojson' },
+  { year: -1500, file: 'world_bc1500.geojson' },
+  { year: -1000, file: 'world_bc1000.geojson' },
+  { year: -700, file: 'world_bc700.geojson' },
+  { year: -500, file: 'world_bc500.geojson' },
+  { year: -400, file: 'world_bc400.geojson' },
+  { year: -323, file: 'world_bc323.geojson' },
+  { year: -300, file: 'world_bc300.geojson' },
+  { year: -200, file: 'world_bc200.geojson' },
+  { year: -100, file: 'world_bc100.geojson' },
+  { year: -1, file: 'world_bc1.geojson' },
+  { year: 100, file: 'world_100.geojson' },
+  { year: 200, file: 'world_200.geojson' },
+  { year: 300, file: 'world_300.geojson' },
+  { year: 400, file: 'world_400.geojson' },
+  { year: 500, file: 'world_500.geojson' },
+  { year: 600, file: 'world_600.geojson' },
+  { year: 700, file: 'world_700.geojson' },
+  { year: 800, file: 'world_800.geojson' },
+  { year: 900, file: 'world_900.geojson' },
+  { year: 1000, file: 'world_1000.geojson' },
+  { year: 1100, file: 'world_1100.geojson' },
+  { year: 1200, file: 'world_1200.geojson' },
+  { year: 1279, file: 'world_1279.geojson' },
+  { year: 1300, file: 'world_1300.geojson' },
+  { year: 1400, file: 'world_1400.geojson' },
+  { year: 1492, file: 'world_1492.geojson' },
+  { year: 1500, file: 'world_1500.geojson' },
+  { year: 1530, file: 'world_1530.geojson' },
+  { year: 1600, file: 'world_1600.geojson' },
+  { year: 1650, file: 'world_1650.geojson' },
+  { year: 1700, file: 'world_1700.geojson' },
+  { year: 1715, file: 'world_1715.geojson' },
+  { year: 1783, file: 'world_1783.geojson' },
   { year: 1800, file: 'world_1800.geojson' },
   { year: 1815, file: 'world_1815.geojson' },
   { year: 1878, file: 'world_1878.geojson' },
@@ -30,7 +67,7 @@ const SNAPSHOTS = [
 
 const TEST_MIN_YEAR = SNAPSHOTS[0].year;
 const TEST_MAX_YEAR = SNAPSHOTS[SNAPSHOTS.length - 1].year;
-const INITIAL_YEAR = readAtlasState(window.location.href).year;
+const INITIAL_YEAR = selectableYear(readAtlasState(window.location.href).year, SNAPSHOTS);
 const WORLD_BOUNDS = [[-179, -56], [179, 74]];
 const HISTORICAL_BASE = 'https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/geojson/';
 const INDEX_URL = 'https://cdn.jsdelivr.net/gh/aourednik/historical-basemaps@master/index.json';
@@ -403,7 +440,7 @@ async function setSnapshot(index, { resetSelection = false, requested = null, hi
 
   currentIndex = index;
   requestedYear = requested !== null && Number.isFinite(Number(requested))
-    ? clamp(Math.round(Number(requested)), TEST_MIN_YEAR, TEST_MAX_YEAR)
+    ? selectableYear(requested, SNAPSHOTS)
     : snapshot.year;
   const serial = ++loadSerial;
 
@@ -412,8 +449,8 @@ async function setSnapshot(index, { resetSelection = false, requested = null, hi
 
   updateTimelineUi(snapshot, requestedYear);
   syncUrl(historyMode);
-  els.status.textContent = `Loading ${snapshot.year}…`;
-  showLoading(`Loading ${snapshot.year} boundaries…`);
+  els.status.textContent = `Loading ${formatSnapshotYear(snapshot.year)}…`;
+  showLoading(`Loading ${formatSnapshotYear(snapshot.year)} boundaries…`);
   closeSearchResults();
 
   try {
@@ -440,7 +477,7 @@ async function setSnapshot(index, { resetSelection = false, requested = null, hi
   } catch (error) {
     if (error.name === 'AbortError' || serial !== loadSerial) return;
     console.error(error);
-    els.status.textContent = `Could not load ${snapshot.year}`;
+    els.status.textContent = `Could not load ${formatSnapshotYear(snapshot.year)}`;
     els.snapshotNote.textContent = 'Boundary file unavailable';
     boundaryLoadFailed = true;
     hideLoading();
@@ -522,7 +559,7 @@ function renderInspector(stableId) {
   renderedDossierId = stableId;
   renderDossier(body, {
     stableId, savedName: selectedName, features: matches, allFeatures: currentFeatures,
-    year: requestedYear, snapshotYear: SNAPSHOTS[displayedIndex].year,
+    yearConvention: 'historical-basemaps', year: requestedYear, snapshotYear: SNAPSHOTS[displayedIndex].year,
     metadata, metadataError, rich, richError, boundaryLoadFailed, minYear: TEST_MIN_YEAR, maxYear: TEST_MAX_YEAR,
     presence: presenceReady ? presenceSummary(presenceRegistry, stableId, SNAPSHOTS.length) : 'Presence index loading…',
     currentMapIds: new Set(currentFeatures.map(f => f.properties._stableId)),
@@ -629,17 +666,17 @@ function closeSearchResults() {
 }
 
 function configureTimeline() {
-  els.timeline.min = String(TEST_MIN_YEAR);
-  els.timeline.max = String(TEST_MAX_YEAR);
+  els.timeline.min = '0';
+  els.timeline.max = String(SNAPSHOTS.length - 1);
   els.timeline.step = '1';
-  els.timeline.value = String(INITIAL_YEAR);
+  els.timeline.value = String(nearestSnapshotIndex(INITIAL_YEAR));
   els.yearJump.min = String(TEST_MIN_YEAR);
   els.yearJump.max = String(TEST_MAX_YEAR);
   els.yearJump.value = String(INITIAL_YEAR);
 
   els.snapshotMarks.innerHTML = SNAPSHOTS.map((snapshot, index) => {
-    const percent = ((snapshot.year - TEST_MIN_YEAR) / (TEST_MAX_YEAR - TEST_MIN_YEAR)) * 100;
-    return `<button class="snapshot-mark" type="button" data-index="${index}" style="left:${percent}%" title="${snapshot.year}" aria-label="Go to ${snapshot.year} boundary snapshot"></button>`;
+    const percent = (index / (SNAPSHOTS.length - 1)) * 100;
+    return `<button class="snapshot-mark" type="button" data-index="${index}" style="left:${percent}%" title="${formatSnapshotYear(snapshot.year)}" aria-label="Go to ${formatSnapshotYear(snapshot.year)} boundary snapshot"></button>`;
   }).join('');
   for (const mark of els.snapshotMarks.querySelectorAll('.snapshot-mark')) {
     mark.addEventListener('click', () => {
@@ -653,12 +690,13 @@ function configureTimeline() {
 }
 
 function updateTimelineUi(snapshot, requested) {
-  els.timeline.value = String(clamp(requested, TEST_MIN_YEAR, TEST_MAX_YEAR));
+  els.timeline.value = String(currentIndex);
+  els.timeline.setAttribute('aria-valuetext', formatSnapshotYear(snapshot.year));
   els.yearJump.value = String(clamp(requested, TEST_MIN_YEAR, TEST_MAX_YEAR));
-  els.yearLabel.textContent = requested + ' CE';
+  els.yearLabel.textContent = formatSnapshotYear(requested);
   els.snapshotNote.textContent = requested === snapshot.year
     ? 'Exact boundary snapshot'
-    : 'Boundary data: nearest available snapshot — ' + snapshot.year;
+    : 'Boundary data: nearest available snapshot — ' + formatSnapshotYear(snapshot.year);
   els.previous.disabled = currentIndex <= 0;
   els.next.disabled = currentIndex >= SNAPSHOTS.length - 1;
   updateSnapshotMarks();
@@ -667,6 +705,7 @@ function updateTimelineUi(snapshot, requested) {
 function updateSnapshotMarks() {
   for (const mark of els.snapshotMarks.querySelectorAll('.snapshot-mark')) {
     mark.classList.toggle('is-current', Number(mark.dataset.index) === currentIndex);
+    mark.hidden = Number(mark.dataset.index) % 6 !== 0 && Number(mark.dataset.index) !== currentIndex && Number(mark.dataset.index) !== SNAPSHOTS.length - 1;
   }
 }
 
@@ -685,7 +724,7 @@ function nearestSnapshotIndex(year) {
 }
 
 function goToRequestedYear(year, {historyMode = 'push'} = {}) {
-  const clampedYear = clamp(Math.round(Number(year)), TEST_MIN_YEAR, TEST_MAX_YEAR);
+  const clampedYear = selectableYear(year, SNAPSHOTS);
   if (!Number.isFinite(clampedYear)) return;
   if(playTimer)stopPlay();
   const index = nearestSnapshotIndex(clampedYear);
@@ -724,8 +763,8 @@ function resetView({ duration = 200 } = {}) {
 function updateMapStatus() {
   const snapshotYear = SNAPSHOTS[currentIndex].year;
   els.status.textContent = requestedYear === snapshotYear
-    ? requestedYear + ' CE · ' + currentFeatures.length + ' territories'
-    : requestedYear + ' CE · boundary data ' + snapshotYear + ' · ' + currentFeatures.length + ' territories';
+    ? formatSnapshotYear(requestedYear) + ' · ' + currentFeatures.length + ' territories'
+    : formatSnapshotYear(requestedYear) + ' · boundary data ' + formatSnapshotYear(snapshotYear) + ' · ' + currentFeatures.length + ' territories';
 }
 
 function step(delta) {
@@ -786,11 +825,11 @@ function isEditableTarget(target) {
 }
 
 els.timeline.addEventListener('input', event => {
-  goToRequestedYear(Number(event.target.value), {historyMode: 'transient'});
+  goToRequestedYear(SNAPSHOTS[Number(event.target.value)].year, {historyMode: 'transient'});
 });
 
 els.timeline.addEventListener('change', event => {
-  goToRequestedYear(Number(event.target.value), {historyMode: 'commit'});
+  goToRequestedYear(SNAPSHOTS[Number(event.target.value)].year, {historyMode: 'commit'});
 });
 els.yearForm.addEventListener('submit', event => {
   event.preventDefault();

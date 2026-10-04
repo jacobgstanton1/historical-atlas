@@ -476,3 +476,8 @@ button:focus-visible, input:focus-visible { outline: 2px solid rgba(255,255,255,
 .about-dialog a { color: #245672; }
 .about-close { position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; border: 1px solid #cbd7de; border-radius: 4px; background: var(--panel); color: #334b5a; font-size: 22px; cursor: pointer; }
 .about-dialog :is(a,button,input):focus-visible,.share-fallback input:focus-visible { outline: 2px solid #245672; outline-offset: 3px; }
+
+/* Snapshot-spaced timeline retains usable controls across the BCE/CE range. */
+.timeline-footer { grid-template-columns: 68px minmax(0, 1fr) 42px; }
+.snapshot-mark[hidden] { display: none; }
+@media (max-width: 600px) { .timeline-footer { grid-template-columns: 48px minmax(0, 1fr) 28px; } }
